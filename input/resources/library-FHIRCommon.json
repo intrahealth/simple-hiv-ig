@@ -1,0 +1,21 @@
+{
+  "resourceType": "Library",
+  "id": "FHIRCommon",
+  "name": "FHIRCommon",
+  "title": "FHIR Common",
+  "status": "active",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "content": [
+    {
+      "id": "ig-loader-FHIRCommon.cql"
+    }
+  ]
+}

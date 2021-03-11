@@ -1,0 +1,184 @@
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleCondition
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Fri Mar 05 2021 12:48:27 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+elapsed: 31.43 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Fri Mar 05 2021 12:48:27 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+elapsed: 32.415 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Fri Mar 05 2021 12:48:27 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+elapsed: 32.454 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Fri Mar 05 2021 12:48:27 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+elapsed: 32.665 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Fri Mar 05 2021 12:48:27 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@155d1021
+elapsed: 32.78 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleCondition
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Fri Mar 05 2021 13:53:40 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 42.457 seconds
+
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Fri Mar 05 2021 13:53:39 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 43.194 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Fri Mar 05 2021 13:53:40 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+Sex=Enumeration[male]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 43.944 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Fri Mar 05 2021 13:53:39 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 44.46 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Fri Mar 05 2021 13:53:40 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+Sex=Enumeration[male]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 44.565 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleCondition
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Mon Mar 08 2021 20:03:13 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 28.772 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Mon Mar 08 2021 20:03:13 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+Sex=Enumeration[male]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 29.199 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Mon Mar 08 2021 20:03:13 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 29.144 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Mon Mar 08 2021 20:03:13 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@155d1021
+Sex=Enumeration[male]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 29.112 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Mon Mar 08 2021 20:03:13 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 29.533 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleCondition
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Mon Mar 08 2021 20:05:06 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=HIV Condition
+elapsed: 27.935 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Mon Mar 08 2021 20:05:06 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=HIV Condition
+elapsed: 28.134 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Mon Mar 08 2021 20:05:06 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+Sex=Enumeration[male]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=HIV Condition
+elapsed: 28.473 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Mon Mar 08 2021 20:05:06 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+Sex=Enumeration[male]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=HIV Condition
+elapsed: 28.626 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Mon Mar 08 2021 20:05:06 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+Sex=Enumeration[female]
+HIV Condition=false
+Initial Population=true
+Denominator=true
+Numerator=HIV Condition
+elapsed: 28.863 seconds

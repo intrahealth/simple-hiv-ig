@@ -1,0 +1,524 @@
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleTestResult
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Fri Mar 05 2021 12:45:08 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 29.85 seconds
+
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Fri Mar 05 2021 12:45:08 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@40620d8e
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@446c8c72]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 30.133 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Fri Mar 05 2021 12:45:08 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@1426370c]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.134 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Fri Mar 05 2021 12:45:08 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.058 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Fri Mar 05 2021 12:45:08 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@1be427b4]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 30.372 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleTestResult
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Fri Mar 05 2021 13:31:18 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@40620d8e
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@446c8c72]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 36.954 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Fri Mar 05 2021 13:31:18 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 37.146 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Fri Mar 05 2021 13:31:18 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@1be427b4]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 37.551 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Fri Mar 05 2021 13:31:18 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@1426370c]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 37.608 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Fri Mar 05 2021 13:31:19 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 37.418 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleTestResult
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Mon Mar 08 2021 13:29:01 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 29.743 seconds
+
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Mon Mar 08 2021 13:29:00 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@14ed7ddf]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 30.103 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Mon Mar 08 2021 13:29:01 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@1426370c]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.449 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Mon Mar 08 2021 13:29:01 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[org.hl7.fhir.r4.model.Observation@1be427b4]
+HIV Negative Observation=[]
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Test Results=Code { code: 165816005, system: http://snomed.info/sct, version: http://snomed.info/sct/900000000000207008, display: HIV Positive }
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 30.699 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Mon Mar 08 2021 13:29:01 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.508 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleTestResult
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Mon Mar 08 2021 20:07:47 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 29.285 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Mon Mar 08 2021 20:07:47 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@51e37590
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 29.583 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Mon Mar 08 2021 20:07:47 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 29.823 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Mon Mar 08 2021 20:07:47 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 30.017 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Mon Mar 08 2021 20:07:47 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=true
+elapsed: 30.383 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleTestResult
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Mon Mar 08 2021 20:10:16 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.172 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Mon Mar 08 2021 20:10:16 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@155d1021
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 29.993 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Mon Mar 08 2021 20:10:16 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.386 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Mon Mar 08 2021 20:10:16 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.264 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Mon Mar 08 2021 20:10:16 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.773 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleTestResult
+Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
+Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
+Mon Mar 08 2021 20:11:53 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 29.868 seconds
+
+Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
+Mon Mar 08 2021 20:11:53 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.345 seconds
+
+Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
+Mon Mar 08 2021 20:11:53 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@2e647e59
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[male]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.543 seconds
+
+Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
+Mon Mar 08 2021 20:11:53 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@155d1021
+HIV Test Exists=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.594 seconds
+
+Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
+Mon Mar 08 2021 20:11:53 GMT-0500 (Eastern Standard Time)
+Patient=org.hl7.fhir.r4.model.Patient@27ead29e
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+Is HIV Positive=false
+Is HIV Negative=false
+HIV Test Results=null
+Sex=Enumeration[female]
+Age Group/Sex=null
+Age Group/Sex/HIV Test Results=null
+Initial Population=true
+Denominator=true
+Numerator=false
+elapsed: 30.962 seconds
