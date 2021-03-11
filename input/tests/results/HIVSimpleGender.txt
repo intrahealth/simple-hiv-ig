@@ -142,3 +142,9 @@ elapsed: 32.895 seconds
 Running tests.
 Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVSimpleGender
 Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVSimpleGender
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVSimpleGender
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset

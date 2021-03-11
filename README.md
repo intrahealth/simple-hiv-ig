@@ -37,7 +37,7 @@ curl https://www.hl7.org/fhir/library-fhir-helpers.json | curl -X PUT -H "Conten
 
 See https://github.com/intrahealth/synthetic-hiv
 
-## Prepare this repo
+### Prepare this repo
 
 Clone this IG repo
 
@@ -68,7 +68,7 @@ for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender 
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done
 ```
 
-Run 
+Run a provided example
 ```
 http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
