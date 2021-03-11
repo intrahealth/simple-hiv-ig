@@ -35,7 +35,7 @@ curl https://www.hl7.org/fhir/library-fhir-helpers.json | curl -X PUT -H "Conten
 
 ### Prepare and load synthetic data
 
-See https://github.com/intrahealth/synthetic-hiv
+See https://github.com/intrahealth/synthea-hiv
 
 ## Prepare this repo
 
