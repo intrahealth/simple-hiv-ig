@@ -22,17 +22,6 @@ Run HAPI
 mvn jetty:run
 ```
 
-### Load a prepared FHIR model library and helpers
-
-```
-curl https://www.hl7.org/fhir/library-fhir-model-definition.json | curl -X PUT -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir/Library/library-fhir-model-definition
-```
-
-Load a prepared FHIR Helpers Library.
-```sh
-curl https://www.hl7.org/fhir/library-fhir-helpers.json | curl -X PUT -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir/Library/library-fhir-helpers
-```
-
 ### Prepare and load synthetic data
 
 See https://github.com/intrahealth/synthea-hiv
