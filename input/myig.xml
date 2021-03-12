@@ -7,7 +7,7 @@
   </extension>-->
   <url value="https://github.com/intrahealth/simple-hiv-ig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.0.0"/>
+  <version value="0.1.0"/>
   <name value="YourComputableMyIGNameHere"/>
   <title value="Your User Friendly Name for MyIG Here"/>
   <status value="draft"/>

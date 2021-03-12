@@ -3,8 +3,8 @@ library HIVSimpleDemog version '0.1.0'
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
-include FHIRCommon called FC
-include AgeRanges called AR
+include FHIRCommon version '0.1.0' called FC
+include AgeRanges version '0.1.0' called AR
 
 // SNOMED-CT, International Edition
 codesystem "SNOMED-CT": 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
