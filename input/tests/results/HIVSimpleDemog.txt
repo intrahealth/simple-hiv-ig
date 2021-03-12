@@ -1,129 +1,8 @@
 Running tests.
-Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleDemog
-Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
-Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
-Fri Mar 05 2021 12:46:37 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@27ead29e
-Sex=Enumeration[female]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=false
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-elapsed: 29.591 seconds
-
-Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
-Fri Mar 05 2021 12:46:37 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@2e647e59
-Sex=Enumeration[male]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=true
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-elapsed: 29.955 seconds
-
-Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
-Fri Mar 05 2021 12:46:37 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@155d1021
-Sex=Enumeration[female]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=false
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-elapsed: 30.13 seconds
-
-Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
-Fri Mar 05 2021 12:46:37 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@27ead29e
-Sex=Enumeration[female]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=true
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=false
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-elapsed: 30.345 seconds
-
-Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
-Fri Mar 05 2021 12:46:37 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
-Sex=Enumeration[male]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=true
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-elapsed: 30.237 seconds
-Running tests.
-Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleDemog
-Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
-Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
-Fri Mar 05 2021 13:51:41 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@27ead29e
-Sex=Enumeration[female]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=false
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-Initial Population=true
-Denominator=true
-Numerator=true
-elapsed: 38.754 seconds
-
-Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
-Fri Mar 05 2021 13:51:42 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@40620d8e
-Sex=Enumeration[female]
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVSimpleDemog
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=urn:uuid:0695de04-1a5d-e2c0-3e4f-79121465ba67)
+Sex=code
 Age Group Test=null
 Patient0To5AndFemale=false
 Patient5To15AndFemale=false
@@ -140,34 +19,9 @@ Patient65ToHighestAndMale=false
 Initial Population=true
 Denominator=true
 Numerator=true
-elapsed: 40.673 seconds
 
-Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
-Fri Mar 05 2021 13:51:42 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@2e647e59
-Sex=Enumeration[male]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=true
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-Initial Population=true
-Denominator=true
-Numerator=false
-elapsed: 40.658 seconds
-
-Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
-Fri Mar 05 2021 13:51:42 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@155d1021
-Sex=Enumeration[female]
+Patient=Patient(id=urn:uuid:0ae954fa-eff8-0d38-c840-3af401abc9fd)
+Sex=code
 Age Group Test=null
 Patient0To5AndFemale=false
 Patient5To15AndFemale=false
@@ -184,58 +38,9 @@ Patient65ToHighestAndMale=false
 Initial Population=true
 Denominator=true
 Numerator=true
-elapsed: 40.723 seconds
 
-Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
-Fri Mar 05 2021 13:51:42 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
-Sex=Enumeration[male]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=true
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-Initial Population=true
-Denominator=true
-Numerator=false
-elapsed: 40.677 seconds
-Running tests.
-Data path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/tests/HIVSimpleDemog
-Terminology path: /Users/richard/src/github.com/citizenrich/hiv-indicators/input/vocabulary/valueset
-Test 2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d
-Mon Mar 08 2021 20:01:44 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@51e37590
-Sex=Enumeration[male]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=true
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-Initial Population=true
-Denominator=true
-Numerator=true
-elapsed: 30.485 seconds
-
-Test 5ad6826a-e417-ce59-7d6a-f2732a778eec
-Mon Mar 08 2021 20:01:44 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@75b21c3b
-Sex=Enumeration[female]
+Patient=Patient(id=urn:uuid:130f30d4-a808-6d1a-a631-f1fab4b95f1d)
+Sex=code
 Age Group Test=null
 Patient0To5AndFemale=false
 Patient5To15AndFemale=false
@@ -252,34 +57,9 @@ Patient65ToHighestAndMale=false
 Initial Population=true
 Denominator=true
 Numerator=true
-elapsed: 30.438 seconds
 
-Test 8f9d0615-5bfa-7373-5da6-aaba82397f45
-Mon Mar 08 2021 20:01:44 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@155d1021
-Sex=Enumeration[male]
-Age Group Test=null
-Patient0To5AndFemale=false
-Patient5To15AndFemale=false
-Patient15To25AndFemale=false
-Patient25To50AndFemale=false
-Patient50To65AndFemale=false
-Patient65ToHighestAndFemale=false
-Patient0To5AndMale=true
-Patient5To15AndMale=false
-Patient15To25AndMale=false
-Patient25To50AndMale=false
-Patient50To65AndMale=false
-Patient65ToHighestAndMale=false
-Initial Population=true
-Denominator=true
-Numerator=true
-elapsed: 30.787 seconds
-
-Test 0ae954fa-eff8-0d38-c840-3af401abc9fd
-Mon Mar 08 2021 20:01:43 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@27ead29e
-Sex=Enumeration[female]
+Patient=Patient(id=urn:uuid:18c82de8-564f-c773-b205-02ea0ff50fb7)
+Sex=code
 Age Group Test=null
 Patient0To5AndFemale=false
 Patient5To15AndFemale=false
@@ -296,12 +76,9 @@ Patient65ToHighestAndMale=false
 Initial Population=true
 Denominator=true
 Numerator=true
-elapsed: 31.288 seconds
 
-Test 1c169d1d-5ebc-e434-c07a-8813a3f7f46b
-Mon Mar 08 2021 20:01:44 GMT-0500 (Eastern Standard Time)
-Patient=org.hl7.fhir.r4.model.Patient@40620d8e
-Sex=Enumeration[female]
+Patient=Patient(id=urn:uuid:1c169d1d-5ebc-e434-c07a-8813a3f7f46b)
+Sex=code
 Age Group Test=null
 Patient0To5AndFemale=false
 Patient5To15AndFemale=false
@@ -318,4 +95,442 @@ Patient65ToHighestAndMale=false
 Initial Population=true
 Denominator=true
 Numerator=true
-elapsed: 31.348 seconds
+
+Patient=Patient(id=urn:uuid:2ca9f5e6-96c4-6832-2adb-7d3f4ed17a3d)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=true
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:327e80bd-fb11-5504-bfda-ea642ee6d93d)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:365d9bbc-750d-4ec5-a62c-0fa4555ccfdd)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:480c9735-e390-73b3-0b02-184af358a793)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:49dbaac7-6d88-8400-d3fe-4401e7725ad6)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:49f39019-5b93-9ca6-fec1-3262e8142bfe)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:595e5c82-4b35-673e-0593-ebd70aa7526b)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:5ad6826a-e417-ce59-7d6a-f2732a778eec)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:65dfd09c-f3e8-3005-17e4-4c30835ad3a9)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:679aef0e-f399-d77f-fbbe-767816506109)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:8f9d0615-5bfa-7373-5da6-aaba82397f45)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=true
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:9fcfa195-d542-2e15-f362-6b6d86801b47)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=true
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:a785a5e5-e4a4-8924-c83f-c2cf40f160cb)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:adf66717-de25-2051-2719-c0b8f97c18cf)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=true
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:b8198dd2-5454-d50d-3a66-f64992cfddc3)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=true
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:be8e3f83-6d9a-b275-e457-555539aba494)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:c1253efa-c764-2fcc-8b01-0438dc0d391f)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=true
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:c1ea0fb9-7f6e-c55e-093c-146cf21e6609)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=true
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:c3aed55c-8865-8995-a012-4ec0ea9f5bf0)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=true
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:d6f0e95f-2267-c1c4-37fe-d717e4caab25)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:e66076ea-1819-3e78-4588-b205c7a85e60)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=true
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:eb4b4216-16f9-4368-453c-6dd491fb0fe8)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=true
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=urn:uuid:f57912c6-4518-853e-4fae-627a074c6c9f)
+Sex=code
+Age Group Test=null
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=false
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+elapsed: 3.368 seconds
