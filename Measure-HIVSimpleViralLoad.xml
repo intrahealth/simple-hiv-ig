@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Measure xmlns="http://hl7.org/fhir">
+  <id value="HIVSimpleViralLoad"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleViralLoad</p><p><b>title</b>: HIVSimpleViralLoad</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2018-03-08</p><p><b>publisher</b>: HL7 International - [Some] Work Group</p><p><b>contact</b>: <a href="http://hl7.org/Special/committees/[something]">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleViralLoad</p><p><b>jurisdiction</b>: <span title="Codes: {http://unstats.un.org/unsd/methods/m49/m49.htm 001}">World</span></p><h3>RelatedArtifacts</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: HIVSimpleViralLoad</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: ">cohort</span></p><h3>Criteria</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: HIVSimpleViralLoad</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: ">cohort</span></p><h3>Criteria</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>
+  </text>
+  <url value="Measure/HIVSimpleViralLoad"/>
+  <identifier>
+    <system value="http://ohie.org/Measure/"/>
+    <value value="HIVSimpleViralLoad"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="HIVSimpleViralLoad"/>
+  <title value="HIVSimpleViralLoad"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2018-03-08"/>
+  <publisher value="HL7 International - [Some] Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="HIVSimpleViralLoad"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <relatedArtifact>
+    <type value="derived-from"/>
+    <url value="http://wiki.ihe.net/index.php/Aggregate_Data_Exchange_-_HIV"/>
+  </relatedArtifact>
+  <library value="Library/HIVSimpleViralLoad"/>
+  <scoring>
+    <coding>
+      <code value="proportion"/>
+    </coding>
+  </scoring>
+  <group>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+        <code value="numerator"/>
+      </coding>
+    </code>
+    <description value="HIVSimpleViralLoad"/>
+    <population>
+      <code>
+        <text value="cohort"/>
+      </code>
+      <criteria>
+        <language value="text/cql-identifier"/>
+        <expression value="Numerator"/>
+      </criteria>
+    </population>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+        <code value="denominator"/>
+      </coding>
+    </code>
+    <description value="HIVSimpleViralLoad"/>
+    <population>
+      <code>
+        <text value="cohort"/>
+      </code>
+      <criteria>
+        <language value="text/cql"/>
+        <expression value="Denominator"/>
+      </criteria>
+    </population>
+  </group>
+</Measure>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <identifier id="HIVSimpleTestResult" system="https://github.com/intrahealth/simple-hiv-ig" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using FHIR version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:44" localIdentifier="FC" path="https://github.com/intrahealth/simple-hiv-ig/FHIRCommon" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRCommon</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called FC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="7:1-7:43" localIdentifier="AR" path="https://github.com/intrahealth/simple-hiv-ig/AgeRanges" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>AgeRanges</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called AR</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codeSystems>
+      <def localId="5" locator="10:1-10:100" name="SNOMED-CT" id="http://snomed.info/sct" version="http://snomed.info/sct/900000000000207008" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="13:1-13:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <codes>
+      <def localId="8" locator="16:1-16:72" name="HIV Negative" id="165815009" display="HIV Negative" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>code &quot;HIV Negative&quot;: '165815009' from </a:s>
+               <a:s r="7">
+                  <a:s>&quot;SNOMED-CT&quot;</a:s>
+               </a:s>
+               <a:s> display 'HIV Negative'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="7" locator="16:39-16:49" name="SNOMED-CT"/>
+      </def>
+      <def localId="10" locator="17:1-17:72" name="HIV Positive" id="165816005" display="HIV Positive" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="10">
+               <a:s>code &quot;HIV Positive&quot;: '165816005' from </a:s>
+               <a:s r="9">
+                  <a:s>&quot;SNOMED-CT&quot;</a:s>
+               </a:s>
+               <a:s> display 'HIV Positive'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="9" locator="17:39-17:49" name="SNOMED-CT"/>
+      </def>
+      <def localId="12" locator="18:1-18:118" name="HIV 1 and 2 tests - Meaningful Use set" id="75622-1" display="HIV 1 and 2 tests - Meaningful Use set" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>code &quot;HIV 1 and 2 tests - Meaningful Use set&quot;: '75622-1' from </a:s>
+               <a:s r="11">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+               <a:s> display 'HIV 1 and 2 tests - Meaningful Use set'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="11" locator="18:63-18:69" name="LOINC"/>
+      </def>
+   </codes>
+   <contexts>
+      <def locator="20:1-20:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="20:1-20:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="20:1-20:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="15" locator="22:1-23:66" name="HIV Test Exists" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="15">
+               <a:s>define &quot;HIV Test Exists&quot;:
+  </a:s>
+               <a:s r="14">
+                  <a:s>exists </a:s>
+                  <a:s r="13">
+                     <a:s>(</a:s>
+                     <a:s r="13">
+                        <a:s>[Observation: </a:s>
+                        <a:s>
+                           <a:s>&quot;HIV 1 and 2 tests - Meaningful Use set&quot;</a:s>
+                        </a:s>
+                        <a:s>]</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="14" locator="23:3-23:66" xsi:type="Exists">
+            <operand localId="13" locator="23:10-23:66" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+               <codes xsi:type="ToList">
+                  <operand locator="23:25-23:64" name="HIV 1 and 2 tests - Meaningful Use set" xsi:type="CodeRef"/>
+               </codes>
+            </operand>
+         </expression>
+      </def>
+      <def localId="23" locator="25:1-27:44" name="HIV Positive Observation" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="23">
+               <a:s>define &quot;HIV Positive Observation&quot;:
+  </a:s>
+               <a:s r="22">
+                  <a:s>
+                     <a:s r="17">
+                        <a:s r="16">
+                           <a:s r="16">
+                              <a:s>[Observation: </a:s>
+                              <a:s>
+                                 <a:s>&quot;HIV 1 and 2 tests - Meaningful Use set&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> Observation</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="21">
+                     <a:s>where </a:s>
+                     <a:s r="21">
+                        <a:s r="19">
+                           <a:s r="18">
+                              <a:s>Observation</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="19">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="20">
+                           <a:s>&quot;HIV Positive&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="22" locator="26:3-27:44" xsi:type="Query">
+            <source localId="17" locator="26:3-26:69" alias="Observation">
+               <expression localId="16" locator="26:3-26:57" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+                  <codes xsi:type="ToList">
+                     <operand locator="26:17-26:56" name="HIV 1 and 2 tests - Meaningful Use set" xsi:type="CodeRef"/>
+                  </codes>
+               </expression>
+            </source>
+            <where localId="21" locator="27:5-27:44" xsi:type="Equal">
+               <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand asType="fhir:CodeableConcept" xsi:type="As">
+                     <operand localId="19" locator="27:11-27:27" path="value" scope="Observation" xsi:type="Property"/>
+                  </operand>
+               </operand>
+               <operand xsi:type="ToConcept">
+                  <operand localId="20" locator="27:31-27:44" name="HIV Positive" xsi:type="CodeRef"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="31" locator="29:1-31:44" name="HIV Negative Observation" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="31">
+               <a:s>define &quot;HIV Negative Observation&quot;:
+  </a:s>
+               <a:s r="30">
+                  <a:s>
+                     <a:s r="25">
+                        <a:s r="24">
+                           <a:s r="24">
+                              <a:s>[Observation: </a:s>
+                              <a:s>
+                                 <a:s>&quot;HIV 1 and 2 tests - Meaningful Use set&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> Observation</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="29">
+                     <a:s>where </a:s>
+                     <a:s r="29">
+                        <a:s r="27">
+                           <a:s r="26">
+                              <a:s>Observation</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="27">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="28">
+                           <a:s>&quot;HIV Negative&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="30" locator="30:3-31:44" xsi:type="Query">
+            <source localId="25" locator="30:3-30:69" alias="Observation">
+               <expression localId="24" locator="30:3-30:57" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+                  <codes xsi:type="ToList">
+                     <operand locator="30:17-30:56" name="HIV 1 and 2 tests - Meaningful Use set" xsi:type="CodeRef"/>
+                  </codes>
+               </expression>
+            </source>
+            <where localId="29" locator="31:5-31:44" xsi:type="Equal">
+               <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand asType="fhir:CodeableConcept" xsi:type="As">
+                     <operand localId="27" locator="31:11-31:27" path="value" scope="Observation" xsi:type="Property"/>
+                  </operand>
+               </operand>
+               <operand xsi:type="ToConcept">
+                  <operand localId="28" locator="31:31-31:44" name="HIV Negative" xsi:type="CodeRef"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="36" locator="33:1-35:23" name="Is HIV Positive" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="36">
+               <a:s>define &quot;Is HIV Positive&quot;:
+  </a:s>
+               <a:s r="35">
+                  <a:s r="33">
+                     <a:s>exists </a:s>
+                     <a:s r="32">
+                        <a:s>(</a:s>
+                        <a:s r="32">
+                           <a:s>&quot;HIV Positive Observation&quot;</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  and </a:s>
+                  <a:s r="34">
+                     <a:s>&quot;HIV Test Exists&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="35" locator="34:3-35:23" xsi:type="And">
+            <operand localId="33" locator="34:3-34:37" xsi:type="Exists">
+               <operand localId="32" locator="34:10-34:37" name="HIV Positive Observation" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="34" locator="35:7-35:23" name="HIV Test Exists" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="41" locator="37:1-39:23" name="Is HIV Negative" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="41">
+               <a:s>define &quot;Is HIV Negative&quot;:
+  </a:s>
+               <a:s r="40">
+                  <a:s r="38">
+                     <a:s>exists </a:s>
+                     <a:s r="37">
+                        <a:s>(</a:s>
+                        <a:s r="37">
+                           <a:s>&quot;HIV Negative Observation&quot;</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  and </a:s>
+                  <a:s r="39">
+                     <a:s>&quot;HIV Test Exists&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="40" locator="38:3-39:23" xsi:type="And">
+            <operand localId="38" locator="38:3-38:37" xsi:type="Exists">
+               <operand localId="37" locator="38:10-38:37" name="HIV Negative Observation" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="39" locator="39:7-39:23" name="HIV Test Exists" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="50" locator="42:1-47:5" name="HIV Test Results" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="50">
+               <a:s>define &quot;HIV Test Results&quot;:
+  </a:s>
+               <a:s r="49">
+                  <a:s>case
+    </a:s>
+                  <a:s r="44">
+                     <a:s>when </a:s>
+                     <a:s r="42">
+                        <a:s>&quot;Is HIV Positive&quot;</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="43">
+                        <a:s>&quot;HIV Positive&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="47">
+                     <a:s>when </a:s>
+                     <a:s r="45">
+                        <a:s>&quot;Is HIV Negative&quot;</a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="46">
+                        <a:s>&quot;HIV Negative&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="48">
+    else null
+  end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="49" locator="43:3-47:5" xsi:type="Case">
+            <caseItem localId="44" locator="44:5-44:46">
+               <when localId="42" locator="44:10-44:26" name="Is HIV Positive" xsi:type="ExpressionRef"/>
+               <then localId="43" locator="44:33-44:46" name="HIV Positive" xsi:type="CodeRef"/>
+            </caseItem>
+            <caseItem localId="47" locator="45:5-45:46">
+               <when localId="45" locator="45:10-45:26" name="Is HIV Negative" xsi:type="ExpressionRef"/>
+               <then localId="46" locator="45:33-45:46" name="HIV Negative" xsi:type="CodeRef"/>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="48" locator="46:10-46:13" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="53" locator="49:1-49:28" name="Sex" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="53">
+               <a:s>define &quot;Sex&quot;: </a:s>
+               <a:s r="52">
+                  <a:s r="51">
+                     <a:s>Patient</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="52">
+                     <a:s>gender</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="52" locator="49:15-49:28" path="gender" xsi:type="Property">
+            <source localId="51" locator="49:15-49:21" name="Patient" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="61" locator="53:1-53:57" name="Age Group/Sex" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="61">
+               <a:s>define &quot;Age Group/Sex&quot;: </a:s>
+               <a:s r="60">
+                  <a:s r="58">
+                     <a:s r="56">
+                        <a:s r="55">
+                           <a:s r="54">
+                              <a:s>AR</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="55">
+                              <a:s>&quot;Age Group&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="56">
+                           <a:s>code</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> + </a:s>
+                     <a:s r="57">
+                        <a:s>':'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> + </a:s>
+                  <a:s r="59">
+                     <a:s>&quot;Sex&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="60" locator="53:25-53:57" xsi:type="Concatenate">
+            <operand localId="58" locator="53:25-53:49" xsi:type="Concatenate">
+               <operand localId="56" locator="53:25-53:43" path="code" xsi:type="Property">
+                  <source localId="55" locator="53:25-53:38" name="Age Group" libraryName="AR" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand localId="57" locator="53:47-53:49" valueType="t:String" value=":" xsi:type="Literal"/>
+            </operand>
+            <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="59" locator="53:53-53:57" name="Sex" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="74" locator="56:1-57:67" name="Age Group/Sex/HIV Test Results" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="74">
+               <a:s>define &quot;Age Group/Sex/HIV Test Results&quot;:
+  </a:s>
+               <a:s r="73">
+                  <a:s r="70">
+                     <a:s r="68">
+                        <a:s r="66">
+                           <a:s r="64">
+                              <a:s r="63">
+                                 <a:s r="62">
+                                    <a:s>AR</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="63">
+                                    <a:s>&quot;Age Group&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="64">
+                                 <a:s>code</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> + </a:s>
+                           <a:s r="65">
+                              <a:s>':'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> + </a:s>
+                        <a:s r="67">
+                           <a:s>&quot;Sex&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> + </a:s>
+                     <a:s r="69">
+                        <a:s>':'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> + </a:s>
+                  <a:s r="72">
+                     <a:s r="71">
+                        <a:s>&quot;HIV Test Results&quot;</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="72">
+                        <a:s>code</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="73" locator="57:3-57:67" xsi:type="Concatenate">
+            <operand localId="70" locator="57:3-57:41" xsi:type="Concatenate">
+               <operand localId="68" locator="57:3-57:35" xsi:type="Concatenate">
+                  <operand localId="66" locator="57:3-57:27" xsi:type="Concatenate">
+                     <operand localId="64" locator="57:3-57:21" path="code" xsi:type="Property">
+                        <source localId="63" locator="57:3-57:16" name="Age Group" libraryName="AR" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="65" locator="57:25-57:27" valueType="t:String" value=":" xsi:type="Literal"/>
+                  </operand>
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="67" locator="57:31-57:35" name="Sex" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="69" locator="57:39-57:41" valueType="t:String" value=":" xsi:type="Literal"/>
+            </operand>
+            <operand localId="72" locator="57:45-57:67" path="code" xsi:type="Property">
+               <source localId="71" locator="57:45-57:62" name="HIV Test Results" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="76" locator="59:1-59:33" name="Initial Population" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="76">
+               <a:s r="75">define &quot;Initial Population&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="75" locator="59:30-59:33" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="78" locator="61:1-61:26" name="Denominator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="78">
+               <a:s r="77">define &quot;Denominator&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="77" locator="61:23-61:26" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="84" locator="63:1-65:22" name="Numerator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="84">
+               <a:s>define &quot;Numerator&quot;:
+  </a:s>
+               <a:s r="83">
+                  <a:s r="79">
+                     <a:s>&quot;Is HIV Negative&quot;</a:s>
+                  </a:s>
+                  <a:s>
+  and </a:s>
+                  <a:s r="82">
+                     <a:s r="80">
+                        <a:s>&quot;Sex&quot;</a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="81">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="83" locator="64:3-65:22" xsi:type="And">
+            <operand localId="79" locator="64:3-64:19" name="Is HIV Negative" xsi:type="ExpressionRef"/>
+            <operand localId="82" locator="65:7-65:22" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="80" locator="65:7-65:11" name="Sex" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand localId="81" locator="65:15-65:22" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

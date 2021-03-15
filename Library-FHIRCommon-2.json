@@ -1,0 +1,1646 @@
+{
+  "library" : {
+    "type" : "Library",
+    "identifier" : {
+      "type" : "VersionedIdentifier",
+      "id" : "FHIRCommon",
+      "system" : "https://github.com/intrahealth/simple-hiv-ig",
+      "version" : "0.1.0"
+    },
+    "schemaIdentifier" : {
+      "type" : "VersionedIdentifier",
+      "id" : "urn:hl7-org:elm",
+      "version" : "r1"
+    },
+    "usings" : {
+      "type" : "Library$Usings",
+      "def" : [ {
+        "type" : "UsingDef",
+        "localIdentifier" : "System",
+        "uri" : "urn:hl7-org:elm-types:r1"
+      }, {
+        "type" : "UsingDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "using ", "FHIR", " version ", "'4.0.1'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "1"
+          }
+        } ],
+        "localId" : "1",
+        "locator" : "3:1-3:26",
+        "localIdentifier" : "FHIR",
+        "uri" : "http://hl7.org/fhir",
+        "version" : "4.0.1"
+      } ]
+    },
+    "includes" : {
+      "type" : "Library$Includes",
+      "def" : [ {
+        "type" : "IncludeDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "include " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "FHIRHelpers" ]
+                  },
+                  "globalScope" : true
+                } ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " version ", "'4.0.1'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "2"
+          }
+        } ],
+        "localId" : "2",
+        "locator" : "5:1-5:35",
+        "localIdentifier" : "FHIRHelpers",
+        "path" : "https://github.com/intrahealth/simple-hiv-ig/FHIRHelpers",
+        "version" : "4.0.1"
+      } ]
+    },
+    "codeSystems" : {
+      "type" : "Library$CodeSystems",
+      "def" : [ {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"ConditionClinicalStatusCodes\"", ": ", "'http://terminology.hl7.org/CodeSystem/condition-clinical'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "3"
+          }
+        } ],
+        "localId" : "3",
+        "locator" : "7:1-7:101",
+        "name" : "ConditionClinicalStatusCodes",
+        "id" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"AllergyIntoleranceClinicalStatusCodes\"", ": ", "'http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "4"
+          }
+        } ],
+        "localId" : "4",
+        "locator" : "8:1-8:119",
+        "name" : "AllergyIntoleranceClinicalStatusCodes",
+        "id" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"AllergyIntoleranceVerificationStatusCodes\"", ": ", "'http://terminology.hl7.org/CodeSystem/allergyintolerance-verification'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "5"
+          }
+        } ],
+        "localId" : "5",
+        "locator" : "9:1-9:127",
+        "name" : "AllergyIntoleranceVerificationStatusCodes",
+        "id" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"Diagnosis Role\"", ": ", "'http://terminology.hl7.org/CodeSystem/diagnosis-role'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "6"
+          }
+        } ],
+        "localId" : "6",
+        "locator" : "10:1-10:83",
+        "name" : "Diagnosis Role",
+        "id" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"LOINC\"", ": ", "'http://loinc.org'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "7"
+          }
+        } ],
+        "localId" : "7",
+        "locator" : "11:1-11:38",
+        "name" : "LOINC",
+        "id" : "http://loinc.org",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"MedicationRequestCategory\"", ": ", "'http://terminology.hl7.org/CodeSystem/medicationrequest-category'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "8"
+          }
+        } ],
+        "localId" : "8",
+        "locator" : "12:1-12:106",
+        "name" : "MedicationRequestCategory",
+        "id" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"ConditionVerificationStatusCodes\"", ": ", "'http://terminology.hl7.org/CodeSystem/condition-ver-status'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "9"
+          }
+        } ],
+        "localId" : "9",
+        "locator" : "13:1-13:107",
+        "name" : "ConditionVerificationStatusCodes",
+        "id" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"SNOMED-CT\"", ": ", "'http://snomed.info/sct'", " version ", "'http://snomed.info/sct/900000000000207008'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "10"
+          }
+        } ],
+        "localId" : "10",
+        "locator" : "14:1-14:100",
+        "name" : "SNOMED-CT",
+        "id" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"RoleCode\"", ": ", "'http://terminology.hl7.org/fhir/v3-RoleCode'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "11"
+          }
+        } ],
+        "localId" : "11",
+        "locator" : "15:1-15:68",
+        "name" : "RoleCode",
+        "id" : "http://terminology.hl7.org/fhir/v3-RoleCode",
+        "accessLevel" : "Public"
+      } ]
+    },
+    "codes" : {
+      "type" : "Library$Codes",
+      "def" : [ {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "12",
+          "locator" : "17:30-17:59",
+          "name" : "ConditionClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"active\"", ": ", "'active'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "12"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'active'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "13"
+          }
+        } ],
+        "localId" : "13",
+        "locator" : "17:1-17:76",
+        "name" : "active",
+        "id" : "active",
+        "display" : "active",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "14",
+          "locator" : "18:38-18:76",
+          "name" : "AllergyIntoleranceClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"allergy-active\"", ": ", "'active'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"AllergyIntoleranceClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "14"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'allergy-active'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "15"
+          }
+        } ],
+        "localId" : "15",
+        "locator" : "18:1-18:101",
+        "name" : "allergy-active",
+        "id" : "active",
+        "display" : "allergy-active",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "16",
+          "locator" : "19:44-19:86",
+          "name" : "AllergyIntoleranceVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"allergy-confirmed\"", ": ", "'confirmed'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"AllergyIntoleranceVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "16"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'allergy-confirmed'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "17"
+          }
+        } ],
+        "localId" : "17",
+        "locator" : "19:1-19:114",
+        "name" : "allergy-confirmed",
+        "id" : "confirmed",
+        "display" : "allergy-confirmed",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "18",
+          "locator" : "20:42-20:80",
+          "name" : "AllergyIntoleranceClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"allergy-inactive\"", ": ", "'inactive'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"AllergyIntoleranceClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "18"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'allergy-inactive'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "19"
+          }
+        } ],
+        "localId" : "19",
+        "locator" : "20:1-20:107",
+        "name" : "allergy-inactive",
+        "id" : "inactive",
+        "display" : "allergy-inactive",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "20",
+          "locator" : "21:40-21:82",
+          "name" : "AllergyIntoleranceVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"allergy-refuted\"", ": ", "'refuted'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"AllergyIntoleranceVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "20"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'allergy-refuted'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "21"
+          }
+        } ],
+        "localId" : "21",
+        "locator" : "21:1-21:108",
+        "name" : "allergy-refuted",
+        "id" : "refuted",
+        "display" : "allergy-refuted",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "22",
+          "locator" : "22:42-22:80",
+          "name" : "AllergyIntoleranceClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"allergy-resolved\"", ": ", "'resolved'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"AllergyIntoleranceClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "22"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'allergy-resolved'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "23"
+          }
+        } ],
+        "localId" : "23",
+        "locator" : "22:1-22:107",
+        "name" : "allergy-resolved",
+        "id" : "resolved",
+        "display" : "allergy-resolved",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "24",
+          "locator" : "23:48-23:90",
+          "name" : "AllergyIntoleranceVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"allergy-unconfirmed\"", ": ", "'unconfirmed'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"AllergyIntoleranceVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "24"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'allergy-unconfirmed'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "25"
+          }
+        } ],
+        "localId" : "25",
+        "locator" : "23:1-23:120",
+        "name" : "allergy-unconfirmed",
+        "id" : "unconfirmed",
+        "display" : "allergy-unconfirmed",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "26",
+          "locator" : "24:32-24:47",
+          "name" : "Diagnosis Role"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"Billing\"", ": ", "'billing'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"Diagnosis Role\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "26"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Billing'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "27"
+          }
+        } ],
+        "localId" : "27",
+        "locator" : "24:1-24:65",
+        "name" : "Billing",
+        "id" : "billing",
+        "display" : "Billing",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "28",
+          "locator" : "25:34-25:40",
+          "name" : "LOINC"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"Birthdate\"", ": ", "'21112-8'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"LOINC\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "28"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Birth date'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "29"
+          }
+        } ],
+        "localId" : "29",
+        "locator" : "25:1-25:61",
+        "name" : "Birthdate",
+        "id" : "21112-8",
+        "display" : "Birth date",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "30",
+          "locator" : "26:36-26:62",
+          "name" : "MedicationRequestCategory"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"Community\"", ": ", "'community'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"MedicationRequestCategory\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "30"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Community'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "31"
+          }
+        } ],
+        "localId" : "31",
+        "locator" : "26:1-26:82",
+        "name" : "Community",
+        "id" : "community",
+        "display" : "Community",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "32",
+          "locator" : "27:36-27:69",
+          "name" : "ConditionVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"confirmed\"", ": ", "'confirmed'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "32"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'confirmed'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "33"
+          }
+        } ],
+        "localId" : "33",
+        "locator" : "27:1-27:89",
+        "name" : "confirmed",
+        "id" : "confirmed",
+        "display" : "confirmed",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "34",
+          "locator" : "28:31-28:41",
+          "name" : "SNOMED-CT"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"Dead\"", ": ", "'419099009'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"SNOMED-CT\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "34"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Dead'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "35"
+          }
+        } ],
+        "localId" : "35",
+        "locator" : "28:1-28:56",
+        "name" : "Dead",
+        "id" : "419099009",
+        "display" : "Dead",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "36",
+          "locator" : "29:42-29:75",
+          "name" : "ConditionVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"differential\"", ": ", "'differential'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "36"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'differential'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "37"
+          }
+        } ],
+        "localId" : "37",
+        "locator" : "29:1-29:98",
+        "name" : "differential",
+        "id" : "differential",
+        "display" : "differential",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "38",
+          "locator" : "30:36-30:62",
+          "name" : "MedicationRequestCategory"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"Discharge\"", ": ", "'discharge'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"MedicationRequestCategory\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "38"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Discharge'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "39"
+          }
+        } ],
+        "localId" : "39",
+        "locator" : "30:1-30:82",
+        "name" : "Discharge",
+        "id" : "discharge",
+        "display" : "Discharge",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "40",
+          "locator" : "31:50-31:83",
+          "name" : "ConditionVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"entered-in-error\"", ": ", "'entered-in-error'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "40"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'entered-in-error'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "41"
+          }
+        } ],
+        "localId" : "41",
+        "locator" : "31:1-31:110",
+        "name" : "entered-in-error",
+        "id" : "entered-in-error",
+        "display" : "entered-in-error",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "42",
+          "locator" : "32:22-32:31",
+          "name" : "RoleCode"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"ER\"", ": ", "'ER'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"RoleCode\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "42"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Emergency room'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "43"
+          }
+        } ],
+        "localId" : "43",
+        "locator" : "32:1-32:56",
+        "name" : "ER",
+        "id" : "ER",
+        "display" : "Emergency room",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "44",
+          "locator" : "33:24-33:33",
+          "name" : "RoleCode"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"ICU\"", ": ", "'ICU'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"RoleCode\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "44"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'Intensive care unit'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "45"
+          }
+        } ],
+        "localId" : "45",
+        "locator" : "33:1-33:63",
+        "name" : "ICU",
+        "id" : "ICU",
+        "display" : "Intensive care unit",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "46",
+          "locator" : "34:34-34:63",
+          "name" : "ConditionClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"inactive\"", ": ", "'inactive'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "46"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'inactive'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "47"
+          }
+        } ],
+        "localId" : "47",
+        "locator" : "34:1-34:82",
+        "name" : "inactive",
+        "id" : "inactive",
+        "display" : "inactive",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "48",
+          "locator" : "35:40-35:73",
+          "name" : "ConditionVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"provisional\"", ": ", "'provisional'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "48"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'provisional'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "49"
+          }
+        } ],
+        "localId" : "49",
+        "locator" : "35:1-35:95",
+        "name" : "provisional",
+        "id" : "provisional",
+        "display" : "provisional",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "50",
+          "locator" : "36:38-36:67",
+          "name" : "ConditionClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"recurrence\"", ": ", "'recurrence'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "50"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'recurrence'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "51"
+          }
+        } ],
+        "localId" : "51",
+        "locator" : "36:1-36:88",
+        "name" : "recurrence",
+        "id" : "recurrence",
+        "display" : "recurrence",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "52",
+          "locator" : "37:32-37:65",
+          "name" : "ConditionVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"refuted\"", ": ", "'refuted'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "52"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'refuted'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "53"
+          }
+        } ],
+        "localId" : "53",
+        "locator" : "37:1-37:83",
+        "name" : "refuted",
+        "id" : "refuted",
+        "display" : "refuted",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "54",
+          "locator" : "38:32-38:61",
+          "name" : "ConditionClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"relapse\"", ": ", "'relapse'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "54"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'relapse'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "55"
+          }
+        } ],
+        "localId" : "55",
+        "locator" : "38:1-38:79",
+        "name" : "relapse",
+        "id" : "relapse",
+        "display" : "relapse",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "56",
+          "locator" : "39:36-39:65",
+          "name" : "ConditionClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"remission\"", ": ", "'remission'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "56"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'remission'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "57"
+          }
+        } ],
+        "localId" : "57",
+        "locator" : "39:1-39:85",
+        "name" : "remission",
+        "id" : "remission",
+        "display" : "remission",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "58",
+          "locator" : "40:34-40:63",
+          "name" : "ConditionClinicalStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"resolved\"", ": ", "'resolved'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionClinicalStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "58"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'resolved'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "59"
+          }
+        } ],
+        "localId" : "59",
+        "locator" : "40:1-40:82",
+        "name" : "resolved",
+        "id" : "resolved",
+        "display" : "resolved",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "60",
+          "locator" : "41:40-41:73",
+          "name" : "ConditionVerificationStatusCodes"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"unconfirmed\"", ": ", "'unconfirmed'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ConditionVerificationStatusCodes\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "60"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'unconfirmed'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "61"
+          }
+        } ],
+        "localId" : "61",
+        "locator" : "41:1-41:95",
+        "name" : "unconfirmed",
+        "id" : "unconfirmed",
+        "display" : "unconfirmed",
+        "accessLevel" : "Public"
+      } ]
+    },
+    "contexts" : {
+      "type" : "Library$Contexts",
+      "def" : [ {
+        "type" : "ContextDef",
+        "locator" : "43:1-43:15",
+        "name" : "Patient"
+      } ]
+    },
+    "statements" : {
+      "type" : "Library$Statements",
+      "def" : [ {
+        "type" : "ExpressionDef",
+        "expression" : {
+          "type" : "SingletonFrom",
+          "operand" : {
+            "type" : "Retrieve",
+            "locator" : "43:1-43:15",
+            "dataType" : "{http://hl7.org/fhir}Patient",
+            "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient"
+          }
+        },
+        "locator" : "43:1-43:15",
+        "name" : "Patient",
+        "context" : "Patient"
+      } ]
+    },
+    "annotation" : [ {
+      "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion"
+    } ]
+  }
+}

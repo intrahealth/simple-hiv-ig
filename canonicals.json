@@ -1,0 +1,107 @@
+[
+  {
+    "id": "HIVSimpleAgeGroup",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleAgeGroup",
+    "version": "0.1.0",
+    "name": "HIVSimpleAgeGroup"
+  },
+  {
+    "id": "HIVSimpleCondition",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleCondition",
+    "version": "0.1.0",
+    "name": "HIVSimpleCondition"
+  },
+  {
+    "id": "HIVSimpleDemog",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleDemog",
+    "version": "0.1.0",
+    "name": "HIVSimpleDemog"
+  },
+  {
+    "id": "HIVSimpleGender",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGender",
+    "version": "0.1.0",
+    "name": "HIVSimpleGender"
+  },
+  {
+    "id": "HIVSimpleTestResult",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleTestResult",
+    "version": "0.1.0",
+    "name": "HIVSimpleTestResult"
+  },
+  {
+    "id": "HIVSimpleViralLoad",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleViralLoad",
+    "version": "0.1.0",
+    "name": "HIVSimpleViralLoad"
+  },
+  {
+    "id": "simple-hiv-ig",
+    "type": "ImplementationGuide",
+    "url": "https://github.com/intrahealth/simple-hiv-ig",
+    "version": "0.1.0",
+    "name": "YourComputableMyIGNameHere"
+  },
+  {
+    "id": "AgeRanges",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/AgeRanges",
+    "version": "0.1.0",
+    "name": "AgeRanges"
+  },
+  {
+    "id": "FHIRCommon",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon",
+    "version": "0.1.0",
+    "name": "FHIRCommon"
+  },
+  {
+    "id": "HIVSimpleAgeGroup",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleAgeGroup",
+    "version": "0.1.0",
+    "name": "HIVSimpleAgeGroup"
+  },
+  {
+    "id": "HIVSimpleCondition",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleCondition",
+    "version": "0.1.0",
+    "name": "HIVSimpleCondition"
+  },
+  {
+    "id": "HIVSimpleDemog",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleDemog",
+    "version": "0.1.0",
+    "name": "HIVSimpleDemog"
+  },
+  {
+    "id": "HIVSimpleGender",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender",
+    "version": "0.1.0",
+    "name": "HIVSimpleGender"
+  },
+  {
+    "id": "HIVSimpleTestResult",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleTestResult",
+    "version": "0.1.0",
+    "name": "HIVSimpleTestResult"
+  },
+  {
+    "id": "HIVSimpleViralLoad",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleViralLoad",
+    "version": "0.1.0",
+    "name": "HIVSimpleViralLoad"
+  }
+]

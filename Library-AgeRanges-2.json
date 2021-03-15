@@ -1,0 +1,3075 @@
+{
+  "library" : {
+    "type" : "Library",
+    "identifier" : {
+      "type" : "VersionedIdentifier",
+      "id" : "AgeRanges",
+      "system" : "https://github.com/intrahealth/simple-hiv-ig",
+      "version" : "0.1.0"
+    },
+    "schemaIdentifier" : {
+      "type" : "VersionedIdentifier",
+      "id" : "urn:hl7-org:elm",
+      "version" : "r1"
+    },
+    "usings" : {
+      "type" : "Library$Usings",
+      "def" : [ {
+        "type" : "UsingDef",
+        "localIdentifier" : "System",
+        "uri" : "urn:hl7-org:elm-types:r1"
+      }, {
+        "type" : "UsingDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "using ", "FHIR", " version ", "'4.0.1'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "1"
+          }
+        } ],
+        "localId" : "1",
+        "locator" : "3:1-3:26",
+        "localIdentifier" : "FHIR",
+        "uri" : "http://hl7.org/fhir",
+        "version" : "4.0.1"
+      } ]
+    },
+    "parameters" : {
+      "type" : "Library$Parameters",
+      "def" : [ {
+        "type" : "ParameterDef",
+        "parameterTypeSpecifier" : {
+          "type" : "IntervalTypeSpecifier",
+          "pointType" : {
+            "type" : "NamedTypeSpecifier",
+            "localId" : "25",
+            "locator" : "20:41-20:48",
+            "name" : "{urn:hl7-org:elm-types:r1}DateTime"
+          },
+          "localId" : "26",
+          "locator" : "20:32-20:49"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "parameter ", "\"Measurement Period\"", " " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "Interval<" ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "DateTime" ]
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "25"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ ">" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "26"
+              },
+              "globalScope" : true
+            } ],
+            "r" : "27"
+          }
+        } ],
+        "localId" : "27",
+        "locator" : "20:1-20:49",
+        "name" : "Measurement Period",
+        "accessLevel" : "Public"
+      } ]
+    },
+    "codeSystems" : {
+      "type" : "Library$CodeSystems",
+      "def" : [ {
+        "type" : "CodeSystemDef",
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "codesystem ", "\"ISO-8601-Derived Periods\"", ": ", "'http://ohie.org/CodeSystem/iso-8601-derived-periods'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "2"
+          }
+        } ],
+        "localId" : "2",
+        "locator" : "5:1-5:92",
+        "name" : "ISO-8601-Derived Periods",
+        "id" : "http://ohie.org/CodeSystem/iso-8601-derived-periods",
+        "accessLevel" : "Public"
+      } ]
+    },
+    "codes" : {
+      "type" : "Library$Codes",
+      "def" : [ {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "3",
+          "locator" : "8:34-8:59",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P0Y--P1Y\"", ": ", "'P0Y--P1Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "3"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'< 1 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "4"
+          }
+        } ],
+        "localId" : "4",
+        "locator" : "8:1-8:78",
+        "name" : "P0Y--P1Y",
+        "id" : "P0Y--P1Y",
+        "display" : "< 1 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "5",
+          "locator" : "9:34-9:59",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P1Y--P5Y\"", ": ", "'P1Y--P5Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "5"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'1-4 years'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "6"
+          }
+        } ],
+        "localId" : "6",
+        "locator" : "9:1-9:79",
+        "name" : "P1Y--P5Y",
+        "id" : "P1Y--P5Y",
+        "display" : "1-4 years",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "7",
+          "locator" : "10:36-10:61",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P5Y--P10Y\"", ": ", "'P5Y--P10Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "7"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'5-9 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "8"
+          }
+        } ],
+        "localId" : "8",
+        "locator" : "10:1-10:80",
+        "name" : "P5Y--P10Y",
+        "id" : "P5Y--P10Y",
+        "display" : "5-9 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "9",
+          "locator" : "11:38-11:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P10Y--P15Y\"", ": ", "'P10Y--P15Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "9"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'10-14 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "10"
+          }
+        } ],
+        "localId" : "10",
+        "locator" : "11:1-11:84",
+        "name" : "P10Y--P15Y",
+        "id" : "P10Y--P15Y",
+        "display" : "10-14 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "11",
+          "locator" : "12:38-12:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P15Y--P20Y\"", ": ", "'P15Y--P20Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "11"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'15-19 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "12"
+          }
+        } ],
+        "localId" : "12",
+        "locator" : "12:1-12:84",
+        "name" : "P15Y--P20Y",
+        "id" : "P15Y--P20Y",
+        "display" : "15-19 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "13",
+          "locator" : "13:38-13:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P20Y--P25Y\"", ": ", "'P20Y--P25Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "13"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'20-24 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "14"
+          }
+        } ],
+        "localId" : "14",
+        "locator" : "13:1-13:84",
+        "name" : "P20Y--P25Y",
+        "id" : "P20Y--P25Y",
+        "display" : "20-24 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "15",
+          "locator" : "14:38-14:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P25Y--P30Y\"", ": ", "'P25Y--P30Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "15"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'25-29 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "16"
+          }
+        } ],
+        "localId" : "16",
+        "locator" : "14:1-14:84",
+        "name" : "P25Y--P30Y",
+        "id" : "P25Y--P30Y",
+        "display" : "25-29 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "17",
+          "locator" : "15:38-15:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P30Y--P35Y\"", ": ", "'P30Y--P35Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "17"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'30-34 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "18"
+          }
+        } ],
+        "localId" : "18",
+        "locator" : "15:1-15:84",
+        "name" : "P30Y--P35Y",
+        "id" : "P30Y--P35Y",
+        "display" : "30-34 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "19",
+          "locator" : "16:38-16:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P35Y--P40Y\"", ": ", "'P35Y--P40Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "19"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'35-39 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "20"
+          }
+        } ],
+        "localId" : "20",
+        "locator" : "16:1-16:84",
+        "name" : "P35Y--P40Y",
+        "id" : "P35Y--P40Y",
+        "display" : "35-39 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "21",
+          "locator" : "17:38-17:63",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P40Y--P50Y\"", ": ", "'P40Y--P50Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "21"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'40-49 year'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "22"
+          }
+        } ],
+        "localId" : "22",
+        "locator" : "17:1-17:84",
+        "name" : "P40Y--P50Y",
+        "id" : "P40Y--P50Y",
+        "display" : "40-49 year",
+        "accessLevel" : "Public"
+      }, {
+        "type" : "CodeDef",
+        "codeSystem" : {
+          "type" : "CodeSystemRef",
+          "localId" : "23",
+          "locator" : "18:42-18:67",
+          "name" : "ISO-8601-Derived Periods"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "code ", "\"P50Y--P9999Y\"", ": ", "'P50Y--P9999Y'", " from " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\"ISO-8601-Derived Periods\"" ]
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "23"
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ " display ", "'50+ years'" ]
+              },
+              "globalScope" : true
+            } ],
+            "r" : "24"
+          }
+        } ],
+        "localId" : "24",
+        "locator" : "18:1-18:87",
+        "name" : "P50Y--P9999Y",
+        "id" : "P50Y--P9999Y",
+        "display" : "50+ years",
+        "accessLevel" : "Public"
+      } ]
+    },
+    "contexts" : {
+      "type" : "Library$Contexts",
+      "def" : [ {
+        "type" : "ContextDef",
+        "locator" : "22:1-22:15",
+        "name" : "Patient"
+      } ]
+    },
+    "statements" : {
+      "type" : "Library$Statements",
+      "def" : [ {
+        "type" : "ExpressionDef",
+        "expression" : {
+          "type" : "SingletonFrom",
+          "operand" : {
+            "type" : "Retrieve",
+            "locator" : "22:1-22:15",
+            "dataType" : "{http://hl7.org/fhir}Patient",
+            "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient"
+          }
+        },
+        "locator" : "22:1-22:15",
+        "name" : "Patient",
+        "context" : "Patient"
+      }, {
+        "type" : "ExpressionDef",
+        "expression" : {
+          "type" : "Case",
+          "caseItem" : [ {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "28",
+                    "locator" : "27:32-27:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "29",
+                  "locator" : "27:23-27:51"
+                } ],
+                "localId" : "30",
+                "locator" : "27:10-27:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "31",
+                  "locator" : "27:66",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "0"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "32",
+                  "locator" : "27:69",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "1"
+                },
+                "localId" : "33",
+                "locator" : "27:57-27:70",
+                "lowClosed" : true
+              } ],
+              "localId" : "34",
+              "locator" : "27:10-27:70"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "35",
+              "locator" : "27:77-27:86",
+              "name" : "P0Y--P1Y"
+            },
+            "localId" : "36",
+            "locator" : "27:5-27:86"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "37",
+                    "locator" : "28:32-28:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "38",
+                  "locator" : "28:23-28:51"
+                } ],
+                "localId" : "39",
+                "locator" : "28:10-28:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "40",
+                  "locator" : "28:66",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "1"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "41",
+                  "locator" : "28:69",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "5"
+                },
+                "localId" : "42",
+                "locator" : "28:57-28:70",
+                "lowClosed" : true
+              } ],
+              "localId" : "43",
+              "locator" : "28:10-28:70"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "44",
+              "locator" : "28:77-28:86",
+              "name" : "P1Y--P5Y"
+            },
+            "localId" : "45",
+            "locator" : "28:5-28:86"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "46",
+                    "locator" : "29:32-29:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "47",
+                  "locator" : "29:23-29:51"
+                } ],
+                "localId" : "48",
+                "locator" : "29:10-29:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "49",
+                  "locator" : "29:66",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "5"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "50",
+                  "locator" : "29:69-29:70",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "10"
+                },
+                "localId" : "51",
+                "locator" : "29:57-29:71",
+                "lowClosed" : true
+              } ],
+              "localId" : "52",
+              "locator" : "29:10-29:71"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "53",
+              "locator" : "29:78-29:88",
+              "name" : "P5Y--P10Y"
+            },
+            "localId" : "54",
+            "locator" : "29:5-29:88"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "55",
+                    "locator" : "30:32-30:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "56",
+                  "locator" : "30:23-30:51"
+                } ],
+                "localId" : "57",
+                "locator" : "30:10-30:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "58",
+                  "locator" : "30:66-30:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "10"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "59",
+                  "locator" : "30:70-30:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "15"
+                },
+                "localId" : "60",
+                "locator" : "30:57-30:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "61",
+              "locator" : "30:10-30:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "62",
+              "locator" : "30:79-30:90",
+              "name" : "P10Y--P15Y"
+            },
+            "localId" : "63",
+            "locator" : "30:5-30:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "64",
+                    "locator" : "31:32-31:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "65",
+                  "locator" : "31:23-31:51"
+                } ],
+                "localId" : "66",
+                "locator" : "31:10-31:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "67",
+                  "locator" : "31:66-31:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "15"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "68",
+                  "locator" : "31:70-31:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "20"
+                },
+                "localId" : "69",
+                "locator" : "31:57-31:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "70",
+              "locator" : "31:10-31:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "71",
+              "locator" : "31:79-31:90",
+              "name" : "P15Y--P20Y"
+            },
+            "localId" : "72",
+            "locator" : "31:5-31:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "73",
+                    "locator" : "32:32-32:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "74",
+                  "locator" : "32:23-32:51"
+                } ],
+                "localId" : "75",
+                "locator" : "32:10-32:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "76",
+                  "locator" : "32:66-32:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "20"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "77",
+                  "locator" : "32:70-32:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "25"
+                },
+                "localId" : "78",
+                "locator" : "32:57-32:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "79",
+              "locator" : "32:10-32:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "80",
+              "locator" : "32:79-32:90",
+              "name" : "P20Y--P25Y"
+            },
+            "localId" : "81",
+            "locator" : "32:5-32:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "82",
+                    "locator" : "33:32-33:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "83",
+                  "locator" : "33:23-33:51"
+                } ],
+                "localId" : "84",
+                "locator" : "33:10-33:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "85",
+                  "locator" : "33:66-33:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "25"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "86",
+                  "locator" : "33:70-33:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "30"
+                },
+                "localId" : "87",
+                "locator" : "33:57-33:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "88",
+              "locator" : "33:10-33:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "89",
+              "locator" : "33:79-33:90",
+              "name" : "P25Y--P30Y"
+            },
+            "localId" : "90",
+            "locator" : "33:5-33:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "91",
+                    "locator" : "34:32-34:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "92",
+                  "locator" : "34:23-34:51"
+                } ],
+                "localId" : "93",
+                "locator" : "34:10-34:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "94",
+                  "locator" : "34:66-34:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "30"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "95",
+                  "locator" : "34:70-34:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "35"
+                },
+                "localId" : "96",
+                "locator" : "34:57-34:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "97",
+              "locator" : "34:10-34:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "98",
+              "locator" : "34:79-34:90",
+              "name" : "P30Y--P35Y"
+            },
+            "localId" : "99",
+            "locator" : "34:5-34:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "100",
+                    "locator" : "35:32-35:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "101",
+                  "locator" : "35:23-35:51"
+                } ],
+                "localId" : "102",
+                "locator" : "35:10-35:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "103",
+                  "locator" : "35:66-35:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "35"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "104",
+                  "locator" : "35:70-35:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "40"
+                },
+                "localId" : "105",
+                "locator" : "35:57-35:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "106",
+              "locator" : "35:10-35:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "107",
+              "locator" : "35:79-35:90",
+              "name" : "P35Y--P40Y"
+            },
+            "localId" : "108",
+            "locator" : "35:5-35:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "109",
+                    "locator" : "36:32-36:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "110",
+                  "locator" : "36:23-36:51"
+                } ],
+                "localId" : "111",
+                "locator" : "36:10-36:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "112",
+                  "locator" : "36:66-36:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "40"
+                },
+                "high" : {
+                  "type" : "Literal",
+                  "localId" : "113",
+                  "locator" : "36:70-36:71",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "50"
+                },
+                "localId" : "114",
+                "locator" : "36:57-36:72",
+                "lowClosed" : true
+              } ],
+              "localId" : "115",
+              "locator" : "36:10-36:72"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "116",
+              "locator" : "36:79-36:90",
+              "name" : "P40Y--P50Y"
+            },
+            "localId" : "117",
+            "locator" : "36:5-36:90"
+          }, {
+            "type" : "CaseItem",
+            "when" : {
+              "type" : "In",
+              "operand" : [ {
+                "type" : "CalculateAgeAt",
+                "operand" : [ {
+                  "type" : "ToDateTime",
+                  "operand" : {
+                    "type" : "Property",
+                    "source" : {
+                      "type" : "ExpressionRef",
+                      "name" : "Patient"
+                    },
+                    "path" : "birthDate.value"
+                  }
+                }, {
+                  "type" : "Start",
+                  "operand" : {
+                    "type" : "ParameterRef",
+                    "localId" : "118",
+                    "locator" : "37:32-37:51",
+                    "name" : "Measurement Period"
+                  },
+                  "localId" : "119",
+                  "locator" : "37:23-37:51"
+                } ],
+                "localId" : "120",
+                "locator" : "37:10-37:52",
+                "precision" : "Year"
+              }, {
+                "type" : "Interval",
+                "low" : {
+                  "type" : "Literal",
+                  "localId" : "121",
+                  "locator" : "37:66-37:67",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "50"
+                },
+                "high" : {
+                  "type" : "As",
+                  "operand" : {
+                    "type" : "Null",
+                    "localId" : "122",
+                    "locator" : "37:70-37:73"
+                  },
+                  "asType" : "{urn:hl7-org:elm-types:r1}Integer"
+                },
+                "localId" : "123",
+                "locator" : "37:57-37:74",
+                "lowClosed" : true,
+                "highClosed" : true
+              } ],
+              "localId" : "124",
+              "locator" : "37:10-37:74"
+            },
+            "then" : {
+              "type" : "CodeRef",
+              "localId" : "125",
+              "locator" : "37:81-37:94",
+              "name" : "P50Y--P9999Y"
+            },
+            "localId" : "126",
+            "locator" : "37:5-37:94"
+          } ],
+          "else" : {
+            "type" : "As",
+            "operand" : {
+              "type" : "Null",
+              "localId" : "127",
+              "locator" : "38:10-38:13"
+            },
+            "asType" : "{urn:hl7-org:elm-types:r1}Code"
+          },
+          "localId" : "128",
+          "locator" : "26:3-39:5"
+        },
+        "annotation" : [ {
+          "s" : {
+            "s" : [ {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ "define ", "\"Age Group\"", ":\n  " ]
+              },
+              "globalScope" : true
+            }, {
+              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+              "value" : {
+                "s" : [ {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "case\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "28"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "29"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "30"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "0", ", ", "1", ")" ],
+                                "r" : "31"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "33"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "34"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P0Y--P1Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "35"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "36"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "37"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "38"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "39"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "1", ", ", "5", ")" ],
+                                "r" : "40"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "42"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "43"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P1Y--P5Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "44"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "45"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "46"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "47"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "48"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "5", ", ", "10", ")" ],
+                                "r" : "49"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "51"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "52"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P5Y--P10Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "53"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "54"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "55"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "56"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "57"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "10", ", ", "15", ")" ],
+                                "r" : "58"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "60"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "61"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P10Y--P15Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "62"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "63"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "64"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "65"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "66"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "15", ", ", "20", ")" ],
+                                "r" : "67"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "69"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "70"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P15Y--P20Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "71"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "72"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "73"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "74"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "75"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "20", ", ", "25", ")" ],
+                                "r" : "76"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "78"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "79"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P20Y--P25Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "80"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "81"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "82"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "83"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "84"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "25", ", ", "30", ")" ],
+                                "r" : "85"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "87"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "88"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P25Y--P30Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "89"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "90"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "91"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "92"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "93"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "30", ", ", "35", ")" ],
+                                "r" : "94"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "96"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "97"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P30Y--P35Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "98"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "99"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "100"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "101"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "102"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "35", ", ", "40", ")" ],
+                                "r" : "103"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "105"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "106"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P35Y--P40Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "107"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "108"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "109"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "110"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "111"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "40", ", ", "50", ")" ],
+                                "r" : "112"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "114"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "115"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P40Y--P50Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "116"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "117"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    " ]
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ "when " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "AgeInYearsAt", "(" ]
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ "start of " ]
+                                  },
+                                  "globalScope" : true
+                                }, {
+                                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                  "value" : {
+                                    "s" : [ {
+                                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                                      "value" : {
+                                        "s" : [ "\"Measurement Period\"" ]
+                                      },
+                                      "globalScope" : true
+                                    } ],
+                                    "r" : "118"
+                                  },
+                                  "globalScope" : true
+                                } ],
+                                "r" : "119"
+                              },
+                              "globalScope" : true
+                            }, {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ ")" ]
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "120"
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ " in " ]
+                          },
+                          "globalScope" : true
+                        }, {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ {
+                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                              "value" : {
+                                "s" : [ "Interval[", "50", ", ", "null", "]" ],
+                                "r" : "121"
+                              },
+                              "globalScope" : true
+                            } ],
+                            "r" : "123"
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "124"
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ " then " ]
+                      },
+                      "globalScope" : true
+                    }, {
+                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                      "value" : {
+                        "s" : [ {
+                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                          "value" : {
+                            "s" : [ "\"P50Y--P9999Y\"" ]
+                          },
+                          "globalScope" : true
+                        } ],
+                        "r" : "125"
+                      },
+                      "globalScope" : true
+                    } ],
+                    "r" : "126"
+                  },
+                  "globalScope" : true
+                }, {
+                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
+                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
+                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
+                  "value" : {
+                    "s" : [ "\n    else ", "null", "\n  end" ],
+                    "r" : "127"
+                  },
+                  "globalScope" : true
+                } ],
+                "r" : "128"
+              },
+              "globalScope" : true
+            } ],
+            "r" : "129"
+          }
+        } ],
+        "localId" : "129",
+        "locator" : "25:1-39:5",
+        "name" : "Age Group",
+        "context" : "Patient",
+        "accessLevel" : "Public"
+      } ]
+    },
+    "annotation" : [ {
+      "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion"
+    } ]
+  }
+}
