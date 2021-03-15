@@ -1,7 +1,7 @@
 <Measure xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/measure.xsd">
   <id value="HIVSimpleDemog"/>
-  <url value="http://ohie.org/Measure/HIVSimpleDemog"/>
+  <url value="Measure/HIVSimpleDemog"/>
   <identifier>
     <system value="http://ohie.org/Measure/"/>
     <value value="HIVSimpleDemog"/>
@@ -18,7 +18,7 @@
     <type value="derived-from"/>
     <url value="http://wiki.ihe.net/index.php/Aggregate_Data_Exchange_-_HIV"/>
   </relatedArtifact>
-  <library value="http://ohie.org/Library/HIVSimpleDemog"/>
+  <library value="Library/HIVSimpleDemog"/>
   <scoring>
     <coding>
       <code value="proportion"/>

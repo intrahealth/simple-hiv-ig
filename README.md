@@ -26,9 +26,14 @@ mvn jetty:run
 
 See https://github.com/intrahealth/synthea-hiv
 
+For example:
+```sh
+docker run intrahealth/synthea-hiv:latest
+```
+
 ### Prepare this repo
 
-Clone this IG repo
+Clone this repo
 
 ```sh
 git clone git@github.com:citizenrich/simple-hiv-ig.git
@@ -46,7 +51,7 @@ cd output
 
 PUT the Library resources. We use PUT to ensure that the id is always the same and when changes are made they overwrite the resource with those updates.
 ```sh
-for FILE in FHIRHelpers-4.0.1 FHIRCommon AgeRanges \
+for FILE in FHIRCommon AgeRanges \
 HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done
 ```
@@ -57,11 +62,15 @@ for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender 
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done
 ```
 
-Run a provided example
+Run a provided example in the browser
 ```
 http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleDemog/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleTestResult/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleCondition/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleViralLoad/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
-
 
 ## Authoring
 
@@ -122,6 +131,6 @@ $ tree
 ```
 
 Some hints on authorship from recent workshops:
-* Double quotes are for identifiers and single quotes represent string literals, for example, "female" should be 'female'. 
-* Check for odd copy/paste errors in quotes. 
+* Double quotes are for identifiers and single quotes represent string literals, for example, "female" should be 'female'.
+* Check for odd copy/paste errors in quotes.
 * Required libraries: `include FHIRHelpers version '4.0.1'` Use of FHIRHelpers is implicit in the translator, based on the modelinfo file with FHIR. This must be included in the boilerplate of any CQL that processes FHIR.
