@@ -11,7 +11,7 @@
   "title": "Your User Friendly Name for MyIG Here",
   "status": "draft",
   "experimental": false,
-  "date": "2021-03-15T18:08:55+00:00",
+  "date": "2021-03-25T23:53:26+00:00",
   "publisher": "HL7 International - [Some] Work Group",
   "contact": [
     {
@@ -337,46 +337,9 @@
           }
         ],
         "reference": {
-          "reference": "Library/FHIRCommon"
+          "reference": "Library/HIVSimpleViralLoad"
         },
-        "name": "FHIR Common"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/AgeRanges"
-        },
-        "name": "Age Ranges"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
-          }
-        ],
-        "reference": {
-          "reference": "Measure/HIVSimpleGender"
-        },
-        "name": "HIVSimpleGender",
-        "description": "HIVSimpleGender"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/HIVSimpleAgeGroup"
-        },
-        "name": "HIVSimpleAgeGroup"
+        "name": "HIVSimpleViralLoad"
       },
       {
         "extension": [
@@ -399,9 +362,9 @@
           }
         ],
         "reference": {
-          "reference": "Library/HIVSimpleCondition"
+          "reference": "Library/AgeRanges"
         },
-        "name": "HIVSimpleCondition"
+        "name": "Age Ranges"
       },
       {
         "extension": [
@@ -450,9 +413,46 @@
           }
         ],
         "reference": {
-          "reference": "Library/HIVSimpleTestResult"
+          "reference": "Library/HIVSimpleGender"
         },
-        "name": "HIVSimpleTestResult"
+        "name": "HIVSimpleGender"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/HIVSimpleCondition"
+        },
+        "name": "HIVSimpleCondition"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/HIVSimpleAgeGroup"
+        },
+        "name": "HIVSimpleAgeGroup"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIVSimpleGender"
+        },
+        "name": "HIVSimpleGender",
+        "description": "HIVSimpleGender"
       },
       {
         "extension": [
@@ -474,21 +474,9 @@
           }
         ],
         "reference": {
-          "reference": "Library/HIVSimpleViralLoad"
+          "reference": "Library/FHIRCommon"
         },
-        "name": "HIVSimpleViralLoad"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/HIVSimpleGender"
-        },
-        "name": "HIVSimpleGender"
+        "name": "FHIR Common"
       },
       {
         "extension": [
@@ -502,6 +490,18 @@
         },
         "name": "HIVSimpleTestResult",
         "description": "HIVSimpleTestResult"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/HIVSimpleTestResult"
+        },
+        "name": "HIVSimpleTestResult"
       }
     ],
     "page": {

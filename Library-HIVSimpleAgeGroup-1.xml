@@ -14,7 +14,7 @@
       </def>
    </usings>
    <includes>
-      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="https://github.com/intrahealth/simple-hiv-ig/FHIRHelpers" version="4.0.1">
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
          <annotation xsi:type="a:Annotation">
             <a:s r="2">
                <a:s>include </a:s>

@@ -2,8 +2,8 @@
 =========================================
 
 err = 41, warn = 33, info = 6
-IG Publisher Version: 1.1.63
-Generated Mon Mar 15 18:09:03 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
+IG Publisher Version: 1.1.64
+Generated Thu Mar 25 23:53:34 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
 
  Build Errors : 0 / 9 / 0
  /github/workspace/input/myig : 2 / 0 / 1
@@ -24,14 +24,14 @@ Generated Mon Mar 15 18:09:03 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1
 </table>
 == n/a ==
 WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/AgeRanges.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleAgeGroup.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleCondition.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleTestResult.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleDemog.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleViralLoad.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/AgeRanges.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleGender.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleCondition.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleAgeGroup.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleDemog.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleTestResult.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 == /github/workspace/input/myig.xml ==
 ERROR: ImplementationGuide.where(url = 'https://github.com/intrahealth/simple-hiv-ig'): Conformance resource /github/workspace/input/myig.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/ImplementationGuide/simple-hiv-ig) does not match the URL (https://github.com/intrahealth/simple-hiv-ig)
 INFORMATION: ImplementationGuide/simple-hiv-ig: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
