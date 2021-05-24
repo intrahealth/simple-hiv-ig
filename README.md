@@ -28,7 +28,7 @@ See https://github.com/intrahealth/synthea-hiv
 
 For example:
 ```sh
-docker run intrahealth/synthea-hiv:latest
+docker run intrahealth/synthea-hiv:pop100
 ```
 
 ### Prepare this repo
@@ -36,7 +36,7 @@ docker run intrahealth/synthea-hiv:latest
 Clone this repo
 
 ```sh
-git clone git@github.com:citizenrich/simple-hiv-ig.git
+git clone git@github.com:intrahealth/simple-hiv-ig.git
 cd simple-hiv-ig
 ```
 
@@ -46,12 +46,13 @@ Run Publisher and create resources. Resources are put in /output
 bash _updatePublisher
 # run every time
 bash _genonce.sh
-cd output
 ```
 
 PUT the Library resources. We use PUT to ensure that the id is always the same and when changes are made they overwrite the resource with those updates.
 ```sh
-for FILE in FHIRCommon AgeRanges \
+cd output
+# library resources
+for FILE in FHIRHelpers FHIRCommon AgeRanges \
 HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done
 ```
