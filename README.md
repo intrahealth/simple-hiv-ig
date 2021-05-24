@@ -28,7 +28,7 @@ See https://github.com/intrahealth/synthea-hiv
 
 For example:
 ```sh
-docker run intrahealth/synthea-hiv:pop100
+docker run intrahealth/synthea-hiv:pop20
 ```
 
 ### Prepare this repo
