@@ -1,14 +1,15 @@
 ﻿YourComputableMyIGNameHere : Validation Results
 =========================================
 
-err = 41, warn = 33, info = 6
-IG Publisher Version: 1.1.64
-Generated Thu Mar 25 23:53:34 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
+err = 43, warn = 34, info = 6
+IG Publisher Version: 1.1.72
+Generated Mon May 24 23:58:59 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
 
- Build Errors : 0 / 9 / 0
+ Build Errors : 1 / 10 / 0
  /github/workspace/input/myig : 2 / 0 / 1
  /github/workspace/input/resources/library-AgeRanges : 1 / 0 / 1
  /github/workspace/input/resources/library-FHIRCommon : 2 / 0 / 1
+ /github/workspace/input/resources/library-FHIRHelpers-4.0.1 : 1 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleAgeGroup : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleCondition : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleDemog : 3 / 0 / 1
@@ -24,14 +25,16 @@ Generated Thu Mar 25 23:53:34 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1
 </table>
 == n/a ==
 WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleViralLoad.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/AgeRanges.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleGender.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleCondition.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleAgeGroup.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleDemog.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /github/workspace/input/cql/FHIRHelpers-4.0.1.cql: CQL source was not associated with a library resource in the IG.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleGender.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleDemog.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleViralLoad.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleCondition.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/AgeRanges.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleTestResult.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleAgeGroup.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 == /github/workspace/input/myig.xml ==
 ERROR: ImplementationGuide.where(url = 'https://github.com/intrahealth/simple-hiv-ig'): Conformance resource /github/workspace/input/myig.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/ImplementationGuide/simple-hiv-ig) does not match the URL (https://github.com/intrahealth/simple-hiv-ig)
 INFORMATION: ImplementationGuide/simple-hiv-ig: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
@@ -43,6 +46,9 @@ ERROR: Library/AgeRanges: Library.relatedArtifact[0].resource: Canonical URL 'ht
 INFORMATION: Library/FHIRCommon: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
 ERROR: Library/FHIRCommon: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/FHIRCommon: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
+== /github/workspace/input/resources/library-FHIRHelpers-4.0.1.json ==
+ERROR: Library.content{0]: Error Loading FHIRHelpers.cql: null
+INFORMATION: Library/FHIRHelpers: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
 == /github/workspace/input/resources/library-HIVSimpleAgeGroup.json ==
 ERROR: HIVSimpleAgeGroup.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
 INFORMATION: Library/HIVSimpleAgeGroup: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library

@@ -11,7 +11,6 @@
     <link href="fhir.css" rel="stylesheet"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
     <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
     <!-- Project extras -->
@@ -114,15 +113,18 @@
       </div>  <!-- /container -->
     </div>  <!-- /segment-navbar -->
     <!--status-bar-->
+
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
           <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
         </ul>
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
 
-    <div id="segment-content">  <!-- segment-content -->
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
@@ -167,18 +169,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="Library-FHIRCommon.html" title="Library/FHIRCommon">FHIR Common</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Library-HIVSimpleGender.html" title="Library/HIVSimpleGender">HIVSimpleGender</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Library-HIVSimpleDemog.html" title="Library/HIVSimpleDemog">HIVSimpleDemog</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Library-HIVSimpleViralLoad.html"
                      title="Library/HIVSimpleViralLoad">HIVSimpleViralLoad</a>
                </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Library-AgeRanges.html" title="Library/AgeRanges">Age Ranges</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Library-HIVSimpleGender.html" title="Library/HIVSimpleGender">HIVSimpleGender</a>
+                  <a href="Library-FHIRHelpers.html" title="Library/FHIRHelpers">FHIR Helpers</a>
                </td>
             </tr>
             <tr>
@@ -189,23 +201,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Library-HIVSimpleAgeGroup.html" title="Library/HIVSimpleAgeGroup">HIVSimpleAgeGroup</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Library-HIVSimpleDemog.html" title="Library/HIVSimpleDemog">HIVSimpleDemog</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Library-FHIRCommon.html" title="Library/FHIRCommon">FHIR Common</a>
+                  <a href="Library-AgeRanges.html" title="Library/AgeRanges">Age Ranges</a>
                </td>
             </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="Library-HIVSimpleTestResult.html"
                      title="Library/HIVSimpleTestResult">HIVSimpleTestResult</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Library-HIVSimpleAgeGroup.html" title="Library/HIVSimpleAgeGroup">HIVSimpleAgeGroup</a>
                </td>
             </tr>
          </tbody>
@@ -222,11 +229,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="Measure-HIVSimpleDemog.html" title="Measure/HIVSimpleDemog">HIVSimpleDemog</a>
+               </td>
+               <td>
+<p>HIVSimpleDemog</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Measure-HIVSimpleViralLoad.html"
                      title="Measure/HIVSimpleViralLoad">HIVSimpleViralLoad</a>
                </td>
                <td>
 <p>HIVSimpleViralLoad</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Measure-HIVSimpleGender.html" title="Measure/HIVSimpleGender">HIVSimpleGender</a>
+               </td>
+               <td>
+<p>HIVSimpleGender</p>
 </td>
             </tr>
             <tr>
@@ -244,22 +267,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>HIVSimpleCondition</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Measure-HIVSimpleDemog.html" title="Measure/HIVSimpleDemog">HIVSimpleDemog</a>
-               </td>
-               <td>
-<p>HIVSimpleDemog</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Measure-HIVSimpleGender.html" title="Measure/HIVSimpleGender">HIVSimpleGender</a>
-               </td>
-               <td>
-<p>HIVSimpleGender</p>
 </td>
             </tr>
             <tr>
@@ -292,11 +299,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       }
     });
   </script>
+  <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
+
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">HL7 International - [Some] Work Group</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 25, 2021 23:53+0000">2021-03-25</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">HL7 International - [Some] Work Group</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 24, 2021 23:58+0000">2021-05-24</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

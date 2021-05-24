@@ -12,7 +12,7 @@
   <title value="Your User Friendly Name for MyIG Here"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-03-25T23:53:26+00:00"/>
+  <date value="2021-05-24T23:58:49+00:00"/>
   <publisher value="HL7 International - [Some] Work Group"/>
   <contact>
     <telecom>
@@ -209,12 +209,13 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
+        <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Library/HIVSimpleViralLoad"/>
+        <reference value="Measure/HIVSimpleDemog"/>
       </reference>
-      <name value="HIVSimpleViralLoad"/>
+      <name value="HIVSimpleDemog"/>
+      <description value="HIVSimpleDemog"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -231,9 +232,19 @@
         <valueString value="Library"/>
       </extension>
       <reference>
-        <reference value="Library/AgeRanges"/>
+        <reference value="Library/FHIRCommon"/>
       </reference>
-      <name value="Age Ranges"/>
+      <name value="FHIR Common"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/HIVSimpleGender"/>
+      </reference>
+      <name value="HIVSimpleGender"/>
+      <description value="HIVSimpleGender"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -257,16 +268,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleDemog"/>
-      </reference>
-      <name value="HIVSimpleDemog"/>
-      <description value="HIVSimpleDemog"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Library"/>
       </extension>
       <reference>
@@ -279,46 +280,9 @@
         <valueString value="Library"/>
       </extension>
       <reference>
-        <reference value="Library/HIVSimpleCondition"/>
-      </reference>
-      <name value="HIVSimpleCondition"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/HIVSimpleAgeGroup"/>
-      </reference>
-      <name value="HIVSimpleAgeGroup"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleGender"/>
-      </reference>
-      <name value="HIVSimpleGender"/>
-      <description value="HIVSimpleGender"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
         <reference value="Library/HIVSimpleDemog"/>
       </reference>
       <name value="HIVSimpleDemog"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/FHIRCommon"/>
-      </reference>
-      <name value="FHIR Common"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -335,9 +299,54 @@
         <valueString value="Library"/>
       </extension>
       <reference>
+        <reference value="Library/HIVSimpleViralLoad"/>
+      </reference>
+      <name value="HIVSimpleViralLoad"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/FHIRHelpers"/>
+      </reference>
+      <name value="FHIR Helpers"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/HIVSimpleCondition"/>
+      </reference>
+      <name value="HIVSimpleCondition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/AgeRanges"/>
+      </reference>
+      <name value="Age Ranges"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
         <reference value="Library/HIVSimpleTestResult"/>
       </reference>
       <name value="HIVSimpleTestResult"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/HIVSimpleAgeGroup"/>
+      </reference>
+      <name value="HIVSimpleAgeGroup"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>
