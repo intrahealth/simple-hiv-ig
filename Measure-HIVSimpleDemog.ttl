@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleDemog"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleDemog</p><p><b>title</b>: HIVSimpleDemog</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2018-03-08</p><p><b>publisher</b>: HL7 International - [Some] Work Group</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleDemog</p><p><b>jurisdiction</b>: <span title=\"Codes: {http://unstats.un.org/unsd/methods/m49/m49.htm 001}\">World</span></p><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: HIVSimpleDemog</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: HIVSimpleDemog</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleDemog</p><p><b>title</b>: HIVSimpleDemog</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2018-03-08</p><p><b>publisher</b>: HL7 International - [Some] Work Group</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleDemog</p><p><b>jurisdiction</b>: <span title=\"Codes: {http://unstats.un.org/unsd/methods/m49/m49.htm 001}\">World</span></p><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><p><b>description</b>: HIVSimpleDemog Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: HIVSimpleDemog Initial Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: HIVSimpleDemog Numerator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: HIVSimpleDemog Denominator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleDemog"];
   fhir:Measure.identifier [
@@ -58,41 +58,57 @@
        fhir:Coding.code [ fhir:value "proportion" ]
      ]
   ];
+  fhir:Measure.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "process" ]
+     ]
+  ];
   fhir:Measure.group [
      fhir:index 0;
      fhir:Measure.group.code [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
-         fhir:Coding.code [ fhir:value "numerator" ]
-       ]
+       fhir:CodeableConcept.text [ fhir:value "cohort" ]
      ];
-     fhir:Measure.group.description [ fhir:value "HIVSimpleDemog" ];
+     fhir:Measure.group.description [ fhir:value "HIVSimpleDemog Cohort" ];
      fhir:Measure.group.population [
        fhir:index 0;
        fhir:Measure.group.population.code [
-         fhir:CodeableConcept.text [ fhir:value "cohort" ]
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ]
        ];
+       fhir:Measure.group.population.description [ fhir:value "HIVSimpleDemog Initial Population" ];
        fhir:Measure.group.population.criteria [
-         fhir:Expression.language [ fhir:value "text/cql-identifier" ];
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Initial Population" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "HIVSimpleDemog Numerator" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
          fhir:Expression.expression [ fhir:value "Numerator" ]
        ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:Measure.group.code [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
-         fhir:Coding.code [ fhir:value "denominator" ]
-       ]
-     ];
-     fhir:Measure.group.description [ fhir:value "HIVSimpleDemog" ];
-     fhir:Measure.group.population [
-       fhir:index 0;
+     ], [
+       fhir:index 2;
        fhir:Measure.group.population.code [
-         fhir:CodeableConcept.text [ fhir:value "cohort" ]
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ]
        ];
+       fhir:Measure.group.population.description [ fhir:value "HIVSimpleDemog Denominator" ];
        fhir:Measure.group.population.criteria [
          fhir:Expression.language [ fhir:value "text/cql" ];
          fhir:Expression.expression [ fhir:value "Denominator" ]
