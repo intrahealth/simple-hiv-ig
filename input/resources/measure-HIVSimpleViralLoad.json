@@ -32,43 +32,61 @@
 			}
 		]
 	},
+	"type": [
+		{
+			"coding": [
+				{
+					"code": "process"
+				}
+			]
+		}
+	],
 	"group": [
 		{
 			"code": {
-				"coding": [
-					{
-						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
-						"code": "numerator"
-					}
-				]
+				"text": "cohort"
 			},
-			"description": "HIVSimpleViralLoad",
+			"description": "HIVSimpleViralLoad Cohort",
 			"population": [
 				{
+					"description": "HIVSimpleViralLoad Initial Population",
 					"code": {
-						"text": "cohort"
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+								"code": "initial-population"
+							}
+						]
 					},
 					"criteria": {
-						"language": "text/cql-identifier",
+						"language": "text/cql",
+						"expression": "Initial Population"
+					}
+				},
+				{
+					"description": "HIVSimpleViralLoad Numerator",
+					"code": {
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+								"code": "numerator"
+							}
+						]
+					},
+					"criteria": {
+						"language": "text/cql",
 						"expression": "Numerator"
 					}
-				}
-			]
-		},
-		{
-			"code": {
-				"coding": [
-					{
-						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
-						"code": "denominator"
-					}
-				]
-			},
-			"description": "HIVSimpleViralLoad",
-			"population": [
+				},
 				{
+					"description": "HIVSimpleViralLoad Denominator",
 					"code": {
-						"text": "cohort"
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+								"code": "denominator"
+							}
+						]
 					},
 					"criteria": {
 						"language": "text/cql",

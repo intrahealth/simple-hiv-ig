@@ -32,43 +32,61 @@
 			}
 		]
 	},
+	"type": [
+		{
+			"coding": [
+				{
+					"code": "process"
+				}
+			]
+		}
+	],
 	"group": [
 		{
 			"code": {
-				"coding": [
-					{
-						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
-						"code": "numerator"
-					}
-				]
+				"text": "cohort"
 			},
-			"description": "HIVSimpleCondition",
+			"description": "HIVSimpleCondition Cohort",
 			"population": [
 				{
+					"description": "HIVSimpleCondition Initial Population",
 					"code": {
-						"text": "cohort"
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+								"code": "initial-population"
+							}
+						]
 					},
 					"criteria": {
-						"language": "text/cql-identifier",
+						"language": "text/cql",
+						"expression": "Initial Population"
+					}
+				},
+				{
+					"description": "HIVSimpleCondition Numerator",
+					"code": {
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+								"code": "numerator"
+							}
+						]
+					},
+					"criteria": {
+						"language": "text/cql",
 						"expression": "Numerator"
 					}
-				}
-			]
-		},
-		{
-			"code": {
-				"coding": [
-					{
-						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
-						"code": "denominator"
-					}
-				]
-			},
-			"description": "HIVSimpleCondition",
-			"population": [
+				},
 				{
+					"description": "HIVSimpleCondition Denominator",
 					"code": {
-						"text": "cohort"
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+								"code": "denominator"
+							}
+						]
 					},
 					"criteria": {
 						"language": "text/cql",

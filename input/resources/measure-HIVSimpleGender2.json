@@ -38,62 +38,49 @@
   "group": [
     {
       "code": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-            "code": "initial-population"
-          }
-        ]
+        "text": "cohort"
       },
-      "description": "HIVSimpleGender2 initial population",
+      "description": "HIVSimpleGender2 Cohort",
       "population": [
         {
+          "description": "HIVSimpleGender2 Initial Population",
           "code": {
-            "text": "cohort"
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population"
+              }
+            ]
           },
           "criteria": {
             "language": "text/cql",
             "expression": "Initial Population"
           }
-        }
-      ]
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-            "code": "numerator"
-          }
-        ]
-      },
-      "description": "HIVSimpleGender2 Numerator",
-      "population": [
+        },
         {
+          "description": "HIVSimpleGender2 Numerator",
           "code": {
-            "text": "cohort"
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator"
+              }
+            ]
           },
           "criteria": {
             "language": "text/cql",
             "expression": "Numerator"
           }
-        }
-      ]
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-            "code": "denominator"
-          }
-        ]
-      },
-      "description": "HIVSimpleGender2 Denominator",
-      "population": [
+        },
         {
+          "description": "HIVSimpleGender2 Denominator",
           "code": {
-            "text": "cohort"
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator"
+              }
+            ]
           },
           "criteria": {
             "language": "text/cql",
