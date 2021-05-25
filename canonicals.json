@@ -28,6 +28,13 @@
     "name": "HIVSimpleGender"
   },
   {
+    "id": "HIVSimpleGender2",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGender2",
+    "version": "0.1.0",
+    "name": "HIVSimpleGender2"
+  },
+  {
     "id": "HIVSimpleTestResult",
     "type": "Measure",
     "url": "Measure/HIVSimpleTestResult",
@@ -89,6 +96,13 @@
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender",
     "version": "0.1.0",
     "name": "HIVSimpleGender"
+  },
+  {
+    "id": "HIVSimpleGender2",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender2",
+    "version": "0.1.0",
+    "name": "HIVSimpleGender2"
   },
   {
     "id": "HIVSimpleTestResult",

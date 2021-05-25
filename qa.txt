@@ -1,11 +1,11 @@
 ﻿YourComputableMyIGNameHere : Validation Results
 =========================================
 
-err = 41, warn = 33, info = 6
+err = 47, warn = 39, info = 7
 IG Publisher Version: 1.1.72
-Generated Tue May 25 00:24:29 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
+Generated Tue May 25 18:07:12 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
 
- Build Errors : 0 / 9 / 0
+ Build Errors : 0 / 10 / 0
  /github/workspace/input/myig : 2 / 0 / 1
  /github/workspace/input/resources/library-AgeRanges : 1 / 0 / 1
  /github/workspace/input/resources/library-FHIRCommon : 2 / 0 / 1
@@ -13,18 +13,21 @@ Generated Tue May 25 00:24:29 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1
  /github/workspace/input/resources/library-HIVSimpleCondition : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleDemog : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleGender : 3 / 0 / 1
+ /github/workspace/input/resources/library-HIVSimpleGender2 : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleTestResult : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleViralLoad : 3 / 0 / 1
  /github/workspace/input/resources/measure-HIVSimpleAgeGroup : 3 / 4 / 2
  /github/workspace/input/resources/measure-HIVSimpleCondition : 3 / 4 / 2
  /github/workspace/input/resources/measure-HIVSimpleDemog : 3 / 4 / 2
  /github/workspace/input/resources/measure-HIVSimpleGender : 3 / 4 / 2
+ /github/workspace/input/resources/measure-HIVSimpleGender2 : 3 / 5 / 2
  /github/workspace/input/resources/measure-HIVSimpleTestResult : 3 / 4 / 2
  /github/workspace/input/resources/measure-HIVSimpleViralLoad : 3 / 4 / 2
 </table>
 == n/a ==
 WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleGender2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleGender.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleDemog.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleViralLoad.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -63,6 +66,11 @@ ERROR: HIVSimpleGender.cql: CQL Processing failed with exception: Unknown FHIRAl
 INFORMATION: Library/HIVSimpleGender: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
 ERROR: Library/HIVSimpleGender: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/HIVSimpleGender: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
+== /github/workspace/input/resources/library-HIVSimpleGender2.json ==
+ERROR: HIVSimpleGender2.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+INFORMATION: Library/HIVSimpleGender2: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
+ERROR: Library/HIVSimpleGender2: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/HIVSimpleGender2: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/library-HIVSimpleTestResult.json ==
 ERROR: HIVSimpleTestResult.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
 INFORMATION: Library/HIVSimpleTestResult: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
@@ -73,8 +81,8 @@ ERROR: HIVSimpleViralLoad.cql: CQL Processing failed with exception: Unknown FHI
 INFORMATION: Library/HIVSimpleViralLoad: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
 ERROR: Library/HIVSimpleViralLoad: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/HIVSimpleViralLoad: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
-== /github/workspace/input/resources/measure-HIVSimpleAgeGroup.xml ==
-ERROR: Measure.where(url = 'Measure/HIVSimpleAgeGroup'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleAgeGroup.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleAgeGroup) does not match the URL (Measure/HIVSimpleAgeGroup)
+== /github/workspace/input/resources/measure-HIVSimpleAgeGroup.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleAgeGroup'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleAgeGroup.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleAgeGroup) does not match the URL (Measure/HIVSimpleAgeGroup)
 INFORMATION: Measure/HIVSimpleAgeGroup: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
 ERROR: Measure/HIVSimpleAgeGroup: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleAgeGroup) 
 WARNING: Measure/HIVSimpleAgeGroup: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -83,8 +91,8 @@ WARNING: Measure/HIVSimpleAgeGroup: Measure.group[0].population[0].criteria.lang
 WARNING: Measure/HIVSimpleAgeGroup: Measure.group[1].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
 INFORMATION: Measure/HIVSimpleAgeGroup: Measure: The Library Library/HIVSimpleAgeGroup could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/input/resources/measure-HIVSimpleAgeGroup: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleAgeGroup vs Measure/HIVSimpleAgeGroup
-== /github/workspace/input/resources/measure-HIVSimpleCondition.xml ==
-ERROR: Measure.where(url = 'Measure/HIVSimpleCondition'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleCondition.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleCondition) does not match the URL (Measure/HIVSimpleCondition)
+== /github/workspace/input/resources/measure-HIVSimpleCondition.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleCondition'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleCondition.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleCondition) does not match the URL (Measure/HIVSimpleCondition)
 INFORMATION: Measure/HIVSimpleCondition: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
 ERROR: Measure/HIVSimpleCondition: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleCondition) 
 WARNING: Measure/HIVSimpleCondition: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -93,8 +101,8 @@ WARNING: Measure/HIVSimpleCondition: Measure.group[0].population[0].criteria.lan
 WARNING: Measure/HIVSimpleCondition: Measure.group[1].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
 INFORMATION: Measure/HIVSimpleCondition: Measure: The Library Library/HIVSimpleCondition could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/input/resources/measure-HIVSimpleCondition: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleCondition vs Measure/HIVSimpleCondition
-== /github/workspace/input/resources/measure-HIVSimpleDemog.xml ==
-ERROR: Measure.where(url = 'Measure/HIVSimpleDemog'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleDemog.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleDemog) does not match the URL (Measure/HIVSimpleDemog)
+== /github/workspace/input/resources/measure-HIVSimpleDemog.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleDemog'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleDemog.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleDemog) does not match the URL (Measure/HIVSimpleDemog)
 INFORMATION: Measure/HIVSimpleDemog: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
 ERROR: Measure/HIVSimpleDemog: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleDemog) 
 WARNING: Measure/HIVSimpleDemog: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -103,8 +111,8 @@ WARNING: Measure/HIVSimpleDemog: Measure.group[0].population[0].criteria.languag
 WARNING: Measure/HIVSimpleDemog: Measure.group[1].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
 INFORMATION: Measure/HIVSimpleDemog: Measure: The Library Library/HIVSimpleDemog could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/input/resources/measure-HIVSimpleDemog: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleDemog vs Measure/HIVSimpleDemog
-== /github/workspace/input/resources/measure-HIVSimpleGender.xml ==
-ERROR: Measure.where(url = 'Measure/HIVSimpleGender'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleGender.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender) does not match the URL (Measure/HIVSimpleGender)
+== /github/workspace/input/resources/measure-HIVSimpleGender.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleGender'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleGender.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender) does not match the URL (Measure/HIVSimpleGender)
 INFORMATION: Measure/HIVSimpleGender: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
 ERROR: Measure/HIVSimpleGender: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Measure/HIVSimpleGender: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -113,8 +121,19 @@ WARNING: Measure/HIVSimpleGender: Measure.group[0].population[0].criteria.langua
 WARNING: Measure/HIVSimpleGender: Measure.group[1].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
 INFORMATION: Measure/HIVSimpleGender: Measure: The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/input/resources/measure-HIVSimpleGender: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender vs Measure/HIVSimpleGender
-== /github/workspace/input/resources/measure-HIVSimpleTestResult.xml ==
-ERROR: Measure.where(url = 'Measure/HIVSimpleTestResult'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleTestResult.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleTestResult) does not match the URL (Measure/HIVSimpleTestResult)
+== /github/workspace/input/resources/measure-HIVSimpleGender2.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleGender2'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleGender2.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender2) does not match the URL (Measure/HIVSimpleGender2)
+INFORMATION: Measure/HIVSimpleGender2: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
+ERROR: Measure/HIVSimpleGender2: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender2) 
+WARNING: Measure/HIVSimpleGender2: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Measure/HIVSimpleGender2: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Measure/HIVSimpleGender2: Measure.group[0].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
+WARNING: Measure/HIVSimpleGender2: Measure.group[1].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
+WARNING: Measure/HIVSimpleGender2: Measure.group[2].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
+INFORMATION: Measure/HIVSimpleGender2: Measure: The Library Library/HIVSimpleGender2 could not be resolved, so expression validation may not be correct 
+ERROR: /github/workspace/input/resources/measure-HIVSimpleGender2: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender2 vs Measure/HIVSimpleGender2
+== /github/workspace/input/resources/measure-HIVSimpleTestResult.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleTestResult'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleTestResult.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleTestResult) does not match the URL (Measure/HIVSimpleTestResult)
 INFORMATION: Measure/HIVSimpleTestResult: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
 ERROR: Measure/HIVSimpleTestResult: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleTestResult) 
 WARNING: Measure/HIVSimpleTestResult: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -123,8 +142,8 @@ WARNING: Measure/HIVSimpleTestResult: Measure.group[0].population[0].criteria.la
 WARNING: Measure/HIVSimpleTestResult: Measure.group[1].population[0].code: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/measure-population (http://hl7.org/fhir/ValueSet/measure-population)
 INFORMATION: Measure/HIVSimpleTestResult: Measure: The Library Library/HIVSimpleTestResult could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/input/resources/measure-HIVSimpleTestResult: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleTestResult vs Measure/HIVSimpleTestResult
-== /github/workspace/input/resources/measure-HIVSimpleViralLoad.xml ==
-ERROR: Measure.where(url = 'Measure/HIVSimpleViralLoad'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleViralLoad.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleViralLoad) does not match the URL (Measure/HIVSimpleViralLoad)
+== /github/workspace/input/resources/measure-HIVSimpleViralLoad.json ==
+ERROR: Measure.where(url = 'Measure/HIVSimpleViralLoad'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleViralLoad.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleViralLoad) does not match the URL (Measure/HIVSimpleViralLoad)
 INFORMATION: Measure/HIVSimpleViralLoad: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
 ERROR: Measure/HIVSimpleViralLoad: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleViralLoad) 
 WARNING: Measure/HIVSimpleViralLoad: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided

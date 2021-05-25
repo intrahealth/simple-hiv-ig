@@ -3,10 +3,10 @@
   "name": "YourComputableMyIGNameHere",
   "package-id": "simple-hiv-ig",
   "ig-ver": "0.1.0",
-  "date": "Tue, 25 May, 2021 00:24:21 +0000",
-  "errs": 41,
-  "warnings": 33,
-  "hints": 6,
+  "date": "Tue, 25 May, 2021 18:07:03 +0000",
+  "errs": 47,
+  "warnings": 39,
+  "hints": 7,
   "version": "4.0.1",
   "tool": "4.6.0 (3)"
 }
