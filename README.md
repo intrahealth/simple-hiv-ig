@@ -49,10 +49,18 @@ bash _genonce.sh
 ```
 
 PUT the Library resources. We use PUT to ensure that the id is always the same and when changes are made they overwrite the resource with those updates.
+
+The FHIR Helpers Library generated from the provided CQL produces an error, so we load that directly after downloading it.
+
+```
+wget http://build.fhir.org/ig/cqframework/cqf/Library-FHIRHelpers.json
+curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIRHelpers.json http://localhost:8080/fhir/Library/FHIRHelpers
+```
+
 ```sh
 cd output
 # library resources
-for FILE in FHIRHelpers FHIRCommon AgeRanges \
+for FILE in FHIRCommon AgeRanges \
 HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done
 ```
