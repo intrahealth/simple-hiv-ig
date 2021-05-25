@@ -1,0 +1,75 @@
+{
+	"resourceType": "Measure",
+	"id": "HIVSimpleGender",
+	"url": "Measure/HIVSimpleGender",
+	"identifier": [
+		{
+			"system": "http://ohie.org/Measure/",
+			"value": "HIVSimpleGender"
+		}
+	],
+	"version": "0.1.0",
+	"name": "HIVSimpleGender",
+	"title": "HIVSimpleGender",
+	"status": "draft",
+	"experimental": true,
+	"date": "2018-03-08",
+	"publisher": "Open HIE",
+	"description": "HIVSimpleGender",
+	"library": [
+		"Library/HIVSimpleGender"
+	],
+	"scoring": {
+		"coding": [
+			{
+				"code": "proportion"
+			}
+		]
+	},
+	"group": [
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+						"code": "numerator"
+					}
+				]
+			},
+			"description": "HIVSimpleGender numerator",
+			"population": [
+				{
+					"code": {
+						"text": "cohort"
+					},
+					"criteria": {
+						"language": "text/cql-identifier",
+						"expression": "Numerator"
+					}
+				}
+			]
+		},
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+						"code": "denominator"
+					}
+				]
+			},
+			"description": "HIVSimpleGender denominator",
+			"population": [
+				{
+					"code": {
+						"text": "cohort"
+					},
+					"criteria": {
+						"language": "text/cql",
+						"expression": "Denominator"
+					}
+				}
+			]
+		}
+	]
+}

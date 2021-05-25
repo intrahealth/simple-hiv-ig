@@ -61,18 +61,19 @@ curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIRHelpers
 cd output
 # library resources
 for FILE in FHIRCommon AgeRanges \
-HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleTestResult HIVSimpleViralLoad \
+HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleGender2 HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done
 ```
 
 PUT the Measure resources
 ```sh
-for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleTestResult HIVSimpleViralLoad \
+for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleGender2 HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done
 ```
 
 Run a provided example in the browser
 ```
+http://localhost:8080/fhir/Measure/HIVSimpleGender2/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 http://localhost:8080/fhir/Measure/HIVSimpleDemog/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01

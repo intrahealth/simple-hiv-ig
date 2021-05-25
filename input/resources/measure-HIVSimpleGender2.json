@@ -1,0 +1,106 @@
+{
+  "resourceType": "Measure",
+  "id": "HIVSimpleGender2",
+  "url": "Measure/HIVSimpleGender2",
+  "identifier": [
+    {
+      "system": "http://ohie.org/Measure/",
+      "value": "HIVSimpleGender2"
+    }
+  ],
+  "version": "0.1.0",
+  "name": "HIVSimpleGender2",
+  "title": "HIVSimpleGender2",
+  "status": "draft",
+  "experimental": true,
+  "date": "2021-03-01",
+  "publisher": "HL7 International - [Some] Work Group",
+  "description": "HIVSimpleGender2",
+  "library": [
+    "Library/HIVSimpleGender2"
+  ],
+  "scoring": {
+    "coding": [
+      {
+        "code": "proportion"
+      }
+    ]
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "process"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+            "code": "initial-population"
+          }
+        ]
+      },
+      "description": "HIVSimpleGender2 initial population",
+      "population": [
+        {
+          "code": {
+            "text": "cohort"
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Initial Population"
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+            "code": "numerator"
+          }
+        ]
+      },
+      "description": "HIVSimpleGender2 Numerator",
+      "population": [
+        {
+          "code": {
+            "text": "cohort"
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Numerator"
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+            "code": "denominator"
+          }
+        ]
+      },
+      "description": "HIVSimpleGender2 Denominator",
+      "population": [
+        {
+          "code": {
+            "text": "cohort"
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Denominator"
+          }
+        }
+      ]
+    }
+  ]
+}

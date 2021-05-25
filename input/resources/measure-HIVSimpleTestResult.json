@@ -1,0 +1,81 @@
+{
+	"resourceType": "Measure",
+	"id": "HIVSimpleTestResult",
+	"url": "Measure/HIVSimpleTestResult",
+	"identifier": [
+		{
+			"system": "http://ohie.org/Measure/",
+			"value": "HIVSimpleTestResult"
+		}
+	],
+	"version": "0.0.0",
+	"name": "HIVSimpleTestResult",
+	"title": "HIVSimpleTestResult",
+	"status": "draft",
+	"experimental": true,
+	"date": "2021-03-01",
+	"publisher": "Open HIE",
+	"description": "HIVSimpleTestResult",
+	"relatedArtifact": [
+		{
+			"type": "derived-from",
+			"url": "http://wiki.ihe.net/index.php/Aggregate_Data_Exchange_-_HIV"
+		}
+	],
+	"library": [
+		"Library/HIVSimpleTestResult"
+	],
+	"scoring": {
+		"coding": [
+			{
+				"code": "proportion"
+			}
+		]
+	},
+	"group": [
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+						"code": "numerator"
+					}
+				]
+			},
+			"description": "HIVSimpleTestResult",
+			"population": [
+				{
+					"code": {
+						"text": "cohort"
+					},
+					"criteria": {
+						"language": "text/cql-identifier",
+						"expression": "Numerator"
+					}
+				}
+			]
+		},
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+						"code": "denominator"
+					}
+				]
+			},
+			"description": "HIVSimpleTestResult",
+			"population": [
+				{
+					"code": {
+						"text": "cohort"
+					},
+					"criteria": {
+						"language": "text/cql",
+						"expression": "Denominator"
+					}
+				}
+			]
+		}
+	]
+}
