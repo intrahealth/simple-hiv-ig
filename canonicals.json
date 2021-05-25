@@ -63,13 +63,6 @@
     "name": "FHIRCommon"
   },
   {
-    "id": "FHIRHelpers",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/FHIRHelpers",
-    "version": "0.1.0",
-    "name": "FHIRHelpers"
-  },
-  {
     "id": "HIVSimpleAgeGroup",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleAgeGroup",

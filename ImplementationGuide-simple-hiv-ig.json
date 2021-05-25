@@ -11,7 +11,7 @@
   "title": "Your User Friendly Name for MyIG Here",
   "status": "draft",
   "experimental": false,
-  "date": "2021-05-24T23:58:56+00:00",
+  "date": "2021-05-25T00:24:21+00:00",
   "publisher": "HL7 International - [Some] Work Group",
   "contact": [
     {
@@ -454,18 +454,6 @@
           "reference": "Library/HIVSimpleViralLoad"
         },
         "name": "HIVSimpleViralLoad"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/FHIRHelpers"
-        },
-        "name": "FHIR Helpers"
       },
       {
         "extension": [
