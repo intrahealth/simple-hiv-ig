@@ -1,21 +1,21 @@
 {
   "resourceType": "Measure",
-  "id": "HIVSimpleGender2",
-  "url": "Measure/HIVSimpleGender2",
+  "id": "HIVSimpleGenderSuppDataIndiv",
+  "url": "Measure/HIVSimpleGenderSuppDataIndiv",
   "identifier": [
     {
       "system": "http://ohie.org/Measure/",
-      "value": "HIVSimpleGender2"
+      "value": "HIVSimpleGenderSuppDataIndiv"
     }
   ],
   "version": "0.1.0",
-  "name": "HIVSimpleGender2",
-  "title": "HIVSimpleGender2",
+  "name": "HIVSimpleGenderSuppDataIndiv",
+  "title": "HIVSimpleGenderSuppDataIndiv",
   "status": "draft",
   "experimental": true,
   "date": "2021-03-01",
   "publisher": "HL7 International - [Some] Work Group",
-  "description": "HIVSimpleGender2",
+  "description": "HIVSimpleGenderSuppDataIndiv",
   "library": [
     "Library/HIVSimpleGender"
   ],
@@ -30,7 +30,7 @@
     {
       "coding": [
         {
-          "code": "process"
+          "code": "individual"
         }
       ]
     }
@@ -40,10 +40,10 @@
       "code": {
         "text": "cohort"
       },
-      "description": "HIVSimpleGender2 Cohort",
+      "description": "HIVSimpleGenderSuppDataIndiv Cohort",
       "population": [
         {
-          "description": "HIVSimpleGender2 Initial Population",
+          "description": "HIVSimpleGenderSuppDataIndiv Initial Population",
           "code": {
             "coding": [
               {
@@ -58,7 +58,7 @@
           }
         },
         {
-          "description": "HIVSimpleGender2 Numerator",
+          "description": "HIVSimpleGenderSuppDataIndiv Numerator",
           "code": {
             "coding": [
               {
@@ -73,7 +73,7 @@
           }
         },
         {
-          "description": "HIVSimpleGender2 Denominator",
+          "description": "HIVSimpleGenderSuppDataIndiv Denominator",
           "code": {
             "coding": [
               {
@@ -91,6 +91,15 @@
       "stratifier": [
         {
           "code": {
+            "text": "supplemental-data-example-define"
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Female"
+          }
+        },
+        {
+          "code": {
             "text": "stratifier-gender"
           },
           "criteria": {
@@ -99,6 +108,17 @@
           }
         }
       ]
+    }
+  ],
+  "supplementalData": [
+    {
+      "code": {
+        "text": "supplemental-data-example-define"
+      },
+      "criteria": {
+        "language": "text/cql",
+        "expression": "Female"
+      }
     }
   ]
 }

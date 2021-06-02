@@ -1,21 +1,21 @@
 {
   "resourceType": "Measure",
-  "id": "HIVSimpleGender2",
-  "url": "Measure/HIVSimpleGender2",
+  "id": "HIVSimpleGenderSuppData",
+  "url": "Measure/HIVSimpleGenderSuppData",
   "identifier": [
     {
       "system": "http://ohie.org/Measure/",
-      "value": "HIVSimpleGender2"
+      "value": "HIVSimpleGenderSuppData"
     }
   ],
   "version": "0.1.0",
-  "name": "HIVSimpleGender2",
-  "title": "HIVSimpleGender2",
+  "name": "HIVSimpleGenderSuppData",
+  "title": "HIVSimpleGenderSuppData",
   "status": "draft",
   "experimental": true,
   "date": "2021-03-01",
   "publisher": "HL7 International - [Some] Work Group",
-  "description": "HIVSimpleGender2",
+  "description": "HIVSimpleGenderSuppData",
   "library": [
     "Library/HIVSimpleGender"
   ],
@@ -40,10 +40,10 @@
       "code": {
         "text": "cohort"
       },
-      "description": "HIVSimpleGender2 Cohort",
+      "description": "HIVSimpleGenderSuppData Cohort",
       "population": [
         {
-          "description": "HIVSimpleGender2 Initial Population",
+          "description": "HIVSimpleGenderSuppData Initial Population",
           "code": {
             "coding": [
               {
@@ -58,7 +58,7 @@
           }
         },
         {
-          "description": "HIVSimpleGender2 Numerator",
+          "description": "HIVSimpleGenderSuppData Numerator",
           "code": {
             "coding": [
               {
@@ -73,7 +73,7 @@
           }
         },
         {
-          "description": "HIVSimpleGender2 Denominator",
+          "description": "HIVSimpleGenderSuppData Denominator",
           "code": {
             "coding": [
               {
@@ -87,18 +87,18 @@
             "expression": "Denominator"
           }
         }
-      ],
-      "stratifier": [
-        {
-          "code": {
-            "text": "stratifier-gender"
-          },
-          "criteria": {
-            "language": "text/fhirpath",
-            "expression": "Patient.gender"
-          }
-        }
       ]
+    }
+  ],
+  "supplementalData": [
+    {
+      "code": {
+        "text": "supplemental-data-example-define"
+      },
+      "criteria": {
+        "language": "text/cql",
+        "expression": "Hello, World!"
+      }
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
- "package-id" : "hl7.fhir.uv.myig",
- "title" : "Your User Friendly Name for MyIG Here", 
+ "package-id" : "openhie.simple-hiv-ig",
+ "title" : "OpenHIE Simple HIV IG", 
  "canonical" : "http://hl7.org/fhir/uv/myig", 
- "introduction" : "The introduction that should appear in the FHIR IG registry",
+ "introduction" : "OpenHIE Simple HIV IG",
  "list" : [{
   "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",

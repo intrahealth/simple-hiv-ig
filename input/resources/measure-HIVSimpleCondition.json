@@ -16,12 +16,6 @@
 	"date": "2018-03-08",
 	"publisher": "Open HIE",
 	"description": "HIVSimpleCondition",
-	"relatedArtifact": [
-		{
-			"type": "derived-from",
-			"url": "http://wiki.ihe.net/index.php/Aggregate_Data_Exchange_-_HIV"
-		}
-	],
 	"library": [
 		"Library/HIVSimpleCondition"
 	],

@@ -1,0 +1,27 @@
+{
+  "resourceType": "Library",
+  "id": "HIVSimpleTestResult",
+  "name": "HIVSimpleTestResult",
+  "title": "HIVSimpleTestResult",
+  "status": "active",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "url": "http://wiki.ihe.net/index.php/Aggregate_Data_Exchange_-_HIV"
+    }
+  ],
+  "content": [
+    {
+      "id": "ig-loader-HIVSimpleTestResult.cql"
+    }
+  ]
+}

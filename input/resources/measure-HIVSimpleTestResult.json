@@ -16,12 +16,6 @@
 	"date": "2021-03-01",
 	"publisher": "Open HIE",
 	"description": "HIVSimpleTestResult",
-	"relatedArtifact": [
-		{
-			"type": "derived-from",
-			"url": "http://wiki.ihe.net/index.php/Aggregate_Data_Exchange_-_HIV"
-		}
-	],
 	"library": [
 		"Library/HIVSimpleTestResult"
 	],
