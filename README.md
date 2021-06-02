@@ -67,7 +67,9 @@ HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleGen
 
 PUT the Measure resources
 ```sh
-for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleGender2 HIVSimpleGenderCohort HIVSimpleTestResult HIVSimpleViralLoad \
+for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog \
+HIVSimpleGender HIVSimpleGender2 HIVSimpleGenderCohort HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv \
+HIVSimpleGenderSubjectList HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done
 ```
 
