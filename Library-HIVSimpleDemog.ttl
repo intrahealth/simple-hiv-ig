@@ -25,22 +25,14 @@
        fhir:Coding.code [ fhir:value "logic-library" ]
      ]
   ];
-  fhir:Library.date [ fhir:value "2021-05-25T20:40:33+00:00"^^xsd:dateTime];
-  fhir:Library.publisher [ fhir:value "HL7 International - [Some] Work Group"];
+  fhir:Library.date [ fhir:value "2021-06-02T16:53:25+00:00"^^xsd:dateTime];
+  fhir:Library.publisher [ fhir:value "IntraHealth International"];
   fhir:Library.contact [
      fhir:index 0;
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
        fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
-     ]
-  ];
-  fhir:Library.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
-       fhir:Coding.code [ fhir:value "001" ]
      ]
   ];
   fhir:Library.relatedArtifact [

@@ -3,7 +3,7 @@
   "id": "HIVSimpleGender2",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleGender2</p><p><b>title</b>: HIVSimpleGender2</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-03-01</p><p><b>publisher</b>: HL7 International - [Some] Work Group</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleGender2</p><p><b>jurisdiction</b>: <span title=\"Codes: {http://unstats.un.org/unsd/methods/m49/m49.htm 001}\">World</span></p><p><b>library</b>: <code>Library/HIVSimpleGender2</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><p><b>description</b>: HIVSimpleGender2 Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: HIVSimpleGender2 Initial Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: HIVSimpleGender2 Numerator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: HIVSimpleGender2 Denominator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleGender2</p><p><b>title</b>: HIVSimpleGender2</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-03-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleGender2</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><p><b>description</b>: HIVSimpleGender2 Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: HIVSimpleGender2 Initial Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: HIVSimpleGender2 Numerator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: HIVSimpleGender2 Denominator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: \">stratifier-gender</span></p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
   },
   "url": "Measure/HIVSimpleGender2",
   "identifier": [
@@ -18,7 +18,7 @@
   "status": "draft",
   "experimental": true,
   "date": "2021-03-01",
-  "publisher": "HL7 International - [Some] Work Group",
+  "publisher": "IntraHealth International",
   "contact": [
     {
       "telecom": [
@@ -30,18 +30,8 @@
     }
   ],
   "description": "HIVSimpleGender2",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code": "001"
-        }
-      ]
-    }
-  ],
   "library": [
-    "Library/HIVSimpleGender2"
+    "Library/HIVSimpleGender"
   ],
   "scoring": {
     "coding": [
@@ -109,6 +99,17 @@
           "criteria": {
             "language": "text/cql",
             "expression": "Denominator"
+          }
+        }
+      ],
+      "stratifier": [
+        {
+          "code": {
+            "text": "stratifier-gender"
+          },
+          "criteria": {
+            "language": "text/fhirpath",
+            "expression": "Patient.gender"
           }
         }
       ]

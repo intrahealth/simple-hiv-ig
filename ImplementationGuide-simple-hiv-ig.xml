@@ -3,30 +3,24 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="simple-hiv-ig"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>YourComputableMyIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/intrahealth/simple-hiv-ig</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>simple-hiv-ig</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/intrahealth/simple-hiv-ig</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>
 </div></div>
   </text>
   <url value="https://github.com/intrahealth/simple-hiv-ig"/>
   <version value="0.1.0"/>
-  <name value="YourComputableMyIGNameHere"/>
-  <title value="Your User Friendly Name for MyIG Here"/>
+  <name value="simple-hiv-ig"/>
+  <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-05-25T20:40:33+00:00"/>
-  <publisher value="HL7 International - [Some] Work Group"/>
+  <date value="2021-06-02T16:53:25+00:00"/>
+  <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
       <system value="url"/>
       <value value="http://hl7.org/Special/committees/[something]"/>
     </telecom>
   </contact>
-  <description value="A brief description of what MyIG is about (probably the same text as in your readme)"/>
-  <jurisdiction>
-    <coding>
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="001"/>
-    </coding>
-  </jurisdiction>
+  <description value="A simple IG using HIV epidemic control as a an example for learners"/>
   <packageId value="simple-hiv-ig"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -36,7 +30,7 @@
         <valueString value="copyrightyear"/>
       </extension>
       <extension url="value">
-        <valueString value="2019+"/>
+        <valueString value="2020+"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -238,12 +232,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
+        <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Library/HIVSimpleGender2"/>
+        <reference value="Measure/HIVSimpleGenderSuppData"/>
       </reference>
-      <name value="HIVSimpleGender2"/>
+      <name value="HIVSimpleGenderSuppData"/>
+      <description value="HIVSimpleGenderSuppData"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -254,6 +249,16 @@
       </reference>
       <name value="HIVSimpleGender2"/>
       <description value="HIVSimpleGender2"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/HIVSimpleGenderSuppDataIndiv"/>
+      </reference>
+      <name value="HIVSimpleGenderSuppDataIndiv"/>
+      <description value="HIVSimpleGenderSuppDataIndiv"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -304,12 +309,32 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/HIVSimpleGenderCohort"/>
+      </reference>
+      <name value="HIVSimpleGenderCohort"/>
+      <description value="HIVSimpleGenderCohort"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Library"/>
       </extension>
       <reference>
         <reference value="Library/HIVSimpleCondition"/>
       </reference>
       <name value="HIVSimpleCondition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/HIVSimpleGenderSubjectList"/>
+      </reference>
+      <name value="HIVSimpleGenderSubjectList"/>
+      <description value="HIVSimpleGenderSubjectList"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

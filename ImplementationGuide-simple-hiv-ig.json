@@ -3,16 +3,16 @@
   "id": "simple-hiv-ig",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>YourComputableMyIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/intrahealth/simple-hiv-ig</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>simple-hiv-ig</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/intrahealth/simple-hiv-ig</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>\n</div></div>"
   },
   "url": "https://github.com/intrahealth/simple-hiv-ig",
   "version": "0.1.0",
-  "name": "YourComputableMyIGNameHere",
-  "title": "Your User Friendly Name for MyIG Here",
+  "name": "simple-hiv-ig",
+  "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-05-25T20:40:33+00:00",
-  "publisher": "HL7 International - [Some] Work Group",
+  "date": "2021-06-02T16:53:25+00:00",
+  "publisher": "IntraHealth International",
   "contact": [
     {
       "telecom": [
@@ -23,17 +23,7 @@
       ]
     }
   ],
-  "description": "A brief description of what MyIG is about (probably the same text as in your readme)",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code": "001"
-        }
-      ]
-    }
-  ],
+  "description": "A simple IG using HIV epidemic control as a an example for learners",
   "packageId": "simple-hiv-ig",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -49,7 +39,7 @@
           },
           {
             "url": "value",
-            "valueString": "2019+"
+            "valueString": "2020+"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -371,13 +361,14 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
+            "valueString": "Measure"
           }
         ],
         "reference": {
-          "reference": "Library/HIVSimpleGender2"
+          "reference": "Measure/HIVSimpleGenderSuppData"
         },
-        "name": "HIVSimpleGender2"
+        "name": "HIVSimpleGenderSuppData",
+        "description": "HIVSimpleGenderSuppData"
       },
       {
         "extension": [
@@ -391,6 +382,19 @@
         },
         "name": "HIVSimpleGender2",
         "description": "HIVSimpleGender2"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIVSimpleGenderSuppDataIndiv"
+        },
+        "name": "HIVSimpleGenderSuppDataIndiv",
+        "description": "HIVSimpleGenderSuppDataIndiv"
       },
       {
         "extension": [
@@ -458,6 +462,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIVSimpleGenderCohort"
+        },
+        "name": "HIVSimpleGenderCohort",
+        "description": "HIVSimpleGenderCohort"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Library"
           }
         ],
@@ -465,6 +482,19 @@
           "reference": "Library/HIVSimpleCondition"
         },
         "name": "HIVSimpleCondition"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIVSimpleGenderSubjectList"
+        },
+        "name": "HIVSimpleGenderSubjectList",
+        "description": "HIVSimpleGenderSubjectList"
       },
       {
         "extension": [

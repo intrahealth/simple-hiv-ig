@@ -193,5 +193,270 @@
             <operand localId="25" locator="31:11-31:18" valueType="t:String" value="female" xsi:type="Literal"/>
          </expression>
       </def>
+      <def localId="29" locator="33:1-33:39" name="Hello, World!" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="29">
+               <a:s>define &quot;Hello, World!&quot;: </a:s>
+               <a:s r="28">
+                  <a:s>'Hello, World!'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="28" locator="33:25-33:39" valueType="t:String" value="Hello, World!" xsi:type="Literal"/>
+      </def>
+      <def localId="32" locator="35:1-35:37" name="birthDate" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="32">
+               <a:s>define &quot;birthDate&quot;: </a:s>
+               <a:s r="31">
+                  <a:s r="30">
+                     <a:s>Patient</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="31">
+                     <a:s>birthDate</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="31" locator="35:21-35:37" path="birthDate" xsi:type="Property">
+            <source localId="30" locator="35:21-35:27" name="Patient" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="36" locator="36:1-36:51" name="birthDate_str" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="36">
+               <a:s>define &quot;birthDate_str&quot;: </a:s>
+               <a:s r="35">
+                  <a:s>ToString(</a:s>
+                  <a:s r="34">
+                     <a:s r="33">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="34">
+                        <a:s>birthDate</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="35" locator="36:25-36:51" xsi:type="ToString">
+            <operand name="ToDate" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="34" locator="36:34-36:50" path="birthDate" xsi:type="Property">
+                  <source localId="33" locator="36:34-36:40" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="42" locator="38:1-38:46" name="Given Name str" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="42">
+               <a:s>define &quot;Given Name str&quot;: </a:s>
+               <a:s r="41">
+                  <a:s r="39">
+                     <a:s r="38">
+                        <a:s r="37">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="38">
+                           <a:s>name</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="39">
+                        <a:s>given</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="40">[0]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="41" locator="38:26-38:46" xsi:type="Indexer">
+            <operand localId="39" locator="38:26-38:43" xsi:type="Flatten">
+               <operand xsi:type="Query">
+                  <source alias="$this">
+                     <expression localId="38" locator="38:26-38:37" path="name" xsi:type="Property">
+                        <source localId="37" locator="38:26-38:32" name="Patient" xsi:type="ExpressionRef"/>
+                     </expression>
+                  </source>
+                  <where xsi:type="Not">
+                     <operand xsi:type="IsNull">
+                        <operand path="given" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </operand>
+                     </operand>
+                  </where>
+                  <return distinct="false">
+                     <expression path="given" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </expression>
+                  </return>
+               </operand>
+            </operand>
+            <operand localId="40" locator="38:45" valueType="t:Integer" value="0" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="49" locator="39:1-39:48" name="Given Name" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="49">
+               <a:s>define &quot;Given Name&quot;: </a:s>
+               <a:s r="48">
+                  <a:s r="47">
+                     <a:s r="45">
+                        <a:s r="44">
+                           <a:s r="43">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="44">
+                              <a:s>name</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="45">
+                           <a:s>given</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="46">[0]</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="48">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="48" locator="39:22-39:48" path="value" xsi:type="Property">
+            <source localId="47" locator="39:22-39:42" xsi:type="Indexer">
+               <operand localId="45" locator="39:22-39:39" xsi:type="Flatten">
+                  <operand xsi:type="Query">
+                     <source alias="$this">
+                        <expression localId="44" locator="39:22-39:33" path="name" xsi:type="Property">
+                           <source localId="43" locator="39:22-39:28" name="Patient" xsi:type="ExpressionRef"/>
+                        </expression>
+                     </source>
+                     <where xsi:type="Not">
+                        <operand xsi:type="IsNull">
+                           <operand path="given" xsi:type="Property">
+                              <source name="$this" xsi:type="AliasRef"/>
+                           </operand>
+                        </operand>
+                     </where>
+                     <return distinct="false">
+                        <expression path="given" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </expression>
+                     </return>
+                  </operand>
+               </operand>
+               <operand localId="46" locator="39:41" valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </source>
+         </expression>
+      </def>
+      <def localId="55" locator="41:1-41:48" name="Family Name str" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="55">
+               <a:s>define &quot;Family Name str&quot;: </a:s>
+               <a:s r="54">
+                  <a:s r="52">
+                     <a:s r="51">
+                        <a:s r="50">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="51">
+                           <a:s>name</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="52">
+                        <a:s>family</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="53">[0]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="54" locator="41:27-41:48" xsi:type="Indexer">
+            <operand localId="52" locator="41:27-41:45" xsi:type="Query">
+               <source alias="$this">
+                  <expression localId="51" locator="41:27-41:38" path="name" xsi:type="Property">
+                     <source localId="50" locator="41:27-41:33" name="Patient" xsi:type="ExpressionRef"/>
+                  </expression>
+               </source>
+               <where xsi:type="Not">
+                  <operand xsi:type="IsNull">
+                     <operand path="family" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </operand>
+                  </operand>
+               </where>
+               <return distinct="false">
+                  <expression path="family" xsi:type="Property">
+                     <source name="$this" xsi:type="AliasRef"/>
+                  </expression>
+               </return>
+            </operand>
+            <operand localId="53" locator="41:47" valueType="t:Integer" value="0" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="62" locator="42:1-42:50" name="Family Name" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="62">
+               <a:s>define &quot;Family Name&quot;: </a:s>
+               <a:s r="61">
+                  <a:s r="60">
+                     <a:s r="58">
+                        <a:s r="57">
+                           <a:s r="56">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="57">
+                              <a:s>name</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="58">
+                           <a:s>family</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="59">[0]</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="61">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="61" locator="42:23-42:50" path="value" xsi:type="Property">
+            <source localId="60" locator="42:23-42:44" xsi:type="Indexer">
+               <operand localId="58" locator="42:23-42:41" xsi:type="Query">
+                  <source alias="$this">
+                     <expression localId="57" locator="42:23-42:34" path="name" xsi:type="Property">
+                        <source localId="56" locator="42:23-42:29" name="Patient" xsi:type="ExpressionRef"/>
+                     </expression>
+                  </source>
+                  <where xsi:type="Not">
+                     <operand xsi:type="IsNull">
+                        <operand path="family" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </operand>
+                     </operand>
+                  </where>
+                  <return distinct="false">
+                     <expression path="family" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </expression>
+                  </return>
+               </operand>
+               <operand localId="59" locator="42:43" valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </source>
+         </expression>
+      </def>
    </statements>
 </library>

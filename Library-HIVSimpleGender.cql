@@ -29,3 +29,14 @@ define "Denominator":
 
 define "Numerator":
   "Sex" = 'female'
+
+define "Hello, World!": 'Hello, World!'
+
+define "birthDate": Patient.birthDate
+define "birthDate_str": ToString(Patient.birthDate)
+
+define "Given Name str": Patient.name.given[0]
+define "Given Name": Patient.name.given[0].value
+
+define "Family Name str": Patient.name.family[0]
+define "Family Name": Patient.name.family[0].value

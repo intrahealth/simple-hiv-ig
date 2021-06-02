@@ -23,6 +23,7 @@
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -49,9 +50,29 @@
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Your User Friendly Name for MyIG Here</span><br/>0.1.0 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Simple HIV IG</span><br/>0.1.0 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -135,7 +156,7 @@
 
 
 <div style="counter-reset: section 10" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Your User Friendly Name for MyIG Here - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -146,27 +167,27 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="Library-HIVSimpleGender2.html">Narrative Content</a>
+    <a href="Measure-HIVSimpleGenderCohort.html">Narrative Content</a>
   </li>
 
 
   
     <li>
-      <a href="Library-HIVSimpleGender2.xml.html">XML</a>
+      <a href="Measure-HIVSimpleGenderCohort.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Library-HIVSimpleGender2.json.html">JSON</a>
+      <a href="Measure-HIVSimpleGenderCohort.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="Library-HIVSimpleGender2.ttl.html">TTL</a>
+      <a href="Measure-HIVSimpleGenderCohort.ttl.html">TTL</a>
     </li>
   
 
@@ -176,8 +197,8 @@
 
 
   <a name="root"> </a>
-  <h2 id="root">: HIVSimpleGender2 - Change History</h2>
-  <p>History of changes for HIVSimpleGender2 .</p>
+  <h2 id="root">: HIVSimpleGenderCohort - Change History</h2>
+  <p>History of changes for HIVSimpleGenderCohort .</p>
 
   
 
@@ -221,19 +242,21 @@
       }
     });
   </script>
-  <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
-
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">HL7 International - [Some] Work Group</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 25, 2021 20:40+0000">2021-05-25</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 2, 2021 16:53+0000">2021-06-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
-                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
                  
-                
+                 <a style="color: #81BEF7" target="_blank" href="https://github.com/intrahealth/simple-hiv-ig/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -255,7 +278,7 @@
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
-<!-- feedback form - Google forms -->
+  <!-- feedback form - Google forms -->
 <!-- v0.1, 2021-01-09 -->
 
 
@@ -266,3 +289,4 @@ anchors.add()</script>
   ================================================== -->
   </body>
 </html>
+

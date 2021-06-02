@@ -60,20 +60,14 @@ context Patient
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2021-05-25T20:40:33+00:00"/>
-  <publisher value="HL7 International - [Some] Work Group"/>
+  <date value="2021-06-02T16:53:25+00:00"/>
+  <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
       <system value="url"/>
       <value value="http://hl7.org/Special/committees/[something]"/>
     </telecom>
   </contact>
-  <jurisdiction>
-    <coding>
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="001"/>
-    </coding>
-  </jurisdiction>
   <relatedArtifact>
     <type value="depends-on"/>
     <resource value="http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1"/>

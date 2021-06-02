@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSuppData> a fhir:Measure;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "HIVSimpleGenderSuppData"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppData</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppData</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleGenderSuppData</p><p><b>title</b>: HIVSimpleGenderSuppData</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-03-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleGenderSuppData</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><p><b>description</b>: HIVSimpleGenderSuppData Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: HIVSimpleGenderSuppData Initial Population</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: HIVSimpleGenderSuppData Numerator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: HIVSimpleGenderSuppData Denominator</p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define</span></p><h3>Criteria</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+  ];
+  fhir:Measure.url [ fhir:value "Measure/HIVSimpleGenderSuppData"];
+  fhir:Measure.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://ohie.org/Measure/" ];
+     fhir:Identifier.value [ fhir:value "HIVSimpleGenderSuppData" ]
+  ];
+  fhir:Measure.version [ fhir:value "0.1.0"];
+  fhir:Measure.name [ fhir:value "HIVSimpleGenderSuppData"];
+  fhir:Measure.title [ fhir:value "HIVSimpleGenderSuppData"];
+  fhir:Measure.status [ fhir:value "draft"];
+  fhir:Measure.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:Measure.date [ fhir:value "2021-03-01"^^xsd:date];
+  fhir:Measure.publisher [ fhir:value "IntraHealth International"];
+  fhir:Measure.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:Measure.description [ fhir:value "HIVSimpleGenderSuppData"];
+  fhir:Measure.library [
+     fhir:value "Library/HIVSimpleGender";
+     fhir:index 0;
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender>
+  ];
+  fhir:Measure.scoring [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "proportion" ]
+     ]
+  ];
+  fhir:Measure.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "process" ]
+     ]
+  ];
+  fhir:Measure.group [
+     fhir:index 0;
+     fhir:Measure.group.code [
+       fhir:CodeableConcept.text [ fhir:value "cohort" ]
+     ];
+     fhir:Measure.group.description [ fhir:value "HIVSimpleGenderSuppData Cohort" ];
+     fhir:Measure.group.population [
+       fhir:index 0;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "HIVSimpleGenderSuppData Initial Population" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Initial Population" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "HIVSimpleGenderSuppData Numerator" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Numerator" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "HIVSimpleGenderSuppData Denominator" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Denominator" ]
+       ]
+     ]
+  ];
+  fhir:Measure.supplementalData [
+     fhir:index 0;
+     fhir:Measure.supplementalData.code [
+       fhir:CodeableConcept.text [ fhir:value "supplemental-data-example-define" ]
+     ];
+     fhir:Measure.supplementalData.criteria [
+       fhir:Expression.language [ fhir:value "text/cql" ];
+       fhir:Expression.expression [ fhir:value "Hello, World!" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSuppData.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

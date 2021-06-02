@@ -35,6 +35,34 @@
     "name": "HIVSimpleGender2"
   },
   {
+    "id": "HIVSimpleGenderCohort",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGenderCohort",
+    "version": "0.1.0",
+    "name": "HIVSimpleGenderCohort"
+  },
+  {
+    "id": "HIVSimpleGenderSubjectList",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGenderSubjectList",
+    "version": "0.1.0",
+    "name": "HIVSimpleGenderSubjectList"
+  },
+  {
+    "id": "HIVSimpleGenderSuppData",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGenderSuppData",
+    "version": "0.1.0",
+    "name": "HIVSimpleGenderSuppData"
+  },
+  {
+    "id": "HIVSimpleGenderSuppDataIndiv",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGenderSuppDataIndiv",
+    "version": "0.1.0",
+    "name": "HIVSimpleGenderSuppDataIndiv"
+  },
+  {
     "id": "HIVSimpleTestResult",
     "type": "Measure",
     "url": "Measure/HIVSimpleTestResult",
@@ -53,7 +81,7 @@
     "type": "ImplementationGuide",
     "url": "https://github.com/intrahealth/simple-hiv-ig",
     "version": "0.1.0",
-    "name": "YourComputableMyIGNameHere"
+    "name": "simple-hiv-ig"
   },
   {
     "id": "AgeRanges",
@@ -96,13 +124,6 @@
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender",
     "version": "0.1.0",
     "name": "HIVSimpleGender"
-  },
-  {
-    "id": "HIVSimpleGender2",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender2",
-    "version": "0.1.0",
-    "name": "HIVSimpleGender2"
   },
   {
     "id": "HIVSimpleTestResult",
