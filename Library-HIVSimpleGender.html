@@ -248,7 +248,30 @@ define &quot;Given Name&quot;: Patient.name.given[0].value
 
 define &quot;Family Name str&quot;: Patient.name.family[0]
 define &quot;Family Name&quot;: Patient.name.family[0].value
-</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 19Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 70Kb)</p></div>
+
+// make a code for supp data
+define &quot;SDE Sex&quot;:
+  case
+    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Male' }
+    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Female' }
+    else null
+  end
+
+// hack to try pseudo-stratifier for location using supp data
+define function &quot;GetId&quot;(uri String):
+    Last(Split(uri, '/'))
+
+define function &quot;GetLocation&quot;(reference Reference):
+  singleton from (
+    [Location] Location where Location.id.value = GetId(reference.reference)
+  )
+
+define &quot;Location&quot;:
+    First([Encounter] E return &quot;GetLocation&quot;(First(E.location).location))
+
+define &quot;SDE Location&quot;:
+    Code { code: &quot;Location&quot;.name, system: 'http://location-name-code-system' }
+</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 37Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 159Kb)</p></div>
 
   <!-- insert notes if present -->
   
@@ -275,7 +298,7 @@ define &quot;Family Name&quot;: Patient.name.family[0].value
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 2, 2021 16:56+0000">2021-06-02</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 4, 2021 22:22+0000">2021-06-04</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

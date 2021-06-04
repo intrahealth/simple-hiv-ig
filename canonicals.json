@@ -56,13 +56,6 @@
     "name": "HIVSimpleGenderSuppData"
   },
   {
-    "id": "HIVSimpleGenderSuppDataIndiv",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGenderSuppDataIndiv",
-    "version": "0.1.0",
-    "name": "HIVSimpleGenderSuppDataIndiv"
-  },
-  {
     "id": "HIVSimpleTestResult",
     "type": "Measure",
     "url": "Measure/HIVSimpleTestResult",

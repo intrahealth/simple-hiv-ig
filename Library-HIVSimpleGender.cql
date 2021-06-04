@@ -40,3 +40,26 @@ define "Given Name": Patient.name.given[0].value
 
 define "Family Name str": Patient.name.family[0]
 define "Family Name": Patient.name.family[0].value
+
+// make a code for supp data
+define "SDE Sex":
+  case
+    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Male' }
+    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Female' }
+    else null
+  end
+
+// hack to try pseudo-stratifier for location using supp data
+define function "GetId"(uri String):
+    Last(Split(uri, '/'))
+
+define function "GetLocation"(reference Reference):
+  singleton from (
+    [Location] Location where Location.id.value = GetId(reference.reference)
+  )
+
+define "Location":
+    First([Encounter] E return "GetLocation"(First(E.location).location))
+
+define "SDE Location":
+    Code { code: "Location".name, system: 'http://location-name-code-system' }

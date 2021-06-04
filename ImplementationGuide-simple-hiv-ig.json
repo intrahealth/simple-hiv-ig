@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-06-02T16:56:00+00:00",
+  "date": "2021-06-04T22:22:39+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -382,19 +382,6 @@
         },
         "name": "HIVSimpleGender2",
         "description": "HIVSimpleGender2"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
-          }
-        ],
-        "reference": {
-          "reference": "Measure/HIVSimpleGenderSuppDataIndiv"
-        },
-        "name": "HIVSimpleGenderSuppDataIndiv",
-        "description": "HIVSimpleGenderSuppDataIndiv"
       },
       {
         "extension": [

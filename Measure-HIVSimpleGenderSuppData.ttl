@@ -109,7 +109,7 @@
      ];
      fhir:Measure.supplementalData.criteria [
        fhir:Expression.language [ fhir:value "text/cql" ];
-       fhir:Expression.expression [ fhir:value "Hello, World!" ]
+       fhir:Expression.expression [ fhir:value "SDE Sex" ]
      ]
   ] .
 

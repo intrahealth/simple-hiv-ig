@@ -12,7 +12,7 @@
   <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-06-02T16:56:00+00:00"/>
+  <date value="2021-06-04T22:22:39+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -249,16 +249,6 @@
       </reference>
       <name value="HIVSimpleGender2"/>
       <description value="HIVSimpleGender2"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleGenderSuppDataIndiv"/>
-      </reference>
-      <name value="HIVSimpleGenderSuppDataIndiv"/>
-      <description value="HIVSimpleGenderSuppDataIndiv"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
