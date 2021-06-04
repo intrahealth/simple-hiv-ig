@@ -88,37 +88,24 @@
           }
         }
       ],
-      "stratifier": [
-        {
-          "code": {
-            "text": "supplemental-data-example-define"
-          },
-          "criteria": {
-            "language": "text/cql",
-            "expression": "Female"
-          }
-        },
-        {
-          "code": {
-            "text": "stratifier-gender"
-          },
-          "criteria": {
-            "language": "text/fhirpath",
-            "expression": "Patient.gender"
-          }
-        }
-      ]
-    }
-  ],
   "supplementalData": [
     {
       "code": {
-        "text": "supplemental-data-example-define"
+        "text": "supplemental-data-example-define-sex"
       },
       "criteria": {
         "language": "text/cql",
-        "expression": "Female"
+        "expression": "SDE Sex"
       }
-    }
+    },
+      {
+        "code": {
+          "text": "supplemental-data-example-define-location"
+        },
+        "criteria": {
+          "language": "text/cql",
+          "expression": "SDE Location"
+        }
+      }
   ]
 }

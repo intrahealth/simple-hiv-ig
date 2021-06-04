@@ -87,17 +87,6 @@
             "expression": "Denominator"
           }
         }
-      ],
-      "stratifier": [
-        {
-          "code": {
-            "text": "stratifier-gender"
-          },
-          "criteria": {
-            "language": "text/fhirpath",
-            "expression": "Patient.gender"
-          }
-        }
       ]
     }
   ]
