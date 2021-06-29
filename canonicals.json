@@ -77,6 +77,13 @@
     "name": "simple-hiv-ig"
   },
   {
+    "id": "ANCStratifiers",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/ANCStratifiers",
+    "version": "0.1.0",
+    "name": "ANCStratifiers"
+  },
+  {
     "id": "AgeRanges",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/AgeRanges",

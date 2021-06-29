@@ -1,0 +1,370 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>SIMPLE-HIV-IG\ANCStratifiers - XML Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6.9"}
+    h3,h4,h5,h6{--heading-prefix:"6.9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Simple HIV IG</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spec.html">Detailed Specification</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ANCStratifiers</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Library-ANCStratifiers.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-ANCStratifiers.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-ANCStratifiers.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: ANCStratifiers - XML Representation</h2>
+
+<p><a href="Library-ANCStratifiers.xml" no-download="true">Raw xml</a> | <a href="Library-ANCStratifiers.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/library.html#Library">Library</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ANCStratifiers&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;library ANCStratifiers
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include ANCDataElements called PatientData
+// TODO: Report based on latest contact that occurred in the reporting period
+include ANCContactDataElements called ContactData
+
+codesystem &quot;ISO-8601-Derived Periods&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
+
+// Age Groups
+code &quot;P10Y--P14Y&quot;: 'P10Y--P14Y' from &quot;ISO-8601-Derived Periods&quot; display '10-14 years'
+code &quot;P15Y--P19Y&quot;: 'P15Y--P19Y' from &quot;ISO-8601-Derived Periods&quot; display '15-19 years'
+code &quot;P20Y--P9999Y&quot;: 'P20Y--P9999Y' from &quot;ISO-8601-Derived Periods&quot; display '20+ years'
+
+parameter &quot;Measurement Period&quot; Interval&amp;lt;Date&amp;gt; default Interval[@2020-01-01, @2020-12-31]
+
+context Patient
+
+/*
+By Patient Age as of the start of the Measurement Period
+Age (10-14, 15-19, 20+)
+*/
+define &quot;By Age&quot;:
+  case
+    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[10, 14] then &quot;P10Y--P14Y&quot;
+    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[15, 19] then &quot;P15Y--P19Y&quot;
+    when AgeInYearsAt(start of &quot;Measurement Period&quot;) &amp;gt;= 20 then &quot;P20Y--P9999Y&quot;
+    else null
+  end
+
+/*
+By Patient Education Level (none, don't know, primary, secondary, higher)
+*/
+define &quot;By Education Level&quot;:
+  Patient.extension E
+    where E.url = 'http://fhir.org/guides/who/anc-cds/StructureDefinition/educationlevel'
+    return E.value as CodeableConcept
+
+/*
+By Number of Contacts (1, 2-3, 4-8, 9+)
+*/
+define &quot;By Number of Contacts&quot;:
+  Count(PatientData.&quot;ANC contact number&quot;)
+
+/*
+By Trimester Category: 1st (GA ≤ 12 weeks); 2nd (GA &amp;gt; 12 weeks to ≤ 28 weeks); 3rd (GA &amp;gt; 28 weeks)
+*/
+define &quot;By Trimester Category&quot;:
+  case
+    when ContactData.&quot;Gestational age&quot;.value &amp;lt;= 12 weeks then 'GA ≤ 12 weeks'
+    when ContactData.&quot;Gestational age&quot;.value &amp;lt;= 28 weeks then 'GA &amp;gt; 12 weeks to ≤ 28 weeks'
+    else 'GA &amp;gt; 28 weeks'
+  end&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;No Content&lt;/code&gt; (&lt;code&gt;application/elm+xml&lt;/code&gt;)&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://github.com/intrahealth/simple-hiv-ig/Library/ANCStratifiers&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ANCStratifiers&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ANCStratifiers&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.type">type</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/library-type&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;logic-library&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/type&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2021-06-29T01:02:10+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;IntraHealth International&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://hl7.org/Special/committees/[something]&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;text/cql&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>
+          <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">value</a>=&quot;bGlicmFyeSBBTkNTdHJhdGlmaWVycwoKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgQU5DRGF0YUVsZW1lbnRzIGNhbGxlZCBQYXRpZW50RGF0YQovLyBUT0RPOiBSZXBvcnQgYmFzZWQgb24gbGF0ZXN0IGNvbnRhY3QgdGhhdCBvY2N1cnJlZCBpbiB0aGUgcmVwb3J0aW5nIHBlcmlvZAppbmNsdWRlIEFOQ0NvbnRhY3REYXRhRWxlbWVudHMgY2FsbGVkIENvbnRhY3REYXRhCgpjb2Rlc3lzdGVtICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiOiAnaHR0cDovL29oaWUub3JnL0NvZGVTeXN0ZW0vaXNvLTg2MDEtZGVyaXZlZC1wZXJpb2RzJyAvLyB7ICdQMFktLVAxWScsICdQMVktLVA1WScsIC4uLiB9CgovLyBBZ2UgR3JvdXBzCmNvZGUgIlAxMFktLVAxNFkiOiAnUDEwWS0tUDE0WScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICcxMC0xNCB5ZWFycycKY29kZSAiUDE1WS0tUDE5WSI6ICdQMTVZLS1QMTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzE1LTE5IHllYXJzJwpjb2RlICJQMjBZLS1QOTk5OVkiOiAnUDIwWS0tUDk5OTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzIwKyB5ZWFycycKCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlPiBkZWZhdWx0IEludGVydmFsW0AyMDIwLTAxLTAxLCBAMjAyMC0xMi0zMV0KCmNvbnRleHQgUGF0aWVudAoKLyoKQnkgUGF0aWVudCBBZ2UgYXMgb2YgdGhlIHN0YXJ0IG9mIHRoZSBNZWFzdXJlbWVudCBQZXJpb2QKQWdlICgxMC0xNCwgMTUtMTksIDIwKykKKi8KZGVmaW5lICJCeSBBZ2UiOgogIGNhc2UKICAgIHdoZW4gQWdlSW5ZZWFyc0F0KHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSBpbiBJbnRlcnZhbFsxMCwgMTRdIHRoZW4gIlAxMFktLVAxNFkiCiAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgaW4gSW50ZXJ2YWxbMTUsIDE5XSB0aGVuICJQMTVZLS1QMTlZIgogICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpID49IDIwIHRoZW4gIlAyMFktLVA5OTk5WSIKICAgIGVsc2UgbnVsbAogIGVuZAoKLyoKQnkgUGF0aWVudCBFZHVjYXRpb24gTGV2ZWwgKG5vbmUsIGRvbid0IGtub3csIHByaW1hcnksIHNlY29uZGFyeSwgaGlnaGVyKQoqLwpkZWZpbmUgIkJ5IEVkdWNhdGlvbiBMZXZlbCI6CiAgUGF0aWVudC5leHRlbnNpb24gRQogICAgd2hlcmUgRS51cmwgPSAnaHR0cDovL2ZoaXIub3JnL2d1aWRlcy93aG8vYW5jLWNkcy9TdHJ1Y3R1cmVEZWZpbml0aW9uL2VkdWNhdGlvbmxldmVsJwogICAgcmV0dXJuIEUudmFsdWUgYXMgQ29kZWFibGVDb25jZXB0CgovKgpCeSBOdW1iZXIgb2YgQ29udGFjdHMgKDEsIDItMywgNC04LCA5KykKKi8KZGVmaW5lICJCeSBOdW1iZXIgb2YgQ29udGFjdHMiOgogIENvdW50KFBhdGllbnREYXRhLiJBTkMgY29udGFjdCBudW1iZXIiKQoKLyoKQnkgVHJpbWVzdGVyIENhdGVnb3J5OiAxc3QgKEdBIOKJpCAxMuKAr3dlZWtzKTsgMm5kIChHQSA+IDEy4oCvd2Vla3MgdG8g4omkIDI44oCvd2Vla3MpOyAzcmQgKEdBID4gMjjigK93ZWVrcykKKi8KZGVmaW5lICJCeSBUcmltZXN0ZXIgQ2F0ZWdvcnkiOgogIGNhc2UKICAgIHdoZW4gQ29udGFjdERhdGEuIkdlc3RhdGlvbmFsIGFnZSIudmFsdWUgPD0gMTIgd2Vla3MgdGhlbiAnR0Eg4omkIDEy4oCvd2Vla3MnCiAgICB3aGVuIENvbnRhY3REYXRhLiJHZXN0YXRpb25hbCBhZ2UiLnZhbHVlIDw9IDI4IHdlZWtzIHRoZW4gJ0dBID4gMTLigK93ZWVrcyB0byDiiaQgMjjigK93ZWVrcycKICAgIGVsc2UgJ0dBID4gMjjigK93ZWVrcycKICBlbmQ=&quot;/&gt;
+  &lt;/content&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/elm+xml&quot;/&gt;
+  &lt;/content&gt;
+&lt;/Library&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 29, 2021 01:02+0000">2021-06-29</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="https://github.com/intrahealth/simple-hiv-ig/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

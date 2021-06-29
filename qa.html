@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 47, warn = 29, info = 10 -->
+<!-- broken links = 0, errors = 52, warn = 30, info = 10 -->
 <head>
   <title>simple-hiv-ig : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for simple-hiv-ig</h1>
- <p>Generated Tue Jun 29 00:55:57 UTC 2021, FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = <a href="https://github.com/intrahealth/simple-hiv-ig">https://github.com/intrahealth/simple-hiv-ig</a> (<a href="https://github.com/intrahealth/simple-hiv-ig/history.html">history</a>)). See <a href="/github/workspace/output/qa.min.html">Errors Only</a></p>
+ <p>Generated Tue Jun 29 01:02:21 UTC 2021, FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = <a href="https://github.com/intrahealth/simple-hiv-ig">https://github.com/intrahealth/simple-hiv-ig</a> (<a href="https://github.com/intrahealth/simple-hiv-ig/history.html">history</a>)). See <a href="/github/workspace/output/qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.76</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = simple-hiv-ig, Canonical = https://github.com/intrahealth/simple-hiv-ig</td></tr>
@@ -37,17 +37,20 @@
  <br/><br/>The copyrightYear parameter ('2020+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://github.com/intrahealth/simple-hiv-ig (Problem #1 with package-list.json at https://github.com/intrahealth/simple-hiv-ig: https://github.com/intrahealth/simple-hiv-ig/package-list.json)</td></tr>
- <tr><td>Summary:</td><td> broken links = 0, errors = 47, warn = 29, info = 10</td></tr>
+ <tr><td>Summary:</td><td> broken links = 0, errors = 52, warn = 30, info = 10</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>9</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>10</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_input_intrahealth.simple-hiv-ig"><b>/github/workspace/input/intrahealth.simple-hiv-ig</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_input_resources_library-ANCStratifiers"><b>/github/workspace/input/resources/library-ANCStratifiers</b></a></td><td><b>5</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_input_resources_library-AgeRanges"><b>/github/workspace/input/resources/library-AgeRanges</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -135,6 +138,9 @@
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleTestResult.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/ANCStratifiers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
 </table>
 <hr/>
 <a name="_github_workspace_input_intrahealth.simple-hiv-ig"> </a>
@@ -151,6 +157,31 @@
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>/github/workspace/input/intrahealth.simple-hiv-ig</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://github.com/intrahealth/simple-hiv-ig/ImplementationGuide/simple-hiv-ig vs https://github.com/intrahealth/simple-hiv-ig</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_input_resources_library-ANCStratifiers"> </a>
+<h2><a href="Library-ANCStratifiers.html">/github/workspace/input/resources/library-ANCStratifiers.json</a></h2>
+ <ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ANCStratifiers (l6/c1)</b></td><td><b>error</b></td><td title=""><b>Could not load source for library ANCDataElements, version null.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ANCStratifiers (l8/c1)</b></td><td><b>error</b></td><td title=""><b>Could not load source for library ANCContactDataElements, version null.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ANCStratifiers (l45/c21)</b></td><td><b>error</b></td><td title=""><b>Could not resolve library name PatientData.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ANCStratifiers (l52/c22)</b></td><td><b>error</b></td><td title=""><b>Could not resolve library name ContactData.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ANCStratifiers.cql</b></td><td><b>error</b></td><td title=""><b>CQL Processing failed with (4) errors.</b></td>
    </tr>
 </table>
 <hr/>

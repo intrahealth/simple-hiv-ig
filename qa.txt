@@ -1,12 +1,13 @@
 ﻿simple-hiv-ig : Validation Results
 =========================================
 
-err = 47, warn = 29, info = 10
+err = 52, warn = 30, info = 10
 IG Publisher Version: 1.1.76
-Generated Tue Jun 29 00:55:57 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
+Generated Tue Jun 29 01:02:21 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
 
- Build Errors : 0 / 9 / 0
+ Build Errors : 0 / 10 / 0
  /github/workspace/input/intrahealth.simple-hiv-ig : 2 / 1 / 1
+ /github/workspace/input/resources/library-ANCStratifiers : 5 / 0 / 1
  /github/workspace/input/resources/library-AgeRanges : 1 / 0 / 1
  /github/workspace/input/resources/library-FHIRCommon : 2 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleAgeGroup : 2 / 0 / 1
@@ -36,10 +37,17 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/AgeRanges.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleViralLoad.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleTestResult.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/ANCStratifiers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 == /github/workspace/input/intrahealth.simple-hiv-ig.xml ==
 ERROR: ImplementationGuide.where(url = 'https://github.com/intrahealth/simple-hiv-ig'): Conformance resource /github/workspace/input/intrahealth.simple-hiv-ig.xml - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/ImplementationGuide/simple-hiv-ig) does not match the URL (https://github.com/intrahealth/simple-hiv-ig)
 WARNING: ImplementationGuide/simple-hiv-ig: ImplementationGuide: ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: /github/workspace/input/intrahealth.simple-hiv-ig: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/ImplementationGuide/simple-hiv-ig vs https://github.com/intrahealth/simple-hiv-ig
+== /github/workspace/input/resources/library-ANCStratifiers.json ==
+ERROR: ANCStratifiers: Could not load source for library ANCDataElements, version null.
+ERROR: ANCStratifiers: Could not load source for library ANCContactDataElements, version null.
+ERROR: ANCStratifiers: Could not resolve library name PatientData.
+ERROR: ANCStratifiers: Could not resolve library name ContactData.
+ERROR: ANCStratifiers.cql: CQL Processing failed with (4) errors.
 == /github/workspace/input/resources/library-AgeRanges.json ==
 ERROR: Library/AgeRanges: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 == /github/workspace/input/resources/library-FHIRCommon.json ==

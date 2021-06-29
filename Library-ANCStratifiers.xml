@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="ANCStratifiers"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library ANCStratifiers
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include ANCDataElements called PatientData
+// TODO: Report based on latest contact that occurred in the reporting period
+include ANCContactDataElements called ContactData
+
+codesystem "ISO-8601-Derived Periods": 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
+
+// Age Groups
+code "P10Y--P14Y": 'P10Y--P14Y' from "ISO-8601-Derived Periods" display '10-14 years'
+code "P15Y--P19Y": 'P15Y--P19Y' from "ISO-8601-Derived Periods" display '15-19 years'
+code "P20Y--P9999Y": 'P20Y--P9999Y' from "ISO-8601-Derived Periods" display '20+ years'
+
+parameter "Measurement Period" Interval&lt;Date&gt; default Interval[@2020-01-01, @2020-12-31]
+
+context Patient
+
+/*
+By Patient Age as of the start of the Measurement Period
+Age (10-14, 15-19, 20+)
+*/
+define "By Age":
+  case
+    when AgeInYearsAt(start of "Measurement Period") in Interval[10, 14] then "P10Y--P14Y"
+    when AgeInYearsAt(start of "Measurement Period") in Interval[15, 19] then "P15Y--P19Y"
+    when AgeInYearsAt(start of "Measurement Period") &gt;= 20 then "P20Y--P9999Y"
+    else null
+  end
+
+/*
+By Patient Education Level (none, don't know, primary, secondary, higher)
+*/
+define "By Education Level":
+  Patient.extension E
+    where E.url = 'http://fhir.org/guides/who/anc-cds/StructureDefinition/educationlevel'
+    return E.value as CodeableConcept
+
+/*
+By Number of Contacts (1, 2-3, 4-8, 9+)
+*/
+define "By Number of Contacts":
+  Count(PatientData."ANC contact number")
+
+/*
+By Trimester Category: 1st (GA ≤ 12 weeks); 2nd (GA &gt; 12 weeks to ≤ 28 weeks); 3rd (GA &gt; 28 weeks)
+*/
+define "By Trimester Category":
+  case
+    when ContactData."Gestational age".value &lt;= 12 weeks then 'GA ≤ 12 weeks'
+    when ContactData."Gestational age".value &lt;= 28 weeks then 'GA &gt; 12 weeks to ≤ 28 weeks'
+    else 'GA &gt; 28 weeks'
+  end</code></pre><p><code>No Content</code> (<code>application/elm+xml</code>)</p></div>
+  </text>
+  <url value="https://github.com/intrahealth/simple-hiv-ig/Library/ANCStratifiers"/>
+  <version value="0.1.0"/>
+  <name value="ANCStratifiers"/>
+  <title value="ANCStratifiers"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2021-06-29T01:02:10+00:00"/>
+  <publisher value="IntraHealth International"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <content>
+    <contentType value="text/cql"/>
+    <data value="bGlicmFyeSBBTkNTdHJhdGlmaWVycwoKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgQU5DRGF0YUVsZW1lbnRzIGNhbGxlZCBQYXRpZW50RGF0YQovLyBUT0RPOiBSZXBvcnQgYmFzZWQgb24gbGF0ZXN0IGNvbnRhY3QgdGhhdCBvY2N1cnJlZCBpbiB0aGUgcmVwb3J0aW5nIHBlcmlvZAppbmNsdWRlIEFOQ0NvbnRhY3REYXRhRWxlbWVudHMgY2FsbGVkIENvbnRhY3REYXRhCgpjb2Rlc3lzdGVtICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiOiAnaHR0cDovL29oaWUub3JnL0NvZGVTeXN0ZW0vaXNvLTg2MDEtZGVyaXZlZC1wZXJpb2RzJyAvLyB7ICdQMFktLVAxWScsICdQMVktLVA1WScsIC4uLiB9CgovLyBBZ2UgR3JvdXBzCmNvZGUgIlAxMFktLVAxNFkiOiAnUDEwWS0tUDE0WScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICcxMC0xNCB5ZWFycycKY29kZSAiUDE1WS0tUDE5WSI6ICdQMTVZLS1QMTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzE1LTE5IHllYXJzJwpjb2RlICJQMjBZLS1QOTk5OVkiOiAnUDIwWS0tUDk5OTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzIwKyB5ZWFycycKCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlPiBkZWZhdWx0IEludGVydmFsW0AyMDIwLTAxLTAxLCBAMjAyMC0xMi0zMV0KCmNvbnRleHQgUGF0aWVudAoKLyoKQnkgUGF0aWVudCBBZ2UgYXMgb2YgdGhlIHN0YXJ0IG9mIHRoZSBNZWFzdXJlbWVudCBQZXJpb2QKQWdlICgxMC0xNCwgMTUtMTksIDIwKykKKi8KZGVmaW5lICJCeSBBZ2UiOgogIGNhc2UKICAgIHdoZW4gQWdlSW5ZZWFyc0F0KHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSBpbiBJbnRlcnZhbFsxMCwgMTRdIHRoZW4gIlAxMFktLVAxNFkiCiAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgaW4gSW50ZXJ2YWxbMTUsIDE5XSB0aGVuICJQMTVZLS1QMTlZIgogICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpID49IDIwIHRoZW4gIlAyMFktLVA5OTk5WSIKICAgIGVsc2UgbnVsbAogIGVuZAoKLyoKQnkgUGF0aWVudCBFZHVjYXRpb24gTGV2ZWwgKG5vbmUsIGRvbid0IGtub3csIHByaW1hcnksIHNlY29uZGFyeSwgaGlnaGVyKQoqLwpkZWZpbmUgIkJ5IEVkdWNhdGlvbiBMZXZlbCI6CiAgUGF0aWVudC5leHRlbnNpb24gRQogICAgd2hlcmUgRS51cmwgPSAnaHR0cDovL2ZoaXIub3JnL2d1aWRlcy93aG8vYW5jLWNkcy9TdHJ1Y3R1cmVEZWZpbml0aW9uL2VkdWNhdGlvbmxldmVsJwogICAgcmV0dXJuIEUudmFsdWUgYXMgQ29kZWFibGVDb25jZXB0CgovKgpCeSBOdW1iZXIgb2YgQ29udGFjdHMgKDEsIDItMywgNC04LCA5KykKKi8KZGVmaW5lICJCeSBOdW1iZXIgb2YgQ29udGFjdHMiOgogIENvdW50KFBhdGllbnREYXRhLiJBTkMgY29udGFjdCBudW1iZXIiKQoKLyoKQnkgVHJpbWVzdGVyIENhdGVnb3J5OiAxc3QgKEdBIOKJpCAxMuKAr3dlZWtzKTsgMm5kIChHQSA+IDEy4oCvd2Vla3MgdG8g4omkIDI44oCvd2Vla3MpOyAzcmQgKEdBID4gMjjigK93ZWVrcykKKi8KZGVmaW5lICJCeSBUcmltZXN0ZXIgQ2F0ZWdvcnkiOgogIGNhc2UKICAgIHdoZW4gQ29udGFjdERhdGEuIkdlc3RhdGlvbmFsIGFnZSIudmFsdWUgPD0gMTIgd2Vla3MgdGhlbiAnR0Eg4omkIDEy4oCvd2Vla3MnCiAgICB3aGVuIENvbnRhY3REYXRhLiJHZXN0YXRpb25hbCBhZ2UiLnZhbHVlIDw9IDI4IHdlZWtzIHRoZW4gJ0dBID4gMTLigK93ZWVrcyB0byDiiaQgMjjigK93ZWVrcycKICAgIGVsc2UgJ0dBID4gMjjigK93ZWVrcycKICBlbmQ="/>
+  </content>
+  <content>
+    <contentType value="application/elm+xml"/>
+  </content>
+</Library>
