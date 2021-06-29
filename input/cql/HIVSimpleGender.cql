@@ -3,7 +3,7 @@ library HIVSimpleGender version '0.1.0'
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
-include FHIRCommon version '0.1.0' called FC
+include FHIRCommon version '4.0.1' called FC
 // include AgeRanges called AR
 
 // SNOMED-CT, International Edition
@@ -63,3 +63,29 @@ define "Location":
 
 define "SDE Location":
     Code { code: "Location".name, system: 'http://location-name-code-system' }
+
+/*
+Most recent encounter location
+*/
+define "Most Recent Encounter Location Reference":
+  Last(
+    [Encounter] E
+      return First(E.location L return L.location)
+      //sort by start of period
+  )/*
+Location Code
+*/
+define "Location Code":
+  singleton from (
+    [Location] L
+      let identifier: L.identifier I where I.system = 'http://example.org/opencr-identifiers'
+      where L.id = Last(Split("Most Recent Encounter Location Reference", '/'))
+      return CodeableConcept {
+        coding: {
+          Coding {
+            code: identifier.value,
+            system: identifier.system
+          }
+        }
+      }
+  )
