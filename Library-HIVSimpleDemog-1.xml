@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <identifier id="HIVSimpleDemog" system="https://github.com/intrahealth/simple-hiv-ig" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using FHIR version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="https://github.com/intrahealth/simple-hiv-ig/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:44" localIdentifier="FC" path="https://github.com/intrahealth/simple-hiv-ig/FHIRCommon" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRCommon</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="7:1-7:43" localIdentifier="AR" path="https://github.com/intrahealth/simple-hiv-ig/AgeRanges" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>AgeRanges</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called AR</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="10" locator="17:1-17:70" name="MeasurementPeriod" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="10">
+               <a:s>parameter MeasurementPeriod default </a:s>
+               <a:s r="9">
+                  <a:s r="7">Interval[@1970-01-01, @2021-01-01)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="9" locator="17:37-17:70" lowClosed="true" highClosed="false" xsi:type="Interval">
+            <low localId="7" locator="17:46-17:56" xsi:type="Date">
+               <year valueType="t:Integer" value="1970" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </low>
+            <high localId="8" locator="17:59-17:69" xsi:type="Date">
+               <year valueType="t:Integer" value="2021" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </high>
+         </default>
+      </def>
+   </parameters>
+   <codeSystems>
+      <def localId="5" locator="10:1-10:100" name="SNOMED-CT" id="http://snomed.info/sct" version="http://snomed.info/sct/900000000000207008" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="13:1-13:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <contexts>
+      <def locator="19:1-19:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="19:1-19:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="19:1-19:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="13" locator="21:1-21:28" name="Sex" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="13">
+               <a:s>define &quot;Sex&quot;: </a:s>
+               <a:s r="12">
+                  <a:s r="11">
+                     <a:s>Patient</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="12">
+                     <a:s>gender</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="12" locator="21:15-21:28" path="gender" xsi:type="Property">
+            <source localId="11" locator="21:15-21:21" name="Patient" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="17" locator="24:1-25:21" name="Age Group Test" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="17">
+               <a:s>define &quot;Age Group Test&quot;:
+  </a:s>
+               <a:s r="16">
+                  <a:s r="15">
+                     <a:s r="14">
+                        <a:s>AR</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="15">
+                        <a:s>&quot;Age Group&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="16">
+                     <a:s>code</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="16" locator="25:3-25:21" path="code" xsi:type="Property">
+            <source localId="15" locator="25:3-25:16" name="Age Group" libraryName="AR" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="34" locator="27:3-30:35" name="Patient0To5AndFemale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="34">
+               <a:s>define Patient0To5AndFemale:
+    </a:s>
+               <a:s r="33">
+                  <a:s r="28">
+                     <a:s r="22">
+                        <a:s r="20">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="19">
+                              <a:s>start of </a:s>
+                              <a:s r="18">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="21"> >= 0</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="27">
+                        <a:s r="25">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="24">
+                              <a:s>start of </a:s>
+                              <a:s r="23">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="26"> &lt; 5</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="32">
+                     <a:s r="30">
+                        <a:s r="29">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="30">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="31">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="33" locator="28:5-30:35" xsi:type="And">
+            <operand localId="28" locator="28:5-29:56" xsi:type="And">
+               <operand localId="22" locator="28:5-28:51" xsi:type="GreaterOrEqual">
+                  <operand localId="20" locator="28:5-28:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="19" locator="28:18-28:45" xsi:type="Start">
+                        <operand localId="18" locator="28:27-28:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="21" locator="28:51" valueType="t:Integer" value="0" xsi:type="Literal"/>
+               </operand>
+               <operand localId="27" locator="29:11-29:56" xsi:type="Less">
+                  <operand localId="25" locator="29:11-29:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="24" locator="29:24-29:51" xsi:type="Start">
+                        <operand localId="23" locator="29:33-29:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="26" locator="29:56" valueType="t:Integer" value="5" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="32" locator="30:11-30:35" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="30" locator="30:11-30:24" path="gender" xsi:type="Property">
+                     <source localId="29" locator="30:11-30:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="31" locator="30:28-30:35" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="51" locator="32:3-35:35" name="Patient5To15AndFemale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="51">
+               <a:s>define Patient5To15AndFemale:
+    </a:s>
+               <a:s r="50">
+                  <a:s r="45">
+                     <a:s r="39">
+                        <a:s r="37">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="36">
+                              <a:s>start of </a:s>
+                              <a:s r="35">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="38"> >= 5</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="44">
+                        <a:s r="42">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="41">
+                              <a:s>start of </a:s>
+                              <a:s r="40">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="43"> &lt; 15</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="49">
+                     <a:s r="47">
+                        <a:s r="46">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="47">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="48">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="50" locator="33:5-35:35" xsi:type="And">
+            <operand localId="45" locator="33:5-34:57" xsi:type="And">
+               <operand localId="39" locator="33:5-33:51" xsi:type="GreaterOrEqual">
+                  <operand localId="37" locator="33:5-33:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="36" locator="33:18-33:45" xsi:type="Start">
+                        <operand localId="35" locator="33:27-33:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="38" locator="33:51" valueType="t:Integer" value="5" xsi:type="Literal"/>
+               </operand>
+               <operand localId="44" locator="34:11-34:57" xsi:type="Less">
+                  <operand localId="42" locator="34:11-34:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="41" locator="34:24-34:51" xsi:type="Start">
+                        <operand localId="40" locator="34:33-34:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="43" locator="34:56-34:57" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="49" locator="35:11-35:35" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="47" locator="35:11-35:24" path="gender" xsi:type="Property">
+                     <source localId="46" locator="35:11-35:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="48" locator="35:28-35:35" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="68" locator="37:3-40:35" name="Patient15To25AndFemale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="68">
+               <a:s>define Patient15To25AndFemale:
+    </a:s>
+               <a:s r="67">
+                  <a:s r="62">
+                     <a:s r="56">
+                        <a:s r="54">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="53">
+                              <a:s>start of </a:s>
+                              <a:s r="52">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="55"> >= 15</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="61">
+                        <a:s r="59">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="58">
+                              <a:s>start of </a:s>
+                              <a:s r="57">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="60"> &lt; 25</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="66">
+                     <a:s r="64">
+                        <a:s r="63">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="64">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="65">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="67" locator="38:5-40:35" xsi:type="And">
+            <operand localId="62" locator="38:5-39:57" xsi:type="And">
+               <operand localId="56" locator="38:5-38:52" xsi:type="GreaterOrEqual">
+                  <operand localId="54" locator="38:5-38:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="53" locator="38:18-38:45" xsi:type="Start">
+                        <operand localId="52" locator="38:27-38:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="55" locator="38:51-38:52" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </operand>
+               <operand localId="61" locator="39:11-39:57" xsi:type="Less">
+                  <operand localId="59" locator="39:11-39:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="58" locator="39:24-39:51" xsi:type="Start">
+                        <operand localId="57" locator="39:33-39:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="60" locator="39:56-39:57" valueType="t:Integer" value="25" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="66" locator="40:11-40:35" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="64" locator="40:11-40:24" path="gender" xsi:type="Property">
+                     <source localId="63" locator="40:11-40:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="65" locator="40:28-40:35" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="85" locator="42:3-45:35" name="Patient25To50AndFemale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="85">
+               <a:s>define Patient25To50AndFemale:
+    </a:s>
+               <a:s r="84">
+                  <a:s r="79">
+                     <a:s r="73">
+                        <a:s r="71">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="70">
+                              <a:s>start of </a:s>
+                              <a:s r="69">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="72"> >= 25</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="78">
+                        <a:s r="76">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="75">
+                              <a:s>start of </a:s>
+                              <a:s r="74">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="77"> &lt; 50</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="83">
+                     <a:s r="81">
+                        <a:s r="80">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="81">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="82">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="84" locator="43:5-45:35" xsi:type="And">
+            <operand localId="79" locator="43:5-44:57" xsi:type="And">
+               <operand localId="73" locator="43:5-43:52" xsi:type="GreaterOrEqual">
+                  <operand localId="71" locator="43:5-43:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="70" locator="43:18-43:45" xsi:type="Start">
+                        <operand localId="69" locator="43:27-43:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="72" locator="43:51-43:52" valueType="t:Integer" value="25" xsi:type="Literal"/>
+               </operand>
+               <operand localId="78" locator="44:11-44:57" xsi:type="Less">
+                  <operand localId="76" locator="44:11-44:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="75" locator="44:24-44:51" xsi:type="Start">
+                        <operand localId="74" locator="44:33-44:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="77" locator="44:56-44:57" valueType="t:Integer" value="50" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="83" locator="45:11-45:35" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="81" locator="45:11-45:24" path="gender" xsi:type="Property">
+                     <source localId="80" locator="45:11-45:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="82" locator="45:28-45:35" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="102" locator="47:3-50:35" name="Patient50To65AndFemale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="102">
+               <a:s>define Patient50To65AndFemale:
+    </a:s>
+               <a:s r="101">
+                  <a:s r="96">
+                     <a:s r="90">
+                        <a:s r="88">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="87">
+                              <a:s>start of </a:s>
+                              <a:s r="86">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="89"> >= 50</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="95">
+                        <a:s r="93">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="92">
+                              <a:s>start of </a:s>
+                              <a:s r="91">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="94"> &lt; 65</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="100">
+                     <a:s r="98">
+                        <a:s r="97">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="98">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="99">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="101" locator="48:5-50:35" xsi:type="And">
+            <operand localId="96" locator="48:5-49:57" xsi:type="And">
+               <operand localId="90" locator="48:5-48:52" xsi:type="GreaterOrEqual">
+                  <operand localId="88" locator="48:5-48:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="87" locator="48:18-48:45" xsi:type="Start">
+                        <operand localId="86" locator="48:27-48:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="89" locator="48:51-48:52" valueType="t:Integer" value="50" xsi:type="Literal"/>
+               </operand>
+               <operand localId="95" locator="49:11-49:57" xsi:type="Less">
+                  <operand localId="93" locator="49:11-49:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="92" locator="49:24-49:51" xsi:type="Start">
+                        <operand localId="91" locator="49:33-49:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="94" locator="49:56-49:57" valueType="t:Integer" value="65" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="100" locator="50:11-50:35" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="98" locator="50:11-50:24" path="gender" xsi:type="Property">
+                     <source localId="97" locator="50:11-50:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="99" locator="50:28-50:35" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="113" locator="52:3-54:35" name="Patient65ToHighestAndFemale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="113">
+               <a:s>define Patient65ToHighestAndFemale:
+    </a:s>
+               <a:s r="112">
+                  <a:s r="107">
+                     <a:s r="105">
+                        <a:s>AgeInYearsAt(</a:s>
+                        <a:s r="104">
+                           <a:s>start of </a:s>
+                           <a:s r="103">
+                              <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s r="106"> >= 65</a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="111">
+                     <a:s r="109">
+                        <a:s r="108">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="109">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="110">
+                        <a:s>'female'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="112" locator="53:5-54:35" xsi:type="And">
+            <operand localId="107" locator="53:5-53:52" xsi:type="GreaterOrEqual">
+               <operand localId="105" locator="53:5-53:46" precision="Year" xsi:type="CalculateAgeAt">
+                  <operand path="birthDate.value" xsi:type="Property">
+                     <source name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <operand localId="104" locator="53:18-53:45" xsi:type="Start">
+                     <operand localId="103" locator="53:27-53:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                  </operand>
+               </operand>
+               <operand localId="106" locator="53:51-53:52" valueType="t:Integer" value="65" xsi:type="Literal"/>
+            </operand>
+            <operand localId="111" locator="54:11-54:35" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="109" locator="54:11-54:24" path="gender" xsi:type="Property">
+                     <source localId="108" locator="54:11-54:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="110" locator="54:28-54:35" valueType="t:String" value="female" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="130" locator="56:3-59:33" name="Patient0To5AndMale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="130">
+               <a:s>define Patient0To5AndMale:
+    </a:s>
+               <a:s r="129">
+                  <a:s r="124">
+                     <a:s r="118">
+                        <a:s r="116">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="115">
+                              <a:s>start of </a:s>
+                              <a:s r="114">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="117"> >= 0</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="123">
+                        <a:s r="121">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="120">
+                              <a:s>start of </a:s>
+                              <a:s r="119">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="122"> &lt; 5</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="128">
+                     <a:s r="126">
+                        <a:s r="125">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="126">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="127">
+                        <a:s>'male'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="129" locator="57:5-59:33" xsi:type="And">
+            <operand localId="124" locator="57:5-58:56" xsi:type="And">
+               <operand localId="118" locator="57:5-57:51" xsi:type="GreaterOrEqual">
+                  <operand localId="116" locator="57:5-57:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="115" locator="57:18-57:45" xsi:type="Start">
+                        <operand localId="114" locator="57:27-57:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="117" locator="57:51" valueType="t:Integer" value="0" xsi:type="Literal"/>
+               </operand>
+               <operand localId="123" locator="58:11-58:56" xsi:type="Less">
+                  <operand localId="121" locator="58:11-58:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="120" locator="58:24-58:51" xsi:type="Start">
+                        <operand localId="119" locator="58:33-58:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="122" locator="58:56" valueType="t:Integer" value="5" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="128" locator="59:11-59:33" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="126" locator="59:11-59:24" path="gender" xsi:type="Property">
+                     <source localId="125" locator="59:11-59:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="127" locator="59:28-59:33" valueType="t:String" value="male" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="147" locator="61:3-64:33" name="Patient5To15AndMale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="147">
+               <a:s>define Patient5To15AndMale:
+    </a:s>
+               <a:s r="146">
+                  <a:s r="141">
+                     <a:s r="135">
+                        <a:s r="133">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="132">
+                              <a:s>start of </a:s>
+                              <a:s r="131">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="134"> >= 5</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="140">
+                        <a:s r="138">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="137">
+                              <a:s>start of </a:s>
+                              <a:s r="136">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="139"> &lt; 15</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="145">
+                     <a:s r="143">
+                        <a:s r="142">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="143">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="144">
+                        <a:s>'male'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="146" locator="62:5-64:33" xsi:type="And">
+            <operand localId="141" locator="62:5-63:57" xsi:type="And">
+               <operand localId="135" locator="62:5-62:51" xsi:type="GreaterOrEqual">
+                  <operand localId="133" locator="62:5-62:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="132" locator="62:18-62:45" xsi:type="Start">
+                        <operand localId="131" locator="62:27-62:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="134" locator="62:51" valueType="t:Integer" value="5" xsi:type="Literal"/>
+               </operand>
+               <operand localId="140" locator="63:11-63:57" xsi:type="Less">
+                  <operand localId="138" locator="63:11-63:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="137" locator="63:24-63:51" xsi:type="Start">
+                        <operand localId="136" locator="63:33-63:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="139" locator="63:56-63:57" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="145" locator="64:11-64:33" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="143" locator="64:11-64:24" path="gender" xsi:type="Property">
+                     <source localId="142" locator="64:11-64:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="144" locator="64:28-64:33" valueType="t:String" value="male" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="164" locator="66:3-69:33" name="Patient15To25AndMale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="164">
+               <a:s>define Patient15To25AndMale:
+    </a:s>
+               <a:s r="163">
+                  <a:s r="158">
+                     <a:s r="152">
+                        <a:s r="150">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="149">
+                              <a:s>start of </a:s>
+                              <a:s r="148">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="151"> >= 15</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="157">
+                        <a:s r="155">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="154">
+                              <a:s>start of </a:s>
+                              <a:s r="153">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="156"> &lt; 25</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="162">
+                     <a:s r="160">
+                        <a:s r="159">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="160">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="161">
+                        <a:s>'male'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="163" locator="67:5-69:33" xsi:type="And">
+            <operand localId="158" locator="67:5-68:57" xsi:type="And">
+               <operand localId="152" locator="67:5-67:52" xsi:type="GreaterOrEqual">
+                  <operand localId="150" locator="67:5-67:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="149" locator="67:18-67:45" xsi:type="Start">
+                        <operand localId="148" locator="67:27-67:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="151" locator="67:51-67:52" valueType="t:Integer" value="15" xsi:type="Literal"/>
+               </operand>
+               <operand localId="157" locator="68:11-68:57" xsi:type="Less">
+                  <operand localId="155" locator="68:11-68:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="154" locator="68:24-68:51" xsi:type="Start">
+                        <operand localId="153" locator="68:33-68:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="156" locator="68:56-68:57" valueType="t:Integer" value="25" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="162" locator="69:11-69:33" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="160" locator="69:11-69:24" path="gender" xsi:type="Property">
+                     <source localId="159" locator="69:11-69:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="161" locator="69:28-69:33" valueType="t:String" value="male" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="181" locator="71:3-74:33" name="Patient25To50AndMale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="181">
+               <a:s>define Patient25To50AndMale:
+    </a:s>
+               <a:s r="180">
+                  <a:s r="175">
+                     <a:s r="169">
+                        <a:s r="167">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="166">
+                              <a:s>start of </a:s>
+                              <a:s r="165">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="168"> >= 25</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="174">
+                        <a:s r="172">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="171">
+                              <a:s>start of </a:s>
+                              <a:s r="170">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="173"> &lt; 50</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="179">
+                     <a:s r="177">
+                        <a:s r="176">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="177">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="178">
+                        <a:s>'male'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="180" locator="72:5-74:33" xsi:type="And">
+            <operand localId="175" locator="72:5-73:57" xsi:type="And">
+               <operand localId="169" locator="72:5-72:52" xsi:type="GreaterOrEqual">
+                  <operand localId="167" locator="72:5-72:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="166" locator="72:18-72:45" xsi:type="Start">
+                        <operand localId="165" locator="72:27-72:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="168" locator="72:51-72:52" valueType="t:Integer" value="25" xsi:type="Literal"/>
+               </operand>
+               <operand localId="174" locator="73:11-73:57" xsi:type="Less">
+                  <operand localId="172" locator="73:11-73:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="171" locator="73:24-73:51" xsi:type="Start">
+                        <operand localId="170" locator="73:33-73:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="173" locator="73:56-73:57" valueType="t:Integer" value="50" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="179" locator="74:11-74:33" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="177" locator="74:11-74:24" path="gender" xsi:type="Property">
+                     <source localId="176" locator="74:11-74:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="178" locator="74:28-74:33" valueType="t:String" value="male" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="198" locator="76:3-79:33" name="Patient50To65AndMale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="198">
+               <a:s>define Patient50To65AndMale:
+    </a:s>
+               <a:s r="197">
+                  <a:s r="192">
+                     <a:s r="186">
+                        <a:s r="184">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="183">
+                              <a:s>start of </a:s>
+                              <a:s r="182">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="185"> >= 50</a:s>
+                     </a:s>
+                     <a:s>
+      and </a:s>
+                     <a:s r="191">
+                        <a:s r="189">
+                           <a:s>AgeInYearsAt(</a:s>
+                           <a:s r="188">
+                              <a:s>start of </a:s>
+                              <a:s r="187">
+                                 <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="190"> &lt; 65</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="196">
+                     <a:s r="194">
+                        <a:s r="193">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="194">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="195">
+                        <a:s>'male'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="197" locator="77:5-79:33" xsi:type="And">
+            <operand localId="192" locator="77:5-78:57" xsi:type="And">
+               <operand localId="186" locator="77:5-77:52" xsi:type="GreaterOrEqual">
+                  <operand localId="184" locator="77:5-77:46" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="183" locator="77:18-77:45" xsi:type="Start">
+                        <operand localId="182" locator="77:27-77:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="185" locator="77:51-77:52" valueType="t:Integer" value="50" xsi:type="Literal"/>
+               </operand>
+               <operand localId="191" locator="78:11-78:57" xsi:type="Less">
+                  <operand localId="189" locator="78:11-78:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <operand localId="188" locator="78:24-78:51" xsi:type="Start">
+                        <operand localId="187" locator="78:33-78:51" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="190" locator="78:56-78:57" valueType="t:Integer" value="65" xsi:type="Literal"/>
+               </operand>
+            </operand>
+            <operand localId="196" locator="79:11-79:33" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="194" locator="79:11-79:24" path="gender" xsi:type="Property">
+                     <source localId="193" locator="79:11-79:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="195" locator="79:28-79:33" valueType="t:String" value="male" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="209" locator="81:3-83:33" name="Patient65ToHighestAndMale" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="209">
+               <a:s>define Patient65ToHighestAndMale:
+    </a:s>
+               <a:s r="208">
+                  <a:s r="203">
+                     <a:s r="201">
+                        <a:s>AgeInYearsAt(</a:s>
+                        <a:s r="200">
+                           <a:s>start of </a:s>
+                           <a:s r="199">
+                              <a:s>&quot;MeasurementPeriod&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s r="202"> >= 65</a:s>
+                  </a:s>
+                  <a:s>
+      and </a:s>
+                  <a:s r="207">
+                     <a:s r="205">
+                        <a:s r="204">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="205">
+                           <a:s>gender</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> = </a:s>
+                     <a:s r="206">
+                        <a:s>'male'</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="208" locator="82:5-83:33" xsi:type="And">
+            <operand localId="203" locator="82:5-82:52" xsi:type="GreaterOrEqual">
+               <operand localId="201" locator="82:5-82:46" precision="Year" xsi:type="CalculateAgeAt">
+                  <operand path="birthDate.value" xsi:type="Property">
+                     <source name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <operand localId="200" locator="82:18-82:45" xsi:type="Start">
+                     <operand localId="199" locator="82:27-82:45" name="MeasurementPeriod" xsi:type="ParameterRef"/>
+                  </operand>
+               </operand>
+               <operand localId="202" locator="82:51-82:52" valueType="t:Integer" value="65" xsi:type="Literal"/>
+            </operand>
+            <operand localId="207" locator="83:11-83:33" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="205" locator="83:11-83:24" path="gender" xsi:type="Property">
+                     <source localId="204" locator="83:11-83:17" name="Patient" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="206" locator="83:28-83:33" valueType="t:String" value="male" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="211" locator="85:1-85:33" name="Initial Population" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="211">
+               <a:s r="210">define &quot;Initial Population&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="210" locator="85:30-85:33" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="213" locator="87:1-87:26" name="Denominator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="213">
+               <a:s r="212">define &quot;Denominator&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="212" locator="87:23-87:26" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="215" locator="89:1-89:24" name="Numerator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="215">
+               <a:s r="214">define &quot;Numerator&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="214" locator="89:21-89:24" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+   </statements>
+</library>

@@ -1,21 +1,21 @@
 ﻿simple-hiv-ig : Validation Results
 =========================================
 
-err = 52, warn = 30, info = 10
+err = 57, warn = 30, info = 10
 IG Publisher Version: 1.1.76
-Generated Tue Jun 29 01:02:21 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
+Generated Tue Jun 29 01:19:36 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
 
  Build Errors : 0 / 10 / 0
  /github/workspace/input/intrahealth.simple-hiv-ig : 2 / 1 / 1
  /github/workspace/input/resources/library-ANCStratifiers : 5 / 0 / 1
  /github/workspace/input/resources/library-AgeRanges : 1 / 0 / 1
  /github/workspace/input/resources/library-FHIRCommon : 2 / 0 / 1
- /github/workspace/input/resources/library-HIVSimpleAgeGroup : 2 / 0 / 1
- /github/workspace/input/resources/library-HIVSimpleCondition : 2 / 0 / 1
- /github/workspace/input/resources/library-HIVSimpleDemog : 2 / 0 / 1
+ /github/workspace/input/resources/library-HIVSimpleAgeGroup : 3 / 0 / 1
+ /github/workspace/input/resources/library-HIVSimpleCondition : 3 / 0 / 1
+ /github/workspace/input/resources/library-HIVSimpleDemog : 3 / 0 / 1
  /github/workspace/input/resources/library-HIVSimpleGender : 2 / 0 / 1
- /github/workspace/input/resources/library-HIVSimpleTestResult : 2 / 0 / 1
- /github/workspace/input/resources/library-HIVSimpleViralLoad : 2 / 0 / 1
+ /github/workspace/input/resources/library-HIVSimpleTestResult : 3 / 0 / 1
+ /github/workspace/input/resources/library-HIVSimpleViralLoad : 3 / 0 / 1
  /github/workspace/input/resources/measure-HIVSimpleAgeGroup : 3 / 2 / 2
  /github/workspace/input/resources/measure-HIVSimpleCondition : 3 / 2 / 2
  /github/workspace/input/resources/measure-HIVSimpleDemog : 3 / 2 / 2
@@ -54,23 +54,28 @@ ERROR: Library/AgeRanges: Library.relatedArtifact[0].resource: Canonical URL 'ht
 ERROR: Library/FHIRCommon: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/FHIRCommon: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/library-HIVSimpleAgeGroup.json ==
-ERROR: HIVSimpleAgeGroup: Library https://github.com/intrahealth/simple-hiv-ig/FHIRCommon was included as version 0.1.0, but version 4.0.1 of the library was found.
-ERROR: HIVSimpleAgeGroup.cql: CQL Processing failed with (1) errors.
+ERROR: HIVSimpleAgeGroup.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+ERROR: Library/HIVSimpleAgeGroup: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/HIVSimpleAgeGroup: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/library-HIVSimpleCondition.json ==
-ERROR: HIVSimpleCondition: Library https://github.com/intrahealth/simple-hiv-ig/FHIRCommon was included as version 0.1.0, but version 4.0.1 of the library was found.
-ERROR: HIVSimpleCondition.cql: CQL Processing failed with (1) errors.
+ERROR: HIVSimpleCondition.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+ERROR: Library/HIVSimpleCondition: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/HIVSimpleCondition: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/library-HIVSimpleDemog.json ==
-ERROR: HIVSimpleDemog: Library https://github.com/intrahealth/simple-hiv-ig/FHIRCommon was included as version 0.1.0, but version 4.0.1 of the library was found.
-ERROR: HIVSimpleDemog.cql: CQL Processing failed with (1) errors.
+ERROR: HIVSimpleDemog.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+ERROR: Library/HIVSimpleDemog: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/HIVSimpleDemog: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/library-HIVSimpleGender.json ==
-ERROR: HIVSimpleGender: Library https://github.com/intrahealth/simple-hiv-ig/FHIRCommon was included as version 0.1.0, but version 4.0.1 of the library was found.
+ERROR: HIVSimpleGender: Could not resolve call to operator Split with signature (FHIR.Reference,System.String).
 ERROR: HIVSimpleGender.cql: CQL Processing failed with (1) errors.
 == /github/workspace/input/resources/library-HIVSimpleTestResult.json ==
-ERROR: HIVSimpleTestResult: Library https://github.com/intrahealth/simple-hiv-ig/FHIRCommon was included as version 0.1.0, but version 4.0.1 of the library was found.
-ERROR: HIVSimpleTestResult.cql: CQL Processing failed with (1) errors.
+ERROR: HIVSimpleTestResult.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+ERROR: Library/HIVSimpleTestResult: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/HIVSimpleTestResult: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/library-HIVSimpleViralLoad.json ==
-ERROR: HIVSimpleViralLoad: Library https://github.com/intrahealth/simple-hiv-ig/FHIRCommon was included as version 0.1.0, but version 4.0.1 of the library was found.
-ERROR: HIVSimpleViralLoad.cql: CQL Processing failed with (1) errors.
+ERROR: HIVSimpleViralLoad.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+ERROR: Library/HIVSimpleViralLoad: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/HIVSimpleViralLoad: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/input/resources/measure-HIVSimpleAgeGroup.json ==
 ERROR: Measure.where(url = 'Measure/HIVSimpleAgeGroup'): Conformance resource /github/workspace/input/resources/measure-HIVSimpleAgeGroup.json - the canonical URL (https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleAgeGroup) does not match the URL (Measure/HIVSimpleAgeGroup)
 ERROR: Measure/HIVSimpleAgeGroup: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleAgeGroup) 

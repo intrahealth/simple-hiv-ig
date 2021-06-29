@@ -211,7 +211,7 @@
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
-include FHIRCommon version '0.1.0' called FC
+include FHIRCommon version '4.0.1' called FC
 // include AgeRanges called AR
 
 // SNOMED-CT, International Edition
@@ -271,6 +271,32 @@ define &quot;Location&quot;:
 
 define &quot;SDE Location&quot;:
     Code { code: &quot;Location&quot;.name, system: 'http://location-name-code-system' }
+
+/*
+Most recent encounter location
+*/
+define &quot;Most Recent Encounter Location Reference&quot;:
+  Last(
+    [Encounter] E
+      return First(E.location L return L.location)
+      //sort by start of period
+  )/*
+Location Code
+*/
+define &quot;Location Code&quot;:
+  singleton from (
+    [Location] L
+      let identifier: L.identifier I where I.system = 'http://example.org/opencr-identifiers'
+      where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;, '/'))
+      return CodeableConcept {
+        coding: {
+          Coding {
+            code: identifier.value,
+            system: identifier.system
+          }
+        }
+      }
+  )
 </code></pre><p><code>No Content</code> (<code>application/elm+xml</code>)</p></div>
 
   <!-- insert notes if present -->
@@ -298,7 +324,7 @@ define &quot;SDE Location&quot;:
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 29, 2021 01:02+0000">2021-06-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 29, 2021 01:19+0000">2021-06-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

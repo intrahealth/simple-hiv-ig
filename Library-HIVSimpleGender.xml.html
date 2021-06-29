@@ -216,7 +216,7 @@
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
-include FHIRCommon version '0.1.0' called FC
+include FHIRCommon version '4.0.1' called FC
 // include AgeRanges called AR
 
 // SNOMED-CT, International Edition
@@ -276,6 +276,32 @@ define &quot;Location&quot;:
 
 define &quot;SDE Location&quot;:
     Code { code: &quot;Location&quot;.name, system: 'http://location-name-code-system' }
+
+/*
+Most recent encounter location
+*/
+define &quot;Most Recent Encounter Location Reference&quot;:
+  Last(
+    [Encounter] E
+      return First(E.location L return L.location)
+      //sort by start of period
+  )/*
+Location Code
+*/
+define &quot;Location Code&quot;:
+  singleton from (
+    [Location] L
+      let identifier: L.identifier I where I.system = 'http://example.org/opencr-identifiers'
+      where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;, '/'))
+      return CodeableConcept {
+        coding: {
+          Coding {
+            code: identifier.value,
+            system: identifier.system
+          }
+        }
+      }
+  )
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;No Content&lt;/code&gt; (&lt;code&gt;application/elm+xml&lt;/code&gt;)&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a>
@@ -291,7 +317,7 @@ define &quot;SDE Location&quot;:
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;logic-library&quot;/&gt;
     &lt;/coding&gt;
   &lt;/type&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2021-06-29T01:02:10+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2021-06-29T01:19:24+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;IntraHealth International&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -302,7 +328,7 @@ define &quot;SDE Location&quot;:
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;text/cql&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>
-          <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">value</a>=&quot;bGlicmFyeSBISVZTaW1wbGVHZW5kZXIgdmVyc2lvbiAnMC4xLjAnCgp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwoKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSQ29tbW9uIHZlcnNpb24gJzAuMS4wJyBjYWxsZWQgRkMKLy8gaW5jbHVkZSBBZ2VSYW5nZXMgY2FsbGVkIEFSCgovLyBTTk9NRUQtQ1QsIEludGVybmF0aW9uYWwgRWRpdGlvbgpjb2Rlc3lzdGVtICJTTk9NRUQtQ1QiOiAnaHR0cDovL3Nub21lZC5pbmZvL3NjdCcgdmVyc2lvbiAnaHR0cDovL3Nub21lZC5pbmZvL3NjdC85MDAwMDAwMDAwMDAyMDcwMDgnCgovLyBMT0lOQywgMi42MysKY29kZXN5c3RlbSAiTE9JTkMiOiAnaHR0cDovL2xvaW5jLm9yZycKCmNvbnRleHQgUGF0aWVudAoKZGVmaW5lICJTZXgiOiBQYXRpZW50LmdlbmRlcgoKZGVmaW5lICJGZW1hbGUiOgogIFBhdGllbnQuZ2VuZGVyID0gJ2ZlbWFsZScKCmRlZmluZSAiTWFsZSI6CiAgUGF0aWVudC5nZW5kZXIgPSAnbWFsZScKCmRlZmluZSAiSW5pdGlhbCBQb3B1bGF0aW9uIjogdHJ1ZQoKZGVmaW5lICJEZW5vbWluYXRvciI6CiAgIlNleCIgaXMgbm90IG51bGwKCmRlZmluZSAiTnVtZXJhdG9yIjoKICAiU2V4IiA9ICdmZW1hbGUnCgpkZWZpbmUgIkhlbGxvLCBXb3JsZCEiOiAnSGVsbG8sIFdvcmxkIScKCmRlZmluZSAiYmlydGhEYXRlIjogUGF0aWVudC5iaXJ0aERhdGUKZGVmaW5lICJiaXJ0aERhdGVfc3RyIjogVG9TdHJpbmcoUGF0aWVudC5iaXJ0aERhdGUpCgpkZWZpbmUgIkdpdmVuIE5hbWUgc3RyIjogUGF0aWVudC5uYW1lLmdpdmVuWzBdCmRlZmluZSAiR2l2ZW4gTmFtZSI6IFBhdGllbnQubmFtZS5naXZlblswXS52YWx1ZQoKZGVmaW5lICJGYW1pbHkgTmFtZSBzdHIiOiBQYXRpZW50Lm5hbWUuZmFtaWx5WzBdCmRlZmluZSAiRmFtaWx5IE5hbWUiOiBQYXRpZW50Lm5hbWUuZmFtaWx5WzBdLnZhbHVlCgovLyBtYWtlIGEgY29kZSBmb3Igc3VwcCBkYXRhCmRlZmluZSAiU0RFIFNleCI6CiAgY2FzZQogICAgd2hlbiBQYXRpZW50LmdlbmRlciA9ICdtYWxlJyB0aGVuIENvZGUgeyBjb2RlOiAnTScsIHN5c3RlbTogJ2h0dHA6Ly9obDcub3JnL2ZoaXIvdjMvQWRtaW5pc3RyYXRpdmVHZW5kZXInLCBkaXNwbGF5OiAnTWFsZScgfQogICAgd2hlbiBQYXRpZW50LmdlbmRlciA9ICdmZW1hbGUnIHRoZW4gQ29kZSB7IGNvZGU6ICdGJywgc3lzdGVtOiAnaHR0cDovL2hsNy5vcmcvZmhpci92My9BZG1pbmlzdHJhdGl2ZUdlbmRlcicsIGRpc3BsYXk6ICdGZW1hbGUnIH0KICAgIGVsc2UgbnVsbAogIGVuZAoKLy8gaGFjayB0byB0cnkgcHNldWRvLXN0cmF0aWZpZXIgZm9yIGxvY2F0aW9uIHVzaW5nIHN1cHAgZGF0YQpkZWZpbmUgZnVuY3Rpb24gIkdldElkIih1cmkgU3RyaW5nKToKICAgIExhc3QoU3BsaXQodXJpLCAnLycpKQoKZGVmaW5lIGZ1bmN0aW9uICJHZXRMb2NhdGlvbiIocmVmZXJlbmNlIFJlZmVyZW5jZSk6CiAgc2luZ2xldG9uIGZyb20gKAogICAgW0xvY2F0aW9uXSBMb2NhdGlvbiB3aGVyZSBMb2NhdGlvbi5pZC52YWx1ZSA9IEdldElkKHJlZmVyZW5jZS5yZWZlcmVuY2UpCiAgKQoKZGVmaW5lICJMb2NhdGlvbiI6CiAgICBGaXJzdChbRW5jb3VudGVyXSBFIHJldHVybiAiR2V0TG9jYXRpb24iKEZpcnN0KEUubG9jYXRpb24pLmxvY2F0aW9uKSkKCmRlZmluZSAiU0RFIExvY2F0aW9uIjoKICAgIENvZGUgeyBjb2RlOiAiTG9jYXRpb24iLm5hbWUsIHN5c3RlbTogJ2h0dHA6Ly9sb2NhdGlvbi1uYW1lLWNvZGUtc3lzdGVtJyB9Cg==&quot;/&gt;
+          <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">value</a>=&quot;bGlicmFyeSBISVZTaW1wbGVHZW5kZXIgdmVyc2lvbiAnMC4xLjAnCgp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwoKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSQ29tbW9uIHZlcnNpb24gJzQuMC4xJyBjYWxsZWQgRkMKLy8gaW5jbHVkZSBBZ2VSYW5nZXMgY2FsbGVkIEFSCgovLyBTTk9NRUQtQ1QsIEludGVybmF0aW9uYWwgRWRpdGlvbgpjb2Rlc3lzdGVtICJTTk9NRUQtQ1QiOiAnaHR0cDovL3Nub21lZC5pbmZvL3NjdCcgdmVyc2lvbiAnaHR0cDovL3Nub21lZC5pbmZvL3NjdC85MDAwMDAwMDAwMDAyMDcwMDgnCgovLyBMT0lOQywgMi42MysKY29kZXN5c3RlbSAiTE9JTkMiOiAnaHR0cDovL2xvaW5jLm9yZycKCmNvbnRleHQgUGF0aWVudAoKZGVmaW5lICJTZXgiOiBQYXRpZW50LmdlbmRlcgoKZGVmaW5lICJGZW1hbGUiOgogIFBhdGllbnQuZ2VuZGVyID0gJ2ZlbWFsZScKCmRlZmluZSAiTWFsZSI6CiAgUGF0aWVudC5nZW5kZXIgPSAnbWFsZScKCmRlZmluZSAiSW5pdGlhbCBQb3B1bGF0aW9uIjogdHJ1ZQoKZGVmaW5lICJEZW5vbWluYXRvciI6CiAgIlNleCIgaXMgbm90IG51bGwKCmRlZmluZSAiTnVtZXJhdG9yIjoKICAiU2V4IiA9ICdmZW1hbGUnCgpkZWZpbmUgIkhlbGxvLCBXb3JsZCEiOiAnSGVsbG8sIFdvcmxkIScKCmRlZmluZSAiYmlydGhEYXRlIjogUGF0aWVudC5iaXJ0aERhdGUKZGVmaW5lICJiaXJ0aERhdGVfc3RyIjogVG9TdHJpbmcoUGF0aWVudC5iaXJ0aERhdGUpCgpkZWZpbmUgIkdpdmVuIE5hbWUgc3RyIjogUGF0aWVudC5uYW1lLmdpdmVuWzBdCmRlZmluZSAiR2l2ZW4gTmFtZSI6IFBhdGllbnQubmFtZS5naXZlblswXS52YWx1ZQoKZGVmaW5lICJGYW1pbHkgTmFtZSBzdHIiOiBQYXRpZW50Lm5hbWUuZmFtaWx5WzBdCmRlZmluZSAiRmFtaWx5IE5hbWUiOiBQYXRpZW50Lm5hbWUuZmFtaWx5WzBdLnZhbHVlCgovLyBtYWtlIGEgY29kZSBmb3Igc3VwcCBkYXRhCmRlZmluZSAiU0RFIFNleCI6CiAgY2FzZQogICAgd2hlbiBQYXRpZW50LmdlbmRlciA9ICdtYWxlJyB0aGVuIENvZGUgeyBjb2RlOiAnTScsIHN5c3RlbTogJ2h0dHA6Ly9obDcub3JnL2ZoaXIvdjMvQWRtaW5pc3RyYXRpdmVHZW5kZXInLCBkaXNwbGF5OiAnTWFsZScgfQogICAgd2hlbiBQYXRpZW50LmdlbmRlciA9ICdmZW1hbGUnIHRoZW4gQ29kZSB7IGNvZGU6ICdGJywgc3lzdGVtOiAnaHR0cDovL2hsNy5vcmcvZmhpci92My9BZG1pbmlzdHJhdGl2ZUdlbmRlcicsIGRpc3BsYXk6ICdGZW1hbGUnIH0KICAgIGVsc2UgbnVsbAogIGVuZAoKLy8gaGFjayB0byB0cnkgcHNldWRvLXN0cmF0aWZpZXIgZm9yIGxvY2F0aW9uIHVzaW5nIHN1cHAgZGF0YQpkZWZpbmUgZnVuY3Rpb24gIkdldElkIih1cmkgU3RyaW5nKToKICAgIExhc3QoU3BsaXQodXJpLCAnLycpKQoKZGVmaW5lIGZ1bmN0aW9uICJHZXRMb2NhdGlvbiIocmVmZXJlbmNlIFJlZmVyZW5jZSk6CiAgc2luZ2xldG9uIGZyb20gKAogICAgW0xvY2F0aW9uXSBMb2NhdGlvbiB3aGVyZSBMb2NhdGlvbi5pZC52YWx1ZSA9IEdldElkKHJlZmVyZW5jZS5yZWZlcmVuY2UpCiAgKQoKZGVmaW5lICJMb2NhdGlvbiI6CiAgICBGaXJzdChbRW5jb3VudGVyXSBFIHJldHVybiAiR2V0TG9jYXRpb24iKEZpcnN0KEUubG9jYXRpb24pLmxvY2F0aW9uKSkKCmRlZmluZSAiU0RFIExvY2F0aW9uIjoKICAgIENvZGUgeyBjb2RlOiAiTG9jYXRpb24iLm5hbWUsIHN5c3RlbTogJ2h0dHA6Ly9sb2NhdGlvbi1uYW1lLWNvZGUtc3lzdGVtJyB9CgovKgpNb3N0IHJlY2VudCBlbmNvdW50ZXIgbG9jYXRpb24KKi8KZGVmaW5lICJNb3N0IFJlY2VudCBFbmNvdW50ZXIgTG9jYXRpb24gUmVmZXJlbmNlIjoKICBMYXN0KAogICAgW0VuY291bnRlcl0gRQogICAgICByZXR1cm4gRmlyc3QoRS5sb2NhdGlvbiBMIHJldHVybiBMLmxvY2F0aW9uKQogICAgICAvL3NvcnQgYnkgc3RhcnQgb2YgcGVyaW9kCiAgKS8qCkxvY2F0aW9uIENvZGUKKi8KZGVmaW5lICJMb2NhdGlvbiBDb2RlIjoKICBzaW5nbGV0b24gZnJvbSAoCiAgICBbTG9jYXRpb25dIEwKICAgICAgbGV0IGlkZW50aWZpZXI6IEwuaWRlbnRpZmllciBJIHdoZXJlIEkuc3lzdGVtID0gJ2h0dHA6Ly9leGFtcGxlLm9yZy9vcGVuY3ItaWRlbnRpZmllcnMnCiAgICAgIHdoZXJlIEwuaWQgPSBMYXN0KFNwbGl0KCJNb3N0IFJlY2VudCBFbmNvdW50ZXIgTG9jYXRpb24gUmVmZXJlbmNlIiwgJy8nKSkKICAgICAgcmV0dXJuIENvZGVhYmxlQ29uY2VwdCB7CiAgICAgICAgY29kaW5nOiB7CiAgICAgICAgICBDb2RpbmcgewogICAgICAgICAgICBjb2RlOiBpZGVudGlmaWVyLnZhbHVlLAogICAgICAgICAgICBzeXN0ZW06IGlkZW50aWZpZXIuc3lzdGVtCiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgKQo=&quot;/&gt;
   &lt;/content&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/elm+xml&quot;/&gt;
@@ -335,7 +361,7 @@ define &quot;SDE Location&quot;:
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 29, 2021 01:02+0000">2021-06-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 29, 2021 01:19+0000">2021-06-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
