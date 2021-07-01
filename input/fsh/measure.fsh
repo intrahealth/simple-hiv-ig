@@ -1,6 +1,6 @@
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 
-Instance: HIVSimpleAgeGroup
+Instance: HIVSimpleAgeGroup-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleAgeGroup"
@@ -32,7 +32,7 @@ Usage: #example
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
 
-Instance: HIVSimpleCondition
+Instance: HIVSimpleCondition-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleCondition"
@@ -64,7 +64,7 @@ Usage: #example
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
 
-Instance: HIVSimpleDemog
+Instance: HIVSimpleDemog-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleDemog"
@@ -96,7 +96,7 @@ Usage: #example
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
 
-Instance: HIVSimpleGender
+Instance: HIVSimpleGender-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleGender"
@@ -128,7 +128,7 @@ Usage: #example
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
 
-Instance: HIVSimpleGender2
+Instance: HIVSimpleGender2-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleGender2"
@@ -160,7 +160,7 @@ Usage: #example
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
 
-Instance: HIVSimpleGenderCohort
+Instance: HIVSimpleGenderCohort-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleGenderCohort"
@@ -183,7 +183,7 @@ Usage: #example
 * group.population.criteria.language = #text/cql
 * group.population.criteria.expression = "Initial Population"
 
-Instance: HIVSimpleGenderSubjectList
+Instance: HIVSimpleGenderSubjectList-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleGenderSubjectList"
@@ -207,7 +207,7 @@ Usage: #example
 * group.population.criteria.language = #text/cql
 * group.population.criteria.expression = "Initial Population"
 
-Instance: HIVSimpleGenderSuppData
+Instance: HIVSimpleGenderSuppData-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleGenderSuppData"
@@ -242,7 +242,7 @@ Usage: #example
 * supplementalData.criteria.language = #text/cql
 * supplementalData.criteria.expression = "SDE Sex"
 
-Instance: HIVSimpleGenderSuppDataIndiv
+Instance: HIVSimpleGenderSuppDataIndiv-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleGenderSuppDataIndiv"
@@ -282,7 +282,7 @@ Usage: #example
 
 
 
-Instance: HIVSimpleTestResult
+Instance: HIVSimpleTestResult-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleTestResult"
@@ -314,7 +314,7 @@ Usage: #example
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
 
-Instance: HIVSimpleViralLoad
+Instance: HIVSimpleViralLoad-Measure
 InstanceOf: Measure
 Usage: #example
 * url = "Measure/HIVSimpleViralLoad"

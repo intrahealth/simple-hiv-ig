@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "75622-1"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HIV 1 and 2 tests - Meaningful Use set",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "75622-1",
+  "display" : "HIV types 1 and 2 testing"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "HIV 1 and 2 tests - Meaningful Use set",
+  "severity" : "warning",
+  "error" : "The display \"HIV types 1 and 2 testing\" is not a valid display for the code {http://loinc.org}75622-1 - should be one of [HIV 1 and 2 tests - Meaningful Use set, HIV 1 and 2 - MU Set, Ⅰ Ⅱ AIDS, AIDS 病毒, 人类免疫缺陷病毒, 人类免疫缺陷病毒（Human immunodeficiency virus，HIV）, 爱滋病, 艾滋病, 艾滋病病毒, 获得性免疫缺陷综合征, 获得性免疫缺陷综合征（Acquired Immure Deficiency Syndrome，AIDS，艾滋病） HIV 1 与 2 型（人类免疫缺陷病毒 1 与 2 型、人类免疫缺陷病毒 I 与 II 型、人免疫缺陷病毒 1 与 2 型、人免疫缺陷病毒 I 与 II 型、HIV I 与 II、HIV I 与 II 型、艾滋病病毒 I 与 II 型）试验（检验项目、化验项目、测试、化验、检测） - 有效利用（Meaningful Use、MU、有效实用）集（集合）, HIV 1 型与 2 型试验 - 有效利用集 HIV1, HTLV 3, HTLV III, 人类免疫缺陷病毒 1 型, 人类免疫缺陷病毒 I 型, HIV 1 型（人类免疫缺陷病毒 1 型、人类免疫缺陷病毒 I 型、人免疫缺陷病毒 1 型、人免疫缺陷病毒 I 型、HIV I、HIV I 型、艾滋病病毒 I 型） I II 人类免疫缺陷病毒 1 与 2 型, HIV（人类免疫缺陷病毒、人免疫缺陷病毒、艾滋病病毒） 1 型（I 型） 与 2 型（II 型） 人类免疫缺陷病毒 1+2 型, HIV 1+2 型（人类免疫缺陷病毒 1+2 型、人类免疫缺陷病毒 I+II 型、人免疫缺陷病毒 1+2 型、人免疫缺陷病毒 I+II 型、HIV I+II、HIV I+II 型、艾滋病病毒 I+II 型） 医嘱套餐 医嘱套餐类 医嘱套餐组 医嘱组 医嘱组.微生物学, 实验室组套（组合、医嘱组、套餐、套餐医嘱、医嘱套餐、组合申请、组合项目）类.微生物学试验, 医嘱组.微生物学试验, 医嘱组类.微生物学, 医嘱组类.微生物学试验, 实验室医嘱组类.微生物学, 微生物学医嘱组, 微生物学医嘱组类 医嘱组合 医嘱组合类 医嘱组套 医嘱组套类 医嘱组类 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 多重, 多重型, 多重标尺类型, 多重精度类型 套餐 套餐医嘱 套餐医嘱组 套餐医嘱组类 实验室医嘱套餐 实验室医嘱套餐类 实验室医嘱组 实验室医嘱组合类 实验室医嘱组套 实验室医嘱组套类 实验室套餐医嘱组 实验室套餐医嘱组类 实验室检验项目医嘱组合类 实验室检验项目组合类 微生物学, 微生物学试验, 微生物学试验（培养、DNA、抗原及抗体） 时刻, 随机, 随意, 瞬间 检验医嘱组合类 检验项目医嘱组合类 检验项目组合类 组 组合 组合医嘱 组合类 组套, Aleatorio HTLV 3 HTLV III instante momento SIDA VIH tipo 1 Virus de Inmunodeficiencia Humana Virus de inmunodeficiencia humana 1-2, Microbiologia paziente Punto nel tempo (episodio) Set di prescrizione microbiologia Test HIV 1 e 2 - Meaningful Use set, ] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "75622-1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HIV 1 and 2 tests - Meaningful Use set",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "75622-1",
+  "display" : "LOINC Code"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HIV 1 and 2 tests - Meaningful Use set",
+  "severity" : "warning",
+  "error" : "The display \"LOINC Code\" is not a valid display for the code {http://loinc.org}75622-1 - should be one of [HIV 1 and 2 tests - Meaningful Use set, HIV 1 and 2 - MU Set, Ⅰ Ⅱ AIDS, AIDS 病毒, 人类免疫缺陷病毒, 人类免疫缺陷病毒（Human immunodeficiency virus，HIV）, 爱滋病, 艾滋病, 艾滋病病毒, 获得性免疫缺陷综合征, 获得性免疫缺陷综合征（Acquired Immure Deficiency Syndrome，AIDS，艾滋病） HIV 1 与 2 型（人类免疫缺陷病毒 1 与 2 型、人类免疫缺陷病毒 I 与 II 型、人免疫缺陷病毒 1 与 2 型、人免疫缺陷病毒 I 与 II 型、HIV I 与 II、HIV I 与 II 型、艾滋病病毒 I 与 II 型）试验（检验项目、化验项目、测试、化验、检测） - 有效利用（Meaningful Use、MU、有效实用）集（集合）, HIV 1 型与 2 型试验 - 有效利用集 HIV1, HTLV 3, HTLV III, 人类免疫缺陷病毒 1 型, 人类免疫缺陷病毒 I 型, HIV 1 型（人类免疫缺陷病毒 1 型、人类免疫缺陷病毒 I 型、人免疫缺陷病毒 1 型、人免疫缺陷病毒 I 型、HIV I、HIV I 型、艾滋病病毒 I 型） I II 人类免疫缺陷病毒 1 与 2 型, HIV（人类免疫缺陷病毒、人免疫缺陷病毒、艾滋病病毒） 1 型（I 型） 与 2 型（II 型） 人类免疫缺陷病毒 1+2 型, HIV 1+2 型（人类免疫缺陷病毒 1+2 型、人类免疫缺陷病毒 I+II 型、人免疫缺陷病毒 1+2 型、人免疫缺陷病毒 I+II 型、HIV I+II、HIV I+II 型、艾滋病病毒 I+II 型） 医嘱套餐 医嘱套餐类 医嘱套餐组 医嘱组 医嘱组.微生物学, 实验室组套（组合、医嘱组、套餐、套餐医嘱、医嘱套餐、组合申请、组合项目）类.微生物学试验, 医嘱组.微生物学试验, 医嘱组类.微生物学, 医嘱组类.微生物学试验, 实验室医嘱组类.微生物学, 微生物学医嘱组, 微生物学医嘱组类 医嘱组合 医嘱组合类 医嘱组套 医嘱组套类 医嘱组类 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 多重, 多重型, 多重标尺类型, 多重精度类型 套餐 套餐医嘱 套餐医嘱组 套餐医嘱组类 实验室医嘱套餐 实验室医嘱套餐类 实验室医嘱组 实验室医嘱组合类 实验室医嘱组套 实验室医嘱组套类 实验室套餐医嘱组 实验室套餐医嘱组类 实验室检验项目医嘱组合类 实验室检验项目组合类 微生物学, 微生物学试验, 微生物学试验（培养、DNA、抗原及抗体） 时刻, 随机, 随意, 瞬间 检验医嘱组合类 检验项目医嘱组合类 检验项目组合类 组 组合 组合医嘱 组合类 组套, Aleatorio HTLV 3 HTLV III instante momento SIDA VIH tipo 1 Virus de Inmunodeficiencia Humana Virus de inmunodeficiencia humana 1-2, Microbiologia paziente Punto nel tempo (episodio) Set di prescrizione microbiologia Test HIV 1 e 2 - Meaningful Use set, ] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
