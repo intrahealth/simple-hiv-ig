@@ -1,0 +1,77 @@
+{
+  "resourceType": "Measure",
+  "id": "HIVSimpleGenderSubjectList-Measure",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSubjectList</code></p><p><b>identifier</b>: id: HIVSimpleGenderSubjectList</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleGenderSubjectList</p><p><b>title</b>: HIVSimpleGenderSubjectList</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-03-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleGenderSubjectList</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><p><b>type</b>: <span title=\"Codes: \">subject-list</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">HIVSimpleGenderSubjectList</span></p><p><b>description</b>: HIVSimpleGenderSubjectList</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
+  },
+  "url": "Measure/HIVSimpleGenderSubjectList",
+  "identifier": [
+    {
+      "system": "http://ohie.org/Measure/",
+      "value": "HIVSimpleGenderSubjectList"
+    }
+  ],
+  "version": "0.1.0",
+  "name": "HIVSimpleGenderSubjectList",
+  "title": "HIVSimpleGenderSubjectList",
+  "status": "draft",
+  "experimental": true,
+  "date": "2021-03-01",
+  "publisher": "IntraHealth International",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "HIVSimpleGenderSubjectList",
+  "library": [
+    "Library/HIVSimpleGender"
+  ],
+  "scoring": {
+    "coding": [
+      {
+        "code": "cohort"
+      }
+    ]
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "subject-list"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "code": {
+        "text": "HIVSimpleGenderSubjectList"
+      },
+      "description": "HIVSimpleGenderSubjectList",
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population"
+              }
+            ]
+          },
+          "description": "Initial Population",
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Initial Population"
+          }
+        }
+      ]
+    }
+  ]
+}

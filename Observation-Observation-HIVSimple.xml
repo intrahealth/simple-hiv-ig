@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Observation-HIVSimple"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">LOINC Code</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Felix Cat; birthDate: 2000-01-02</a></p><p><b>encounter</b>: <a href="Encounter-HIVSimple">Encounter-HIVSimple</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="75622-1"/>
+      <display value="LOINC Code"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient-HIVSimple"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter-HIVSimple"/>
+  </encounter>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="165816005"/>
+      <display value="HIV Positive"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

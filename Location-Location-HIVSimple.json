@@ -1,0 +1,11 @@
+{
+  "resourceType": "Location",
+  "id": "Location-HIVSimple",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>managingOrganization</b>: <a href=\"Organization-Organization-HIVSimple.html\">Generated Summary: name: Government Hospital</a></p></div>"
+  },
+  "managingOrganization": {
+    "reference": "Organization/Organization-HIVSimple"
+  }
+}

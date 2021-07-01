@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "Observation-HIVSimple",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Felix Cat; birthDate: 2000-01-02</a></p><p><b>encounter</b>: <a href=\"Encounter-HIVSimple\">Encounter-HIVSimple</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "75622-1",
+        "display": "LOINC Code"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Patient-HIVSimple"
+  },
+  "encounter": {
+    "reference": "Encounter-HIVSimple"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "165816005",
+        "display": "HIV Positive"
+      }
+    ]
+  }
+}

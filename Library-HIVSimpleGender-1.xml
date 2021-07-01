@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <identifier id="HIVSimpleGender" system="https://github.com/intrahealth/simple-hiv-ig" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using FHIR version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="2" locator="4:1-4:11" localIdentifier="QUICK" uri="http://hl7.org/fhir">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>using QUICK</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="3" locator="6:1-6:35" localIdentifier="FHIRHelpers" path="https://github.com/intrahealth/simple-hiv-ig/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="7:1-7:44" localIdentifier="FC" path="https://github.com/intrahealth/simple-hiv-ig/FHIRCommon" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRCommon</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codeSystems>
+      <def localId="5" locator="11:1-11:100" name="SNOMED-CT" id="http://snomed.info/sct" version="http://snomed.info/sct/900000000000207008" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="14:1-14:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <contexts>
+      <def locator="16:1-16:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="16:1-16:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="16:1-16:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="9" locator="18:1-18:28" name="Sex" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="9">
+               <a:s>define &quot;Sex&quot;: </a:s>
+               <a:s r="8">
+                  <a:s r="7">
+                     <a:s>Patient</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="8">
+                     <a:s>gender</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="8" locator="18:15-18:28" path="gender" xsi:type="Property">
+            <source localId="7" locator="18:15-18:21" name="Patient" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="14" locator="20:1-21:27" name="Female" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="14">
+               <a:s>define &quot;Female&quot;:
+  </a:s>
+               <a:s r="13">
+                  <a:s r="11">
+                     <a:s r="10">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="11">
+                        <a:s>gender</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="12">
+                     <a:s>'female'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="13" locator="21:3-21:27" xsi:type="Equal">
+            <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="11" locator="21:3-21:16" path="gender" xsi:type="Property">
+                  <source localId="10" locator="21:3-21:9" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand localId="12" locator="21:20-21:27" valueType="t:String" value="female" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="19" locator="23:1-24:25" name="Male" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="19">
+               <a:s>define &quot;Male&quot;:
+  </a:s>
+               <a:s r="18">
+                  <a:s r="16">
+                     <a:s r="15">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="16">
+                        <a:s>gender</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="17">
+                     <a:s>'male'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="18" locator="24:3-24:25" xsi:type="Equal">
+            <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="16" locator="24:3-24:16" path="gender" xsi:type="Property">
+                  <source localId="15" locator="24:3-24:9" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand localId="17" locator="24:20-24:25" valueType="t:String" value="male" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="21" locator="26:1-26:33" name="Initial Population" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="21">
+               <a:s r="20">define &quot;Initial Population&quot;: true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="20" locator="26:30-26:33" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="24" locator="28:1-29:19" name="Denominator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="24">
+               <a:s>define &quot;Denominator&quot;:
+  </a:s>
+               <a:s r="23">
+                  <a:s r="22">
+                     <a:s>&quot;Sex&quot;</a:s>
+                  </a:s>
+                  <a:s> is not null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="23" locator="29:3-29:19" xsi:type="Not">
+            <operand locator="29:3-29:19" xsi:type="IsNull">
+               <operand localId="22" locator="29:3-29:7" name="Sex" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="28" locator="31:1-32:18" name="Numerator" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="28">
+               <a:s>define &quot;Numerator&quot;:
+  </a:s>
+               <a:s r="27">
+                  <a:s r="25">
+                     <a:s>&quot;Sex&quot;</a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="26">
+                     <a:s>'female'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="27" locator="32:3-32:18" xsi:type="Equal">
+            <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="25" locator="32:3-32:7" name="Sex" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="26" locator="32:11-32:18" valueType="t:String" value="female" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="30" locator="34:1-34:39" name="Hello, World!" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="30">
+               <a:s>define &quot;Hello, World!&quot;: </a:s>
+               <a:s r="29">
+                  <a:s>'Hello, World!'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="29" locator="34:25-34:39" valueType="t:String" value="Hello, World!" xsi:type="Literal"/>
+      </def>
+      <def localId="33" locator="36:1-36:37" name="birthDate" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="33">
+               <a:s>define &quot;birthDate&quot;: </a:s>
+               <a:s r="32">
+                  <a:s r="31">
+                     <a:s>Patient</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="32">
+                     <a:s>birthDate</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="32" locator="36:21-36:37" path="birthDate" xsi:type="Property">
+            <source localId="31" locator="36:21-36:27" name="Patient" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="37" locator="37:1-37:51" name="birthDate_str" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="37">
+               <a:s>define &quot;birthDate_str&quot;: </a:s>
+               <a:s r="36">
+                  <a:s>ToString(</a:s>
+                  <a:s r="35">
+                     <a:s r="34">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="35">
+                        <a:s>birthDate</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="36" locator="37:25-37:51" xsi:type="ToString">
+            <operand name="ToDate" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="35" locator="37:34-37:50" path="birthDate" xsi:type="Property">
+                  <source localId="34" locator="37:34-37:40" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="43" locator="39:1-39:46" name="Given Name str" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="43">
+               <a:s>define &quot;Given Name str&quot;: </a:s>
+               <a:s r="42">
+                  <a:s r="40">
+                     <a:s r="39">
+                        <a:s r="38">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="39">
+                           <a:s>name</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="40">
+                        <a:s>given</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="41">[0]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="42" locator="39:26-39:46" xsi:type="Indexer">
+            <operand localId="40" locator="39:26-39:43" xsi:type="Flatten">
+               <operand xsi:type="Query">
+                  <source alias="$this">
+                     <expression localId="39" locator="39:26-39:37" path="name" xsi:type="Property">
+                        <source localId="38" locator="39:26-39:32" name="Patient" xsi:type="ExpressionRef"/>
+                     </expression>
+                  </source>
+                  <where xsi:type="Not">
+                     <operand xsi:type="IsNull">
+                        <operand path="given" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </operand>
+                     </operand>
+                  </where>
+                  <return distinct="false">
+                     <expression path="given" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </expression>
+                  </return>
+               </operand>
+            </operand>
+            <operand localId="41" locator="39:45" valueType="t:Integer" value="0" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="50" locator="40:1-40:48" name="Given Name" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="50">
+               <a:s>define &quot;Given Name&quot;: </a:s>
+               <a:s r="49">
+                  <a:s r="48">
+                     <a:s r="46">
+                        <a:s r="45">
+                           <a:s r="44">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="45">
+                              <a:s>name</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="46">
+                           <a:s>given</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="47">[0]</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="49">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="49" locator="40:22-40:48" path="value" xsi:type="Property">
+            <source localId="48" locator="40:22-40:42" xsi:type="Indexer">
+               <operand localId="46" locator="40:22-40:39" xsi:type="Flatten">
+                  <operand xsi:type="Query">
+                     <source alias="$this">
+                        <expression localId="45" locator="40:22-40:33" path="name" xsi:type="Property">
+                           <source localId="44" locator="40:22-40:28" name="Patient" xsi:type="ExpressionRef"/>
+                        </expression>
+                     </source>
+                     <where xsi:type="Not">
+                        <operand xsi:type="IsNull">
+                           <operand path="given" xsi:type="Property">
+                              <source name="$this" xsi:type="AliasRef"/>
+                           </operand>
+                        </operand>
+                     </where>
+                     <return distinct="false">
+                        <expression path="given" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </expression>
+                     </return>
+                  </operand>
+               </operand>
+               <operand localId="47" locator="40:41" valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </source>
+         </expression>
+      </def>
+      <def localId="56" locator="42:1-42:48" name="Family Name str" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="56">
+               <a:s>define &quot;Family Name str&quot;: </a:s>
+               <a:s r="55">
+                  <a:s r="53">
+                     <a:s r="52">
+                        <a:s r="51">
+                           <a:s>Patient</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="52">
+                           <a:s>name</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="53">
+                        <a:s>family</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="54">[0]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="55" locator="42:27-42:48" xsi:type="Indexer">
+            <operand localId="53" locator="42:27-42:45" xsi:type="Query">
+               <source alias="$this">
+                  <expression localId="52" locator="42:27-42:38" path="name" xsi:type="Property">
+                     <source localId="51" locator="42:27-42:33" name="Patient" xsi:type="ExpressionRef"/>
+                  </expression>
+               </source>
+               <where xsi:type="Not">
+                  <operand xsi:type="IsNull">
+                     <operand path="family" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </operand>
+                  </operand>
+               </where>
+               <return distinct="false">
+                  <expression path="family" xsi:type="Property">
+                     <source name="$this" xsi:type="AliasRef"/>
+                  </expression>
+               </return>
+            </operand>
+            <operand localId="54" locator="42:47" valueType="t:Integer" value="0" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="63" locator="43:1-43:50" name="Family Name" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="63">
+               <a:s>define &quot;Family Name&quot;: </a:s>
+               <a:s r="62">
+                  <a:s r="61">
+                     <a:s r="59">
+                        <a:s r="58">
+                           <a:s r="57">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="58">
+                              <a:s>name</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="59">
+                           <a:s>family</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="60">[0]</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="62">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="62" locator="43:23-43:50" path="value" xsi:type="Property">
+            <source localId="61" locator="43:23-43:44" xsi:type="Indexer">
+               <operand localId="59" locator="43:23-43:41" xsi:type="Query">
+                  <source alias="$this">
+                     <expression localId="58" locator="43:23-43:34" path="name" xsi:type="Property">
+                        <source localId="57" locator="43:23-43:29" name="Patient" xsi:type="ExpressionRef"/>
+                     </expression>
+                  </source>
+                  <where xsi:type="Not">
+                     <operand xsi:type="IsNull">
+                        <operand path="family" xsi:type="Property">
+                           <source name="$this" xsi:type="AliasRef"/>
+                        </operand>
+                     </operand>
+                  </where>
+                  <return distinct="false">
+                     <expression path="family" xsi:type="Property">
+                        <source name="$this" xsi:type="AliasRef"/>
+                     </expression>
+                  </return>
+               </operand>
+               <operand localId="60" locator="43:43" valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </source>
+         </expression>
+      </def>
+      <def localId="84" locator="46:1-51:5" name="SDE Sex" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="84">
+               <a:s>define &quot;SDE Sex&quot;:
+  </a:s>
+               <a:s r="83">
+                  <a:s>case
+    </a:s>
+                  <a:s r="72">
+                     <a:s>when </a:s>
+                     <a:s r="67">
+                        <a:s r="65">
+                           <a:s r="64">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="65">
+                              <a:s>gender</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="66">
+                           <a:s>'male'</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="71">
+                        <a:s>Code { </a:s>
+                        <a:s>
+                           <a:s>code: </a:s>
+                           <a:s r="68">
+                              <a:s>'M'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>system: </a:s>
+                           <a:s r="69">
+                              <a:s>'http://hl7.org/fhir/v3/AdministrativeGender'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>display: </a:s>
+                           <a:s r="70">
+                              <a:s>'Male'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="81">
+                     <a:s>when </a:s>
+                     <a:s r="76">
+                        <a:s r="74">
+                           <a:s r="73">
+                              <a:s>Patient</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="74">
+                              <a:s>gender</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="75">
+                           <a:s>'female'</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> then </a:s>
+                     <a:s r="80">
+                        <a:s>Code { </a:s>
+                        <a:s>
+                           <a:s>code: </a:s>
+                           <a:s r="77">
+                              <a:s>'F'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>system: </a:s>
+                           <a:s r="78">
+                              <a:s>'http://hl7.org/fhir/v3/AdministrativeGender'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>display: </a:s>
+                           <a:s r="79">
+                              <a:s>'Female'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="82">
+    else null
+  end</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="83" locator="47:3-51:5" xsi:type="Case">
+            <caseItem localId="72" locator="48:5-48:128">
+               <when localId="67" locator="48:10-48:32" xsi:type="Equal">
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="65" locator="48:10-48:23" path="gender" xsi:type="Property">
+                        <source localId="64" locator="48:10-48:16" name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="66" locator="48:27-48:32" valueType="t:String" value="male" xsi:type="Literal"/>
+               </when>
+               <then localId="71" locator="48:39-48:128" classType="t:Code" xsi:type="Instance">
+                  <element name="code">
+                     <value localId="68" locator="48:52-48:54" valueType="t:String" value="M" xsi:type="Literal"/>
+                  </element>
+                  <element name="system">
+                     <value localId="69" locator="48:65-48:109" valueType="t:String" value="http://hl7.org/fhir/v3/AdministrativeGender" xsi:type="Literal"/>
+                  </element>
+                  <element name="display">
+                     <value localId="70" locator="48:121-48:126" valueType="t:String" value="Male" xsi:type="Literal"/>
+                  </element>
+               </then>
+            </caseItem>
+            <caseItem localId="81" locator="49:5-49:132">
+               <when localId="76" locator="49:10-49:34" xsi:type="Equal">
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="74" locator="49:10-49:23" path="gender" xsi:type="Property">
+                        <source localId="73" locator="49:10-49:16" name="Patient" xsi:type="ExpressionRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="75" locator="49:27-49:34" valueType="t:String" value="female" xsi:type="Literal"/>
+               </when>
+               <then localId="80" locator="49:41-49:132" classType="t:Code" xsi:type="Instance">
+                  <element name="code">
+                     <value localId="77" locator="49:54-49:56" valueType="t:String" value="F" xsi:type="Literal"/>
+                  </element>
+                  <element name="system">
+                     <value localId="78" locator="49:67-49:111" valueType="t:String" value="http://hl7.org/fhir/v3/AdministrativeGender" xsi:type="Literal"/>
+                  </element>
+                  <element name="display">
+                     <value localId="79" locator="49:123-49:130" valueType="t:String" value="Female" xsi:type="Literal"/>
+                  </element>
+               </then>
+            </caseItem>
+            <else asType="t:Code" xsi:type="As">
+               <operand localId="82" locator="50:10-50:13" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="90" locator="56:1-57:25" name="GetId" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="90">
+               <a:s>define function &quot;GetId&quot;(uri </a:s>
+               <a:s r="85">
+                  <a:s>String</a:s>
+               </a:s>
+               <a:s>):
+    </a:s>
+               <a:s r="89">
+                  <a:s r="89">
+                     <a:s>Last(</a:s>
+                     <a:s r="88">
+                        <a:s>Split(</a:s>
+                        <a:s r="86">
+                           <a:s>uri</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="87">
+                           <a:s>'/'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="89" locator="57:5-57:25" xsi:type="Last">
+            <source localId="88" locator="57:10-57:24" xsi:type="Split">
+               <stringToSplit localId="86" locator="57:16-57:18" name="uri" xsi:type="OperandRef"/>
+               <separator localId="87" locator="57:21-57:23" valueType="t:String" value="/" xsi:type="Literal"/>
+            </source>
+         </expression>
+         <operand name="uri">
+            <operandTypeSpecifier localId="85" locator="56:29-56:34" name="t:String" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="103" locator="59:1-62:3" name="GetLocation" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="103">
+               <a:s>define function &quot;GetLocation&quot;(reference </a:s>
+               <a:s r="91">
+                  <a:s>Reference</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="102">
+                  <a:s r="102">
+                     <a:s>singleton from </a:s>
+                     <a:s r="101">
+                        <a:s>(
+    </a:s>
+                        <a:s r="101">
+                           <a:s>
+                              <a:s r="93">
+                                 <a:s r="92">
+                                    <a:s r="92">
+                                       <a:s>[Location]</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> Location</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> </a:s>
+                           <a:s r="100">
+                              <a:s>where </a:s>
+                              <a:s r="100">
+                                 <a:s r="96">
+                                    <a:s r="95">
+                                       <a:s r="94">
+                                          <a:s>Location</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="95">
+                                          <a:s>id</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="96">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> = </a:s>
+                                 <a:s r="99">
+                                    <a:s>GetId(</a:s>
+                                    <a:s r="98">
+                                       <a:s r="97">
+                                          <a:s>reference</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="98">
+                                          <a:s>reference</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+  )</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="102" locator="60:3-62:3" xsi:type="SingletonFrom">
+            <operand localId="101" locator="60:18-62:3" xsi:type="Query">
+               <source localId="93" locator="61:5-61:23" alias="Location">
+                  <expression localId="92" locator="61:5-61:14" dataType="fhir:Location" templateId="http://hl7.org/fhir/StructureDefinition/Location" xsi:type="Retrieve"/>
+               </source>
+               <where localId="100" locator="61:25-61:76" xsi:type="Equal">
+                  <operand localId="96" locator="61:31-61:47" path="value" xsi:type="Property">
+                     <source localId="95" locator="61:31-61:41" path="id" scope="Location" xsi:type="Property"/>
+                  </operand>
+                  <operand localId="99" locator="61:51-61:76" name="GetId" xsi:type="FunctionRef">
+                     <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <operand localId="98" locator="61:57-61:75" path="reference" xsi:type="Property">
+                           <source localId="97" locator="61:57-61:65" name="reference" xsi:type="OperandRef"/>
+                        </operand>
+                     </operand>
+                  </operand>
+               </where>
+            </operand>
+         </expression>
+         <operand name="reference">
+            <operandTypeSpecifier localId="91" locator="59:41-59:49" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="114" locator="64:1-65:73" name="Location" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="114">
+               <a:s>define &quot;Location&quot;:
+    </a:s>
+               <a:s r="113">
+                  <a:s>First(</a:s>
+                  <a:s r="112">
+                     <a:s>
+                        <a:s r="105">
+                           <a:s r="104">
+                              <a:s r="104">
+                                 <a:s>[Encounter]</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> E</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> </a:s>
+                     <a:s r="111">
+                        <a:s>return </a:s>
+                        <a:s r="110">
+                           <a:s>&quot;GetLocation&quot;(</a:s>
+                           <a:s r="109">
+                              <a:s r="108">
+                                 <a:s>First(</a:s>
+                                 <a:s r="107">
+                                    <a:s r="106">
+                                       <a:s>E</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="107">
+                                       <a:s>location</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="109">
+                                 <a:s>location</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="113" locator="65:5-65:73" xsi:type="First">
+            <source localId="112" locator="65:11-65:72" xsi:type="Query">
+               <source localId="105" locator="65:11-65:23" alias="E">
+                  <expression localId="104" locator="65:11-65:21" dataType="fhir:Encounter" templateId="http://hl7.org/fhir/StructureDefinition/Encounter" xsi:type="Retrieve"/>
+               </source>
+               <return localId="111" locator="65:25-65:72">
+                  <expression localId="110" locator="65:32-65:72" name="GetLocation" xsi:type="FunctionRef">
+                     <operand localId="109" locator="65:46-65:71" path="location" xsi:type="Property">
+                        <source localId="108" locator="65:46-65:62" xsi:type="First">
+                           <source localId="107" locator="65:52-65:61" path="location" scope="E" xsi:type="Property"/>
+                        </source>
+                     </operand>
+                  </expression>
+               </return>
+            </source>
+         </expression>
+      </def>
+      <def localId="119" locator="67:1-68:88" name="SDE Location" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="119">
+               <a:s>define &quot;SDE Location&quot;:
+    </a:s>
+               <a:s r="118">
+                  <a:s>Code { </a:s>
+                  <a:s>
+                     <a:s>code: </a:s>
+                     <a:s r="116">
+                        <a:s r="115">
+                           <a:s>&quot;Location&quot;</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="116">
+                           <a:s>name</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>system: </a:s>
+                     <a:s r="117">
+                        <a:s>'https://github.com/synthetichealth/synthea'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="118" locator="68:5-68:88" classType="t:Code" xsi:type="Instance">
+            <element name="code">
+               <value name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="116" locator="68:18-68:32" path="name" xsi:type="Property">
+                     <source localId="115" locator="68:18-68:27" name="Location" xsi:type="ExpressionRef"/>
+                  </operand>
+               </value>
+            </element>
+            <element name="system">
+               <value localId="117" locator="68:43-68:86" valueType="t:String" value="https://github.com/synthetichealth/synthea" xsi:type="Literal"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="132" locator="75:1-80:3" name="Most Recent Encounter Location Reference" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="132">
+               <a:s>define &quot;Most Recent Encounter Location Reference&quot;:
+  </a:s>
+               <a:s r="131">
+                  <a:s>Last(
+    </a:s>
+                  <a:s r="130">
+                     <a:s>
+                        <a:s r="121">
+                           <a:s r="120">
+                              <a:s r="120">
+                                 <a:s>[Encounter]</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> E</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+      </a:s>
+                     <a:s r="129">
+                        <a:s>return </a:s>
+                        <a:s r="128">
+                           <a:s>First(</a:s>
+                           <a:s r="127">
+                              <a:s>
+                                 <a:s r="123">
+                                    <a:s r="122">
+                                       <a:s>
+                                          <a:s>E.location</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> L</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> </a:s>
+                              <a:s r="126">
+                                 <a:s>return </a:s>
+                                 <a:s r="125">
+                                    <a:s r="124">
+                                       <a:s>L</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="125">
+                                       <a:s>location</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      //sort by start of period
+  )</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="131" locator="76:3-80:3" xsi:type="Last">
+            <source localId="130" locator="77:5-78:50" xsi:type="Query">
+               <source localId="121" locator="77:5-77:17" alias="E">
+                  <expression localId="120" locator="77:5-77:15" dataType="fhir:Encounter" templateId="http://hl7.org/fhir/StructureDefinition/Encounter" xsi:type="Retrieve"/>
+               </source>
+               <return localId="129" locator="78:7-78:50">
+                  <expression localId="128" locator="78:14-78:50" xsi:type="First">
+                     <source localId="127" locator="78:20-78:49" xsi:type="Query">
+                        <source localId="123" locator="78:20-78:31" alias="L">
+                           <expression localId="122" locator="78:20-78:29" path="location" scope="E" xsi:type="Property"/>
+                        </source>
+                        <return localId="126" locator="78:33-78:49">
+                           <expression localId="125" locator="78:40-78:49" path="location" scope="L" xsi:type="Property"/>
+                        </return>
+                     </source>
+                  </expression>
+               </return>
+            </source>
+         </expression>
+      </def>
+      <def localId="163" locator="85:1-98:2" name="Location Code" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="163">
+               <a:s>define &quot;Location Code&quot;:
+ </a:s>
+               <a:s r="162">
+                  <a:s>singleton from </a:s>
+                  <a:s r="161">
+                     <a:s>(
+   </a:s>
+                     <a:s r="161">
+                        <a:s>
+                           <a:s r="134">
+                              <a:s r="133">
+                                 <a:s r="133">
+                                    <a:s>[Location]</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> L</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+     </a:s>
+                        <a:s>
+                           <a:s>let </a:s>
+                           <a:s r="143">
+                              <a:s>identifier: </a:s>
+                              <a:s r="142">
+                                 <a:s>singleton from </a:s>
+                                 <a:s r="141">
+                                    <a:s>(</a:s>
+                                    <a:s r="141">
+                                       <a:s>
+                                          <a:s r="136">
+                                             <a:s r="135">
+                                                <a:s>
+                                                   <a:s>L.identifier</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> I</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> </a:s>
+                                       <a:s r="140">
+                                          <a:s>where </a:s>
+                                          <a:s r="140">
+                                             <a:s r="138">
+                                                <a:s r="137">
+                                                   <a:s>I</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="138">
+                                                   <a:s>system</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> = </a:s>
+                                             <a:s r="139">
+                                                <a:s>'Location?identifier=https://github.com/synthetichealth/synthea|b19ad638-35cc-3819-958d-618086f6180a'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+     </a:s>
+                        <a:s r="151">
+                           <a:s>where </a:s>
+                           <a:s r="151">
+                              <a:s r="145">
+                                 <a:s r="144">
+                                    <a:s>L</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="145">
+                                    <a:s>id</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> = </a:s>
+                              <a:s r="150">
+                                 <a:s>Last(</a:s>
+                                 <a:s r="149">
+                                    <a:s>Split(</a:s>
+                                    <a:s r="147">
+                                       <a:s r="146">
+                                          <a:s>&quot;Most Recent Encounter Location Reference&quot;</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="147">
+                                          <a:s>reference</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="148">
+                                       <a:s>'/'</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+     </a:s>
+                        <a:s r="160">
+                           <a:s>return </a:s>
+                           <a:s r="159">
+                              <a:s>CodeableConcept {
+       </a:s>
+                              <a:s>
+                                 <a:s>coding: </a:s>
+                                 <a:s r="158">
+                                    <a:s>{
+         </a:s>
+                                    <a:s r="157">
+                                       <a:s>Coding {
+           </a:s>
+                                       <a:s>
+                                          <a:s>code: </a:s>
+                                          <a:s r="154">
+                                             <a:s>code { </a:s>
+                                             <a:s>
+                                                <a:s>value: </a:s>
+                                                <a:s r="153">
+                                                   <a:s r="152">
+                                                      <a:s>identifier</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="153">
+                                                      <a:s>value</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> }</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>,
+           </a:s>
+                                       <a:s>
+                                          <a:s>system: </a:s>
+                                          <a:s r="156">
+                                             <a:s r="155">
+                                                <a:s>identifier</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="156">
+                                                <a:s>system</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>
+         }</a:s>
+                                    </a:s>
+                                    <a:s>
+       }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+     }</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+ )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="162" locator="86:2-98:2" xsi:type="SingletonFrom">
+            <operand localId="161" locator="86:17-98:2" xsi:type="Query">
+               <source localId="134" locator="87:4-87:15" alias="L">
+                  <expression localId="133" locator="87:4-87:13" dataType="fhir:Location" templateId="http://hl7.org/fhir/StructureDefinition/Location" xsi:type="Retrieve"/>
+               </source>
+               <let localId="143" locator="88:10-88:171" identifier="identifier">
+                  <expression localId="142" locator="88:22-88:171" xsi:type="SingletonFrom">
+                     <operand localId="141" locator="88:37-88:171" xsi:type="Query">
+                        <source localId="136" locator="88:38-88:51" alias="I">
+                           <expression localId="135" locator="88:38-88:49" path="identifier" scope="L" xsi:type="Property"/>
+                        </source>
+                        <where localId="140" locator="88:53-88:170" xsi:type="Equal">
+                           <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                              <operand localId="138" locator="88:59-88:66" path="system" scope="I" xsi:type="Property"/>
+                           </operand>
+                           <operand localId="139" locator="88:70-88:170" valueType="t:String" value="Location?identifier=https://github.com/synthetichealth/synthea|b19ad638-35cc-3819-958d-618086f6180a" xsi:type="Literal"/>
+                        </where>
+                     </operand>
+                  </expression>
+               </let>
+               <where localId="151" locator="89:6-89:88" xsi:type="Equal">
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="145" locator="89:12-89:15" path="id" scope="L" xsi:type="Property"/>
+                  </operand>
+                  <operand localId="150" locator="89:19-89:88" xsi:type="Last">
+                     <source localId="149" locator="89:24-89:87" xsi:type="Split">
+                        <stringToSplit name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="147" locator="89:30-89:81" path="reference" xsi:type="Property">
+                              <source localId="146" locator="89:30-89:71" name="Most Recent Encounter Location Reference" xsi:type="ExpressionRef"/>
+                           </operand>
+                        </stringToSplit>
+                        <separator localId="148" locator="89:84-89:86" valueType="t:String" value="/" xsi:type="Literal"/>
+                     </source>
+                  </operand>
+               </where>
+               <return localId="160" locator="90:6-97:6">
+                  <expression localId="159" locator="90:13-97:6" classType="fhir:CodeableConcept" xsi:type="Instance">
+                     <element name="coding">
+                        <value localId="158" locator="91:16-96:8" xsi:type="List">
+                           <element localId="157" locator="92:10-95:10" classType="fhir:Coding" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="154" locator="93:18-93:49" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                          <operand localId="153" locator="93:32-93:47" path="value" xsi:type="Property">
+                                             <source localId="152" locator="93:32-93:41" name="identifier" xsi:type="QueryLetRef"/>
+                                          </operand>
+                                       </value>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="system">
+                                 <value localId="156" locator="94:20-94:36" path="system" xsi:type="Property">
+                                    <source localId="155" locator="94:20-94:29" name="identifier" xsi:type="QueryLetRef"/>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </expression>
+               </return>
+            </operand>
+         </expression>
+      </def>
+      <def localId="189" locator="100:1-113:1" name="Location Code Deux" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="189">
+               <a:s>define &quot;Location Code Deux&quot;:
+</a:s>
+               <a:s r="188">
+                  <a:s>singleton from </a:s>
+                  <a:s r="187">
+                     <a:s>(
+  </a:s>
+                     <a:s r="187">
+                        <a:s>
+                           <a:s r="165">
+                              <a:s r="164">
+                                 <a:s r="164">
+                                    <a:s>[Location]</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> L</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    </a:s>
+                        <a:s>
+                           <a:s>let </a:s>
+                           <a:s r="169">
+                              <a:s>identifier: </a:s>
+                              <a:s r="168">
+                                 <a:s>singleton from </a:s>
+                                 <a:s r="167">
+                                    <a:s>(</a:s>
+                                    <a:s r="167">
+                                       <a:s r="166">
+                                          <a:s>L</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="167">
+                                          <a:s>identifier</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    </a:s>
+                        <a:s r="177">
+                           <a:s>where </a:s>
+                           <a:s r="177">
+                              <a:s r="171">
+                                 <a:s r="170">
+                                    <a:s>L</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="171">
+                                    <a:s>id</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> = </a:s>
+                              <a:s r="176">
+                                 <a:s>Last(</a:s>
+                                 <a:s r="175">
+                                    <a:s>Split(</a:s>
+                                    <a:s r="173">
+                                       <a:s r="172">
+                                          <a:s>&quot;Most Recent Encounter Location Reference&quot;</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="173">
+                                          <a:s>reference</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="174">
+                                       <a:s>'/'</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    </a:s>
+                        <a:s r="186">
+                           <a:s>return </a:s>
+                           <a:s r="185">
+                              <a:s>CodeableConcept {
+      </a:s>
+                              <a:s>
+                                 <a:s>coding: </a:s>
+                                 <a:s r="184">
+                                    <a:s>{
+        </a:s>
+                                    <a:s r="183">
+                                       <a:s>Coding {
+          </a:s>
+                                       <a:s>
+                                          <a:s>code: </a:s>
+                                          <a:s r="180">
+                                             <a:s>code { </a:s>
+                                             <a:s>
+                                                <a:s>value: </a:s>
+                                                <a:s r="179">
+                                                   <a:s r="178">
+                                                      <a:s>identifier</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="179">
+                                                      <a:s>value</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> }</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>,
+          </a:s>
+                                       <a:s>
+                                          <a:s>system: </a:s>
+                                          <a:s r="182">
+                                             <a:s r="181">
+                                                <a:s>identifier</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="182">
+                                                <a:s>system</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>
+        }</a:s>
+                                    </a:s>
+                                    <a:s>
+      }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+    }</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="188" locator="101:1-113:1" xsi:type="SingletonFrom">
+            <operand localId="187" locator="101:16-113:1" xsi:type="Query">
+               <source localId="165" locator="102:3-102:14" alias="L">
+                  <expression localId="164" locator="102:3-102:12" dataType="fhir:Location" templateId="http://hl7.org/fhir/StructureDefinition/Location" xsi:type="Retrieve"/>
+               </source>
+               <let localId="169" locator="103:9-103:49" identifier="identifier">
+                  <expression localId="168" locator="103:21-103:49" xsi:type="SingletonFrom">
+                     <operand localId="167" locator="103:36-103:49" path="identifier" scope="L" xsi:type="Property"/>
+                  </expression>
+               </let>
+               <where localId="177" locator="104:5-104:87" xsi:type="Equal">
+                  <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="171" locator="104:11-104:14" path="id" scope="L" xsi:type="Property"/>
+                  </operand>
+                  <operand localId="176" locator="104:18-104:87" xsi:type="Last">
+                     <source localId="175" locator="104:23-104:86" xsi:type="Split">
+                        <stringToSplit name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="173" locator="104:29-104:80" path="reference" xsi:type="Property">
+                              <source localId="172" locator="104:29-104:70" name="Most Recent Encounter Location Reference" xsi:type="ExpressionRef"/>
+                           </operand>
+                        </stringToSplit>
+                        <separator localId="174" locator="104:83-104:85" valueType="t:String" value="/" xsi:type="Literal"/>
+                     </source>
+                  </operand>
+               </where>
+               <return localId="186" locator="105:5-112:5">
+                  <expression localId="185" locator="105:12-112:5" classType="fhir:CodeableConcept" xsi:type="Instance">
+                     <element name="coding">
+                        <value localId="184" locator="106:15-111:7" xsi:type="List">
+                           <element localId="183" locator="107:9-110:9" classType="fhir:Coding" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="180" locator="108:17-108:48" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                          <operand localId="179" locator="108:31-108:46" path="value" xsi:type="Property">
+                                             <source localId="178" locator="108:31-108:40" name="identifier" xsi:type="QueryLetRef"/>
+                                          </operand>
+                                       </value>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="system">
+                                 <value localId="182" locator="109:19-109:35" path="system" xsi:type="Property">
+                                    <source localId="181" locator="109:19-109:28" name="identifier" xsi:type="QueryLetRef"/>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </expression>
+               </return>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

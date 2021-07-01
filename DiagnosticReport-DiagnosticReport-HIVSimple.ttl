@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DiagnosticReport-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 75622-1}\">HIV types 1 and 2 testing</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Felix Cat</b>  2000-01-02</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Observation-HIVSimple.html\"><span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:75622-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "75622-1" ];
+       fhir:Coding.display [ fhir:value "HIV types 1 and 2 testing" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.encounter [
+     fhir:Reference.reference [ fhir:value "Encounter-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

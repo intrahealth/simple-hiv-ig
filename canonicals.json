@@ -1,69 +1,76 @@
 [
   {
-    "id": "HIVSimpleAgeGroup",
+    "id": "HIVSimpleAgeGroup-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleAgeGroup",
     "version": "0.1.0",
     "name": "HIVSimpleAgeGroup"
   },
   {
-    "id": "HIVSimpleCondition",
+    "id": "HIVSimpleCondition-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleCondition",
     "version": "0.1.0",
     "name": "HIVSimpleCondition"
   },
   {
-    "id": "HIVSimpleDemog",
+    "id": "HIVSimpleDemog-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleDemog",
     "version": "0.1.0",
     "name": "HIVSimpleDemog"
   },
   {
-    "id": "HIVSimpleGender",
+    "id": "HIVSimpleGender-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGender",
     "version": "0.1.0",
     "name": "HIVSimpleGender"
   },
   {
-    "id": "HIVSimpleGender2",
+    "id": "HIVSimpleGender2-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGender2",
     "version": "0.1.0",
     "name": "HIVSimpleGender2"
   },
   {
-    "id": "HIVSimpleGenderCohort",
+    "id": "HIVSimpleGenderCohort-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderCohort",
     "version": "0.1.0",
     "name": "HIVSimpleGenderCohort"
   },
   {
-    "id": "HIVSimpleGenderSubjectList",
+    "id": "HIVSimpleGenderSubjectList-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSubjectList",
     "version": "0.1.0",
     "name": "HIVSimpleGenderSubjectList"
   },
   {
-    "id": "HIVSimpleGenderSuppData",
+    "id": "HIVSimpleGenderSuppData-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSuppData",
     "version": "0.1.0",
     "name": "HIVSimpleGenderSuppData"
   },
   {
-    "id": "HIVSimpleTestResult",
+    "id": "HIVSimpleGenderSuppDataIndiv-Measure",
+    "type": "Measure",
+    "url": "Measure/HIVSimpleGenderSuppDataIndiv",
+    "version": "0.1.0",
+    "name": "HIVSimpleGenderSuppDataIndiv"
+  },
+  {
+    "id": "HIVSimpleTestResult-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleTestResult",
     "version": "0.1.0",
     "name": "HIVSimpleTestResult"
   },
   {
-    "id": "HIVSimpleViralLoad",
+    "id": "HIVSimpleViralLoad-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleViralLoad",
     "version": "0.1.0",

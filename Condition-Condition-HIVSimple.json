@@ -1,0 +1,34 @@
+{
+  "resourceType": "Condition",
+  "id": "Condition-HIVSimple",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 86406008}\">HIV Positive</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Felix Cat; birthDate: 2000-01-02</a></p></div>"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "86406008",
+        "display": "HIV Positive"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Patient-HIVSimple"
+  }
+}

@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-HIVSimple> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Observation-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Felix Cat; birthDate: 2000-01-02</a></p><p><b>encounter</b>: <a href=\"Encounter-HIVSimple\">Encounter-HIVSimple</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:75622-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "75622-1" ];
+       fhir:Coding.display [ fhir:value "LOINC Code" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "Encounter-HIVSimple" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:165816005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "165816005" ];
+       fhir:Coding.display [ fhir:value "HIV Positive" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-HIVSimple.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

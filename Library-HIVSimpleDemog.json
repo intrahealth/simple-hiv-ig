@@ -14,12 +14,11 @@
   "type": {
     "coding": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/library-type",
         "code": "logic-library"
       }
     ]
   },
-  "date": "2021-06-29T01:19:24+00:00",
+  "date": "2021-07-01T23:33:19+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {

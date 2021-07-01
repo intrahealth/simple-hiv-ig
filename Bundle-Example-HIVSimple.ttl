@@ -1,0 +1,195 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Bundle/Example-HIVSimple> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Example-HIVSimple"];
+  fhir:Bundle.type [ fhir:value "transaction"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://www.example.org/fhir/Patient/Patient-HIVSimple" ];
+     fhir:Bundle.entry.resource <http://www.example.org/fhir/Patient/Patient-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://www.example.org/fhir/Organization/Organization-HIVSimple" ];
+     fhir:Bundle.entry.resource <http://www.example.org/fhir/Organization/Organization-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://www.example.org/fhir/Location/Location-HIVSimple" ];
+     fhir:Bundle.entry.resource <http://www.example.org/fhir/Location/Location-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://www.example.org/fhir/Observation/Observation-HIVSimple" ];
+     fhir:Bundle.entry.resource <http://www.example.org/fhir/Observation/Observation-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple" ];
+     fhir:Bundle.entry.resource <http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "DiagnosticReport" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://www.example.org/fhir/Condition/Condition-HIVSimple" ];
+     fhir:Bundle.entry.resource <http://www.example.org/fhir/Condition/Condition-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ] .
+
+<http://www.example.org/fhir/Patient/Patient-HIVSimple> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Felix Cat</p><p><b>birthDate</b>: 2000-01-02</p></div>"
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.text [ fhir:value "Felix Cat" ]
+  ];
+  fhir:Patient.birthDate [ fhir:value "2000-01-02"^^xsd:date] .
+
+<http://www.example.org/fhir/Organization/Organization-HIVSimple> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Government Hospital</p></div>"
+  ];
+  fhir:Organization.name [ fhir:value "Government Hospital"] .
+
+<http://www.example.org/fhir/Location/Location-HIVSimple> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>managingOrganization</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+  ] .
+
+<http://www.example.org/fhir/Observation/Observation-HIVSimple> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "Observation-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"Encounter-HIVSimple\">Encounter-HIVSimple</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:75622-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "75622-1" ];
+       fhir:Coding.display [ fhir:value "LOINC Code" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "Encounter-HIVSimple" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:165816005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "165816005" ];
+       fhir:Coding.display [ fhir:value "HIV Positive" ]
+     ]
+  ] .
+
+<http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple> a fhir:DiagnosticReport;
+  fhir:Resource.id [ fhir:value "DiagnosticReport-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">HIV types 1 and 2 testing</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"Encounter-HIVSimple\">Encounter-HIVSimple</a></p><p><b>result</b>: <a href=\"#Observation_Observation-HIVSimple\">See above (Observation/Observation-HIVSimple)</a></p></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:75622-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "75622-1" ];
+       fhir:Coding.display [ fhir:value "HIV types 1 and 2 testing" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.encounter [
+     fhir:Reference.reference [ fhir:value "Encounter-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple" ]
+  ] .
+
+<http://www.example.org/fhir/Condition/Condition-HIVSimple> a fhir:Condition;
+  fhir:Resource.id [ fhir:value "Condition-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 86406008}\">HIV Positive</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p></div>"
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:86406008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "86406008" ];
+       fhir:Coding.display [ fhir:value "HIV Positive" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Bundle/Example-HIVSimple.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

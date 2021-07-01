@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Patient-HIVSimple"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>name</b>: Felix Cat</p><p><b>birthDate</b>: 2000-01-02</p></div>
+  </text>
+  <name>
+    <text value="Felix Cat"/>
+  </name>
+  <birthDate value="2000-01-02"/>
+</Patient>
