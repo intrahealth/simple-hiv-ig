@@ -8,6 +8,16 @@ Usage: #example
 * type = #logic-library
 * content.id = "ig-loader-AgeRanges.cql"
 
+Instance: ANCStratifiers
+InstanceOf: Library
+Usage: #example
+* name = "ANCStratifiers"
+* title = "ANCStratifiers"
+* status = #active
+* experimental = true
+* type = #logic-library
+* content.id = "ig-loader-ANCStratifiers.cql"
+
 Instance: FHIRCommon
 InstanceOf: Library
 Usage: #example
