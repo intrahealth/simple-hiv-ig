@@ -1,9 +1,13 @@
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SIMPLE-HIV-IG\ANCStratifiers - FHIR v4.0.1</title>
+    <title>SIMPLE-HIV-IG\ - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -40,8 +44,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.4"}
-    h3,h4,h5,h6{--heading-prefix:"6.4"}</style>
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:""}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -138,7 +142,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ANCStratifiers</b></li>
+          
 
         </ul>
       </div>  <!-- /container -->
@@ -150,9 +154,9 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -162,28 +166,28 @@
 
 <ul class="nav nav-tabs">
 
-  <li class="active">
-    <a href="#">Narrative Content</a>
+  <li>
+    <a href="Bundle-HIVSimple-Measures.html">Narrative Content</a>
   </li>
 
 
   
     <li>
-      <a href="Library-ANCStratifiers.xml.html">XML</a>
+      <a href="Bundle-HIVSimple-Measures.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Library-ANCStratifiers.json.html">JSON</a>
+      <a href="Bundle-HIVSimple-Measures.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="Library-ANCStratifiers.ttl.html">TTL</a>
+      <a href="Bundle-HIVSimple-Measures.ttl.html">TTL</a>
     </li>
   
 
@@ -193,81 +197,13 @@
 
 
   <a name="root"> </a>
-
-
-  <h2 id="root">Library: ANCStratifiers</h2>
-
+  <h2 id="root">: Bundle/HIVSimple-Measures - Change History</h2>
+  <p>History of changes for HIVSimple-Measures .</p>
 
   
-
-
-  <!-- insert intro if present -->
-  
-
-
-
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library ANCStratifiers
-
-using FHIR version '4.0.1'
-
-include FHIRHelpers version '4.0.1'
-include ANCDataElements called PatientData
-// TODO: Report based on latest contact that occurred in the reporting period
-include ANCContactDataElements called ContactData
-
-codesystem &quot;ISO-8601-Derived Periods&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
-
-// Age Groups
-code &quot;P10Y--P14Y&quot;: 'P10Y--P14Y' from &quot;ISO-8601-Derived Periods&quot; display '10-14 years'
-code &quot;P15Y--P19Y&quot;: 'P15Y--P19Y' from &quot;ISO-8601-Derived Periods&quot; display '15-19 years'
-code &quot;P20Y--P9999Y&quot;: 'P20Y--P9999Y' from &quot;ISO-8601-Derived Periods&quot; display '20+ years'
-
-parameter &quot;Measurement Period&quot; Interval&lt;Date&gt; default Interval[@2020-01-01, @2020-12-31]
-
-context Patient
-
-/*
-By Patient Age as of the start of the Measurement Period
-Age (10-14, 15-19, 20+)
-*/
-define &quot;By Age&quot;:
-  case
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[10, 14] then &quot;P10Y--P14Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[15, 19] then &quot;P15Y--P19Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 20 then &quot;P20Y--P9999Y&quot;
-    else null
-  end
-
-/*
-By Patient Education Level (none, don't know, primary, secondary, higher)
-*/
-define &quot;By Education Level&quot;:
-  Patient.extension E
-    where E.url = 'http://fhir.org/guides/who/anc-cds/StructureDefinition/educationlevel'
-    return E.value as CodeableConcept
-
-/*
-By Number of Contacts (1, 2-3, 4-8, 9+)
-*/
-define &quot;By Number of Contacts&quot;:
-  Count(PatientData.&quot;ANC contact number&quot;)
-
-/*
-By Trimester Category: 1st (GA ≤ 12 weeks); 2nd (GA &gt; 12 weeks to ≤ 28 weeks); 3rd (GA &gt; 28 weeks)
-*/
-define &quot;By Trimester Category&quot;:
-  case
-    when ContactData.&quot;Gestational age&quot;.value &lt;= 12 weeks then 'GA ≤ 12 weeks'
-    when ContactData.&quot;Gestational age&quot;.value &lt;= 28 weeks then 'GA &gt; 12 weeks to ≤ 28 weeks'
-    else 'GA &gt; 28 weeks'
-  end</code></pre><p><code>No Content</code> (<code>application/elm+xml</code>)</p></div>
-
-  <!-- insert notes if present -->
-  
-
-
 
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -275,6 +211,29 @@ define &quot;By Trimester Category&quot;:
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    try {
+      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+    } catch(exception) {
+    }
+
+    if (!currentTabIndex)
+      currentTabIndex = '0';
+
+    $( '#tabs' ).tabs({
+      active: currentTabIndex,
+      activate: function( event, ui ) {
+        var active = $('.selector').tabs('option', 'active');
+        currentTabIndex = ui.newTab.index();
+        document.activeElement.blur();
+        try {
+          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+        } catch(exception) {
+        }
+      }
+    });
+  </script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -287,7 +246,7 @@ define &quot;By Trimester Category&quot;:
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 1, 2021 23:33+0000">2021-07-01</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 2, 2021 04:39+0000">2021-07-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

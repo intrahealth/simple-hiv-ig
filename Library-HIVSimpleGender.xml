@@ -145,16 +145,14 @@ define "HIVTestProposed": ServiceRequest {
   </text>
   <url value="https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender"/>
   <version value="0.1.0"/>
-  <name value="HIVSimpleGender"/>
-  <title value="HIVSimpleGender"/>
-  <status value="active"/>
+  <status value="draft"/>
   <experimental value="true"/>
   <type>
     <coding>
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2021-07-01T23:33:19+00:00"/>
+  <date value="2021-07-02T04:39:18+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>

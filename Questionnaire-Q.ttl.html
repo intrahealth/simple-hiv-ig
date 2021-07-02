@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SIMPLE-HIV-IG\ANCStratifiers - TTL Representation - FHIR v4.0.1</title>
+    <title>SIMPLE-HIV-IG\ - TTL Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.4"}
-    h3,h4,h5,h6{--heading-prefix:"6.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.1"}
+    h3,h4,h5,h6{--heading-prefix:"6.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -140,7 +140,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ANCStratifiers</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -164,20 +164,20 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="Library-ANCStratifiers.html">Narrative Content</a>
+    <a href="Questionnaire-Q.html">Narrative Content</a>
   </li>
 
 
   
     <li>
-      <a href="Library-ANCStratifiers.xml.html">XML</a>
+      <a href="Questionnaire-Q.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Library-ANCStratifiers.json.html">JSON</a>
+      <a href="Questionnaire-Q.json.html">JSON</a>
     </li>
   
 
@@ -196,9 +196,9 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: ANCStratifiers - TTL Representation</h2>
+<h2 id="root">:  - TTL Representation</h2>
 
-<p><a href="Library-ANCStratifiers.ttl" no-download="true">Raw ttl</a> | <a href="Library-ANCStratifiers.ttl" download>Download</a></p>
+<p><a href="Questionnaire-Q.ttl" no-download="true">Raw ttl</a> | <a href="Questionnaire-Q.ttl" download>Download</a></p>
 
   <!-- insert intro if present -->
   
@@ -213,40 +213,24 @@
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Library;
+ a fhir:Questionnaire;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="http://hl7.org/fhir/R4/library.html#Library.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ANCStratifiers&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.text">fhir:DomainResource.text</a> [
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Q&quot;];
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class=\&quot;language-sql\&quot;&gt;library ANCStratifiers\n\nusing FHIR version '4.0.1'\n\ninclude FHIRHelpers version '4.0.1'\ninclude ANCDataElements called PatientData\n// TODO: Report based on latest contact that occurred in the reporting period\ninclude ANCContactDataElements called ContactData\n\ncodesystem \&quot;ISO-8601-Derived Periods\&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }\n\n// Age Groups\ncode \&quot;P10Y--P14Y\&quot;: 'P10Y--P14Y' from \&quot;ISO-8601-Derived Periods\&quot; display '10-14 years'\ncode \&quot;P15Y--P19Y\&quot;: 'P15Y--P19Y' from \&quot;ISO-8601-Derived Periods\&quot; display '15-19 years'\ncode \&quot;P20Y--P9999Y\&quot;: 'P20Y--P9999Y' from \&quot;ISO-8601-Derived Periods\&quot; display '20+ years'\n\nparameter \&quot;Measurement Period\&quot; Interval&amp;lt;Date&amp;gt; default Interval[@2020-01-01, @2020-12-31]\n\ncontext Patient\n\n/*\nBy Patient Age as of the start of the Measurement Period\nAge (10-14, 15-19, 20+)\n*/\ndefine \&quot;By Age\&quot;:\n  case\n    when AgeInYearsAt(start of \&quot;Measurement Period\&quot;) in Interval[10, 14] then \&quot;P10Y--P14Y\&quot;\n    when AgeInYearsAt(start of \&quot;Measurement Period\&quot;) in Interval[15, 19] then \&quot;P15Y--P19Y\&quot;\n    when AgeInYearsAt(start of \&quot;Measurement Period\&quot;) &amp;gt;= 20 then \&quot;P20Y--P9999Y\&quot;\n    else null\n  end\n\n/*\nBy Patient Education Level (none, don't know, primary, secondary, higher)\n*/\ndefine \&quot;By Education Level\&quot;:\n  Patient.extension E\n    where E.url = 'http://fhir.org/guides/who/anc-cds/StructureDefinition/educationlevel'\n    return E.value as CodeableConcept\n\n/*\nBy Number of Contacts (1, 2-3, 4-8, 9+)\n*/\ndefine \&quot;By Number of Contacts\&quot;:\n  Count(PatientData.\&quot;ANC contact number\&quot;)\n\n/*\nBy Trimester Category: 1st (GA ≤ 12 weeks); 2nd (GA &amp;gt; 12 weeks to ≤ 28 weeks); 3rd (GA &amp;gt; 28 weeks)\n*/\ndefine \&quot;By Trimester Category\&quot;:\n  case\n    when ContactData.\&quot;Gestational age\&quot;.value &amp;lt;= 12 weeks then 'GA ≤ 12 weeks'\n    when ContactData.\&quot;Gestational age\&quot;.value &amp;lt;= 28 weeks then 'GA &amp;gt; 12 weeks to ≤ 28 weeks'\n    else 'GA &amp;gt; 28 weeks'\n  end&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;No Content&lt;/code&gt; (&lt;code&gt;application/elm+xml&lt;/code&gt;)&lt;/p&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;1\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; style=\&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\&quot;&gt;&lt;tr style=\&quot;border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\&quot;&gt;&lt;th style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;The linkId for the item\&quot;&gt;LinkId&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;Text for the item\&quot;&gt;Text&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;Minimum and Maximum # of times the the itemcan appear in the instance\&quot;&gt;Cardinality&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;The type of the item\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;Additional information about the item\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;http://hl7.org/fhir/R4/help16.png\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=\&quot;border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_q_root.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;QuestionnaireRoot\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Questionnaire&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/formats.html#table\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;http://hl7.org/fhir/R4/help16.png\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.url">fhir:Library.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://github.com/intrahealth/simple-hiv-ig/Library/ANCStratifiers&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.version">fhir:Library.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.name">fhir:Library.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ANCStratifiers&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.title">fhir:Library.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ANCStratifiers&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.status">fhir:Library.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.experimental">fhir:Library.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.type">fhir:Library.type</a> [
-     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
-       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;logic-library&quot; ]     ]
-  ];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.date">fhir:Library.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2021-07-01T23:33:19+00:00&quot;^^xsd:dateTime];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.publisher">fhir:Library.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;IntraHealth International&quot;];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.contact">fhir:Library.contact</a> [
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.url">fhir:Questionnaire.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://github.com/intrahealth/simple-hiv-ig/Questionnaire/Q&quot;];
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.version">fhir:Questionnaire.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.status">fhir:Questionnaire.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.date">fhir:Questionnaire.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2021-07-02T04:39:18+00:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.publisher">fhir:Questionnaire.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;IntraHealth International&quot;];
+  <a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.contact">fhir:Questionnaire.contact</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
      <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;url&quot; ];
        <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/Special/committees/[something]&quot; ]     ]
-  ];
-  <a href="http://hl7.org/fhir/R4/library.html#Library.content">fhir:Library.content</a> [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;text/cql&quot; ];
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">fhir:Attachment.data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:value</a> &quot;bGlicmFyeSBBTkNTdHJhdGlmaWVycwoKdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScKCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnCmluY2x1ZGUgQU5DRGF0YUVsZW1lbnRzIGNhbGxlZCBQYXRpZW50RGF0YQovLyBUT0RPOiBSZXBvcnQgYmFzZWQgb24gbGF0ZXN0IGNvbnRhY3QgdGhhdCBvY2N1cnJlZCBpbiB0aGUgcmVwb3J0aW5nIHBlcmlvZAppbmNsdWRlIEFOQ0NvbnRhY3REYXRhRWxlbWVudHMgY2FsbGVkIENvbnRhY3REYXRhCgpjb2Rlc3lzdGVtICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiOiAnaHR0cDovL29oaWUub3JnL0NvZGVTeXN0ZW0vaXNvLTg2MDEtZGVyaXZlZC1wZXJpb2RzJyAvLyB7ICdQMFktLVAxWScsICdQMVktLVA1WScsIC4uLiB9CgovLyBBZ2UgR3JvdXBzCmNvZGUgIlAxMFktLVAxNFkiOiAnUDEwWS0tUDE0WScgZnJvbSAiSVNPLTg2MDEtRGVyaXZlZCBQZXJpb2RzIiBkaXNwbGF5ICcxMC0xNCB5ZWFycycKY29kZSAiUDE1WS0tUDE5WSI6ICdQMTVZLS1QMTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzE1LTE5IHllYXJzJwpjb2RlICJQMjBZLS1QOTk5OVkiOiAnUDIwWS0tUDk5OTlZJyBmcm9tICJJU08tODYwMS1EZXJpdmVkIFBlcmlvZHMiIGRpc3BsYXkgJzIwKyB5ZWFycycKCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlPiBkZWZhdWx0IEludGVydmFsW0AyMDIwLTAxLTAxLCBAMjAyMC0xMi0zMV0KCmNvbnRleHQgUGF0aWVudAoKLyoKQnkgUGF0aWVudCBBZ2UgYXMgb2YgdGhlIHN0YXJ0IG9mIHRoZSBNZWFzdXJlbWVudCBQZXJpb2QKQWdlICgxMC0xNCwgMTUtMTksIDIwKykKKi8KZGVmaW5lICJCeSBBZ2UiOgogIGNhc2UKICAgIHdoZW4gQWdlSW5ZZWFyc0F0KHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSBpbiBJbnRlcnZhbFsxMCwgMTRdIHRoZW4gIlAxMFktLVAxNFkiCiAgICB3aGVuIEFnZUluWWVhcnNBdChzdGFydCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIikgaW4gSW50ZXJ2YWxbMTUsIDE5XSB0aGVuICJQMTVZLS1QMTlZIgogICAgd2hlbiBBZ2VJblllYXJzQXQoc3RhcnQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIpID49IDIwIHRoZW4gIlAyMFktLVA5OTk5WSIKICAgIGVsc2UgbnVsbAogIGVuZAoKLyoKQnkgUGF0aWVudCBFZHVjYXRpb24gTGV2ZWwgKG5vbmUsIGRvbid0IGtub3csIHByaW1hcnksIHNlY29uZGFyeSwgaGlnaGVyKQoqLwpkZWZpbmUgIkJ5IEVkdWNhdGlvbiBMZXZlbCI6CiAgUGF0aWVudC5leHRlbnNpb24gRQogICAgd2hlcmUgRS51cmwgPSAnaHR0cDovL2ZoaXIub3JnL2d1aWRlcy93aG8vYW5jLWNkcy9TdHJ1Y3R1cmVEZWZpbml0aW9uL2VkdWNhdGlvbmxldmVsJwogICAgcmV0dXJuIEUudmFsdWUgYXMgQ29kZWFibGVDb25jZXB0CgovKgpCeSBOdW1iZXIgb2YgQ29udGFjdHMgKDEsIDItMywgNC04LCA5KykKKi8KZGVmaW5lICJCeSBOdW1iZXIgb2YgQ29udGFjdHMiOgogIENvdW50KFBhdGllbnREYXRhLiJBTkMgY29udGFjdCBudW1iZXIiKQoKLyoKQnkgVHJpbWVzdGVyIENhdGVnb3J5OiAxc3QgKEdBIOKJpCAxMuKAr3dlZWtzKTsgMm5kIChHQSA+IDEy4oCvd2Vla3MgdG8g4omkIDI44oCvd2Vla3MpOyAzcmQgKEdBID4gMjjigK93ZWVrcykKKi8KZGVmaW5lICJCeSBUcmltZXN0ZXIgQ2F0ZWdvcnkiOgogIGNhc2UKICAgIHdoZW4gQ29udGFjdERhdGEuIkdlc3RhdGlvbmFsIGFnZSIudmFsdWUgPD0gMTIgd2Vla3MgdGhlbiAnR0Eg4omkIDEy4oCvd2Vla3MnCiAgICB3aGVuIENvbnRhY3REYXRhLiJHZXN0YXRpb25hbCBhZ2UiLnZhbHVlIDw9IDI4IHdlZWtzIHRoZW4gJ0dBID4gMTLigK93ZWVrcyB0byDiiaQgMjjigK93ZWVrcycKICAgIGVsc2UgJ0dBID4gMjjigK93ZWVrcycKICBlbmQ=&quot;^^xsd:base64Binary ]
-  ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;application/elm+xml&quot; ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -283,7 +267,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 1, 2021 23:33+0000">2021-07-01</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 2, 2021 04:39+0000">2021-07-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleViralLoad-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleViralLoad</p><p><b>title</b>: HIVSimpleViralLoad</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2018-03-08</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleViralLoad</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><p><b>description</b>: Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleViralLoad"];
   fhir:Measure.identifier [
@@ -19,11 +19,9 @@
      fhir:Identifier.value [ fhir:value "HIVSimpleViralLoad" ]
   ];
   fhir:Measure.version [ fhir:value "0.1.0"];
-  fhir:Measure.name [ fhir:value "HIVSimpleViralLoad"];
-  fhir:Measure.title [ fhir:value "HIVSimpleViralLoad"];
   fhir:Measure.status [ fhir:value "draft"];
   fhir:Measure.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:Measure.date [ fhir:value "2018-03-08"^^xsd:date];
+  fhir:Measure.date [ fhir:value "2021-07-01"^^xsd:date];
   fhir:Measure.publisher [ fhir:value "IntraHealth International"];
   fhir:Measure.contact [
      fhir:index 0;
@@ -33,7 +31,6 @@
        fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
      ]
   ];
-  fhir:Measure.description [ fhir:value "HIVSimpleViralLoad"];
   fhir:Measure.library [
      fhir:value "Library/HIVSimpleViralLoad";
      fhir:index 0;
@@ -54,10 +51,6 @@
   ];
   fhir:Measure.group [
      fhir:index 0;
-     fhir:Measure.group.code [
-       fhir:CodeableConcept.text [ fhir:value "cohort" ]
-     ];
-     fhir:Measure.group.description [ fhir:value "Cohort" ];
      fhir:Measure.group.population [
        fhir:index 0;
        fhir:Measure.group.population.code [
@@ -78,20 +71,6 @@
          fhir:CodeableConcept.coding [
            fhir:index 0;
            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
-           fhir:Coding.code [ fhir:value "numerator" ]
-         ]
-       ];
-       fhir:Measure.group.population.description [ fhir:value "Numerator" ];
-       fhir:Measure.group.population.criteria [
-         fhir:Expression.language [ fhir:value "text/cql" ];
-         fhir:Expression.expression [ fhir:value "Numerator" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Measure.group.population.code [
-         fhir:CodeableConcept.coding [
-           fhir:index 0;
-           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
            fhir:Coding.code [ fhir:value "denominator" ]
          ]
        ];
@@ -99,6 +78,20 @@
        fhir:Measure.group.population.criteria [
          fhir:Expression.language [ fhir:value "text/cql" ];
          fhir:Expression.expression [ fhir:value "Denominator" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Numerator" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Numerator" ]
        ]
      ]
   ] .

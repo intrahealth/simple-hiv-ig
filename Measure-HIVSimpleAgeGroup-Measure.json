@@ -3,7 +3,7 @@
   "id": "HIVSimpleAgeGroup-Measure",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleAgeGroup</p><p><b>title</b>: HIVSimpleAgeGroup</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2018-03-08</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleAgeGroup</p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: \">cohort</span></p><p><b>description</b>: Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
   },
   "url": "Measure/HIVSimpleAgeGroup",
   "identifier": [
@@ -13,11 +13,9 @@
     }
   ],
   "version": "0.1.0",
-  "name": "HIVSimpleAgeGroup",
-  "title": "HIVSimpleAgeGroup",
   "status": "draft",
   "experimental": true,
-  "date": "2018-03-08",
+  "date": "2021-07-01",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -29,7 +27,6 @@
       ]
     }
   ],
-  "description": "HIVSimpleAgeGroup",
   "library": [
     "Library/HIVSimpleAgeGroup"
   ],
@@ -51,10 +48,6 @@
   ],
   "group": [
     {
-      "code": {
-        "text": "cohort"
-      },
-      "description": "Cohort",
       "population": [
         {
           "code": {
@@ -70,7 +63,46 @@
             "language": "text/cql",
             "expression": "Initial Population"
           }
-        },
+        }
+      ],
+      "stratifier": [
+        {
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Age Group"
+          }
+        }
+      ]
+    },
+    {
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator"
+              }
+            ]
+          },
+          "description": "Denominator",
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Denominator"
+          }
+        }
+      ],
+      "stratifier": [
+        {
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Age Group"
+          }
+        }
+      ]
+    },
+    {
+      "population": [
         {
           "code": {
             "coding": [
@@ -85,20 +117,13 @@
             "language": "text/cql",
             "expression": "Numerator"
           }
-        },
+        }
+      ],
+      "stratifier": [
         {
-          "code": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code": "denominator"
-              }
-            ]
-          },
-          "description": "Denominator",
           "criteria": {
             "language": "text/cql",
-            "expression": "Denominator"
+            "expression": "Age Group"
           }
         }
       ]

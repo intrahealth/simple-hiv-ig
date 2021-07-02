@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-07-01T23:33:19+00:00",
+  "date": "2021-07-02T04:39:18+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -328,9 +328,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGenderCohort-Measure"
-        },
-        "name": "HIVSimpleGenderCohort",
-        "description": "HIVSimpleGenderCohort"
+        }
       },
       {
         "extension": [
@@ -341,9 +339,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGender2-Measure"
-        },
-        "name": "HIVSimpleGender2",
-        "description": "HIVSimpleGender2"
+        }
       },
       {
         "extension": [
@@ -354,9 +350,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGender-Measure"
-        },
-        "name": "HIVSimpleGender",
-        "description": "HIVSimpleGender"
+        }
       },
       {
         "extension": [
@@ -378,9 +372,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleCondition-Measure"
-        },
-        "name": "HIVSimpleCondition",
-        "description": "HIVSimpleCondition"
+        }
       },
       {
         "extension": [
@@ -397,14 +389,23 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/Q"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           }
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGenderSuppData-Measure"
-        },
-        "name": "HIVSimpleGenderSuppData",
-        "description": "HIVSimpleGenderSuppData"
+        }
       },
       {
         "extension": [
@@ -426,8 +427,7 @@
         ],
         "reference": {
           "reference": "Library/HIVSimpleGender"
-        },
-        "name": "HIVSimpleGender"
+        }
       },
       {
         "extension": [
@@ -438,8 +438,7 @@
         ],
         "reference": {
           "reference": "Library/FHIRCommon"
-        },
-        "name": "FHIR Common"
+        }
       },
       {
         "extension": [
@@ -450,9 +449,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleDemog-Measure"
-        },
-        "name": "HIVSimpleDemog",
-        "description": "HIVSimpleDemog"
+        }
       },
       {
         "extension": [
@@ -463,20 +460,7 @@
         ],
         "reference": {
           "reference": "Library/AgeRanges"
-        },
-        "name": "Age Ranges"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/ANCStratifiers"
-        },
-        "name": "ANCStratifiers"
+        }
       },
       {
         "extension": [
@@ -487,9 +471,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleTestResult-Measure"
-        },
-        "name": "HIVSimpleTestResult",
-        "description": "HIVSimpleTestResult"
+        }
       },
       {
         "extension": [
@@ -528,13 +510,23 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/HIVSimple-Measures"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Library"
           }
         ],
         "reference": {
           "reference": "Library/HIVSimpleAgeGroup"
-        },
-        "name": "HIVSimpleAgeGroup"
+        }
       },
       {
         "extension": [
@@ -545,9 +537,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleViralLoad-Measure"
-        },
-        "name": "HIVSimpleViralLoad",
-        "description": "HIVSimpleViralLoad"
+        }
       },
       {
         "extension": [
@@ -558,9 +548,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGenderSuppDataIndiv-Measure"
-        },
-        "name": "HIVSimpleGenderSuppDataIndiv",
-        "description": "HIVSimpleGenderSuppDataIndiv"
+        }
       },
       {
         "extension": [
@@ -571,8 +559,7 @@
         ],
         "reference": {
           "reference": "Library/HIVSimpleCondition"
-        },
-        "name": "HIVSimpleCondition"
+        }
       },
       {
         "extension": [
@@ -583,8 +570,7 @@
         ],
         "reference": {
           "reference": "Library/HIVSimpleTestResult"
-        },
-        "name": "HIVSimpleTestResult"
+        }
       },
       {
         "extension": [
@@ -595,9 +581,7 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleAgeGroup-Measure"
-        },
-        "name": "HIVSimpleAgeGroup",
-        "description": "HIVSimpleAgeGroup"
+        }
       },
       {
         "extension": [
@@ -619,8 +603,7 @@
         ],
         "reference": {
           "reference": "Library/HIVSimpleDemog"
-        },
-        "name": "HIVSimpleDemog"
+        }
       },
       {
         "extension": [
@@ -631,9 +614,18 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGenderSubjectList-Measure"
-        },
-        "name": "HIVSimpleGenderSubjectList",
-        "description": "HIVSimpleGenderSubjectList"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/HIVSimple-Library"
+        }
       },
       {
         "extension": [
@@ -644,8 +636,7 @@
         ],
         "reference": {
           "reference": "Library/HIVSimpleViralLoad"
-        },
-        "name": "HIVSimpleViralLoad"
+        }
       }
     ],
     "page": {

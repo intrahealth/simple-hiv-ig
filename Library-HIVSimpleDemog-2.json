@@ -564,24 +564,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "18",
-                    "locator" : "28:27-28:45",
+                    "locator" : "29:25-29:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "19",
-                  "locator" : "28:18-28:45"
+                  "locator" : "29:16-29:43"
                 } ],
                 "localId" : "20",
-                "locator" : "28:5-28:46",
+                "locator" : "29:3-29:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "21",
-                "locator" : "28:51",
+                "locator" : "29:49",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "0"
               } ],
               "localId" : "22",
-              "locator" : "28:5-28:51"
+              "locator" : "29:3-29:49"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -598,27 +598,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "23",
-                    "locator" : "29:33-29:51",
+                    "locator" : "30:31-30:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "24",
-                  "locator" : "29:24-29:51"
+                  "locator" : "30:22-30:49"
                 } ],
                 "localId" : "25",
-                "locator" : "29:11-29:52",
+                "locator" : "30:9-30:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "26",
-                "locator" : "29:56",
+                "locator" : "30:54",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "5"
               } ],
               "localId" : "27",
-              "locator" : "29:11-29:56"
+              "locator" : "30:9-30:54"
             } ],
             "localId" : "28",
-            "locator" : "28:5-29:56"
+            "locator" : "29:3-30:54"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -628,11 +628,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "29",
-                  "locator" : "30:11-30:17",
+                  "locator" : "31:9-31:15",
                   "name" : "Patient"
                 },
                 "localId" : "30",
-                "locator" : "30:11-30:24",
+                "locator" : "31:9-31:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -640,15 +640,15 @@
             }, {
               "type" : "Literal",
               "localId" : "31",
-              "locator" : "30:28-30:35",
+              "locator" : "31:26-31:33",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "female"
             } ],
             "localId" : "32",
-            "locator" : "30:11-30:35"
+            "locator" : "31:9-31:33"
           } ],
           "localId" : "33",
-          "locator" : "28:5-30:35"
+          "locator" : "29:3-31:33"
         },
         "annotation" : [ {
           "s" : {
@@ -657,7 +657,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient0To5AndFemale", ":\n    " ]
+                "s" : [ "define ", "Patient0To5AndFemale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -752,7 +752,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -841,7 +841,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -938,7 +938,7 @@
           }
         } ],
         "localId" : "34",
-        "locator" : "27:3-30:35",
+        "locator" : "28:1-31:33",
         "name" : "Patient0To5AndFemale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -964,24 +964,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "35",
-                    "locator" : "33:27-33:45",
+                    "locator" : "34:25-34:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "36",
-                  "locator" : "33:18-33:45"
+                  "locator" : "34:16-34:43"
                 } ],
                 "localId" : "37",
-                "locator" : "33:5-33:46",
+                "locator" : "34:3-34:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "38",
-                "locator" : "33:51",
+                "locator" : "34:49",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "5"
               } ],
               "localId" : "39",
-              "locator" : "33:5-33:51"
+              "locator" : "34:3-34:49"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -998,27 +998,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "40",
-                    "locator" : "34:33-34:51",
+                    "locator" : "35:31-35:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "41",
-                  "locator" : "34:24-34:51"
+                  "locator" : "35:22-35:49"
                 } ],
                 "localId" : "42",
-                "locator" : "34:11-34:52",
+                "locator" : "35:9-35:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "43",
-                "locator" : "34:56-34:57",
+                "locator" : "35:54-35:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "15"
               } ],
               "localId" : "44",
-              "locator" : "34:11-34:57"
+              "locator" : "35:9-35:55"
             } ],
             "localId" : "45",
-            "locator" : "33:5-34:57"
+            "locator" : "34:3-35:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -1028,11 +1028,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "46",
-                  "locator" : "35:11-35:17",
+                  "locator" : "36:9-36:15",
                   "name" : "Patient"
                 },
                 "localId" : "47",
-                "locator" : "35:11-35:24",
+                "locator" : "36:9-36:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -1040,15 +1040,15 @@
             }, {
               "type" : "Literal",
               "localId" : "48",
-              "locator" : "35:28-35:35",
+              "locator" : "36:26-36:33",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "female"
             } ],
             "localId" : "49",
-            "locator" : "35:11-35:35"
+            "locator" : "36:9-36:33"
           } ],
           "localId" : "50",
-          "locator" : "33:5-35:35"
+          "locator" : "34:3-36:33"
         },
         "annotation" : [ {
           "s" : {
@@ -1057,7 +1057,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient5To15AndFemale", ":\n    " ]
+                "s" : [ "define ", "Patient5To15AndFemale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -1152,7 +1152,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -1241,7 +1241,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -1338,7 +1338,7 @@
           }
         } ],
         "localId" : "51",
-        "locator" : "32:3-35:35",
+        "locator" : "33:1-36:33",
         "name" : "Patient5To15AndFemale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1364,24 +1364,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "52",
-                    "locator" : "38:27-38:45",
+                    "locator" : "39:25-39:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "53",
-                  "locator" : "38:18-38:45"
+                  "locator" : "39:16-39:43"
                 } ],
                 "localId" : "54",
-                "locator" : "38:5-38:46",
+                "locator" : "39:3-39:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "55",
-                "locator" : "38:51-38:52",
+                "locator" : "39:49-39:50",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "15"
               } ],
               "localId" : "56",
-              "locator" : "38:5-38:52"
+              "locator" : "39:3-39:50"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -1398,27 +1398,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "57",
-                    "locator" : "39:33-39:51",
+                    "locator" : "40:31-40:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "58",
-                  "locator" : "39:24-39:51"
+                  "locator" : "40:22-40:49"
                 } ],
                 "localId" : "59",
-                "locator" : "39:11-39:52",
+                "locator" : "40:9-40:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "60",
-                "locator" : "39:56-39:57",
+                "locator" : "40:54-40:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "25"
               } ],
               "localId" : "61",
-              "locator" : "39:11-39:57"
+              "locator" : "40:9-40:55"
             } ],
             "localId" : "62",
-            "locator" : "38:5-39:57"
+            "locator" : "39:3-40:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -1428,11 +1428,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "63",
-                  "locator" : "40:11-40:17",
+                  "locator" : "41:9-41:15",
                   "name" : "Patient"
                 },
                 "localId" : "64",
-                "locator" : "40:11-40:24",
+                "locator" : "41:9-41:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -1440,15 +1440,15 @@
             }, {
               "type" : "Literal",
               "localId" : "65",
-              "locator" : "40:28-40:35",
+              "locator" : "41:26-41:33",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "female"
             } ],
             "localId" : "66",
-            "locator" : "40:11-40:35"
+            "locator" : "41:9-41:33"
           } ],
           "localId" : "67",
-          "locator" : "38:5-40:35"
+          "locator" : "39:3-41:33"
         },
         "annotation" : [ {
           "s" : {
@@ -1457,7 +1457,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient15To25AndFemale", ":\n    " ]
+                "s" : [ "define ", "Patient15To25AndFemale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -1552,7 +1552,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -1641,7 +1641,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -1738,7 +1738,7 @@
           }
         } ],
         "localId" : "68",
-        "locator" : "37:3-40:35",
+        "locator" : "38:1-41:33",
         "name" : "Patient15To25AndFemale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1764,24 +1764,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "69",
-                    "locator" : "43:27-43:45",
+                    "locator" : "44:25-44:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "70",
-                  "locator" : "43:18-43:45"
+                  "locator" : "44:16-44:43"
                 } ],
                 "localId" : "71",
-                "locator" : "43:5-43:46",
+                "locator" : "44:3-44:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "72",
-                "locator" : "43:51-43:52",
+                "locator" : "44:49-44:50",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "25"
               } ],
               "localId" : "73",
-              "locator" : "43:5-43:52"
+              "locator" : "44:3-44:50"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -1798,27 +1798,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "74",
-                    "locator" : "44:33-44:51",
+                    "locator" : "45:31-45:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "75",
-                  "locator" : "44:24-44:51"
+                  "locator" : "45:22-45:49"
                 } ],
                 "localId" : "76",
-                "locator" : "44:11-44:52",
+                "locator" : "45:9-45:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "77",
-                "locator" : "44:56-44:57",
+                "locator" : "45:54-45:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "50"
               } ],
               "localId" : "78",
-              "locator" : "44:11-44:57"
+              "locator" : "45:9-45:55"
             } ],
             "localId" : "79",
-            "locator" : "43:5-44:57"
+            "locator" : "44:3-45:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -1828,11 +1828,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "80",
-                  "locator" : "45:11-45:17",
+                  "locator" : "46:9-46:15",
                   "name" : "Patient"
                 },
                 "localId" : "81",
-                "locator" : "45:11-45:24",
+                "locator" : "46:9-46:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -1840,15 +1840,15 @@
             }, {
               "type" : "Literal",
               "localId" : "82",
-              "locator" : "45:28-45:35",
+              "locator" : "46:26-46:33",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "female"
             } ],
             "localId" : "83",
-            "locator" : "45:11-45:35"
+            "locator" : "46:9-46:33"
           } ],
           "localId" : "84",
-          "locator" : "43:5-45:35"
+          "locator" : "44:3-46:33"
         },
         "annotation" : [ {
           "s" : {
@@ -1857,7 +1857,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient25To50AndFemale", ":\n    " ]
+                "s" : [ "define ", "Patient25To50AndFemale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -1952,7 +1952,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -2041,7 +2041,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -2138,7 +2138,7 @@
           }
         } ],
         "localId" : "85",
-        "locator" : "42:3-45:35",
+        "locator" : "43:1-46:33",
         "name" : "Patient25To50AndFemale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2164,24 +2164,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "86",
-                    "locator" : "48:27-48:45",
+                    "locator" : "49:25-49:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "87",
-                  "locator" : "48:18-48:45"
+                  "locator" : "49:16-49:43"
                 } ],
                 "localId" : "88",
-                "locator" : "48:5-48:46",
+                "locator" : "49:3-49:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "89",
-                "locator" : "48:51-48:52",
+                "locator" : "49:49-49:50",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "50"
               } ],
               "localId" : "90",
-              "locator" : "48:5-48:52"
+              "locator" : "49:3-49:50"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -2198,27 +2198,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "91",
-                    "locator" : "49:33-49:51",
+                    "locator" : "50:31-50:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "92",
-                  "locator" : "49:24-49:51"
+                  "locator" : "50:22-50:49"
                 } ],
                 "localId" : "93",
-                "locator" : "49:11-49:52",
+                "locator" : "50:9-50:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "94",
-                "locator" : "49:56-49:57",
+                "locator" : "50:54-50:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "65"
               } ],
               "localId" : "95",
-              "locator" : "49:11-49:57"
+              "locator" : "50:9-50:55"
             } ],
             "localId" : "96",
-            "locator" : "48:5-49:57"
+            "locator" : "49:3-50:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -2228,11 +2228,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "97",
-                  "locator" : "50:11-50:17",
+                  "locator" : "51:9-51:15",
                   "name" : "Patient"
                 },
                 "localId" : "98",
-                "locator" : "50:11-50:24",
+                "locator" : "51:9-51:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -2240,15 +2240,15 @@
             }, {
               "type" : "Literal",
               "localId" : "99",
-              "locator" : "50:28-50:35",
+              "locator" : "51:26-51:33",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "female"
             } ],
             "localId" : "100",
-            "locator" : "50:11-50:35"
+            "locator" : "51:9-51:33"
           } ],
           "localId" : "101",
-          "locator" : "48:5-50:35"
+          "locator" : "49:3-51:33"
         },
         "annotation" : [ {
           "s" : {
@@ -2257,7 +2257,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient50To65AndFemale", ":\n    " ]
+                "s" : [ "define ", "Patient50To65AndFemale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -2352,7 +2352,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -2441,7 +2441,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -2538,7 +2538,7 @@
           }
         } ],
         "localId" : "102",
-        "locator" : "47:3-50:35",
+        "locator" : "48:1-51:33",
         "name" : "Patient50To65AndFemale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2562,24 +2562,24 @@
                 "operand" : {
                   "type" : "ParameterRef",
                   "localId" : "103",
-                  "locator" : "53:27-53:45",
+                  "locator" : "54:25-54:43",
                   "name" : "MeasurementPeriod"
                 },
                 "localId" : "104",
-                "locator" : "53:18-53:45"
+                "locator" : "54:16-54:43"
               } ],
               "localId" : "105",
-              "locator" : "53:5-53:46",
+              "locator" : "54:3-54:44",
               "precision" : "Year"
             }, {
               "type" : "Literal",
               "localId" : "106",
-              "locator" : "53:51-53:52",
+              "locator" : "54:49-54:50",
               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
               "value" : "65"
             } ],
             "localId" : "107",
-            "locator" : "53:5-53:52"
+            "locator" : "54:3-54:50"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -2589,11 +2589,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "108",
-                  "locator" : "54:11-54:17",
+                  "locator" : "55:9-55:15",
                   "name" : "Patient"
                 },
                 "localId" : "109",
-                "locator" : "54:11-54:24",
+                "locator" : "55:9-55:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -2601,15 +2601,15 @@
             }, {
               "type" : "Literal",
               "localId" : "110",
-              "locator" : "54:28-54:35",
+              "locator" : "55:26-55:33",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "female"
             } ],
             "localId" : "111",
-            "locator" : "54:11-54:35"
+            "locator" : "55:9-55:33"
           } ],
           "localId" : "112",
-          "locator" : "53:5-54:35"
+          "locator" : "54:3-55:33"
         },
         "annotation" : [ {
           "s" : {
@@ -2618,7 +2618,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient65ToHighestAndFemale", ":\n    " ]
+                "s" : [ "define ", "Patient65ToHighestAndFemale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -2708,7 +2708,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -2805,7 +2805,7 @@
           }
         } ],
         "localId" : "113",
-        "locator" : "52:3-54:35",
+        "locator" : "53:1-55:33",
         "name" : "Patient65ToHighestAndFemale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2831,24 +2831,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "114",
-                    "locator" : "57:27-57:45",
+                    "locator" : "58:25-58:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "115",
-                  "locator" : "57:18-57:45"
+                  "locator" : "58:16-58:43"
                 } ],
                 "localId" : "116",
-                "locator" : "57:5-57:46",
+                "locator" : "58:3-58:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "117",
-                "locator" : "57:51",
+                "locator" : "58:49",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "0"
               } ],
               "localId" : "118",
-              "locator" : "57:5-57:51"
+              "locator" : "58:3-58:49"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -2865,27 +2865,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "119",
-                    "locator" : "58:33-58:51",
+                    "locator" : "59:31-59:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "120",
-                  "locator" : "58:24-58:51"
+                  "locator" : "59:22-59:49"
                 } ],
                 "localId" : "121",
-                "locator" : "58:11-58:52",
+                "locator" : "59:9-59:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "122",
-                "locator" : "58:56",
+                "locator" : "59:54",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "5"
               } ],
               "localId" : "123",
-              "locator" : "58:11-58:56"
+              "locator" : "59:9-59:54"
             } ],
             "localId" : "124",
-            "locator" : "57:5-58:56"
+            "locator" : "58:3-59:54"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -2895,11 +2895,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "125",
-                  "locator" : "59:11-59:17",
+                  "locator" : "60:9-60:15",
                   "name" : "Patient"
                 },
                 "localId" : "126",
-                "locator" : "59:11-59:24",
+                "locator" : "60:9-60:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -2907,15 +2907,15 @@
             }, {
               "type" : "Literal",
               "localId" : "127",
-              "locator" : "59:28-59:33",
+              "locator" : "60:26-60:31",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "male"
             } ],
             "localId" : "128",
-            "locator" : "59:11-59:33"
+            "locator" : "60:9-60:31"
           } ],
           "localId" : "129",
-          "locator" : "57:5-59:33"
+          "locator" : "58:3-60:31"
         },
         "annotation" : [ {
           "s" : {
@@ -2924,7 +2924,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient0To5AndMale", ":\n    " ]
+                "s" : [ "define ", "Patient0To5AndMale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -3019,7 +3019,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -3108,7 +3108,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -3205,7 +3205,7 @@
           }
         } ],
         "localId" : "130",
-        "locator" : "56:3-59:33",
+        "locator" : "57:1-60:31",
         "name" : "Patient0To5AndMale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -3231,24 +3231,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "131",
-                    "locator" : "62:27-62:45",
+                    "locator" : "63:25-63:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "132",
-                  "locator" : "62:18-62:45"
+                  "locator" : "63:16-63:43"
                 } ],
                 "localId" : "133",
-                "locator" : "62:5-62:46",
+                "locator" : "63:3-63:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "134",
-                "locator" : "62:51",
+                "locator" : "63:49",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "5"
               } ],
               "localId" : "135",
-              "locator" : "62:5-62:51"
+              "locator" : "63:3-63:49"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -3265,27 +3265,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "136",
-                    "locator" : "63:33-63:51",
+                    "locator" : "64:31-64:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "137",
-                  "locator" : "63:24-63:51"
+                  "locator" : "64:22-64:49"
                 } ],
                 "localId" : "138",
-                "locator" : "63:11-63:52",
+                "locator" : "64:9-64:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "139",
-                "locator" : "63:56-63:57",
+                "locator" : "64:54-64:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "15"
               } ],
               "localId" : "140",
-              "locator" : "63:11-63:57"
+              "locator" : "64:9-64:55"
             } ],
             "localId" : "141",
-            "locator" : "62:5-63:57"
+            "locator" : "63:3-64:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -3295,11 +3295,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "142",
-                  "locator" : "64:11-64:17",
+                  "locator" : "65:9-65:15",
                   "name" : "Patient"
                 },
                 "localId" : "143",
-                "locator" : "64:11-64:24",
+                "locator" : "65:9-65:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -3307,15 +3307,15 @@
             }, {
               "type" : "Literal",
               "localId" : "144",
-              "locator" : "64:28-64:33",
+              "locator" : "65:26-65:31",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "male"
             } ],
             "localId" : "145",
-            "locator" : "64:11-64:33"
+            "locator" : "65:9-65:31"
           } ],
           "localId" : "146",
-          "locator" : "62:5-64:33"
+          "locator" : "63:3-65:31"
         },
         "annotation" : [ {
           "s" : {
@@ -3324,7 +3324,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient5To15AndMale", ":\n    " ]
+                "s" : [ "define ", "Patient5To15AndMale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -3419,7 +3419,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -3508,7 +3508,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -3605,7 +3605,7 @@
           }
         } ],
         "localId" : "147",
-        "locator" : "61:3-64:33",
+        "locator" : "62:1-65:31",
         "name" : "Patient5To15AndMale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -3631,24 +3631,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "148",
-                    "locator" : "67:27-67:45",
+                    "locator" : "68:25-68:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "149",
-                  "locator" : "67:18-67:45"
+                  "locator" : "68:16-68:43"
                 } ],
                 "localId" : "150",
-                "locator" : "67:5-67:46",
+                "locator" : "68:3-68:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "151",
-                "locator" : "67:51-67:52",
+                "locator" : "68:49-68:50",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "15"
               } ],
               "localId" : "152",
-              "locator" : "67:5-67:52"
+              "locator" : "68:3-68:50"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -3665,27 +3665,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "153",
-                    "locator" : "68:33-68:51",
+                    "locator" : "69:31-69:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "154",
-                  "locator" : "68:24-68:51"
+                  "locator" : "69:22-69:49"
                 } ],
                 "localId" : "155",
-                "locator" : "68:11-68:52",
+                "locator" : "69:9-69:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "156",
-                "locator" : "68:56-68:57",
+                "locator" : "69:54-69:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "25"
               } ],
               "localId" : "157",
-              "locator" : "68:11-68:57"
+              "locator" : "69:9-69:55"
             } ],
             "localId" : "158",
-            "locator" : "67:5-68:57"
+            "locator" : "68:3-69:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -3695,11 +3695,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "159",
-                  "locator" : "69:11-69:17",
+                  "locator" : "70:9-70:15",
                   "name" : "Patient"
                 },
                 "localId" : "160",
-                "locator" : "69:11-69:24",
+                "locator" : "70:9-70:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -3707,15 +3707,15 @@
             }, {
               "type" : "Literal",
               "localId" : "161",
-              "locator" : "69:28-69:33",
+              "locator" : "70:26-70:31",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "male"
             } ],
             "localId" : "162",
-            "locator" : "69:11-69:33"
+            "locator" : "70:9-70:31"
           } ],
           "localId" : "163",
-          "locator" : "67:5-69:33"
+          "locator" : "68:3-70:31"
         },
         "annotation" : [ {
           "s" : {
@@ -3724,7 +3724,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient15To25AndMale", ":\n    " ]
+                "s" : [ "define ", "Patient15To25AndMale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -3819,7 +3819,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -3908,7 +3908,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -4005,7 +4005,7 @@
           }
         } ],
         "localId" : "164",
-        "locator" : "66:3-69:33",
+        "locator" : "67:1-70:31",
         "name" : "Patient15To25AndMale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4031,24 +4031,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "165",
-                    "locator" : "72:27-72:45",
+                    "locator" : "73:25-73:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "166",
-                  "locator" : "72:18-72:45"
+                  "locator" : "73:16-73:43"
                 } ],
                 "localId" : "167",
-                "locator" : "72:5-72:46",
+                "locator" : "73:3-73:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "168",
-                "locator" : "72:51-72:52",
+                "locator" : "73:49-73:50",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "25"
               } ],
               "localId" : "169",
-              "locator" : "72:5-72:52"
+              "locator" : "73:3-73:50"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -4065,27 +4065,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "170",
-                    "locator" : "73:33-73:51",
+                    "locator" : "74:31-74:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "171",
-                  "locator" : "73:24-73:51"
+                  "locator" : "74:22-74:49"
                 } ],
                 "localId" : "172",
-                "locator" : "73:11-73:52",
+                "locator" : "74:9-74:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "173",
-                "locator" : "73:56-73:57",
+                "locator" : "74:54-74:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "50"
               } ],
               "localId" : "174",
-              "locator" : "73:11-73:57"
+              "locator" : "74:9-74:55"
             } ],
             "localId" : "175",
-            "locator" : "72:5-73:57"
+            "locator" : "73:3-74:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -4095,11 +4095,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "176",
-                  "locator" : "74:11-74:17",
+                  "locator" : "75:9-75:15",
                   "name" : "Patient"
                 },
                 "localId" : "177",
-                "locator" : "74:11-74:24",
+                "locator" : "75:9-75:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -4107,15 +4107,15 @@
             }, {
               "type" : "Literal",
               "localId" : "178",
-              "locator" : "74:28-74:33",
+              "locator" : "75:26-75:31",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "male"
             } ],
             "localId" : "179",
-            "locator" : "74:11-74:33"
+            "locator" : "75:9-75:31"
           } ],
           "localId" : "180",
-          "locator" : "72:5-74:33"
+          "locator" : "73:3-75:31"
         },
         "annotation" : [ {
           "s" : {
@@ -4124,7 +4124,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient25To50AndMale", ":\n    " ]
+                "s" : [ "define ", "Patient25To50AndMale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -4219,7 +4219,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -4308,7 +4308,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -4405,7 +4405,7 @@
           }
         } ],
         "localId" : "181",
-        "locator" : "71:3-74:33",
+        "locator" : "72:1-75:31",
         "name" : "Patient25To50AndMale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4431,24 +4431,24 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "182",
-                    "locator" : "77:27-77:45",
+                    "locator" : "78:25-78:43",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "183",
-                  "locator" : "77:18-77:45"
+                  "locator" : "78:16-78:43"
                 } ],
                 "localId" : "184",
-                "locator" : "77:5-77:46",
+                "locator" : "78:3-78:44",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "185",
-                "locator" : "77:51-77:52",
+                "locator" : "78:49-78:50",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "50"
               } ],
               "localId" : "186",
-              "locator" : "77:5-77:52"
+              "locator" : "78:3-78:50"
             }, {
               "type" : "Less",
               "operand" : [ {
@@ -4465,27 +4465,27 @@
                   "operand" : {
                     "type" : "ParameterRef",
                     "localId" : "187",
-                    "locator" : "78:33-78:51",
+                    "locator" : "79:31-79:49",
                     "name" : "MeasurementPeriod"
                   },
                   "localId" : "188",
-                  "locator" : "78:24-78:51"
+                  "locator" : "79:22-79:49"
                 } ],
                 "localId" : "189",
-                "locator" : "78:11-78:52",
+                "locator" : "79:9-79:50",
                 "precision" : "Year"
               }, {
                 "type" : "Literal",
                 "localId" : "190",
-                "locator" : "78:56-78:57",
+                "locator" : "79:54-79:55",
                 "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                 "value" : "65"
               } ],
               "localId" : "191",
-              "locator" : "78:11-78:57"
+              "locator" : "79:9-79:55"
             } ],
             "localId" : "192",
-            "locator" : "77:5-78:57"
+            "locator" : "78:3-79:55"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -4495,11 +4495,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "193",
-                  "locator" : "79:11-79:17",
+                  "locator" : "80:9-80:15",
                   "name" : "Patient"
                 },
                 "localId" : "194",
-                "locator" : "79:11-79:24",
+                "locator" : "80:9-80:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -4507,15 +4507,15 @@
             }, {
               "type" : "Literal",
               "localId" : "195",
-              "locator" : "79:28-79:33",
+              "locator" : "80:26-80:31",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "male"
             } ],
             "localId" : "196",
-            "locator" : "79:11-79:33"
+            "locator" : "80:9-80:31"
           } ],
           "localId" : "197",
-          "locator" : "77:5-79:33"
+          "locator" : "78:3-80:31"
         },
         "annotation" : [ {
           "s" : {
@@ -4524,7 +4524,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient50To65AndMale", ":\n    " ]
+                "s" : [ "define ", "Patient50To65AndMale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -4619,7 +4619,7 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "\n      and " ]
+                        "s" : [ "\n    and " ]
                       },
                       "globalScope" : true
                     }, {
@@ -4708,7 +4708,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -4805,7 +4805,7 @@
           }
         } ],
         "localId" : "198",
-        "locator" : "76:3-79:33",
+        "locator" : "77:1-80:31",
         "name" : "Patient50To65AndMale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4829,24 +4829,24 @@
                 "operand" : {
                   "type" : "ParameterRef",
                   "localId" : "199",
-                  "locator" : "82:27-82:45",
+                  "locator" : "83:25-83:43",
                   "name" : "MeasurementPeriod"
                 },
                 "localId" : "200",
-                "locator" : "82:18-82:45"
+                "locator" : "83:16-83:43"
               } ],
               "localId" : "201",
-              "locator" : "82:5-82:46",
+              "locator" : "83:3-83:44",
               "precision" : "Year"
             }, {
               "type" : "Literal",
               "localId" : "202",
-              "locator" : "82:51-82:52",
+              "locator" : "83:49-83:50",
               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
               "value" : "65"
             } ],
             "localId" : "203",
-            "locator" : "82:5-82:52"
+            "locator" : "83:3-83:50"
           }, {
             "type" : "Equal",
             "operand" : [ {
@@ -4856,11 +4856,11 @@
                 "source" : {
                   "type" : "ExpressionRef",
                   "localId" : "204",
-                  "locator" : "83:11-83:17",
+                  "locator" : "84:9-84:15",
                   "name" : "Patient"
                 },
                 "localId" : "205",
-                "locator" : "83:11-83:24",
+                "locator" : "84:9-84:22",
                 "path" : "gender"
               } ],
               "name" : "ToString",
@@ -4868,15 +4868,15 @@
             }, {
               "type" : "Literal",
               "localId" : "206",
-              "locator" : "83:28-83:33",
+              "locator" : "84:26-84:31",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "male"
             } ],
             "localId" : "207",
-            "locator" : "83:11-83:33"
+            "locator" : "84:9-84:31"
           } ],
           "localId" : "208",
-          "locator" : "82:5-83:33"
+          "locator" : "83:3-84:31"
         },
         "annotation" : [ {
           "s" : {
@@ -4885,7 +4885,7 @@
               "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
-                "s" : [ "define ", "Patient65ToHighestAndMale", ":\n    " ]
+                "s" : [ "define ", "Patient65ToHighestAndMale", ":\n  " ]
               },
               "globalScope" : true
             }, {
@@ -4975,7 +4975,7 @@
                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
-                    "s" : [ "\n      and " ]
+                    "s" : [ "\n    and " ]
                   },
                   "globalScope" : true
                 }, {
@@ -5072,7 +5072,7 @@
           }
         } ],
         "localId" : "209",
-        "locator" : "81:3-83:33",
+        "locator" : "82:1-84:31",
         "name" : "Patient65ToHighestAndMale",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -5081,7 +5081,7 @@
         "expression" : {
           "type" : "Literal",
           "localId" : "210",
-          "locator" : "85:30-85:33",
+          "locator" : "86:30-86:33",
           "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
           "value" : "true"
         },
@@ -5101,7 +5101,7 @@
           }
         } ],
         "localId" : "211",
-        "locator" : "85:1-85:33",
+        "locator" : "86:1-86:33",
         "name" : "Initial Population",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -5110,7 +5110,7 @@
         "expression" : {
           "type" : "Literal",
           "localId" : "212",
-          "locator" : "87:23-87:26",
+          "locator" : "88:23-88:26",
           "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
           "value" : "true"
         },
@@ -5130,7 +5130,7 @@
           }
         } ],
         "localId" : "213",
-        "locator" : "87:1-87:26",
+        "locator" : "88:1-88:26",
         "name" : "Denominator",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -5139,7 +5139,7 @@
         "expression" : {
           "type" : "Literal",
           "localId" : "214",
-          "locator" : "89:21-89:24",
+          "locator" : "90:21-90:24",
           "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
           "value" : "true"
         },
@@ -5159,7 +5159,7 @@
           }
         } ],
         "localId" : "215",
-        "locator" : "89:1-89:24",
+        "locator" : "90:1-90:24",
         "name" : "Numerator",
         "context" : "Patient",
         "accessLevel" : "Public"

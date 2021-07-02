@@ -3,7 +3,7 @@
 <Measure xmlns="http://hl7.org/fhir">
   <id value="HIVSimpleViralLoad-Measure"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: HIVSimpleViralLoad</p><p><b>title</b>: HIVSimpleViralLoad</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2018-03-08</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href="http://hl7.org/Special/committees/[something]">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: HIVSimpleViralLoad</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title="Codes: ">cohort</span></p><p><b>description</b>: Cohort</p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href="http://hl7.org/Special/committees/[something]">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
   </text>
   <url value="Measure/HIVSimpleViralLoad"/>
   <identifier>
@@ -11,11 +11,9 @@
     <value value="HIVSimpleViralLoad"/>
   </identifier>
   <version value="0.1.0"/>
-  <name value="HIVSimpleViralLoad"/>
-  <title value="HIVSimpleViralLoad"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-03-08"/>
+  <date value="2021-07-01"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -23,7 +21,6 @@
       <value value="http://hl7.org/Special/committees/[something]"/>
     </telecom>
   </contact>
-  <description value="HIVSimpleViralLoad"/>
   <library value="Library/HIVSimpleViralLoad"/>
   <scoring>
     <coding>
@@ -36,10 +33,6 @@
     </coding>
   </type>
   <group>
-    <code>
-      <text value="cohort"/>
-    </code>
-    <description value="Cohort"/>
     <population>
       <code>
         <coding>
@@ -57,19 +50,6 @@
       <code>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
-          <code value="numerator"/>
-        </coding>
-      </code>
-      <description value="Numerator"/>
-      <criteria>
-        <language value="text/cql"/>
-        <expression value="Numerator"/>
-      </criteria>
-    </population>
-    <population>
-      <code>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
           <code value="denominator"/>
         </coding>
       </code>
@@ -77,6 +57,19 @@
       <criteria>
         <language value="text/cql"/>
         <expression value="Denominator"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+        </coding>
+      </code>
+      <description value="Numerator"/>
+      <criteria>
+        <language value="text/cql"/>
+        <expression value="Numerator"/>
       </criteria>
     </population>
   </group>

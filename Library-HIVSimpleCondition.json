@@ -3,13 +3,11 @@
   "id": "HIVSimpleCondition",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts</h2><table class=\"grid\"><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIRHelpers|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon|4.0.1</code></td></tr><tr><td>depends-on</td><td><a href=\"Library-AgeRanges.html\">Age Ranges (version 0.1.0)</a></td></tr><tr><td>depends-on</td><td><code>http://snomed.info/sct|http://snomed.info/sct/900000000000207008</code></td></tr><tr><td>depends-on</td><td><a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-loinc.html\">Logical Observation Identifiers, Names and Codes (LOINC)</a></td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class=\"language-sql\">library HIVSimpleCondition version '0.1.0'\n\nusing FHIR version '4.0.1'\n\ninclude FHIRHelpers version '4.0.1'\ninclude FHIRCommon version '4.0.1' called FC\ninclude AgeRanges version '0.1.0' called AR\n\n// SNOMED-CT, International Edition\ncodesystem \"SNOMED-CT\": 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'\n\n// LOINC, 2.63+\ncodesystem \"LOINC\": 'http://loinc.org'\n\n// ConditionOnset: HIV infection\n// this conflicts with test result, so should be renamed\ncode \"HIV Positive\": '86406008' from \"SNOMED-CT\" display 'HIV Positive'\n\ncontext Patient\n\ndefine \"Sex\": Patient.gender\n\n// not working: everyone is false for some reason\ndefine \"HIV Condition\":\n  exists [\"Condition\": \"HIV Positive\"]\n\n/* define \"Get Condition from CodeSystem Declaration\":\n  [Condition: \"SNOMED:86406008\"] */\n\ndefine \"Initial Population\": true\n\ndefine \"Denominator\": true\n\n// always comes up false\ndefine \"Numerator\":\n  \"HIV Condition\"\n</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 7Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 21Kb)</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Related Artifacts</h2><table class=\"grid\"><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIRHelpers|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon|4.0.1</code></td></tr><tr><td>depends-on</td><td><a href=\"Library-AgeRanges.html\">Library[https://github.com/intrahealth/simple-hiv-ig/Library/AgeRanges] (version 0.1.0)</a></td></tr><tr><td>depends-on</td><td><code>http://snomed.info/sct|http://snomed.info/sct/900000000000207008</code></td></tr><tr><td>depends-on</td><td><a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-loinc.html\">Logical Observation Identifiers, Names and Codes (LOINC)</a></td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class=\"language-sql\">library HIVSimpleCondition version '0.1.0'\n\nusing FHIR version '4.0.1'\n\ninclude FHIRHelpers version '4.0.1'\ninclude FHIRCommon version '4.0.1' called FC\ninclude AgeRanges version '0.1.0' called AR\n\n// SNOMED-CT, International Edition\ncodesystem \"SNOMED-CT\": 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'\n\n// LOINC, 2.63+\ncodesystem \"LOINC\": 'http://loinc.org'\n\n// ConditionOnset: HIV infection\n// this conflicts with test result, so should be renamed\ncode \"HIV Positive\": '86406008' from \"SNOMED-CT\" display 'HIV Positive'\n\ncontext Patient\n\ndefine \"Sex\": Patient.gender\n\n// not working: everyone is false for some reason\ndefine \"HIV Condition\":\n  exists [\"Condition\": \"HIV Positive\"]\n\n/* define \"Get Condition from CodeSystem Declaration\":\n  [Condition: \"SNOMED:86406008\"] */\n\ndefine \"Initial Population\": true\n\ndefine \"Denominator\": true\n\n// always comes up false\ndefine \"Numerator\":\n  \"HIV Condition\"\n</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 7Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 21Kb)</p></div>"
   },
   "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleCondition",
   "version": "0.1.0",
-  "name": "HIVSimpleCondition",
-  "title": "HIVSimpleCondition",
-  "status": "active",
+  "status": "draft",
   "experimental": true,
   "type": {
     "coding": [
@@ -18,7 +16,7 @@
       }
     ]
   },
-  "date": "2021-07-01T23:33:19+00:00",
+  "date": "2021-07-02T04:39:18+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {

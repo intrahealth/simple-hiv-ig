@@ -1,0 +1,1076 @@
+{
+  "resourceType": "Bundle",
+  "id": "HIVSimple-Measures",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleAgeGroup-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleAgeGroup",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleAgeGroup"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleAgeGroup"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              }
+            ],
+            "stratifier": [
+              {
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Age Group"
+                }
+              }
+            ]
+          },
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              }
+            ],
+            "stratifier": [
+              {
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Age Group"
+                }
+              }
+            ]
+          },
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ],
+            "stratifier": [
+              {
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Age Group"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleCondition-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleCondition-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleCondition</code></p><p><b>identifier</b>: id: HIVSimpleCondition</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleCondition</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleCondition",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleCondition"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleCondition"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ],
+            "stratifier": [
+              {
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Age Group"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleDemog-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleDemog-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleDemog",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleDemog"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleDemog"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleGender-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleGender-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender</code></p><p><b>identifier</b>: id: HIVSimpleGender</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleGender",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleGender"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleGender"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleGender2-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleGender2-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleGender2",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleGender2"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleGender"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleGenderCohort-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleGenderCohort-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderCohort</code></p><p><b>identifier</b>: id: HIVSimpleGenderCohort</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleGenderCohort",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleGenderCohort"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleGender"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "cohort"
+            }
+          ]
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleGenderSubjectList-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleGenderSubjectList-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSubjectList</code></p><p><b>identifier</b>: id: HIVSimpleGenderSubjectList</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><p><b>type</b>: <span title=\"Codes: \">subject-list</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleGenderSubjectList",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleGenderSubjectList"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleGender"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "cohort"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "subject-list"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppData-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleGenderSuppData-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppData</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppData</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define</span></p></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleGenderSuppData",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleGenderSuppData"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleGender"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ],
+        "supplementalData": [
+          {
+            "code": {
+              "text": "supplemental-data-example-define"
+            },
+            "criteria": {
+              "language": "text/cql",
+              "expression": "SDE Sex"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppDataIndiv-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleGenderSuppDataIndiv-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppDataIndiv</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppDataIndiv</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGenderIndiv</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">individual</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define-sex</span></p></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define-location</span></p></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleGenderSuppDataIndiv",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleGenderSuppDataIndiv"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleGenderIndiv"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "individual"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ],
+        "supplementalData": [
+          {
+            "code": {
+              "text": "supplemental-data-example-define-sex"
+            },
+            "criteria": {
+              "language": "text/cql",
+              "expression": "SDE Sex"
+            }
+          },
+          {
+            "code": {
+              "text": "supplemental-data-example-define-location"
+            },
+            "criteria": {
+              "language": "text/cql",
+              "expression": "SDE Location"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleTestResult-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleTestResult-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleTestResult</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleTestResult",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleTestResult"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleTestResult"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Measure/HIVSimpleViralLoad-Measure",
+      "resource": {
+        "resourceType": "Measure",
+        "id": "HIVSimpleViralLoad-Measure",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+        },
+        "url": "Measure/HIVSimpleViralLoad",
+        "identifier": [
+          {
+            "system": "http://ohie.org/Measure/",
+            "value": "HIVSimpleViralLoad"
+          }
+        ],
+        "version": "0.0.0",
+        "status": "draft",
+        "experimental": true,
+        "date": "2021-07-01",
+        "publisher": "OpenHIE",
+        "library": [
+          "Library/HIVSimpleViralLoad"
+        ],
+        "scoring": {
+          "coding": [
+            {
+              "code": "proportion"
+            }
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "process"
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "description": "Initial Population",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Initial Population"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "description": "Denominator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Denominator"
+                }
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "description": "Numerator",
+                "criteria": {
+                  "language": "text/cql",
+                  "expression": "Numerator"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Measure"
+      }
+    }
+  ]
+}

@@ -3,78 +3,67 @@
     "id": "HIVSimpleAgeGroup-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleAgeGroup",
-    "version": "0.1.0",
-    "name": "HIVSimpleAgeGroup"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleCondition-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleCondition",
-    "version": "0.1.0",
-    "name": "HIVSimpleCondition"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleDemog-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleDemog",
-    "version": "0.1.0",
-    "name": "HIVSimpleDemog"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGender-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGender",
-    "version": "0.1.0",
-    "name": "HIVSimpleGender"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGender2-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGender2",
-    "version": "0.1.0",
-    "name": "HIVSimpleGender2"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGenderCohort-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderCohort",
-    "version": "0.1.0",
-    "name": "HIVSimpleGenderCohort"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGenderSubjectList-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSubjectList",
-    "version": "0.1.0",
-    "name": "HIVSimpleGenderSubjectList"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGenderSuppData-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSuppData",
-    "version": "0.1.0",
-    "name": "HIVSimpleGenderSuppData"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGenderSuppDataIndiv-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSuppDataIndiv",
-    "version": "0.1.0",
-    "name": "HIVSimpleGenderSuppDataIndiv"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleTestResult-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleTestResult",
-    "version": "0.1.0",
-    "name": "HIVSimpleTestResult"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleViralLoad-Measure",
     "type": "Measure",
     "url": "Measure/HIVSimpleViralLoad",
-    "version": "0.1.0",
-    "name": "HIVSimpleViralLoad"
+    "version": "0.1.0"
   },
   {
     "id": "simple-hiv-ig",
@@ -84,66 +73,57 @@
     "name": "simple-hiv-ig"
   },
   {
-    "id": "ANCStratifiers",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/ANCStratifiers",
-    "version": "0.1.0",
-    "name": "ANCStratifiers"
-  },
-  {
     "id": "AgeRanges",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/AgeRanges",
-    "version": "0.1.0",
-    "name": "AgeRanges"
+    "version": "0.1.0"
   },
   {
     "id": "FHIRCommon",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon",
-    "version": "0.1.0",
-    "name": "FHIRCommon"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleAgeGroup",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleAgeGroup",
-    "version": "0.1.0",
-    "name": "HIVSimpleAgeGroup"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleCondition",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleCondition",
-    "version": "0.1.0",
-    "name": "HIVSimpleCondition"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleDemog",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleDemog",
-    "version": "0.1.0",
-    "name": "HIVSimpleDemog"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleGender",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender",
-    "version": "0.1.0",
-    "name": "HIVSimpleGender"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleTestResult",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleTestResult",
-    "version": "0.1.0",
-    "name": "HIVSimpleTestResult"
+    "version": "0.1.0"
   },
   {
     "id": "HIVSimpleViralLoad",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleViralLoad",
-    "version": "0.1.0",
-    "name": "HIVSimpleViralLoad"
+    "version": "0.1.0"
+  },
+  {
+    "id": "Q",
+    "type": "Questionnaire",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Questionnaire/Q",
+    "version": "0.1.0"
   }
 ]

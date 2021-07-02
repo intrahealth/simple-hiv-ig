@@ -6,6 +6,8 @@ include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
 include AgeRanges version '0.1.0' called AR
 
+/* include ANCStratifiers called Stratifiers */
+
 // SNOMED-CT, International Edition
 codesystem "SNOMED-CT": 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
 
@@ -26,4 +28,4 @@ define "Denominator": true
 
 // returns null
 define "Numerator":
-  "Age Group/Sex"
+  AR."Age Group"

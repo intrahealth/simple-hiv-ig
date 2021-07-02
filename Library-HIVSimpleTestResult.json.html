@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SIMPLE-HIV-IG\HIVSimpleTestResult - JSON Representation - FHIR v4.0.1</title>
+    <title>SIMPLE-HIV-IG\ - JSON Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -140,7 +140,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>HIVSimpleTestResult</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -196,7 +196,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: HIVSimpleTestResult - JSON Representation</h2>
+<h2 id="root">:  - JSON Representation</h2>
 
 <p><a href="Library-HIVSimpleTestResult.json" no-download="true">Raw json</a> | <a href="Library-HIVSimpleTestResult.json" download>Download</a></p>
 
@@ -211,13 +211,11 @@
   "<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a>" : "HIVSimpleTestResult",
   "<a href="http://hl7.org/fhir/R4/library.html#Library.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Related Artifacts&lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://hl7.org/fhir/Library/FHIRHelpers|4.0.1&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon|4.0.1&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Library-AgeRanges.html\&quot;&gt;Age Ranges (version 0.1.0)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://snomed.info/sct|http://snomed.info/sct/900000000000207008&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/2.1.0/CodeSystem-v3-loinc.html\&quot;&gt;Logical Observation Identifiers, Names and Codes (LOINC)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class=\&quot;language-sql\&quot;&gt;library HIVSimpleTestResult version '0.1.0'\n\nusing FHIR version '4.0.1'\n\ninclude FHIRHelpers version '4.0.1'\ninclude FHIRCommon version '4.0.1' called FC\ninclude AgeRanges version '0.1.0' called AR\n\n// SNOMED-CT, International Edition\ncodesystem \&quot;SNOMED-CT\&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'\n\n// LOINC, 2.63+\ncodesystem \&quot;LOINC\&quot;: 'http://loinc.org'\n\n// HIV Test Results\ncode \&quot;HIV Negative\&quot;: '165815009' from \&quot;SNOMED-CT\&quot; display 'HIV Negative'\ncode \&quot;HIV Positive\&quot;: '165816005' from \&quot;SNOMED-CT\&quot; display 'HIV Positive'\ncode \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;: '75622-1' from \&quot;LOINC\&quot; display 'HIV 1 and 2 tests - Meaningful Use set'\n\ncontext Patient\n\ndefine \&quot;HIV Test Exists\&quot;:\n  exists ([Observation: \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;])\n\ndefine \&quot;HIV Positive Observation\&quot;:\n  [Observation: \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;] Observation\n    where Observation.value = \&quot;HIV Positive\&quot;\n\ndefine \&quot;HIV Negative Observation\&quot;:\n  [Observation: \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;] Observation\n    where Observation.value = \&quot;HIV Negative\&quot;\n\ndefine \&quot;Is HIV Positive\&quot;:\n  exists (\&quot;HIV Positive Observation\&quot;)\n  and \&quot;HIV Test Exists\&quot;\n\ndefine \&quot;Is HIV Negative\&quot;:\n  exists (\&quot;HIV Negative Observation\&quot;)\n  and \&quot;HIV Test Exists\&quot;\n\n// always null\ndefine \&quot;HIV Test Results\&quot;:\n  case\n    when \&quot;Is HIV Positive\&quot; then \&quot;HIV Positive\&quot;\n    when \&quot;Is HIV Negative\&quot; then \&quot;HIV Negative\&quot;\n    else null\n  end\n\ndefine \&quot;Sex\&quot;: Patient.gender\n\n// Age Group/Sex\n// always null\ndefine \&quot;Age Group/Sex\&quot;: AR.\&quot;Age Group\&quot;.code + ':' + \&quot;Sex\&quot;\n\n// always null\ndefine \&quot;Age Group/Sex/HIV Test Results\&quot;:\n  AR.\&quot;Age Group\&quot;.code + ':' + \&quot;Sex\&quot; + ':' + \&quot;HIV Test Results\&quot;.code\n\ndefine \&quot;Initial Population\&quot;: true\n\ndefine \&quot;Denominator\&quot;: true\n\ndefine \&quot;Numerator\&quot;:\n  \&quot;Is HIV Negative\&quot;\n  and \&quot;Sex\&quot; = 'female'\n&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;Content not shown - (&lt;/code&gt;&lt;code&gt;application/elm+xml&lt;/code&gt;, size = 24Kb)&lt;/p&gt;&lt;p&gt;&lt;code&gt;Content not shown - (&lt;/code&gt;&lt;code&gt;application/elm+json&lt;/code&gt;, size = 101Kb)&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Related Artifacts&lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://hl7.org/fhir/Library/FHIRHelpers|4.0.1&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon|4.0.1&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Library-AgeRanges.html\&quot;&gt;Library[https://github.com/intrahealth/simple-hiv-ig/Library/AgeRanges] (version 0.1.0)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;code&gt;http://snomed.info/sct|http://snomed.info/sct/900000000000207008&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;depends-on&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/2.1.0/CodeSystem-v3-loinc.html\&quot;&gt;Logical Observation Identifiers, Names and Codes (LOINC)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;p&gt;&lt;code&gt;text/cql&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class=\&quot;language-sql\&quot;&gt;library HIVSimpleTestResult version '0.1.0'\n\nusing FHIR version '4.0.1'\n\ninclude FHIRHelpers version '4.0.1'\ninclude FHIRCommon version '4.0.1' called FC\ninclude AgeRanges version '0.1.0' called AR\n\n// SNOMED-CT, International Edition\ncodesystem \&quot;SNOMED-CT\&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'\n\n// LOINC, 2.63+\ncodesystem \&quot;LOINC\&quot;: 'http://loinc.org'\n\n// HIV Test Results\ncode \&quot;HIV Negative\&quot;: '165815009' from \&quot;SNOMED-CT\&quot; display 'HIV Negative'\ncode \&quot;HIV Positive\&quot;: '165816005' from \&quot;SNOMED-CT\&quot; display 'HIV Positive'\ncode \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;: '75622-1' from \&quot;LOINC\&quot; display 'HIV 1 and 2 tests - Meaningful Use set'\n\ncontext Patient\n\ndefine \&quot;HIV Test Exists\&quot;:\n  exists ([Observation: \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;])\n\ndefine \&quot;HIV Positive Observation\&quot;:\n  [Observation: \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;] Observation\n    where Observation.value = \&quot;HIV Positive\&quot;\n\ndefine \&quot;HIV Negative Observation\&quot;:\n  [Observation: \&quot;HIV 1 and 2 tests - Meaningful Use set\&quot;] Observation\n    where Observation.value = \&quot;HIV Negative\&quot;\n\ndefine \&quot;Is HIV Positive\&quot;:\n  exists (\&quot;HIV Positive Observation\&quot;)\n  and \&quot;HIV Test Exists\&quot;\n\ndefine \&quot;Is HIV Negative\&quot;:\n  exists (\&quot;HIV Negative Observation\&quot;)\n  and \&quot;HIV Test Exists\&quot;\n\n// always null\ndefine \&quot;HIV Test Results\&quot;:\n  case\n    when \&quot;Is HIV Positive\&quot; then \&quot;HIV Positive\&quot;\n    when \&quot;Is HIV Negative\&quot; then \&quot;HIV Negative\&quot;\n    else null\n  end\n\ndefine \&quot;Sex\&quot;: Patient.gender\n\n// Age Group/Sex\n// always null\ndefine \&quot;Age Group/Sex\&quot;: AR.\&quot;Age Group\&quot;.code + ':' + \&quot;Sex\&quot;\n\n// always null\ndefine \&quot;Age Group/Sex/HIV Test Results\&quot;:\n  AR.\&quot;Age Group\&quot;.code + ':' + \&quot;Sex\&quot; + ':' + \&quot;HIV Test Results\&quot;.code\n\ndefine \&quot;Initial Population\&quot;: true\n\ndefine \&quot;Denominator\&quot;: true\n\ndefine \&quot;Numerator\&quot;:\n  \&quot;Is HIV Negative\&quot;\n  and \&quot;Sex\&quot; = 'female'\n&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;Content not shown - (&lt;/code&gt;&lt;code&gt;application/elm+xml&lt;/code&gt;, size = 24Kb)&lt;/p&gt;&lt;p&gt;&lt;code&gt;Content not shown - (&lt;/code&gt;&lt;code&gt;application/elm+json&lt;/code&gt;, size = 101Kb)&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a>" : "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleTestResult",
   "<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a>" : "0.1.0",
-  "<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a>" : "HIVSimpleTestResult",
-  "<a href="http://hl7.org/fhir/R4/library.html#Library.title">title</a>" : "HIVSimpleTestResult",
-  "<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/R4/library.html#Library.experimental">experimental</a>" : true,
   "<a href="http://hl7.org/fhir/R4/library.html#Library.type">type</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -226,7 +224,7 @@
       }
     ]
   },
-  "<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a>" : "2021-07-01T23:33:19+00:00",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a>" : "2021-07-02T04:39:18+00:00",
   "<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a>" : "IntraHealth International",
   "<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>" : [
     {
@@ -306,7 +304,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 1, 2021 23:33+0000">2021-07-01</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 2, 2021 04:39+0000">2021-07-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
