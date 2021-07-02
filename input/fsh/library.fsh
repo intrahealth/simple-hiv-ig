@@ -1,95 +1,91 @@
+// Usage: #example is the default, so omitted
+// * title is unnecessary
+// * name is unnecessary
+// * id is unnecessary
+
+RuleSet: lib-common
+* status = #draft
+* experimental = true
+* type = #logic-library
+
 Instance: AgeRanges
 InstanceOf: Library
-Usage: #example
-* name = "AgeRanges"
-* title = "Age Ranges"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-AgeRanges.cql"
-
-Instance: ANCStratifiers
-InstanceOf: Library
-Usage: #example
-* name = "ANCStratifiers"
-* title = "ANCStratifiers"
-* status = #active
-* experimental = true
-* type = #logic-library
-* content.id = "ig-loader-ANCStratifiers.cql"
 
 Instance: FHIRCommon
 InstanceOf: Library
-Usage: #example
-* name = "FHIRCommon"
-* title = "FHIR Common"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-FHIRCommon.cql"
 
 Instance: HIVSimpleAgeGroup
 InstanceOf: Library
-Usage: #example
-* id = "HIVSimpleAgeGroup"
-* name = "HIVSimpleAgeGroup"
-* title = "HIVSimpleAgeGroup"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-HIVSimpleAgeGroup.cql"
 
 Instance: HIVSimpleCondition
 InstanceOf: Library
-Usage: #example
-* id = "HIVSimpleCondition"
-* name = "HIVSimpleCondition"
-* title = "HIVSimpleCondition"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-HIVSimpleCondition.cql"
 
 Instance: HIVSimpleDemog
 InstanceOf: Library
-Usage: #example
-* id = "HIVSimpleDemog"
-* name = "HIVSimpleDemog"
-* title = "HIVSimpleDemog"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-HIVSimpleDemog.cql"
 
 Instance: HIVSimpleGender
 InstanceOf: Library
-Usage: #example
-* id = "HIVSimpleGender"
-* name = "HIVSimpleGender"
-* title = "HIVSimpleGender"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-HIVSimpleGender.cql"
 
 Instance: HIVSimpleTestResult
 InstanceOf: Library
-Usage: #example
-* id = "HIVSimpleTestResult"
-* name = "HIVSimpleTestResult"
-* title = "HIVSimpleTestResult"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-HIVSimpleTestResult.cql"
 
 Instance: HIVSimpleViralLoad
 InstanceOf: Library
-Usage: #example
-* id = "HIVSimpleViralLoad"
-* name = "HIVSimpleViralLoad"
-* title = "HIVSimpleViralLoad"
-* status = #active
-* experimental = true
-* type = #logic-library
+* insert lib-common
 * content.id = "ig-loader-HIVSimpleViralLoad.cql"
+
+
+RuleSet: lib-bundle
+* entry[=].request.url = "Library"
+* entry[=].request.method = #PUT
+
+// weird, only the cql is included, not the elm
+Instance: HIVSimple-Library
+InstanceOf: Bundle
+* type = #transaction
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/AgeRanges"
+* entry[=].resource = AgeRanges
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/FHIRCommon"
+* entry[=].resource = FHIRCommon
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/HIVSimpleAgeGroup"
+* entry[=].resource = HIVSimpleAgeGroup
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/HIVSimpleCondition"
+* entry[=].resource = HIVSimpleCondition
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/HIVSimpleDemog"
+* entry[=].resource = HIVSimpleDemog
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/HIVSimpleGender"
+* entry[=].resource = HIVSimpleGender
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/HIVSimpleTestResult"
+* entry[=].resource = HIVSimpleTestResult
+* insert lib-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Library/HIVSimpleViralLoad"
+* entry[=].resource = HIVSimpleViralLoad
+* insert lib-bundle

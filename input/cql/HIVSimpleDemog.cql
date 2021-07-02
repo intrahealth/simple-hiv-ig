@@ -24,63 +24,64 @@ define "Sex": Patient.gender
 define "Age Group Test":
   AR."Age Group".code
 
-  define Patient0To5AndFemale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 0
-      and AgeInYearsAt(start of "MeasurementPeriod") < 5
-      and Patient.gender = 'female'
+// these seem to work
+define Patient0To5AndFemale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 0
+    and AgeInYearsAt(start of "MeasurementPeriod") < 5
+    and Patient.gender = 'female'
 
-  define Patient5To15AndFemale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 5
-      and AgeInYearsAt(start of "MeasurementPeriod") < 15
-      and Patient.gender = 'female'
+define Patient5To15AndFemale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 5
+    and AgeInYearsAt(start of "MeasurementPeriod") < 15
+    and Patient.gender = 'female'
 
-  define Patient15To25AndFemale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 15
-      and AgeInYearsAt(start of "MeasurementPeriod") < 25
-      and Patient.gender = 'female'
+define Patient15To25AndFemale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 15
+    and AgeInYearsAt(start of "MeasurementPeriod") < 25
+    and Patient.gender = 'female'
 
-  define Patient25To50AndFemale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 25
-      and AgeInYearsAt(start of "MeasurementPeriod") < 50
-      and Patient.gender = 'female'
+define Patient25To50AndFemale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 25
+    and AgeInYearsAt(start of "MeasurementPeriod") < 50
+    and Patient.gender = 'female'
 
-  define Patient50To65AndFemale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 50
-      and AgeInYearsAt(start of "MeasurementPeriod") < 65
-      and Patient.gender = 'female'
+define Patient50To65AndFemale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 50
+    and AgeInYearsAt(start of "MeasurementPeriod") < 65
+    and Patient.gender = 'female'
 
-  define Patient65ToHighestAndFemale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 65
-      and Patient.gender = 'female'
+define Patient65ToHighestAndFemale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 65
+    and Patient.gender = 'female'
 
-  define Patient0To5AndMale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 0
-      and AgeInYearsAt(start of "MeasurementPeriod") < 5
-      and Patient.gender = 'male'
+define Patient0To5AndMale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 0
+    and AgeInYearsAt(start of "MeasurementPeriod") < 5
+    and Patient.gender = 'male'
 
-  define Patient5To15AndMale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 5
-      and AgeInYearsAt(start of "MeasurementPeriod") < 15
-      and Patient.gender = 'male'
+define Patient5To15AndMale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 5
+    and AgeInYearsAt(start of "MeasurementPeriod") < 15
+    and Patient.gender = 'male'
 
-  define Patient15To25AndMale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 15
-      and AgeInYearsAt(start of "MeasurementPeriod") < 25
-      and Patient.gender = 'male'
+define Patient15To25AndMale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 15
+    and AgeInYearsAt(start of "MeasurementPeriod") < 25
+    and Patient.gender = 'male'
 
-  define Patient25To50AndMale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 25
-      and AgeInYearsAt(start of "MeasurementPeriod") < 50
-      and Patient.gender = 'male'
+define Patient25To50AndMale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 25
+    and AgeInYearsAt(start of "MeasurementPeriod") < 50
+    and Patient.gender = 'male'
 
-  define Patient50To65AndMale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 50
-      and AgeInYearsAt(start of "MeasurementPeriod") < 65
-      and Patient.gender = 'male'
+define Patient50To65AndMale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 50
+    and AgeInYearsAt(start of "MeasurementPeriod") < 65
+    and Patient.gender = 'male'
 
-  define Patient65ToHighestAndMale:
-    AgeInYearsAt(start of "MeasurementPeriod") >= 65
-      and Patient.gender = 'male'
+define Patient65ToHighestAndMale:
+  AgeInYearsAt(start of "MeasurementPeriod") >= 65
+    and Patient.gender = 'male'
 
 define "Initial Population": true
 

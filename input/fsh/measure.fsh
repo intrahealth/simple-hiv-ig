@@ -1,278 +1,265 @@
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 
-Instance: HIVSimpleAgeGroup-Measure
-InstanceOf: Measure
-Usage: #example
-* url = "Measure/HIVSimpleAgeGroup"
+// Usage: #example is default so omitted
+// * name is removed for clarity
+// * title is removed for clarity
+// * description is removed for clarity
+
+RuleSet: meas-common
 * identifier.system = "http://ohie.org/Measure/"
-* identifier.value = "HIVSimpleAgeGroup"
 * version = "0.0.0"
-* name = "HIVSimpleAgeGroup"
-* title = "HIVSimpleAgeGroup"
 * status = #draft
 * experimental = true
-* date = "2018-03-08"
-* publisher = "Open HIE"
-* description = "HIVSimpleAgeGroup"
+* date = "2021-07-01"
+* publisher = "OpenHIE"
+
+
+// inline expression attempt for stratifier
+// Instance: HIVSimpleCQFExpression
+// InstanceOf: Measure
+// * url = "Measure/HIVSimpleCQFExpression"
+// * identifier.value = "HIVSimpleCQFExpression"
+// * library = "Library/HIVSimpleCQFExpression"
+// * insert meas-common
+
+// * scoring.coding.code = #proportion
+// * type.coding.code = #process
+
+// * group.population[+].description = "Initial Population"
+// * group.population[=].code = $measure-population#initial-population
+// * group.population[=].criteria.language = #text/cql
+// * group.population[=].criteria.expression = "Initial Population"
+// * group.stratifier[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-expression"
+// * group.stratifier[=].extension.valueExpression.language = #text/cql
+// * group.stratifier[=].extension.valueExpression.expression = "Patient.gender = 'female'"
+
+Instance: HIVSimpleAgeGroup-Measure
+InstanceOf: Measure
+* url = "Measure/HIVSimpleAgeGroup"
+* identifier.value = "HIVSimpleAgeGroup"
 * library = "Library/HIVSimpleAgeGroup"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
+
+// separate population groups with separate stratifiers per group
+* group[+].population[+].description = "Initial Population"
+* group[=].population[=].code = $measure-population#initial-population
+* group[=].population[=].criteria.language = #text/cql
+* group[=].population[=].criteria.expression = "Initial Population"
+* group[=].stratifier[+].criteria.language = #text/cql
+* group[=].stratifier[=].criteria.expression = "Age Group"
+
+* group[+].population[+].description = "Denominator"
+* group[=].population[=].code = $measure-population#denominator
+* group[=].population[=].criteria.language = #text/cql
+* group[=].population[=].criteria.expression = "Denominator"
+* group[=].stratifier[+].criteria.language = #text/cql
+* group[=].stratifier[=].criteria.expression = "Age Group"
+
+* group[+].population[+].description = "Numerator"
+* group[=].population[=].code = $measure-population#numerator
+* group[=].population[=].criteria.language = #text/cql
+* group[=].population[=].criteria.expression = "Numerator"
+* group[=].stratifier[+].criteria.language = #text/cql
+* group[=].stratifier[=].criteria.expression = "Age Group"
+
 
 Instance: HIVSimpleCondition-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleCondition"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleCondition"
-* version = "0.0.0"
-* name = "HIVSimpleCondition"
-* title = "HIVSimpleCondition"
-* status = #draft
-* experimental = true
-* date = "2018-03-08"
-* publisher = "Open HIE"
-* description = "HIVSimpleCondition"
 * library = "Library/HIVSimpleCondition"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+// same population group with shared stratifiers
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
+* group.stratifier[+].criteria.language = #text/cql
+* group.stratifier[=].criteria.expression = "Age Group"
+
 
 Instance: HIVSimpleDemog-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleDemog"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleDemog"
-* version = "0.0.0"
-* name = "HIVSimpleDemog"
-* title = "HIVSimpleDemog"
-* status = #draft
-* experimental = true
-* date = "2018-03-08"
-* publisher = "Open HIE"
-* description = "HIVSimpleDemog"
 * library = "Library/HIVSimpleDemog"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
 
 Instance: HIVSimpleGender-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleGender"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleGender"
-* version = "0.1.0"
-* name = "HIVSimpleGender"
-* title = "HIVSimpleGender"
-* status = #draft
-* experimental = true
-* date = "2018-03-08"
-* publisher = "Open HIE"
-* description = "HIVSimpleGender"
 * library = "Library/HIVSimpleGender"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
 
 Instance: HIVSimpleGender2-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleGender2"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleGender2"
-* version = "0.1.0"
-* name = "HIVSimpleGender2"
-* title = "HIVSimpleGender2"
-* status = #draft
-* experimental = true
-* date = "2021-03-01"
-* publisher = "HL7 International - [Some] Work Group"
-* description = "HIVSimpleGender2"
 * library = "Library/HIVSimpleGender"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
 
 Instance: HIVSimpleGenderCohort-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleGenderCohort"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleGenderCohort"
-* version = "0.1.0"
-* name = "HIVSimpleGenderCohort"
-* title = "HIVSimpleGenderCohort"
-* status = #draft
-* experimental = true
-* date = "2021-03-01"
-* publisher = "HL7 International - [Some] Work Group"
-* description = "HIVSimpleGenderCohort"
 * library = "Library/HIVSimpleGender"
-* scoring.coding.code = #cohort
-* group.code.text = "HIVSimpleGenderCohort"
-* group.description = "HIVSimpleGenderCohort"
-* group.population.description = "Initial Population"
-* group.population.code = $measure-population#initial-population
-* group.population.criteria.language = #text/cql
-* group.population.criteria.expression = "Initial Population"
+* insert meas-common
 
-Instance: HIVSimpleGenderSubjectList-Measure
-InstanceOf: Measure
-Usage: #example
-* url = "Measure/HIVSimpleGenderSubjectList"
-* identifier.system = "http://ohie.org/Measure/"
-* identifier.value = "HIVSimpleGenderSubjectList"
-* version = "0.1.0"
-* name = "HIVSimpleGenderSubjectList"
-* title = "HIVSimpleGenderSubjectList"
-* status = #draft
-* experimental = true
-* date = "2021-03-01"
-* publisher = "HL7 International - [Some] Work Group"
-* description = "HIVSimpleGenderSubjectList"
-* library = "Library/HIVSimpleGender"
-* type.coding.code = #subject-list
 * scoring.coding.code = #cohort
-* group.code.text = "HIVSimpleGenderSubjectList"
-* group.description = "HIVSimpleGenderSubjectList"
-* group.population.description = "Initial Population"
-* group.population.code = $measure-population#initial-population
-* group.population.criteria.language = #text/cql
-* group.population.criteria.expression = "Initial Population"
 
-Instance: HIVSimpleGenderSuppData-Measure
-InstanceOf: Measure
-Usage: #example
-* url = "Measure/HIVSimpleGenderSuppData"
-* identifier.system = "http://ohie.org/Measure/"
-* identifier.value = "HIVSimpleGenderSuppData"
-* version = "0.1.0"
-* name = "HIVSimpleGenderSuppData"
-* title = "HIVSimpleGenderSuppData"
-* status = #draft
-* experimental = true
-* date = "2021-03-01"
-* publisher = "HL7 International - [Some] Work Group"
-* description = "HIVSimpleGenderSuppData"
-* library = "Library/HIVSimpleGender"
-* scoring.coding.code = #proportion
-* type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
+
+
+Instance: HIVSimpleGenderSubjectList-Measure
+InstanceOf: Measure
+* url = "Measure/HIVSimpleGenderSubjectList"
+* identifier.value = "HIVSimpleGenderSubjectList"
+* library = "Library/HIVSimpleGender"
+* insert meas-common
+
+* type.coding.code = #subject-list
+* scoring.coding.code = #cohort
+
+* group.population[+].description = "Initial Population"
+* group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+* group.population[=].criteria.expression = "Initial Population"
+
+
+Instance: HIVSimpleGenderSuppData-Measure
+InstanceOf: Measure
+* url = "Measure/HIVSimpleGenderSuppData"
+* identifier.value = "HIVSimpleGenderSuppData"
+* library = "Library/HIVSimpleGender"
+* insert meas-common
+
+* scoring.coding.code = #proportion
+* type.coding.code = #process
+
+* group.population[+].description = "Initial Population"
+* group.population[=].code = $measure-population#initial-population
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Initial Population"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
 * supplementalData.code.text = "supplemental-data-example-define"
 * supplementalData.criteria.language = #text/cql
 * supplementalData.criteria.expression = "SDE Sex"
 
+
 Instance: HIVSimpleGenderSuppDataIndiv-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleGenderSuppDataIndiv"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
-* version = "0.1.0"
-* name = "HIVSimpleGenderSuppDataIndiv"
-* title = "HIVSimpleGenderSuppDataIndiv"
-* status = #draft
-* experimental = true
-* date = "2021-03-01"
-* publisher = "HL7 International - [Some] Work Group"
-* description = "HIVSimpleGenderSuppDataIndiv"
 * library = "Library/HIVSimpleGenderIndiv"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #individual
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
 * supplementalData[0].code.text = "supplemental-data-example-define-sex"
 * supplementalData[=].criteria.language = #text/cql
 * supplementalData[=].criteria.expression = "SDE Sex"
@@ -281,67 +268,106 @@ Usage: #example
 * supplementalData[=].criteria.expression = "SDE Location"
 
 
-
 Instance: HIVSimpleTestResult-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleTestResult"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleTestResult"
-* version = "0.0.0"
-* name = "HIVSimpleTestResult"
-* title = "HIVSimpleTestResult"
-* status = #draft
-* experimental = true
-* date = "2021-03-01"
-* publisher = "Open HIE"
-* description = "HIVSimpleTestResult"
 * library = "Library/HIVSimpleTestResult"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
 
 Instance: HIVSimpleViralLoad-Measure
 InstanceOf: Measure
-Usage: #example
 * url = "Measure/HIVSimpleViralLoad"
-* identifier.system = "http://ohie.org/Measure/"
 * identifier.value = "HIVSimpleViralLoad"
-* version = "0.0.0"
-* name = "HIVSimpleViralLoad"
-* title = "HIVSimpleViralLoad"
-* status = #draft
-* experimental = true
-* date = "2018-03-08"
-* publisher = "Open HIE"
-* description = "HIVSimpleViralLoad"
 * library = "Library/HIVSimpleViralLoad"
+* insert meas-common
+
 * scoring.coding.code = #proportion
 * type.coding.code = #process
-* group.code.text = "cohort"
-* group.description = "Cohort"
-* group.population[0].description = "Initial Population"
+
+* group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Initial Population"
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+
 * group.population[+].description = "Denominator"
 * group.population[=].code = $measure-population#denominator
 * group.population[=].criteria.language = #text/cql
 * group.population[=].criteria.expression = "Denominator"
+
+* group.population[+].description = "Numerator"
+* group.population[=].code = $measure-population#numerator
+* group.population[=].criteria.language = #text/cql
+* group.population[=].criteria.expression = "Numerator"
+
+
+RuleSet: meas-bundle
+* entry[=].request.url = "Measure"
+* entry[=].request.method = #PUT
+
+Instance: HIVSimple-Measures
+InstanceOf: Bundle
+* type = #transaction
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup-Measure"
+* entry[=].resource = HIVSimpleAgeGroup-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleCondition-Measure"
+* entry[=].resource = HIVSimpleCondition-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleDemog-Measure"
+* entry[=].resource = HIVSimpleDemog-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender-Measure"
+* entry[=].resource = HIVSimpleGender-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender2-Measure"
+* entry[=].resource = HIVSimpleGender2-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderCohort-Measure"
+* entry[=].resource = HIVSimpleGenderCohort-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSubjectList-Measure"
+* entry[=].resource = HIVSimpleGenderSubjectList-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppData-Measure"
+* entry[=].resource = HIVSimpleGenderSuppData-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppDataIndiv-Measure"
+* entry[=].resource = HIVSimpleGenderSuppDataIndiv-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleTestResult-Measure"
+* entry[=].resource = HIVSimpleTestResult-Measure
+* insert meas-bundle
+
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleViralLoad-Measure"
+* entry[=].resource = HIVSimpleViralLoad-Measure
+* insert meas-bundle

@@ -1,65 +1,48 @@
 Alias: LNC = http://loinc.org
 Alias: SCT = http://snomed.info/sct
 
+// Usage: #example is default
+// Title: "" is unused
+// Description: "" is unused
+
 Instance:     Patient-HIVSimple
 InstanceOf:   Patient
-Usage:        #example
-// Title: ""
-// Description: ""
 * name[+].text = "Felix Cat"
 * birthDate = "2000-01-02"
 
 Instance: Organization-HIVSimple
 InstanceOf: Organization
-Usage: #example
-// Title: ""
-// Description: ""
 * name = "Government Hospital"
 
 Instance: Location-HIVSimple
 InstanceOf: Location
-Usage: #example
-// Title: "Facility-HIVSimple"
-// Description: ""
 * managingOrganization = Reference(Organization-HIVSimple)
 
 Instance: Observation-HIVSimple
 InstanceOf: Observation
-Usage: #example
-// Title: "Observation-HIVSimple"
-// Description: ""
 * status = #final
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
 * code = LNC#75622-1 "LOINC Code"
 * valueCodeableConcept = SCT#165816005 "HIV Positive"
-// expecting {'units', '='}
-// * valueCodeableConcept = SCT#165815009 "Human immunodeficiency virus negative (finding)"
 
 Instance: DiagnosticReport-HIVSimple
 InstanceOf: DiagnosticReport
-Usage: #example
-// Title: "DiagnosticReport"
-// Description: ""
+* status = #final
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
 * result = Reference(Observation-HIVSimple)
-* status = #final
 * code = LNC#75622-1 "HIV types 1 and 2 testing"
 
 Instance: Condition-HIVSimple
 InstanceOf: Condition
-Usage: #example
-// Title: "Condition-HIVSimple"
-// Description: ""
 * clinicalStatus = #active
-* subject = Reference(Patient-HIVSimple)
 * verificationStatus = #confirmed
+* subject = Reference(Patient-HIVSimple)
 * code = SCT#86406008 "HIV Positive"
 
 Instance: Example-HIVSimple
 InstanceOf: Bundle
-Usage: #example
 * type = #transaction
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Patient-HIVSimple"
