@@ -12,26 +12,7 @@ RuleSet: meas-common
 * experimental = true
 * date = "2021-07-01"
 * publisher = "OpenHIE"
-
-
-// inline expression attempt for stratifier
-// Instance: HIVSimpleCQFExpression
-// InstanceOf: Measure
-// * url = "Measure/HIVSimpleCQFExpression"
-// * identifier.value = "HIVSimpleCQFExpression"
-// * library = "Library/HIVSimpleCQFExpression"
-// * insert meas-common
-
-// * scoring.coding.code = #proportion
-// * type.coding.code = #process
-
-// * group.population[+].description = "Initial Population"
-// * group.population[=].code = $measure-population#initial-population
-// * group.population[=].criteria.language = #text/cql
-// * group.population[=].criteria.expression = "Initial Population"
-// * group.stratifier[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-expression"
-// * group.stratifier[=].extension.valueExpression.language = #text/cql
-// * group.stratifier[=].extension.valueExpression.expression = "Patient.gender = 'female'"
+// * type.coding.code = #process <- this is not used in calculations
 
 Instance: HIVSimpleAgeGroup-Measure
 InstanceOf: Measure
@@ -40,11 +21,16 @@ InstanceOf: Measure
 * library = "Library/HIVSimpleAgeGroup"
 * insert meas-common
 
+// options: proportion | ratio | continuous-variable | cohort
 * scoring.coding.code = #proportion
-* type.coding.code = #process
+
+// options: opportunity | all-or-nothing | linear | weighted
+// * compositeScoring.coding.code = linear
 
 // separate population groups with separate stratifiers per group
+
 * group[+].population[+].description = "Initial Population"
+// options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation
 * group[=].population[=].code = $measure-population#initial-population
 * group[=].population[=].criteria.language = #text/cql
 * group[=].population[=].criteria.expression = "Initial Population"
@@ -74,7 +60,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 // same population group with shared stratifiers
 * group.population[+].description = "Initial Population"
@@ -104,7 +89,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -130,7 +114,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -156,7 +139,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -196,7 +178,6 @@ InstanceOf: Measure
 * library = "Library/HIVSimpleGender"
 * insert meas-common
 
-* type.coding.code = #subject-list
 * scoring.coding.code = #cohort
 
 * group.population[+].description = "Initial Population"
@@ -213,7 +194,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -243,7 +223,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #individual
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -276,7 +255,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -302,7 +280,6 @@ InstanceOf: Measure
 * insert meas-common
 
 * scoring.coding.code = #proportion
-* type.coding.code = #process
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
