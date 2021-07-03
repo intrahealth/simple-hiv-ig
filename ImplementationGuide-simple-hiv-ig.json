@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-07-03T05:06:53+00:00",
+  "date": "2021-07-03T16:33:10+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -493,6 +493,17 @@
         ],
         "reference": {
           "reference": "DiagnosticReport/DiagnosticReport-HIVSimple"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/KitchenSink"
         }
       },
       {

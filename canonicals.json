@@ -121,6 +121,12 @@
     "version": "0.1.0"
   },
   {
+    "id": "KitchenSink",
+    "type": "Library",
+    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/KitchenSink",
+    "version": "0.1.0"
+  },
+  {
     "id": "Q",
     "type": "Questionnaire",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Questionnaire/Q",

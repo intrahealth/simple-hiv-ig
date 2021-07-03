@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 2, errors = 115, warn = 124, info = 23 -->
+<!-- broken links = 2, errors = 119, warn = 127, info = 23 -->
 <head>
   <title>simple-hiv-ig : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for simple-hiv-ig</h1>
- <p>Generated Sat Jul 03 05:07:05 UTC 2021, FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = <a href="https://github.com/intrahealth/simple-hiv-ig">https://github.com/intrahealth/simple-hiv-ig</a> (<a href="https://github.com/intrahealth/simple-hiv-ig/history.html">history</a>)). See <a href="/github/workspace/output/qa.html">Full QA Report</a></p>
+ <p>Generated Sat Jul 03 16:33:25 UTC 2021, FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = <a href="https://github.com/intrahealth/simple-hiv-ig">https://github.com/intrahealth/simple-hiv-ig</a> (<a href="https://github.com/intrahealth/simple-hiv-ig/history.html">history</a>)). See <a href="/github/workspace/output/qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.76</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = simple-hiv-ig, Canonical = https://github.com/intrahealth/simple-hiv-ig</td></tr>
@@ -37,14 +37,14 @@
  <br/><br/>The copyrightYear parameter ('2020+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://github.com/intrahealth/simple-hiv-ig (Problem #1 with package-list.json at https://github.com/intrahealth/simple-hiv-ig: https://github.com/intrahealth/simple-hiv-ig/package-list.json)</td></tr>
- <tr><td>Summary:</td><td> broken links = 2, errors = 115, warn = 124, info = 23</td></tr>
+ <tr><td>Summary:</td><td> broken links = 2, errors = 119, warn = 127, info = 23</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>31</b></td><td><b>30</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>32</b></td><td><b>31</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Example-HIVSimple"><b>/github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple</b></a></td><td><b>6</b></td><td><b>5</b></td><td><b>1</b></td>
@@ -84,6 +84,9 @@
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Library-HIVSimpleViralLoad"><b>/github/workspace/fsh-generated/resources/Library-HIVSimpleViralLoad</b></a></td><td><b>3</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Library-KitchenSink"><b>/github/workspace/fsh-generated/resources/Library-KitchenSink</b></a></td><td><b>3</b></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Measure-HIVSimpleAgeGroup-Measure"><b>/github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup-Measure</b></a></td><td><b>6</b></td><td><b>5</b></td><td><b>1</b></td>
@@ -232,6 +235,12 @@
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource DiagnosticReport/DiagnosticReport-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Library/KitchenSink.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/KitchenSink.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Patient/Patient-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
@@ -310,10 +319,10 @@
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/HIVSimpleViralLoad.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Bundle-Example-HIVSimple.html#d6687cbe-a97b-49d4-8396-3f5a7165e7c9">Bundle-Example-HIVSimple.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 224, column 311</a></b></td><td><b>error</b></td><td><b>The link 'Encounter-HIVSimple' for &quot;Encounter-HIVSimple&quot; cannot be resolved</b></td>
+     <td><b><a href="Bundle-Example-HIVSimple.html#8333d7ea-b74e-497f-81a1-ec06f9ffe4cb">Bundle-Example-HIVSimple.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 224, column 311</a></b></td><td><b>error</b></td><td><b>The link 'Encounter-HIVSimple' for &quot;Encounter-HIVSimple&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-Observation-HIVSimple.html#f4f018c6-4c1d-4e36-9a89-d89f7e4c5b0d">Observation-Observation-HIVSimple.html#/html/body/div/div/div/div/div/div/p/a at Line 209, column 308</a></b></td><td><b>error</b></td><td><b>The link 'Encounter-HIVSimple' for &quot;Encounter-HIVSimple&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-Observation-HIVSimple.html#0fc2a355-a0dd-4219-9caa-2d632fe714b6">Observation-Observation-HIVSimple.html#/html/body/div/div/div/div/div/div/p/a at Line 209, column 308</a></b></td><td><b>error</b></td><td><b>The link 'Encounter-HIVSimple' for &quot;Encounter-HIVSimple&quot; cannot be resolved</b></td>
    </tr>
 </table>
 <hr/>
@@ -344,7 +353,7 @@
      <td><b>Bundle.entry[4].resource.ofType(DiagnosticReport).encounter (l97/c10)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'Encounter-HIVSimple'</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[4].resource.ofType(DiagnosticReport).result[0] (l102/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Observation/Observation-HIVSimple matching against Profile http://hl7.org/fhir/StructureDefinition/Observation</b> <span id="sl67" class="flip" onclick="flip('l67')">Show Reasoning</span><div id="l67" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[3].resource.ofType(Observation).encounter: Relative URLs must be of the format [ResourceName]/[id], or a search URL is allowed ([type]?parameters.  Encountered Encounter-HIVSimple)</li>, <li>Bundle.entry[3].resource.ofType(Observation).encounter: Unable to resolve resource 'Encounter-HIVSimple'</li></ul></div></td>
+     <td><b><a href="">Bundle.entry[4].resource.ofType(DiagnosticReport).result[0] (l102/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Observation/Observation-HIVSimple matching against Profile http://hl7.org/fhir/StructureDefinition/Observation</b> <span id="sl69" class="flip" onclick="flip('l69')">Show Reasoning</span><div id="l69" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[3].resource.ofType(Observation).encounter: Relative URLs must be of the format [ResourceName]/[id], or a search URL is allowed ([type]?parameters.  Encountered Encounter-HIVSimple)</li>, <li>Bundle.entry[3].resource.ofType(Observation).encounter: Unable to resolve resource 'Encounter-HIVSimple'</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle.entry[5].resource.ofType(Condition).clinicalStatus (l127/c22)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1 (http://hl7.org/fhir/ValueSet/condition-clinical), and a coding from this value set is required) (codes = null#active)</b></td>
@@ -502,61 +511,61 @@
      <td><b>Bundle.entry[4].resource.ofType(Measure) (l402/c21)</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[4].resource.ofType(Measure).library[0] (l396/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Bundle.entry[4].resource.ofType(Measure).library[0] (l396/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[4].resource.ofType(Measure).scoring.coding[0] (l404/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[4].resource.ofType(Measure) (l396/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Bundle.entry[4].resource.ofType(Measure) (l396/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[5].resource.ofType(Measure) (l486/c21)</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[5].resource.ofType(Measure).library[0] (l480/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Bundle.entry[5].resource.ofType(Measure).library[0] (l480/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[5].resource.ofType(Measure).scoring.coding[0] (l488/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[5].resource.ofType(Measure) (l480/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Bundle.entry[5].resource.ofType(Measure) (l480/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[6].resource.ofType(Measure) (l540/c21)</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[6].resource.ofType(Measure).library[0] (l534/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Measure).library[0] (l534/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[6].resource.ofType(Measure).scoring.coding[0] (l542/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[6].resource.ofType(Measure) (l534/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Measure) (l534/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[7].resource.ofType(Measure) (l594/c21)</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[7].resource.ofType(Measure).library[0] (l588/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Measure).library[0] (l588/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[7].resource.ofType(Measure).scoring.coding[0] (l596/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[7].resource.ofType(Measure) (l588/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Measure) (l588/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[8].resource.ofType(Measure) (l689/c21)</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[8].resource.ofType(Measure).library[0] (l683/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGenderIndiv) </b></td>
+     <td><b>Bundle.entry[8].resource.ofType(Measure).library[0] (l683/c10)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[8].resource.ofType(Measure).scoring.coding[0] (l691/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[8].resource.ofType(Measure) (l683/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGenderIndiv could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Bundle.entry[8].resource.ofType(Measure) (l683/c10)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[9].resource.ofType(Measure) (l793/c21)</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
@@ -819,6 +828,31 @@
    </tr>
 </table>
 <hr/>
+<a name="_github_workspace_fsh-generated_resources_Library-KitchenSink"> </a>
+<h2><a href="Library-KitchenSink.html">/github/workspace/fsh-generated/resources/Library-KitchenSink.json</a></h2>
+ <ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>KitchenSink.cql</b></td><td><b>error</b></td><td title=""><b>CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Library</b></td><td><b>warning</b></td><td title="lib-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>lib-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Library.type.coding[0]</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Library.relatedArtifact[0].resource</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Library.relatedArtifact[1].resource</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
 <a name="_github_workspace_fsh-generated_resources_Measure-HIVSimpleAgeGroup-Measure"> </a>
 <h2><a href="Measure-HIVSimpleAgeGroup-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup-Measure.json</a></h2>
  <ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/measure.html">Measure</a></li></ul>
@@ -967,13 +1001,13 @@
      <td><b>Measure</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Measure.scoring.coding[0]</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender2-Measure vs Measure/HIVSimpleGender2</b></td>
@@ -995,13 +1029,13 @@
      <td><b>Measure</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Measure.scoring.coding[0]</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderCohort-Measure vs Measure/HIVSimpleGenderCohort</b></td>
@@ -1023,13 +1057,13 @@
      <td><b>Measure</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Measure.scoring.coding[0]</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList-Measure vs Measure/HIVSimpleGenderSubjectList</b></td>
@@ -1051,13 +1085,13 @@
      <td><b>Measure</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Measure.scoring.coding[0]</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSuppData-Measure vs Measure/HIVSimpleGenderSuppData</b></td>
@@ -1079,13 +1113,13 @@
      <td><b>Measure</b></td><td><b>warning</b></td><td title="mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGenderIndiv) </b></td>
+     <td><b>Measure.library[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_CANONICAL_ABSOLUTE"><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Measure.scoring.coding[0]</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/HIVSimpleGenderIndiv could not be resolved, so expression validation may not be correct </b></td>
+     <td><b>Measure</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv-Measure vs Measure/HIVSimpleGenderSuppDataIndiv</b></td>
@@ -1277,19 +1311,19 @@
      <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleGenderIndiv could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>The Library Library/HIVSimpleTestResult could not be resolved, so expression validation may not be correct </b></td>
@@ -1310,19 +1344,19 @@
      <td><a href="Measure-HIVSimpleGender-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender-Measure.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Measure-HIVSimpleGender2-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Measure-HIVSimpleGender2-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Measure-HIVSimpleGenderCohort-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Measure-HIVSimpleGenderCohort-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Measure-HIVSimpleGenderSubjectList-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Measure-HIVSimpleGenderSubjectList-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Measure-HIVSimpleGenderSuppData-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure.json</a></td><td><b>The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Measure-HIVSimpleGenderSuppData-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Measure-HIVSimpleGenderSuppDataIndiv-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure.json</a></td><td><b>The Library Library/HIVSimpleGenderIndiv could not be resolved, so expression validation may not be correct </b></td>
+     <td><a href="Measure-HIVSimpleGenderSuppDataIndiv-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure.json</a></td><td><b>The Library Library/KitchenSink could not be resolved, so expression validation may not be correct </b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Measure-HIVSimpleTestResult-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult-Measure.json</a></td><td><b>The Library Library/HIVSimpleTestResult could not be resolved, so expression validation may not be correct </b></td>
@@ -1498,6 +1532,9 @@
      <td><a href="Library-HIVSimpleViralLoad.html">/github/workspace/fsh-generated/resources/Library-HIVSimpleViralLoad.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
+     <td><a href="Library-KitchenSink.html">/github/workspace/fsh-generated/resources/Library-KitchenSink.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
      <td><a href="Measure-HIVSimpleAgeGroup-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup-Measure.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
@@ -1548,19 +1585,19 @@
      <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGenderIndiv) </b></td>
+     <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Bundle-HIVSimple-Measures.html">/github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleTestResult) </b></td>
@@ -1581,19 +1618,19 @@
      <td><a href="Measure-HIVSimpleGender-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-HIVSimpleGender2-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Measure-HIVSimpleGender2-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-HIVSimpleGenderCohort-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Measure-HIVSimpleGenderCohort-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-HIVSimpleGenderSubjectList-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Measure-HIVSimpleGenderSubjectList-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-HIVSimpleGenderSuppData-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) </b></td>
+     <td><a href="Measure-HIVSimpleGenderSuppData-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-HIVSimpleGenderSuppDataIndiv-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGenderIndiv) </b></td>
+     <td><a href="Measure-HIVSimpleGenderSuppDataIndiv-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) </b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Measure-HIVSimpleTestResult-Measure.html">/github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult-Measure.json</a></td><td><b>Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleTestResult) </b></td>
@@ -1653,6 +1690,12 @@
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Library-HIVSimpleViralLoad.html">/github/workspace/fsh-generated/resources/Library-HIVSimpleViralLoad.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Library-KitchenSink.html">/github/workspace/fsh-generated/resources/Library-KitchenSink.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Library-KitchenSink.html">/github/workspace/fsh-generated/resources/Library-KitchenSink.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve</b></td>
    </tr>
 </table>
 <hr/>

@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.title [ fhir:value "Simple HIV IG"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2021-07-03T05:06:53+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-07-03T16:33:10+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "IntraHealth International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -482,6 +482,17 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://github.com/intrahealth/simple-hiv-ig/Library/KitchenSink>;
+         fhir:Reference.reference [ fhir:value "Library/KitchenSink" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "Patient" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -489,7 +500,7 @@
          fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -500,7 +511,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/HIVSimple-Measures" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -511,7 +522,7 @@
          fhir:Reference.reference [ fhir:value "Library/HIVSimpleAgeGroup" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -522,7 +533,7 @@
          fhir:Reference.reference [ fhir:value "Measure/HIVSimpleViralLoad-Measure" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -533,7 +544,7 @@
          fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGenderSuppDataIndiv-Measure" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -544,7 +555,7 @@
          fhir:Reference.reference [ fhir:value "Library/HIVSimpleCondition" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -555,7 +566,7 @@
          fhir:Reference.reference [ fhir:value "Library/HIVSimpleTestResult" ]
        ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -566,7 +577,7 @@
          fhir:Reference.reference [ fhir:value "Measure/HIVSimpleAgeGroup-Measure" ]
        ]
      ], [
-       fhir:index 24;
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -577,7 +588,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/Example-HIVSimple" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -588,7 +599,7 @@
          fhir:Reference.reference [ fhir:value "Library/HIVSimpleDemog" ]
        ]
      ], [
-       fhir:index 26;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -599,7 +610,7 @@
          fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGenderSubjectList-Measure" ]
        ]
      ], [
-       fhir:index 27;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -610,7 +621,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/HIVSimple-Library" ]
        ]
      ], [
-       fhir:index 28;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

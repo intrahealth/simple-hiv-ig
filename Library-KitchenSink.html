@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>SIMPLE-HIV-IG\ - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6.5"}
+    h3,h4,h5,h6{--heading-prefix:"6.5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Simple HIV IG</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spec.html">Detailed Specification</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-KitchenSink.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-KitchenSink.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-KitchenSink.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Library: </h2>
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Related Artifacts</h2><table class="grid"><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIRHelpers|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://snomed.info/sct|http://snomed.info/sct/900000000000207008</code></td></tr><tr><td>depends-on</td><td><a href="http://terminology.hl7.org/2.1.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library KitchenSink version '0.1.0'
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include FHIRCommon version '4.0.1' called FC
+// include AgeRanges called AR
+
+// SNOMED-CT, International Edition
+codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
+
+// LOINC, 2.63+
+codesystem &quot;LOINC&quot;: 'http://loinc.org'
+
+context Patient
+
+define &quot;Sex&quot;: Patient.gender
+
+define &quot;Female&quot;:
+  Patient.gender = 'female'
+
+define &quot;Male&quot;:
+  Patient.gender = 'male'
+
+define &quot;Initial Population&quot;: true
+
+define &quot;Denominator&quot;:
+  &quot;Sex&quot; is not null
+
+define &quot;Numerator&quot;:
+  &quot;Sex&quot; = 'female'
+
+define &quot;Hello, World!&quot;: 'Hello, World!'
+
+define &quot;birthDate&quot;: Patient.birthDate
+define &quot;birthDate_str&quot;: ToString(Patient.birthDate)
+
+define &quot;Given Name str&quot;: Patient.name.given[0]
+define &quot;Given Name&quot;: Patient.name.given[0].value
+
+define &quot;Family Name str&quot;: Patient.name.family[0]
+define &quot;Family Name&quot;: Patient.name.family[0].value
+
+// make a gender code for supp data
+define &quot;SDE Sex&quot;:
+  case
+    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Male' }
+    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Female' }
+    else null
+  end
+
+/* first attempt at supp data for location */
+
+// hack to try pseudo-stratifier for location using supp data
+define function &quot;GetId&quot;(uri String):
+    Last(Split(uri, '/'))
+
+define function &quot;GetLocation&quot;(reference Reference):
+  singleton from (
+    [Location] Location where Location.id.value = GetId(reference.reference)
+  )
+
+define &quot;Location&quot;:
+    First([Encounter] E return &quot;GetLocation&quot;(First(E.location).location))
+
+define &quot;SDE Location&quot;:
+    Code { code: &quot;Location&quot;.name, system: 'https://github.com/synthetichealth/synthea' }
+
+/* second attempt at supp data for location*/
+
+/*
+Most recent encounter location
+*/
+define &quot;Most Recent Encounter Location Reference&quot;:
+  Last(
+    [Encounter] E
+      return First(E.location L return L.location)
+      //sort by start of period
+  )
+
+/*
+Location Code
+*/
+define &quot;Location Code&quot;:
+ singleton from (
+   [Location] L
+     let identifier: singleton from (L.identifier I where I.system = 'Location?identifier=https://github.com/synthetichealth/synthea|b19ad638-35cc-3819-958d-618086f6180a')
+     where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;.reference, '/'))
+     return CodeableConcept {
+       coding: {
+         Coding {
+           code: code { value: identifier.value },
+           system: identifier.system
+         }
+       }
+     }
+ )
+
+define &quot;Location Code Deux&quot;:
+singleton from (
+  [Location] L
+    let identifier: singleton from (L.identifier)
+    where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;.reference, '/'))
+    return CodeableConcept {
+      coding: {
+        Coding {
+          code: code { value: identifier.value },
+          system: identifier.system
+        }
+      }
+    }
+)
+
+
+/* must also try serviceprovider */
+/* not working */
+
+/*
+Most recent encounter serviceprovider
+*/
+/* define &quot;Most Recent Encounter serviceprovider Reference&quot;:
+ Last(
+   [Encounter] E
+     return First(E.serviceprovider L return L.serviceprovider)
+     //sort by start of period
+ ) */
+
+/* create clinical decision support logic */
+/*
+define &quot;HIVTestProposed&quot;: ServiceRequest {
+ type: Code '75622-1' from &quot;LOINC&quot;
+ display 'HIV 1 and 2 tests - Meaningful Use set',
+ status 'active'
+ intent: 'proposal'
+ // values for other elements of the request...
+}
+ */
+</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 62Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 300Kb)</p></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jul 3, 2021 16:33+0000">2021-07-03</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="https://github.com/intrahealth/simple-hiv-ig/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

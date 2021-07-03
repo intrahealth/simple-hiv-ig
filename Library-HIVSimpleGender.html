@@ -239,112 +239,7 @@ define &quot;Denominator&quot;:
 define &quot;Numerator&quot;:
   &quot;Sex&quot; = 'female'
 
-define &quot;Hello, World!&quot;: 'Hello, World!'
-
-define &quot;birthDate&quot;: Patient.birthDate
-define &quot;birthDate_str&quot;: ToString(Patient.birthDate)
-
-define &quot;Given Name str&quot;: Patient.name.given[0]
-define &quot;Given Name&quot;: Patient.name.given[0].value
-
-define &quot;Family Name str&quot;: Patient.name.family[0]
-define &quot;Family Name&quot;: Patient.name.family[0].value
-
-// make a gender code for supp data
-define &quot;SDE Sex&quot;:
-  case
-    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Male' }
-    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Female' }
-    else null
-  end
-
-/* first attempt at supp data for location */
-
-// hack to try pseudo-stratifier for location using supp data
-define function &quot;GetId&quot;(uri String):
-    Last(Split(uri, '/'))
-
-define function &quot;GetLocation&quot;(reference Reference):
-  singleton from (
-    [Location] Location where Location.id.value = GetId(reference.reference)
-  )
-
-define &quot;Location&quot;:
-    First([Encounter] E return &quot;GetLocation&quot;(First(E.location).location))
-
-define &quot;SDE Location&quot;:
-    Code { code: &quot;Location&quot;.name, system: 'https://github.com/synthetichealth/synthea' }
-
-/* second attempt at supp data for location*/
-
-/*
-Most recent encounter location
-*/
-define &quot;Most Recent Encounter Location Reference&quot;:
-  Last(
-    [Encounter] E
-      return First(E.location L return L.location)
-      //sort by start of period
-  )
-
-/*
-Location Code
-*/
-define &quot;Location Code&quot;:
- singleton from (
-   [Location] L
-     let identifier: singleton from (L.identifier I where I.system = 'Location?identifier=https://github.com/synthetichealth/synthea|b19ad638-35cc-3819-958d-618086f6180a')
-     where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;.reference, '/'))
-     return CodeableConcept {
-       coding: {
-         Coding {
-           code: code { value: identifier.value },
-           system: identifier.system
-         }
-       }
-     }
- )
-
-define &quot;Location Code Deux&quot;:
-singleton from (
-  [Location] L
-    let identifier: singleton from (L.identifier)
-    where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;.reference, '/'))
-    return CodeableConcept {
-      coding: {
-        Coding {
-          code: code { value: identifier.value },
-          system: identifier.system
-        }
-      }
-    }
-)
-
-
-/* must also try serviceprovider */
-/* not working */
-
-/*
-Most recent encounter serviceprovider
-*/
-/* define &quot;Most Recent Encounter serviceprovider Reference&quot;:
- Last(
-   [Encounter] E
-     return First(E.serviceprovider L return L.serviceprovider)
-     //sort by start of period
- ) */
-
-/* create clinical decision support logic */
-/*
-define &quot;HIVTestProposed&quot;: ServiceRequest {
- type: Code '75622-1' from &quot;LOINC&quot;
- display 'HIV 1 and 2 tests - Meaningful Use set',
- status 'active'
- intent: 'proposal'
- // values for other elements of the request...
-}
- */
-</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 63Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 301Kb)</p></div>
+</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 8Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 28Kb)</p></div>
 
   <!-- insert notes if present -->
   
@@ -371,7 +266,7 @@ define &quot;HIVTestProposed&quot;: ServiceRequest {
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jul 3, 2021 05:06+0000">2021-07-03</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jul 3, 2021 16:33+0000">2021-07-03</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
