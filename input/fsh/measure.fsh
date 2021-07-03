@@ -135,7 +135,7 @@ Instance: HIVSimpleGender2-Measure
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGender2"
 * identifier.value = "HIVSimpleGender2"
-* library = "Library/HIVSimpleGender"
+* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -160,7 +160,7 @@ Instance: HIVSimpleGenderCohort-Measure
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderCohort"
 * identifier.value = "HIVSimpleGenderCohort"
-* library = "Library/HIVSimpleGender"
+* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #cohort
@@ -175,7 +175,7 @@ Instance: HIVSimpleGenderSubjectList-Measure
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderSubjectList"
 * identifier.value = "HIVSimpleGenderSubjectList"
-* library = "Library/HIVSimpleGender"
+* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #cohort
@@ -190,7 +190,7 @@ Instance: HIVSimpleGenderSuppData-Measure
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderSuppData"
 * identifier.value = "HIVSimpleGenderSuppData"
-* library = "Library/HIVSimpleGender"
+* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -219,7 +219,7 @@ Instance: HIVSimpleGenderSuppDataIndiv-Measure
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderSuppDataIndiv"
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
-* library = "Library/HIVSimpleGenderIndiv"
+* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #proportion

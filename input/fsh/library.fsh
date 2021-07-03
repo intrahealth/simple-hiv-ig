@@ -48,6 +48,10 @@ InstanceOf: Library
 * insert lib-common
 * content.id = "ig-loader-HIVSimpleViralLoad.cql"
 
+Instance: KitchenSink
+InstanceOf: Library
+* insert lib-common
+* content.id = "ig-loader-KitchenSink.cql"
 
 RuleSet: lib-bundle
 * entry[=].request.url = "Library"
