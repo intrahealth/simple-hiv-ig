@@ -9,7 +9,7 @@
       <Measure>
         <id value="HIVSimpleAgeGroup-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleAgeGroup"/>
         <identifier>
@@ -27,11 +27,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -108,7 +103,7 @@
       <Measure>
         <id value="HIVSimpleCondition-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleCondition</code></p><p><b>identifier</b>: id: HIVSimpleCondition</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleCondition</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleCondition</code></p><p><b>identifier</b>: id: HIVSimpleCondition</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleCondition</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleCondition"/>
         <identifier>
@@ -126,11 +121,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -191,7 +181,7 @@
       <Measure>
         <id value="HIVSimpleDemog-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleDemog"/>
         <identifier>
@@ -209,11 +199,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -268,7 +253,7 @@
       <Measure>
         <id value="HIVSimpleGender-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender</code></p><p><b>identifier</b>: id: HIVSimpleGender</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender</code></p><p><b>identifier</b>: id: HIVSimpleGender</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleGender"/>
         <identifier>
@@ -286,11 +271,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -345,7 +325,7 @@
       <Measure>
         <id value="HIVSimpleGender2-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleGender2"/>
         <identifier>
@@ -363,11 +343,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -468,7 +443,7 @@
       <Measure>
         <id value="HIVSimpleGenderSubjectList-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSubjectList</code></p><p><b>identifier</b>: id: HIVSimpleGenderSubjectList</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">cohort</span></p><p><b>type</b>: <span title="Codes: ">subject-list</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSubjectList</code></p><p><b>identifier</b>: id: HIVSimpleGenderSubjectList</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">cohort</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleGenderSubjectList"/>
         <identifier>
@@ -486,11 +461,6 @@
             <code value="cohort"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="subject-list"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -519,7 +489,7 @@
       <Measure>
         <id value="HIVSimpleGenderSuppData-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppData</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppData</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title="Codes: ">supplemental-data-example-define</span></p></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppData</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppData</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title="Codes: ">supplemental-data-example-define</span></p></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleGenderSuppData"/>
         <identifier>
@@ -537,11 +507,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -605,7 +570,7 @@
       <Measure>
         <id value="HIVSimpleGenderSuppDataIndiv-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppDataIndiv</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppDataIndiv</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGenderIndiv</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">individual</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title="Codes: ">supplemental-data-example-define-sex</span></p></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title="Codes: ">supplemental-data-example-define-location</span></p></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppDataIndiv</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppDataIndiv</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGenderIndiv</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title="Codes: ">supplemental-data-example-define-sex</span></p></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title="Codes: ">supplemental-data-example-define-location</span></p></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleGenderSuppDataIndiv"/>
         <identifier>
@@ -623,11 +588,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="individual"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -700,7 +660,7 @@
       <Measure>
         <id value="HIVSimpleTestResult-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleTestResult</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleTestResult</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleTestResult"/>
         <identifier>
@@ -718,11 +678,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>
@@ -777,7 +732,7 @@
       <Measure>
         <id value="HIVSimpleViralLoad-Measure"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><p><b>type</b>: <span title="Codes: ">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title="Codes: ">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>
         </text>
         <url value="Measure/HIVSimpleViralLoad"/>
         <identifier>
@@ -795,11 +750,6 @@
             <code value="proportion"/>
           </coding>
         </scoring>
-        <type>
-          <coding>
-            <code value="process"/>
-          </coding>
-        </type>
         <group>
           <population>
             <code>

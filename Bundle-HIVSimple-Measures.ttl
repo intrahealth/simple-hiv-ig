@@ -103,7 +103,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleAgeGroup-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleAgeGroup</code></p><p><b>identifier</b>: id: HIVSimpleAgeGroup</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleAgeGroup</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleAgeGroup"];
   fhir:Measure.identifier [
@@ -125,13 +125,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -212,7 +205,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleCondition-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleCondition</code></p><p><b>identifier</b>: id: HIVSimpleCondition</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleCondition</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleCondition</code></p><p><b>identifier</b>: id: HIVSimpleCondition</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleCondition</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleCondition"];
   fhir:Measure.identifier [
@@ -234,13 +227,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -301,7 +287,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleDemog-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleDemog</code></p><p><b>identifier</b>: id: HIVSimpleDemog</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleDemog</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleDemog"];
   fhir:Measure.identifier [
@@ -323,13 +309,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -383,7 +362,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleGender-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender</code></p><p><b>identifier</b>: id: HIVSimpleGender</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender</code></p><p><b>identifier</b>: id: HIVSimpleGender</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleGender"];
   fhir:Measure.identifier [
@@ -405,13 +384,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -465,7 +437,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleGender2-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGender2</code></p><p><b>identifier</b>: id: HIVSimpleGender2</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleGender2"];
   fhir:Measure.identifier [
@@ -487,13 +459,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -594,7 +559,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleGenderSubjectList-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSubjectList</code></p><p><b>identifier</b>: id: HIVSimpleGenderSubjectList</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><p><b>type</b>: <span title=\"Codes: \">subject-list</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSubjectList</code></p><p><b>identifier</b>: id: HIVSimpleGenderSubjectList</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleGenderSubjectList"];
   fhir:Measure.identifier [
@@ -616,13 +581,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "cohort" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "subject-list" ]
      ]
   ];
   fhir:Measure.group [
@@ -648,7 +606,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleGenderSuppData-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppData</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppData</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define</span></p></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppData</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppData</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGender</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define</span></p></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleGenderSuppData"];
   fhir:Measure.identifier [
@@ -670,13 +628,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -740,7 +691,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleGenderSuppDataIndiv-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppDataIndiv</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppDataIndiv</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGenderIndiv</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">individual</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define-sex</span></p></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define-location</span></p></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderSuppDataIndiv</code></p><p><b>identifier</b>: id: HIVSimpleGenderSuppDataIndiv</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleGenderIndiv</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define-sex</span></p></blockquote><blockquote><p><b>supplementalData</b></p><p><b>code</b>: <span title=\"Codes: \">supplemental-data-example-define-location</span></p></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleGenderSuppDataIndiv"];
   fhir:Measure.identifier [
@@ -762,13 +713,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "individual" ]
      ]
   ];
   fhir:Measure.group [
@@ -841,7 +785,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleTestResult-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleTestResult</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleTestResult</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleTestResult"];
   fhir:Measure.identifier [
@@ -863,13 +807,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [
@@ -923,7 +860,7 @@
   fhir:Resource.id [ fhir:value "HIVSimpleViralLoad-Measure"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><p><b>type</b>: <span title=\"Codes: \">process</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleViralLoad</code></p><p><b>identifier</b>: id: HIVSimpleViralLoad</p><p><b>version</b>: 0.0.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: OpenHIE</p><p><b>library</b>: <code>Library/HIVSimpleViralLoad</code></p><p><b>scoring</b>: <span title=\"Codes: \">proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "Measure/HIVSimpleViralLoad"];
   fhir:Measure.identifier [
@@ -945,13 +882,6 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "proportion" ]
-     ]
-  ];
-  fhir:Measure.type [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "process" ]
      ]
   ];
   fhir:Measure.group [

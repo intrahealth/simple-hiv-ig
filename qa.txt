@@ -1,14 +1,14 @@
 ﻿simple-hiv-ig : Validation Results
 =========================================
 
-err = 115, warn = 144, info = 23
+err = 115, warn = 124, info = 23
 IG Publisher Version: 1.1.76
-Generated Fri Jul 02 04:39:34 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
+Generated Sat Jul 03 05:07:06 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://github.com/intrahealth/simple-hiv-ig)
 
  Build Errors : 31 / 30 / 0
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple : 6 / 5 / 8
  /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Library : 0 / 16 / 9
- /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures : 15 / 35 / 23
+ /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures : 15 / 25 / 23
  /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple : 2 / 3 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Library-AgeRanges : 1 / 2 / 1
@@ -20,17 +20,17 @@ Generated Fri Jul 02 04:39:34 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1
  /github/workspace/fsh-generated/resources/Library-HIVSimpleTestResult : 3 / 2 / 1
  /github/workspace/fsh-generated/resources/Library-HIVSimpleViralLoad : 3 / 2 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup-Measure : 6 / 6 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition-Measure : 4 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleDemog-Measure : 3 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender-Measure : 3 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure : 3 / 3 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup-Measure : 6 / 5 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition-Measure : 4 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleDemog-Measure : 3 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender-Measure : 3 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure : 3 / 2 / 2
  /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure : 3 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure : 3 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure : 3 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure : 3 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult-Measure : 3 / 3 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleViralLoad-Measure : 3 / 3 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure : 3 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure : 3 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure : 3 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult-Measure : 3 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleViralLoad-Measure : 3 / 2 / 2
  /github/workspace/fsh-generated/resources/Observation-Observation-HIVSimple : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple : 0 / 0 / 1
@@ -133,7 +133,6 @@ WARNING: Bundle/HIVSimple-Library: Bundle.entry[7].resource.ofType(Library).type
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleAgeGroup) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure): The Library Library/HIVSimpleAgeGroup could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[0]: Groups should have codes when there is more than one group 
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
@@ -144,23 +143,19 @@ ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleCondition) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure): The Library Library/HIVSimpleCondition could not be resolved, so expression validation may not be correct 
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleDemog) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure): The Library Library/HIVSimpleDemog could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure): The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure): The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
@@ -169,27 +164,22 @@ INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure)
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure): The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure): The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[8].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[8].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGenderIndiv) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[8].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[8].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[8].resource.ofType(Measure): The Library Library/HIVSimpleGenderIndiv could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[9].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[9].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleTestResult) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[9].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[9].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[9].resource.ofType(Measure): The Library Library/HIVSimpleTestResult could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[10].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Bundle/HIVSimple-Measures: Bundle.entry[10].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleViralLoad) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[10].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Bundle/HIVSimple-Measures: Bundle.entry[10].resource.ofType(Measure).type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[10].resource.ofType(Measure): The Library Library/HIVSimpleViralLoad could not be resolved, so expression validation may not be correct 
 == /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple.json ==
 ERROR: Condition/Condition-HIVSimple: Condition.clinicalStatus: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1 (http://hl7.org/fhir/ValueSet/condition-clinical), and a coding from this value set is required) (codes = null#active)
@@ -252,7 +242,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleAgeGroup'): Conformance resource /g
 WARNING: Measure/HIVSimpleAgeGroup-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleAgeGroup-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleAgeGroup) 
 WARNING: Measure/HIVSimpleAgeGroup-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleAgeGroup-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleAgeGroup-Measure: Measure: The Library Library/HIVSimpleAgeGroup could not be resolved, so expression validation may not be correct 
 WARNING: Measure/HIVSimpleAgeGroup-Measure: Measure.group[0]: Groups should have codes when there is more than one group 
 ERROR: Measure/HIVSimpleAgeGroup-Measure: Measure.group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
@@ -266,7 +255,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleCondition'): Conformance resource /
 WARNING: Measure/HIVSimpleCondition-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleCondition-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleCondition) 
 WARNING: Measure/HIVSimpleCondition-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleCondition-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleCondition-Measure: Measure: The Library Library/HIVSimpleCondition could not be resolved, so expression validation may not be correct 
 ERROR: Measure/HIVSimpleCondition-Measure: Measure.group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleCondition-Measure vs Measure/HIVSimpleCondition
@@ -275,7 +263,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleDemog'): Conformance resource /gith
 WARNING: Measure/HIVSimpleDemog-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleDemog-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleDemog) 
 WARNING: Measure/HIVSimpleDemog-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleDemog-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleDemog-Measure: Measure: The Library Library/HIVSimpleDemog could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleDemog-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleDemog-Measure vs Measure/HIVSimpleDemog
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender-Measure.json ==
@@ -283,7 +270,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleGender'): Conformance resource /git
 WARNING: Measure/HIVSimpleGender-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleGender-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Measure/HIVSimpleGender-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleGender-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleGender-Measure: Measure: The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender-Measure vs Measure/HIVSimpleGender
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure.json ==
@@ -291,7 +277,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleGender2'): Conformance resource /gi
 WARNING: Measure/HIVSimpleGender2-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleGender2-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Measure/HIVSimpleGender2-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleGender2-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleGender2-Measure: Measure: The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender2-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGender2-Measure vs Measure/HIVSimpleGender2
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort-Measure.json ==
@@ -306,7 +291,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleGenderSubjectList'): Conformance re
 WARNING: Measure/HIVSimpleGenderSubjectList-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleGenderSubjectList-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Measure/HIVSimpleGenderSubjectList-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleGenderSubjectList-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleGenderSubjectList-Measure: Measure: The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList-Measure vs Measure/HIVSimpleGenderSubjectList
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure.json ==
@@ -314,7 +298,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleGenderSuppData'): Conformance resou
 WARNING: Measure/HIVSimpleGenderSuppData-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleGenderSuppData-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGender) 
 WARNING: Measure/HIVSimpleGenderSuppData-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleGenderSuppData-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleGenderSuppData-Measure: Measure: The Library Library/HIVSimpleGender could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSuppData-Measure vs Measure/HIVSimpleGenderSuppData
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure.json ==
@@ -322,7 +305,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleGenderSuppDataIndiv'): Conformance 
 WARNING: Measure/HIVSimpleGenderSuppDataIndiv-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleGenderSuppDataIndiv-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleGenderIndiv) 
 WARNING: Measure/HIVSimpleGenderSuppDataIndiv-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleGenderSuppDataIndiv-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleGenderSuppDataIndiv-Measure: Measure: The Library Library/HIVSimpleGenderIndiv could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv-Measure vs Measure/HIVSimpleGenderSuppDataIndiv
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult-Measure.json ==
@@ -330,7 +312,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleTestResult'): Conformance resource 
 WARNING: Measure/HIVSimpleTestResult-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleTestResult-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleTestResult) 
 WARNING: Measure/HIVSimpleTestResult-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleTestResult-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleTestResult-Measure: Measure: The Library Library/HIVSimpleTestResult could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleTestResult-Measure vs Measure/HIVSimpleTestResult
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleViralLoad-Measure.json ==
@@ -338,7 +319,6 @@ ERROR: Measure.where(url = 'Measure/HIVSimpleViralLoad'): Conformance resource /
 WARNING: Measure/HIVSimpleViralLoad-Measure: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: Measure/HIVSimpleViralLoad-Measure: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/HIVSimpleViralLoad) 
 WARNING: Measure/HIVSimpleViralLoad-Measure: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/HIVSimpleViralLoad-Measure: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Measure/HIVSimpleViralLoad-Measure: Measure: The Library Library/HIVSimpleViralLoad could not be resolved, so expression validation may not be correct 
 ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleViralLoad-Measure: URL Mismatch https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleViralLoad-Measure vs Measure/HIVSimpleViralLoad
 == /github/workspace/fsh-generated/resources/Observation-Observation-HIVSimple.json ==
