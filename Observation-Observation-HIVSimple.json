@@ -3,7 +3,7 @@
   "id": "Observation-HIVSimple",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Felix Cat; birthDate: 2000-01-02</a></p><p><b>encounter</b>: <a href=\"Encounter-HIVSimple\">Encounter-HIVSimple</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href=\"Encounter-Encounter-HIVSimple.html\">Generated Summary: status: finished; <span title=\"{null ACUTE}\">ACUTE</span>; period: 2011-01-01 --&gt; 2011-01-01</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
   },
   "status": "final",
   "code": {
@@ -19,7 +19,7 @@
     "reference": "Patient/Patient-HIVSimple"
   },
   "encounter": {
-    "reference": "Encounter-HIVSimple"
+    "reference": "Encounter/Encounter-HIVSimple"
   },
   "valueCodeableConcept": {
     "coding": [

@@ -12,7 +12,7 @@
   <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-03T16:33:10+00:00"/>
+  <date value="2021-07-06T19:25:06+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -235,10 +235,26 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/Condition-Pregnancy"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
         <reference value="Measure/HIVSimpleCondition-Measure"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Observation-ViralLoad"/>
       </reference>
     </resource>
     <resource>
@@ -263,6 +279,14 @@
       </extension>
       <reference>
         <reference value="Measure/HIVSimpleGenderSuppData-Measure"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/Encounter-HIVSimple"/>
       </reference>
     </resource>
     <resource>
@@ -311,6 +335,14 @@
       </extension>
       <reference>
         <reference value="Measure/HIVSimpleTestResult-Measure"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/Encounter-ViralLoad"/>
       </reference>
     </resource>
     <resource>
@@ -375,6 +407,14 @@
       </extension>
       <reference>
         <reference value="Measure/HIVSimpleGenderSuppDataIndiv-Measure"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-ViralLoad"/>
       </reference>
     </resource>
     <resource>

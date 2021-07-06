@@ -15,7 +15,7 @@
   fhir:Questionnaire.url [ fhir:value "https://github.com/intrahealth/simple-hiv-ig/Questionnaire/Q"];
   fhir:Questionnaire.version [ fhir:value "0.1.0"];
   fhir:Questionnaire.status [ fhir:value "draft"];
-  fhir:Questionnaire.date [ fhir:value "2021-07-03T16:33:10+00:00"^^xsd:dateTime];
+  fhir:Questionnaire.date [ fhir:value "2021-07-06T19:25:06+00:00"^^xsd:dateTime];
   fhir:Questionnaire.publisher [ fhir:value "IntraHealth International"];
   fhir:Questionnaire.contact [
      fhir:index 0;

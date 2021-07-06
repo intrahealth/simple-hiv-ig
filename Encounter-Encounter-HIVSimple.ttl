@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-HIVSimple> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Encounter-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{null ACUTE}\">ACUTE</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"Location-Location-HIVSimple.html\">Generated Summary: id: Location-HIVSimple</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-Organization-HIVSimple.html\">Generated Summary: name: Government Hospital</a></p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.code [ fhir:value "ACUTE" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2011-01-01"^^xsd:date ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:link <https://github.com/intrahealth/simple-hiv-ig/Location/Location-HIVSimple>;
+       fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
+     ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-HIVSimple.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

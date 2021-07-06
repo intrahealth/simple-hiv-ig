@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Observation-ViralLoad"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA NAA+probe (Specimen)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="Encounter-Encounter-ViralLoad.html">Generated Summary: status: finished; <span title="{null ACUTE}">ACUTE</span>; period: 2020-06-01 --&gt; 2020-06-01</a></p><p><b>value</b>: 741660 copies/mL</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="25836-8"/>
+      <display value="HIV 1 RNA NAA+probe (Specimen)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient-HIVSimple"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Encounter-ViralLoad"/>
+  </encounter>
+  <valueQuantity>
+    <value value="741660"/>
+    <unit value="copies/mL"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{copies}/mL"/>
+  </valueQuantity>
+</Observation>

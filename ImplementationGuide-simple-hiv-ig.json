@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-07-03T16:33:10+00:00",
+  "date": "2021-07-06T19:25:06+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -367,11 +367,33 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Condition"
+          }
+        ],
+        "reference": {
+          "reference": "Condition/Condition-Pregnancy"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           }
         ],
         "reference": {
           "reference": "Measure/HIVSimpleCondition-Measure"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Observation-ViralLoad"
         }
       },
       {
@@ -405,6 +427,17 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGenderSuppData-Measure"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Encounter"
+          }
+        ],
+        "reference": {
+          "reference": "Encounter/Encounter-HIVSimple"
         }
       },
       {
@@ -471,6 +504,17 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleTestResult-Measure"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Encounter"
+          }
+        ],
+        "reference": {
+          "reference": "Encounter/Encounter-ViralLoad"
         }
       },
       {
@@ -559,6 +603,17 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleGenderSuppDataIndiv-Measure"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DiagnosticReport"
+          }
+        ],
+        "reference": {
+          "reference": "DiagnosticReport/DiagnosticReport-ViralLoad"
         }
       },
       {

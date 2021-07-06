@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DiagnosticReport-ViralLoad"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA NAA+probe (Specimen)</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Mittens Cat</b>  1985-01-01</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Observation-ViralLoad.html\"><span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA NAA+probe (Specimen)</span></a></td><td>741660 copies/mL</td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:25836-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "25836-8" ];
+       fhir:Coding.display [ fhir:value "HIV 1 RNA NAA+probe (Specimen)" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.encounter [
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-ViralLoad>;
+     fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/intrahealth/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

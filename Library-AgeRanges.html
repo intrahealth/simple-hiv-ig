@@ -225,7 +225,10 @@ code &quot;P35Y--P40Y&quot;: 'P35Y--P40Y' from &quot;ISO-8601-Derived Periods&qu
 code &quot;P40Y--P50Y&quot;: 'P40Y--P50Y' from &quot;ISO-8601-Derived Periods&quot; display '40-49 year'
 code &quot;P50Y--P9999Y&quot;: 'P50Y--P9999Y' from &quot;ISO-8601-Derived Periods&quot; display '50+ years'
 
-parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt;
+/* parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt; */
+parameter &quot;Measurement Period&quot; Interval&lt;Date&gt; default Interval[@2020-01-01, @2020-12-31]
+
+
 
 context Patient
 
@@ -245,7 +248,7 @@ define &quot;Age Group&quot;:
     when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[50, null] then &quot;P50Y--P9999Y&quot;
     else null
   end
-</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 33Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 132Kb)</p></div>
+</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 33Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 134Kb)</p></div>
 
   <!-- insert notes if present -->
   
@@ -272,7 +275,7 @@ define &quot;Age Group&quot;:
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jul 3, 2021 16:33+0000">2021-07-03</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 6, 2021 19:25+0000">2021-07-06</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -3,7 +3,7 @@
   "id": "DiagnosticReport-HIVSimple",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 75622-1}\">HIV types 1 and 2 testing</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Felix Cat</b>  2000-01-02</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Observation-HIVSimple.html\"><span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 75622-1}\">HIV types 1 and 2 testing</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Mittens Cat</b>  1985-01-01</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Observation-HIVSimple.html\"><span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></td></tr></table></div>"
   },
   "status": "final",
   "code": {
@@ -19,7 +19,7 @@
     "reference": "Patient/Patient-HIVSimple"
   },
   "encounter": {
-    "reference": "Encounter-HIVSimple"
+    "reference": "Encounter/Encounter-HIVSimple"
   },
   "result": [
     {

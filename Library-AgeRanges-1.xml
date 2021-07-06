@@ -14,21 +14,37 @@
       </def>
    </usings>
    <parameters>
-      <def localId="27" locator="20:1-20:49" name="Measurement Period" accessLevel="Public">
+      <def localId="30" locator="21:1-21:88" name="Measurement Period" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="27">
+            <a:s r="30">
                <a:s>parameter &quot;Measurement Period&quot; </a:s>
-               <a:s r="26">
+               <a:s r="29">
                   <a:s>Interval&lt;</a:s>
-                  <a:s r="25">
-                     <a:s>DateTime</a:s>
+                  <a:s r="28">
+                     <a:s>Date</a:s>
                   </a:s>
                   <a:s>></a:s>
                </a:s>
+               <a:s> default </a:s>
+               <a:s r="27">
+                  <a:s r="25">Interval[@2020-01-01, @2020-12-31]</a:s>
+               </a:s>
             </a:s>
          </annotation>
-         <parameterTypeSpecifier localId="26" locator="20:32-20:49" xsi:type="IntervalTypeSpecifier">
-            <pointType localId="25" locator="20:41-20:48" name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+         <default localId="27" locator="21:55-21:88" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="25" locator="21:64-21:74" xsi:type="Date">
+               <year valueType="t:Integer" value="2020" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </low>
+            <high localId="26" locator="21:77-21:87" xsi:type="Date">
+               <year valueType="t:Integer" value="2020" xsi:type="Literal"/>
+               <month valueType="t:Integer" value="12" xsi:type="Literal"/>
+               <day valueType="t:Integer" value="31" xsi:type="Literal"/>
+            </high>
+         </default>
+         <parameterTypeSpecifier localId="29" locator="21:32-21:45" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="28" locator="21:41-21:44" name="t:Date" xsi:type="NamedTypeSpecifier"/>
          </parameterTypeSpecifier>
       </def>
    </parameters>
@@ -176,515 +192,493 @@
       </def>
    </codes>
    <contexts>
-      <def locator="22:1-22:15" name="Patient"/>
+      <def locator="25:1-25:15" name="Patient"/>
    </contexts>
    <statements>
-      <def locator="22:1-22:15" name="Patient" context="Patient">
+      <def locator="25:1-25:15" name="Patient" context="Patient">
          <expression xsi:type="SingletonFrom">
-            <operand locator="22:1-22:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+            <operand locator="25:1-25:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
          </expression>
       </def>
-      <def localId="129" locator="25:1-39:5" name="Age Group" context="Patient" accessLevel="Public">
+      <def localId="132" locator="28:1-42:5" name="Age Group" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="129">
+            <a:s r="132">
                <a:s>define &quot;Age Group&quot;:
   </a:s>
-               <a:s r="128">
+               <a:s r="131">
                   <a:s>case
     </a:s>
-                  <a:s r="36">
+                  <a:s r="39">
                      <a:s>when </a:s>
-                     <a:s r="34">
-                        <a:s r="30">
+                     <a:s r="37">
+                        <a:s r="33">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="29">
+                           <a:s r="32">
                               <a:s>start of </a:s>
-                              <a:s r="28">
+                              <a:s r="31">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="33">
-                           <a:s r="31">Interval[0, 1)</a:s>
+                        <a:s r="36">
+                           <a:s r="34">Interval[0, 1)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="35">
+                     <a:s r="38">
                         <a:s>&quot;P0Y--P1Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="45">
+                  <a:s r="48">
                      <a:s>when </a:s>
-                     <a:s r="43">
-                        <a:s r="39">
+                     <a:s r="46">
+                        <a:s r="42">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="38">
+                           <a:s r="41">
                               <a:s>start of </a:s>
-                              <a:s r="37">
+                              <a:s r="40">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="42">
-                           <a:s r="40">Interval[1, 5)</a:s>
+                        <a:s r="45">
+                           <a:s r="43">Interval[1, 5)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="44">
+                     <a:s r="47">
                         <a:s>&quot;P1Y--P5Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="54">
+                  <a:s r="57">
                      <a:s>when </a:s>
-                     <a:s r="52">
-                        <a:s r="48">
+                     <a:s r="55">
+                        <a:s r="51">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="47">
+                           <a:s r="50">
                               <a:s>start of </a:s>
-                              <a:s r="46">
+                              <a:s r="49">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="51">
-                           <a:s r="49">Interval[5, 10)</a:s>
+                        <a:s r="54">
+                           <a:s r="52">Interval[5, 10)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="53">
+                     <a:s r="56">
                         <a:s>&quot;P5Y--P10Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="63">
+                  <a:s r="66">
                      <a:s>when </a:s>
-                     <a:s r="61">
-                        <a:s r="57">
+                     <a:s r="64">
+                        <a:s r="60">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="56">
+                           <a:s r="59">
                               <a:s>start of </a:s>
-                              <a:s r="55">
+                              <a:s r="58">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="60">
-                           <a:s r="58">Interval[10, 15)</a:s>
+                        <a:s r="63">
+                           <a:s r="61">Interval[10, 15)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="62">
+                     <a:s r="65">
                         <a:s>&quot;P10Y--P15Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="72">
+                  <a:s r="75">
                      <a:s>when </a:s>
-                     <a:s r="70">
-                        <a:s r="66">
+                     <a:s r="73">
+                        <a:s r="69">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="65">
+                           <a:s r="68">
                               <a:s>start of </a:s>
-                              <a:s r="64">
+                              <a:s r="67">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="69">
-                           <a:s r="67">Interval[15, 20)</a:s>
+                        <a:s r="72">
+                           <a:s r="70">Interval[15, 20)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="71">
+                     <a:s r="74">
                         <a:s>&quot;P15Y--P20Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="81">
+                  <a:s r="84">
                      <a:s>when </a:s>
-                     <a:s r="79">
-                        <a:s r="75">
+                     <a:s r="82">
+                        <a:s r="78">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="74">
+                           <a:s r="77">
                               <a:s>start of </a:s>
-                              <a:s r="73">
+                              <a:s r="76">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="78">
-                           <a:s r="76">Interval[20, 25)</a:s>
+                        <a:s r="81">
+                           <a:s r="79">Interval[20, 25)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="80">
+                     <a:s r="83">
                         <a:s>&quot;P20Y--P25Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="90">
+                  <a:s r="93">
                      <a:s>when </a:s>
-                     <a:s r="88">
-                        <a:s r="84">
+                     <a:s r="91">
+                        <a:s r="87">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="83">
+                           <a:s r="86">
                               <a:s>start of </a:s>
-                              <a:s r="82">
+                              <a:s r="85">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="87">
-                           <a:s r="85">Interval[25, 30)</a:s>
+                        <a:s r="90">
+                           <a:s r="88">Interval[25, 30)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="89">
+                     <a:s r="92">
                         <a:s>&quot;P25Y--P30Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="99">
+                  <a:s r="102">
                      <a:s>when </a:s>
-                     <a:s r="97">
-                        <a:s r="93">
+                     <a:s r="100">
+                        <a:s r="96">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="92">
+                           <a:s r="95">
                               <a:s>start of </a:s>
-                              <a:s r="91">
+                              <a:s r="94">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="96">
-                           <a:s r="94">Interval[30, 35)</a:s>
+                        <a:s r="99">
+                           <a:s r="97">Interval[30, 35)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="98">
+                     <a:s r="101">
                         <a:s>&quot;P30Y--P35Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="108">
+                  <a:s r="111">
                      <a:s>when </a:s>
-                     <a:s r="106">
-                        <a:s r="102">
+                     <a:s r="109">
+                        <a:s r="105">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="101">
+                           <a:s r="104">
                               <a:s>start of </a:s>
-                              <a:s r="100">
+                              <a:s r="103">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="105">
-                           <a:s r="103">Interval[35, 40)</a:s>
+                        <a:s r="108">
+                           <a:s r="106">Interval[35, 40)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="107">
+                     <a:s r="110">
                         <a:s>&quot;P35Y--P40Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="117">
+                  <a:s r="120">
                      <a:s>when </a:s>
-                     <a:s r="115">
-                        <a:s r="111">
+                     <a:s r="118">
+                        <a:s r="114">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="110">
+                           <a:s r="113">
                               <a:s>start of </a:s>
-                              <a:s r="109">
+                              <a:s r="112">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="114">
-                           <a:s r="112">Interval[40, 50)</a:s>
+                        <a:s r="117">
+                           <a:s r="115">Interval[40, 50)</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="116">
+                     <a:s r="119">
                         <a:s>&quot;P40Y--P50Y&quot;</a:s>
                      </a:s>
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="126">
+                  <a:s r="129">
                      <a:s>when </a:s>
-                     <a:s r="124">
-                        <a:s r="120">
+                     <a:s r="127">
+                        <a:s r="123">
                            <a:s>AgeInYearsAt(</a:s>
-                           <a:s r="119">
+                           <a:s r="122">
                               <a:s>start of </a:s>
-                              <a:s r="118">
+                              <a:s r="121">
                                  <a:s>&quot;Measurement Period&quot;</a:s>
                               </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                         <a:s> in </a:s>
-                        <a:s r="123">
-                           <a:s r="121">Interval[50, null]</a:s>
+                        <a:s r="126">
+                           <a:s r="124">Interval[50, null]</a:s>
                         </a:s>
                      </a:s>
                      <a:s> then </a:s>
-                     <a:s r="125">
+                     <a:s r="128">
                         <a:s>&quot;P50Y--P9999Y&quot;</a:s>
                      </a:s>
                   </a:s>
-                  <a:s r="127">
+                  <a:s r="130">
     else null
   end</a:s>
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="128" locator="26:3-39:5" xsi:type="Case">
-            <caseItem localId="36" locator="27:5-27:86">
-               <when localId="34" locator="27:10-27:70" xsi:type="In">
-                  <operand localId="30" locator="27:10-27:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+         <expression localId="131" locator="29:3-42:5" xsi:type="Case">
+            <caseItem localId="39" locator="30:5-30:86">
+               <when localId="37" locator="30:10-30:70" xsi:type="In">
+                  <operand localId="33" locator="30:10-30:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="29" locator="27:23-27:51" xsi:type="Start">
-                        <operand localId="28" locator="27:32-27:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="32" locator="30:23-30:51" xsi:type="Start">
+                        <operand localId="31" locator="30:32-30:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="33" locator="27:57-27:70" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="31" locator="27:66" valueType="t:Integer" value="0" xsi:type="Literal"/>
-                     <high localId="32" locator="27:69" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                  <operand localId="36" locator="30:57-30:70" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="34" locator="30:66" valueType="t:Integer" value="0" xsi:type="Literal"/>
+                     <high localId="35" locator="30:69" valueType="t:Integer" value="1" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="35" locator="27:77-27:86" name="P0Y--P1Y" xsi:type="CodeRef"/>
+               <then localId="38" locator="30:77-30:86" name="P0Y--P1Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="45" locator="28:5-28:86">
-               <when localId="43" locator="28:10-28:70" xsi:type="In">
-                  <operand localId="39" locator="28:10-28:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="48" locator="31:5-31:86">
+               <when localId="46" locator="31:10-31:70" xsi:type="In">
+                  <operand localId="42" locator="31:10-31:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="38" locator="28:23-28:51" xsi:type="Start">
-                        <operand localId="37" locator="28:32-28:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="41" locator="31:23-31:51" xsi:type="Start">
+                        <operand localId="40" locator="31:32-31:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="42" locator="28:57-28:70" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="40" locator="28:66" valueType="t:Integer" value="1" xsi:type="Literal"/>
-                     <high localId="41" locator="28:69" valueType="t:Integer" value="5" xsi:type="Literal"/>
+                  <operand localId="45" locator="31:57-31:70" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="43" locator="31:66" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                     <high localId="44" locator="31:69" valueType="t:Integer" value="5" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="44" locator="28:77-28:86" name="P1Y--P5Y" xsi:type="CodeRef"/>
+               <then localId="47" locator="31:77-31:86" name="P1Y--P5Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="54" locator="29:5-29:88">
-               <when localId="52" locator="29:10-29:71" xsi:type="In">
-                  <operand localId="48" locator="29:10-29:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="57" locator="32:5-32:88">
+               <when localId="55" locator="32:10-32:71" xsi:type="In">
+                  <operand localId="51" locator="32:10-32:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="47" locator="29:23-29:51" xsi:type="Start">
-                        <operand localId="46" locator="29:32-29:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="50" locator="32:23-32:51" xsi:type="Start">
+                        <operand localId="49" locator="32:32-32:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="51" locator="29:57-29:71" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="49" locator="29:66" valueType="t:Integer" value="5" xsi:type="Literal"/>
-                     <high localId="50" locator="29:69-29:70" valueType="t:Integer" value="10" xsi:type="Literal"/>
+                  <operand localId="54" locator="32:57-32:71" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="52" locator="32:66" valueType="t:Integer" value="5" xsi:type="Literal"/>
+                     <high localId="53" locator="32:69-32:70" valueType="t:Integer" value="10" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="53" locator="29:78-29:88" name="P5Y--P10Y" xsi:type="CodeRef"/>
+               <then localId="56" locator="32:78-32:88" name="P5Y--P10Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="63" locator="30:5-30:90">
-               <when localId="61" locator="30:10-30:72" xsi:type="In">
-                  <operand localId="57" locator="30:10-30:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="66" locator="33:5-33:90">
+               <when localId="64" locator="33:10-33:72" xsi:type="In">
+                  <operand localId="60" locator="33:10-33:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="56" locator="30:23-30:51" xsi:type="Start">
-                        <operand localId="55" locator="30:32-30:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="59" locator="33:23-33:51" xsi:type="Start">
+                        <operand localId="58" locator="33:32-33:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="60" locator="30:57-30:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="58" locator="30:66-30:67" valueType="t:Integer" value="10" xsi:type="Literal"/>
-                     <high localId="59" locator="30:70-30:71" valueType="t:Integer" value="15" xsi:type="Literal"/>
+                  <operand localId="63" locator="33:57-33:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="61" locator="33:66-33:67" valueType="t:Integer" value="10" xsi:type="Literal"/>
+                     <high localId="62" locator="33:70-33:71" valueType="t:Integer" value="15" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="62" locator="30:79-30:90" name="P10Y--P15Y" xsi:type="CodeRef"/>
+               <then localId="65" locator="33:79-33:90" name="P10Y--P15Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="72" locator="31:5-31:90">
-               <when localId="70" locator="31:10-31:72" xsi:type="In">
-                  <operand localId="66" locator="31:10-31:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="75" locator="34:5-34:90">
+               <when localId="73" locator="34:10-34:72" xsi:type="In">
+                  <operand localId="69" locator="34:10-34:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="65" locator="31:23-31:51" xsi:type="Start">
-                        <operand localId="64" locator="31:32-31:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="68" locator="34:23-34:51" xsi:type="Start">
+                        <operand localId="67" locator="34:32-34:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="69" locator="31:57-31:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="67" locator="31:66-31:67" valueType="t:Integer" value="15" xsi:type="Literal"/>
-                     <high localId="68" locator="31:70-31:71" valueType="t:Integer" value="20" xsi:type="Literal"/>
+                  <operand localId="72" locator="34:57-34:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="70" locator="34:66-34:67" valueType="t:Integer" value="15" xsi:type="Literal"/>
+                     <high localId="71" locator="34:70-34:71" valueType="t:Integer" value="20" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="71" locator="31:79-31:90" name="P15Y--P20Y" xsi:type="CodeRef"/>
+               <then localId="74" locator="34:79-34:90" name="P15Y--P20Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="81" locator="32:5-32:90">
-               <when localId="79" locator="32:10-32:72" xsi:type="In">
-                  <operand localId="75" locator="32:10-32:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="84" locator="35:5-35:90">
+               <when localId="82" locator="35:10-35:72" xsi:type="In">
+                  <operand localId="78" locator="35:10-35:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="74" locator="32:23-32:51" xsi:type="Start">
-                        <operand localId="73" locator="32:32-32:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="77" locator="35:23-35:51" xsi:type="Start">
+                        <operand localId="76" locator="35:32-35:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="78" locator="32:57-32:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="76" locator="32:66-32:67" valueType="t:Integer" value="20" xsi:type="Literal"/>
-                     <high localId="77" locator="32:70-32:71" valueType="t:Integer" value="25" xsi:type="Literal"/>
+                  <operand localId="81" locator="35:57-35:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="79" locator="35:66-35:67" valueType="t:Integer" value="20" xsi:type="Literal"/>
+                     <high localId="80" locator="35:70-35:71" valueType="t:Integer" value="25" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="80" locator="32:79-32:90" name="P20Y--P25Y" xsi:type="CodeRef"/>
+               <then localId="83" locator="35:79-35:90" name="P20Y--P25Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="90" locator="33:5-33:90">
-               <when localId="88" locator="33:10-33:72" xsi:type="In">
-                  <operand localId="84" locator="33:10-33:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="93" locator="36:5-36:90">
+               <when localId="91" locator="36:10-36:72" xsi:type="In">
+                  <operand localId="87" locator="36:10-36:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="83" locator="33:23-33:51" xsi:type="Start">
-                        <operand localId="82" locator="33:32-33:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="86" locator="36:23-36:51" xsi:type="Start">
+                        <operand localId="85" locator="36:32-36:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="87" locator="33:57-33:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="85" locator="33:66-33:67" valueType="t:Integer" value="25" xsi:type="Literal"/>
-                     <high localId="86" locator="33:70-33:71" valueType="t:Integer" value="30" xsi:type="Literal"/>
+                  <operand localId="90" locator="36:57-36:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="88" locator="36:66-36:67" valueType="t:Integer" value="25" xsi:type="Literal"/>
+                     <high localId="89" locator="36:70-36:71" valueType="t:Integer" value="30" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="89" locator="33:79-33:90" name="P25Y--P30Y" xsi:type="CodeRef"/>
+               <then localId="92" locator="36:79-36:90" name="P25Y--P30Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="99" locator="34:5-34:90">
-               <when localId="97" locator="34:10-34:72" xsi:type="In">
-                  <operand localId="93" locator="34:10-34:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="102" locator="37:5-37:90">
+               <when localId="100" locator="37:10-37:72" xsi:type="In">
+                  <operand localId="96" locator="37:10-37:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="92" locator="34:23-34:51" xsi:type="Start">
-                        <operand localId="91" locator="34:32-34:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="95" locator="37:23-37:51" xsi:type="Start">
+                        <operand localId="94" locator="37:32-37:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="96" locator="34:57-34:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="94" locator="34:66-34:67" valueType="t:Integer" value="30" xsi:type="Literal"/>
-                     <high localId="95" locator="34:70-34:71" valueType="t:Integer" value="35" xsi:type="Literal"/>
+                  <operand localId="99" locator="37:57-37:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="97" locator="37:66-37:67" valueType="t:Integer" value="30" xsi:type="Literal"/>
+                     <high localId="98" locator="37:70-37:71" valueType="t:Integer" value="35" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="98" locator="34:79-34:90" name="P30Y--P35Y" xsi:type="CodeRef"/>
+               <then localId="101" locator="37:79-37:90" name="P30Y--P35Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="108" locator="35:5-35:90">
-               <when localId="106" locator="35:10-35:72" xsi:type="In">
-                  <operand localId="102" locator="35:10-35:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="111" locator="38:5-38:90">
+               <when localId="109" locator="38:10-38:72" xsi:type="In">
+                  <operand localId="105" locator="38:10-38:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="101" locator="35:23-35:51" xsi:type="Start">
-                        <operand localId="100" locator="35:32-35:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="104" locator="38:23-38:51" xsi:type="Start">
+                        <operand localId="103" locator="38:32-38:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="105" locator="35:57-35:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="103" locator="35:66-35:67" valueType="t:Integer" value="35" xsi:type="Literal"/>
-                     <high localId="104" locator="35:70-35:71" valueType="t:Integer" value="40" xsi:type="Literal"/>
+                  <operand localId="108" locator="38:57-38:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="106" locator="38:66-38:67" valueType="t:Integer" value="35" xsi:type="Literal"/>
+                     <high localId="107" locator="38:70-38:71" valueType="t:Integer" value="40" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="107" locator="35:79-35:90" name="P35Y--P40Y" xsi:type="CodeRef"/>
+               <then localId="110" locator="38:79-38:90" name="P35Y--P40Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="117" locator="36:5-36:90">
-               <when localId="115" locator="36:10-36:72" xsi:type="In">
-                  <operand localId="111" locator="36:10-36:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="120" locator="39:5-39:90">
+               <when localId="118" locator="39:10-39:72" xsi:type="In">
+                  <operand localId="114" locator="39:10-39:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="110" locator="36:23-36:51" xsi:type="Start">
-                        <operand localId="109" locator="36:32-36:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="113" locator="39:23-39:51" xsi:type="Start">
+                        <operand localId="112" locator="39:32-39:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="114" locator="36:57-36:72" lowClosed="true" highClosed="false" xsi:type="Interval">
-                     <low localId="112" locator="36:66-36:67" valueType="t:Integer" value="40" xsi:type="Literal"/>
-                     <high localId="113" locator="36:70-36:71" valueType="t:Integer" value="50" xsi:type="Literal"/>
+                  <operand localId="117" locator="39:57-39:72" lowClosed="true" highClosed="false" xsi:type="Interval">
+                     <low localId="115" locator="39:66-39:67" valueType="t:Integer" value="40" xsi:type="Literal"/>
+                     <high localId="116" locator="39:70-39:71" valueType="t:Integer" value="50" xsi:type="Literal"/>
                   </operand>
                </when>
-               <then localId="116" locator="36:79-36:90" name="P40Y--P50Y" xsi:type="CodeRef"/>
+               <then localId="119" locator="39:79-39:90" name="P40Y--P50Y" xsi:type="CodeRef"/>
             </caseItem>
-            <caseItem localId="126" locator="37:5-37:94">
-               <when localId="124" locator="37:10-37:74" xsi:type="In">
-                  <operand localId="120" locator="37:10-37:52" precision="Year" xsi:type="CalculateAgeAt">
-                     <operand xsi:type="ToDateTime">
-                        <operand path="birthDate.value" xsi:type="Property">
-                           <source name="Patient" xsi:type="ExpressionRef"/>
-                        </operand>
+            <caseItem localId="129" locator="40:5-40:94">
+               <when localId="127" locator="40:10-40:74" xsi:type="In">
+                  <operand localId="123" locator="40:10-40:52" precision="Year" xsi:type="CalculateAgeAt">
+                     <operand path="birthDate.value" xsi:type="Property">
+                        <source name="Patient" xsi:type="ExpressionRef"/>
                      </operand>
-                     <operand localId="119" locator="37:23-37:51" xsi:type="Start">
-                        <operand localId="118" locator="37:32-37:51" name="Measurement Period" xsi:type="ParameterRef"/>
+                     <operand localId="122" locator="40:23-40:51" xsi:type="Start">
+                        <operand localId="121" locator="40:32-40:51" name="Measurement Period" xsi:type="ParameterRef"/>
                      </operand>
                   </operand>
-                  <operand localId="123" locator="37:57-37:74" lowClosed="true" highClosed="true" xsi:type="Interval">
-                     <low localId="121" locator="37:66-37:67" valueType="t:Integer" value="50" xsi:type="Literal"/>
+                  <operand localId="126" locator="40:57-40:74" lowClosed="true" highClosed="true" xsi:type="Interval">
+                     <low localId="124" locator="40:66-40:67" valueType="t:Integer" value="50" xsi:type="Literal"/>
                      <high asType="t:Integer" xsi:type="As">
-                        <operand localId="122" locator="37:70-37:73" xsi:type="Null"/>
+                        <operand localId="125" locator="40:70-40:73" xsi:type="Null"/>
                      </high>
                   </operand>
                </when>
-               <then localId="125" locator="37:81-37:94" name="P50Y--P9999Y" xsi:type="CodeRef"/>
+               <then localId="128" locator="40:81-40:94" name="P50Y--P9999Y" xsi:type="CodeRef"/>
             </caseItem>
             <else asType="t:Code" xsi:type="As">
-               <operand localId="127" locator="38:10-38:13" xsi:type="Null"/>
+               <operand localId="130" locator="41:10-41:13" xsi:type="Null"/>
             </else>
          </expression>
       </def>
