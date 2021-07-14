@@ -2,48 +2,57 @@
 
 ## Quick start
 
-### Configure HAPI FHIR Server to process CQL/Measures.
-
-> Note that the HAPI Docker image doesn't include the feature, the server must be run from the JAR or rebuilt with the JAR and then put into your own container.
-
-Clone hapi-fhir-jpaserver-starter
-```
-git clone git@github.com:hapifhir/hapi-fhir-jpaserver-starter.git
-cd hapi-fhir-jpaserver-starter
-```
-Uncomment the cql line in src/main/resources/application.yaml so that it is enabled.
+Start HAPI FHIR Server
+> This creates a temporary server with memory for storage only, for testing only. Refer to the HAPI docs for production usage.
 ```sh
-#    auto_create_placeholder_reference_targets: false
-    cql_enabled: true
-#    default_encoding: JSON
-```
-Run HAPI
-```
-mvn jetty:run
+docker run -p 8080:8080 -e spring.datasource.url=jdbc:h2:mem:test_mem -e hapi.fhir.cql_enabled=true hapiproject/hapi:latest
 ```
 
-### Prepare and load synthetic data
-
-See https://github.com/intrahealth/synthea-hiv
-
-For example:
+Confirm if necessary if the `$evaluate-measure` operation is supported (will return the text 'evaluate-measure' if so):
 ```sh
-docker run intrahealth/synthea-hiv:pop20
+curl --silent http://localhost:8080/fhir/metadata | grep -o "evaluate-measure"
 ```
 
-### Prepare this repo
+Install sushi for FHIR Shorthand
+> The prototype version of this repo used Synthea-generated data. Now, it uses FSH to make iteration and customization easier.
+```sh
+npm install -g fsh-sushi
+```
 
 Clone this repo
-
 ```sh
 git clone git@github.com:intrahealth/simple-hiv-ig.git
 cd simple-hiv-ig
 ```
 
+Sushi should be run independently first to generate patient test data
+```sh
+sushi
+```
+
+On the existing repo with no changes there should not be any errors, e.g.:
+```
+╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
+║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
+║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
+║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
+║ │    0     │     0      │     0     │      0      │    35     │ ║
+║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
+║                                                                 ║
+║ That went swimmingly!                  0 Errors      0 Warnings ║
+╚═════════════════════════════════════════════════════════════════╝
+```
+
+Copy over patient test data into test folders (see caveats below for how/why)
+```
+cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/KitchenSink/Patient-HIVSimple/
+cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/AgeRanges/Patient-HIVSimple/
+```
+
 Run Publisher and create resources. Resources are put in /output
 ```sh
 # only need first time
-bash _updatePublisher
+bash _updatePublisher.sh
 # run every time
 bash _genonce.sh
 ```
@@ -60,29 +69,27 @@ curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIRHelpers
 ```sh
 cd output
 # library resources
-for FILE in FHIRCommon AgeRanges \
-HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog HIVSimpleGender HIVSimpleGender2 HIVSimpleTestResult HIVSimpleViralLoad \
+for FILE in KitchenSink FHIRCommon AgeRanges \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done
 ```
 
 PUT the Measure resources
 ```sh
 for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog \
-HIVSimpleGender HIVSimpleGender2 HIVSimpleGenderCohort HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv \
+HIVSimpleGender HIVSimpleGenderCohort HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv \
 HIVSimpleGenderSubjectList HIVSimpleTestResult HIVSimpleViralLoad \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done
 ```
 
 Run a provided example in the browser
 ```
-http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleGender2/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleDemog/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleTestResult/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleCondition/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleViralLoad/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleGender-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleDemog-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleTestResult-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleCondition-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleViralLoad-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
 
 ## Authoring

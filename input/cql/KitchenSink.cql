@@ -13,6 +13,7 @@ codesystem "LOINC": 'http://loinc.org'
 
 // ConditionOnset: HIV infection, this conflicts with test result, so is be renamed
 code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV Positive'
+code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
 code "Pregnant (finding)": '77386006' from "SNOMED-CT" display 'Pregnant (finding)'
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA NAA+probe (Specimen)'
 
@@ -65,6 +66,10 @@ define "HIV Condition":
 define "Is HIV Positive":
   "HIV Condition"
 
+define "Is HIV Negative":
+  not "HIV Condition"
+
+
 define "Pregnant":
   exists ["Condition": "Pregnant (finding)"]
 
@@ -72,6 +77,30 @@ define "Viral Load Test Result":
   ["Observation": "HIV 1 RNA NAA+probe (Specimen)"] Obs
     where Obs.status = 'final'
       and Obs.value is not null
+
+
+define "HIV Test Exists":
+  exists ([Observation: "HIV 1 and 2 tests - Meaningful Use set"])
+
+define "HIV Positive Observation":
+  [Observation: "HIV 1 and 2 tests - Meaningful Use set"] Observation
+    where Observation.value = "Is HIV Positive"
+
+define "HIV Negative Observation":
+  [Observation: "HIV 1 and 2 tests - Meaningful Use set"] Observation
+    where Observation.value = "Is HIV Negative"
+
+// always null
+define "HIV Test Results":
+  case
+    when "Is HIV Positive" then "HIV Positive"
+    when "Is HIV Negative" then "HIV Negative"
+    else null
+  end
+
+// always null
+define "Age Group/Sex/HIV Test Results":
+  AR."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code
 
 
 // synthea uses copies/mL but fsh uses {copies}/mL which is official

@@ -55,3 +55,59 @@ v: {
   "error" : "The display \"LOINC Code\" is not a valid display for the code {http://loinc.org}75622-1 - should be one of [HIV 1 and 2 tests - Meaningful Use set, HIV 1 and 2 - MU Set, Ⅰ Ⅱ AIDS, AIDS 病毒, 人类免疫缺陷病毒, 人类免疫缺陷病毒（Human immunodeficiency virus，HIV）, 爱滋病, 艾滋病, 艾滋病病毒, 获得性免疫缺陷综合征, 获得性免疫缺陷综合征（Acquired Immure Deficiency Syndrome，AIDS，艾滋病） HIV 1 与 2 型（人类免疫缺陷病毒 1 与 2 型、人类免疫缺陷病毒 I 与 II 型、人免疫缺陷病毒 1 与 2 型、人免疫缺陷病毒 I 与 II 型、HIV I 与 II、HIV I 与 II 型、艾滋病病毒 I 与 II 型）试验（检验项目、化验项目、测试、化验、检测） - 有效利用（Meaningful Use、MU、有效实用）集（集合）, HIV 1 型与 2 型试验 - 有效利用集 HIV1, HTLV 3, HTLV III, 人类免疫缺陷病毒 1 型, 人类免疫缺陷病毒 I 型, HIV 1 型（人类免疫缺陷病毒 1 型、人类免疫缺陷病毒 I 型、人免疫缺陷病毒 1 型、人免疫缺陷病毒 I 型、HIV I、HIV I 型、艾滋病病毒 I 型） I II 人类免疫缺陷病毒 1 与 2 型, HIV（人类免疫缺陷病毒、人免疫缺陷病毒、艾滋病病毒） 1 型（I 型） 与 2 型（II 型） 人类免疫缺陷病毒 1+2 型, HIV 1+2 型（人类免疫缺陷病毒 1+2 型、人类免疫缺陷病毒 I+II 型、人免疫缺陷病毒 1+2 型、人免疫缺陷病毒 I+II 型、HIV I+II、HIV I+II 型、艾滋病病毒 I+II 型） 医嘱套餐 医嘱套餐类 医嘱套餐组 医嘱组 医嘱组.微生物学, 实验室组套（组合、医嘱组、套餐、套餐医嘱、医嘱套餐、组合申请、组合项目）类.微生物学试验, 医嘱组.微生物学试验, 医嘱组类.微生物学, 医嘱组类.微生物学试验, 实验室医嘱组类.微生物学, 微生物学医嘱组, 微生物学医嘱组类 医嘱组合 医嘱组合类 医嘱组套 医嘱组套类 医嘱组类 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 多重, 多重型, 多重标尺类型, 多重精度类型 套餐 套餐医嘱 套餐医嘱组 套餐医嘱组类 实验室医嘱套餐 实验室医嘱套餐类 实验室医嘱组 实验室医嘱组合类 实验室医嘱组套 实验室医嘱组套类 实验室套餐医嘱组 实验室套餐医嘱组类 实验室检验项目医嘱组合类 实验室检验项目组合类 微生物学, 微生物学试验, 微生物学试验（培养、DNA、抗原及抗体） 时刻, 随机, 随意, 瞬间 检验医嘱组合类 检验项目医嘱组合类 检验项目组合类 组 组合 组合医嘱 组合类 组套, Aleatorio HTLV 3 HTLV III instante momento SIDA VIH tipo 1 Virus de Inmunodeficiencia Humana Virus de inmunodeficiencia humana 1-2, Microbiologia paziente Punto nel tempo (episodio) Set di prescrizione microbiologia Test HIV 1 e 2 - Meaningful Use set, ] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "25836-8"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "25836-8",
+  "display" : "HIV 1 RNA NAA+probe (Specimen)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+  "severity" : "warning",
+  "error" : "The display \"HIV 1 RNA NAA+probe (Specimen)\" is not a valid display for the code {http://loinc.org}25836-8 - should be one of [HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection, HIV1 RNA # Spec NAA+probe, Ⅰ AIDS, AIDS 病毒, 人类免疫缺陷病毒, 人类免疫缺陷病毒（Human immunodeficiency virus，HIV）, 爱滋病, 艾滋病, 艾滋病病毒, 获得性免疫缺陷综合征, 获得性免疫缺陷综合征（Acquired Immure Deficiency Syndrome，AIDS，艾滋病） HIV1 RNA HIV1, HTLV 3, HTLV III, 人类免疫缺陷病毒 1 型, 人类免疫缺陷病毒 I 型, HIV 1 型（人类免疫缺陷病毒 1 型、人类免疫缺陷病毒 I 型、人免疫缺陷病毒 1 型、人免疫缺陷病毒 I 型、HIV I、HIV I 型、艾滋病病毒 I 型） I 不明的, 其他, 将在相应消息内其他部分之中加以详细说明, 未作详细说明的, 未作说明的, 未做说明的标本, 未加规定的, 未加说明的标本, 杂项 借助扩增的探针方法, 借助扩增的探针法, 探针法.扩增 借助靶向扩增的探针方法, 借助靶向扩增的探针法, 探针法.扩增.靶向 单位体积内的数量或计数, 数量型浓度(单位体积), 数量或计数型浓度(计数/体积), 数量或计数型浓度(单位体积), 计数型浓度(单位体积) 可用数量表示的, 定量性, 数值型, 数量型, 连续数值型标尺 微生物学, 微生物学试验, 微生物学试验（培养、DNA、抗原及抗体） 扩增型 扩增性 数量型浓度 探针法.基因扩增.靶向 数量型浓度 探针法.扩增.靶向 数量或计数型浓度 探针法.扩增.靶向 时刻, 随机, 随意, 瞬间 核糖核酸, Ribonucleic acid 病毒负荷 病毒负荷量 病毒负载 病毒载量 病毒载量（Viral load） 经过扩增的 脱氧核糖核酸探针 计数型浓度 探针法.基因扩增.靶向 计数型浓度 探针法.扩增.靶向, , Ribonucleic acid, HIV1, HIV type 1, HIV type I, AIDS, Human immunodeficiency virus, #, Number concentration, Count/mass, Count, AcS, CT, Acsolute, Acsolutes, Cnt, Point in time, Random, Misc, Miscellaneous, Unspecified, Other, Quantitative, QNT, Quant, Quan, PCR, Polymerase chain reaction, Transcription mediated amplification, NASBA, Nucleic acid sequence based analysis, SDA, Strand Displacement Amplification, LAT, Ligation-activated transcription, 3SR SR, 3 Self-Sustaining Sequence Replication, LCR, Ligase chain reaction, QBR, Q-Beta Replicase or probe amplification category method, Probe with target amplification, NAAT, TMA, Amp Prb, Probe with ampification, DNA probe, Amplified, Microbiology, Viral load, Absoluto Ácido ribonucleico Aleatorio Cuantitativo HTLV 3 HTLV III instante Miscelanea momento Otros SIDA Sonda de ADN VIH tipo 1 Virus de Inmunodeficiencia Humana, Concentrazione Numerica Microbiologia Punto nel tempo (episodio) RNA dell''HIV 1 Sonda con amplificazione Sonda con amplificazione del target Sonda di DNA, ВИЧ ВИЧ 1 ДНК проба, ДНК зонд Количественный Количество в объеме Проба с мишени усилением Точка во времени, Момент, probe.amp.tar, HIV HIV 1] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "25836-8"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "25836-8",
+  "display" : "HIV 1 RNA NAA+probe (Specimen)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+  "severity" : "warning",
+  "error" : "The display \"HIV 1 RNA NAA+probe (Specimen)\" is not a valid display for the code {http://loinc.org}25836-8 - should be one of [HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection, HIV1 RNA # Spec NAA+probe, Ⅰ AIDS, AIDS 病毒, 人类免疫缺陷病毒, 人类免疫缺陷病毒（Human immunodeficiency virus，HIV）, 爱滋病, 艾滋病, 艾滋病病毒, 获得性免疫缺陷综合征, 获得性免疫缺陷综合征（Acquired Immure Deficiency Syndrome，AIDS，艾滋病） HIV1 RNA HIV1, HTLV 3, HTLV III, 人类免疫缺陷病毒 1 型, 人类免疫缺陷病毒 I 型, HIV 1 型（人类免疫缺陷病毒 1 型、人类免疫缺陷病毒 I 型、人免疫缺陷病毒 1 型、人免疫缺陷病毒 I 型、HIV I、HIV I 型、艾滋病病毒 I 型） I 不明的, 其他, 将在相应消息内其他部分之中加以详细说明, 未作详细说明的, 未作说明的, 未做说明的标本, 未加规定的, 未加说明的标本, 杂项 借助扩增的探针方法, 借助扩增的探针法, 探针法.扩增 借助靶向扩增的探针方法, 借助靶向扩增的探针法, 探针法.扩增.靶向 单位体积内的数量或计数, 数量型浓度(单位体积), 数量或计数型浓度(计数/体积), 数量或计数型浓度(单位体积), 计数型浓度(单位体积) 可用数量表示的, 定量性, 数值型, 数量型, 连续数值型标尺 微生物学, 微生物学试验, 微生物学试验（培养、DNA、抗原及抗体） 扩增型 扩增性 数量型浓度 探针法.基因扩增.靶向 数量型浓度 探针法.扩增.靶向 数量或计数型浓度 探针法.扩增.靶向 时刻, 随机, 随意, 瞬间 核糖核酸, Ribonucleic acid 病毒负荷 病毒负荷量 病毒负载 病毒载量 病毒载量（Viral load） 经过扩增的 脱氧核糖核酸探针 计数型浓度 探针法.基因扩增.靶向 计数型浓度 探针法.扩增.靶向, , Ribonucleic acid, HIV1, HIV type 1, HIV type I, AIDS, Human immunodeficiency virus, #, Number concentration, Count/mass, Count, AcS, CT, Acsolute, Acsolutes, Cnt, Point in time, Random, Misc, Miscellaneous, Unspecified, Other, Quantitative, QNT, Quant, Quan, PCR, Polymerase chain reaction, Transcription mediated amplification, NASBA, Nucleic acid sequence based analysis, SDA, Strand Displacement Amplification, LAT, Ligation-activated transcription, 3SR SR, 3 Self-Sustaining Sequence Replication, LCR, Ligase chain reaction, QBR, Q-Beta Replicase or probe amplification category method, Probe with target amplification, NAAT, TMA, Amp Prb, Probe with ampification, DNA probe, Amplified, Microbiology, Viral load, Absoluto Ácido ribonucleico Aleatorio Cuantitativo HTLV 3 HTLV III instante Miscelanea momento Otros SIDA Sonda de ADN VIH tipo 1 Virus de Inmunodeficiencia Humana, Concentrazione Numerica Microbiologia Punto nel tempo (episodio) RNA dell''HIV 1 Sonda con amplificazione Sonda con amplificazione del target Sonda di DNA, ВИЧ ВИЧ 1 ДНК проба, ДНК зонд Количественный Количество в объеме Проба с мишени усилением Точка во времени, Момент, probe.amp.tar, HIV HIV 1] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

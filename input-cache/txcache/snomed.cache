@@ -21,3 +21,14 @@ v: {
   "error" : "The display \"HIV Positive\" is not a valid display for the code {http://snomed.info/sct}86406008 - should be one of [Human immunodeficiency virus infection, HIV infection, Human immunodeficiency virus infection (disorder), HIV - Human immunodeficiency virus infection] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "77386006",
+  "display" : "Pregnant (finding)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Pregnancy not delivered",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

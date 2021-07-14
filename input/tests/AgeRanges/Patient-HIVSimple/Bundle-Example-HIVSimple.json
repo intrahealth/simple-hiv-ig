@@ -1,0 +1,335 @@
+{
+  "resourceType": "Bundle",
+  "id": "Example-HIVSimple",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "http://www.example.org/fhir/Patient/Patient-HIVSimple",
+      "request": {
+        "url": "Patient",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-HIVSimple",
+        "name": [
+          {
+            "given": [
+              "Mittens"
+            ],
+            "family": "Cat",
+            "text": "Mittens Cat"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-01-01"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Organization/Organization-HIVSimple",
+      "request": {
+        "url": "Organization",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-HIVSimple",
+        "name": "Government Hospital"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Location/Location-HIVSimple",
+      "request": {
+        "url": "Location",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-HIVSimple",
+        "managingOrganization": {
+          "reference": "Organization/Organization-HIVSimple"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-HIVSimple"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Condition/Condition-HIVSimple",
+      "request": {
+        "url": "Condition",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition-HIVSimple",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "86406008",
+              "system": "http://snomed.info/sct",
+              "display": "HIV Positive"
+            }
+          ]
+        },
+        "onsetDateTime": "2010-01-01"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Condition/Condition-Pregnancy",
+      "request": {
+        "url": "Condition",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition-Pregnancy",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "77386006",
+              "system": "http://snomed.info/sct",
+              "display": "Pregnant (finding)"
+            }
+          ]
+        },
+        "onsetDateTime": "2020-01-01",
+        "abatementDateTime": "2020-09-30"
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Encounter/Encounter-HIVSimple",
+      "request": {
+        "url": "Encounter",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter-HIVSimple",
+        "status": "finished",
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "serviceProvider": {
+          "reference": "Organization/Organization-HIVSimple"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/Location-HIVSimple"
+            }
+          }
+        ],
+        "period": {
+          "start": "2011-01-01",
+          "end": "2011-01-01"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple",
+      "request": {
+        "url": "DiagnosticReport",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "DiagnosticReport-HIVSimple",
+        "status": "final",
+        "encounter": {
+          "reference": "Encounter/Encounter-HIVSimple"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "result": [
+          {
+            "reference": "Observation/Observation-HIVSimple"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "75622-1",
+              "system": "http://loinc.org",
+              "display": "HIV types 1 and 2 testing"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Observation/Observation-HIVSimple",
+      "request": {
+        "url": "Observation",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation-HIVSimple",
+        "status": "final",
+        "encounter": {
+          "reference": "Encounter/Encounter-HIVSimple"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "75622-1",
+              "system": "http://loinc.org",
+              "display": "LOINC Code"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "165816005",
+              "system": "http://snomed.info/sct",
+              "display": "HIV Positive"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Encounter/Encounter-ViralLoad",
+      "request": {
+        "url": "Encounter",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter-ViralLoad",
+        "status": "finished",
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "serviceProvider": {
+          "reference": "Organization/Organization-HIVSimple"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/Location-HIVSimple"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-06-01",
+          "end": "2020-06-01"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-ViralLoad",
+      "request": {
+        "url": "DiagnosticReport",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "DiagnosticReport-ViralLoad",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter-ViralLoad"
+        },
+        "result": [
+          {
+            "reference": "Observation/Observation-ViralLoad"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "25836-8",
+              "system": "http://loinc.org",
+              "display": "HIV 1 RNA NAA+probe (Specimen)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://www.example.org/fhir/Observation/Observation-ViralLoad",
+      "request": {
+        "url": "Observation",
+        "method": "PUT"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation-ViralLoad",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter-ViralLoad"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "25836-8",
+              "system": "http://loinc.org",
+              "display": "HIV 1 RNA NAA+probe (Specimen)"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 741660,
+          "unit": "copies/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "{copies}/mL"
+        }
+      }
+    }
+  ]
+}

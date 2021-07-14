@@ -2,6 +2,8 @@ library AgeRanges version '0.1.0'
 
 using FHIR version '4.0.1'
 
+include FHIRHelpers version '4.0.1'
+
 codesystem "ISO-8601-Derived Periods": 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
 
 // Age Groups
@@ -40,3 +42,61 @@ define "Age Group":
     when AgeInYearsAt(start of "Measurement Period") in Interval[50, null] then "P50Y--P9999Y"
     else null
   end
+
+define Patient0To5AndFemale:
+  AgeInYearsAt(start of "Measurement Period") >= 0
+    and AgeInYearsAt(start of "Measurement Period") < 5
+    and Patient.gender = 'female'
+
+define Patient5To15AndFemale:
+  AgeInYearsAt(start of "Measurement Period") >= 5
+    and AgeInYearsAt(start of "Measurement Period") < 15
+    and Patient.gender = 'female'
+
+define Patient15To25AndFemale:
+  AgeInYearsAt(start of "Measurement Period") >= 15
+    and AgeInYearsAt(start of "Measurement Period") < 25
+    and Patient.gender = 'female'
+
+define Patient25To50AndFemale:
+  AgeInYearsAt(start of "Measurement Period") >= 25
+    and AgeInYearsAt(start of "Measurement Period") < 50
+    and Patient.gender = 'female'
+
+define Patient50To65AndFemale:
+  AgeInYearsAt(start of "Measurement Period") >= 50
+    and AgeInYearsAt(start of "Measurement Period") < 65
+    and Patient.gender = 'female'
+
+define Patient65ToHighestAndFemale:
+  AgeInYearsAt(start of "Measurement Period") >= 65
+    and Patient.gender = 'female'
+
+define Patient0To5AndMale:
+  AgeInYearsAt(start of "Measurement Period") >= 0
+    and AgeInYearsAt(start of "Measurement Period") < 5
+    and Patient.gender = 'male'
+
+define Patient5To15AndMale:
+  AgeInYearsAt(start of "Measurement Period") >= 5
+    and AgeInYearsAt(start of "Measurement Period") < 15
+    and Patient.gender = 'male'
+
+define Patient15To25AndMale:
+  AgeInYearsAt(start of "Measurement Period") >= 15
+    and AgeInYearsAt(start of "Measurement Period") < 25
+    and Patient.gender = 'male'
+
+define Patient25To50AndMale:
+  AgeInYearsAt(start of "Measurement Period") >= 25
+    and AgeInYearsAt(start of "Measurement Period") < 50
+    and Patient.gender = 'male'
+
+define Patient50To65AndMale:
+  AgeInYearsAt(start of "Measurement Period") >= 50
+    and AgeInYearsAt(start of "Measurement Period") < 65
+    and Patient.gender = 'male'
+
+define Patient65ToHighestAndMale:
+  AgeInYearsAt(start of "Measurement Period") >= 65
+    and Patient.gender = 'male'

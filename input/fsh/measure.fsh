@@ -12,13 +12,13 @@ RuleSet: meas-common
 * experimental = true
 * date = "2021-07-01"
 * publisher = "OpenHIE"
+* library = "Library/KitchenSink"
 // * type.coding.code = #process <- this is not used in calculations
 
-Instance: HIVSimpleAgeGroup-Measure
+Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
 * url = "Measure/HIVSimpleAgeGroup"
 * identifier.value = "HIVSimpleAgeGroup"
-* library = "Library/HIVSimpleAgeGroup"
 * insert meas-common
 
 // options: proportion | ratio | continuous-variable | cohort
@@ -52,11 +52,10 @@ InstanceOf: Measure
 * group[=].stratifier[=].criteria.expression = "Age Group"
 
 
-Instance: HIVSimpleCondition-Measure
+Instance: HIVSimpleCondition
 InstanceOf: Measure
 * url = "Measure/HIVSimpleCondition"
 * identifier.value = "HIVSimpleCondition"
-* library = "Library/HIVSimpleCondition"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -81,36 +80,10 @@ InstanceOf: Measure
 * group.stratifier[=].criteria.expression = "Age Group"
 
 
-Instance: HIVSimpleDemog-Measure
-InstanceOf: Measure
-* url = "Measure/HIVSimpleDemog"
-* identifier.value = "HIVSimpleDemog"
-* library = "Library/HIVSimpleDemog"
-* insert meas-common
-
-* scoring.coding.code = #proportion
-
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
-
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
-
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
-
-
-Instance: HIVSimpleGender-Measure
+Instance: HIVSimpleGender
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGender"
 * identifier.value = "HIVSimpleGender"
-* library = "Library/HIVSimpleGender"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -131,36 +104,10 @@ InstanceOf: Measure
 * group.population[=].criteria.expression = "Numerator"
 
 
-Instance: HIVSimpleGender2-Measure
-InstanceOf: Measure
-* url = "Measure/HIVSimpleGender2"
-* identifier.value = "HIVSimpleGender2"
-* library = "Library/KitchenSink"
-* insert meas-common
-
-* scoring.coding.code = #proportion
-
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
-
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
-
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
-
-
-Instance: HIVSimpleGenderCohort-Measure
+Instance: HIVSimpleGenderCohort
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderCohort"
 * identifier.value = "HIVSimpleGenderCohort"
-* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #cohort
@@ -171,11 +118,10 @@ InstanceOf: Measure
 * group.population[=].criteria.expression = "Initial Population"
 
 
-Instance: HIVSimpleGenderSubjectList-Measure
+Instance: HIVSimpleGenderSubjectList
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderSubjectList"
 * identifier.value = "HIVSimpleGenderSubjectList"
-* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #cohort
@@ -186,11 +132,10 @@ InstanceOf: Measure
 * group.population[=].criteria.expression = "Initial Population"
 
 
-Instance: HIVSimpleGenderSuppData-Measure
+Instance: HIVSimpleGenderSuppData
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderSuppData"
 * identifier.value = "HIVSimpleGenderSuppData"
-* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -215,11 +160,10 @@ InstanceOf: Measure
 * supplementalData.criteria.expression = "SDE Sex"
 
 
-Instance: HIVSimpleGenderSuppDataIndiv-Measure
+Instance: HIVSimpleGenderSuppDataIndiv
 InstanceOf: Measure
 * url = "Measure/HIVSimpleGenderSuppDataIndiv"
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
-* library = "Library/KitchenSink"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -247,36 +191,10 @@ InstanceOf: Measure
 * supplementalData[=].criteria.expression = "SDE Location"
 
 
-Instance: HIVSimpleTestResult-Measure
+Instance: HIVSimpleTestResult
 InstanceOf: Measure
 * url = "Measure/HIVSimpleTestResult"
 * identifier.value = "HIVSimpleTestResult"
-* library = "Library/HIVSimpleTestResult"
-* insert meas-common
-
-* scoring.coding.code = #proportion
-
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
-
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
-
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
-
-
-Instance: HIVSimpleViralLoad-Measure
-InstanceOf: Measure
-* url = "Measure/HIVSimpleViralLoad"
-* identifier.value = "HIVSimpleViralLoad"
-* library = "Library/HIVSimpleViralLoad"
 * insert meas-common
 
 * scoring.coding.code = #proportion
@@ -301,50 +219,38 @@ RuleSet: meas-bundle
 * entry[=].request.url = "Measure"
 * entry[=].request.method = #PUT
 
-Instance: HIVSimple-Measures
+Instance: HIVSimples
 InstanceOf: Bundle
 * type = #transaction
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup-Measure"
-* entry[=].resource = HIVSimpleAgeGroup-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup"
+* entry[=].resource = HIVSimpleAgeGroup
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleCondition-Measure"
-* entry[=].resource = HIVSimpleCondition-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleCondition"
+* entry[=].resource = HIVSimpleCondition
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleDemog-Measure"
-* entry[=].resource = HIVSimpleDemog-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender"
+* entry[=].resource = HIVSimpleGender
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender-Measure"
-* entry[=].resource = HIVSimpleGender-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderCohort"
+* entry[=].resource = HIVSimpleGenderCohort
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender2-Measure"
-* entry[=].resource = HIVSimpleGender2-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSubjectList"
+* entry[=].resource = HIVSimpleGenderSubjectList
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderCohort-Measure"
-* entry[=].resource = HIVSimpleGenderCohort-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppData"
+* entry[=].resource = HIVSimpleGenderSuppData
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSubjectList-Measure"
-* entry[=].resource = HIVSimpleGenderSubjectList-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppDataIndiv"
+* entry[=].resource = HIVSimpleGenderSuppDataIndiv
 * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppData-Measure"
-* entry[=].resource = HIVSimpleGenderSuppData-Measure
-* insert meas-bundle
-
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppDataIndiv-Measure"
-* entry[=].resource = HIVSimpleGenderSuppDataIndiv-Measure
-* insert meas-bundle
-
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleTestResult-Measure"
-* entry[=].resource = HIVSimpleTestResult-Measure
-* insert meas-bundle
-
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleViralLoad-Measure"
-* entry[=].resource = HIVSimpleViralLoad-Measure
+* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleTestResult"
+* entry[=].resource = HIVSimpleTestResult
 * insert meas-bundle
