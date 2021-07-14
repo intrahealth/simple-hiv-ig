@@ -40,8 +40,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.35"}
-    h3,h4,h5,h6{--heading-prefix:"6.35"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.26"}
+    h3,h4,h5,h6{--heading-prefix:"6.26"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -211,6 +211,8 @@
 
 using FHIR version '4.0.1'
 
+include FHIRHelpers version '4.0.1'
+
 codesystem &quot;ISO-8601-Derived Periods&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
 
 // Age Groups
@@ -249,6 +251,64 @@ define &quot;Age Group&quot;:
     when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[50, null] then &quot;P50Y--P9999Y&quot;
     else null
   end
+
+define Patient0To5AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 0
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 5
+    and Patient.gender = 'female'
+
+define Patient5To15AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 5
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 15
+    and Patient.gender = 'female'
+
+define Patient15To25AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 15
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 25
+    and Patient.gender = 'female'
+
+define Patient25To50AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 25
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 50
+    and Patient.gender = 'female'
+
+define Patient50To65AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 50
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 65
+    and Patient.gender = 'female'
+
+define Patient65ToHighestAndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
+    and Patient.gender = 'female'
+
+define Patient0To5AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 0
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 5
+    and Patient.gender = 'male'
+
+define Patient5To15AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 5
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 15
+    and Patient.gender = 'male'
+
+define Patient15To25AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 15
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 25
+    and Patient.gender = 'male'
+
+define Patient25To50AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 25
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 50
+    and Patient.gender = 'male'
+
+define Patient50To65AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 50
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 65
+    and Patient.gender = 'male'
+
+define Patient65ToHighestAndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
+    and Patient.gender = 'male'
 </code></pre></blockquote><a name="http-//www.example.org/fhir/Library/FHIRCommon"> </a><a name="Library_FHIRCommon"> </a><hr/><p>Entry 2 - Full URL = http://www.example.org/fhir/Library/FHIRCommon</p><p>Request:</p><pre>PUT Library
 </pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">/*
 @author: Bryn Rhodes
@@ -515,8 +575,8 @@ define function BaseModifierExtensions(element BackboneElement, id String):
 is more than one extension on the given resource with the specified url.
 */
 define function BaseModifierExtension(element BackboneElement, id String):
-  singleton from BaseModifierExtensions(element, id)</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/HIVSimpleAgeGroup"> </a><a name="Library_HIVSimpleAgeGroup"> </a><hr/><p>Entry 3 - Full URL = http://www.example.org/fhir/Library/HIVSimpleAgeGroup</p><p>Request:</p><pre>PUT Library
-</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library HIVSimpleAgeGroup version '0.1.0'
+  singleton from BaseModifierExtensions(element, id)</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/KitchenSink"> </a><a name="Library_KitchenSink"> </a><hr/><p>Entry 3 - Full URL = http://www.example.org/fhir/Library/KitchenSink</p><p>Request:</p><pre>PUT Library
+</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library KitchenSink version '0.1.0'
 
 using FHIR version '4.0.1'
 
@@ -524,176 +584,24 @@ include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
 include AgeRanges version '0.1.0' called AR
 
-/* include ANCStratifiers called Stratifiers */
-
 // SNOMED-CT, International Edition
 codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
-
 // LOINC, 2.63+
 codesystem &quot;LOINC&quot;: 'http://loinc.org'
+
+// ConditionOnset: HIV infection, this conflicts with test result, so is be renamed
+code &quot;HIV Condition Positive&quot;: '86406008' from &quot;SNOMED-CT&quot; display 'HIV Positive'
+code &quot;HIV 1 and 2 tests - Meaningful Use set&quot;: '75622-1' from &quot;LOINC&quot; display 'HIV 1 and 2 tests - Meaningful Use set'
+code &quot;Pregnant (finding)&quot;: '77386006' from &quot;SNOMED-CT&quot; display 'Pregnant (finding)'
+code &quot;HIV 1 RNA NAA+probe (Specimen)&quot;: '25836-8' from &quot;LOINC&quot; display 'HIV 1 RNA NAA+probe (Specimen)'
 
 context Patient
 
 define &quot;Sex&quot;:
   Patient.gender
 
-define &quot;Age Group/Sex&quot;:
-  AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot;
-
-define &quot;Initial Population&quot;: true
-
-define &quot;Denominator&quot;: true
-
-// returns null
-define &quot;Numerator&quot;:
-  AR.&quot;Age Group&quot;
-</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/HIVSimpleCondition"> </a><a name="Library_HIVSimpleCondition"> </a><hr/><p>Entry 4 - Full URL = http://www.example.org/fhir/Library/HIVSimpleCondition</p><p>Request:</p><pre>PUT Library
-</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library HIVSimpleCondition version '0.1.0'
-
-using FHIR version '4.0.1'
-
-include FHIRHelpers version '4.0.1'
-include FHIRCommon version '4.0.1' called FC
-include AgeRanges version '0.1.0' called AR
-
-// SNOMED-CT, International Edition
-codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
-
-// LOINC, 2.63+
-codesystem &quot;LOINC&quot;: 'http://loinc.org'
-
-// ConditionOnset: HIV infection
-// this conflicts with test result, so should be renamed
-code &quot;HIV Positive&quot;: '86406008' from &quot;SNOMED-CT&quot; display 'HIV Positive'
-
-context Patient
-
-define &quot;Sex&quot;: Patient.gender
-
-// not working: everyone is false for some reason
-define &quot;HIV Condition&quot;:
-  exists [&quot;Condition&quot;: &quot;HIV Positive&quot;]
-
-/* define &quot;Get Condition from CodeSystem Declaration&quot;:
-  [Condition: &quot;SNOMED:86406008&quot;] */
-
-define &quot;Initial Population&quot;: true
-
-define &quot;Denominator&quot;: true
-
-// always comes up false
-define &quot;Numerator&quot;:
-  &quot;HIV Condition&quot;
-</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/HIVSimpleDemog"> </a><a name="Library_HIVSimpleDemog"> </a><hr/><p>Entry 5 - Full URL = http://www.example.org/fhir/Library/HIVSimpleDemog</p><p>Request:</p><pre>PUT Library
-</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library HIVSimpleDemog version '0.1.0'
-
-using FHIR version '4.0.1'
-
-include FHIRHelpers version '4.0.1'
-include FHIRCommon version '4.0.1' called FC
-include AgeRanges version '0.1.0' called AR
-
-// SNOMED-CT, International Edition
-codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
-
-// LOINC, 2.63+
-codesystem &quot;LOINC&quot;: 'http://loinc.org'
-
-// inclusive (closed) boundaries are indicated with square brackets,
-// and exclusive (open) boundaries are indicated with parentheses
-parameter MeasurementPeriod default Interval[@1970-01-01, @2021-01-01)
-
-context Patient
-
-define &quot;Sex&quot;: Patient.gender
-
-// not working as expected
-define &quot;Age Group Test&quot;:
-  AR.&quot;Age Group&quot;.code
-
-// these seem to work
-define Patient0To5AndFemale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 0
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 5
-    and Patient.gender = 'female'
-
-define Patient5To15AndFemale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 5
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 15
-    and Patient.gender = 'female'
-
-define Patient15To25AndFemale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 15
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 25
-    and Patient.gender = 'female'
-
-define Patient25To50AndFemale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 25
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 50
-    and Patient.gender = 'female'
-
-define Patient50To65AndFemale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 50
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 65
-    and Patient.gender = 'female'
-
-define Patient65ToHighestAndFemale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 65
-    and Patient.gender = 'female'
-
-define Patient0To5AndMale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 0
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 5
-    and Patient.gender = 'male'
-
-define Patient5To15AndMale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 5
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 15
-    and Patient.gender = 'male'
-
-define Patient15To25AndMale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 15
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 25
-    and Patient.gender = 'male'
-
-define Patient25To50AndMale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 25
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 50
-    and Patient.gender = 'male'
-
-define Patient50To65AndMale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 50
-    and AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &lt; 65
-    and Patient.gender = 'male'
-
-define Patient65ToHighestAndMale:
-  AgeInYearsAt(start of &quot;MeasurementPeriod&quot;) &gt;= 65
-    and Patient.gender = 'male'
-
-define &quot;Initial Population&quot;: true
-
-define &quot;Denominator&quot;: true
-
-define &quot;Numerator&quot;: true
-</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/HIVSimpleGender"> </a><a name="Library_HIVSimpleGender"> </a><hr/><p>Entry 6 - Full URL = http://www.example.org/fhir/Library/HIVSimpleGender</p><p>Request:</p><pre>PUT Library
-</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library HIVSimpleGender version '0.1.0'
-
-using FHIR version '4.0.1'
-using QUICK
-
-include FHIRHelpers version '4.0.1'
-include FHIRCommon version '4.0.1' called FC
-// include AgeRanges called AR
-
-// SNOMED-CT, International Edition
-codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
-
-// LOINC, 2.63+
-codesystem &quot;LOINC&quot;: 'http://loinc.org'
-
-context Patient
-
-define &quot;Sex&quot;: Patient.gender
+define &quot;Sex Value&quot;:
+  Patient.gender.value
 
 define &quot;Female&quot;:
   Patient.gender = 'female'
@@ -701,7 +609,12 @@ define &quot;Female&quot;:
 define &quot;Male&quot;:
   Patient.gender = 'male'
 
-define &quot;Initial Population&quot;: true
+define &quot;Age Group/Sex&quot;:
+  AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot;
+
+
+define &quot;Initial Population&quot;:
+  true
 
 define &quot;Denominator&quot;:
   &quot;Sex&quot; is not null
@@ -709,46 +622,51 @@ define &quot;Denominator&quot;:
 define &quot;Numerator&quot;:
   &quot;Sex&quot; = 'female'
 
-</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/HIVSimpleTestResult"> </a><a name="Library_HIVSimpleTestResult"> </a><hr/><p>Entry 7 - Full URL = http://www.example.org/fhir/Library/HIVSimpleTestResult</p><p>Request:</p><pre>PUT Library
-</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library HIVSimpleTestResult version '0.1.0'
+define &quot;Hello, World!&quot;:
+  'Hello, World!'
 
-using FHIR version '4.0.1'
+/* define &quot;birthDate&quot;: Patient.birthDate */
+define &quot;birthDate_str&quot;:
+  ToString(Patient.birthDate)
 
-include FHIRHelpers version '4.0.1'
-include FHIRCommon version '4.0.1' called FC
-include AgeRanges version '0.1.0' called AR
+/* define &quot;Given Name str&quot;: Patient.name.given[0] */
+define &quot;Given Name&quot;:
+  Patient.name.given[0].value
 
-// SNOMED-CT, International Edition
-codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
+/* define &quot;Family Name str&quot;: Patient.name.family[0] */
+define &quot;Family Name&quot;:
+  Patient.name.family[0].value
 
-// LOINC, 2.63+
-codesystem &quot;LOINC&quot;: 'http://loinc.org'
+// works in fsh
+define &quot;HIV Condition&quot;:
+  exists [&quot;Condition&quot;: &quot;HIV Condition Positive&quot;]
 
-// HIV Test Results
-code &quot;HIV Negative&quot;: '165815009' from &quot;SNOMED-CT&quot; display 'HIV Negative'
-code &quot;HIV Positive&quot;: '165816005' from &quot;SNOMED-CT&quot; display 'HIV Positive'
-code &quot;HIV 1 and 2 tests - Meaningful Use set&quot;: '75622-1' from &quot;LOINC&quot; display 'HIV 1 and 2 tests - Meaningful Use set'
+define &quot;Is HIV Positive&quot;:
+  &quot;HIV Condition&quot;
 
-context Patient
+define &quot;Is HIV Negative&quot;:
+  not &quot;HIV Condition&quot;
+
+
+define &quot;Pregnant&quot;:
+  exists [&quot;Condition&quot;: &quot;Pregnant (finding)&quot;]
+
+define &quot;Viral Load Test Result&quot;:
+  [&quot;Observation&quot;: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Obs
+    where Obs.status = 'final'
+      and Obs.value is not null
+
 
 define &quot;HIV Test Exists&quot;:
   exists ([Observation: &quot;HIV 1 and 2 tests - Meaningful Use set&quot;])
 
 define &quot;HIV Positive Observation&quot;:
   [Observation: &quot;HIV 1 and 2 tests - Meaningful Use set&quot;] Observation
-    where Observation.value = &quot;HIV Positive&quot;
+    where Observation.value = &quot;Is HIV Positive&quot;
 
 define &quot;HIV Negative Observation&quot;:
   [Observation: &quot;HIV 1 and 2 tests - Meaningful Use set&quot;] Observation
-    where Observation.value = &quot;HIV Negative&quot;
-
-define &quot;Is HIV Positive&quot;:
-  exists (&quot;HIV Positive Observation&quot;)
-  and &quot;HIV Test Exists&quot;
-
-define &quot;Is HIV Negative&quot;:
-  exists (&quot;HIV Negative Observation&quot;)
-  and &quot;HIV Test Exists&quot;
+    where Observation.value = &quot;Is HIV Negative&quot;
 
 // always null
 define &quot;HIV Test Results&quot;:
@@ -758,79 +676,116 @@ define &quot;HIV Test Results&quot;:
     else null
   end
 
-define &quot;Sex&quot;: Patient.gender
-
-// Age Group/Sex
-// always null
-define &quot;Age Group/Sex&quot;: AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot;
-
 // always null
 define &quot;Age Group/Sex/HIV Test Results&quot;:
   AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot; + ':' + &quot;HIV Test Results&quot;.code
 
-define &quot;Initial Population&quot;: true
 
-define &quot;Denominator&quot;: true
-
-define &quot;Numerator&quot;:
-  &quot;Is HIV Negative&quot;
-  and &quot;Sex&quot; = 'female'
-</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/HIVSimpleViralLoad"> </a><a name="Library_HIVSimpleViralLoad"> </a><hr/><p>Entry 8 - Full URL = http://www.example.org/fhir/Library/HIVSimpleViralLoad</p><p>Request:</p><pre>PUT Library
-</pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library HIVSimpleViralLoad version '0.1.0'
-
-using FHIR version '4.0.1'
-
-include FHIRHelpers version '4.0.1'
-include FHIRCommon version '4.0.1' called FC
-include AgeRanges version '0.1.0' called AR
-
-// SNOMED-CT, International Edition
-codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
-
-// LOINC, 2.63+
-codesystem &quot;LOINC&quot;: 'http://loinc.org'
-
-// Viral load
-// * LOINC code 25836-8
-// * &quot;HIV 1 RNA NAA+probe (Specimen)&quot;
-// * Units: copies/mL
-// * Suppressed viral load (&lt;1000 copies/mL)
-// * Used range of 200 (very low) -&gt; 1000000 (very high)
-code &quot;HIV 1 RNA NAA+probe (Specimen)&quot;: '25836-8' from &quot;LOINC&quot; display 'HIV 1 RNA NAA+probe (Specimen)'
-
-context Patient
-
-// all these seem to workie
-
-define &quot;Suppressed&quot;:
-  [Observation: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
-    where Observation.value &lt; 1000 'copies/mL'
-
-define &quot;Unsuppressed&quot;:
-  [Observation: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
-    where Observation.value &gt;= 1000 'copies/mL'
-
-define &quot;Viral Load Test Result&quot;:
-  [&quot;Observation&quot;: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
-    where Observation.value is not null
-
-// below works
+// synthea uses copies/mL but fsh uses {copies}/mL which is official
 define &quot;Living with HIV and on ART with suppressed viral load results (&lt;1000 copies/mL)&quot;:
   [&quot;Observation&quot;: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
-    where Observation.value &lt; 1000 'copies/mL'
+    where Observation.value &lt; 1000 '{copies}/mL'
 
 define &quot;Living with HIV and on ART with unsuppressed viral load results (&gt;1000 copies/mL)&quot;:
   [&quot;Observation&quot;: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
-    where Observation.value &gt;= 1000 'copies/mL'
+    where Observation.value &gt;= 1000 '{copies}/mL'
 
-define &quot;Sex&quot;: Patient.gender
+define &quot;Suppressed&quot;:
+  [Observation: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
+    where Observation.value &lt; 1000 '{copies}/mL'
 
-define &quot;Initial Population&quot;: true
+define &quot;Unsuppressed&quot;:
+  [Observation: &quot;HIV 1 RNA NAA+probe (Specimen)&quot;] Observation
+    where Observation.value &gt;= 1000 '{copies}/mL'
 
-define &quot;Denominator&quot;: true
 
-define &quot;Numerator&quot;:
-  &quot;Unsuppressed&quot;
+define &quot;Contact date&quot;:
+  [Encounter] E
+    return E.period.start
+
+
+// make a gender code for supp data
+define &quot;SDE Sex&quot;:
+  case
+    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Male' }
+    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Female' }
+    else null
+  end
+
+/* first attempt at supp data for location */
+
+// hack to try pseudo-stratifier for location using supp data
+define function &quot;GetId&quot;(uri String):
+    Last(Split(uri, '/'))
+
+define function &quot;GetLocation&quot;(reference Reference):
+  singleton from (
+    [Location] Location where Location.id.value = GetId(reference.reference)
+  )
+
+define &quot;Location&quot;:
+    First([Encounter] E return &quot;GetLocation&quot;(First(E.location).location))
+
+// not working for some reason
+define &quot;SDE Location&quot;:
+    Code { code: &quot;Location&quot;.name, system: 'https://github.com/synthetichealth/synthea' }
+
+/* second attempt at supp data for location*/
+
+/*
+Most recent encounter location
+*/
+define &quot;Most Recent Encounter Location Reference&quot;:
+  Last(
+    [Encounter] E
+      return First(E.location L return L.location)
+      //sort by start of period
+  )
+
+/*
+Location Code
+*/
+define &quot;Location Code&quot;:
+ singleton from (
+   [Location] L
+     let identifier: singleton from (L.identifier I where I.system = 'https://github.com/synthetichealth/synthea')
+     where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;.reference, '/'))
+     return CodeableConcept {
+       coding: {
+         Coding {
+           code: code { value: identifier.value },
+           system: identifier.system
+         }
+       }
+     }
+ )
+
+define &quot;Location Code Deux&quot;:
+singleton from (
+  [Location] L
+    let identifier: singleton from (L.identifier)
+    where L.id = Last(Split(&quot;Most Recent Encounter Location Reference&quot;.reference, '/'))
+    return CodeableConcept {
+      coding: {
+        Coding {
+          code: code { value: identifier.value },
+          system: identifier.system
+        }
+      }
+    }
+)
+
+
+/* create clinical decision support logic */
+/*
+define &quot;HIVTestProposed&quot;: ServiceRequest {
+ type: Code '75622-1' from &quot;LOINC&quot;
+ display 'HIV 1 and 2 tests - Meaningful Use set',
+ status 'active'
+ intent: 'proposal'
+ // values for other elements of the request...
+}
+ */
 </code></pre></blockquote></div>
 
   <!-- insert notes if present -->
@@ -858,7 +813,7 @@ define &quot;Numerator&quot;:
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 6, 2021 19:25+0000">2021-07-06</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 14, 2021 03:58+0000">2021-07-14</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

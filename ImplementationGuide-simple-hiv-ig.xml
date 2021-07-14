@@ -12,7 +12,7 @@
   <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-06T19:25:43+00:00"/>
+  <date value="2021-07-14T03:58:23+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -206,23 +206,7 @@
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleGenderCohort-Measure"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleGender2-Measure"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleGender-Measure"/>
+        <reference value="Measure/HIVSimpleGenderSuppDataIndiv"/>
       </reference>
     </resource>
     <resource>
@@ -246,7 +230,7 @@
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleCondition-Measure"/>
+        <reference value="Measure/HIVSimpleCondition"/>
       </reference>
     </resource>
     <resource>
@@ -275,10 +259,18 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HIVSimples"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleGenderSuppData-Measure"/>
+        <reference value="Measure/HIVSimpleGenderSubjectList"/>
       </reference>
     </resource>
     <resource>
@@ -302,23 +294,7 @@
         <valueString value="Library"/>
       </extension>
       <reference>
-        <reference value="Library/HIVSimpleGender"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
         <reference value="Library/FHIRCommon"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleDemog-Measure"/>
       </reference>
     </resource>
     <resource>
@@ -334,7 +310,7 @@
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleTestResult-Measure"/>
+        <reference value="Measure/HIVSimpleGender"/>
       </reference>
     </resource>
     <resource>
@@ -379,34 +355,10 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/HIVSimple-Measures"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/HIVSimpleAgeGroup"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleViralLoad-Measure"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
-      </extension>
-      <reference>
-        <reference value="Measure/HIVSimpleGenderSuppDataIndiv-Measure"/>
+        <reference value="Measure/HIVSimpleGenderSuppData"/>
       </reference>
     </resource>
     <resource>
@@ -419,26 +371,10 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/HIVSimpleCondition"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/HIVSimpleTestResult"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleAgeGroup-Measure"/>
+        <reference value="Measure/HIVSimpleAgeGroup"/>
       </reference>
     </resource>
     <resource>
@@ -451,18 +387,10 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/HIVSimpleDemog"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Measure/HIVSimpleGenderSubjectList-Measure"/>
+        <reference value="Measure/HIVSimpleTestResult"/>
       </reference>
     </resource>
     <resource>
@@ -475,10 +403,10 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
+        <valueString value="Measure"/>
       </extension>
       <reference>
-        <reference value="Library/HIVSimpleViralLoad"/>
+        <reference value="Measure/HIVSimpleGenderCohort"/>
       </reference>
     </resource>
     <page>

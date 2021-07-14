@@ -1,68 +1,50 @@
 [
   {
-    "id": "HIVSimpleAgeGroup-Measure",
+    "id": "HIVSimpleAgeGroup",
     "type": "Measure",
     "url": "Measure/HIVSimpleAgeGroup",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleCondition-Measure",
+    "id": "HIVSimpleCondition",
     "type": "Measure",
     "url": "Measure/HIVSimpleCondition",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleDemog-Measure",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleDemog",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGender-Measure",
+    "id": "HIVSimpleGender",
     "type": "Measure",
     "url": "Measure/HIVSimpleGender",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleGender2-Measure",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGender2",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGenderCohort-Measure",
+    "id": "HIVSimpleGenderCohort",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderCohort",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleGenderSubjectList-Measure",
+    "id": "HIVSimpleGenderSubjectList",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSubjectList",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleGenderSuppData-Measure",
+    "id": "HIVSimpleGenderSuppData",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSuppData",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleGenderSuppDataIndiv-Measure",
+    "id": "HIVSimpleGenderSuppDataIndiv",
     "type": "Measure",
     "url": "Measure/HIVSimpleGenderSuppDataIndiv",
     "version": "0.1.0"
   },
   {
-    "id": "HIVSimpleTestResult-Measure",
+    "id": "HIVSimpleTestResult",
     "type": "Measure",
     "url": "Measure/HIVSimpleTestResult",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleViralLoad-Measure",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleViralLoad",
     "version": "0.1.0"
   },
   {
@@ -82,42 +64,6 @@
     "id": "FHIRCommon",
     "type": "Library",
     "url": "https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleAgeGroup",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleAgeGroup",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleCondition",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleCondition",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleDemog",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleDemog",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGender",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleGender",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleTestResult",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleTestResult",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleViralLoad",
-    "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/HIVSimpleViralLoad",
     "version": "0.1.0"
   },
   {

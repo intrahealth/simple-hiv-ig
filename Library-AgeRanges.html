@@ -40,8 +40,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.4"}
-    h3,h4,h5,h6{--heading-prefix:"6.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.3"}
+    h3,h4,h5,h6{--heading-prefix:"6.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -206,9 +206,11 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Related Artifacts</h2><table class="grid"><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://ohie.org/CodeSystem/iso-8601-derived-periods</code></td></tr></table><h2>Parameters</h2><table class="grid"><tr><td>Measurement Period</td><td>in</td><td>0</td><td>1</td><td>Period</td></tr><tr><td>Patient</td><td>out</td><td>0</td><td>1</td><td>Patient</td></tr><tr><td>Age Group</td><td>out</td><td>0</td><td>1</td><td>Coding</td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library AgeRanges version '0.1.0'
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Related Artifacts</h2><table class="grid"><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIRHelpers|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://ohie.org/CodeSystem/iso-8601-derived-periods</code></td></tr></table><h2>Parameters</h2><table class="grid"><tr><td>Measurement Period</td><td>in</td><td>0</td><td>1</td><td>Period</td></tr><tr><td>Patient</td><td>out</td><td>0</td><td>1</td><td>Patient</td></tr><tr><td>Age Group</td><td>out</td><td>0</td><td>1</td><td>Coding</td></tr><tr><td>Patient0To5AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient5To15AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient15To25AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient25To50AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient50To65AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient65ToHighestAndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient0To5AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient5To15AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient15To25AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient25To50AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient50To65AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient65ToHighestAndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library AgeRanges version '0.1.0'
 
 using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
 
 codesystem &quot;ISO-8601-Derived Periods&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
 
@@ -248,7 +250,65 @@ define &quot;Age Group&quot;:
     when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[50, null] then &quot;P50Y--P9999Y&quot;
     else null
   end
-</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 33Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 134Kb)</p></div>
+
+define Patient0To5AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 0
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 5
+    and Patient.gender = 'female'
+
+define Patient5To15AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 5
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 15
+    and Patient.gender = 'female'
+
+define Patient15To25AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 15
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 25
+    and Patient.gender = 'female'
+
+define Patient25To50AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 25
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 50
+    and Patient.gender = 'female'
+
+define Patient50To65AndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 50
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 65
+    and Patient.gender = 'female'
+
+define Patient65ToHighestAndFemale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
+    and Patient.gender = 'female'
+
+define Patient0To5AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 0
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 5
+    and Patient.gender = 'male'
+
+define Patient5To15AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 5
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 15
+    and Patient.gender = 'male'
+
+define Patient15To25AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 15
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 25
+    and Patient.gender = 'male'
+
+define Patient25To50AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 25
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 50
+    and Patient.gender = 'male'
+
+define Patient50To65AndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 50
+    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 65
+    and Patient.gender = 'male'
+
+define Patient65ToHighestAndMale:
+  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
+    and Patient.gender = 'male'
+</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 82Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 341Kb)</p></div>
 
   <!-- insert notes if present -->
   
@@ -275,7 +335,7 @@ define &quot;Age Group&quot;:
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 6, 2021 19:25+0000">2021-07-06</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 14, 2021 03:58+0000">2021-07-14</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
