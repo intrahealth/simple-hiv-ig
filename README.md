@@ -36,10 +36,10 @@ On the existing repo with no changes there should not be any errors, e.g.:
 ║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
 ║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
 ║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    0     │     0      │     0     │      0      │    35     │ ║
+║ │    0     │     0      │     0     │      0      │    26     │ ║
 ║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
 ║                                                                 ║
-║ That went swimmingly!                  0 Errors      0 Warnings ║
+║ Cool and So-fish-ticated!              0 Errors      0 Warnings ║
 ╚═════════════════════════════════════════════════════════════════╝
 ```
 
