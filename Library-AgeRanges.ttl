@@ -24,10 +24,11 @@
   fhir:Library.type [
      fhir:CodeableConcept.coding [
        fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/library-type" ];
        fhir:Coding.code [ fhir:value "logic-library" ]
      ]
   ];
-  fhir:Library.date [ fhir:value "2021-07-19T13:02:40+00:00"^^xsd:dateTime];
+  fhir:Library.date [ fhir:value "2021-07-19T23:32:58+00:00"^^xsd:dateTime];
   fhir:Library.publisher [ fhir:value "IntraHealth International"];
   fhir:Library.contact [
      fhir:index 0;

@@ -25,7 +25,7 @@
         "birthDate": "1985-01-01"
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Patient"
       }
     },
@@ -41,7 +41,7 @@
         "name": "Government Hospital"
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Organization"
       }
     },
@@ -65,7 +65,7 @@
         }
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Location"
       }
     },
@@ -109,7 +109,7 @@
         "onsetDateTime": "2010-01-01"
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Condition"
       }
     },
@@ -154,7 +154,7 @@
         "abatementDateTime": "2020-09-30"
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Condition"
       }
     },
@@ -191,7 +191,7 @@
         }
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Encounter"
       }
     },
@@ -227,7 +227,7 @@
         ]
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "DiagnosticReport"
       }
     },
@@ -267,7 +267,7 @@
         }
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Observation"
       }
     },
@@ -304,7 +304,7 @@
         }
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Encounter"
       }
     },
@@ -340,7 +340,7 @@
         ]
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "DiagnosticReport"
       }
     },
@@ -377,7 +377,7 @@
         }
       },
       "request": {
-        "method": "PUT",
+        "method": "POST",
         "url": "Observation"
       }
     }

@@ -16,7 +16,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
      ]
   ], [
@@ -24,7 +24,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
      ]
   ], [
@@ -32,7 +32,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Location" ]
      ]
   ], [
@@ -40,7 +40,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
      ]
   ], [
@@ -48,7 +48,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
      ]
   ], [
@@ -56,7 +56,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
      ]
   ], [
@@ -64,7 +64,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "DiagnosticReport" ]
      ]
   ], [
@@ -72,7 +72,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
      ]
   ], [
@@ -80,7 +80,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
      ]
   ], [
@@ -88,7 +88,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "DiagnosticReport" ]
      ]
   ], [
@@ -96,7 +96,7 @@
      fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad" ];
      fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
      fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
        fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
      ]
   ] .

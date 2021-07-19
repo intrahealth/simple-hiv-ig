@@ -3,7 +3,7 @@
   "id": "HIVSimpleTestResult",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <a href=\"https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink\">https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink</a></p><p><b>scoring</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-scoring proportion}\">Proportion</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult</code></p><p><b>identifier</b>: id: HIVSimpleTestResult</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <a href=\"https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink\">https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink</a></p><p><b>scoring</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-scoring proportion}\">Proportion</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://ohie.org/CodeSystem cohort}\">cohort</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>description</b>: Numerator</p></blockquote></blockquote></div>"
   },
   "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult",
   "identifier": [
@@ -40,6 +40,15 @@
   },
   "group": [
     {
+      "code": {
+        "coding": [
+          {
+            "system": "http://ohie.org/CodeSystem",
+            "code": "cohort",
+            "display": "cohort"
+          }
+        ]
+      },
       "population": [
         {
           "code": {

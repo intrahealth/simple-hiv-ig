@@ -3,10 +3,10 @@
   "name": "simple-hiv-ig",
   "package-id": "simple-hiv-ig",
   "ig-ver": "0.1.0",
-  "date": "Mon, 19 Jul, 2021 13:02:40 +0000",
-  "errs": 34,
-  "warnings": 67,
-  "hints": 0,
+  "date": "Mon, 19 Jul, 2021 23:32:58 +0000",
+  "errs": 33,
+  "warnings": 60,
+  "hints": 20,
   "version": "4.0.1",
   "tool": "4.6.0 (3)"
 }

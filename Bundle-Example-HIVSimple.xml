@@ -21,7 +21,7 @@
       </Patient>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Patient"/>
     </request>
   </entry>
@@ -37,7 +37,7 @@
       </Organization>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Organization"/>
     </request>
   </entry>
@@ -59,7 +59,7 @@
       </Location>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Location"/>
     </request>
   </entry>
@@ -97,7 +97,7 @@
       </Condition>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Condition"/>
     </request>
   </entry>
@@ -136,7 +136,7 @@
       </Condition>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Condition"/>
     </request>
   </entry>
@@ -171,7 +171,7 @@
       </Encounter>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Encounter"/>
     </request>
   </entry>
@@ -203,7 +203,7 @@
       </DiagnosticReport>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="DiagnosticReport"/>
     </request>
   </entry>
@@ -239,7 +239,7 @@
       </Observation>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Observation"/>
     </request>
   </entry>
@@ -274,7 +274,7 @@
       </Encounter>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Encounter"/>
     </request>
   </entry>
@@ -306,7 +306,7 @@
       </DiagnosticReport>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="DiagnosticReport"/>
     </request>
   </entry>
@@ -341,7 +341,7 @@
       </Observation>
     </resource>
     <request>
-      <method value="PUT"/>
+      <method value="POST"/>
       <url value="Observation"/>
     </request>
   </entry>

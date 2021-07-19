@@ -472,14 +472,20 @@
         "expression" : {
           "type" : "Property",
           "source" : {
-            "type" : "ExpressionRef",
-            "localId" : "15",
-            "locator" : "23:3-23:9",
-            "name" : "Patient"
+            "type" : "Property",
+            "source" : {
+              "type" : "ExpressionRef",
+              "localId" : "15",
+              "locator" : "23:3-23:9",
+              "name" : "Patient"
+            },
+            "localId" : "16",
+            "locator" : "23:3-23:16",
+            "path" : "gender"
           },
-          "localId" : "16",
-          "locator" : "23:3-23:16",
-          "path" : "gender"
+          "localId" : "17",
+          "locator" : "23:3-23:22",
+          "path" : "value"
         },
         "annotation" : [ {
           "s" : {
@@ -506,96 +512,6 @@
                       "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
-                        "s" : [ "Patient" ]
-                      },
-                      "globalScope" : true
-                    } ],
-                    "r" : "15"
-                  },
-                  "globalScope" : true
-                }, {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ "." ]
-                  },
-                  "globalScope" : true
-                }, {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ {
-                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                      "value" : {
-                        "s" : [ "gender" ]
-                      },
-                      "globalScope" : true
-                    } ],
-                    "r" : "16"
-                  },
-                  "globalScope" : true
-                } ],
-                "r" : "16"
-              },
-              "globalScope" : true
-            } ],
-            "r" : "17"
-          }
-        } ],
-        "localId" : "17",
-        "locator" : "22:1-23:16",
-        "name" : "Sex",
-        "context" : "Patient",
-        "accessLevel" : "Public"
-      }, {
-        "type" : "ExpressionDef",
-        "expression" : {
-          "type" : "Property",
-          "source" : {
-            "type" : "Property",
-            "source" : {
-              "type" : "ExpressionRef",
-              "localId" : "18",
-              "locator" : "26:3-26:9",
-              "name" : "Patient"
-            },
-            "localId" : "19",
-            "locator" : "26:3-26:16",
-            "path" : "gender"
-          },
-          "localId" : "20",
-          "locator" : "26:3-26:22",
-          "path" : "value"
-        },
-        "annotation" : [ {
-          "s" : {
-            "s" : [ {
-              "name" : "{urn:hl7-org:cql-annotations:r1}s",
-              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-              "value" : {
-                "s" : [ "define ", "\"Sex Value\"", ":\n  " ]
-              },
-              "globalScope" : true
-            }, {
-              "name" : "{urn:hl7-org:cql-annotations:r1}s",
-              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-              "value" : {
-                "s" : [ {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ {
-                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                      "value" : {
                         "s" : [ {
                           "name" : "{urn:hl7-org:cql-annotations:r1}s",
                           "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
@@ -605,7 +521,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "18"
+                        "r" : "15"
                       },
                       "globalScope" : true
                     }, {
@@ -630,11 +546,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "19"
+                        "r" : "16"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "19"
+                    "r" : "16"
                   },
                   "globalScope" : true
                 }, {
@@ -659,20 +575,20 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "20"
+                    "r" : "17"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "20"
+                "r" : "17"
               },
               "globalScope" : true
             } ],
-            "r" : "21"
+            "r" : "18"
           }
         } ],
-        "localId" : "21",
-        "locator" : "25:1-26:22",
-        "name" : "Sex Value",
+        "localId" : "18",
+        "locator" : "22:1-23:22",
+        "name" : "Sex",
         "context" : "Patient",
         "accessLevel" : "Public"
       }, {
@@ -685,25 +601,25 @@
               "type" : "Property",
               "source" : {
                 "type" : "ExpressionRef",
-                "localId" : "22",
-                "locator" : "29:3-29:9",
+                "localId" : "19",
+                "locator" : "26:3-26:9",
                 "name" : "Patient"
               },
-              "localId" : "23",
-              "locator" : "29:3-29:16",
+              "localId" : "20",
+              "locator" : "26:3-26:16",
               "path" : "gender"
             } ],
             "name" : "ToString",
             "libraryName" : "FHIRHelpers"
           }, {
             "type" : "Literal",
-            "localId" : "24",
-            "locator" : "29:20-29:27",
+            "localId" : "21",
+            "locator" : "26:20-26:27",
             "valueType" : "{urn:hl7-org:elm-types:r1}String",
             "value" : "female"
           } ],
-          "localId" : "25",
-          "locator" : "29:3-29:27"
+          "localId" : "22",
+          "locator" : "26:3-26:27"
         },
         "annotation" : [ {
           "s" : {
@@ -739,7 +655,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "22"
+                        "r" : "19"
                       },
                       "globalScope" : true
                     }, {
@@ -764,11 +680,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "23"
+                        "r" : "20"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "23"
+                    "r" : "20"
                   },
                   "globalScope" : true
                 }, {
@@ -793,19 +709,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "24"
+                    "r" : "21"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "25"
+                "r" : "22"
               },
               "globalScope" : true
             } ],
-            "r" : "26"
+            "r" : "23"
           }
         } ],
-        "localId" : "26",
-        "locator" : "28:1-29:27",
+        "localId" : "23",
+        "locator" : "25:1-26:27",
         "name" : "Female",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -819,25 +735,25 @@
               "type" : "Property",
               "source" : {
                 "type" : "ExpressionRef",
-                "localId" : "27",
-                "locator" : "32:3-32:9",
+                "localId" : "24",
+                "locator" : "29:3-29:9",
                 "name" : "Patient"
               },
-              "localId" : "28",
-              "locator" : "32:3-32:16",
+              "localId" : "25",
+              "locator" : "29:3-29:16",
               "path" : "gender"
             } ],
             "name" : "ToString",
             "libraryName" : "FHIRHelpers"
           }, {
             "type" : "Literal",
-            "localId" : "29",
-            "locator" : "32:20-32:25",
+            "localId" : "26",
+            "locator" : "29:20-29:25",
             "valueType" : "{urn:hl7-org:elm-types:r1}String",
             "value" : "male"
           } ],
-          "localId" : "30",
-          "locator" : "32:3-32:25"
+          "localId" : "27",
+          "locator" : "29:3-29:25"
         },
         "annotation" : [ {
           "s" : {
@@ -873,7 +789,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "27"
+                        "r" : "24"
                       },
                       "globalScope" : true
                     }, {
@@ -898,11 +814,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "28"
+                        "r" : "25"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "28"
+                    "r" : "25"
                   },
                   "globalScope" : true
                 }, {
@@ -927,19 +843,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "29"
+                    "r" : "26"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "30"
+                "r" : "27"
               },
               "globalScope" : true
             } ],
-            "r" : "31"
+            "r" : "28"
           }
         } ],
-        "localId" : "31",
-        "locator" : "31:1-32:25",
+        "localId" : "28",
+        "locator" : "28:1-29:25",
         "name" : "Male",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -953,36 +869,31 @@
               "type" : "Property",
               "source" : {
                 "type" : "ExpressionRef",
-                "localId" : "33",
-                "locator" : "35:3-35:16",
+                "localId" : "30",
+                "locator" : "32:3-32:16",
                 "name" : "Age Group",
                 "libraryName" : "AR"
               },
-              "localId" : "34",
-              "locator" : "35:3-35:21",
+              "localId" : "31",
+              "locator" : "32:3-32:21",
               "path" : "code"
             }, {
               "type" : "Literal",
-              "localId" : "35",
-              "locator" : "35:25-35:27",
+              "localId" : "32",
+              "locator" : "32:25-32:27",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : ":"
             } ],
-            "localId" : "36",
-            "locator" : "35:3-35:27"
+            "localId" : "33",
+            "locator" : "32:3-32:27"
           }, {
-            "type" : "FunctionRef",
-            "operand" : [ {
-              "type" : "ExpressionRef",
-              "localId" : "37",
-              "locator" : "35:31-35:35",
-              "name" : "Sex"
-            } ],
-            "name" : "ToString",
-            "libraryName" : "FHIRHelpers"
+            "type" : "ExpressionRef",
+            "localId" : "34",
+            "locator" : "32:31-32:35",
+            "name" : "Sex"
           } ],
-          "localId" : "38",
-          "locator" : "35:3-35:35"
+          "localId" : "35",
+          "locator" : "32:3-32:35"
         },
         "annotation" : [ {
           "s" : {
@@ -1028,7 +939,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "32"
+                                "r" : "29"
                               },
                               "globalScope" : true
                             }, {
@@ -1053,11 +964,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "33"
+                                "r" : "30"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "33"
+                            "r" : "30"
                           },
                           "globalScope" : true
                         }, {
@@ -1082,11 +993,11 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "34"
+                            "r" : "31"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "34"
+                        "r" : "31"
                       },
                       "globalScope" : true
                     }, {
@@ -1111,11 +1022,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "35"
+                        "r" : "32"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "36"
+                    "r" : "33"
                   },
                   "globalScope" : true
                 }, {
@@ -1140,19 +1051,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "37"
+                    "r" : "34"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "38"
+                "r" : "35"
               },
               "globalScope" : true
             } ],
-            "r" : "39"
+            "r" : "36"
           }
         } ],
-        "localId" : "39",
-        "locator" : "34:1-35:35",
+        "localId" : "36",
+        "locator" : "31:1-32:35",
         "name" : "Age Group/Sex",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1160,8 +1071,8 @@
         "type" : "ExpressionDef",
         "expression" : {
           "type" : "ExpressionRef",
-          "localId" : "41",
-          "locator" : "38:3-38:16",
+          "localId" : "38",
+          "locator" : "35:3-35:16",
           "name" : "Age Group",
           "libraryName" : "AR"
         },
@@ -1194,7 +1105,7 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "40"
+                    "r" : "37"
                   },
                   "globalScope" : true
                 }, {
@@ -1219,19 +1130,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "41"
+                    "r" : "38"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "41"
+                "r" : "38"
               },
               "globalScope" : true
             } ],
-            "r" : "42"
+            "r" : "39"
           }
         } ],
-        "localId" : "42",
-        "locator" : "37:1-38:16",
+        "localId" : "39",
+        "locator" : "34:1-35:16",
         "name" : "Age Group",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1239,8 +1150,8 @@
         "type" : "ExpressionDef",
         "expression" : {
           "type" : "Literal",
-          "localId" : "43",
-          "locator" : "41:3-41:6",
+          "localId" : "40",
+          "locator" : "38:3-38:6",
           "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
           "value" : "true"
         },
@@ -1252,15 +1163,15 @@
               "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
               "value" : {
                 "s" : [ "define ", "\"Initial Population\"", ":\n  ", "true" ],
-                "r" : "43"
+                "r" : "40"
               },
               "globalScope" : true
             } ],
-            "r" : "44"
+            "r" : "41"
           }
         } ],
-        "localId" : "44",
-        "locator" : "40:1-41:6",
+        "localId" : "41",
+        "locator" : "37:1-38:6",
         "name" : "Initial Population",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1272,14 +1183,14 @@
             "type" : "IsNull",
             "operand" : {
               "type" : "ExpressionRef",
-              "localId" : "45",
-              "locator" : "44:3-44:7",
+              "localId" : "42",
+              "locator" : "41:3-41:7",
               "name" : "Sex"
             },
-            "locator" : "44:3-44:19"
+            "locator" : "41:3-41:19"
           },
-          "localId" : "46",
-          "locator" : "44:3-44:19"
+          "localId" : "43",
+          "locator" : "41:3-41:19"
         },
         "annotation" : [ {
           "s" : {
@@ -1310,7 +1221,7 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "45"
+                    "r" : "42"
                   },
                   "globalScope" : true
                 }, {
@@ -1322,15 +1233,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "46"
+                "r" : "43"
               },
               "globalScope" : true
             } ],
-            "r" : "47"
+            "r" : "44"
           }
         } ],
-        "localId" : "47",
-        "locator" : "43:1-44:19",
+        "localId" : "44",
+        "locator" : "40:1-41:19",
         "name" : "Denominator",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1339,24 +1250,19 @@
         "expression" : {
           "type" : "Equal",
           "operand" : [ {
-            "type" : "FunctionRef",
-            "operand" : [ {
-              "type" : "ExpressionRef",
-              "localId" : "48",
-              "locator" : "47:3-47:7",
-              "name" : "Sex"
-            } ],
-            "name" : "ToString",
-            "libraryName" : "FHIRHelpers"
+            "type" : "ExpressionRef",
+            "localId" : "45",
+            "locator" : "44:3-44:7",
+            "name" : "Sex"
           }, {
             "type" : "Literal",
-            "localId" : "49",
-            "locator" : "47:11-47:18",
+            "localId" : "46",
+            "locator" : "44:11-44:18",
             "valueType" : "{urn:hl7-org:elm-types:r1}String",
             "value" : "female"
           } ],
-          "localId" : "50",
-          "locator" : "47:3-47:18"
+          "localId" : "47",
+          "locator" : "44:3-44:18"
         },
         "annotation" : [ {
           "s" : {
@@ -1387,7 +1293,7 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "48"
+                    "r" : "45"
                   },
                   "globalScope" : true
                 }, {
@@ -1412,19 +1318,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "49"
+                    "r" : "46"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "50"
+                "r" : "47"
               },
               "globalScope" : true
             } ],
-            "r" : "51"
+            "r" : "48"
           }
         } ],
-        "localId" : "51",
-        "locator" : "46:1-47:18",
+        "localId" : "48",
+        "locator" : "43:1-44:18",
         "name" : "Numerator",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1432,8 +1338,8 @@
         "type" : "ExpressionDef",
         "expression" : {
           "type" : "Literal",
-          "localId" : "52",
-          "locator" : "50:3-50:17",
+          "localId" : "49",
+          "locator" : "47:3-47:17",
           "valueType" : "{urn:hl7-org:elm-types:r1}String",
           "value" : "Hello, World!"
         },
@@ -1461,15 +1367,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "52"
+                "r" : "49"
               },
               "globalScope" : true
             } ],
-            "r" : "53"
+            "r" : "50"
           }
         } ],
-        "localId" : "53",
-        "locator" : "49:1-50:17",
+        "localId" : "50",
+        "locator" : "46:1-47:17",
         "name" : "Hello, World!",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1483,19 +1389,19 @@
               "type" : "Property",
               "source" : {
                 "type" : "ExpressionRef",
-                "localId" : "54",
-                "locator" : "54:12-54:18",
+                "localId" : "51",
+                "locator" : "51:12-51:18",
                 "name" : "Patient"
               },
-              "localId" : "55",
-              "locator" : "54:12-54:28",
+              "localId" : "52",
+              "locator" : "51:12-51:28",
               "path" : "birthDate"
             } ],
             "name" : "ToDate",
             "libraryName" : "FHIRHelpers"
           },
-          "localId" : "56",
-          "locator" : "54:3-54:29"
+          "localId" : "53",
+          "locator" : "51:3-51:29"
         },
         "annotation" : [ {
           "s" : {
@@ -1539,7 +1445,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "54"
+                        "r" : "51"
                       },
                       "globalScope" : true
                     }, {
@@ -1564,11 +1470,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "55"
+                        "r" : "52"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "55"
+                    "r" : "52"
                   },
                   "globalScope" : true
                 }, {
@@ -1580,15 +1486,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "56"
+                "r" : "53"
               },
               "globalScope" : true
             } ],
-            "r" : "57"
+            "r" : "54"
           }
         } ],
-        "localId" : "57",
-        "locator" : "53:1-54:29",
+        "localId" : "54",
+        "locator" : "50:1-51:29",
         "name" : "birthDate_str",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1608,12 +1514,12 @@
                     "type" : "Property",
                     "source" : {
                       "type" : "ExpressionRef",
-                      "localId" : "58",
-                      "locator" : "58:3-58:9",
+                      "localId" : "55",
+                      "locator" : "55:3-55:9",
                       "name" : "Patient"
                     },
-                    "localId" : "59",
-                    "locator" : "58:3-58:14",
+                    "localId" : "56",
+                    "locator" : "55:3-55:14",
                     "path" : "name"
                   },
                   "alias" : "$this"
@@ -1644,20 +1550,20 @@
                   }
                 }
               },
-              "localId" : "60",
-              "locator" : "58:3-58:20"
+              "localId" : "57",
+              "locator" : "55:3-55:20"
             }, {
               "type" : "Literal",
-              "localId" : "61",
-              "locator" : "58:22",
+              "localId" : "58",
+              "locator" : "55:22",
               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
               "value" : "0"
             } ],
-            "localId" : "62",
-            "locator" : "58:3-58:23"
+            "localId" : "59",
+            "locator" : "55:3-55:23"
           },
-          "localId" : "63",
-          "locator" : "58:3-58:29",
+          "localId" : "60",
+          "locator" : "55:3-55:29",
           "path" : "value"
         },
         "annotation" : [ {
@@ -1704,7 +1610,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "58"
+                                "r" : "55"
                               },
                               "globalScope" : true
                             }, {
@@ -1729,11 +1635,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "59"
+                                "r" : "56"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "59"
+                            "r" : "56"
                           },
                           "globalScope" : true
                         }, {
@@ -1758,11 +1664,11 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "60"
+                            "r" : "57"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "60"
+                        "r" : "57"
                       },
                       "globalScope" : true
                     }, {
@@ -1771,11 +1677,11 @@
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
                         "s" : [ "[", "0", "]" ],
-                        "r" : "61"
+                        "r" : "58"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "62"
+                    "r" : "59"
                   },
                   "globalScope" : true
                 }, {
@@ -1800,19 +1706,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "63"
+                    "r" : "60"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "63"
+                "r" : "60"
               },
               "globalScope" : true
             } ],
-            "r" : "64"
+            "r" : "61"
           }
         } ],
-        "localId" : "64",
-        "locator" : "57:1-58:29",
+        "localId" : "61",
+        "locator" : "54:1-55:29",
         "name" : "Given Name",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -1830,12 +1736,12 @@
                   "type" : "Property",
                   "source" : {
                     "type" : "ExpressionRef",
-                    "localId" : "65",
-                    "locator" : "62:3-62:9",
+                    "localId" : "62",
+                    "locator" : "59:3-59:9",
                     "name" : "Patient"
                   },
-                  "localId" : "66",
-                  "locator" : "62:3-62:14",
+                  "localId" : "63",
+                  "locator" : "59:3-59:14",
                   "path" : "name"
                 },
                 "alias" : "$this"
@@ -1865,20 +1771,20 @@
                   "path" : "family"
                 }
               },
-              "localId" : "67",
-              "locator" : "62:3-62:21"
+              "localId" : "64",
+              "locator" : "59:3-59:21"
             }, {
               "type" : "Literal",
-              "localId" : "68",
-              "locator" : "62:23",
+              "localId" : "65",
+              "locator" : "59:23",
               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
               "value" : "0"
             } ],
-            "localId" : "69",
-            "locator" : "62:3-62:24"
+            "localId" : "66",
+            "locator" : "59:3-59:24"
           },
-          "localId" : "70",
-          "locator" : "62:3-62:30",
+          "localId" : "67",
+          "locator" : "59:3-59:30",
           "path" : "value"
         },
         "annotation" : [ {
@@ -1925,7 +1831,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "65"
+                                "r" : "62"
                               },
                               "globalScope" : true
                             }, {
@@ -1950,11 +1856,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "66"
+                                "r" : "63"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "66"
+                            "r" : "63"
                           },
                           "globalScope" : true
                         }, {
@@ -1979,11 +1885,11 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "67"
+                            "r" : "64"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "67"
+                        "r" : "64"
                       },
                       "globalScope" : true
                     }, {
@@ -1992,11 +1898,11 @@
                       "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                       "value" : {
                         "s" : [ "[", "0", "]" ],
-                        "r" : "68"
+                        "r" : "65"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "69"
+                    "r" : "66"
                   },
                   "globalScope" : true
                 }, {
@@ -2021,19 +1927,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "70"
+                    "r" : "67"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "70"
+                "r" : "67"
               },
               "globalScope" : true
             } ],
-            "r" : "71"
+            "r" : "68"
           }
         } ],
-        "localId" : "71",
-        "locator" : "61:1-62:30",
+        "localId" : "68",
+        "locator" : "58:1-59:30",
         "name" : "Family Name",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2047,19 +1953,19 @@
               "type" : "ToList",
               "operand" : {
                 "type" : "CodeRef",
-                "locator" : "66:24-66:47",
+                "locator" : "63:24-63:47",
                 "name" : "HIV Condition Positive"
               }
             },
-            "localId" : "72",
-            "locator" : "66:10-66:48",
+            "localId" : "69",
+            "locator" : "63:10-63:48",
             "dataType" : "{http://hl7.org/fhir}Condition",
             "templateId" : "http://hl7.org/fhir/StructureDefinition/Condition",
             "codeProperty" : "code",
             "codeComparator" : "~"
           },
-          "localId" : "73",
-          "locator" : "66:3-66:48"
+          "localId" : "70",
+          "locator" : "63:3-63:48"
         },
         "annotation" : [ {
           "s" : {
@@ -2122,19 +2028,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "72"
+                    "r" : "69"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "73"
+                "r" : "70"
               },
               "globalScope" : true
             } ],
-            "r" : "74"
+            "r" : "71"
           }
         } ],
-        "localId" : "74",
-        "locator" : "65:1-66:48",
+        "localId" : "71",
+        "locator" : "62:1-63:48",
         "name" : "HIV Condition",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2142,8 +2048,8 @@
         "type" : "ExpressionDef",
         "expression" : {
           "type" : "ExpressionRef",
-          "localId" : "75",
-          "locator" : "69:3-69:17",
+          "localId" : "72",
+          "locator" : "66:3-66:17",
           "name" : "HIV Condition"
         },
         "annotation" : [ {
@@ -2170,15 +2076,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "75"
+                "r" : "72"
               },
               "globalScope" : true
             } ],
-            "r" : "76"
+            "r" : "73"
           }
         } ],
-        "localId" : "76",
-        "locator" : "68:1-69:17",
+        "localId" : "73",
+        "locator" : "65:1-66:17",
         "name" : "Is HIV Positive",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2188,12 +2094,12 @@
           "type" : "Not",
           "operand" : {
             "type" : "ExpressionRef",
-            "localId" : "77",
-            "locator" : "72:7-72:21",
+            "localId" : "74",
+            "locator" : "69:7-69:21",
             "name" : "HIV Condition"
           },
-          "localId" : "78",
-          "locator" : "72:3-72:21"
+          "localId" : "75",
+          "locator" : "69:3-69:21"
         },
         "annotation" : [ {
           "s" : {
@@ -2232,19 +2138,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "77"
+                    "r" : "74"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "78"
+                "r" : "75"
               },
               "globalScope" : true
             } ],
-            "r" : "79"
+            "r" : "76"
           }
         } ],
-        "localId" : "79",
-        "locator" : "71:1-72:21",
+        "localId" : "76",
+        "locator" : "68:1-69:21",
         "name" : "Is HIV Negative",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2258,19 +2164,19 @@
               "type" : "ToList",
               "operand" : {
                 "type" : "CodeRef",
-                "locator" : "76:24-76:43",
+                "locator" : "73:24-73:43",
                 "name" : "Pregnant (finding)"
               }
             },
-            "localId" : "80",
-            "locator" : "76:10-76:44",
+            "localId" : "77",
+            "locator" : "73:10-73:44",
             "dataType" : "{http://hl7.org/fhir}Condition",
             "templateId" : "http://hl7.org/fhir/StructureDefinition/Condition",
             "codeProperty" : "code",
             "codeComparator" : "~"
           },
-          "localId" : "81",
-          "locator" : "76:3-76:44"
+          "localId" : "78",
+          "locator" : "73:3-73:44"
         },
         "annotation" : [ {
           "s" : {
@@ -2333,19 +2239,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "80"
+                    "r" : "77"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "81"
+                "r" : "78"
               },
               "globalScope" : true
             } ],
-            "r" : "82"
+            "r" : "79"
           }
         } ],
-        "localId" : "82",
-        "locator" : "75:1-76:44",
+        "localId" : "79",
+        "locator" : "72:1-73:44",
         "name" : "Pregnant",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2361,19 +2267,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "79:19-79:50",
+                  "locator" : "76:19-76:50",
                   "name" : "HIV 1 RNA NAA+probe (Specimen)"
                 }
               },
-              "localId" : "83",
-              "locator" : "79:3-79:51",
+              "localId" : "80",
+              "locator" : "76:3-76:51",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "84",
-            "locator" : "79:3-79:55",
+            "localId" : "81",
+            "locator" : "76:3-76:55",
             "alias" : "Obs"
           } ],
           "where" : {
@@ -2384,8 +2290,8 @@
                 "type" : "FunctionRef",
                 "operand" : [ {
                   "type" : "Property",
-                  "localId" : "86",
-                  "locator" : "80:11-80:20",
+                  "localId" : "83",
+                  "locator" : "77:11-77:20",
                   "path" : "status",
                   "scope" : "Obs"
                 } ],
@@ -2393,34 +2299,34 @@
                 "libraryName" : "FHIRHelpers"
               }, {
                 "type" : "Literal",
-                "localId" : "87",
-                "locator" : "80:24-80:30",
+                "localId" : "84",
+                "locator" : "77:24-77:30",
                 "valueType" : "{urn:hl7-org:elm-types:r1}String",
                 "value" : "final"
               } ],
-              "localId" : "88",
-              "locator" : "80:11-80:30"
+              "localId" : "85",
+              "locator" : "77:11-77:30"
             }, {
               "type" : "Not",
               "operand" : {
                 "type" : "IsNull",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "90",
-                  "locator" : "81:11-81:19",
+                  "localId" : "87",
+                  "locator" : "78:11-78:19",
                   "path" : "value",
                   "scope" : "Obs"
                 },
-                "locator" : "81:11-81:31"
+                "locator" : "78:11-78:31"
               },
-              "localId" : "91",
-              "locator" : "81:11-81:31"
+              "localId" : "88",
+              "locator" : "78:11-78:31"
             } ],
-            "localId" : "92",
-            "locator" : "80:5-81:31"
+            "localId" : "89",
+            "locator" : "77:5-78:31"
           },
-          "localId" : "93",
-          "locator" : "79:3-81:31"
+          "localId" : "90",
+          "locator" : "76:3-78:31"
         },
         "annotation" : [ {
           "s" : {
@@ -2490,11 +2396,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "83"
+                                "r" : "80"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "83"
+                            "r" : "80"
                           },
                           "globalScope" : true
                         }, {
@@ -2506,7 +2412,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "84"
+                        "r" : "81"
                       },
                       "globalScope" : true
                     } ]
@@ -2562,7 +2468,7 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "85"
+                                    "r" : "82"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -2587,11 +2493,11 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "86"
+                                    "r" : "83"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "86"
+                                "r" : "83"
                               },
                               "globalScope" : true
                             }, {
@@ -2616,11 +2522,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "87"
+                                "r" : "84"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "88"
+                            "r" : "85"
                           },
                           "globalScope" : true
                         }, {
@@ -2655,7 +2561,7 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "89"
+                                    "r" : "86"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -2680,11 +2586,11 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "90"
+                                    "r" : "87"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "90"
+                                "r" : "87"
                               },
                               "globalScope" : true
                             }, {
@@ -2696,27 +2602,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "91"
+                            "r" : "88"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "92"
+                        "r" : "89"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "92"
+                    "r" : "89"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "93"
+                "r" : "90"
               },
               "globalScope" : true
             } ],
-            "r" : "94"
+            "r" : "91"
           }
         } ],
-        "localId" : "94",
-        "locator" : "78:1-81:31",
+        "localId" : "91",
+        "locator" : "75:1-78:31",
         "name" : "Viral Load Test Result",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2730,19 +2636,19 @@
               "type" : "ToList",
               "operand" : {
                 "type" : "CodeRef",
-                "locator" : "85:25-85:64",
+                "locator" : "82:25-82:64",
                 "name" : "HIV 1 and 2 tests - Meaningful Use set"
               }
             },
-            "localId" : "95",
-            "locator" : "85:10-85:66",
+            "localId" : "92",
+            "locator" : "82:10-82:66",
             "dataType" : "{http://hl7.org/fhir}Observation",
             "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
             "codeProperty" : "code",
             "codeComparator" : "~"
           },
-          "localId" : "96",
-          "locator" : "85:3-85:66"
+          "localId" : "93",
+          "locator" : "82:3-82:66"
         },
         "annotation" : [ {
           "s" : {
@@ -2818,7 +2724,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "95"
+                        "r" : "92"
                       },
                       "globalScope" : true
                     }, {
@@ -2830,19 +2736,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "95"
+                    "r" : "92"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "96"
+                "r" : "93"
               },
               "globalScope" : true
             } ],
-            "r" : "97"
+            "r" : "94"
           }
         } ],
-        "localId" : "97",
-        "locator" : "84:1-85:66",
+        "localId" : "94",
+        "locator" : "81:1-82:66",
         "name" : "HIV Test Exists",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -2858,19 +2764,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "88:17-88:56",
+                  "locator" : "85:17-85:56",
                   "name" : "HIV 1 and 2 tests - Meaningful Use set"
                 }
               },
-              "localId" : "98",
-              "locator" : "88:3-88:57",
+              "localId" : "95",
+              "locator" : "85:3-85:57",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "99",
-            "locator" : "88:3-88:69",
+            "localId" : "96",
+            "locator" : "85:3-85:69",
             "alias" : "Observation"
           } ],
           "where" : {
@@ -2881,8 +2787,8 @@
                 "type" : "As",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "101",
-                  "locator" : "89:11-89:27",
+                  "localId" : "98",
+                  "locator" : "86:11-86:27",
                   "path" : "value",
                   "scope" : "Observation"
                 },
@@ -2892,15 +2798,15 @@
               "libraryName" : "FHIRHelpers"
             }, {
               "type" : "ExpressionRef",
-              "localId" : "102",
-              "locator" : "89:31-89:47",
+              "localId" : "99",
+              "locator" : "86:31-86:47",
               "name" : "Is HIV Positive"
             } ],
-            "localId" : "103",
-            "locator" : "89:5-89:47"
+            "localId" : "100",
+            "locator" : "86:5-86:47"
           },
-          "localId" : "104",
-          "locator" : "88:3-89:47"
+          "localId" : "101",
+          "locator" : "85:3-86:47"
         },
         "annotation" : [ {
           "s" : {
@@ -2970,11 +2876,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "98"
+                                "r" : "95"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "98"
+                            "r" : "95"
                           },
                           "globalScope" : true
                         }, {
@@ -2986,7 +2892,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "99"
+                        "r" : "96"
                       },
                       "globalScope" : true
                     } ]
@@ -3037,7 +2943,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "100"
+                                "r" : "97"
                               },
                               "globalScope" : true
                             }, {
@@ -3062,11 +2968,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "101"
+                                "r" : "98"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "101"
+                            "r" : "98"
                           },
                           "globalScope" : true
                         }, {
@@ -3091,27 +2997,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "102"
+                            "r" : "99"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "103"
+                        "r" : "100"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "103"
+                    "r" : "100"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "104"
+                "r" : "101"
               },
               "globalScope" : true
             } ],
-            "r" : "105"
+            "r" : "102"
           }
         } ],
-        "localId" : "105",
-        "locator" : "87:1-89:47",
+        "localId" : "102",
+        "locator" : "84:1-86:47",
         "name" : "HIV Positive Observation",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -3127,19 +3033,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "92:17-92:56",
+                  "locator" : "89:17-89:56",
                   "name" : "HIV 1 and 2 tests - Meaningful Use set"
                 }
               },
-              "localId" : "106",
-              "locator" : "92:3-92:57",
+              "localId" : "103",
+              "locator" : "89:3-89:57",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "107",
-            "locator" : "92:3-92:69",
+            "localId" : "104",
+            "locator" : "89:3-89:69",
             "alias" : "Observation"
           } ],
           "where" : {
@@ -3150,8 +3056,8 @@
                 "type" : "As",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "109",
-                  "locator" : "93:11-93:27",
+                  "localId" : "106",
+                  "locator" : "90:11-90:27",
                   "path" : "value",
                   "scope" : "Observation"
                 },
@@ -3161,15 +3067,15 @@
               "libraryName" : "FHIRHelpers"
             }, {
               "type" : "ExpressionRef",
-              "localId" : "110",
-              "locator" : "93:31-93:47",
+              "localId" : "107",
+              "locator" : "90:31-90:47",
               "name" : "Is HIV Negative"
             } ],
-            "localId" : "111",
-            "locator" : "93:5-93:47"
+            "localId" : "108",
+            "locator" : "90:5-90:47"
           },
-          "localId" : "112",
-          "locator" : "92:3-93:47"
+          "localId" : "109",
+          "locator" : "89:3-90:47"
         },
         "annotation" : [ {
           "s" : {
@@ -3239,11 +3145,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "106"
+                                "r" : "103"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "106"
+                            "r" : "103"
                           },
                           "globalScope" : true
                         }, {
@@ -3255,7 +3161,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "107"
+                        "r" : "104"
                       },
                       "globalScope" : true
                     } ]
@@ -3306,7 +3212,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "108"
+                                "r" : "105"
                               },
                               "globalScope" : true
                             }, {
@@ -3331,11 +3237,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "109"
+                                "r" : "106"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "109"
+                            "r" : "106"
                           },
                           "globalScope" : true
                         }, {
@@ -3360,27 +3266,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "110"
+                            "r" : "107"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "111"
+                        "r" : "108"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "111"
+                    "r" : "108"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "112"
+                "r" : "109"
               },
               "globalScope" : true
             } ],
-            "r" : "113"
+            "r" : "110"
           }
         } ],
-        "localId" : "113",
-        "locator" : "91:1-93:47",
+        "localId" : "110",
+        "locator" : "88:1-90:47",
         "name" : "HIV Negative Observation",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -3392,34 +3298,34 @@
             "type" : "CaseItem",
             "when" : {
               "type" : "ExpressionRef",
-              "localId" : "114",
-              "locator" : "98:10-98:26",
+              "localId" : "111",
+              "locator" : "95:10-95:26",
               "name" : "Is HIV Positive"
             },
             "then" : {
               "type" : "ExpressionRef",
-              "localId" : "115",
-              "locator" : "98:33-98:58",
+              "localId" : "112",
+              "locator" : "95:33-95:58",
               "name" : "HIV Positive Observation"
             },
-            "localId" : "116",
-            "locator" : "98:5-98:58"
+            "localId" : "113",
+            "locator" : "95:5-95:58"
           }, {
             "type" : "CaseItem",
             "when" : {
               "type" : "ExpressionRef",
-              "localId" : "117",
-              "locator" : "99:10-99:26",
+              "localId" : "114",
+              "locator" : "96:10-96:26",
               "name" : "Is HIV Negative"
             },
             "then" : {
               "type" : "ExpressionRef",
-              "localId" : "118",
-              "locator" : "99:33-99:58",
+              "localId" : "115",
+              "locator" : "96:33-96:58",
               "name" : "HIV Negative Observation"
             },
-            "localId" : "119",
-            "locator" : "99:5-99:58"
+            "localId" : "116",
+            "locator" : "96:5-96:58"
           } ],
           "else" : {
             "type" : "As",
@@ -3432,12 +3338,12 @@
             },
             "operand" : {
               "type" : "Null",
-              "localId" : "120",
-              "locator" : "100:10-100:13"
+              "localId" : "117",
+              "locator" : "97:10-97:13"
             }
           },
-          "localId" : "121",
-          "locator" : "97:3-101:5"
+          "localId" : "118",
+          "locator" : "94:3-98:5"
         },
         "annotation" : [ {
           "s" : {
@@ -3489,7 +3395,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "114"
+                        "r" : "111"
                       },
                       "globalScope" : true
                     }, {
@@ -3514,11 +3420,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "115"
+                        "r" : "112"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "116"
+                    "r" : "113"
                   },
                   "globalScope" : true
                 }, {
@@ -3556,7 +3462,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "117"
+                        "r" : "114"
                       },
                       "globalScope" : true
                     }, {
@@ -3581,11 +3487,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "118"
+                        "r" : "115"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "119"
+                    "r" : "116"
                   },
                   "globalScope" : true
                 }, {
@@ -3594,19 +3500,19 @@
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
                     "s" : [ "\n    else ", "null", "\n  end" ],
-                    "r" : "120"
+                    "r" : "117"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "121"
+                "r" : "118"
               },
               "globalScope" : true
             } ],
-            "r" : "122"
+            "r" : "119"
           }
         } ],
-        "localId" : "122",
-        "locator" : "96:1-101:5",
+        "localId" : "119",
+        "locator" : "93:1-98:5",
         "name" : "HIV Test Results",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -3622,19 +3528,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "110:19-110:50",
+                  "locator" : "107:19-107:50",
                   "name" : "HIV 1 RNA NAA+probe (Specimen)"
                 }
               },
-              "localId" : "123",
-              "locator" : "110:3-110:51",
+              "localId" : "120",
+              "locator" : "107:3-107:51",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "124",
-            "locator" : "110:3-110:63",
+            "localId" : "121",
+            "locator" : "107:3-107:63",
             "alias" : "Observation"
           } ],
           "where" : {
@@ -3645,8 +3551,8 @@
                 "type" : "As",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "126",
-                  "locator" : "111:11-111:27",
+                  "localId" : "123",
+                  "locator" : "108:11-108:27",
                   "path" : "value",
                   "scope" : "Observation"
                 },
@@ -3656,16 +3562,16 @@
               "libraryName" : "FHIRHelpers"
             }, {
               "type" : "Quantity",
-              "localId" : "127",
-              "locator" : "111:31-111:48",
+              "localId" : "124",
+              "locator" : "108:31-108:48",
               "value" : 1000,
               "unit" : "{copies}/mL"
             } ],
-            "localId" : "128",
-            "locator" : "111:5-111:48"
+            "localId" : "125",
+            "locator" : "108:5-108:48"
           },
-          "localId" : "129",
-          "locator" : "110:3-111:48"
+          "localId" : "126",
+          "locator" : "107:3-108:48"
         },
         "annotation" : [ {
           "s" : {
@@ -3735,11 +3641,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "123"
+                                "r" : "120"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "123"
+                            "r" : "120"
                           },
                           "globalScope" : true
                         }, {
@@ -3751,7 +3657,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "124"
+                        "r" : "121"
                       },
                       "globalScope" : true
                     } ]
@@ -3802,7 +3708,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "125"
+                                "r" : "122"
                               },
                               "globalScope" : true
                             }, {
@@ -3827,11 +3733,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "126"
+                                "r" : "123"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "126"
+                            "r" : "123"
                           },
                           "globalScope" : true
                         }, {
@@ -3856,27 +3762,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "127"
+                            "r" : "124"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "128"
+                        "r" : "125"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "128"
+                    "r" : "125"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "129"
+                "r" : "126"
               },
               "globalScope" : true
             } ],
-            "r" : "130"
+            "r" : "127"
           }
         } ],
-        "localId" : "130",
-        "locator" : "109:1-111:48",
+        "localId" : "127",
+        "locator" : "106:1-108:48",
         "name" : "Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -3892,19 +3798,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "114:19-114:50",
+                  "locator" : "111:19-111:50",
                   "name" : "HIV 1 RNA NAA+probe (Specimen)"
                 }
               },
-              "localId" : "131",
-              "locator" : "114:3-114:51",
+              "localId" : "128",
+              "locator" : "111:3-111:51",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "132",
-            "locator" : "114:3-114:63",
+            "localId" : "129",
+            "locator" : "111:3-111:63",
             "alias" : "Observation"
           } ],
           "where" : {
@@ -3915,8 +3821,8 @@
                 "type" : "As",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "134",
-                  "locator" : "115:11-115:27",
+                  "localId" : "131",
+                  "locator" : "112:11-112:27",
                   "path" : "value",
                   "scope" : "Observation"
                 },
@@ -3926,16 +3832,16 @@
               "libraryName" : "FHIRHelpers"
             }, {
               "type" : "Quantity",
-              "localId" : "135",
-              "locator" : "115:32-115:49",
+              "localId" : "132",
+              "locator" : "112:32-112:49",
               "value" : 1000,
               "unit" : "{copies}/mL"
             } ],
-            "localId" : "136",
-            "locator" : "115:5-115:49"
+            "localId" : "133",
+            "locator" : "112:5-112:49"
           },
-          "localId" : "137",
-          "locator" : "114:3-115:49"
+          "localId" : "134",
+          "locator" : "111:3-112:49"
         },
         "annotation" : [ {
           "s" : {
@@ -4005,11 +3911,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "131"
+                                "r" : "128"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "131"
+                            "r" : "128"
                           },
                           "globalScope" : true
                         }, {
@@ -4021,7 +3927,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "132"
+                        "r" : "129"
                       },
                       "globalScope" : true
                     } ]
@@ -4072,7 +3978,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "133"
+                                "r" : "130"
                               },
                               "globalScope" : true
                             }, {
@@ -4097,11 +4003,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "134"
+                                "r" : "131"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "134"
+                            "r" : "131"
                           },
                           "globalScope" : true
                         }, {
@@ -4126,27 +4032,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "135"
+                            "r" : "132"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "136"
+                        "r" : "133"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "136"
+                    "r" : "133"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "137"
+                "r" : "134"
               },
               "globalScope" : true
             } ],
-            "r" : "138"
+            "r" : "135"
           }
         } ],
-        "localId" : "138",
-        "locator" : "113:1-115:49",
+        "localId" : "135",
+        "locator" : "110:1-112:49",
         "name" : "Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4162,19 +4068,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "118:17-118:48",
+                  "locator" : "115:17-115:48",
                   "name" : "HIV 1 RNA NAA+probe (Specimen)"
                 }
               },
-              "localId" : "139",
-              "locator" : "118:3-118:49",
+              "localId" : "136",
+              "locator" : "115:3-115:49",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "140",
-            "locator" : "118:3-118:61",
+            "localId" : "137",
+            "locator" : "115:3-115:61",
             "alias" : "Observation"
           } ],
           "where" : {
@@ -4185,8 +4091,8 @@
                 "type" : "As",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "142",
-                  "locator" : "119:11-119:27",
+                  "localId" : "139",
+                  "locator" : "116:11-116:27",
                   "path" : "value",
                   "scope" : "Observation"
                 },
@@ -4196,16 +4102,16 @@
               "libraryName" : "FHIRHelpers"
             }, {
               "type" : "Quantity",
-              "localId" : "143",
-              "locator" : "119:31-119:48",
+              "localId" : "140",
+              "locator" : "116:31-116:48",
               "value" : 1000,
               "unit" : "{copies}/mL"
             } ],
-            "localId" : "144",
-            "locator" : "119:5-119:48"
+            "localId" : "141",
+            "locator" : "116:5-116:48"
           },
-          "localId" : "145",
-          "locator" : "118:3-119:48"
+          "localId" : "142",
+          "locator" : "115:3-116:48"
         },
         "annotation" : [ {
           "s" : {
@@ -4275,11 +4181,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "139"
+                                "r" : "136"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "139"
+                            "r" : "136"
                           },
                           "globalScope" : true
                         }, {
@@ -4291,7 +4197,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "140"
+                        "r" : "137"
                       },
                       "globalScope" : true
                     } ]
@@ -4342,7 +4248,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "141"
+                                "r" : "138"
                               },
                               "globalScope" : true
                             }, {
@@ -4367,11 +4273,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "142"
+                                "r" : "139"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "142"
+                            "r" : "139"
                           },
                           "globalScope" : true
                         }, {
@@ -4396,27 +4302,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "143"
+                            "r" : "140"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "144"
+                        "r" : "141"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "144"
+                    "r" : "141"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "145"
+                "r" : "142"
               },
               "globalScope" : true
             } ],
-            "r" : "146"
+            "r" : "143"
           }
         } ],
-        "localId" : "146",
-        "locator" : "117:1-119:48",
+        "localId" : "143",
+        "locator" : "114:1-116:48",
         "name" : "Suppressed",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4432,19 +4338,19 @@
                 "type" : "ToList",
                 "operand" : {
                   "type" : "CodeRef",
-                  "locator" : "122:17-122:48",
+                  "locator" : "119:17-119:48",
                   "name" : "HIV 1 RNA NAA+probe (Specimen)"
                 }
               },
-              "localId" : "147",
-              "locator" : "122:3-122:49",
+              "localId" : "144",
+              "locator" : "119:3-119:49",
               "dataType" : "{http://hl7.org/fhir}Observation",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
               "codeProperty" : "code",
               "codeComparator" : "~"
             },
-            "localId" : "148",
-            "locator" : "122:3-122:61",
+            "localId" : "145",
+            "locator" : "119:3-119:61",
             "alias" : "Observation"
           } ],
           "where" : {
@@ -4455,8 +4361,8 @@
                 "type" : "As",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "150",
-                  "locator" : "123:11-123:27",
+                  "localId" : "147",
+                  "locator" : "120:11-120:27",
                   "path" : "value",
                   "scope" : "Observation"
                 },
@@ -4466,16 +4372,16 @@
               "libraryName" : "FHIRHelpers"
             }, {
               "type" : "Quantity",
-              "localId" : "151",
-              "locator" : "123:32-123:49",
+              "localId" : "148",
+              "locator" : "120:32-120:49",
               "value" : 1000,
               "unit" : "{copies}/mL"
             } ],
-            "localId" : "152",
-            "locator" : "123:5-123:49"
+            "localId" : "149",
+            "locator" : "120:5-120:49"
           },
-          "localId" : "153",
-          "locator" : "122:3-123:49"
+          "localId" : "150",
+          "locator" : "119:3-120:49"
         },
         "annotation" : [ {
           "s" : {
@@ -4545,11 +4451,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "147"
+                                "r" : "144"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "147"
+                            "r" : "144"
                           },
                           "globalScope" : true
                         }, {
@@ -4561,7 +4467,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "148"
+                        "r" : "145"
                       },
                       "globalScope" : true
                     } ]
@@ -4612,7 +4518,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "149"
+                                "r" : "146"
                               },
                               "globalScope" : true
                             }, {
@@ -4637,11 +4543,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "150"
+                                "r" : "147"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "150"
+                            "r" : "147"
                           },
                           "globalScope" : true
                         }, {
@@ -4666,27 +4572,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "151"
+                            "r" : "148"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "152"
+                        "r" : "149"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "152"
+                    "r" : "149"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "153"
+                "r" : "150"
               },
               "globalScope" : true
             } ],
-            "r" : "154"
+            "r" : "151"
           }
         } ],
-        "localId" : "154",
-        "locator" : "121:1-123:49",
+        "localId" : "151",
+        "locator" : "118:1-120:49",
         "name" : "Unsuppressed",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4698,13 +4604,13 @@
             "type" : "AliasedQuerySource",
             "expression" : {
               "type" : "Retrieve",
-              "localId" : "155",
-              "locator" : "127:3-127:13",
+              "localId" : "152",
+              "locator" : "124:3-124:13",
               "dataType" : "{http://hl7.org/fhir}Encounter",
               "templateId" : "http://hl7.org/fhir/StructureDefinition/Encounter"
             },
-            "localId" : "156",
-            "locator" : "127:3-127:15",
+            "localId" : "153",
+            "locator" : "124:3-124:15",
             "alias" : "E"
           } ],
           "return" : {
@@ -4713,20 +4619,20 @@
               "type" : "Property",
               "source" : {
                 "type" : "Property",
-                "localId" : "158",
-                "locator" : "128:12-128:19",
+                "localId" : "155",
+                "locator" : "125:12-125:19",
                 "path" : "period",
                 "scope" : "E"
               },
-              "localId" : "159",
-              "locator" : "128:12-128:25",
+              "localId" : "156",
+              "locator" : "125:12-125:25",
               "path" : "start"
             },
-            "localId" : "160",
-            "locator" : "128:5-128:25"
+            "localId" : "157",
+            "locator" : "125:5-125:25"
           },
-          "localId" : "161",
-          "locator" : "127:3-128:25"
+          "localId" : "158",
+          "locator" : "124:3-125:25"
         },
         "annotation" : [ {
           "s" : {
@@ -4772,11 +4678,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "155"
+                                "r" : "152"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "155"
+                            "r" : "152"
                           },
                           "globalScope" : true
                         }, {
@@ -4788,7 +4694,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "156"
+                        "r" : "153"
                       },
                       "globalScope" : true
                     } ]
@@ -4839,7 +4745,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "157"
+                                "r" : "154"
                               },
                               "globalScope" : true
                             }, {
@@ -4864,11 +4770,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "158"
+                                "r" : "155"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "158"
+                            "r" : "155"
                           },
                           "globalScope" : true
                         }, {
@@ -4893,27 +4799,27 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "159"
+                            "r" : "156"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "159"
+                        "r" : "156"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "160"
+                    "r" : "157"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "161"
+                "r" : "158"
               },
               "globalScope" : true
             } ],
-            "r" : "162"
+            "r" : "159"
           }
         } ],
-        "localId" : "162",
-        "locator" : "126:1-128:25",
+        "localId" : "159",
+        "locator" : "123:1-125:25",
         "name" : "Contact date",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -4931,25 +4837,25 @@
                   "type" : "Property",
                   "source" : {
                     "type" : "ExpressionRef",
-                    "localId" : "163",
-                    "locator" : "134:10-134:16",
+                    "localId" : "160",
+                    "locator" : "130:10-130:16",
                     "name" : "Patient"
                   },
-                  "localId" : "164",
-                  "locator" : "134:10-134:23",
+                  "localId" : "161",
+                  "locator" : "130:10-130:23",
                   "path" : "gender"
                 } ],
                 "name" : "ToString",
                 "libraryName" : "FHIRHelpers"
               }, {
                 "type" : "Literal",
-                "localId" : "165",
-                "locator" : "134:27-134:32",
+                "localId" : "162",
+                "locator" : "130:27-130:32",
                 "valueType" : "{urn:hl7-org:elm-types:r1}String",
                 "value" : "male"
               } ],
-              "localId" : "166",
-              "locator" : "134:10-134:32"
+              "localId" : "163",
+              "locator" : "130:10-130:32"
             },
             "then" : {
               "type" : "Instance",
@@ -4957,8 +4863,8 @@
                 "type" : "InstanceElement",
                 "value" : {
                   "type" : "Literal",
-                  "localId" : "167",
-                  "locator" : "134:52-134:54",
+                  "localId" : "164",
+                  "locator" : "130:52-130:54",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "M"
                 },
@@ -4967,29 +4873,29 @@
                 "type" : "InstanceElement",
                 "value" : {
                   "type" : "Literal",
-                  "localId" : "168",
-                  "locator" : "134:65-134:109",
+                  "localId" : "165",
+                  "locator" : "130:65-130:107",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                  "value" : "http://hl7.org/fhir/v3/AdministrativeGender"
+                  "value" : "http://hl7.org/fhir/administrative-gender"
                 },
                 "name" : "system"
               }, {
                 "type" : "InstanceElement",
                 "value" : {
                   "type" : "Literal",
-                  "localId" : "169",
-                  "locator" : "134:121-134:126",
+                  "localId" : "166",
+                  "locator" : "130:119-130:124",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Male"
                 },
                 "name" : "display"
               } ],
-              "localId" : "170",
-              "locator" : "134:39-134:128",
+              "localId" : "167",
+              "locator" : "130:39-130:126",
               "classType" : "{urn:hl7-org:elm-types:r1}Code"
             },
-            "localId" : "171",
-            "locator" : "134:5-134:128"
+            "localId" : "168",
+            "locator" : "130:5-130:126"
           }, {
             "type" : "CaseItem",
             "when" : {
@@ -5000,25 +4906,25 @@
                   "type" : "Property",
                   "source" : {
                     "type" : "ExpressionRef",
-                    "localId" : "172",
-                    "locator" : "135:10-135:16",
+                    "localId" : "169",
+                    "locator" : "131:10-131:16",
                     "name" : "Patient"
                   },
-                  "localId" : "173",
-                  "locator" : "135:10-135:23",
+                  "localId" : "170",
+                  "locator" : "131:10-131:23",
                   "path" : "gender"
                 } ],
                 "name" : "ToString",
                 "libraryName" : "FHIRHelpers"
               }, {
                 "type" : "Literal",
-                "localId" : "174",
-                "locator" : "135:27-135:34",
+                "localId" : "171",
+                "locator" : "131:27-131:34",
                 "valueType" : "{urn:hl7-org:elm-types:r1}String",
                 "value" : "female"
               } ],
-              "localId" : "175",
-              "locator" : "135:10-135:34"
+              "localId" : "172",
+              "locator" : "131:10-131:34"
             },
             "then" : {
               "type" : "Instance",
@@ -5026,8 +4932,8 @@
                 "type" : "InstanceElement",
                 "value" : {
                   "type" : "Literal",
-                  "localId" : "176",
-                  "locator" : "135:54-135:56",
+                  "localId" : "173",
+                  "locator" : "131:54-131:56",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "F"
                 },
@@ -5036,41 +4942,41 @@
                 "type" : "InstanceElement",
                 "value" : {
                   "type" : "Literal",
-                  "localId" : "177",
-                  "locator" : "135:67-135:111",
+                  "localId" : "174",
+                  "locator" : "131:67-131:109",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                  "value" : "http://hl7.org/fhir/v3/AdministrativeGender"
+                  "value" : "http://hl7.org/fhir/administrative-gender"
                 },
                 "name" : "system"
               }, {
                 "type" : "InstanceElement",
                 "value" : {
                   "type" : "Literal",
-                  "localId" : "178",
-                  "locator" : "135:123-135:130",
+                  "localId" : "175",
+                  "locator" : "131:121-131:128",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Female"
                 },
                 "name" : "display"
               } ],
-              "localId" : "179",
-              "locator" : "135:41-135:132",
+              "localId" : "176",
+              "locator" : "131:41-131:130",
               "classType" : "{urn:hl7-org:elm-types:r1}Code"
             },
-            "localId" : "180",
-            "locator" : "135:5-135:132"
+            "localId" : "177",
+            "locator" : "131:5-131:130"
           } ],
           "else" : {
             "type" : "As",
             "operand" : {
               "type" : "Null",
-              "localId" : "181",
-              "locator" : "136:10-136:13"
+              "localId" : "178",
+              "locator" : "132:10-132:13"
             },
             "asType" : "{urn:hl7-org:elm-types:r1}Code"
           },
-          "localId" : "182",
-          "locator" : "133:3-137:5"
+          "localId" : "179",
+          "locator" : "129:3-133:5"
         },
         "annotation" : [ {
           "s" : {
@@ -5132,7 +5038,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "163"
+                                "r" : "160"
                               },
                               "globalScope" : true
                             }, {
@@ -5157,11 +5063,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "164"
+                                "r" : "161"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "164"
+                            "r" : "161"
                           },
                           "globalScope" : true
                         }, {
@@ -5186,11 +5092,11 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "165"
+                            "r" : "162"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "166"
+                        "r" : "163"
                       },
                       "globalScope" : true
                     }, {
@@ -5241,7 +5147,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "167"
+                                "r" : "164"
                               },
                               "globalScope" : true
                             } ]
@@ -5278,11 +5184,11 @@
                                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                                   "value" : {
-                                    "s" : [ "'http://hl7.org/fhir/v3/AdministrativeGender'" ]
+                                    "s" : [ "'http://hl7.org/fhir/administrative-gender'" ]
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "168"
+                                "r" : "165"
                               },
                               "globalScope" : true
                             } ]
@@ -5323,7 +5229,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "169"
+                                "r" : "166"
                               },
                               "globalScope" : true
                             } ]
@@ -5338,11 +5244,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "170"
+                        "r" : "167"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "171"
+                    "r" : "168"
                   },
                   "globalScope" : true
                 }, {
@@ -5390,7 +5296,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "172"
+                                "r" : "169"
                               },
                               "globalScope" : true
                             }, {
@@ -5415,11 +5321,11 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "173"
+                                "r" : "170"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "173"
+                            "r" : "170"
                           },
                           "globalScope" : true
                         }, {
@@ -5444,11 +5350,11 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "174"
+                            "r" : "171"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "175"
+                        "r" : "172"
                       },
                       "globalScope" : true
                     }, {
@@ -5499,7 +5405,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "176"
+                                "r" : "173"
                               },
                               "globalScope" : true
                             } ]
@@ -5536,11 +5442,11 @@
                                   "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
                                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                                   "value" : {
-                                    "s" : [ "'http://hl7.org/fhir/v3/AdministrativeGender'" ]
+                                    "s" : [ "'http://hl7.org/fhir/administrative-gender'" ]
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "177"
+                                "r" : "174"
                               },
                               "globalScope" : true
                             } ]
@@ -5581,7 +5487,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "178"
+                                "r" : "175"
                               },
                               "globalScope" : true
                             } ]
@@ -5596,11 +5502,11 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "179"
+                        "r" : "176"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "180"
+                    "r" : "177"
                   },
                   "globalScope" : true
                 }, {
@@ -5609,19 +5515,19 @@
                   "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
                   "value" : {
                     "s" : [ "\n    else ", "null", "\n  end" ],
-                    "r" : "181"
+                    "r" : "178"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "182"
+                "r" : "179"
               },
               "globalScope" : true
             } ],
-            "r" : "183"
+            "r" : "180"
           }
         } ],
-        "localId" : "183",
-        "locator" : "132:1-137:5",
+        "localId" : "180",
+        "locator" : "128:1-133:5",
         "name" : "SDE Sex",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -5631,8 +5537,8 @@
           "type" : "OperandDef",
           "operandTypeSpecifier" : {
             "type" : "NamedTypeSpecifier",
-            "localId" : "184",
-            "locator" : "142:29-142:34",
+            "localId" : "181",
+            "locator" : "138:29-138:34",
             "name" : "{urn:hl7-org:elm-types:r1}String"
           },
           "name" : "uri"
@@ -5661,7 +5567,7 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "184"
+                "r" : "181"
               },
               "globalScope" : true
             }, {
@@ -5717,7 +5623,7 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "185"
+                            "r" : "182"
                           },
                           "globalScope" : true
                         }, {
@@ -5742,7 +5648,7 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "186"
+                            "r" : "183"
                           },
                           "globalScope" : true
                         }, {
@@ -5754,7 +5660,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "187"
+                        "r" : "184"
                       },
                       "globalScope" : true
                     }, {
@@ -5766,15 +5672,15 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "188"
+                    "r" : "185"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "188"
+                "r" : "185"
               },
               "globalScope" : true
             } ],
-            "r" : "189"
+            "r" : "186"
           }
         } ],
         "expression" : {
@@ -5783,25 +5689,25 @@
             "type" : "Split",
             "stringToSplit" : {
               "type" : "OperandRef",
-              "localId" : "185",
-              "locator" : "143:16-143:18",
+              "localId" : "182",
+              "locator" : "139:16-139:18",
               "name" : "uri"
             },
             "separator" : {
               "type" : "Literal",
-              "localId" : "186",
-              "locator" : "143:21-143:23",
+              "localId" : "183",
+              "locator" : "139:21-139:23",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "/"
             },
-            "localId" : "187",
-            "locator" : "143:10-143:24"
+            "localId" : "184",
+            "locator" : "139:10-139:24"
           },
-          "localId" : "188",
-          "locator" : "143:5-143:25"
+          "localId" : "185",
+          "locator" : "139:5-139:25"
         },
-        "localId" : "189",
-        "locator" : "142:1-143:25",
+        "localId" : "186",
+        "locator" : "138:1-139:25",
         "name" : "GetId",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -5811,8 +5717,8 @@
           "type" : "OperandDef",
           "operandTypeSpecifier" : {
             "type" : "NamedTypeSpecifier",
-            "localId" : "190",
-            "locator" : "145:41-145:49",
+            "localId" : "187",
+            "locator" : "141:41-141:49",
             "name" : "{http://hl7.org/fhir}Reference"
           },
           "name" : "reference"
@@ -5841,7 +5747,7 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "190"
+                "r" : "187"
               },
               "globalScope" : true
             }, {
@@ -5917,11 +5823,11 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "191"
+                                            "r" : "188"
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "191"
+                                        "r" : "188"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -5933,7 +5839,7 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "192"
+                                    "r" : "189"
                                   },
                                   "globalScope" : true
                                 } ]
@@ -5989,7 +5895,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "193"
+                                                "r" : "190"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -6014,11 +5920,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "194"
+                                                "r" : "191"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "194"
+                                            "r" : "191"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6043,11 +5949,11 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "195"
+                                            "r" : "192"
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "195"
+                                        "r" : "192"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -6090,7 +5996,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "196"
+                                                "r" : "193"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -6115,11 +6021,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "197"
+                                                "r" : "194"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "197"
+                                            "r" : "194"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6131,19 +6037,19 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "198"
+                                        "r" : "195"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "199"
+                                    "r" : "196"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "199"
+                                "r" : "196"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "200"
+                            "r" : "197"
                           },
                           "globalScope" : true
                         }, {
@@ -6155,19 +6061,19 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "200"
+                        "r" : "197"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "201"
+                    "r" : "198"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "201"
+                "r" : "198"
               },
               "globalScope" : true
             } ],
-            "r" : "202"
+            "r" : "199"
           }
         } ],
         "expression" : {
@@ -6178,13 +6084,13 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "191",
-                "locator" : "147:5-147:14",
+                "localId" : "188",
+                "locator" : "143:5-143:14",
                 "dataType" : "{http://hl7.org/fhir}Location",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Location"
               },
-              "localId" : "192",
-              "locator" : "147:5-147:23",
+              "localId" : "189",
+              "locator" : "143:5-143:23",
               "alias" : "Location"
             } ],
             "where" : {
@@ -6193,13 +6099,13 @@
                 "type" : "Property",
                 "source" : {
                   "type" : "Property",
-                  "localId" : "194",
-                  "locator" : "147:31-147:41",
+                  "localId" : "191",
+                  "locator" : "143:31-143:41",
                   "path" : "id",
                   "scope" : "Location"
                 },
-                "localId" : "195",
-                "locator" : "147:31-147:47",
+                "localId" : "192",
+                "locator" : "143:31-143:47",
                 "path" : "value"
               }, {
                 "type" : "FunctionRef",
@@ -6209,32 +6115,32 @@
                     "type" : "Property",
                     "source" : {
                       "type" : "OperandRef",
-                      "localId" : "196",
-                      "locator" : "147:57-147:65",
+                      "localId" : "193",
+                      "locator" : "143:57-143:65",
                       "name" : "reference"
                     },
-                    "localId" : "197",
-                    "locator" : "147:57-147:75",
+                    "localId" : "194",
+                    "locator" : "143:57-143:75",
                     "path" : "reference"
                   } ],
                   "name" : "ToString",
                   "libraryName" : "FHIRHelpers"
                 } ],
-                "localId" : "198",
-                "locator" : "147:51-147:76",
+                "localId" : "195",
+                "locator" : "143:51-143:76",
                 "name" : "GetId"
               } ],
-              "localId" : "199",
-              "locator" : "147:25-147:76"
+              "localId" : "196",
+              "locator" : "143:25-143:76"
             },
-            "localId" : "200",
-            "locator" : "146:18-148:3"
+            "localId" : "197",
+            "locator" : "142:18-144:3"
           },
-          "localId" : "201",
-          "locator" : "146:3-148:3"
+          "localId" : "198",
+          "locator" : "142:3-144:3"
         },
-        "localId" : "202",
-        "locator" : "145:1-148:3",
+        "localId" : "199",
+        "locator" : "141:1-144:3",
         "name" : "GetLocation",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -6248,13 +6154,13 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "203",
-                "locator" : "151:11-151:21",
+                "localId" : "200",
+                "locator" : "147:11-147:21",
                 "dataType" : "{http://hl7.org/fhir}Encounter",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Encounter"
               },
-              "localId" : "204",
-              "locator" : "151:11-151:23",
+              "localId" : "201",
+              "locator" : "147:11-147:23",
               "alias" : "E"
             } ],
             "return" : {
@@ -6267,30 +6173,30 @@
                     "type" : "First",
                     "source" : {
                       "type" : "Property",
-                      "localId" : "206",
-                      "locator" : "151:52-151:61",
+                      "localId" : "203",
+                      "locator" : "147:52-147:61",
                       "path" : "location",
                       "scope" : "E"
                     },
-                    "localId" : "207",
-                    "locator" : "151:46-151:62"
+                    "localId" : "204",
+                    "locator" : "147:46-147:62"
                   },
-                  "localId" : "208",
-                  "locator" : "151:46-151:71",
+                  "localId" : "205",
+                  "locator" : "147:46-147:71",
                   "path" : "location"
                 } ],
-                "localId" : "209",
-                "locator" : "151:32-151:72",
+                "localId" : "206",
+                "locator" : "147:32-147:72",
                 "name" : "GetLocation"
               },
-              "localId" : "210",
-              "locator" : "151:25-151:72"
+              "localId" : "207",
+              "locator" : "147:25-147:72"
             },
-            "localId" : "211",
-            "locator" : "151:11-151:72"
+            "localId" : "208",
+            "locator" : "147:11-147:72"
           },
-          "localId" : "212",
-          "locator" : "151:5-151:73"
+          "localId" : "209",
+          "locator" : "147:5-147:73"
         },
         "annotation" : [ {
           "s" : {
@@ -6349,11 +6255,11 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "203"
+                                    "r" : "200"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "203"
+                                "r" : "200"
                               },
                               "globalScope" : true
                             }, {
@@ -6365,7 +6271,7 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "204"
+                            "r" : "201"
                           },
                           "globalScope" : true
                         } ]
@@ -6442,7 +6348,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "205"
+                                            "r" : "202"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6467,11 +6373,11 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "206"
+                                            "r" : "203"
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "206"
+                                        "r" : "203"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -6483,7 +6389,7 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "207"
+                                    "r" : "204"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -6508,11 +6414,11 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "208"
+                                    "r" : "205"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "208"
+                                "r" : "205"
                               },
                               "globalScope" : true
                             }, {
@@ -6524,15 +6430,15 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "209"
+                            "r" : "206"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "210"
+                        "r" : "207"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "211"
+                    "r" : "208"
                   },
                   "globalScope" : true
                 }, {
@@ -6544,15 +6450,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "212"
+                "r" : "209"
               },
               "globalScope" : true
             } ],
-            "r" : "213"
+            "r" : "210"
           }
         } ],
-        "localId" : "213",
-        "locator" : "150:1-151:73",
+        "localId" : "210",
+        "locator" : "146:1-147:73",
         "name" : "Location",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -6568,12 +6474,12 @@
                 "type" : "Property",
                 "source" : {
                   "type" : "ExpressionRef",
-                  "localId" : "214",
-                  "locator" : "155:18-155:27",
+                  "localId" : "211",
+                  "locator" : "151:18-151:27",
                   "name" : "Location"
                 },
-                "localId" : "215",
-                "locator" : "155:18-155:32",
+                "localId" : "212",
+                "locator" : "151:18-151:32",
                 "path" : "name"
               } ],
               "name" : "ToString",
@@ -6584,15 +6490,15 @@
             "type" : "InstanceElement",
             "value" : {
               "type" : "Literal",
-              "localId" : "216",
-              "locator" : "155:43-155:86",
+              "localId" : "213",
+              "locator" : "151:43-151:86",
               "valueType" : "{urn:hl7-org:elm-types:r1}String",
               "value" : "https://github.com/synthetichealth/synthea"
             },
             "name" : "system"
           } ],
-          "localId" : "217",
-          "locator" : "155:5-155:88",
+          "localId" : "214",
+          "locator" : "151:5-151:88",
           "classType" : "{urn:hl7-org:elm-types:r1}Code"
         },
         "annotation" : [ {
@@ -6650,7 +6556,7 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "214"
+                            "r" : "211"
                           },
                           "globalScope" : true
                         }, {
@@ -6675,11 +6581,11 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "215"
+                            "r" : "212"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "215"
+                        "r" : "212"
                       },
                       "globalScope" : true
                     } ]
@@ -6720,7 +6626,7 @@
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "216"
+                        "r" : "213"
                       },
                       "globalScope" : true
                     } ]
@@ -6735,15 +6641,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "217"
+                "r" : "214"
               },
               "globalScope" : true
             } ],
-            "r" : "218"
+            "r" : "215"
           }
         } ],
-        "localId" : "218",
-        "locator" : "154:1-155:88",
+        "localId" : "215",
+        "locator" : "150:1-151:88",
         "name" : "SDE Location",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -6757,13 +6663,13 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "219",
-                "locator" : "164:5-164:15",
+                "localId" : "216",
+                "locator" : "160:5-160:15",
                 "dataType" : "{http://hl7.org/fhir}Encounter",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Encounter"
               },
-              "localId" : "220",
-              "locator" : "164:5-164:17",
+              "localId" : "217",
+              "locator" : "160:5-160:17",
               "alias" : "E"
             } ],
             "return" : {
@@ -6776,41 +6682,41 @@
                     "type" : "AliasedQuerySource",
                     "expression" : {
                       "type" : "Property",
-                      "localId" : "221",
-                      "locator" : "165:20-165:29",
+                      "localId" : "218",
+                      "locator" : "161:20-161:29",
                       "path" : "location",
                       "scope" : "E"
                     },
-                    "localId" : "222",
-                    "locator" : "165:20-165:31",
+                    "localId" : "219",
+                    "locator" : "161:20-161:31",
                     "alias" : "L"
                   } ],
                   "return" : {
                     "type" : "ReturnClause",
                     "expression" : {
                       "type" : "Property",
-                      "localId" : "224",
-                      "locator" : "165:40-165:49",
+                      "localId" : "221",
+                      "locator" : "161:40-161:49",
                       "path" : "location",
                       "scope" : "L"
                     },
-                    "localId" : "225",
-                    "locator" : "165:33-165:49"
+                    "localId" : "222",
+                    "locator" : "161:33-161:49"
                   },
-                  "localId" : "226",
-                  "locator" : "165:20-165:49"
+                  "localId" : "223",
+                  "locator" : "161:20-161:49"
                 },
-                "localId" : "227",
-                "locator" : "165:14-165:50"
+                "localId" : "224",
+                "locator" : "161:14-161:50"
               },
-              "localId" : "228",
-              "locator" : "165:7-165:50"
+              "localId" : "225",
+              "locator" : "161:7-161:50"
             },
-            "localId" : "229",
-            "locator" : "164:5-165:50"
+            "localId" : "226",
+            "locator" : "160:5-161:50"
           },
-          "localId" : "230",
-          "locator" : "163:3-167:3"
+          "localId" : "227",
+          "locator" : "159:3-163:3"
         },
         "annotation" : [ {
           "s" : {
@@ -6869,11 +6775,11 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "219"
+                                    "r" : "216"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "219"
+                                "r" : "216"
                               },
                               "globalScope" : true
                             }, {
@@ -6885,7 +6791,7 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "220"
+                            "r" : "217"
                           },
                           "globalScope" : true
                         } ]
@@ -6962,7 +6868,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "221"
+                                            "r" : "218"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6974,7 +6880,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "222"
+                                        "r" : "219"
                                       },
                                       "globalScope" : true
                                     } ]
@@ -7020,7 +6926,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "223"
+                                            "r" : "220"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7045,19 +6951,19 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "224"
+                                            "r" : "221"
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "224"
+                                        "r" : "221"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "225"
+                                    "r" : "222"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "226"
+                                "r" : "223"
                               },
                               "globalScope" : true
                             }, {
@@ -7069,15 +6975,15 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "227"
+                            "r" : "224"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "228"
+                        "r" : "225"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "229"
+                    "r" : "226"
                   },
                   "globalScope" : true
                 }, {
@@ -7089,15 +6995,15 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "230"
+                "r" : "227"
               },
               "globalScope" : true
             } ],
-            "r" : "231"
+            "r" : "228"
           }
         } ],
-        "localId" : "231",
-        "locator" : "162:1-167:3",
+        "localId" : "228",
+        "locator" : "158:1-163:3",
         "name" : "Most Recent Encounter Location Reference",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -7111,13 +7017,13 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "232",
-                "locator" : "174:4-174:13",
+                "localId" : "229",
+                "locator" : "170:4-170:13",
                 "dataType" : "{http://hl7.org/fhir}Location",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Location"
               },
-              "localId" : "233",
-              "locator" : "174:4-174:15",
+              "localId" : "230",
+              "locator" : "170:4-170:15",
               "alias" : "L"
             } ],
             "let" : [ {
@@ -7130,13 +7036,13 @@
                     "type" : "AliasedQuerySource",
                     "expression" : {
                       "type" : "Property",
-                      "localId" : "234",
-                      "locator" : "175:38-175:49",
+                      "localId" : "231",
+                      "locator" : "171:38-171:49",
                       "path" : "identifier",
                       "scope" : "L"
                     },
-                    "localId" : "235",
-                    "locator" : "175:38-175:51",
+                    "localId" : "232",
+                    "locator" : "171:38-171:51",
                     "alias" : "I"
                   } ],
                   "where" : {
@@ -7145,8 +7051,8 @@
                       "type" : "FunctionRef",
                       "operand" : [ {
                         "type" : "Property",
-                        "localId" : "237",
-                        "locator" : "175:59-175:66",
+                        "localId" : "234",
+                        "locator" : "171:59-171:66",
                         "path" : "system",
                         "scope" : "I"
                       } ],
@@ -7154,22 +7060,22 @@
                       "libraryName" : "FHIRHelpers"
                     }, {
                       "type" : "Literal",
-                      "localId" : "238",
-                      "locator" : "175:70-175:113",
+                      "localId" : "235",
+                      "locator" : "171:70-171:113",
                       "valueType" : "{urn:hl7-org:elm-types:r1}String",
                       "value" : "https://github.com/synthetichealth/synthea"
                     } ],
-                    "localId" : "239",
-                    "locator" : "175:53-175:113"
+                    "localId" : "236",
+                    "locator" : "171:53-171:113"
                   },
-                  "localId" : "240",
-                  "locator" : "175:37-175:114"
+                  "localId" : "237",
+                  "locator" : "171:37-171:114"
                 },
-                "localId" : "241",
-                "locator" : "175:22-175:114"
+                "localId" : "238",
+                "locator" : "171:22-171:114"
               },
-              "localId" : "242",
-              "locator" : "175:10-175:114",
+              "localId" : "239",
+              "locator" : "171:10-171:114",
               "identifier" : "identifier"
             } ],
             "where" : {
@@ -7178,8 +7084,8 @@
                 "type" : "FunctionRef",
                 "operand" : [ {
                   "type" : "Property",
-                  "localId" : "244",
-                  "locator" : "176:12-176:15",
+                  "localId" : "241",
+                  "locator" : "172:12-172:15",
                   "path" : "id",
                   "scope" : "L"
                 } ],
@@ -7195,12 +7101,12 @@
                       "type" : "Property",
                       "source" : {
                         "type" : "ExpressionRef",
-                        "localId" : "245",
-                        "locator" : "176:30-176:71",
+                        "localId" : "242",
+                        "locator" : "172:30-172:71",
                         "name" : "Most Recent Encounter Location Reference"
                       },
-                      "localId" : "246",
-                      "locator" : "176:30-176:81",
+                      "localId" : "243",
+                      "locator" : "172:30-172:81",
                       "path" : "reference"
                     } ],
                     "name" : "ToString",
@@ -7208,19 +7114,19 @@
                   },
                   "separator" : {
                     "type" : "Literal",
-                    "localId" : "247",
-                    "locator" : "176:84-176:86",
+                    "localId" : "244",
+                    "locator" : "172:84-172:86",
                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                     "value" : "/"
                   },
-                  "localId" : "248",
-                  "locator" : "176:24-176:87"
+                  "localId" : "245",
+                  "locator" : "172:24-172:87"
                 },
-                "localId" : "249",
-                "locator" : "176:19-176:88"
+                "localId" : "246",
+                "locator" : "172:19-172:88"
               } ],
-              "localId" : "250",
-              "locator" : "176:6-176:88"
+              "localId" : "247",
+              "locator" : "172:6-172:88"
             },
             "return" : {
               "type" : "ReturnClause",
@@ -7244,12 +7150,12 @@
                                 "type" : "Property",
                                 "source" : {
                                   "type" : "QueryLetRef",
-                                  "localId" : "251",
-                                  "locator" : "180:32-180:41",
+                                  "localId" : "248",
+                                  "locator" : "176:32-176:41",
                                   "name" : "identifier"
                                 },
-                                "localId" : "252",
-                                "locator" : "180:32-180:47",
+                                "localId" : "249",
+                                "locator" : "176:32-176:47",
                                 "path" : "value"
                               } ],
                               "name" : "ToString",
@@ -7257,8 +7163,8 @@
                             },
                             "name" : "value"
                           } ],
-                          "localId" : "253",
-                          "locator" : "180:18-180:49",
+                          "localId" : "250",
+                          "locator" : "176:18-176:49",
                           "classType" : "{http://hl7.org/fhir}code"
                         },
                         "name" : "code"
@@ -7268,37 +7174,37 @@
                           "type" : "Property",
                           "source" : {
                             "type" : "QueryLetRef",
-                            "localId" : "254",
-                            "locator" : "181:20-181:29",
+                            "localId" : "251",
+                            "locator" : "177:20-177:29",
                             "name" : "identifier"
                           },
-                          "localId" : "255",
-                          "locator" : "181:20-181:36",
+                          "localId" : "252",
+                          "locator" : "177:20-177:36",
                           "path" : "system"
                         },
                         "name" : "system"
                       } ],
-                      "localId" : "256",
-                      "locator" : "179:10-182:10",
+                      "localId" : "253",
+                      "locator" : "175:10-178:10",
                       "classType" : "{http://hl7.org/fhir}Coding"
                     } ],
-                    "localId" : "257",
-                    "locator" : "178:16-183:8"
+                    "localId" : "254",
+                    "locator" : "174:16-179:8"
                   },
                   "name" : "coding"
                 } ],
-                "localId" : "258",
-                "locator" : "177:13-184:6",
+                "localId" : "255",
+                "locator" : "173:13-180:6",
                 "classType" : "{http://hl7.org/fhir}CodeableConcept"
               },
-              "localId" : "259",
-              "locator" : "177:6-184:6"
+              "localId" : "256",
+              "locator" : "173:6-180:6"
             },
-            "localId" : "260",
-            "locator" : "173:17-185:2"
+            "localId" : "257",
+            "locator" : "169:17-181:2"
           },
-          "localId" : "261",
-          "locator" : "173:2-185:2"
+          "localId" : "258",
+          "locator" : "169:2-181:2"
         },
         "annotation" : [ {
           "s" : {
@@ -7370,11 +7276,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "232"
+                                        "r" : "229"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "232"
+                                    "r" : "229"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -7386,7 +7292,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "233"
+                                "r" : "230"
                               },
                               "globalScope" : true
                             } ]
@@ -7489,7 +7395,7 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "234"
+                                                        "r" : "231"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -7501,7 +7407,7 @@
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "235"
+                                                    "r" : "232"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -7552,7 +7458,7 @@
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "236"
+                                                            "r" : "233"
                                                           },
                                                           "globalScope" : true
                                                         }, {
@@ -7577,11 +7483,11 @@
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "237"
+                                                            "r" : "234"
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "237"
+                                                        "r" : "234"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -7606,19 +7512,19 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "238"
+                                                        "r" : "235"
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "239"
+                                                    "r" : "236"
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "239"
+                                                "r" : "236"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "240"
+                                            "r" : "237"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7630,15 +7536,15 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "240"
+                                        "r" : "237"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "241"
+                                    "r" : "238"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "242"
+                                "r" : "239"
                               },
                               "globalScope" : true
                             } ]
@@ -7689,7 +7595,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "243"
+                                        "r" : "240"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -7714,11 +7620,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "244"
+                                        "r" : "241"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "244"
+                                    "r" : "241"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -7774,7 +7680,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "245"
+                                                "r" : "242"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -7799,11 +7705,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "246"
+                                                "r" : "243"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "246"
+                                            "r" : "243"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7828,7 +7734,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "247"
+                                            "r" : "244"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7840,7 +7746,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "248"
+                                        "r" : "245"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -7852,15 +7758,15 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "249"
+                                    "r" : "246"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "250"
+                                "r" : "247"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "250"
+                            "r" : "247"
                           },
                           "globalScope" : true
                         }, {
@@ -7994,7 +7900,7 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "251"
+                                                                "r" : "248"
                                                               },
                                                               "globalScope" : true
                                                             }, {
@@ -8019,11 +7925,11 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "252"
+                                                                "r" : "249"
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "252"
+                                                            "r" : "249"
                                                           },
                                                           "globalScope" : true
                                                         } ]
@@ -8038,7 +7944,7 @@
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "253"
+                                                    "r" : "250"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -8084,7 +7990,7 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "254"
+                                                        "r" : "251"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -8109,11 +8015,11 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "255"
+                                                        "r" : "252"
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "255"
+                                                    "r" : "252"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -8128,7 +8034,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "256"
+                                            "r" : "253"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -8140,7 +8046,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "257"
+                                        "r" : "254"
                                       },
                                       "globalScope" : true
                                     } ]
@@ -8155,15 +8061,15 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "258"
+                                "r" : "255"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "259"
+                            "r" : "256"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "260"
+                        "r" : "257"
                       },
                       "globalScope" : true
                     }, {
@@ -8175,19 +8081,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "260"
+                    "r" : "257"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "261"
+                "r" : "258"
               },
               "globalScope" : true
             } ],
-            "r" : "262"
+            "r" : "259"
           }
         } ],
-        "localId" : "262",
-        "locator" : "172:1-185:2",
+        "localId" : "259",
+        "locator" : "168:1-181:2",
         "name" : "Location Code",
         "context" : "Patient",
         "accessLevel" : "Public"
@@ -8201,13 +8107,13 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "263",
-                "locator" : "189:3-189:12",
+                "localId" : "260",
+                "locator" : "185:3-185:12",
                 "dataType" : "{http://hl7.org/fhir}Location",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Location"
               },
-              "localId" : "264",
-              "locator" : "189:3-189:14",
+              "localId" : "261",
+              "locator" : "185:3-185:14",
               "alias" : "L"
             } ],
             "let" : [ {
@@ -8216,16 +8122,16 @@
                 "type" : "SingletonFrom",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "266",
-                  "locator" : "190:36-190:49",
+                  "localId" : "263",
+                  "locator" : "186:36-186:49",
                   "path" : "identifier",
                   "scope" : "L"
                 },
-                "localId" : "267",
-                "locator" : "190:21-190:49"
+                "localId" : "264",
+                "locator" : "186:21-186:49"
               },
-              "localId" : "268",
-              "locator" : "190:9-190:49",
+              "localId" : "265",
+              "locator" : "186:9-186:49",
               "identifier" : "identifier"
             } ],
             "where" : {
@@ -8234,8 +8140,8 @@
                 "type" : "FunctionRef",
                 "operand" : [ {
                   "type" : "Property",
-                  "localId" : "270",
-                  "locator" : "191:11-191:14",
+                  "localId" : "267",
+                  "locator" : "187:11-187:14",
                   "path" : "id",
                   "scope" : "L"
                 } ],
@@ -8251,12 +8157,12 @@
                       "type" : "Property",
                       "source" : {
                         "type" : "ExpressionRef",
-                        "localId" : "271",
-                        "locator" : "191:29-191:70",
+                        "localId" : "268",
+                        "locator" : "187:29-187:70",
                         "name" : "Most Recent Encounter Location Reference"
                       },
-                      "localId" : "272",
-                      "locator" : "191:29-191:80",
+                      "localId" : "269",
+                      "locator" : "187:29-187:80",
                       "path" : "reference"
                     } ],
                     "name" : "ToString",
@@ -8264,19 +8170,19 @@
                   },
                   "separator" : {
                     "type" : "Literal",
-                    "localId" : "273",
-                    "locator" : "191:83-191:85",
+                    "localId" : "270",
+                    "locator" : "187:83-187:85",
                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                     "value" : "/"
                   },
-                  "localId" : "274",
-                  "locator" : "191:23-191:86"
+                  "localId" : "271",
+                  "locator" : "187:23-187:86"
                 },
-                "localId" : "275",
-                "locator" : "191:18-191:87"
+                "localId" : "272",
+                "locator" : "187:18-187:87"
               } ],
-              "localId" : "276",
-              "locator" : "191:5-191:87"
+              "localId" : "273",
+              "locator" : "187:5-187:87"
             },
             "return" : {
               "type" : "ReturnClause",
@@ -8300,12 +8206,12 @@
                                 "type" : "Property",
                                 "source" : {
                                   "type" : "QueryLetRef",
-                                  "localId" : "277",
-                                  "locator" : "195:31-195:40",
+                                  "localId" : "274",
+                                  "locator" : "191:31-191:40",
                                   "name" : "identifier"
                                 },
-                                "localId" : "278",
-                                "locator" : "195:31-195:46",
+                                "localId" : "275",
+                                "locator" : "191:31-191:46",
                                 "path" : "value"
                               } ],
                               "name" : "ToString",
@@ -8313,8 +8219,8 @@
                             },
                             "name" : "value"
                           } ],
-                          "localId" : "279",
-                          "locator" : "195:17-195:48",
+                          "localId" : "276",
+                          "locator" : "191:17-191:48",
                           "classType" : "{http://hl7.org/fhir}code"
                         },
                         "name" : "code"
@@ -8324,37 +8230,37 @@
                           "type" : "Property",
                           "source" : {
                             "type" : "QueryLetRef",
-                            "localId" : "280",
-                            "locator" : "196:19-196:28",
+                            "localId" : "277",
+                            "locator" : "192:19-192:28",
                             "name" : "identifier"
                           },
-                          "localId" : "281",
-                          "locator" : "196:19-196:35",
+                          "localId" : "278",
+                          "locator" : "192:19-192:35",
                           "path" : "system"
                         },
                         "name" : "system"
                       } ],
-                      "localId" : "282",
-                      "locator" : "194:9-197:9",
+                      "localId" : "279",
+                      "locator" : "190:9-193:9",
                       "classType" : "{http://hl7.org/fhir}Coding"
                     } ],
-                    "localId" : "283",
-                    "locator" : "193:15-198:7"
+                    "localId" : "280",
+                    "locator" : "189:15-194:7"
                   },
                   "name" : "coding"
                 } ],
-                "localId" : "284",
-                "locator" : "192:12-199:5",
+                "localId" : "281",
+                "locator" : "188:12-195:5",
                 "classType" : "{http://hl7.org/fhir}CodeableConcept"
               },
-              "localId" : "285",
-              "locator" : "192:5-199:5"
+              "localId" : "282",
+              "locator" : "188:5-195:5"
             },
-            "localId" : "286",
-            "locator" : "188:16-200:1"
+            "localId" : "283",
+            "locator" : "184:16-196:1"
           },
-          "localId" : "287",
-          "locator" : "188:1-200:1"
+          "localId" : "284",
+          "locator" : "184:1-196:1"
         },
         "annotation" : [ {
           "s" : {
@@ -8426,11 +8332,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "263"
+                                        "r" : "260"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "263"
+                                    "r" : "260"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -8442,7 +8348,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "264"
+                                "r" : "261"
                               },
                               "globalScope" : true
                             } ]
@@ -8527,7 +8433,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "265"
+                                                "r" : "262"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -8552,11 +8458,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "266"
+                                                "r" : "263"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "266"
+                                            "r" : "263"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -8568,15 +8474,15 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "266"
+                                        "r" : "263"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "267"
+                                    "r" : "264"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "268"
+                                "r" : "265"
                               },
                               "globalScope" : true
                             } ]
@@ -8627,7 +8533,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "269"
+                                        "r" : "266"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -8652,11 +8558,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "270"
+                                        "r" : "267"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "270"
+                                    "r" : "267"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -8712,7 +8618,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "271"
+                                                "r" : "268"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -8737,11 +8643,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "272"
+                                                "r" : "269"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "272"
+                                            "r" : "269"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -8766,7 +8672,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "273"
+                                            "r" : "270"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -8778,7 +8684,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "274"
+                                        "r" : "271"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -8790,15 +8696,15 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "275"
+                                    "r" : "272"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "276"
+                                "r" : "273"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "276"
+                            "r" : "273"
                           },
                           "globalScope" : true
                         }, {
@@ -8932,7 +8838,7 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "277"
+                                                                "r" : "274"
                                                               },
                                                               "globalScope" : true
                                                             }, {
@@ -8957,11 +8863,11 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "278"
+                                                                "r" : "275"
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "278"
+                                                            "r" : "275"
                                                           },
                                                           "globalScope" : true
                                                         } ]
@@ -8976,7 +8882,7 @@
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "279"
+                                                    "r" : "276"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -9022,7 +8928,7 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "280"
+                                                        "r" : "277"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -9047,11 +8953,11 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "281"
+                                                        "r" : "278"
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "281"
+                                                    "r" : "278"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -9066,7 +8972,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "282"
+                                            "r" : "279"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -9078,7 +8984,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "283"
+                                        "r" : "280"
                                       },
                                       "globalScope" : true
                                     } ]
@@ -9093,15 +8999,15 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "284"
+                                "r" : "281"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "285"
+                            "r" : "282"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "286"
+                        "r" : "283"
                       },
                       "globalScope" : true
                     }, {
@@ -9113,19 +9019,19 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "286"
+                    "r" : "283"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "287"
+                "r" : "284"
               },
               "globalScope" : true
             } ],
-            "r" : "288"
+            "r" : "285"
           }
         } ],
-        "localId" : "288",
-        "locator" : "187:1-200:1",
+        "localId" : "285",
+        "locator" : "183:1-196:1",
         "name" : "Location Code Deux",
         "context" : "Patient",
         "accessLevel" : "Public"

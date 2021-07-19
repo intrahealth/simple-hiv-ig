@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-07-19T13:02:40+00:00",
+  "date": "2021-07-19T23:32:58+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -389,6 +389,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/HIVSimpleLibrary"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           }
         ],
@@ -427,6 +438,17 @@
         ],
         "reference": {
           "reference": "Library/FHIRCommon"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/HIVSimpleMeasures"
         }
       },
       {
@@ -510,17 +532,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/HIVSimple-Measures"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           }
         ],
@@ -570,17 +581,6 @@
         ],
         "reference": {
           "reference": "Measure/HIVSimpleTestResult"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/HIVSimple-Library"
         }
       },
       {

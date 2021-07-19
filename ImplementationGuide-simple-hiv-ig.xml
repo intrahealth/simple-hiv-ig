@@ -12,7 +12,7 @@
   <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-19T13:02:40+00:00"/>
+  <date value="2021-07-19T23:32:58+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -251,6 +251,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HIVSimpleLibrary"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
@@ -279,6 +287,14 @@
       </extension>
       <reference>
         <reference value="Library/FHIRCommon"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/HIVSimpleMeasures"/>
       </reference>
     </resource>
     <resource>
@@ -339,14 +355,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/HIVSimple-Measures"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
@@ -383,14 +391,6 @@
       </extension>
       <reference>
         <reference value="Measure/HIVSimpleTestResult"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/HIVSimple-Library"/>
       </reference>
     </resource>
     <resource>
