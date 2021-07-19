@@ -12,8 +12,9 @@ RuleSet: meas-common
 * experimental = true
 * date = "2021-07-01"
 * publisher = "OpenHIE"
-* library[+] = "Library/KitchenSink"
-// errors from publisher must be canonical
+// must be canonical
+* library = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
+// * library[+] = "Library/KitchenSink"
 // still errors...
 // * library = Canonical(KitchenSink)
 // * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
