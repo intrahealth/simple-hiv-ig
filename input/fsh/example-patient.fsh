@@ -119,61 +119,61 @@ Instance: Example-HIVSimple
 InstanceOf: Bundle
 * type = #transaction
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Patient/Patient-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple"
 * entry[=].request.url = "Patient"
 * entry[=].request.method = #PUT
 * entry[=].resource = Patient-HIVSimple
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Organization-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"
 * entry[=].request.url = "Organization"
 * entry[=].request.method = #PUT
 * entry[=].resource = Organization-HIVSimple
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Location/Location-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
 * entry[=].request.url = "Location"
 * entry[=].request.method = #PUT
 * entry[=].resource = Location-HIVSimple
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Condition/Condition-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple"
 * entry[=].request.url = "Condition"
 * entry[=].request.method = #PUT
 * entry[=].resource = Condition-HIVSimple
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Condition/Condition-Pregnancy"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy"
 * entry[=].request.url = "Condition"
 * entry[=].request.method = #PUT
 * entry[=].resource = Condition-Pregnancy
 
 // encounter for hiv test
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Encounter/Encounter-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple"
 * entry[=].request.url = "Encounter"
 * entry[=].request.method = #PUT
 * entry[=].resource = Encounter-HIVSimple
 
-* entry[+].fullUrl = "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple"
 * entry[=].request.url = "DiagnosticReport"
 * entry[=].request.method = #PUT
 * entry[=].resource = DiagnosticReport-HIVSimple
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Observation-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple"
 * entry[=].request.url = "Observation"
 * entry[=].request.method = #PUT
 * entry[=].resource = Observation-HIVSimple
 
 // encounter for viral load
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Encounter/Encounter-ViralLoad"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad"
 * entry[=].request.url = "Encounter"
 * entry[=].request.method = #PUT
 * entry[=].resource = Encounter-ViralLoad
 
-* entry[+].fullUrl = "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-ViralLoad"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad"
 * entry[=].request.url = "DiagnosticReport"
 * entry[=].request.method = #PUT
 * entry[=].resource = DiagnosticReport-ViralLoad
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Observation-ViralLoad"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad"
 * entry[=].request.url = "Observation"
 * entry[=].request.method = #PUT
 * entry[=].resource = Observation-ViralLoad
