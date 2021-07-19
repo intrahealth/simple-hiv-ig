@@ -1,4 +1,5 @@
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
+Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
 
 // Usage: #example is default so omitted
 // * name is removed for clarity
@@ -18,8 +19,8 @@ RuleSet: meas-common
 // still errors...
 // * library = Canonical(KitchenSink)
 // * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
-
 // * type.coding.code = #process <- this is not used in calculations
+
 
 Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
@@ -28,7 +29,8 @@ InstanceOf: Measure
 * insert meas-common
 
 // options: proportion | ratio | continuous-variable | cohort
-* scoring.coding.code = #proportion
+* scoring = $measure-scoring#proportion
+// * scoring.coding.code = $measure-scoring#proportion
 
 // options: opportunity | all-or-nothing | linear | weighted
 // * compositeScoring.coding.code = linear
@@ -64,7 +66,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleCondition"
 * insert meas-common
 
-* scoring.coding.code = #proportion
+* scoring = $measure-scoring#proportion
 
 // same population group with shared stratifiers
 * group.population[+].description = "Initial Population"
@@ -92,7 +94,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleGender"
 * insert meas-common
 
-* scoring.coding.code = #proportion
+* scoring = $measure-scoring#proportion
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -116,7 +118,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleGenderCohort"
 * insert meas-common
 
-* scoring.coding.code = #cohort
+* scoring = $measure-scoring#cohort
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -130,7 +132,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleGenderSubjectList"
 * insert meas-common
 
-* scoring.coding.code = #cohort
+* scoring = $measure-scoring#cohort
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -144,7 +146,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleGenderSuppData"
 * insert meas-common
 
-* scoring.coding.code = #proportion
+* scoring = $measure-scoring#proportion
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -172,7 +174,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
 * insert meas-common
 
-* scoring.coding.code = #proportion
+* scoring = $measure-scoring#proportion
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
@@ -203,7 +205,7 @@ InstanceOf: Measure
 * identifier.value = "HIVSimpleTestResult"
 * insert meas-common
 
-* scoring.coding.code = #proportion
+* scoring = $measure-scoring#proportion
 
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population

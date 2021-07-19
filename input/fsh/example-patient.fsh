@@ -3,7 +3,7 @@ Alias: SCT = http://snomed.info/sct
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
-                                
+Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 // Usage: #example is default
 // Title: "" is unused
@@ -55,7 +55,7 @@ Instance: Encounter-HIVSimple
 InstanceOf: Encounter
 Usage: #example
 * status = #finished
-* class = #ACUTE
+* class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple)
 * serviceProvider = Reference(Organization-HIVSimple)
 * location[+].location = Reference(Location-HIVSimple)
@@ -84,7 +84,7 @@ Instance: Encounter-ViralLoad
 InstanceOf: Encounter
 Usage: #example
 * status = #finished
-* class = #ACUTE
+* class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple)
 * serviceProvider = Reference(Organization-HIVSimple)
 * location[+].location = Reference(Location-HIVSimple)
