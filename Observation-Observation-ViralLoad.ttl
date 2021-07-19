@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-ViralLoad> a fhir:Observation;
+<https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad> a fhir:Observation;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Observation-ViralLoad"];
   fhir:DomainResource.text [
@@ -24,11 +24,11 @@
      ]
   ];
   fhir:Observation.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Observation.encounter [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
      fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
   ];
   fhir:Observation.valueQuantity [
@@ -40,7 +40,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-ViralLoad.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

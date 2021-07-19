@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad> a fhir:DiagnosticReport;
+<https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad> a fhir:DiagnosticReport;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "DiagnosticReport-ViralLoad"];
   fhir:DomainResource.text [
@@ -24,22 +24,22 @@
      ]
   ];
   fhir:DiagnosticReport.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:DiagnosticReport.encounter [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
      fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
   ];
   fhir:DiagnosticReport.result [
      fhir:index 0;
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-ViralLoad>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
      fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

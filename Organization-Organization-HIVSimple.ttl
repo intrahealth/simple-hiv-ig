@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple> a fhir:Organization;
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple> a fhir:Organization;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Organization-HIVSimple"];
   fhir:DomainResource.text [
@@ -16,7 +16,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

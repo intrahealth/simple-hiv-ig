@@ -76,11 +76,12 @@
         "id": "Condition-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 86406008}\">HIV Positive</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 86406008}\">HIV - Human immunodeficiency virus infection</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>"
         },
         "clinicalStatus": {
           "coding": [
             {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
               "code": "active"
             }
           ]
@@ -88,6 +89,7 @@
         "verificationStatus": {
           "coding": [
             {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
               "code": "confirmed"
             }
           ]
@@ -97,7 +99,7 @@
             {
               "system": "http://snomed.info/sct",
               "code": "86406008",
-              "display": "HIV Positive"
+              "display": "HIV - Human immunodeficiency virus infection"
             }
           ]
         },
@@ -118,18 +120,20 @@
         "id": "Condition-Pregnancy",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 77386006}\">Pregnant (finding)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical inactive}\">Inactive</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 77386006}\">Pregnant (finding)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
         },
         "clinicalStatus": {
           "coding": [
             {
-              "code": "active"
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "inactive"
             }
           ]
         },
         "verificationStatus": {
           "coding": [
             {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
               "code": "confirmed"
             }
           ]
@@ -197,7 +201,7 @@
         "id": "DiagnosticReport-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">HIV types 1 and 2 testing</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-HIVSimple\">See above (Observation/Observation-HIVSimple)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-HIVSimple\">See above (Observation/Observation-HIVSimple)</a></p></div>"
         },
         "status": "final",
         "code": {
@@ -205,7 +209,7 @@
             {
               "system": "http://loinc.org",
               "code": "75622-1",
-              "display": "HIV types 1 and 2 testing"
+              "display": "HIV 1 and 2 tests - Meaningful Use set"
             }
           ]
         },

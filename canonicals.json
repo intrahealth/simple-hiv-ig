@@ -1,81 +1,75 @@
 [
   {
-    "id": "HIVSimpleAgeGroup",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleAgeGroup",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleCondition",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleCondition",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGender",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGender",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGenderCohort",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGenderCohort",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGenderSubjectList",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGenderSubjectList",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGenderSuppData",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGenderSuppData",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleGenderSuppDataIndiv",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleGenderSuppDataIndiv",
-    "version": "0.1.0"
-  },
-  {
-    "id": "HIVSimpleTestResult",
-    "type": "Measure",
-    "url": "Measure/HIVSimpleTestResult",
-    "version": "0.1.0"
-  },
-  {
     "id": "simple-hiv-ig",
     "type": "ImplementationGuide",
-    "url": "https://github.com/intrahealth/simple-hiv-ig",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/",
     "version": "0.1.0",
     "name": "simple-hiv-ig"
   },
   {
     "id": "AgeRanges",
     "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/AgeRanges",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges",
     "version": "0.1.0"
   },
   {
     "id": "FHIRCommon",
     "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/FHIRCommon",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon",
     "version": "0.1.0"
   },
   {
     "id": "KitchenSink",
     "type": "Library",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Library/KitchenSink",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink",
     "version": "0.1.0"
   },
   {
-    "id": "Q",
-    "type": "Questionnaire",
-    "url": "https://github.com/intrahealth/simple-hiv-ig/Questionnaire/Q",
+    "id": "HIVSimpleAgeGroup",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleCondition",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleGender",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleGenderCohort",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleGenderSubjectList",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleGenderSuppData",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleGenderSuppDataIndiv",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv",
+    "version": "0.1.0"
+  },
+  {
+    "id": "HIVSimpleTestResult",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult",
     "version": "0.1.0"
   }
 ]

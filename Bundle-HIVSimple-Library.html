@@ -40,8 +40,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.26"}
-    h3,h4,h5,h6{--heading-prefix:"6.26"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.25"}
+    h3,h4,h5,h6{--heading-prefix:"6.25"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -151,7 +151,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://github.com/intrahealth/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://intrahealth.github.io/simple-hiv-ig//history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
   
 
@@ -206,7 +206,7 @@
 
 
 
-  <div><p>Bundle HIVSimple-Library of type transaction</p><a name="http-//www.example.org/fhir/Library/AgeRanges"> </a><a name="Library_AgeRanges"> </a><hr/><p>Entry 1 - Full URL = http://www.example.org/fhir/Library/AgeRanges</p><p>Request:</p><pre>PUT Library
+  <div><p>Bundle HIVSimple-Library of type transaction</p><a name="https-//intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"> </a><a name="Library_AgeRanges"> </a><hr/><p>Entry 1 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges</p><p>Request:</p><pre>PUT Library
 </pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library AgeRanges version '0.1.0'
 
 using FHIR version '4.0.1'
@@ -309,7 +309,7 @@ define Patient50To65AndMale:
 define Patient65ToHighestAndMale:
   AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
     and Patient.gender = 'male'
-</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/FHIRCommon"> </a><a name="Library_FHIRCommon"> </a><hr/><p>Entry 2 - Full URL = http://www.example.org/fhir/Library/FHIRCommon</p><p>Request:</p><pre>PUT Library
+</code></pre></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"> </a><a name="Library_FHIRCommon"> </a><hr/><p>Entry 2 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon</p><p>Request:</p><pre>PUT Library
 </pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">/*
 @author: Bryn Rhodes
 @description: Common terminologies and functions used in FHIR-based CQL artifacts
@@ -575,7 +575,7 @@ define function BaseModifierExtensions(element BackboneElement, id String):
 is more than one extension on the given resource with the specified url.
 */
 define function BaseModifierExtension(element BackboneElement, id String):
-  singleton from BaseModifierExtensions(element, id)</code></pre></blockquote><a name="http-//www.example.org/fhir/Library/KitchenSink"> </a><a name="Library_KitchenSink"> </a><hr/><p>Entry 3 - Full URL = http://www.example.org/fhir/Library/KitchenSink</p><p>Request:</p><pre>PUT Library
+  singleton from BaseModifierExtensions(element, id)</code></pre></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"> </a><a name="Library_KitchenSink"> </a><hr/><p>Entry 3 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink</p><p>Request:</p><pre>PUT Library
 </pre><p>Resource Library:</p><blockquote><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library KitchenSink version '0.1.0'
 
 using FHIR version '4.0.1'
@@ -590,7 +590,7 @@ codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snome
 codesystem &quot;LOINC&quot;: 'http://loinc.org'
 
 // ConditionOnset: HIV infection, this conflicts with test result, so is be renamed
-code &quot;HIV Condition Positive&quot;: '86406008' from &quot;SNOMED-CT&quot; display 'HIV Positive'
+code &quot;HIV Condition Positive&quot;: '86406008' from &quot;SNOMED-CT&quot; display 'HIV infection'
 code &quot;HIV 1 and 2 tests - Meaningful Use set&quot;: '75622-1' from &quot;LOINC&quot; display 'HIV 1 and 2 tests - Meaningful Use set'
 code &quot;Pregnant (finding)&quot;: '77386006' from &quot;SNOMED-CT&quot; display 'Pregnant (finding)'
 code &quot;HIV 1 RNA NAA+probe (Specimen)&quot;: '25836-8' from &quot;LOINC&quot; display 'HIV 1 RNA NAA+probe (Specimen)'
@@ -612,6 +612,8 @@ define &quot;Male&quot;:
 define &quot;Age Group/Sex&quot;:
   AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot;
 
+define &quot;Age Group&quot;:
+  AR.&quot;Age Group&quot;
 
 define &quot;Initial Population&quot;:
   true
@@ -671,14 +673,14 @@ define &quot;HIV Negative Observation&quot;:
 // always null
 define &quot;HIV Test Results&quot;:
   case
-    when &quot;Is HIV Positive&quot; then &quot;HIV Positive&quot;
-    when &quot;Is HIV Negative&quot; then &quot;HIV Negative&quot;
+    when &quot;Is HIV Positive&quot; then &quot;HIV Positive Observation&quot;
+    when &quot;Is HIV Negative&quot; then &quot;HIV Negative Observation&quot;
     else null
   end
 
 // always null
-define &quot;Age Group/Sex/HIV Test Results&quot;:
-  AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot; + ':' + &quot;HIV Test Results&quot;.code
+/* define &quot;Age Group/Sex/HIV Test Results&quot;:
+  AR.&quot;Age Group&quot;.code + ':' + &quot;Sex&quot; + ':' + &quot;HIV Test Results&quot;.code */
 
 
 // synthea uses copies/mL but fsh uses {copies}/mL which is official
@@ -813,13 +815,13 @@ define &quot;HIVTestProposed&quot;: ServiceRequest {
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 14, 2021 04:00+0000">2021-07-14</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple-hiv-ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 19, 2021 04:26+0000">2021-07-19</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a> |
                  
-                 <a style="color: #81BEF7" target="_blank" href="https://github.com/intrahealth/simple-hiv-ig/history.html">Version History</a> |
+                 <a style="color: #81BEF7" target="_blank" href="https://intrahealth.github.io/simple-hiv-ig//history.html">Version History</a> |
                  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
                  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
 

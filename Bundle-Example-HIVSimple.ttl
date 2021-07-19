@@ -7,7 +7,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Bundle/Example-HIVSimple> a fhir:Bundle;
+<https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-HIVSimple> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Example-HIVSimple"];
   fhir:Bundle.type [ fhir:value "transaction"];
@@ -139,7 +139,7 @@
      fhir:Identifier.value [ fhir:value "Location-HIVSimple" ]
   ];
   fhir:Location.managingOrganization [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
   ] .
 
@@ -147,17 +147,19 @@
   fhir:Resource.id [ fhir:value "Condition-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 86406008}\">HIV Positive</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 86406008}\">HIV - Human immunodeficiency virus infection</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>"
   ];
   fhir:Condition.clinicalStatus [
      fhir:CodeableConcept.coding [
        fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
        fhir:Coding.code [ fhir:value "active" ]
      ]
   ];
   fhir:Condition.verificationStatus [
      fhir:CodeableConcept.coding [
        fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
        fhir:Coding.code [ fhir:value "confirmed" ]
      ]
   ];
@@ -167,11 +169,11 @@
        a sct:86406008;
        fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
        fhir:Coding.code [ fhir:value "86406008" ];
-       fhir:Coding.display [ fhir:value "HIV Positive" ]
+       fhir:Coding.display [ fhir:value "HIV - Human immunodeficiency virus infection" ]
      ]
   ];
   fhir:Condition.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Condition.onsetDateTime [ fhir:value "2010-01-01"^^xsd:date] .
@@ -180,17 +182,19 @@
   fhir:Resource.id [ fhir:value "Condition-Pregnancy"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 77386006}\">Pregnant (finding)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical inactive}\">Inactive</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 77386006}\">Pregnant (finding)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
   ];
   fhir:Condition.clinicalStatus [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       fhir:Coding.code [ fhir:value "active" ]
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "inactive" ]
      ]
   ];
   fhir:Condition.verificationStatus [
      fhir:CodeableConcept.coding [
        fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
        fhir:Coding.code [ fhir:value "confirmed" ]
      ]
   ];
@@ -204,7 +208,7 @@
      ]
   ];
   fhir:Condition.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Condition.onsetDateTime [ fhir:value "2020-01-01"^^xsd:date];
@@ -221,7 +225,7 @@
      fhir:Coding.code [ fhir:value "ACUTE" ]
   ];
   fhir:Encounter.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Encounter.period [
@@ -231,12 +235,12 @@
   fhir:Encounter.location [
      fhir:index 0;
      fhir:Encounter.location.location [
-       fhir:link <https://github.com/intrahealth/simple-hiv-ig/Location/Location-HIVSimple>;
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
        fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
      ]
   ];
   fhir:Encounter.serviceProvider [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
   ] .
 
@@ -244,7 +248,7 @@
   fhir:Resource.id [ fhir:value "DiagnosticReport-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">HIV types 1 and 2 testing</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-HIVSimple\">See above (Observation/Observation-HIVSimple)</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-HIVSimple\">See above (Observation/Observation-HIVSimple)</a></p></div>"
   ];
   fhir:DiagnosticReport.status [ fhir:value "final"];
   fhir:DiagnosticReport.code [
@@ -253,20 +257,20 @@
        a loinc:75622-1;
        fhir:Coding.system [ fhir:value "http://loinc.org" ];
        fhir:Coding.code [ fhir:value "75622-1" ];
-       fhir:Coding.display [ fhir:value "HIV types 1 and 2 testing" ]
+       fhir:Coding.display [ fhir:value "HIV 1 and 2 tests - Meaningful Use set" ]
      ]
   ];
   fhir:DiagnosticReport.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:DiagnosticReport.encounter [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple" ]
   ];
   fhir:DiagnosticReport.result [
      fhir:index 0;
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple" ]
   ] .
 
@@ -287,11 +291,11 @@
      ]
   ];
   fhir:Observation.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Observation.encounter [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple" ]
   ];
   fhir:Observation.valueCodeableConcept [
@@ -315,7 +319,7 @@
      fhir:Coding.code [ fhir:value "ACUTE" ]
   ];
   fhir:Encounter.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Encounter.period [
@@ -325,12 +329,12 @@
   fhir:Encounter.location [
      fhir:index 0;
      fhir:Encounter.location.location [
-       fhir:link <https://github.com/intrahealth/simple-hiv-ig/Location/Location-HIVSimple>;
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
        fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
      ]
   ];
   fhir:Encounter.serviceProvider [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
   ] .
 
@@ -351,16 +355,16 @@
      ]
   ];
   fhir:DiagnosticReport.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:DiagnosticReport.encounter [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
      fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
   ];
   fhir:DiagnosticReport.result [
      fhir:index 0;
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Observation/Observation-ViralLoad>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
      fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad" ]
   ] .
 
@@ -381,11 +385,11 @@
      ]
   ];
   fhir:Observation.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Observation.encounter [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
      fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
   ];
   fhir:Observation.valueQuantity [
@@ -397,7 +401,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Bundle/Example-HIVSimple.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-HIVSimple.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

@@ -12,7 +12,7 @@ codesystem "SNOMED-CT": 'http://snomed.info/sct' version 'http://snomed.info/sct
 codesystem "LOINC": 'http://loinc.org'
 
 // ConditionOnset: HIV infection, this conflicts with test result, so is be renamed
-code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV Positive'
+code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV infection'
 code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
 code "Pregnant (finding)": '77386006' from "SNOMED-CT" display 'Pregnant (finding)'
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA NAA+probe (Specimen)'
@@ -34,6 +34,8 @@ define "Male":
 define "Age Group/Sex":
   AR."Age Group".code + ':' + "Sex"
 
+define "Age Group":
+  AR."Age Group"
 
 define "Initial Population":
   true
@@ -93,14 +95,14 @@ define "HIV Negative Observation":
 // always null
 define "HIV Test Results":
   case
-    when "Is HIV Positive" then "HIV Positive"
-    when "Is HIV Negative" then "HIV Negative"
+    when "Is HIV Positive" then "HIV Positive Observation"
+    when "Is HIV Negative" then "HIV Negative Observation"
     else null
   end
 
 // always null
-define "Age Group/Sex/HIV Test Results":
-  AR."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code
+/* define "Age Group/Sex/HIV Test Results":
+  AR."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code */
 
 
 // synthea uses copies/mL but fsh uses {copies}/mL which is official

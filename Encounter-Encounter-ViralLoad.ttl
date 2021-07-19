@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad> a fhir:Encounter;
+<https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad> a fhir:Encounter;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Encounter-ViralLoad"];
   fhir:DomainResource.text [
@@ -17,7 +17,7 @@
      fhir:Coding.code [ fhir:value "ACUTE" ]
   ];
   fhir:Encounter.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Encounter.period [
@@ -27,18 +27,18 @@
   fhir:Encounter.location [
      fhir:index 0;
      fhir:Encounter.location.location [
-       fhir:link <https://github.com/intrahealth/simple-hiv-ig/Location/Location-HIVSimple>;
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
        fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
      ]
   ];
   fhir:Encounter.serviceProvider [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Encounter/Encounter-ViralLoad.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

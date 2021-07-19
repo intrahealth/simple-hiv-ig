@@ -5,17 +5,17 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderCohort> a fhir:Measure;
+<https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort> a fhir:Measure;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "HIVSimpleGenderCohort"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>Measure/HIVSimpleGenderCohort</code></p><p><b>identifier</b>: id: HIVSimpleGenderCohort</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <code>Library/KitchenSink</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort</code></p><p><b>identifier</b>: id: HIVSimpleGenderCohort</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <code>Library/KitchenSink</code></p><p><b>scoring</b>: <span title=\"Codes: \">cohort</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
   ];
-  fhir:Measure.url [ fhir:value "Measure/HIVSimpleGenderCohort"];
+  fhir:Measure.url [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"];
   fhir:Measure.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://ohie.org/Measure/" ];
+     fhir:Identifier.system [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Measure/" ];
      fhir:Identifier.value [ fhir:value "HIVSimpleGenderCohort" ]
   ];
   fhir:Measure.version [ fhir:value "0.1.0"];
@@ -34,7 +34,7 @@
   fhir:Measure.library [
      fhir:value "Library/KitchenSink";
      fhir:index 0;
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Library/KitchenSink>
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink>
   ];
   fhir:Measure.scoring [
      fhir:CodeableConcept.coding [
@@ -63,7 +63,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Measure/HIVSimpleGenderCohort.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

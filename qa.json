@@ -1,11 +1,11 @@
 {
-  "url": "https://github.com/intrahealth/simple-hiv-ig",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/",
   "name": "simple-hiv-ig",
   "package-id": "simple-hiv-ig",
   "ig-ver": "0.1.0",
-  "date": "Wed, 14 Jul, 2021 04:00:58 +0000",
-  "errs": 85,
-  "warnings": 101,
+  "date": "Mon, 19 Jul, 2021 04:26:11 +0000",
+  "errs": 70,
+  "warnings": 87,
   "hints": 16,
   "version": "4.0.1",
   "tool": "4.6.0 (3)"

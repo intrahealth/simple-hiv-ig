@@ -6,22 +6,24 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Condition/Condition-Pregnancy> a fhir:Condition;
+<https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy> a fhir:Condition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Condition-Pregnancy"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: \">active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: \">confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 77386006}\">Pregnant (finding)</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical inactive}\">Inactive</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 77386006}\">Pregnant (finding)</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
   ];
   fhir:Condition.clinicalStatus [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       fhir:Coding.code [ fhir:value "active" ]
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "inactive" ]
      ]
   ];
   fhir:Condition.verificationStatus [
      fhir:CodeableConcept.coding [
        fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
        fhir:Coding.code [ fhir:value "confirmed" ]
      ]
   ];
@@ -35,7 +37,7 @@
      ]
   ];
   fhir:Condition.subject [
-     fhir:link <https://github.com/intrahealth/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
   ];
   fhir:Condition.onsetDateTime [ fhir:value "2020-01-01"^^xsd:date];
@@ -43,7 +45,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://github.com/intrahealth/simple-hiv-ig/Condition/Condition-Pregnancy.ttl> a owl:Ontology;
+<https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

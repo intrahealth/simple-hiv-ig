@@ -3,15 +3,15 @@
   "id": "simple-hiv-ig",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>simple-hiv-ig</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/intrahealth/simple-hiv-ig</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>simple-hiv-ig</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>\n</div></div>"
   },
-  "url": "https://github.com/intrahealth/simple-hiv-ig",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/",
   "version": "0.1.0",
   "name": "simple-hiv-ig",
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-07-14T04:00:58+00:00",
+  "date": "2021-07-19T04:26:11+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -389,28 +389,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Questionnaire"
-          }
-        ],
-        "reference": {
-          "reference": "Questionnaire/Q"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/HIVSimples"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           }
         ],
@@ -526,6 +504,17 @@
         ],
         "reference": {
           "reference": "Patient/Patient-HIVSimple"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/HIVSimple-Measures"
         }
       },
       {
