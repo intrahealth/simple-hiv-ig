@@ -1,8 +1,13 @@
 #minimun config for fsh only
+id: intrahealth.simple.hiv.ig
 name: simple-hiv-ig
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 # no tailing slash
 canonical: https://intrahealth.github.io/simple-hiv-ig
-FSHOnly: true
+# FSHOnly: true
+copyrightYear: 2021
+releaseLabel: ci
+parameters:
+  path-binary: input/cql

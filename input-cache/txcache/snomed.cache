@@ -1,24 +1,13 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
-  "code" : "165816005",
-  "display" : "HIV Positive"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "HTLV-3 antibody positive",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
   "code" : "86406008",
-  "display" : "HIV Positive"
+  "display" : "HIV - Human immunodeficiency virus infection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Human immunodeficiency virus infection",
-  "severity" : "warning",
-  "error" : "The display \"HIV Positive\" is not a valid display for the code {http://snomed.info/sct}86406008 - should be one of [Human immunodeficiency virus infection, HIV infection, Human immunodeficiency virus infection (disorder), HIV - Human immunodeficiency virus infection] (from http://tx.fhir.org/r4)"
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -34,8 +23,19 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
+  "code" : "165816005",
+  "display" : "HIV Positive"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "HTLV-3 antibody positive",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
   "code" : "86406008",
-  "display" : "HIV - Human immunodeficiency virus infection"
+  "display" : "HIV infection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Human immunodeficiency virus infection",

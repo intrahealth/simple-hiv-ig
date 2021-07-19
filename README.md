@@ -49,7 +49,7 @@ cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/KitchenSink
 cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/AgeRanges/Patient-HIVSimple/
 ```
 
-Run Publisher. Resources are put in /output. This necessary because sushi will not add the CQL/ELM to the Library resources.
+Run Publisher. Resources are put in /output. This is necessary because sushi will not add the CQL/ELM to the Library resources. A future version of sushi will support inserting the CQL/ELM.
 ```sh
 # only need first time
 bash _updatePublisher.sh
@@ -69,29 +69,32 @@ curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIRHelpers
 ```
 
 ```sh
-cd output
 # library resources
-for FILE in KitchenSink FHIRCommon AgeRanges \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done
+cd output ; for FILE in FHIRCommon AgeRanges KitchenSink \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
 ```
 
 PUT the Measure resources
 ```sh
-for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleDemog \
-HIVSimpleGender HIVSimpleGenderCohort HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv \
-HIVSimpleGenderSubjectList HIVSimpleTestResult HIVSimpleViralLoad \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done
+cd output ; for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
+HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv HIVSimpleGenderSubjectList HIVSimpleTestResult \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ..
 ```
+
+
+**POST** the patient bundle
+```sh
+cat output/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+```
+
 
 Run a provided example in the browser
 ```
-http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleGender-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleDemog-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleTestResult-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleCondition-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleViralLoad-Measure/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleTestResult/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleCondition/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
 
 ## Authoring

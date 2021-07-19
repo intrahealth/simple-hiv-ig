@@ -1,3 +1,5 @@
+Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
+
 // Usage: #example is the default, so omitted
 // * title is unnecessary
 // * name is unnecessary
@@ -8,8 +10,9 @@
 RuleSet: lib-common
 * status = #draft
 * experimental = true
-* type = #logic-library
+* type = $library-type#logic-library
 * identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Library"
+
 
 Instance: AgeRanges
 InstanceOf: Library
@@ -36,7 +39,7 @@ RuleSet: lib-bundle
 * entry[=].request.url = "Library"
 * entry[=].request.method = #PUT
 
-Instance: HIVSimple-Library
+Instance: HIVSimpleLibrary
 InstanceOf: Bundle
 * type = #transaction
 

@@ -20,9 +20,6 @@ code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA
 context Patient
 
 define "Sex":
-  Patient.gender
-
-define "Sex Value":
   Patient.gender.value
 
 define "Female":
@@ -127,12 +124,11 @@ define "Contact date":
   [Encounter] E
     return E.period.start
 
-
 // make a gender code for supp data
 define "SDE Sex":
   case
-    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Male' }
-    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/v3/AdministrativeGender', display: 'Female' }
+    when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/administrative-gender', display: 'Male' }
+    when Patient.gender = 'female' then Code { code: 'F', system: 'http://hl7.org/fhir/administrative-gender', display: 'Female' }
     else null
   end
 

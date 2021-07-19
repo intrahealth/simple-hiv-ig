@@ -4,7 +4,7 @@
   "type": "transaction",
   "entry": [
     {
-      "fullUrl": "http://www.example.org/fhir/Patient/Patient-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple",
       "request": {
         "url": "Patient",
         "method": "PUT"
@@ -26,7 +26,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Organization/Organization-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple",
       "request": {
         "url": "Organization",
         "method": "PUT"
@@ -38,7 +38,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Location/Location-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple",
       "request": {
         "url": "Location",
         "method": "PUT"
@@ -58,7 +58,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Condition/Condition-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple",
       "request": {
         "url": "Condition",
         "method": "PUT"
@@ -69,14 +69,16 @@
         "clinicalStatus": {
           "coding": [
             {
-              "code": "active"
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
             }
           ]
         },
         "verificationStatus": {
           "coding": [
             {
-              "code": "confirmed"
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
             }
           ]
         },
@@ -88,7 +90,7 @@
             {
               "code": "86406008",
               "system": "http://snomed.info/sct",
-              "display": "HIV Positive"
+              "display": "HIV - Human immunodeficiency virus infection"
             }
           ]
         },
@@ -96,7 +98,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Condition/Condition-Pregnancy",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy",
       "request": {
         "url": "Condition",
         "method": "PUT"
@@ -107,14 +109,16 @@
         "clinicalStatus": {
           "coding": [
             {
-              "code": "active"
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
             }
           ]
         },
         "verificationStatus": {
           "coding": [
             {
-              "code": "confirmed"
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
             }
           ]
         },
@@ -135,7 +139,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Encounter/Encounter-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple",
       "request": {
         "url": "Encounter",
         "method": "PUT"
@@ -145,7 +149,8 @@
         "id": "Encounter-HIVSimple",
         "status": "finished",
         "class": {
-          "code": "ACUTE"
+          "code": "ACUTE",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
         },
         "subject": {
           "reference": "Patient/Patient-HIVSimple"
@@ -167,7 +172,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple",
       "request": {
         "url": "DiagnosticReport",
         "method": "PUT"
@@ -192,14 +197,14 @@
             {
               "code": "75622-1",
               "system": "http://loinc.org",
-              "display": "HIV types 1 and 2 testing"
+              "display": "HIV 1 and 2 tests - Meaningful Use set"
             }
           ]
         }
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Observation/Observation-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple",
       "request": {
         "url": "Observation",
         "method": "PUT"
@@ -235,7 +240,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Encounter/Encounter-ViralLoad",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad",
       "request": {
         "url": "Encounter",
         "method": "PUT"
@@ -245,7 +250,8 @@
         "id": "Encounter-ViralLoad",
         "status": "finished",
         "class": {
-          "code": "ACUTE"
+          "code": "ACUTE",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
         },
         "subject": {
           "reference": "Patient/Patient-HIVSimple"
@@ -267,7 +273,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-ViralLoad",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad",
       "request": {
         "url": "DiagnosticReport",
         "method": "PUT"
@@ -299,7 +305,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Observation/Observation-ViralLoad",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad",
       "request": {
         "url": "Observation",
         "method": "PUT"

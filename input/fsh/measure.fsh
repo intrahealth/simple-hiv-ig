@@ -1,3 +1,5 @@
+Alias: $base = https://intrahealth.github.io/simple-hiv-ig
+Alias: $ohie = http://ohie.org/CodeSystem
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
 
@@ -14,10 +16,11 @@ RuleSet: meas-common
 * date = "2021-07-01"
 * publisher = "OpenHIE"
 // must be canonical
-* library = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
+// but this can't be found when measures are run
+* library[+] = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
 // * library[+] = "Library/KitchenSink"
 // still errors...
-// * library = Canonical(KitchenSink)
+// * library = Canonical(Library/KitchenSink)
 // * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
 // * type.coding.code = #process <- this is not used in calculations
 
@@ -30,29 +33,31 @@ InstanceOf: Measure
 
 // options: proportion | ratio | continuous-variable | cohort
 * scoring = $measure-scoring#proportion
-// * scoring.coding.code = $measure-scoring#proportion
 
 // options: opportunity | all-or-nothing | linear | weighted
 // * compositeScoring.coding.code = linear
 
 // separate population groups with separate stratifiers per group
-
-* group[+].population[+].description = "Initial Population"
 // options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation
+
+* group[+].code = $ohie#cohort "cohort"
+* group[=].population[+].description = "Initial Population"
 * group[=].population[=].code = $measure-population#initial-population
 * group[=].population[=].criteria.language = #text/cql
 * group[=].population[=].criteria.expression = "Initial Population"
 * group[=].stratifier[+].criteria.language = #text/cql
 * group[=].stratifier[=].criteria.expression = "Age Group"
 
-* group[+].population[+].description = "Denominator"
+* group[+].code = $ohie#cohort "cohort"
+* group[=].population[+].description = "Denominator"
 * group[=].population[=].code = $measure-population#denominator
 * group[=].population[=].criteria.language = #text/cql
 * group[=].population[=].criteria.expression = "Denominator"
 * group[=].stratifier[+].criteria.language = #text/cql
 * group[=].stratifier[=].criteria.expression = "Age Group"
 
-* group[+].population[+].description = "Numerator"
+* group[+].code = $ohie#cohort "cohort"
+* group[=].population[+].description = "Numerator"
 * group[=].population[=].code = $measure-population#numerator
 * group[=].population[=].criteria.language = #text/cql
 * group[=].population[=].criteria.expression = "Numerator"
@@ -69,6 +74,7 @@ InstanceOf: Measure
 * scoring = $measure-scoring#proportion
 
 // same population group with shared stratifiers
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -96,6 +102,7 @@ InstanceOf: Measure
 
 * scoring = $measure-scoring#proportion
 
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -120,6 +127,7 @@ InstanceOf: Measure
 
 * scoring = $measure-scoring#cohort
 
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -134,6 +142,7 @@ InstanceOf: Measure
 
 * scoring = $measure-scoring#cohort
 
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -148,6 +157,7 @@ InstanceOf: Measure
 
 * scoring = $measure-scoring#proportion
 
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -176,6 +186,7 @@ InstanceOf: Measure
 
 * scoring = $measure-scoring#proportion
 
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -207,6 +218,7 @@ InstanceOf: Measure
 
 * scoring = $measure-scoring#proportion
 
+* group.code = $ohie#cohort "cohort"
 * group.population[+].description = "Initial Population"
 * group.population[=].code = $measure-population#initial-population
 * group.population[=].criteria.language = #text/cql
@@ -227,7 +239,7 @@ RuleSet: meas-bundle
 * entry[=].request.url = "Measure"
 * entry[=].request.method = #PUT
 
-Instance: HIVSimple-Measures
+Instance: HIVSimpleMeasures
 InstanceOf: Bundle
 * type = #transaction
 
