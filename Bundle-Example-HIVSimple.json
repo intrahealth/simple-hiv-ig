@@ -4,7 +4,7 @@
   "type": "transaction",
   "entry": [
     {
-      "fullUrl": "http://www.example.org/fhir/Patient/Patient-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple",
       "resource": {
         "resourceType": "Patient",
         "id": "Patient-HIVSimple",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Organization/Organization-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple",
       "resource": {
         "resourceType": "Organization",
         "id": "Organization-HIVSimple",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Location/Location-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple",
       "resource": {
         "resourceType": "Location",
         "id": "Location-HIVSimple",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Condition/Condition-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple",
       "resource": {
         "resourceType": "Condition",
         "id": "Condition-HIVSimple",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Condition/Condition-Pregnancy",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy",
       "resource": {
         "resourceType": "Condition",
         "id": "Condition-Pregnancy",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Encounter/Encounter-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple",
       "resource": {
         "resourceType": "Encounter",
         "id": "Encounter-HIVSimple",
@@ -196,7 +196,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple",
       "resource": {
         "resourceType": "DiagnosticReport",
         "id": "DiagnosticReport-HIVSimple",
@@ -232,7 +232,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Observation/Observation-HIVSimple",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple",
       "resource": {
         "resourceType": "Observation",
         "id": "Observation-HIVSimple",
@@ -272,7 +272,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Encounter/Encounter-ViralLoad",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad",
       "resource": {
         "resourceType": "Encounter",
         "id": "Encounter-ViralLoad",
@@ -309,7 +309,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/DiagnosticReport/DiagnosticReport-ViralLoad",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad",
       "resource": {
         "resourceType": "DiagnosticReport",
         "id": "DiagnosticReport-ViralLoad",
@@ -345,7 +345,7 @@
       }
     },
     {
-      "fullUrl": "http://www.example.org/fhir/Observation/Observation-ViralLoad",
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad",
       "resource": {
         "resourceType": "Observation",
         "id": "Observation-ViralLoad",
