@@ -6,18 +6,23 @@ Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-popul
 // * description is removed for clarity
 
 RuleSet: meas-common
-* identifier.system = "http://ohie.org/Measure/"
+* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
 * version = "0.0.0"
 * status = #draft
 * experimental = true
 * date = "2021-07-01"
 * publisher = "OpenHIE"
-* library = "Library/KitchenSink"
+* library[+] = "Library/KitchenSink"
+// errors from publisher must be canonical
+// still errors...
+// * library = Canonical(KitchenSink)
+// * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
+
 // * type.coding.code = #process <- this is not used in calculations
 
 Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
-* url = "Measure/HIVSimpleAgeGroup"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
 * identifier.value = "HIVSimpleAgeGroup"
 * insert meas-common
 
@@ -54,7 +59,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleCondition
 InstanceOf: Measure
-* url = "Measure/HIVSimpleCondition"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition"
 * identifier.value = "HIVSimpleCondition"
 * insert meas-common
 
@@ -82,7 +87,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGender
 InstanceOf: Measure
-* url = "Measure/HIVSimpleGender"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender"
 * identifier.value = "HIVSimpleGender"
 * insert meas-common
 
@@ -106,7 +111,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderCohort
 InstanceOf: Measure
-* url = "Measure/HIVSimpleGenderCohort"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"
 * identifier.value = "HIVSimpleGenderCohort"
 * insert meas-common
 
@@ -120,7 +125,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderSubjectList
 InstanceOf: Measure
-* url = "Measure/HIVSimpleGenderSubjectList"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList"
 * identifier.value = "HIVSimpleGenderSubjectList"
 * insert meas-common
 
@@ -134,7 +139,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderSuppData
 InstanceOf: Measure
-* url = "Measure/HIVSimpleGenderSuppData"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData"
 * identifier.value = "HIVSimpleGenderSuppData"
 * insert meas-common
 
@@ -162,7 +167,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderSuppDataIndiv
 InstanceOf: Measure
-* url = "Measure/HIVSimpleGenderSuppDataIndiv"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv"
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
 * insert meas-common
 
@@ -193,7 +198,7 @@ InstanceOf: Measure
 
 Instance: HIVSimpleTestResult
 InstanceOf: Measure
-* url = "Measure/HIVSimpleTestResult"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult"
 * identifier.value = "HIVSimpleTestResult"
 * insert meas-common
 
@@ -219,7 +224,7 @@ RuleSet: meas-bundle
 * entry[=].request.url = "Measure"
 * entry[=].request.method = #PUT
 
-Instance: HIVSimples
+Instance: HIVSimple-Measures
 InstanceOf: Bundle
 * type = #transaction
 

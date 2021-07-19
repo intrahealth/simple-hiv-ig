@@ -1,5 +1,9 @@
 Alias: LNC = http://loinc.org
 Alias: SCT = http://snomed.info/sct
+Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
+                                
 
 // Usage: #example is default
 // Title: "" is unused
@@ -29,16 +33,17 @@ InstanceOf: Location
 
 Instance: Condition-HIVSimple
 InstanceOf: Condition
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple)
-* code = SCT#86406008 "HIV Positive"
+// todo: review this for consistency
+* code = SCT#86406008 "HIV - Human immunodeficiency virus infection"
 * onsetDateTime = "2010-01-01"
 
 Instance: Condition-Pregnancy
 InstanceOf: Condition
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#inactive
+* verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple)
 * code = SCT#77386006 "Pregnant (finding)"
 * onsetDateTime = "2020-01-01"
@@ -63,7 +68,7 @@ InstanceOf: DiagnosticReport
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
 * result = Reference(Observation-HIVSimple)
-* code = LNC#75622-1 "HIV types 1 and 2 testing"
+* code = LNC#75622-1 "HIV 1 and 2 tests - Meaningful Use set"
 
 Instance: Observation-HIVSimple
 InstanceOf: Observation

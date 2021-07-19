@@ -32,3 +32,14 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "86406008",
+  "display" : "HIV - Human immunodeficiency virus infection"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Human immunodeficiency virus infection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

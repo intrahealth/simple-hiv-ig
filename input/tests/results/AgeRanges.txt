@@ -1,0 +1,19 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/AgeRanges
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Patient0To5AndFemale=false
+Patient5To15AndFemale=false
+Patient15To25AndFemale=false
+Patient25To50AndFemale=true
+Patient50To65AndFemale=false
+Patient65ToHighestAndFemale=false
+Patient0To5AndMale=false
+Patient5To15AndMale=false
+Patient15To25AndMale=false
+Patient25To50AndMale=false
+Patient50To65AndMale=false
+Patient65ToHighestAndMale=false
+
+elapsed: 5.971 seconds

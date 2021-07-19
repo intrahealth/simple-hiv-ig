@@ -9,20 +9,24 @@ RuleSet: lib-common
 * status = #draft
 * experimental = true
 * type = #logic-library
+* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Library"
 
 Instance: AgeRanges
 InstanceOf: Library
 * insert lib-common
+* identifier.value = "AgeRanges"
 * content.id = "ig-loader-AgeRanges.cql"
 
 Instance: FHIRCommon
 InstanceOf: Library
 * insert lib-common
+* identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
 
 Instance: KitchenSink
 InstanceOf: Library
 * insert lib-common
+* identifier.value = "KitchenSink"
 * content.id = "ig-loader-KitchenSink.cql"
 
 // bundle
@@ -36,14 +40,14 @@ Instance: HIVSimple-Library
 InstanceOf: Bundle
 * type = #transaction
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Library/AgeRanges"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"
 * entry[=].resource = AgeRanges
 * insert lib-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Library/FHIRCommon"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"
 * entry[=].resource = FHIRCommon
 * insert lib-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Library/KitchenSink"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
 * entry[=].resource = KitchenSink
 * insert lib-bundle

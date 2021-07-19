@@ -49,13 +49,15 @@ cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/KitchenSink
 cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/AgeRanges/Patient-HIVSimple/
 ```
 
-Run Publisher and create resources. Resources are put in /output
+Run Publisher. Resources are put in /output. This necessary because sushi will not add the CQL/ELM to the Library resources.
 ```sh
 # only need first time
 bash _updatePublisher.sh
 # run every time
 bash _genonce.sh
 ```
+
+Open the file `output/qa.html` to see errors or go to the qa page where it is published.
 
 PUT the Library resources. We use PUT to ensure that the id is always the same and when changes are made they overwrite the resource with those updates.
 

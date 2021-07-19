@@ -3,5 +3,5 @@ name: simple-hiv-ig
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
-canonical: http://hl7.org/fhir/us/example
+canonical: https://intrahealth.github.io/simple-hiv-ig/
 FSHOnly: true
