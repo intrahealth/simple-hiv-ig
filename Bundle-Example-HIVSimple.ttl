@@ -218,10 +218,11 @@
   fhir:Resource.id [ fhir:value "Encounter-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{null ACUTE}\">ACUTE</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple\">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}\">inpatient acute</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple\">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
   ];
   fhir:Encounter.status [ fhir:value "finished"];
   fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
      fhir:Coding.code [ fhir:value "ACUTE" ]
   ];
   fhir:Encounter.subject [
@@ -312,10 +313,11 @@
   fhir:Resource.id [ fhir:value "Encounter-ViralLoad"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{null ACUTE}\">ACUTE</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple\">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}\">inpatient acute</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple\">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
   ];
   fhir:Encounter.status [ fhir:value "finished"];
   fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
      fhir:Coding.code [ fhir:value "ACUTE" ]
   ];
   fhir:Encounter.subject [
