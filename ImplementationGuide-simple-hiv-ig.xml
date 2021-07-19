@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="simple-hiv-ig"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>simple-hiv-ig</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>simple-hiv-ig</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>
 </div></div>
   </text>
-  <url value="https://intrahealth.github.io/simple-hiv-ig/"/>
+  <url value="https://intrahealth.github.io/simple-hiv-ig"/>
   <version value="0.1.0"/>
   <name value="simple-hiv-ig"/>
   <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-19T04:26:11+00:00"/>
+  <date value="2021-07-19T12:31:57+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>

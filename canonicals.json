@@ -2,7 +2,7 @@
   {
     "id": "simple-hiv-ig",
     "type": "ImplementationGuide",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/",
+    "url": "https://intrahealth.github.io/simple-hiv-ig",
     "version": "0.1.0",
     "name": "simple-hiv-ig"
   },

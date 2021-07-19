@@ -4,7 +4,7 @@
     "identifier" : {
       "type" : "VersionedIdentifier",
       "id" : "KitchenSink",
-      "system" : "https://intrahealth.github.io/simple-hiv-ig/",
+      "system" : "https://intrahealth.github.io/simple-hiv-ig",
       "version" : "0.1.0"
     },
     "schemaIdentifier" : {
@@ -86,7 +86,7 @@
         "localId" : "2",
         "locator" : "5:1-5:35",
         "localIdentifier" : "FHIRHelpers",
-        "path" : "https://intrahealth.github.io/simple-hiv-ig//FHIRHelpers",
+        "path" : "https://intrahealth.github.io/simple-hiv-ig/FHIRHelpers",
         "version" : "4.0.1"
       }, {
         "type" : "IncludeDef",
@@ -131,7 +131,7 @@
         "localId" : "3",
         "locator" : "6:1-6:44",
         "localIdentifier" : "FC",
-        "path" : "https://intrahealth.github.io/simple-hiv-ig//FHIRCommon",
+        "path" : "https://intrahealth.github.io/simple-hiv-ig/FHIRCommon",
         "version" : "4.0.1"
       }, {
         "type" : "IncludeDef",
@@ -176,7 +176,7 @@
         "localId" : "4",
         "locator" : "7:1-7:43",
         "localIdentifier" : "AR",
-        "path" : "https://intrahealth.github.io/simple-hiv-ig//AgeRanges",
+        "path" : "https://intrahealth.github.io/simple-hiv-ig/AgeRanges",
         "version" : "0.1.0"
       } ]
     },

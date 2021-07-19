@@ -4,7 +4,7 @@
     "identifier" : {
       "type" : "VersionedIdentifier",
       "id" : "AgeRanges",
-      "system" : "https://intrahealth.github.io/simple-hiv-ig/",
+      "system" : "https://intrahealth.github.io/simple-hiv-ig",
       "version" : "0.1.0"
     },
     "schemaIdentifier" : {

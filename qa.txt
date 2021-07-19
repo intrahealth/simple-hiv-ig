@@ -1,37 +1,37 @@
 ﻿simple-hiv-ig : Validation Results
 =========================================
 
-err = 70, warn = 87, info = 16
+err = 34, warn = 87, info = 0
 IG Publisher Version: 1.1.76
-Generated Mon Jul 19 04:26:23 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig/)
+Generated Mon Jul 19 12:32:12 UTC 2021. FHIR version 4.0.1 for simple-hiv-ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
 
  Build Errors : 25 / 26 / 0
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple : 0 / 5 / 12
  /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Library : 0 / 6 / 4
- /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures : 12 / 19 / 17
+ /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures : 0 / 19 / 9
  /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-Pregnancy : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-ViralLoad : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-HIVSimple : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-ViralLoad : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/Library-AgeRanges : 3 / 2 / 1
- /github/workspace/fsh-generated/resources/Library-FHIRCommon : 3 / 2 / 1
- /github/workspace/fsh-generated/resources/Library-KitchenSink : 4 / 2 / 1
+ /github/workspace/fsh-generated/resources/Library-AgeRanges : 2 / 2 / 1
+ /github/workspace/fsh-generated/resources/Library-FHIRCommon : 2 / 2 / 1
+ /github/workspace/fsh-generated/resources/Library-KitchenSink : 3 / 2 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup : 5 / 5 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition : 3 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender : 2 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort : 2 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList : 2 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData : 2 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv : 2 / 2 / 2
- /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult : 2 / 2 / 2
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup : 0 / 5 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult : 0 / 2 / 1
  /github/workspace/fsh-generated/resources/Observation-Observation-HIVSimple : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Observation-ViralLoad : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple : 0 / 0 / 1
- /github/workspace/input/intrahealth.simple-hiv-ig : 3 / 1 / 1
+ /github/workspace/input/intrahealth.simple-hiv-ig : 2 / 1 / 1
 </table>
 == n/a ==
 WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
@@ -100,44 +100,24 @@ WARNING: Bundle/HIVSimple-Library: Bundle.entry[2].resource.ofType(Library): lib
 WARNING: Bundle/HIVSimple-Library: Bundle.entry[2].resource.ofType(Library).type.coding[0]: A code with no system has no defined meaning. A system should be provided
 == /github/workspace/fsh-generated/resources/Bundle-HIVSimple-Measures.json ==
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[0]: Groups should have codes when there is more than one group 
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[1]: Groups should have codes when there is more than one group 
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[1].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[2]: Groups should have codes when there is more than one group 
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[0].resource.ofType(Measure).group[2].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[1].resource.ofType(Measure).group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[2].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[3].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[4].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[5].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[6].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure): mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure).library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure).scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Bundle/HIVSimple-Measures: Bundle.entry[7].resource.ofType(Measure): The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 == /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple.json ==
 == /github/workspace/fsh-generated/resources/Condition-Condition-Pregnancy.json ==
 == /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple.json ==
@@ -152,76 +132,45 @@ WARNING: Library/AgeRanges: Library: lib-0: 'Name should be usable as an identif
 WARNING: Library/AgeRanges: Library.type.coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Library/AgeRanges: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/AgeRanges: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
-ERROR: /github/workspace/fsh-generated/resources/Library-AgeRanges: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Library/AgeRanges vs https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges
 == /github/workspace/fsh-generated/resources/Library-FHIRCommon.json ==
 WARNING: Library/FHIRCommon: Library: lib-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 WARNING: Library/FHIRCommon: Library.type.coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Library/FHIRCommon: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/FHIRCommon: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
-ERROR: /github/workspace/fsh-generated/resources/Library-FHIRCommon: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Library/FHIRCommon vs https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon
 == /github/workspace/fsh-generated/resources/Library-KitchenSink.json ==
 ERROR: KitchenSink.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
 WARNING: Library/KitchenSink: Library: lib-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 WARNING: Library/KitchenSink: Library.type.coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Library/KitchenSink: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/KitchenSink: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
-ERROR: /github/workspace/fsh-generated/resources/Library-KitchenSink: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Library/KitchenSink vs https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink
 == /github/workspace/fsh-generated/resources/Location-Location-HIVSimple.json ==
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup.json ==
 WARNING: Measure/HIVSimpleAgeGroup: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleAgeGroup: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleAgeGroup: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleAgeGroup: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
 WARNING: Measure/HIVSimpleAgeGroup: Measure.group[0]: Groups should have codes when there is more than one group 
-ERROR: Measure/HIVSimpleAgeGroup: Measure.group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Measure/HIVSimpleAgeGroup: Measure.group[1]: Groups should have codes when there is more than one group 
-ERROR: Measure/HIVSimpleAgeGroup: Measure.group[1].stratifier[0].criteria: No CQL Libraries found on this Measure
 WARNING: Measure/HIVSimpleAgeGroup: Measure.group[2]: Groups should have codes when there is more than one group 
-ERROR: Measure/HIVSimpleAgeGroup: Measure.group[2].stratifier[0].criteria: No CQL Libraries found on this Measure
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleAgeGroup vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition.json ==
 WARNING: Measure/HIVSimpleCondition: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleCondition: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleCondition: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleCondition: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: Measure/HIVSimpleCondition: Measure.group[0].stratifier[0].criteria: No CQL Libraries found on this Measure
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleCondition vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender.json ==
 WARNING: Measure/HIVSimpleGender: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleGender: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleGender: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleGender: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleGender vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort.json ==
 WARNING: Measure/HIVSimpleGenderCohort: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleGenderCohort: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleGenderCohort: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleGenderCohort: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderCohort: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleGenderCohort vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList.json ==
 WARNING: Measure/HIVSimpleGenderSubjectList: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleGenderSubjectList: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleGenderSubjectList: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleGenderSubjectList: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSubjectList: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleGenderSubjectList vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData.json ==
 WARNING: Measure/HIVSimpleGenderSuppData: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleGenderSuppData: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleGenderSuppData: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleGenderSuppData: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppData: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleGenderSuppData vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv.json ==
 WARNING: Measure/HIVSimpleGenderSuppDataIndiv: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleGenderSuppDataIndiv: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleGenderSuppDataIndiv: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleGenderSuppDataIndiv: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleGenderSuppDataIndiv: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleGenderSuppDataIndiv vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult.json ==
 WARNING: Measure/HIVSimpleTestResult: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIVSimpleTestResult: Measure.library[0]: Canonical URLs must be absolute URLs if they are not fragment references (Library/KitchenSink) 
 WARNING: Measure/HIVSimpleTestResult: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Measure/HIVSimpleTestResult: Measure: The Library Library/KitchenSink could not be resolved, so expression validation may not be correct 
-ERROR: /github/workspace/fsh-generated/resources/Measure-HIVSimpleTestResult: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//Measure/HIVSimpleTestResult vs https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult
 == /github/workspace/fsh-generated/resources/Observation-Observation-HIVSimple.json ==
 WARNING: Observation/Observation-HIVSimple: Observation.code.coding[0]: The display "LOINC Code" is not a valid display for the code {http://loinc.org}75622-1 - should be one of [HIV 1 and 2 tests - Meaningful Use set, HIV 1 and 2 - MU Set, Ⅰ Ⅱ AIDS, AIDS 病毒, 人类免疫缺陷病毒, 人类免疫缺陷病毒（Human immunodeficiency virus，HIV）, 爱滋病, 艾滋病, 艾滋病病毒, 获得性免疫缺陷综合征, 获得性免疫缺陷综合征（Acquired Immure Deficiency Syndrome，AIDS，艾滋病） HIV 1 与 2 型（人类免疫缺陷病毒 1 与 2 型、人类免疫缺陷病毒 I 与 II 型、人免疫缺陷病毒 1 与 2 型、人免疫缺陷病毒 I 与 II 型、HIV I 与 II、HIV I 与 II 型、艾滋病病毒 I 与 II 型）试验（检验项目、化验项目、测试、化验、检测） - 有效利用（Meaningful Use、MU、有效实用）集（集合）, HIV 1 型与 2 型试验 - 有效利用集 HIV1, HTLV 3, HTLV III, 人类免疫缺陷病毒 1 型, 人类免疫缺陷病毒 I 型, HIV 1 型（人类免疫缺陷病毒 1 型、人类免疫缺陷病毒 I 型、人免疫缺陷病毒 1 型、人免疫缺陷病毒 I 型、HIV I、HIV I 型、艾滋病病毒 I 型） I II 人类免疫缺陷病毒 1 与 2 型, HIV（人类免疫缺陷病毒、人免疫缺陷病毒、艾滋病病毒） 1 型（I 型） 与 2 型（II 型） 人类免疫缺陷病毒 1+2 型, HIV 1+2 型（人类免疫缺陷病毒 1+2 型、人类免疫缺陷病毒 I+II 型、人免疫缺陷病毒 1+2 型、人免疫缺陷病毒 I+II 型、HIV I+II、HIV I+II 型、艾滋病病毒 I+II 型） 医嘱套餐 医嘱套餐类 医嘱套餐组 医嘱组 医嘱组.微生物学, 实验室组套（组合、医嘱组、套餐、套餐医嘱、医嘱套餐、组合申请、组合项目）类.微生物学试验, 医嘱组.微生物学试验, 医嘱组类.微生物学, 医嘱组类.微生物学试验, 实验室医嘱组类.微生物学, 微生物学医嘱组, 微生物学医嘱组类 医嘱组合 医嘱组合类 医嘱组套 医嘱组套类 医嘱组类 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 多重, 多重型, 多重标尺类型, 多重精度类型 套餐 套餐医嘱 套餐医嘱组 套餐医嘱组类 实验室医嘱套餐 实验室医嘱套餐类 实验室医嘱组 实验室医嘱组合类 实验室医嘱组套 实验室医嘱组套类 实验室套餐医嘱组 实验室套餐医嘱组类 实验室检验项目医嘱组合类 实验室检验项目组合类 微生物学, 微生物学试验, 微生物学试验（培养、DNA、抗原及抗体） 时刻, 随机, 随意, 瞬间 检验医嘱组合类 检验项目医嘱组合类 检验项目组合类 组 组合 组合医嘱 组合类 组套, Aleatorio HTLV 3 HTLV III instante momento SIDA VIH tipo 1 Virus de Inmunodeficiencia Humana Virus de inmunodeficiencia humana 1-2, Microbiologia paziente Punto nel tempo (episodio) Set di prescrizione microbiologia Test HIV 1 e 2 - Meaningful Use set, ] (from http://tx.fhir.org/r4) for 'http://loinc.org#75622-1'
 == /github/workspace/fsh-generated/resources/Observation-Observation-ViralLoad.json ==
@@ -229,7 +178,6 @@ WARNING: Observation/Observation-ViralLoad: Observation.code.coding[0]: The disp
 == /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple.json ==
 == /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple.json ==
 == /github/workspace/input/intrahealth.simple-hiv-ig.xml ==
-ERROR: ImplementationGuide.where(url = 'https://intrahealth.github.io/simple-hiv-ig/'): Conformance resource /github/workspace/input/intrahealth.simple-hiv-ig.xml - the canonical URL (https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple-hiv-ig) does not match the URL (https://intrahealth.github.io/simple-hiv-ig/)
-ERROR: ImplementationGuide.url: Resource id/url mismatch: simple-hiv-ig/https://intrahealth.github.io/simple-hiv-ig/
+ERROR: ImplementationGuide.where(url = 'https://intrahealth.github.io/simple-hiv-ig'): Conformance resource /github/workspace/input/intrahealth.simple-hiv-ig.xml - the canonical URL (https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple-hiv-ig) does not match the URL (https://intrahealth.github.io/simple-hiv-ig)
 WARNING: ImplementationGuide/simple-hiv-ig: ImplementationGuide: ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: /github/workspace/input/intrahealth.simple-hiv-ig: URL Mismatch https://intrahealth.github.io/simple-hiv-ig//ImplementationGuide/simple-hiv-ig vs https://intrahealth.github.io/simple-hiv-ig/
+ERROR: /github/workspace/input/intrahealth.simple-hiv-ig: URL Mismatch https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple-hiv-ig vs https://intrahealth.github.io/simple-hiv-ig

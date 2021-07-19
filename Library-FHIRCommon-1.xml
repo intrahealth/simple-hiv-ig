@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
    <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
-   <identifier id="FHIRCommon" system="https://intrahealth.github.io/simple-hiv-ig/" version="4.0.1"/>
+   <identifier id="FHIRCommon" system="https://intrahealth.github.io/simple-hiv-ig" version="4.0.1"/>
    <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
    <usings>
       <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
@@ -14,7 +14,7 @@
       </def>
    </usings>
    <includes>
-      <def localId="2" locator="9:1-9:35" localIdentifier="FHIRHelpers" path="https://intrahealth.github.io/simple-hiv-ig//FHIRHelpers" version="4.0.1">
+      <def localId="2" locator="9:1-9:35" localIdentifier="FHIRHelpers" path="https://intrahealth.github.io/simple-hiv-ig/FHIRHelpers" version="4.0.1">
          <annotation xsi:type="a:Annotation">
             <a:s r="2">
                <a:s>include </a:s>

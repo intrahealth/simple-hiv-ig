@@ -4,7 +4,7 @@
     "identifier" : {
       "type" : "VersionedIdentifier",
       "id" : "FHIRCommon",
-      "system" : "https://intrahealth.github.io/simple-hiv-ig/",
+      "system" : "https://intrahealth.github.io/simple-hiv-ig",
       "version" : "4.0.1"
     },
     "schemaIdentifier" : {
@@ -86,7 +86,7 @@
         "localId" : "2",
         "locator" : "9:1-9:35",
         "localIdentifier" : "FHIRHelpers",
-        "path" : "https://intrahealth.github.io/simple-hiv-ig//FHIRHelpers",
+        "path" : "https://intrahealth.github.io/simple-hiv-ig/FHIRHelpers",
         "version" : "4.0.1"
       } ]
     },
