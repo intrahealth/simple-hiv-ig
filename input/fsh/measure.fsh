@@ -252,7 +252,6 @@ Description: "HIVSimpleTestResult"
 
 
 RuleSet: meas-bundle
-* entry[=].request.url = "Measure"
 * entry[=].request.method = #PUT
 
 Instance: HIVSimpleMeasures
@@ -263,32 +262,40 @@ Description: "HIVSimpleMeasures"
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup"
 * entry[=].resource = HIVSimpleAgeGroup
+* entry[=].request.url = "Measure/HIVSimpleAgeGroup"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleCondition"
 * entry[=].resource = HIVSimpleCondition
+* entry[=].request.url = "Measure/HIVSimpleCondition"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender"
 * entry[=].resource = HIVSimpleGender
+* entry[=].request.url = "Measure/HIVSimpleGender"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderCohort"
 * entry[=].resource = HIVSimpleGenderCohort
+* entry[=].request.url = "Measure/HIVSimpleGenderCohort"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSubjectList"
 * entry[=].resource = HIVSimpleGenderSubjectList
+* entry[=].request.url = "Measure/HIVSimpleGenderSubjectList"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppData"
 * entry[=].resource = HIVSimpleGenderSuppData
+* entry[=].request.url = "Measure/HIVSimpleGenderSuppData"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppDataIndiv"
 * entry[=].resource = HIVSimpleGenderSuppDataIndiv
+* entry[=].request.url = "Measure/HIVSimpleGenderSuppDataIndiv"
 * insert meas-bundle
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleTestResult"
 * entry[=].resource = HIVSimpleTestResult
+* entry[=].request.url = "Measure/HIVSimpleTestResult"
 * insert meas-bundle

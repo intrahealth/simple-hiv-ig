@@ -42,7 +42,6 @@ Description: "KitchenSink"
 // weird, only the cql is included, not the elm
 
 RuleSet: lib-bundle
-* entry[=].request.url = "Library"
 * entry[=].request.method = #PUT
 
 Instance: HIVSimpleLibrary
@@ -53,12 +52,15 @@ Description: "HIVSimpleLibrary"
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"
 * entry[=].resource = AgeRanges
+* entry[=].request.url = "Library/AgeRanges"
 * insert lib-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"
 * entry[=].resource = FHIRCommon
+* entry[=].request.url = "Library/FHIRCommon"
 * insert lib-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
 * entry[=].resource = KitchenSink
+* entry[=].request.url = "Library/KitchenSink"
 * insert lib-bundle
