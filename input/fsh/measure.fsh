@@ -27,6 +27,8 @@ RuleSet: meas-common
 
 Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
+Title: "HIVSimpleAgeGroup"
+Description: "HIVSimpleAgeGroup"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
 * identifier.value = "HIVSimpleAgeGroup"
 * insert meas-common
@@ -67,6 +69,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleCondition
 InstanceOf: Measure
+Title: "HIVSimpleCondition"
+Description: "HIVSimpleCondition"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition"
 * identifier.value = "HIVSimpleCondition"
 * insert meas-common
@@ -96,6 +100,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGender
 InstanceOf: Measure
+Title: "HIVSimpleGender"
+Description: "HIVSimpleGender"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender"
 * identifier.value = "HIVSimpleGender"
 * insert meas-common
@@ -121,6 +127,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderCohort
 InstanceOf: Measure
+Title: "HIVSimpleGenderCohort"
+Description: "HIVSimpleGenderCohort"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"
 * identifier.value = "HIVSimpleGenderCohort"
 * insert meas-common
@@ -136,6 +144,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderSubjectList
 InstanceOf: Measure
+Title: "HIVSimpleGenderSubjectList"
+Description: "HIVSimpleGenderSubjectList"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList"
 * identifier.value = "HIVSimpleGenderSubjectList"
 * insert meas-common
@@ -151,6 +161,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderSuppData
 InstanceOf: Measure
+Title: "HIVSimpleGenderSuppData"
+Description: "HIVSimpleGenderSuppData"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData"
 * identifier.value = "HIVSimpleGenderSuppData"
 * insert meas-common
@@ -180,6 +192,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleGenderSuppDataIndiv
 InstanceOf: Measure
+Title: "HIVSimpleGenderSuppDataIndiv"
+Description: "HIVSimpleGenderSuppDataIndiv"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv"
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
 * insert meas-common
@@ -212,6 +226,8 @@ InstanceOf: Measure
 
 Instance: HIVSimpleTestResult
 InstanceOf: Measure
+Title: "HIVSimpleTestResult"
+Description: "HIVSimpleTestResult"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult"
 * identifier.value = "HIVSimpleTestResult"
 * insert meas-common
@@ -241,6 +257,8 @@ RuleSet: meas-bundle
 
 Instance: HIVSimpleMeasures
 InstanceOf: Bundle
+Title: "HIVSimpleMeasures"
+Description: "HIVSimpleMeasures"
 * type = #transaction
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup"

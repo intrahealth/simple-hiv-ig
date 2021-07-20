@@ -7,7 +7,56 @@ fhirVersion: 4.0.1
 # no tailing slash
 canonical: https://intrahealth.github.io/simple-hiv-ig
 # FSHOnly: true
-copyrightYear: 2021
-releaseLabel: ci
-parameters:
+copyrightYear: 2021+
+releaseLabel: ci-build
+
+publisher:
+  name: Digital Health Team
+  url: https://www.intrahealth.org
+  email: digitalhealth@intrahealth.org
+
+contact:
+  - name: Digital Health Team
+    telecom:
+      - system: email
+        value: digitalhealth@intrahealth.org
+        use: work
+
+# dependencies:
+#   hl7.fhir.us.core: 3.1.0
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-binary: input/cql
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+    - input/examples
+  path-pages:
+    - input/pagecontent
+    - fsh-generated/includes
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'true'
+  autoload-resources: 'true'
+  shownav: 'true'
+  # validation: [allow-any-extensions, no-broken-links]
+  validation: [allow-any-extensions]
+  broken-links: "warning"
+
+pages:
+  index.md:
+    title: "Test page"
+  overview.md:
+    title: "Overview"
+  testplan.md:
+    title: "Test Plan"
+
+menu:
+  MHD Home: index.html
+  Introduction: index.html
+  Overview: overview.html
+  Test Plan: testplan.html
+  Artifact Index: artifacts.html

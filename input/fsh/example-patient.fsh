@@ -13,6 +13,8 @@ Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 Instance:     Patient-HIVSimple
 InstanceOf:   Patient
+Title: "Patient-HIVSimple"
+Description: "Patient-HIVSimple"
 * name[+].given = "Mittens"
 * name[=].family = "Cat"
 * name[=].text = "Mittens Cat"
@@ -21,10 +23,14 @@ InstanceOf:   Patient
 
 Instance: Organization-HIVSimple
 InstanceOf: Organization
+Title: "Organization-HIVSimple"
+Description: "Organization-HIVSimple"
 * name = "Government Hospital"
 
 Instance: Location-HIVSimple
 InstanceOf: Location
+Title: "Location-HIVSimple"
+Description: "Location-HIVSimple"
 * managingOrganization = Reference(Organization-HIVSimple)
 * identifier.system = "https://github.com/synthetichealth/synthea"
 * identifier.value = "Location-HIVSimple"
@@ -33,6 +39,8 @@ InstanceOf: Location
 
 Instance: Condition-HIVSimple
 InstanceOf: Condition
+Title: "Condition-HIVSimple"
+Description: "Condition-HIVSimple"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple)
@@ -42,6 +50,8 @@ InstanceOf: Condition
 
 Instance: Condition-Pregnancy
 InstanceOf: Condition
+Title: "Condition-Pregnancy"
+Description: "Condition-Pregnancy"
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple)
@@ -53,6 +63,8 @@ InstanceOf: Condition
 
 Instance: Encounter-HIVSimple
 InstanceOf: Encounter
+Title: "Encounter-HIVSimple"
+Description: "Encounter-HIVSimple"
 Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
@@ -64,6 +76,8 @@ Usage: #example
 
 Instance: DiagnosticReport-HIVSimple
 InstanceOf: DiagnosticReport
+Title: "DiagnosticReport-HIVSimple"
+Description: "DiagnosticReport-HIVSimple"
 * status = #final
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
@@ -72,6 +86,8 @@ InstanceOf: DiagnosticReport
 
 Instance: Observation-HIVSimple
 InstanceOf: Observation
+Title: "Observation-HIVSimple"
+Description: "Observation-HIVSimple"
 * status = #final
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
@@ -82,6 +98,8 @@ InstanceOf: Observation
 
 Instance: Encounter-ViralLoad
 InstanceOf: Encounter
+Title: "Encounter-ViralLoad"
+Description: "Encounter-ViralLoad"
 Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
@@ -93,6 +111,8 @@ Usage: #example
 
 Instance: DiagnosticReport-ViralLoad
 InstanceOf: DiagnosticReport
+Title: "DiagnosticReport-ViralLoad"
+Description: "DiagnosticReport-ViralLoad"
 * status = #final
 * subject = Reference(Patient-HIVSimple)
 //
@@ -102,6 +122,8 @@ InstanceOf: DiagnosticReport
 
 Instance: Observation-ViralLoad
 InstanceOf: Observation
+Title: "Observation-ViralLoad"
+Description: "Observation-ViralLoad"
 * status = #final
 * subject = Reference(Patient-HIVSimple)
 // 
@@ -117,6 +139,8 @@ InstanceOf: Observation
 
 Instance: Example-HIVSimple
 InstanceOf: Bundle
+Title: "Example-HIVSimple"
+Description: "Example-HIVSimple"
 * type = #transaction
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple"

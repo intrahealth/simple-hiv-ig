@@ -16,18 +16,24 @@ RuleSet: lib-common
 
 Instance: AgeRanges
 InstanceOf: Library
+Title: "AgeRanges"
+Description: "AgeRanges"
 * insert lib-common
 * identifier.value = "AgeRanges"
 * content.id = "ig-loader-AgeRanges.cql"
 
 Instance: FHIRCommon
 InstanceOf: Library
+Title: "FHIRCommon"
+Description: "FHIRCommon"
 * insert lib-common
 * identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
 
 Instance: KitchenSink
 InstanceOf: Library
+Title: "KitchenSink"
+Description: "KitchenSink"
 * insert lib-common
 * identifier.value = "KitchenSink"
 * content.id = "ig-loader-KitchenSink.cql"
@@ -41,6 +47,8 @@ RuleSet: lib-bundle
 
 Instance: HIVSimpleLibrary
 InstanceOf: Bundle
+Title: "HIVSimpleLibrary"
+Description: "HIVSimpleLibrary"
 * type = #transaction
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"
