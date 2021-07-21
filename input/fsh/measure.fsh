@@ -17,7 +17,7 @@ RuleSet: meas-common
 * publisher = "OpenHIE"
 // must be canonical
 // but this can't be found when measures are run
-* library[+] = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
+* library[+] = "https://intrahealth.github.io/simple-hiv-ig/Library-KitchenSink"
 // * library[+] = "Library/KitchenSink"
 // still errors...
 // * library = Canonical(Library/KitchenSink)

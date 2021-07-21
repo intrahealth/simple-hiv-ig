@@ -30,6 +30,14 @@ Description: "FHIRCommon"
 * identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
 
+Instance: FHIRHelpers
+InstanceOf: Library
+Title: "FHIRHelpers"
+Description: "FHIRHelpers"
+* insert lib-common
+* identifier.value = "FHIRHelpers"
+* content.id = "ig-loader-FHIRHelpers-4.0.1.cql"
+
 Instance: KitchenSink
 InstanceOf: Library
 Title: "KitchenSink"
@@ -58,6 +66,11 @@ Description: "HIVSimpleLibrary"
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"
 * entry[=].resource = FHIRCommon
 * entry[=].request.url = "Library/FHIRCommon"
+* insert lib-bundle
+
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers"
+* entry[=].resource = FHIRHelpers
+* entry[=].request.url = "Library/FHIRHelpers"
 * insert lib-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"

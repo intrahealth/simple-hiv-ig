@@ -2,7 +2,7 @@
 {"code" : {
   "system" : "http://snomed.info/sct",
   "code" : "86406008",
-  "display" : "HIV - Human immunodeficiency virus infection"
+  "display" : "HIV infection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Human immunodeficiency virus infection",
@@ -23,22 +23,22 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
-  "code" : "165816005",
-  "display" : "HIV Positive"
+  "code" : "86406008",
+  "display" : "HIV - Human immunodeficiency virus infection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "HTLV-3 antibody positive",
+  "display" : "Human immunodeficiency virus infection",
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
-  "code" : "86406008",
-  "display" : "HIV infection"
+  "code" : "165816005",
+  "display" : "HIV Positive"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Human immunodeficiency virus infection",
+  "display" : "HTLV-3 antibody positive",
   "severity" : null,
   "error" : ""
 }
