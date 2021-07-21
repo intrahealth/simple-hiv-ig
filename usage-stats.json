@@ -1,5 +1,5 @@
 {
-  "package": "simple-hiv-ig",
+  "package": "simple.hiv.ig",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [],

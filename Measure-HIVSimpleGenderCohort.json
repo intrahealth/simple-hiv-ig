@@ -3,7 +3,7 @@
   "id": "HIVSimpleGenderCohort",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort</code></p><p><b>identifier</b>: id: HIVSimpleGenderCohort</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>library</b>: <a href=\"https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink\">https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink</a></p><p><b>scoring</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-scoring cohort}\">Cohort</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://ohie.org/CodeSystem cohort}\">cohort</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort</code></p><p><b>identifier</b>: id: HIVSimpleGenderCohort</p><p><b>version</b>: 0.1.0</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: Digital Health Team</p><p><b>contact</b>: Digital Health Team: <a href=\"https://www.intrahealth.org\">https://www.intrahealth.org</a>,<a href=\"mailto:digitalhealth@intrahealth.org\">digitalhealth@intrahealth.org</a>, Digital Health Team: <a href=\"mailto:digitalhealth@intrahealth.org\">digitalhealth@intrahealth.org</a></p><p><b>library</b>: <a href=\"https://intrahealth.github.io/simple-hiv-ig/Library-KitchenSink\">https://intrahealth.github.io/simple-hiv-ig/Library-KitchenSink</a></p><p><b>scoring</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-scoring cohort}\">Cohort</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://ohie.org/CodeSystem cohort}\">cohort</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote></blockquote></div>"
   },
   "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort",
   "identifier": [
@@ -16,19 +16,34 @@
   "status": "draft",
   "experimental": true,
   "date": "2021-07-01",
-  "publisher": "IntraHealth International",
+  "publisher": "Digital Health Team",
   "contact": [
     {
+      "name": "Digital Health Team",
       "telecom": [
         {
           "system": "url",
-          "value": "http://hl7.org/Special/committees/[something]"
+          "value": "https://www.intrahealth.org"
+        },
+        {
+          "system": "email",
+          "value": "digitalhealth@intrahealth.org"
+        }
+      ]
+    },
+    {
+      "name": "Digital Health Team",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "digitalhealth@intrahealth.org",
+          "use": "work"
         }
       ]
     }
   ],
   "library": [
-    "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
+    "https://intrahealth.github.io/simple-hiv-ig/Library-KitchenSink"
   ],
   "scoring": {
     "coding": [

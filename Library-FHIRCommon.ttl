@@ -28,14 +28,28 @@
        fhir:Coding.code [ fhir:value "logic-library" ]
      ]
   ];
-  fhir:Library.date [ fhir:value "2021-07-19T23:32:58+00:00"^^xsd:dateTime];
-  fhir:Library.publisher [ fhir:value "IntraHealth International"];
+  fhir:Library.date [ fhir:value "2021-07-21T21:12:36+00:00"^^xsd:dateTime];
+  fhir:Library.publisher [ fhir:value "Digital Health Team"];
   fhir:Library.contact [
      fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
+       fhir:ContactPoint.value [ fhir:value "https://www.intrahealth.org" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
      ]
   ];
   fhir:Library.relatedArtifact [

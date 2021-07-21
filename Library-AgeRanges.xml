@@ -121,12 +121,25 @@ define Patient65ToHighestAndMale:
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2021-07-19T23:32:58+00:00"/>
-  <publisher value="IntraHealth International"/>
+  <date value="2021-07-21T21:12:36+00:00"/>
+  <publisher value="Digital Health Team"/>
   <contact>
+    <name value="Digital Health Team"/>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/[something]"/>
+      <value value="https://www.intrahealth.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@intrahealth.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Digital Health Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@intrahealth.org"/>
+      <use value="work"/>
     </telecom>
   </contact>
   <relatedArtifact>
