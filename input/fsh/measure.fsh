@@ -15,10 +15,12 @@ RuleSet: meas-common
 * experimental = true
 * date = "2021-07-01"
 * publisher = "OpenHIE"
-// must be canonical
-// but this can't be found when measures are run
-* library[+] = "https://intrahealth.github.io/simple-hiv-ig/Library-KitchenSink"
-// * library[+] = "Library/KitchenSink"
+// works to elimate errors, but eval-measure can't be found when measures are run
+// * library[+] = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
+
+// this is expected to work
+* library[+] = Canonical(KitchenSink)
+
 // still errors...
 // * library = Canonical(Library/KitchenSink)
 // * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
@@ -251,51 +253,51 @@ Description: "HIVSimpleTestResult"
 * group.population[=].criteria.expression = "Numerator"
 
 
-RuleSet: meas-bundle
-* entry[=].request.method = #PUT
+// RuleSet: meas-bundle
+// * entry[=].request.method = #PUT
 
-Instance: HIVSimpleMeasures
-InstanceOf: Bundle
-Title: "HIVSimpleMeasures"
-Description: "HIVSimpleMeasures"
-* type = #transaction
+// Instance: HIVSimpleMeasures
+// InstanceOf: Bundle
+// Title: "HIVSimpleMeasures"
+// Description: "HIVSimpleMeasures"
+// * type = #transaction
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleAgeGroup"
-* entry[=].resource = HIVSimpleAgeGroup
-* entry[=].request.url = "Measure/HIVSimpleAgeGroup"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
+// * entry[=].resource = HIVSimpleAgeGroup
+// * entry[=].request.url = "Measure/HIVSimpleAgeGroup"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleCondition"
-* entry[=].resource = HIVSimpleCondition
-* entry[=].request.url = "Measure/HIVSimpleCondition"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition"
+// * entry[=].resource = HIVSimpleCondition
+// * entry[=].request.url = "Measure/HIVSimpleCondition"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGender"
-* entry[=].resource = HIVSimpleGender
-* entry[=].request.url = "Measure/HIVSimpleGender"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender"
+// * entry[=].resource = HIVSimpleGender
+// * entry[=].request.url = "Measure/HIVSimpleGender"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderCohort"
-* entry[=].resource = HIVSimpleGenderCohort
-* entry[=].request.url = "Measure/HIVSimpleGenderCohort"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"
+// * entry[=].resource = HIVSimpleGenderCohort
+// * entry[=].request.url = "Measure/HIVSimpleGenderCohort"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSubjectList"
-* entry[=].resource = HIVSimpleGenderSubjectList
-* entry[=].request.url = "Measure/HIVSimpleGenderSubjectList"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList"
+// * entry[=].resource = HIVSimpleGenderSubjectList
+// * entry[=].request.url = "Measure/HIVSimpleGenderSubjectList"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppData"
-* entry[=].resource = HIVSimpleGenderSuppData
-* entry[=].request.url = "Measure/HIVSimpleGenderSuppData"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData"
+// * entry[=].resource = HIVSimpleGenderSuppData
+// * entry[=].request.url = "Measure/HIVSimpleGenderSuppData"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleGenderSuppDataIndiv"
-* entry[=].resource = HIVSimpleGenderSuppDataIndiv
-* entry[=].request.url = "Measure/HIVSimpleGenderSuppDataIndiv"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv"
+// * entry[=].resource = HIVSimpleGenderSuppDataIndiv
+// * entry[=].request.url = "Measure/HIVSimpleGenderSuppDataIndiv"
+// * insert meas-bundle
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Measure/HIVSimpleTestResult"
-* entry[=].resource = HIVSimpleTestResult
-* entry[=].request.url = "Measure/HIVSimpleTestResult"
-* insert meas-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult"
+// * entry[=].resource = HIVSimpleTestResult
+// * entry[=].request.url = "Measure/HIVSimpleTestResult"
+// * insert meas-bundle

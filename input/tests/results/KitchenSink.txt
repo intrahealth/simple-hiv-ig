@@ -229,3 +229,41 @@ Location Code=CodeableConcept
 Location Code Deux=CodeableConcept
 
 elapsed: 21.134 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+HIV Test Exists=true
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+HIV Test Results=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+SDE Location=Code { code: null, system: https://github.com/synthetichealth/synthea, version: null, display: null }
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+
+elapsed: 6.326 seconds

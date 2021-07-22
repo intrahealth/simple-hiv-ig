@@ -12,17 +12,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "75622-1",
-  "display" : "HIV 1 and 2 tests - Meaningful Use set"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "HIV 1 and 2 tests - Meaningful Use set",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "75622-1"
 }, "valueSet" :{
   "resourceType" : "ValueSet",

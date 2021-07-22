@@ -78,7 +78,8 @@ define "Viral Load Test Result":
       and Obs.value is not null
 
 
-define "HIV Test Exists":
+// check these
+/* define "HIV Test Exists":
   exists ([Observation: "HIV 1 and 2 tests - Meaningful Use set"])
 
 define "HIV Positive Observation":
@@ -89,13 +90,12 @@ define "HIV Negative Observation":
   [Observation: "HIV 1 and 2 tests - Meaningful Use set"] Observation
     where Observation.value = "Is HIV Negative"
 
-// always null
 define "HIV Test Results":
   case
     when "Is HIV Positive" then "HIV Positive Observation"
     when "Is HIV Negative" then "HIV Negative Observation"
     else null
-  end
+  end */
 
 // always null
 /* define "Age Group/Sex/HIV Test Results":
