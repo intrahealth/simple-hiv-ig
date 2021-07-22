@@ -10,7 +10,7 @@
   "name": "simplehivig",
   "title": "HIV Simple IG",
   "status": "draft",
-  "date": "2021-07-21T21:12:36+00:00",
+  "date": "2021-07-22T01:12:25+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {
@@ -620,34 +620,6 @@
         },
         "name": "HIVSimpleGenderSuppDataIndiv",
         "description": "HIVSimpleGenderSuppDataIndiv",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/HIVSimpleLibrary"
-        },
-        "name": "HIVSimpleLibrary",
-        "description": "HIVSimpleLibrary",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/HIVSimpleMeasures"
-        },
-        "name": "HIVSimpleMeasures",
-        "description": "HIVSimpleMeasures",
         "exampleBoolean": true
       },
       {

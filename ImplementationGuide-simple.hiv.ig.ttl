@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "simplehivig"];
   fhir:ImplementationGuide.title [ fhir:value "HIV Simple IG"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-07-21T21:12:36+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-07-22T01:12:25+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Digital Health Team"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -604,34 +604,6 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Bundle" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/HIVSimpleLibrary>;
-         fhir:Reference.reference [ fhir:value "Bundle/HIVSimpleLibrary" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleLibrary" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleLibrary" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 18;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Bundle" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/HIVSimpleMeasures>;
-         fhir:Reference.reference [ fhir:value "Bundle/HIVSimpleMeasures" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleMeasures" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleMeasures" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 19;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "Measure" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -642,7 +614,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleTestResult" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -656,7 +628,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "KitchenSink" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -670,7 +642,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Location-HIVSimple" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 22;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -684,7 +656,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation-HIVSimple" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 23;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -698,7 +670,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation-ViralLoad" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 24;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -712,7 +684,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Organization-HIVSimple" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 25;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
