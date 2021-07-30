@@ -1,19 +1,5 @@
 [
   {
-    "id": "FHIR-ModelInfo",
-    "type": "Library",
-    "url": "http://fhir.org/guides/cqf/ccc/Library/FHIR-ModelInfo",
-    "version": "0.1.0",
-    "name": "FHIR"
-  },
-  {
-    "id": "FHIRHelpers",
-    "type": "Library",
-    "url": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers",
-    "version": "0.1.0",
-    "name": "FHIRHelpers"
-  },
-  {
     "id": "simple.hiv.ig",
     "type": "ImplementationGuide",
     "url": "https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig",
@@ -24,19 +10,43 @@
     "id": "AgeRanges",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "name": "ageranges"
+  },
+  {
+    "id": "FHIR-ModelInfo",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo",
+    "version": "0.1.0",
+    "name": "FHIR"
   },
   {
     "id": "FHIRCommon",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "name": "fhircommon"
+  },
+  {
+    "id": "FHIRHelpers",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers",
+    "version": "0.1.0",
+    "name": "FHIRHelpers"
+  },
+  {
+    "id": "GoldenRecord",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/GoldenRecord",
+    "version": "0.1.0",
+    "name": "GoldenRecord"
   },
   {
     "id": "KitchenSink",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "name": "kitchensink"
   },
   {
     "id": "HIVSimpleAgeGroup",

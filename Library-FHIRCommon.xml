@@ -272,6 +272,7 @@ define function BaseModifierExtension(element BackboneElement, id String):
   </text>
   <url value="https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"/>
   <version value="0.1.0"/>
+  <name value="fhircommon"/>
   <status value="draft"/>
   <experimental value="true"/>
   <type>
@@ -280,7 +281,7 @@ define function BaseModifierExtension(element BackboneElement, id String):
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2021-07-30T01:17:46+00:00"/>
+  <date value="2021-07-30T19:42:20+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>

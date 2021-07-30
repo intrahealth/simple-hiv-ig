@@ -1,0 +1,30 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-GoldenRecord",
+  "meta": {
+    "tag": [
+      {
+        "code": "1234",
+        "display": "Golden Record"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>type</b>: seealso</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"Patient-Patient-HIVSimple2.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>type</b>: seealso</p></blockquote></div>"
+  },
+  "link": [
+    {
+      "other": {
+        "reference": "Patient/Patient-HIVSimple"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/Patient-HIVSimple2"
+      },
+      "type": "seealso"
+    }
+  ]
+}

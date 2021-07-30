@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <identifier id="GoldenRecord" system="https://intrahealth.github.io/simple-hiv-ig" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using FHIR version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="https://intrahealth.github.io/simple-hiv-ig/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:44" localIdentifier="FC" path="https://intrahealth.github.io/simple-hiv-ig/FHIRCommon" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRCommon</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="7:1-7:43" localIdentifier="AR" path="https://intrahealth.github.io/simple-hiv-ig/AgeRanges" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>AgeRanges</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called AR</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codeSystems>
+      <def localId="5" locator="9:1-9:100" name="SNOMED-CT" id="http://snomed.info/sct" version="http://snomed.info/sct/900000000000207008" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>codesystem &quot;SNOMED-CT&quot;: 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="10:1-10:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <codes>
+      <def localId="8" locator="12:1-12:82" name="HIV Condition Positive" id="86406008" display="HIV infection" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>code &quot;HIV Condition Positive&quot;: '86406008' from </a:s>
+               <a:s r="7">
+                  <a:s>&quot;SNOMED-CT&quot;</a:s>
+               </a:s>
+               <a:s> display 'HIV infection'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="7" locator="12:48-12:58" name="SNOMED-CT"/>
+      </def>
+      <def localId="10" locator="13:1-13:118" name="HIV 1 and 2 tests - Meaningful Use set" id="75622-1" display="HIV 1 and 2 tests - Meaningful Use set" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="10">
+               <a:s>code &quot;HIV 1 and 2 tests - Meaningful Use set&quot;: '75622-1' from </a:s>
+               <a:s r="9">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+               <a:s> display 'HIV 1 and 2 tests - Meaningful Use set'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="9" locator="13:63-13:69" name="LOINC"/>
+      </def>
+      <def localId="12" locator="14:1-14:83" name="Pregnant (finding)" id="77386006" display="Pregnant (finding)" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>code &quot;Pregnant (finding)&quot;: '77386006' from </a:s>
+               <a:s r="11">
+                  <a:s>&quot;SNOMED-CT&quot;</a:s>
+               </a:s>
+               <a:s> display 'Pregnant (finding)'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="11" locator="14:44-14:54" name="SNOMED-CT"/>
+      </def>
+      <def localId="14" locator="15:1-15:102" name="HIV 1 RNA NAA+probe (Specimen)" id="25836-8" display="HIV 1 RNA NAA+probe (Specimen)" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="14">
+               <a:s>code &quot;HIV 1 RNA NAA+probe (Specimen)&quot;: '25836-8' from </a:s>
+               <a:s r="13">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+               <a:s> display 'HIV 1 RNA NAA+probe (Specimen)'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="13" locator="15:55-15:61" name="LOINC"/>
+      </def>
+   </codes>
+   <contexts>
+      <def locator="17:1-17:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="17:1-17:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="17:1-17:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="18" locator="19:1-20:20" name="LinkedPatients" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="18">
+               <a:s>define &quot;LinkedPatients&quot;:
+  </a:s>
+               <a:s r="17">
+                  <a:s r="16">
+                     <a:s r="15">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="16">
+                        <a:s>link</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="17">
+                     <a:s>other</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="17" locator="20:3-20:20" xsi:type="Query">
+            <source alias="$this">
+               <expression localId="16" locator="20:3-20:14" path="link" xsi:type="Property">
+                  <source localId="15" locator="20:3-20:9" name="Patient" xsi:type="ExpressionRef"/>
+               </expression>
+            </source>
+            <where xsi:type="Not">
+               <operand xsi:type="IsNull">
+                  <operand path="other" xsi:type="Property">
+                     <source name="$this" xsi:type="AliasRef"/>
+                  </operand>
+               </operand>
+            </where>
+            <return distinct="false">
+               <expression path="other" xsi:type="Property">
+                  <source name="$this" xsi:type="AliasRef"/>
+               </expression>
+            </return>
+         </expression>
+      </def>
+   </statements>
+</library>

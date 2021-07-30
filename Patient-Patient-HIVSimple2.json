@@ -1,0 +1,19 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-HIVSimple2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Mittens Cat</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-01-01</p></div>"
+  },
+  "name": [
+    {
+      "text": "Mittens Cat",
+      "family": "Cat",
+      "given": [
+        "Mittens"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-01-01"
+}

@@ -1,0 +1,17 @@
+{
+  "resourceType": "Location",
+  "id": "Location-HIVSimple2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <a href=\"Organization-Organization-HIVSimple2.html\">Generated Summary: name: Government Hospital</a></p></div>"
+  },
+  "identifier": [
+    {
+      "system": "https://github.com/synthetichealth/synthea",
+      "value": "Location-HIVSimple2"
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/Organization-HIVSimple2"
+  }
+}

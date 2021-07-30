@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "Observation-HIVSimple2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple2.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href=\"Encounter-Encounter-HIVSimple2.html\">Generated Summary: status: finished; <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}\">inpatient acute</span>; period: 2011-01-01 --&gt; 2011-01-01</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "75622-1",
+        "display": "LOINC Code"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Patient-HIVSimple2"
+  },
+  "encounter": {
+    "reference": "Encounter/Encounter-HIVSimple2"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "165816005",
+        "display": "HIV Positive"
+      }
+    ]
+  }
+}

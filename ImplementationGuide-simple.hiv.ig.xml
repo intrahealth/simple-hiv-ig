@@ -10,7 +10,7 @@
   <name value="simplehivig"/>
   <title value="HIV Simple IG"/>
   <status value="draft"/>
-  <date value="2021-07-30T01:17:46+00:00"/>
+  <date value="2021-07-30T19:42:20+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>
@@ -270,6 +270,17 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
+        <reference value="Condition/Condition-HIVSimple2"/>
+      </reference>
+      <name value="Condition-HIVSimple2"/>
+      <description value="Condition-HIVSimple2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
         <reference value="Condition/Condition-Pregnancy"/>
       </reference>
       <name value="Condition-Pregnancy"/>
@@ -285,6 +296,17 @@
       </reference>
       <name value="DiagnosticReport-HIVSimple"/>
       <description value="DiagnosticReport-HIVSimple"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-HIVSimple2"/>
+      </reference>
+      <name value="DiagnosticReport-HIVSimple2"/>
+      <description value="DiagnosticReport-HIVSimple2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -314,6 +336,17 @@
         <valueString value="Encounter"/>
       </extension>
       <reference>
+        <reference value="Encounter/Encounter-HIVSimple2"/>
+      </reference>
+      <name value="Encounter-HIVSimple2"/>
+      <description value="Encounter-HIVSimple2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
         <reference value="Encounter/Encounter-ViralLoad"/>
       </reference>
       <name value="Encounter-ViralLoad"/>
@@ -333,6 +366,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Example-HIVSimple2"/>
+      </reference>
+      <name value="Example-HIVSimple2"/>
+      <description value="Example-HIVSimple2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Library"/>
       </extension>
       <reference>
@@ -340,6 +384,17 @@
       </reference>
       <name value="FHIRCommon"/>
       <description value="FHIRCommon"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/GoldenRecord"/>
+      </reference>
+      <name value="GoldenRecord"/>
+      <description value="GoldenRecord"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -454,6 +509,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/Location-HIVSimple2"/>
+      </reference>
+      <name value="Location-HIVSimple2"/>
+      <description value="Location-HIVSimple2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -461,6 +527,17 @@
       </reference>
       <name value="Observation-HIVSimple"/>
       <description value="Observation-HIVSimple"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Observation-HIVSimple2"/>
+      </reference>
+      <name value="Observation-HIVSimple2"/>
+      <description value="Observation-HIVSimple2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -487,6 +564,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/Organization-HIVSimple2"/>
+      </reference>
+      <name value="Organization-HIVSimple2"/>
+      <description value="Organization-HIVSimple2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Patient-GoldenRecord"/>
+      </reference>
+      <name value="Patient-GoldenRecord"/>
+      <description value="Patient-GoldenRecord"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -494,6 +593,17 @@
       </reference>
       <name value="Patient-HIVSimple"/>
       <description value="Patient-HIVSimple"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Patient-HIVSimple2"/>
+      </reference>
+      <name value="Patient-HIVSimple2"/>
+      <description value="Patient-HIVSimple2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

@@ -10,7 +10,7 @@
   "name": "simplehivig",
   "title": "HIV Simple IG",
   "status": "draft",
-  "date": "2021-07-30T01:17:46+00:00",
+  "date": "2021-07-30T19:42:20+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {
@@ -420,6 +420,20 @@
           }
         ],
         "reference": {
+          "reference": "Condition/Condition-HIVSimple2"
+        },
+        "name": "Condition-HIVSimple2",
+        "description": "Condition-HIVSimple2",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Condition"
+          }
+        ],
+        "reference": {
           "reference": "Condition/Condition-Pregnancy"
         },
         "name": "Condition-Pregnancy",
@@ -438,6 +452,20 @@
         },
         "name": "DiagnosticReport-HIVSimple",
         "description": "DiagnosticReport-HIVSimple",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DiagnosticReport"
+          }
+        ],
+        "reference": {
+          "reference": "DiagnosticReport/DiagnosticReport-HIVSimple2"
+        },
+        "name": "DiagnosticReport-HIVSimple2",
+        "description": "DiagnosticReport-HIVSimple2",
         "exampleBoolean": true
       },
       {
@@ -476,6 +504,20 @@
           }
         ],
         "reference": {
+          "reference": "Encounter/Encounter-HIVSimple2"
+        },
+        "name": "Encounter-HIVSimple2",
+        "description": "Encounter-HIVSimple2",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Encounter"
+          }
+        ],
+        "reference": {
           "reference": "Encounter/Encounter-ViralLoad"
         },
         "name": "Encounter-ViralLoad",
@@ -500,6 +542,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/Example-HIVSimple2"
+        },
+        "name": "Example-HIVSimple2",
+        "description": "Example-HIVSimple2",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Library"
           }
         ],
@@ -508,6 +564,20 @@
         },
         "name": "FHIRCommon",
         "description": "FHIRCommon",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/GoldenRecord"
+        },
+        "name": "GoldenRecord",
+        "description": "GoldenRecord",
         "exampleBoolean": true
       },
       {
@@ -654,6 +724,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Location-HIVSimple2"
+        },
+        "name": "Location-HIVSimple2",
+        "description": "Location-HIVSimple2",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Observation"
           }
         ],
@@ -662,6 +746,20 @@
         },
         "name": "Observation-HIVSimple",
         "description": "Observation-HIVSimple",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Observation-HIVSimple2"
+        },
+        "name": "Observation-HIVSimple2",
+        "description": "Observation-HIVSimple2",
         "exampleBoolean": true
       },
       {
@@ -696,6 +794,34 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Organization-HIVSimple2"
+        },
+        "name": "Organization-HIVSimple2",
+        "description": "Organization-HIVSimple2",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/Patient-GoldenRecord"
+        },
+        "name": "Patient-GoldenRecord",
+        "description": "Patient-GoldenRecord",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Patient"
           }
         ],
@@ -704,6 +830,20 @@
         },
         "name": "Patient-HIVSimple",
         "description": "Patient-HIVSimple",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/Patient-HIVSimple2"
+        },
+        "name": "Patient-HIVSimple2",
+        "description": "Patient-HIVSimple2",
         "exampleBoolean": true
       },
       {

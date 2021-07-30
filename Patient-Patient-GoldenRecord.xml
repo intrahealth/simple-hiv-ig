@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Patient-GoldenRecord"/>
+  <meta>
+    <tag>
+      <code value="1234"/>
+      <display value="Golden Record"/>
+    </tag>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><blockquote><p><b>link</b></p><p><b>other</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>type</b>: seealso</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <a href="Patient-Patient-HIVSimple2.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>type</b>: seealso</p></blockquote></div>
+  </text>
+  <link>
+    <other>
+      <reference value="Patient/Patient-HIVSimple"/>
+    </other>
+    <type value="seealso"/>
+  </link>
+  <link>
+    <other>
+      <reference value="Patient/Patient-HIVSimple2"/>
+    </other>
+    <type value="seealso"/>
+  </link>
+</Patient>
