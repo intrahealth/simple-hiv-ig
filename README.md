@@ -47,8 +47,10 @@ Copy over patient test data into test folders (see caveats below for how/why)
 ```
 cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/KitchenSink/Patient-HIVSimple/
 cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/AgeRanges/Patient-HIVSimple/
+cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/GoldenRecord/Patient-GoldenRecord/
 cp fsh-generated/resources/Bundle-Example-HIVSimple2.json input/tests/KitchenSink/Patient-HIVSimple2/
 cp fsh-generated/resources/Bundle-Example-HIVSimple2.json input/tests/AgeRanges/Patient-HIVSimple2/
+cp fsh-generated/resources/Bundle-Example-HIVSimple2.json input/tests/GoldenRecord/Patient-GoldenRecord/
 cp fsh-generated/resources/Patient-Patient-GoldenRecord.json input/tests/GoldenRecord/Patient-GoldenRecord/
 ```
 
