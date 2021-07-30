@@ -32,14 +32,14 @@ Description: "FHIRCommon"
 // * identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
 
-Instance: FHIRHelpers
-InstanceOf: Library
-Title: "FHIRHelpers"
-Description: "FHIRHelpers"
-* insert lib-common
-* url = "http://hl7.org/fhir/Library/FHIRHelpers"
-// * identifier.value = "FHIRHelpers"
-* content.id = "ig-loader-FHIRHelpers-4.0.1.cql"
+// Instance: FHIRHelpers
+// InstanceOf: Library
+// Title: "FHIRHelpers"
+// Description: "FHIRHelpers"
+// * insert lib-common
+// * url = "http://hl7.org/fhir/Library/FHIRHelpers"
+// // * identifier.value = "FHIRHelpers"
+// * content.id = "ig-loader-FHIRHelpers-4.0.1.cql"
 
 Instance: KitchenSink
 InstanceOf: Library
