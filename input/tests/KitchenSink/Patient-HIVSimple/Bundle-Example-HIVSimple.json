@@ -7,7 +7,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple",
       "request": {
         "url": "Patient",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Patient",
@@ -29,7 +29,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple",
       "request": {
         "url": "Organization",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Organization",
@@ -41,7 +41,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple",
       "request": {
         "url": "Location",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Location",
@@ -61,7 +61,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple",
       "request": {
         "url": "Condition",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Condition",
@@ -101,7 +101,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy",
       "request": {
         "url": "Condition",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Condition",
@@ -142,7 +142,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple",
       "request": {
         "url": "Encounter",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Encounter",
@@ -175,7 +175,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple",
       "request": {
         "url": "DiagnosticReport",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "DiagnosticReport",
@@ -207,7 +207,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple",
       "request": {
         "url": "Observation",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Observation",
@@ -243,7 +243,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad",
       "request": {
         "url": "Encounter",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Encounter",
@@ -276,7 +276,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad",
       "request": {
         "url": "DiagnosticReport",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "DiagnosticReport",
@@ -308,7 +308,7 @@
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad",
       "request": {
         "url": "Observation",
-        "method": "PUT"
+        "method": "POST"
       },
       "resource": {
         "resourceType": "Observation",

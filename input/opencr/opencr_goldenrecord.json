@@ -1,0 +1,63 @@
+{
+  "resourceType": "Patient",
+  "id": "ff950244-ad72-4dab-9e80-ccbe66b0bd86",
+  "meta": {
+    "versionId": "18",
+    "lastUpdated": "2021-07-15T19:31:31.769+03:00",
+    "source": "#PkX1zco5nNqwWOiC",
+    "tag": [
+      {
+        "code": "5c827da5-4858-4f3d-a50c-62ece001efea",
+        "display": "Golden Record"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody/></table></div>"
+  },
+  "link": [
+    {
+      "other": {
+        "reference": "Patient/420b7e48-ec25-4d2c-8fcd-17f964fae9b7"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/b150a73d-ee8c-44df-a81b-d2e900644a9a"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/b12d7952-05a6-429c-9c57-4edddf747dbf"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/a6ab260e-5024-4ed8-b62f-613c28d99e31"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/bc1c1efd-6182-4ff8-b8a9-67b66af0f882"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/e2e5ca61-c294-4c55-95b1-68e11edd2c0d"
+      },
+      "type": "seealso"
+    },
+    {
+      "other": {
+        "reference": "Patient/30819958-81e7-4908-ab25-58185cd0d950"
+      },
+      "type": "seealso"
+    }
+  ]
+}

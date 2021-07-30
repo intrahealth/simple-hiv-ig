@@ -1,5 +1,3 @@
-Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
-
 // Usage: #example is the default, so omitted
 // * title is unnecessary
 // * name is unnecessary
@@ -19,6 +17,7 @@ InstanceOf: Library
 Title: "AgeRanges"
 Description: "AgeRanges"
 * insert lib-common
+* name = "ageranges"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"
 // * identifier.value = "AgeRanges"
 * content.id = "ig-loader-AgeRanges.cql"
@@ -28,6 +27,7 @@ InstanceOf: Library
 Title: "FHIRCommon"
 Description: "FHIRCommon"
 * insert lib-common
+* name = "fhircommon"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"
 // * identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
@@ -46,9 +46,21 @@ InstanceOf: Library
 Title: "KitchenSink"
 Description: "KitchenSink"
 * insert lib-common
+* name = "kitchensink"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
 // * identifier.value = "KitchenSink"
 * content.id = "ig-loader-KitchenSink.cql"
+
+Instance: GoldenRecord
+InstanceOf: Library
+Title: "GoldenRecord"
+Description: "GoldenRecord"
+* insert lib-common
+* name = "GoldenRecord"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/GoldenRecord"
+// * identifier.value = "GoldenRecord"
+* content.id = "ig-loader-GoldenRecord.cql"
+
 
 // bundle
 // weird, only the cql is included, not the elm

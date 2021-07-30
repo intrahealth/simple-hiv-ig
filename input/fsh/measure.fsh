@@ -1,12 +1,5 @@
-Alias: $base = https://intrahealth.github.io/simple-hiv-ig
-Alias: $ohie = http://ohie.org/CodeSystem
-Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
-Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
-
 // Usage: #example is default so omitted
 // * name is removed for clarity
-// * title is removed for clarity
-// * description is removed for clarity
 
 RuleSet: meas-common
 * identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
@@ -31,9 +24,9 @@ Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
 Title: "HIVSimpleAgeGroup"
 Description: "HIVSimpleAgeGroup"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
 * identifier.value = "HIVSimpleAgeGroup"
-* insert meas-common
 
 // options: proportion | ratio | continuous-variable | cohort
 * scoring = $measure-scoring#proportion
@@ -73,9 +66,9 @@ Instance: HIVSimpleCondition
 InstanceOf: Measure
 Title: "HIVSimpleCondition"
 Description: "HIVSimpleCondition"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition"
 * identifier.value = "HIVSimpleCondition"
-* insert meas-common
 
 * scoring = $measure-scoring#proportion
 
@@ -104,9 +97,9 @@ Instance: HIVSimpleGender
 InstanceOf: Measure
 Title: "HIVSimpleGender"
 Description: "HIVSimpleGender"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender"
 * identifier.value = "HIVSimpleGender"
-* insert meas-common
 
 * scoring = $measure-scoring#proportion
 
@@ -131,9 +124,9 @@ Instance: HIVSimpleGenderCohort
 InstanceOf: Measure
 Title: "HIVSimpleGenderCohort"
 Description: "HIVSimpleGenderCohort"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"
 * identifier.value = "HIVSimpleGenderCohort"
-* insert meas-common
 
 * scoring = $measure-scoring#cohort
 
@@ -148,9 +141,9 @@ Instance: HIVSimpleGenderSubjectList
 InstanceOf: Measure
 Title: "HIVSimpleGenderSubjectList"
 Description: "HIVSimpleGenderSubjectList"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList"
 * identifier.value = "HIVSimpleGenderSubjectList"
-* insert meas-common
 
 * scoring = $measure-scoring#cohort
 
@@ -165,9 +158,9 @@ Instance: HIVSimpleGenderSuppData
 InstanceOf: Measure
 Title: "HIVSimpleGenderSuppData"
 Description: "HIVSimpleGenderSuppData"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData"
 * identifier.value = "HIVSimpleGenderSuppData"
-* insert meas-common
 
 * scoring = $measure-scoring#proportion
 
@@ -196,9 +189,9 @@ Instance: HIVSimpleGenderSuppDataIndiv
 InstanceOf: Measure
 Title: "HIVSimpleGenderSuppDataIndiv"
 Description: "HIVSimpleGenderSuppDataIndiv"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv"
 * identifier.value = "HIVSimpleGenderSuppDataIndiv"
-* insert meas-common
 
 * scoring = $measure-scoring#proportion
 
@@ -230,9 +223,9 @@ Instance: HIVSimpleTestResult
 InstanceOf: Measure
 Title: "HIVSimpleTestResult"
 Description: "HIVSimpleTestResult"
+* insert meas-common
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult"
 * identifier.value = "HIVSimpleTestResult"
-* insert meas-common
 
 * scoring = $measure-scoring#proportion
 

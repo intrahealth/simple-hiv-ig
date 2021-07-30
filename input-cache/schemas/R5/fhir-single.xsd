@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Jul 29, 2021 13:41+0000 for FHIR v4.6.0 
+  Generated on Thu, Jul 29, 2021 23:03+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -11234,7 +11234,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="relationshipType" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">How the cited artifact resource relates to the target artifact.</xs:documentation>
+              <xs:documentation xml:lang="en">How the cited artifact relates to the target artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="targetClassifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
@@ -22871,7 +22871,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="characteristicCombination" type="EvidenceVariable.CharacteristicCombination" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to specify two or more characteristics.</xs:documentation>
+              <xs:documentation xml:lang="en">Used to specify how two or more characteristics are combined.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="characteristic" type="EvidenceVariable.Characteristic" minOccurs="0" maxOccurs="unbounded">
@@ -22926,6 +22926,11 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">A short, natural language description of the characteristic that could be used to communicate the criteria to an end-user.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Used to expressing the type of characteristic.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:choice minOccurs="1" maxOccurs="1" >
             <xs:annotation>
               <xs:documentation xml:lang="en">Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).</xs:documentation>
@@ -22935,11 +22940,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
             <xs:element name="definitionCodeableConcept" type="CodeableConcept"/>
             <xs:element name="definitionExpression" type="Expression"/>
           </xs:choice>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Used to expressing the type of characteristic.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="method" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Method used for describing characteristic.</xs:documentation>
@@ -23034,7 +23034,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A grouping (or set of values) described along with other groupings to specify the set of groupings allowed for the variable.</xs:documentation>
+              <xs:documentation xml:lang="en">A human-readable string to clarify or explain concepts about the resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>

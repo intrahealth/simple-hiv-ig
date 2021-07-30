@@ -2,39 +2,39 @@
 
 // common to all clinical resources
 
-Instance:     Patient-HIVSimple
+Instance:     Patient-HIVSimple2
 InstanceOf:   Patient
-Title: "Patient-HIVSimple"
-Description: "Patient-HIVSimple"
+Title: "Patient-HIVSimple2"
+Description: "Patient-HIVSimple2"
 * name[+].given = "Mittens"
 * name[=].family = "Cat"
 * name[=].text = "Mittens Cat"
 * gender = #female
 * birthDate = "1985-01-01"
 
-Instance: Organization-HIVSimple
+Instance: Organization-HIVSimple2
 InstanceOf: Organization
-Title: "Organization-HIVSimple"
-Description: "Organization-HIVSimple"
+Title: "Organization-HIVSimple2"
+Description: "Organization-HIVSimple2"
 * name = "Government Hospital"
 
-Instance: Location-HIVSimple
+Instance: Location-HIVSimple2
 InstanceOf: Location
-Title: "Location-HIVSimple"
-Description: "Location-HIVSimple"
-* managingOrganization = Reference(Organization-HIVSimple)
+Title: "Location-HIVSimple2"
+Description: "Location-HIVSimple2"
+* managingOrganization = Reference(Organization-HIVSimple2)
 * identifier.system = "https://github.com/synthetichealth/synthea"
-* identifier.value = "Location-HIVSimple"
+* identifier.value = "Location-HIVSimple2"
 
 // conditions
 
-Instance: Condition-HIVSimple
+Instance: Condition-HIVSimple2
 InstanceOf: Condition
-Title: "Condition-HIVSimple"
-Description: "Condition-HIVSimple"
+Title: "Condition-HIVSimple2"
+Description: "Condition-HIVSimple2"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* subject = Reference(Patient-HIVSimple)
+* subject = Reference(Patient-HIVSimple2)
 // todo: review this for consistency
 * code = SCT#86406008 "HIV - Human immunodeficiency virus infection"
 * onsetDateTime = "2010-01-01"
@@ -45,43 +45,43 @@ Title: "Condition-Pregnancy"
 Description: "Condition-Pregnancy"
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#confirmed
-* subject = Reference(Patient-HIVSimple)
+* subject = Reference(Patient-HIVSimple2)
 * code = SCT#77386006 "Pregnant (finding)"
 * onsetDateTime = "2020-01-01"
 * abatementDateTime = "2020-09-30"
 
 // hiv positive test
 
-Instance: Encounter-HIVSimple
+Instance: Encounter-HIVSimple2
 InstanceOf: Encounter
-Title: "Encounter-HIVSimple"
-Description: "Encounter-HIVSimple"
+Title: "Encounter-HIVSimple2"
+Description: "Encounter-HIVSimple2"
 Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
-* subject = Reference(Patient-HIVSimple)
-* serviceProvider = Reference(Organization-HIVSimple)
-* location[+].location = Reference(Location-HIVSimple)
+* subject = Reference(Patient-HIVSimple2)
+* serviceProvider = Reference(Organization-HIVSimple2)
+* location[+].location = Reference(Location-HIVSimple2)
 * period.start = "2011-01-01"
 * period.end = "2011-01-01"
 
-Instance: DiagnosticReport-HIVSimple
+Instance: DiagnosticReport-HIVSimple2
 InstanceOf: DiagnosticReport
-Title: "DiagnosticReport-HIVSimple"
-Description: "DiagnosticReport-HIVSimple"
+Title: "DiagnosticReport-HIVSimple2"
+Description: "DiagnosticReport-HIVSimple2"
 * status = #final
-* encounter = Reference(Encounter-HIVSimple)
-* subject = Reference(Patient-HIVSimple)
-* result = Reference(Observation-HIVSimple)
+* encounter = Reference(Encounter-HIVSimple2)
+* subject = Reference(Patient-HIVSimple2)
+* result = Reference(Observation-HIVSimple2)
 * code = LNC#75622-1 "HIV 1 and 2 tests - Meaningful Use set"
 
-Instance: Observation-HIVSimple
+Instance: Observation-HIVSimple2
 InstanceOf: Observation
-Title: "Observation-HIVSimple"
-Description: "Observation-HIVSimple"
+Title: "Observation-HIVSimple2"
+Description: "Observation-HIVSimple2"
 * status = #final
-* encounter = Reference(Encounter-HIVSimple)
-* subject = Reference(Patient-HIVSimple)
+* encounter = Reference(Encounter-HIVSimple2)
+* subject = Reference(Patient-HIVSimple2)
 * code = LNC#75622-1 "LOINC Code"
 * valueCodeableConcept = SCT#165816005 "HIV Positive"
 
@@ -94,9 +94,9 @@ Description: "Encounter-ViralLoad"
 Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
-* subject = Reference(Patient-HIVSimple)
-* serviceProvider = Reference(Organization-HIVSimple)
-* location[+].location = Reference(Location-HIVSimple)
+* subject = Reference(Patient-HIVSimple2)
+* serviceProvider = Reference(Organization-HIVSimple2)
+* location[+].location = Reference(Location-HIVSimple2)
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
 
@@ -105,7 +105,7 @@ InstanceOf: DiagnosticReport
 Title: "DiagnosticReport-ViralLoad"
 Description: "DiagnosticReport-ViralLoad"
 * status = #final
-* subject = Reference(Patient-HIVSimple)
+* subject = Reference(Patient-HIVSimple2)
 //
 * encounter = Reference(Encounter-ViralLoad)
 * result = Reference(Observation-ViralLoad)
@@ -116,7 +116,7 @@ InstanceOf: Observation
 Title: "Observation-ViralLoad"
 Description: "Observation-ViralLoad"
 * status = #final
-* subject = Reference(Patient-HIVSimple)
+* subject = Reference(Patient-HIVSimple2)
 // 
 * encounter = Reference(Encounter-ViralLoad) 
 * code = LNC#25836-8 "HIV 1 RNA NAA+probe (Specimen)"
@@ -128,31 +128,31 @@ Description: "Observation-ViralLoad"
 
 // bundle it all up
 
-Instance: Example-HIVSimple
+Instance: Example-HIVSimple2
 InstanceOf: Bundle
-Title: "Example-HIVSimple"
-Description: "Example-HIVSimple"
+Title: "Example-HIVSimple2"
+Description: "Example-HIVSimple2"
 * type = #transaction
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple2"
 * entry[=].request.url = "Patient"
 * entry[=].request.method = #POST
-* entry[=].resource = Patient-HIVSimple
+* entry[=].resource = Patient-HIVSimple2
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2"
 * entry[=].request.url = "Organization"
 * entry[=].request.method = #POST
-* entry[=].resource = Organization-HIVSimple
+* entry[=].resource = Organization-HIVSimple2
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2"
 * entry[=].request.url = "Location"
 * entry[=].request.method = #POST
-* entry[=].resource = Location-HIVSimple
+* entry[=].resource = Location-HIVSimple2
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2"
 * entry[=].request.url = "Condition"
 * entry[=].request.method = #POST
-* entry[=].resource = Condition-HIVSimple
+* entry[=].resource = Condition-HIVSimple2
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy"
 * entry[=].request.url = "Condition"
@@ -161,20 +161,20 @@ Description: "Example-HIVSimple"
 
 // encounter for hiv test
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2"
 * entry[=].request.url = "Encounter"
 * entry[=].request.method = #POST
-* entry[=].resource = Encounter-HIVSimple
+* entry[=].resource = Encounter-HIVSimple2
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2"
 * entry[=].request.url = "DiagnosticReport"
 * entry[=].request.method = #POST
-* entry[=].resource = DiagnosticReport-HIVSimple
+* entry[=].resource = DiagnosticReport-HIVSimple2
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2"
 * entry[=].request.url = "Observation"
 * entry[=].request.method = #POST
-* entry[=].resource = Observation-HIVSimple
+* entry[=].resource = Observation-HIVSimple2
 
 // encounter for viral load
 
