@@ -10,7 +10,7 @@
   <name value="simplehivig"/>
   <title value="HIV Simple IG"/>
   <status value="draft"/>
-  <date value="2021-07-22T01:12:25+00:00"/>
+  <date value="2021-07-30T01:17:46+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>
@@ -344,17 +344,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/FHIRHelpers"/>
-      </reference>
-      <name value="FHIRHelpers"/>
-      <description value="FHIRHelpers"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
@@ -506,6 +495,28 @@
       <name value="Patient-HIVSimple"/>
       <description value="Patient-HIVSimple"/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/FHIR-ModelInfo"/>
+      </reference>
+      <name value="FHIR Model Definition"/>
+      <description value="Model definition for the FHIR R4 (v4.0.1) Model"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/FHIRHelpers"/>
+      </reference>
+      <name value="FHIR Helpers"/>
+      <description value="This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers"/>
+      <exampleBoolean value="false"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

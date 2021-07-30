@@ -1,9 +1,17 @@
 [
   {
+    "id": "FHIR-ModelInfo",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cqf/ccc/Library/FHIR-ModelInfo",
+    "version": "0.1.0",
+    "name": "FHIR"
+  },
+  {
     "id": "FHIRHelpers",
     "type": "Library",
-    "url": "http://hl7.org/fhir/Library/FHIRHelpers",
-    "version": "0.1.0"
+    "url": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers",
+    "version": "0.1.0",
+    "name": "FHIRHelpers"
   },
   {
     "id": "simple.hiv.ig",

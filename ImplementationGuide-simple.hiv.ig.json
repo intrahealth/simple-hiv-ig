@@ -10,7 +10,7 @@
   "name": "simplehivig",
   "title": "HIV Simple IG",
   "status": "draft",
-  "date": "2021-07-22T01:12:25+00:00",
+  "date": "2021-07-30T01:17:46+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {
@@ -514,20 +514,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/FHIRHelpers"
-        },
-        "name": "FHIRHelpers",
-        "description": "FHIRHelpers",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           }
         ],
@@ -719,6 +705,34 @@
         "name": "Patient-HIVSimple",
         "description": "Patient-HIVSimple",
         "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/FHIR-ModelInfo"
+        },
+        "name": "FHIR Model Definition",
+        "description": "Model definition for the FHIR R4 (v4.0.1) Model",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/FHIRHelpers"
+        },
+        "name": "FHIR Helpers",
+        "description": "This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers",
+        "exampleBoolean": false
       }
     ],
     "page": {

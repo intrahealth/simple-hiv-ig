@@ -86,7 +86,7 @@
         "localId" : "2",
         "locator" : "5:1-5:35",
         "localIdentifier" : "FHIRHelpers",
-        "path" : "http://hl7.org/fhir/FHIRHelpers",
+        "path" : "https://intrahealth.github.io/simple-hiv-ig/FHIRHelpers",
         "version" : "4.0.1"
       } ]
     },
