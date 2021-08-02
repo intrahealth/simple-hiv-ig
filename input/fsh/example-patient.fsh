@@ -36,7 +36,7 @@ Description: "Condition-HIVSimple"
 * verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple)
 // todo: review this for consistency
-* code = SCT#86406008 "HIV - Human immunodeficiency virus infection"
+* code = $SCT#86406008 "HIV - Human immunodeficiency virus infection"
 * onsetDateTime = "2010-01-01"
 
 Instance: Condition-Pregnancy
@@ -46,7 +46,7 @@ Description: "Condition-Pregnancy"
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple)
-* code = SCT#77386006 "Pregnant (finding)"
+* code = $SCT#77386006 "Pregnant (finding)"
 * onsetDateTime = "2020-01-01"
 * abatementDateTime = "2020-09-30"
 
@@ -73,7 +73,8 @@ Description: "DiagnosticReport-HIVSimple"
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
 * result = Reference(Observation-HIVSimple)
-* code = LNC#75622-1 "HIV 1 and 2 tests - Meaningful Use set"
+* code = $LNC#75622-1 "HIV 1 and 2 tests - Meaningful Use set"
+
 
 Instance: Observation-HIVSimple
 InstanceOf: Observation
@@ -82,8 +83,8 @@ Description: "Observation-HIVSimple"
 * status = #final
 * encounter = Reference(Encounter-HIVSimple)
 * subject = Reference(Patient-HIVSimple)
-* code = LNC#75622-1 "LOINC Code"
-* valueCodeableConcept = SCT#165816005 "HIV Positive"
+* code = $LNC#75622-1 "HIV 1 and 2 tests - Meaningful Use set"
+* valueCodeableConcept = $SCT#165816005 "HIV Positive"
 
 // hiv viral load
 
@@ -109,7 +110,7 @@ Description: "DiagnosticReport-ViralLoad"
 //
 * encounter = Reference(Encounter-ViralLoad)
 * result = Reference(Observation-ViralLoad)
-* code = LNC#25836-8 "HIV 1 RNA NAA+probe (Specimen)"
+* code = $LNC#25836-8 "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
 
 Instance: Observation-ViralLoad
 InstanceOf: Observation
@@ -119,7 +120,7 @@ Description: "Observation-ViralLoad"
 * subject = Reference(Patient-HIVSimple)
 // 
 * encounter = Reference(Encounter-ViralLoad) 
-* code = LNC#25836-8 "HIV 1 RNA NAA+probe (Specimen)"
+* code = $LNC#25836-8 "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
 * valueQuantity.value = 741660
 * valueQuantity.unit = "copies/mL"
 * valueQuantity.system = "http://unitsofmeasure.org"

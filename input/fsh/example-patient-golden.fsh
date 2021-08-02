@@ -5,7 +5,7 @@ InstanceOf:   Patient
 Title: "Patient-GoldenRecord"
 Description: "Patient-GoldenRecord"
 // only used for internal opencr tracking purposes
-* meta.tag[+] = #1234 "Golden Record"
+* meta.tag[+] = $OpenCR#1234 "Golden Record"
 // patient resource record linkages
 * link[+].other.reference = "Patient/Patient-HIVSimple"
 * link[=].type = #seealso

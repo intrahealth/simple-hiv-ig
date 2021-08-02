@@ -17,7 +17,7 @@ InstanceOf: Library
 Title: "AgeRanges"
 Description: "AgeRanges"
 * insert lib-common
-* name = "ageranges"
+* name = "AgeRanges"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"
 // * identifier.value = "AgeRanges"
 * content.id = "ig-loader-AgeRanges.cql"
@@ -27,7 +27,7 @@ InstanceOf: Library
 Title: "FHIRCommon"
 Description: "FHIRCommon"
 * insert lib-common
-* name = "fhircommon"
+* name = "FHIRCommon"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"
 // * identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
@@ -46,7 +46,7 @@ InstanceOf: Library
 Title: "KitchenSink"
 Description: "KitchenSink"
 * insert lib-common
-* name = "kitchensink"
+* name = "KitchenSink"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
 // * identifier.value = "KitchenSink"
 * content.id = "ig-loader-KitchenSink.cql"

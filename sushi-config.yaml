@@ -3,7 +3,7 @@
 # something about id having to have periods. strange.
 id: simple.hiv.ig
 # name: ddcc-vs
-name: simple-hiv-ig
+name: SimpleHIVIG
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
