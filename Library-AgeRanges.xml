@@ -109,7 +109,7 @@ define Patient65ToHighestAndMale:
   </text>
   <url value="https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"/>
   <version value="0.1.0"/>
-  <name value="ageranges"/>
+  <name value="AgeRanges"/>
   <status value="draft"/>
   <experimental value="true"/>
   <type>
@@ -118,7 +118,7 @@ define Patient65ToHighestAndMale:
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2021-07-30T19:42:20+00:00"/>
+  <date value="2021-08-02T22:00:55+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>

@@ -3,14 +3,14 @@
   "id": "simple.hiv.ig",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>simplehivig</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SimpleHIVIG</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig</pre></div>"
   },
   "url": "https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig",
   "version": "0.1.0",
-  "name": "simplehivig",
+  "name": "SimpleHIVIG",
   "title": "HIV Simple IG",
   "status": "draft",
-  "date": "2021-07-30T19:42:20+00:00",
+  "date": "2021-08-02T22:00:55+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {
@@ -384,6 +384,34 @@
       }
     ],
     "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/opencr-codesystem"
+        },
+        "name": "OpenCR CodeSystem",
+        "description": "OpenCR CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/openhie-codesystem"
+        },
+        "name": "OpenHIE CodeSystem",
+        "description": "OpenHIE CodeSystem",
+        "exampleBoolean": false
+      },
       {
         "extension": [
           {

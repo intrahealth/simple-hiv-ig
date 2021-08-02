@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="simple.hiv.ig"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>simplehivig</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig</pre></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SimpleHIVIG</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig</pre></div>
   </text>
   <url value="https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig"/>
   <version value="0.1.0"/>
-  <name value="simplehivig"/>
+  <name value="SimpleHIVIG"/>
   <title value="HIV Simple IG"/>
   <status value="draft"/>
-  <date value="2021-07-30T19:42:20+00:00"/>
+  <date value="2021-08-02T22:00:55+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>
@@ -243,6 +243,28 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/opencr-codesystem"/>
+      </reference>
+      <name value="OpenCR CodeSystem"/>
+      <description value="OpenCR CodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/openhie-codesystem"/>
+      </reference>
+      <name value="OpenHIE CodeSystem"/>
+      <description value="OpenHIE CodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Library"/>

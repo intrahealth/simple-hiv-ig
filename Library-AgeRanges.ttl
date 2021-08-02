@@ -14,7 +14,7 @@
   ];
   fhir:Library.url [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges"];
   fhir:Library.version [ fhir:value "0.1.0"];
-  fhir:Library.name [ fhir:value "ageranges"];
+  fhir:Library.name [ fhir:value "AgeRanges"];
   fhir:Library.status [ fhir:value "draft"];
   fhir:Library.experimental [ fhir:value "true"^^xsd:boolean];
   fhir:Library.type [
@@ -24,7 +24,7 @@
        fhir:Coding.code [ fhir:value "logic-library" ]
      ]
   ];
-  fhir:Library.date [ fhir:value "2021-07-30T19:42:20+00:00"^^xsd:dateTime];
+  fhir:Library.date [ fhir:value "2021-08-02T22:00:55+00:00"^^xsd:dateTime];
   fhir:Library.publisher [ fhir:value "Digital Health Team"];
   fhir:Library.contact [
      fhir:index 0;

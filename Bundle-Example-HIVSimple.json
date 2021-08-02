@@ -238,7 +238,7 @@
         "id": "Observation-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 75622-1}\">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></p></div>"
         },
         "status": "final",
         "code": {
@@ -246,7 +246,7 @@
             {
               "system": "http://loinc.org",
               "code": "75622-1",
-              "display": "LOINC Code"
+              "display": "HIV 1 and 2 tests - Meaningful Use set"
             }
           ]
         },
@@ -315,7 +315,7 @@
         "id": "DiagnosticReport-ViralLoad",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA NAA+probe (Specimen)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-ViralLoad\">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-ViralLoad\">See above (Observation/Observation-ViralLoad)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-ViralLoad\">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-ViralLoad\">See above (Observation/Observation-ViralLoad)</a></p></div>"
         },
         "status": "final",
         "code": {
@@ -323,7 +323,7 @@
             {
               "system": "http://loinc.org",
               "code": "25836-8",
-              "display": "HIV 1 RNA NAA+probe (Specimen)"
+              "display": "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
             }
           ]
         },
@@ -351,7 +351,7 @@
         "id": "Observation-ViralLoad",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA NAA+probe (Specimen)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-ViralLoad\">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-ViralLoad\">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL</p></div>"
         },
         "status": "final",
         "code": {
@@ -359,7 +359,7 @@
             {
               "system": "http://loinc.org",
               "code": "25836-8",
-              "display": "HIV 1 RNA NAA+probe (Specimen)"
+              "display": "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
             }
           ]
         },

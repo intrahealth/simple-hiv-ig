@@ -4,6 +4,7 @@
   <id value="Patient-GoldenRecord"/>
   <meta>
     <tag>
+      <system value="https://github.com/intrahealth/client-registry"/>
       <code value="1234"/>
       <display value="Golden Record"/>
     </tag>

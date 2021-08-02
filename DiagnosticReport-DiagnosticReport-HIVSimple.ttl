@@ -11,7 +11,7 @@
   fhir:Resource.id [ fhir:value "DiagnosticReport-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 75622-1}\">HIV 1 and 2 tests - Meaningful Use set</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Mittens Cat</b>  1985-01-01</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Observation-HIVSimple.html\"><span title=\"Codes: {http://loinc.org 75622-1}\">LOINC Code</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 75622-1}\">HIV 1 and 2 tests - Meaningful Use set</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Mittens Cat</b>  1985-01-01</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Observation-HIVSimple.html\"><span title=\"Codes: {http://loinc.org 75622-1}\">HIV 1 and 2 tests - Meaningful Use set</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 165816005}\">HIV Positive</span></td></tr></table></div>"
   ];
   fhir:DiagnosticReport.status [ fhir:value "final"];
   fhir:DiagnosticReport.code [

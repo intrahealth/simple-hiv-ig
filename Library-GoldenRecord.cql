@@ -19,6 +19,10 @@ context Patient
 define "LinkedPatients":
   Patient.link.other
 
+
+context Unfiltered
+
+
 // cql engine may not evaluate across test patient bundles
 /* define "LinkedEncounters":
   "LinkedPatients".Patient.Encounter */

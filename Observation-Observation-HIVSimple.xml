@@ -3,14 +3,14 @@
 <Observation xmlns="http://hl7.org/fhir">
   <id value="Observation-HIVSimple"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">LOINC Code</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="Encounter-Encounter-HIVSimple.html">Generated Summary: status: finished; <span title="{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}">inpatient acute</span>; period: 2011-01-01 --&gt; 2011-01-01</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="Encounter-Encounter-HIVSimple.html">Generated Summary: status: finished; <span title="{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}">inpatient acute</span>; period: 2011-01-01 --&gt; 2011-01-01</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></div>
   </text>
   <status value="final"/>
   <code>
     <coding>
       <system value="http://loinc.org"/>
       <code value="75622-1"/>
-      <display value="LOINC Code"/>
+      <display value="HIV 1 and 2 tests - Meaningful Use set"/>
     </coding>
   </code>
   <subject>

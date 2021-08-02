@@ -213,14 +213,14 @@
       <Observation>
         <id value="Observation-HIVSimple2"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">LOINC Code</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple2">See above (Patient/Patient-HIVSimple2)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-HIVSimple2">See above (Encounter/Encounter-HIVSimple2)</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple2">See above (Patient/Patient-HIVSimple2)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-HIVSimple2">See above (Encounter/Encounter-HIVSimple2)</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></div>
         </text>
         <status value="final"/>
         <code>
           <coding>
             <system value="http://loinc.org"/>
             <code value="75622-1"/>
-            <display value="LOINC Code"/>
+            <display value="HIV 1 and 2 tests - Meaningful Use set"/>
           </coding>
         </code>
         <subject>
@@ -284,14 +284,14 @@
       <DiagnosticReport>
         <id value="DiagnosticReport-ViralLoad"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA NAA+probe (Specimen)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href="#Observation_Observation-ViralLoad">See above (Observation/Observation-ViralLoad)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href="#Observation_Observation-ViralLoad">See above (Observation/Observation-ViralLoad)</a></p></div>
         </text>
         <status value="final"/>
         <code>
           <coding>
             <system value="http://loinc.org"/>
             <code value="25836-8"/>
-            <display value="HIV 1 RNA NAA+probe (Specimen)"/>
+            <display value="HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"/>
           </coding>
         </code>
         <subject>
@@ -316,14 +316,14 @@
       <Observation>
         <id value="Observation-ViralLoad"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA NAA+probe (Specimen)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL</p></div>
         </text>
         <status value="final"/>
         <code>
           <coding>
             <system value="http://loinc.org"/>
             <code value="25836-8"/>
-            <display value="HIV 1 RNA NAA+probe (Specimen)"/>
+            <display value="HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"/>
           </coding>
         </code>
         <subject>

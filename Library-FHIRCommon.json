@@ -7,7 +7,7 @@
   },
   "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon",
   "version": "0.1.0",
-  "name": "fhircommon",
+  "name": "FHIRCommon",
   "status": "draft",
   "experimental": true,
   "type": {
@@ -18,7 +18,7 @@
       }
     ]
   },
-  "date": "2021-07-30T19:42:20+00:00",
+  "date": "2021-08-02T22:00:55+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {

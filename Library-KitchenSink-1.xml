@@ -101,14 +101,14 @@
          </annotation>
          <codeSystem localId="11" locator="17:44-17:54" name="SNOMED-CT"/>
       </def>
-      <def localId="14" locator="18:1-18:102" name="HIV 1 RNA NAA+probe (Specimen)" id="25836-8" display="HIV 1 RNA NAA+probe (Specimen)" accessLevel="Public">
+      <def localId="14" locator="18:1-18:145" name="HIV 1 RNA NAA+probe (Specimen)" id="25836-8" display="HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
             <a:s r="14">
                <a:s>code &quot;HIV 1 RNA NAA+probe (Specimen)&quot;: '25836-8' from </a:s>
                <a:s r="13">
                   <a:s>&quot;LOINC&quot;</a:s>
                </a:s>
-               <a:s> display 'HIV 1 RNA NAA+probe (Specimen)'</a:s>
+               <a:s> display 'HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection'</a:s>
             </a:s>
          </annotation>
          <codeSystem localId="13" locator="18:55-18:61" name="LOINC"/>
