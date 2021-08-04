@@ -9,6 +9,7 @@ fsh-generated
 ###########################################
 /input-cache/org.hl7.fhir.publisher.jar
 /input-cache/publisher.jar
+/input-cache/tooling-1.3.1-SNAPSHOT-jar-with-dependencies.jar
 
 # Windows generated files #
 ###########################
