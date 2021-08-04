@@ -147,8 +147,8 @@ define "Location":
     First([Encounter] E return "GetLocation"(First(E.location).location))
 
 // not working for some reason
-define "SDE Location":
-    Code { code: "Location".name, system: 'https://github.com/synthetichealth/synthea' }
+/* define "SDE Location":
+    Code { code: "Location".name, system: 'https://github.com/synthetichealth/synthea' } */
 
 /* second attempt at supp data for location*/
 

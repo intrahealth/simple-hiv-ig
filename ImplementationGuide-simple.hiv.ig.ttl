@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SimpleHIVIG"];
   fhir:ImplementationGuide.title [ fhir:value "HIV Simple IG"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-08-02T22:00:55+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-08-04T15:18:49+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Digital Health Team"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;

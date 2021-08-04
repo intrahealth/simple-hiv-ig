@@ -1,9 +1,9 @@
 ﻿SimpleHIVIG : Validation Results
 =========================================
 
-err = 8, warn = 0, info = 0
+err = 12, warn = 0, info = 2
 IG Publisher Version: 1.1.77
-Generated Mon Aug 02 22:01:15 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
+Generated Wed Aug 04 15:19:09 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
 
  Build Errors : 0 / 0 / 0
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple : 0 / 0 / 12
@@ -42,8 +42,8 @@ Generated Mon Aug 02 22:01:15 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Patient-Patient-GoldenRecord : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple2 : 0 / 0 / 1
- /github/workspace/input/resources/Library-FHIR-ModelInfo : 0 / 0 / 1
- /github/workspace/input/resources/Library-FHIRHelpers : 0 / 0 / 1
+ /github/workspace/input/resources/Library-FHIR-ModelInfo : 2 / 0 / 2
+ /github/workspace/input/resources/Library-FHIRHelpers : 2 / 0 / 2
 </table>
 == n/a ==
 == /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple.json ==
@@ -91,4 +91,10 @@ ERROR: Library/KitchenSink: Library.relatedArtifact[1].resource: Canonical URL '
 == /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple.json ==
 == /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple2.json ==
 == /github/workspace/input/resources/Library-FHIR-ModelInfo.json ==
+INFORMATION: Library/FHIR-ModelInfo: Library.extension[0]: Unknown extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem
+ERROR: Library/FHIR-ModelInfo: Library.extension[0].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/FHIR-ModelInfo: Library.extension[0].value.ofType(Reference): Unable to resolve resource 'cqf-tooling'
 == /github/workspace/input/resources/Library-FHIRHelpers.json ==
+INFORMATION: Library/FHIRHelpers: Library.extension[0]: Unknown extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem
+ERROR: Library/FHIRHelpers: Library.extension[0].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/FHIRHelpers: Library.extension[0].value.ofType(Reference): Unable to resolve resource 'cqf-tooling'

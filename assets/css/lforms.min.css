@@ -9,6 +9,11 @@
  * http://api.jqueryui.com/category/theming/
  */
 
+
+ .lf-sn {
+	 display: none
+	}
+
  .ui-helper-hidden {
 	display: none
 }

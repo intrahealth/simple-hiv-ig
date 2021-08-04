@@ -412,6 +412,11 @@ define function ToString(value uri): value.value
 define function ToString(value xhtml): value.value
 </code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 175Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 274Kb)</p></div>
   </text>
+  <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem">
+    <valueReference>
+      <reference value="cqf-tooling"/>
+    </valueReference>
+  </extension>
   <url value="https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers"/>
   <version value="0.1.0"/>
   <name value="FHIRHelpers"/>

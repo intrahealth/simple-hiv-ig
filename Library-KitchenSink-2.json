@@ -5575,197 +5575,6 @@
       }, {
         "type" : "ExpressionDef",
         "expression" : {
-          "type" : "Instance",
-          "element" : [ {
-            "type" : "InstanceElement",
-            "value" : {
-              "type" : "FunctionRef",
-              "operand" : [ {
-                "type" : "Property",
-                "source" : {
-                  "type" : "ExpressionRef",
-                  "localId" : "183",
-                  "locator" : "151:18-151:27",
-                  "name" : "Location"
-                },
-                "localId" : "184",
-                "locator" : "151:18-151:32",
-                "path" : "name"
-              } ],
-              "name" : "ToString",
-              "libraryName" : "FHIRHelpers"
-            },
-            "name" : "code"
-          }, {
-            "type" : "InstanceElement",
-            "value" : {
-              "type" : "Literal",
-              "localId" : "185",
-              "locator" : "151:43-151:86",
-              "valueType" : "{urn:hl7-org:elm-types:r1}String",
-              "value" : "https://github.com/synthetichealth/synthea"
-            },
-            "name" : "system"
-          } ],
-          "localId" : "186",
-          "locator" : "151:5-151:88",
-          "classType" : "{urn:hl7-org:elm-types:r1}Code"
-        },
-        "annotation" : [ {
-          "s" : {
-            "s" : [ {
-              "name" : "{urn:hl7-org:cql-annotations:r1}s",
-              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-              "value" : {
-                "s" : [ "define ", "\"SDE Location\"", ":\n    " ]
-              },
-              "globalScope" : true
-            }, {
-              "name" : "{urn:hl7-org:cql-annotations:r1}s",
-              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-              "value" : {
-                "s" : [ {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ "Code", " { " ]
-                  },
-                  "globalScope" : true
-                }, {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ {
-                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                      "value" : {
-                        "s" : [ "code", ": " ]
-                      },
-                      "globalScope" : true
-                    }, {
-                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                      "value" : {
-                        "s" : [ {
-                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                          "value" : {
-                            "s" : [ {
-                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                              "value" : {
-                                "s" : [ "\"Location\"" ]
-                              },
-                              "globalScope" : true
-                            } ],
-                            "r" : "183"
-                          },
-                          "globalScope" : true
-                        }, {
-                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                          "value" : {
-                            "s" : [ "." ]
-                          },
-                          "globalScope" : true
-                        }, {
-                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                          "value" : {
-                            "s" : [ {
-                              "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                              "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                              "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                              "value" : {
-                                "s" : [ "name" ]
-                              },
-                              "globalScope" : true
-                            } ],
-                            "r" : "184"
-                          },
-                          "globalScope" : true
-                        } ],
-                        "r" : "184"
-                      },
-                      "globalScope" : true
-                    } ]
-                  },
-                  "globalScope" : true
-                }, {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ ", " ]
-                  },
-                  "globalScope" : true
-                }, {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ {
-                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                      "value" : {
-                        "s" : [ "system", ": " ]
-                      },
-                      "globalScope" : true
-                    }, {
-                      "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                      "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                      "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                      "value" : {
-                        "s" : [ {
-                          "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                          "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                          "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                          "value" : {
-                            "s" : [ "'https://github.com/synthetichealth/synthea'" ]
-                          },
-                          "globalScope" : true
-                        } ],
-                        "r" : "185"
-                      },
-                      "globalScope" : true
-                    } ]
-                  },
-                  "globalScope" : true
-                }, {
-                  "name" : "{urn:hl7-org:cql-annotations:r1}s",
-                  "declaredType" : "org.hl7.cql_annotations.r1.Narrative",
-                  "scope" : "javax.xml.bind.JAXBElement$GlobalScope",
-                  "value" : {
-                    "s" : [ " }" ]
-                  },
-                  "globalScope" : true
-                } ],
-                "r" : "186"
-              },
-              "globalScope" : true
-            } ],
-            "r" : "187"
-          }
-        } ],
-        "localId" : "187",
-        "locator" : "150:1-151:88",
-        "name" : "SDE Location",
-        "context" : "Patient",
-        "accessLevel" : "Public"
-      }, {
-        "type" : "ExpressionDef",
-        "expression" : {
           "type" : "Last",
           "source" : {
             "type" : "Query",
@@ -5773,12 +5582,12 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "188",
+                "localId" : "183",
                 "locator" : "160:5-160:15",
                 "dataType" : "{http://hl7.org/fhir}Encounter",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Encounter"
               },
-              "localId" : "189",
+              "localId" : "184",
               "locator" : "160:5-160:17",
               "alias" : "E"
             } ],
@@ -5792,12 +5601,12 @@
                     "type" : "AliasedQuerySource",
                     "expression" : {
                       "type" : "Property",
-                      "localId" : "190",
+                      "localId" : "185",
                       "locator" : "161:20-161:29",
                       "path" : "location",
                       "scope" : "E"
                     },
-                    "localId" : "191",
+                    "localId" : "186",
                     "locator" : "161:20-161:31",
                     "alias" : "L"
                   } ],
@@ -5805,27 +5614,27 @@
                     "type" : "ReturnClause",
                     "expression" : {
                       "type" : "Property",
-                      "localId" : "193",
+                      "localId" : "188",
                       "locator" : "161:40-161:49",
                       "path" : "location",
                       "scope" : "L"
                     },
-                    "localId" : "194",
+                    "localId" : "189",
                     "locator" : "161:33-161:49"
                   },
-                  "localId" : "195",
+                  "localId" : "190",
                   "locator" : "161:20-161:49"
                 },
-                "localId" : "196",
+                "localId" : "191",
                 "locator" : "161:14-161:50"
               },
-              "localId" : "197",
+              "localId" : "192",
               "locator" : "161:7-161:50"
             },
-            "localId" : "198",
+            "localId" : "193",
             "locator" : "160:5-161:50"
           },
-          "localId" : "199",
+          "localId" : "194",
           "locator" : "159:3-163:3"
         },
         "annotation" : [ {
@@ -5885,11 +5694,11 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "188"
+                                    "r" : "183"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "188"
+                                "r" : "183"
                               },
                               "globalScope" : true
                             }, {
@@ -5901,7 +5710,7 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "189"
+                            "r" : "184"
                           },
                           "globalScope" : true
                         } ]
@@ -5978,7 +5787,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "190"
+                                            "r" : "185"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -5990,7 +5799,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "191"
+                                        "r" : "186"
                                       },
                                       "globalScope" : true
                                     } ]
@@ -6036,7 +5845,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "192"
+                                            "r" : "187"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6061,19 +5870,19 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "193"
+                                            "r" : "188"
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "193"
+                                        "r" : "188"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "194"
+                                    "r" : "189"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "195"
+                                "r" : "190"
                               },
                               "globalScope" : true
                             }, {
@@ -6085,15 +5894,15 @@
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "196"
+                            "r" : "191"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "197"
+                        "r" : "192"
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "198"
+                    "r" : "193"
                   },
                   "globalScope" : true
                 }, {
@@ -6105,14 +5914,14 @@
                   },
                   "globalScope" : true
                 } ],
-                "r" : "199"
+                "r" : "194"
               },
               "globalScope" : true
             } ],
-            "r" : "200"
+            "r" : "195"
           }
         } ],
-        "localId" : "200",
+        "localId" : "195",
         "locator" : "158:1-163:3",
         "name" : "Most Recent Encounter Location Reference",
         "context" : "Patient",
@@ -6127,12 +5936,12 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "201",
+                "localId" : "196",
                 "locator" : "170:4-170:13",
                 "dataType" : "{http://hl7.org/fhir}Location",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Location"
               },
-              "localId" : "202",
+              "localId" : "197",
               "locator" : "170:4-170:15",
               "alias" : "L"
             } ],
@@ -6146,12 +5955,12 @@
                     "type" : "AliasedQuerySource",
                     "expression" : {
                       "type" : "Property",
-                      "localId" : "203",
+                      "localId" : "198",
                       "locator" : "171:38-171:49",
                       "path" : "identifier",
                       "scope" : "L"
                     },
-                    "localId" : "204",
+                    "localId" : "199",
                     "locator" : "171:38-171:51",
                     "alias" : "I"
                   } ],
@@ -6161,7 +5970,7 @@
                       "type" : "FunctionRef",
                       "operand" : [ {
                         "type" : "Property",
-                        "localId" : "206",
+                        "localId" : "201",
                         "locator" : "171:59-171:66",
                         "path" : "system",
                         "scope" : "I"
@@ -6170,21 +5979,21 @@
                       "libraryName" : "FHIRHelpers"
                     }, {
                       "type" : "Literal",
-                      "localId" : "207",
+                      "localId" : "202",
                       "locator" : "171:70-171:113",
                       "valueType" : "{urn:hl7-org:elm-types:r1}String",
                       "value" : "https://github.com/synthetichealth/synthea"
                     } ],
-                    "localId" : "208",
+                    "localId" : "203",
                     "locator" : "171:53-171:113"
                   },
-                  "localId" : "209",
+                  "localId" : "204",
                   "locator" : "171:37-171:114"
                 },
-                "localId" : "210",
+                "localId" : "205",
                 "locator" : "171:22-171:114"
               },
-              "localId" : "211",
+              "localId" : "206",
               "locator" : "171:10-171:114",
               "identifier" : "identifier"
             } ],
@@ -6194,7 +6003,7 @@
                 "type" : "FunctionRef",
                 "operand" : [ {
                   "type" : "Property",
-                  "localId" : "213",
+                  "localId" : "208",
                   "locator" : "172:12-172:15",
                   "path" : "id",
                   "scope" : "L"
@@ -6211,11 +6020,11 @@
                       "type" : "Property",
                       "source" : {
                         "type" : "ExpressionRef",
-                        "localId" : "214",
+                        "localId" : "209",
                         "locator" : "172:30-172:71",
                         "name" : "Most Recent Encounter Location Reference"
                       },
-                      "localId" : "215",
+                      "localId" : "210",
                       "locator" : "172:30-172:81",
                       "path" : "reference"
                     } ],
@@ -6224,18 +6033,18 @@
                   },
                   "separator" : {
                     "type" : "Literal",
-                    "localId" : "216",
+                    "localId" : "211",
                     "locator" : "172:84-172:86",
                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                     "value" : "/"
                   },
-                  "localId" : "217",
+                  "localId" : "212",
                   "locator" : "172:24-172:87"
                 },
-                "localId" : "218",
+                "localId" : "213",
                 "locator" : "172:19-172:88"
               } ],
-              "localId" : "219",
+              "localId" : "214",
               "locator" : "172:6-172:88"
             },
             "return" : {
@@ -6260,11 +6069,11 @@
                                 "type" : "Property",
                                 "source" : {
                                   "type" : "QueryLetRef",
-                                  "localId" : "220",
+                                  "localId" : "215",
                                   "locator" : "176:32-176:41",
                                   "name" : "identifier"
                                 },
-                                "localId" : "221",
+                                "localId" : "216",
                                 "locator" : "176:32-176:47",
                                 "path" : "value"
                               } ],
@@ -6273,7 +6082,7 @@
                             },
                             "name" : "value"
                           } ],
-                          "localId" : "222",
+                          "localId" : "217",
                           "locator" : "176:18-176:49",
                           "classType" : "{http://hl7.org/fhir}code"
                         },
@@ -6284,36 +6093,36 @@
                           "type" : "Property",
                           "source" : {
                             "type" : "QueryLetRef",
-                            "localId" : "223",
+                            "localId" : "218",
                             "locator" : "177:20-177:29",
                             "name" : "identifier"
                           },
-                          "localId" : "224",
+                          "localId" : "219",
                           "locator" : "177:20-177:36",
                           "path" : "system"
                         },
                         "name" : "system"
                       } ],
-                      "localId" : "225",
+                      "localId" : "220",
                       "locator" : "175:10-178:10",
                       "classType" : "{http://hl7.org/fhir}Coding"
                     } ],
-                    "localId" : "226",
+                    "localId" : "221",
                     "locator" : "174:16-179:8"
                   },
                   "name" : "coding"
                 } ],
-                "localId" : "227",
+                "localId" : "222",
                 "locator" : "173:13-180:6",
                 "classType" : "{http://hl7.org/fhir}CodeableConcept"
               },
-              "localId" : "228",
+              "localId" : "223",
               "locator" : "173:6-180:6"
             },
-            "localId" : "229",
+            "localId" : "224",
             "locator" : "169:17-181:2"
           },
-          "localId" : "230",
+          "localId" : "225",
           "locator" : "169:2-181:2"
         },
         "annotation" : [ {
@@ -6386,11 +6195,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "201"
+                                        "r" : "196"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "201"
+                                    "r" : "196"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -6402,7 +6211,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "202"
+                                "r" : "197"
                               },
                               "globalScope" : true
                             } ]
@@ -6505,7 +6314,7 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "203"
+                                                        "r" : "198"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -6517,7 +6326,7 @@
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "204"
+                                                    "r" : "199"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -6568,7 +6377,7 @@
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "205"
+                                                            "r" : "200"
                                                           },
                                                           "globalScope" : true
                                                         }, {
@@ -6593,11 +6402,11 @@
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "206"
+                                                            "r" : "201"
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "206"
+                                                        "r" : "201"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -6622,19 +6431,19 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "207"
+                                                        "r" : "202"
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "208"
+                                                    "r" : "203"
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "208"
+                                                "r" : "203"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "209"
+                                            "r" : "204"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6646,15 +6455,15 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "209"
+                                        "r" : "204"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "210"
+                                    "r" : "205"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "211"
+                                "r" : "206"
                               },
                               "globalScope" : true
                             } ]
@@ -6705,7 +6514,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "212"
+                                        "r" : "207"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -6730,11 +6539,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "213"
+                                        "r" : "208"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "213"
+                                    "r" : "208"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -6790,7 +6599,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "214"
+                                                "r" : "209"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -6815,11 +6624,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "215"
+                                                "r" : "210"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "215"
+                                            "r" : "210"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6844,7 +6653,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "216"
+                                            "r" : "211"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -6856,7 +6665,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "217"
+                                        "r" : "212"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -6868,15 +6677,15 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "218"
+                                    "r" : "213"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "219"
+                                "r" : "214"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "219"
+                            "r" : "214"
                           },
                           "globalScope" : true
                         }, {
@@ -7010,7 +6819,7 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "220"
+                                                                "r" : "215"
                                                               },
                                                               "globalScope" : true
                                                             }, {
@@ -7035,11 +6844,11 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "221"
+                                                                "r" : "216"
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "221"
+                                                            "r" : "216"
                                                           },
                                                           "globalScope" : true
                                                         } ]
@@ -7054,7 +6863,7 @@
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "222"
+                                                    "r" : "217"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -7100,7 +6909,7 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "223"
+                                                        "r" : "218"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -7125,11 +6934,11 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "224"
+                                                        "r" : "219"
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "224"
+                                                    "r" : "219"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -7144,7 +6953,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "225"
+                                            "r" : "220"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7156,7 +6965,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "226"
+                                        "r" : "221"
                                       },
                                       "globalScope" : true
                                     } ]
@@ -7171,15 +6980,15 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "227"
+                                "r" : "222"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "228"
+                            "r" : "223"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "229"
+                        "r" : "224"
                       },
                       "globalScope" : true
                     }, {
@@ -7191,18 +7000,18 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "229"
+                    "r" : "224"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "230"
+                "r" : "225"
               },
               "globalScope" : true
             } ],
-            "r" : "231"
+            "r" : "226"
           }
         } ],
-        "localId" : "231",
+        "localId" : "226",
         "locator" : "168:1-181:2",
         "name" : "Location Code",
         "context" : "Patient",
@@ -7217,12 +7026,12 @@
               "type" : "AliasedQuerySource",
               "expression" : {
                 "type" : "Retrieve",
-                "localId" : "232",
+                "localId" : "227",
                 "locator" : "185:3-185:12",
                 "dataType" : "{http://hl7.org/fhir}Location",
                 "templateId" : "http://hl7.org/fhir/StructureDefinition/Location"
               },
-              "localId" : "233",
+              "localId" : "228",
               "locator" : "185:3-185:14",
               "alias" : "L"
             } ],
@@ -7232,15 +7041,15 @@
                 "type" : "SingletonFrom",
                 "operand" : {
                   "type" : "Property",
-                  "localId" : "235",
+                  "localId" : "230",
                   "locator" : "186:36-186:49",
                   "path" : "identifier",
                   "scope" : "L"
                 },
-                "localId" : "236",
+                "localId" : "231",
                 "locator" : "186:21-186:49"
               },
-              "localId" : "237",
+              "localId" : "232",
               "locator" : "186:9-186:49",
               "identifier" : "identifier"
             } ],
@@ -7250,7 +7059,7 @@
                 "type" : "FunctionRef",
                 "operand" : [ {
                   "type" : "Property",
-                  "localId" : "239",
+                  "localId" : "234",
                   "locator" : "187:11-187:14",
                   "path" : "id",
                   "scope" : "L"
@@ -7267,11 +7076,11 @@
                       "type" : "Property",
                       "source" : {
                         "type" : "ExpressionRef",
-                        "localId" : "240",
+                        "localId" : "235",
                         "locator" : "187:29-187:70",
                         "name" : "Most Recent Encounter Location Reference"
                       },
-                      "localId" : "241",
+                      "localId" : "236",
                       "locator" : "187:29-187:80",
                       "path" : "reference"
                     } ],
@@ -7280,18 +7089,18 @@
                   },
                   "separator" : {
                     "type" : "Literal",
-                    "localId" : "242",
+                    "localId" : "237",
                     "locator" : "187:83-187:85",
                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                     "value" : "/"
                   },
-                  "localId" : "243",
+                  "localId" : "238",
                   "locator" : "187:23-187:86"
                 },
-                "localId" : "244",
+                "localId" : "239",
                 "locator" : "187:18-187:87"
               } ],
-              "localId" : "245",
+              "localId" : "240",
               "locator" : "187:5-187:87"
             },
             "return" : {
@@ -7316,11 +7125,11 @@
                                 "type" : "Property",
                                 "source" : {
                                   "type" : "QueryLetRef",
-                                  "localId" : "246",
+                                  "localId" : "241",
                                   "locator" : "191:31-191:40",
                                   "name" : "identifier"
                                 },
-                                "localId" : "247",
+                                "localId" : "242",
                                 "locator" : "191:31-191:46",
                                 "path" : "value"
                               } ],
@@ -7329,7 +7138,7 @@
                             },
                             "name" : "value"
                           } ],
-                          "localId" : "248",
+                          "localId" : "243",
                           "locator" : "191:17-191:48",
                           "classType" : "{http://hl7.org/fhir}code"
                         },
@@ -7340,36 +7149,36 @@
                           "type" : "Property",
                           "source" : {
                             "type" : "QueryLetRef",
-                            "localId" : "249",
+                            "localId" : "244",
                             "locator" : "192:19-192:28",
                             "name" : "identifier"
                           },
-                          "localId" : "250",
+                          "localId" : "245",
                           "locator" : "192:19-192:35",
                           "path" : "system"
                         },
                         "name" : "system"
                       } ],
-                      "localId" : "251",
+                      "localId" : "246",
                       "locator" : "190:9-193:9",
                       "classType" : "{http://hl7.org/fhir}Coding"
                     } ],
-                    "localId" : "252",
+                    "localId" : "247",
                     "locator" : "189:15-194:7"
                   },
                   "name" : "coding"
                 } ],
-                "localId" : "253",
+                "localId" : "248",
                 "locator" : "188:12-195:5",
                 "classType" : "{http://hl7.org/fhir}CodeableConcept"
               },
-              "localId" : "254",
+              "localId" : "249",
               "locator" : "188:5-195:5"
             },
-            "localId" : "255",
+            "localId" : "250",
             "locator" : "184:16-196:1"
           },
-          "localId" : "256",
+          "localId" : "251",
           "locator" : "184:1-196:1"
         },
         "annotation" : [ {
@@ -7442,11 +7251,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "232"
+                                        "r" : "227"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "232"
+                                    "r" : "227"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -7458,7 +7267,7 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "233"
+                                "r" : "228"
                               },
                               "globalScope" : true
                             } ]
@@ -7543,7 +7352,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "234"
+                                                "r" : "229"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -7568,11 +7377,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "235"
+                                                "r" : "230"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "235"
+                                            "r" : "230"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7584,15 +7393,15 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "235"
+                                        "r" : "230"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "236"
+                                    "r" : "231"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "237"
+                                "r" : "232"
                               },
                               "globalScope" : true
                             } ]
@@ -7643,7 +7452,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "238"
+                                        "r" : "233"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -7668,11 +7477,11 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "239"
+                                        "r" : "234"
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "239"
+                                    "r" : "234"
                                   },
                                   "globalScope" : true
                                 }, {
@@ -7728,7 +7537,7 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "240"
+                                                "r" : "235"
                                               },
                                               "globalScope" : true
                                             }, {
@@ -7753,11 +7562,11 @@
                                                   },
                                                   "globalScope" : true
                                                 } ],
-                                                "r" : "241"
+                                                "r" : "236"
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "241"
+                                            "r" : "236"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7782,7 +7591,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "242"
+                                            "r" : "237"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -7794,7 +7603,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "243"
+                                        "r" : "238"
                                       },
                                       "globalScope" : true
                                     }, {
@@ -7806,15 +7615,15 @@
                                       },
                                       "globalScope" : true
                                     } ],
-                                    "r" : "244"
+                                    "r" : "239"
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "245"
+                                "r" : "240"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "245"
+                            "r" : "240"
                           },
                           "globalScope" : true
                         }, {
@@ -7948,7 +7757,7 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "246"
+                                                                "r" : "241"
                                                               },
                                                               "globalScope" : true
                                                             }, {
@@ -7973,11 +7782,11 @@
                                                                   },
                                                                   "globalScope" : true
                                                                 } ],
-                                                                "r" : "247"
+                                                                "r" : "242"
                                                               },
                                                               "globalScope" : true
                                                             } ],
-                                                            "r" : "247"
+                                                            "r" : "242"
                                                           },
                                                           "globalScope" : true
                                                         } ]
@@ -7992,7 +7801,7 @@
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "248"
+                                                    "r" : "243"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -8038,7 +7847,7 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "249"
+                                                        "r" : "244"
                                                       },
                                                       "globalScope" : true
                                                     }, {
@@ -8063,11 +7872,11 @@
                                                           },
                                                           "globalScope" : true
                                                         } ],
-                                                        "r" : "250"
+                                                        "r" : "245"
                                                       },
                                                       "globalScope" : true
                                                     } ],
-                                                    "r" : "250"
+                                                    "r" : "245"
                                                   },
                                                   "globalScope" : true
                                                 } ]
@@ -8082,7 +7891,7 @@
                                               },
                                               "globalScope" : true
                                             } ],
-                                            "r" : "251"
+                                            "r" : "246"
                                           },
                                           "globalScope" : true
                                         }, {
@@ -8094,7 +7903,7 @@
                                           },
                                           "globalScope" : true
                                         } ],
-                                        "r" : "252"
+                                        "r" : "247"
                                       },
                                       "globalScope" : true
                                     } ]
@@ -8109,15 +7918,15 @@
                                   },
                                   "globalScope" : true
                                 } ],
-                                "r" : "253"
+                                "r" : "248"
                               },
                               "globalScope" : true
                             } ],
-                            "r" : "254"
+                            "r" : "249"
                           },
                           "globalScope" : true
                         } ],
-                        "r" : "255"
+                        "r" : "250"
                       },
                       "globalScope" : true
                     }, {
@@ -8129,18 +7938,18 @@
                       },
                       "globalScope" : true
                     } ],
-                    "r" : "255"
+                    "r" : "250"
                   },
                   "globalScope" : true
                 } ],
-                "r" : "256"
+                "r" : "251"
               },
               "globalScope" : true
             } ],
-            "r" : "257"
+            "r" : "252"
           }
         } ],
-        "localId" : "257",
+        "localId" : "252",
         "locator" : "183:1-196:1",
         "name" : "Location Code Deux",
         "context" : "Patient",
