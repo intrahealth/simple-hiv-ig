@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="LocationVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-LocationCS.html"><code>https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS</code></a></li></ul></div>
+  </text>
+  <url value="https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS"/>
+  <version value="0.1.0"/>
+  <name value="LocationVS"/>
+  <title value="LocationVS"/>
+  <status value="active"/>
+  <date value="2021-08-10T02:31:36+00:00"/>
+  <publisher value="Digital Health Team"/>
+  <contact>
+    <name value="Digital Health Team"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intrahealth.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@intrahealth.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Digital Health Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@intrahealth.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="LocationVS"/>
+  <compose>
+    <include>
+      <system value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS"/>
+    </include>
+  </compose>
+</ValueSet>

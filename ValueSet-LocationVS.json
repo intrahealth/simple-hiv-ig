@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "LocationVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-LocationCS.html\"><code>https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS</code></a></li></ul></div>"
+  },
+  "url": "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS",
+  "version": "0.1.0",
+  "name": "LocationVS",
+  "title": "LocationVS",
+  "status": "active",
+  "date": "2021-08-10T02:31:36+00:00",
+  "publisher": "Digital Health Team",
+  "contact": [
+    {
+      "name": "Digital Health Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.intrahealth.org"
+        },
+        {
+          "system": "email",
+          "value": "digitalhealth@intrahealth.org"
+        }
+      ]
+    },
+    {
+      "name": "Digital Health Team",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "digitalhealth@intrahealth.org",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "LocationVS",
+  "compose": {
+    "include": [
+      {
+        "system": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS"
+      }
+    ]
+  }
+}

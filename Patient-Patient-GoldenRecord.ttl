@@ -11,7 +11,7 @@
   fhir:Resource.meta [
      fhir:Meta.tag [
        fhir:index 0;
-       fhir:Coding.system [ fhir:value "https://github.com/intrahealth/client-registry" ];
+       fhir:Coding.system [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR" ];
        fhir:Coding.code [ fhir:value "1234" ];
        fhir:Coding.display [ fhir:value "Golden Record" ]
      ]

@@ -133,7 +133,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="CodeSystem-opencr-codesystem.html">next&gt;</a>
+          | <a href="ValueSet-LocationVS.html">next&gt;</a>
 
           </span>
 
@@ -165,13 +165,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Terminology: Code Systems</a>
+         <a href="#1">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#2">Knowledge Artifacts: Libraries</a>
+         <a href="#2">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#3">Example: Example Instances</a>
+         <a href="#3">Knowledge Artifacts: Libraries</a>
+      </li>
+      <li>
+         <a href="#4">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -180,6 +183,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Terminology: Value Sets </h3>
+   <p>
+    <p>These define sets of codes used by systems conforming to this implementation guide</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-LocationVS.html" title="ValueSet/LocationVS">LocationVS</a>
+               </td>
+               <td>
+<p>LocationVS</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="2"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>
     <p>These define new code systems used by systems conforming to this implementation guide</p>
@@ -190,8 +213,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="CodeSystem-opencr-codesystem.html"
-                     title="CodeSystem/opencr-codesystem">OpenCR CodeSystem</a>
+                  <a href="CodeSystem-LocationCS.html" title="CodeSystem/LocationCS">LocationCS</a>
+               </td>
+               <td>
+<p>LocationCS</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CodeSystem-OpenCR.html" title="CodeSystem/OpenCR">OpenCR CodeSystem</a>
                </td>
                <td>
 <p>OpenCR CodeSystem</p>
@@ -199,8 +229,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="CodeSystem-openhie-codesystem.html"
-                     title="CodeSystem/openhie-codesystem">OpenHIE CodeSystem</a>
+                  <a href="CodeSystem-OpenHIE.html" title="CodeSystem/OpenHIE">OpenHIE CodeSystem</a>
                </td>
                <td>
 <p>OpenHIE CodeSystem</p>
@@ -209,7 +238,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Knowledge Artifacts: Libraries </h3>
    <p>
     <p>These define logic, asset collections and other libraries as part of content in this implementation guide</p>
@@ -226,18 +255,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Model definition for the FHIR R4 (v4.0.1) Model</p>
 </td>
             </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Library-FHIRHelpers.html" title="Library/FHIRHelpers">FHIR Helpers</a>
-               </td>
-               <td>
-<p>This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers</p>
-</td>
-            </tr>
          </tbody>
       </table>
    </p>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Example: Example Instances </h3>
    <p>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
@@ -283,6 +304,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Condition-Condition-Pregnancy2.html"
+                     title="Condition/Condition-Pregnancy2">Condition-Pregnancy</a>
+               </td>
+               <td>
+<p>Condition-Pregnancy</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="DiagnosticReport-DiagnosticReport-HIVSimple.html"
                      title="DiagnosticReport/DiagnosticReport-HIVSimple">DiagnosticReport-HIVSimple</a>
                </td>
@@ -303,6 +333,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <td style="column-width:30%">
                   <a href="DiagnosticReport-DiagnosticReport-ViralLoad.html"
                      title="DiagnosticReport/DiagnosticReport-ViralLoad">DiagnosticReport-ViralLoad</a>
+               </td>
+               <td>
+<p>DiagnosticReport-ViralLoad</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="DiagnosticReport-DiagnosticReport-ViralLoad2.html"
+                     title="DiagnosticReport/DiagnosticReport-ViralLoad2">DiagnosticReport-ViralLoad</a>
                </td>
                <td>
 <p>DiagnosticReport-ViralLoad</p>
@@ -337,6 +376,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Encounter-Encounter-ViralLoad2.html"
+                     title="Encounter/Encounter-ViralLoad2">Encounter-ViralLoad</a>
+               </td>
+               <td>
+<p>Encounter-ViralLoad</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Bundle-Example-HIVSimple.html" title="Bundle/Example-HIVSimple">Example-HIVSimple</a>
                </td>
                <td>
@@ -357,6 +405,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>FHIRCommon</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Library-FHIRHelpers.html" title="Library/FHIRHelpers">FHIRHelpers</a>
+               </td>
+               <td>
+<p>FHIRHelpers</p>
 </td>
             </tr>
             <tr>
@@ -492,6 +548,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Observation-Observation-ViralLoad2.html"
+                     title="Observation/Observation-ViralLoad2">Observation-ViralLoad</a>
+               </td>
+               <td>
+<p>Observation-ViralLoad</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Organization-Organization-HIVSimple.html"
                      title="Organization/Organization-HIVSimple">Organization-HIVSimple</a>
                </td>
@@ -573,7 +638,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="CodeSystem-opencr-codesystem.html">next&gt;</a>
+                <a href="ValueSet-LocationVS.html">next&gt;</a>
 
               </td>
             </tr>
@@ -584,7 +649,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.intrahealth.org">Digital Health Team</a>.  Package simple.hiv.ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 4, 2021 15:18+0000">2021-08-04</span>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.intrahealth.org">Digital Health Team</a>.  Package simple.hiv.ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 10, 2021 02:31+0000">2021-08-10</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

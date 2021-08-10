@@ -52,11 +52,15 @@
         "id": "Location-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple, id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
         },
         "identifier": [
           {
             "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-HIVSimple"
+          },
+          {
+            "system": "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS",
             "value": "Location-HIVSimple"
           }
         ],

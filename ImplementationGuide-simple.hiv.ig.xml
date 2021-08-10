@@ -10,7 +10,7 @@
   <name value="SimpleHIVIG"/>
   <title value="HIV Simple IG"/>
   <status value="draft"/>
-  <date value="2021-08-04T15:18:49+00:00"/>
+  <date value="2021-08-10T02:31:36+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>
@@ -245,10 +245,32 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/LocationVS"/>
+      </reference>
+      <name value="LocationVS"/>
+      <description value="LocationVS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/opencr-codesystem"/>
+        <reference value="CodeSystem/LocationCS"/>
+      </reference>
+      <name value="LocationCS"/>
+      <description value="LocationCS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/OpenCR"/>
       </reference>
       <name value="OpenCR CodeSystem"/>
       <description value="OpenCR CodeSystem"/>
@@ -259,7 +281,7 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/openhie-codesystem"/>
+        <reference value="CodeSystem/OpenHIE"/>
       </reference>
       <name value="OpenHIE CodeSystem"/>
       <description value="OpenHIE CodeSystem"/>
@@ -311,6 +333,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/Condition-Pregnancy2"/>
+      </reference>
+      <name value="Condition-Pregnancy"/>
+      <description value="Condition-Pregnancy"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="DiagnosticReport"/>
       </extension>
       <reference>
@@ -337,6 +370,17 @@
       </extension>
       <reference>
         <reference value="DiagnosticReport/DiagnosticReport-ViralLoad"/>
+      </reference>
+      <name value="DiagnosticReport-ViralLoad"/>
+      <description value="DiagnosticReport-ViralLoad"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-ViralLoad2"/>
       </reference>
       <name value="DiagnosticReport-ViralLoad"/>
       <description value="DiagnosticReport-ViralLoad"/>
@@ -377,6 +421,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/Encounter-ViralLoad2"/>
+      </reference>
+      <name value="Encounter-ViralLoad"/>
+      <description value="Encounter-ViralLoad"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
@@ -406,6 +461,17 @@
       </reference>
       <name value="FHIRCommon"/>
       <description value="FHIRCommon"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/FHIRHelpers"/>
+      </reference>
+      <name value="FHIRHelpers"/>
+      <description value="FHIRHelpers"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -575,6 +641,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Observation-ViralLoad2"/>
+      </reference>
+      <name value="Observation-ViralLoad"/>
+      <description value="Observation-ViralLoad"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
@@ -637,17 +714,6 @@
       </reference>
       <name value="FHIR Model Definition"/>
       <description value="Model definition for the FHIR R4 (v4.0.1) Model"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Library"/>
-      </extension>
-      <reference>
-        <reference value="Library/FHIRHelpers"/>
-      </reference>
-      <name value="FHIR Helpers"/>
-      <description value="This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

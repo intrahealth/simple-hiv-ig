@@ -10,7 +10,7 @@
   "name": "SimpleHIVIG",
   "title": "HIV Simple IG",
   "status": "draft",
-  "date": "2021-08-04T15:18:49+00:00",
+  "date": "2021-08-10T02:31:36+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {
@@ -388,11 +388,39 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/LocationVS"
+        },
+        "name": "LocationVS",
+        "description": "LocationVS",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CodeSystem"
           }
         ],
         "reference": {
-          "reference": "CodeSystem/opencr-codesystem"
+          "reference": "CodeSystem/LocationCS"
+        },
+        "name": "LocationCS",
+        "description": "LocationCS",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/OpenCR"
         },
         "name": "OpenCR CodeSystem",
         "description": "OpenCR CodeSystem",
@@ -406,7 +434,7 @@
           }
         ],
         "reference": {
-          "reference": "CodeSystem/openhie-codesystem"
+          "reference": "CodeSystem/OpenHIE"
         },
         "name": "OpenHIE CodeSystem",
         "description": "OpenHIE CodeSystem",
@@ -472,6 +500,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Condition"
+          }
+        ],
+        "reference": {
+          "reference": "Condition/Condition-Pregnancy2"
+        },
+        "name": "Condition-Pregnancy",
+        "description": "Condition-Pregnancy",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "DiagnosticReport"
           }
         ],
@@ -505,6 +547,20 @@
         ],
         "reference": {
           "reference": "DiagnosticReport/DiagnosticReport-ViralLoad"
+        },
+        "name": "DiagnosticReport-ViralLoad",
+        "description": "DiagnosticReport-ViralLoad",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DiagnosticReport"
+          }
+        ],
+        "reference": {
+          "reference": "DiagnosticReport/DiagnosticReport-ViralLoad2"
         },
         "name": "DiagnosticReport-ViralLoad",
         "description": "DiagnosticReport-ViralLoad",
@@ -556,6 +612,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Encounter"
+          }
+        ],
+        "reference": {
+          "reference": "Encounter/Encounter-ViralLoad2"
+        },
+        "name": "Encounter-ViralLoad",
+        "description": "Encounter-ViralLoad",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Bundle"
           }
         ],
@@ -592,6 +662,20 @@
         },
         "name": "FHIRCommon",
         "description": "FHIRCommon",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/FHIRHelpers"
+        },
+        "name": "FHIRHelpers",
+        "description": "FHIRHelpers",
         "exampleBoolean": true
       },
       {
@@ -808,6 +892,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Observation-ViralLoad2"
+        },
+        "name": "Observation-ViralLoad",
+        "description": "Observation-ViralLoad",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Organization"
           }
         ],
@@ -886,20 +984,6 @@
         },
         "name": "FHIR Model Definition",
         "description": "Model definition for the FHIR R4 (v4.0.1) Model",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/FHIRHelpers"
-        },
-        "name": "FHIR Helpers",
-        "description": "This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers",
         "exampleBoolean": false
       }
     ],

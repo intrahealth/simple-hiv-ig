@@ -3,11 +3,15 @@
 <Location xmlns="http://hl7.org/fhir">
   <id value="Location-HIVSimple2"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <a href="Organization-Organization-HIVSimple2.html">Generated Summary: name: Government Hospital</a></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple2, id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href="Organization-Organization-HIVSimple2.html">Generated Summary: name: Government Hospital</a></p></div>
   </text>
   <identifier>
     <system value="https://github.com/synthetichealth/synthea"/>
     <value value="Location-HIVSimple2"/>
+  </identifier>
+  <identifier>
+    <system value="https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS"/>
+    <value value="Location-HIVSimple"/>
   </identifier>
   <managingOrganization>
     <reference value="Organization/Organization-HIVSimple2"/>

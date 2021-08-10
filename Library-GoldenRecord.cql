@@ -17,12 +17,22 @@ code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA
 context Patient
 
 define "LinkedPatients":
+  // returns a list of fhir.references
   Patient.link.other
 
+/* evaluates correctly to LinkedPatients=[Reference, Reference] */
 
 context Unfiltered
 
+define "GetPatientSomething":
+  // works for last patient
+  Last(Split(("LinkedPatients"[0] as FHIR.Reference).reference, '/'))
 
-// cql engine may not evaluate across test patient bundles
-/* define "LinkedEncounters":
-  "LinkedPatients".Patient.Encounter */
+define "Hey":
+  Split(("LinkedPatients"[0] as FHIR.Reference).reference, '/')
+
+//define "Moar":
+  // for every linked patient, pull out the Id of the reference, then grab the patient with that Id.
+  // for every MedicationRequest, pull out the Id of the reference, then grab the Medication with that Id.
+  // let Med: [Medication: id in (Last(Split((Rx.medication as FHIR.Reference).reference, '/')))]
+  //("LinkedPatients"([FHIR.string])) Rx

@@ -4,7 +4,7 @@
   <id value="Patient-GoldenRecord"/>
   <meta>
     <tag>
-      <system value="https://github.com/intrahealth/client-registry"/>
+      <system value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR"/>
       <code value="1234"/>
       <display value="Golden Record"/>
     </tag>

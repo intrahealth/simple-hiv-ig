@@ -1,17 +1,24 @@
 [
   {
-    "id": "openhie-codesystem",
+    "id": "LocationCS",
     "type": "CodeSystem",
-    "url": "http://ohie.org/CodeSystem",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS",
     "version": "0.1.0",
-    "name": "OpenHIE"
+    "name": "LocationCS"
   },
   {
-    "id": "opencr-codesystem",
+    "id": "OpenCR",
     "type": "CodeSystem",
-    "url": "https://github.com/intrahealth/client-registry",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR",
     "version": "0.1.0",
     "name": "OpenCR"
+  },
+  {
+    "id": "OpenHIE",
+    "type": "CodeSystem",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE",
+    "version": "0.1.0",
+    "name": "OpenHIE"
   },
   {
     "id": "simple.hiv.ig",
@@ -117,5 +124,12 @@
     "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult",
     "version": "0.1.0",
     "name": "HIVSimpleTestResult"
+  },
+  {
+    "id": "LocationVS",
+    "type": "ValueSet",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS",
+    "version": "0.1.0",
+    "name": "LocationVS"
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "OpenCR",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1234<a name=\"OpenCR-1234\"> </a></td><td>Golden Record</td></tr></table></div>"
+  },
+  "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR",
+  "version": "0.1.0",
+  "name": "OpenCR",
+  "title": "OpenCR CodeSystem",
+  "status": "active",
+  "date": "2021-08-10T02:31:36+00:00",
+  "publisher": "Digital Health Team",
+  "contact": [
+    {
+      "name": "Digital Health Team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.intrahealth.org"
+        },
+        {
+          "system": "email",
+          "value": "digitalhealth@intrahealth.org"
+        }
+      ]
+    },
+    {
+      "name": "Digital Health Team",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "digitalhealth@intrahealth.org",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "OpenCR CodeSystem",
+  "content": "complete",
+  "count": 1,
+  "concept": [
+    {
+      "code": "1234",
+      "display": "Golden Record"
+    }
+  ]
+}

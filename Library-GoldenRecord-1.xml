@@ -116,7 +116,7 @@
    </codes>
    <contexts>
       <def locator="17:1-17:15" name="Patient"/>
-      <def locator="23:1-23:18" name="Unfiltered"/>
+      <def locator="25:1-25:18" name="Unfiltered"/>
    </contexts>
    <statements>
       <def locator="17:1-17:15" name="Patient" context="Patient">
@@ -124,10 +124,11 @@
             <operand locator="17:1-17:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
          </expression>
       </def>
-      <def localId="18" locator="19:1-20:20" name="LinkedPatients" context="Patient" accessLevel="Public">
+      <def localId="18" locator="19:1-21:20" name="LinkedPatients" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
             <a:s r="18">
                <a:s>define &quot;LinkedPatients&quot;:
+  // returns a list of fhir.references
   </a:s>
                <a:s r="17">
                   <a:s r="16">
@@ -146,10 +147,10 @@
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="17" locator="20:3-20:20" xsi:type="Query">
+         <expression localId="17" locator="21:3-21:20" xsi:type="Query">
             <source alias="$this">
-               <expression localId="16" locator="20:3-20:14" path="link" xsi:type="Property">
-                  <source localId="15" locator="20:3-20:9" name="Patient" xsi:type="ExpressionRef"/>
+               <expression localId="16" locator="21:3-21:14" path="link" xsi:type="Property">
+                  <source localId="15" locator="21:3-21:9" name="Patient" xsi:type="ExpressionRef"/>
                </expression>
             </source>
             <where xsi:type="Not">
@@ -164,6 +165,117 @@
                   <source name="$this" xsi:type="AliasRef"/>
                </expression>
             </return>
+         </expression>
+      </def>
+      <def localId="28" locator="27:1-29:69" name="GetPatientSomething" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="28">
+               <a:s>define &quot;GetPatientSomething&quot;:
+  // works for last patient
+  </a:s>
+               <a:s r="27">
+                  <a:s>Last(</a:s>
+                  <a:s r="26">
+                     <a:s>Split(</a:s>
+                     <a:s r="24">
+                        <a:s r="23">
+                           <a:s>(</a:s>
+                           <a:s r="23">
+                              <a:s r="21">
+                                 <a:s r="19">
+                                    <a:s>&quot;LinkedPatients&quot;</a:s>
+                                 </a:s>
+                                 <a:s r="20">[0]</a:s>
+                              </a:s>
+                              <a:s> as </a:s>
+                              <a:s r="22">
+                                 <a:s>FHIR.Reference</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="24">
+                           <a:s>reference</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>, </a:s>
+                     <a:s r="25">
+                        <a:s>'/'</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="27" locator="29:3-29:69" xsi:type="Last">
+            <source localId="26" locator="29:8-29:68" xsi:type="Split">
+               <stringToSplit name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="24" locator="29:14-29:62" path="reference" xsi:type="Property">
+                     <source localId="23" locator="29:14-29:52" strict="false" xsi:type="As">
+                        <operand localId="21" locator="29:15-29:33" xsi:type="Indexer">
+                           <operand localId="19" locator="29:15-29:30" name="LinkedPatients" xsi:type="ExpressionRef"/>
+                           <operand localId="20" locator="29:32" valueType="t:Integer" value="0" xsi:type="Literal"/>
+                        </operand>
+                        <asTypeSpecifier localId="22" locator="29:38-29:51" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                     </source>
+                  </operand>
+               </stringToSplit>
+               <separator localId="25" locator="29:65-29:67" valueType="t:String" value="/" xsi:type="Literal"/>
+            </source>
+         </expression>
+      </def>
+      <def localId="37" locator="31:1-32:63" name="Hey" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="37">
+               <a:s>define &quot;Hey&quot;:
+  </a:s>
+               <a:s r="36">
+                  <a:s>Split(</a:s>
+                  <a:s r="34">
+                     <a:s r="33">
+                        <a:s>(</a:s>
+                        <a:s r="33">
+                           <a:s r="31">
+                              <a:s r="29">
+                                 <a:s>&quot;LinkedPatients&quot;</a:s>
+                              </a:s>
+                              <a:s r="30">[0]</a:s>
+                           </a:s>
+                           <a:s> as </a:s>
+                           <a:s r="32">
+                              <a:s>FHIR.Reference</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="34">
+                        <a:s>reference</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="35">
+                     <a:s>'/'</a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="36" locator="32:3-32:63" xsi:type="Split">
+            <stringToSplit name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="34" locator="32:9-32:57" path="reference" xsi:type="Property">
+                  <source localId="33" locator="32:9-32:47" strict="false" xsi:type="As">
+                     <operand localId="31" locator="32:10-32:28" xsi:type="Indexer">
+                        <operand localId="29" locator="32:10-32:25" name="LinkedPatients" xsi:type="ExpressionRef"/>
+                        <operand localId="30" locator="32:27" valueType="t:Integer" value="0" xsi:type="Literal"/>
+                     </operand>
+                     <asTypeSpecifier localId="32" locator="32:33-32:46" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                  </source>
+               </operand>
+            </stringToSplit>
+            <separator localId="35" locator="32:60-32:62" valueType="t:String" value="/" xsi:type="Literal"/>
          </expression>
       </def>
    </statements>

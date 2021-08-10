@@ -1,9 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="194fce2a-ac64-4d62-9e87-71f8a919a536"/>
+  <id value="8e92dfd8-e115-4a44-ae25-4845092bfaa6"/>
   <meta>
-    <lastUpdated value="2021-08-04T15:18:49.635+00:00"/>
+    <lastUpdated value="2021-08-10T02:31:36.516+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS"/>
+    <resource>
+      <ValueSet>
+        <id value="LocationVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-LocationCS.html">LocationCS v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>All codes from system 
+              <a href="CodeSystem-LocationCS.html">
+                <code>https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---intrahealth.github.io-simple-hiv-ig-CodeSystem-LocationCS-Location-HIVSimple"> </a>
+                  <a href="CodeSystem-LocationCS.html#LocationCS-Location-HIVSimple">Location-HIVSimple</a>
+                </td>
+                <td>Location-HIVSimple</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---intrahealth.github.io-simple-hiv-ig-CodeSystem-LocationCS-Location-HIVSimple2"> </a>
+                  <a href="CodeSystem-LocationCS.html#LocationCS-Location-HIVSimple2">Location-HIVSimple2</a>
+                </td>
+                <td>Location-HIVSimple2</td>
+                <td/>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS"/>
+        <version value="0.1.0"/>
+        <name value="LocationVS"/>
+        <title value="LocationVS"/>
+        <status value="active"/>
+        <date value="2021-08-10T02:31:36+00:00"/>
+        <publisher value="Digital Health Team"/>
+        <contact>
+          <name value="Digital Health Team"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.intrahealth.org"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="digitalhealth@intrahealth.org"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Digital Health Team"/>
+          <telecom>
+            <system value="email"/>
+            <value value="digitalhealth@intrahealth.org"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="LocationVS"/>
+        <expansion>
+          <identifier value="urn:uuid:f72aaf25-4ff0-464c-bbde-d83dd8ca7960"/>
+          <timestamp value="2021-08-10T02:31:45+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS"/>
+            <code value="Location-HIVSimple"/>
+            <display value="Location-HIVSimple"/>
+          </contains>
+          <contains>
+            <system value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS"/>
+            <code value="Location-HIVSimple2"/>
+            <display value="Location-HIVSimple2"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>

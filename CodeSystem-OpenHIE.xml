@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="OpenHIE"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">cohort<a name="OpenHIE-cohort"> </a></td><td>cohort</td></tr></table></div>
+  </text>
+  <url value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE"/>
+  <version value="0.1.0"/>
+  <name value="OpenHIE"/>
+  <title value="OpenHIE CodeSystem"/>
+  <status value="active"/>
+  <date value="2021-08-10T02:31:36+00:00"/>
+  <publisher value="Digital Health Team"/>
+  <contact>
+    <name value="Digital Health Team"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intrahealth.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@intrahealth.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Digital Health Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@intrahealth.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="OpenHIE CodeSystem"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="cohort"/>
+    <display value="cohort"/>
+  </concept>
+</CodeSystem>
