@@ -1,7 +1,3 @@
-// Usage: #example is default
-
-// common to all clinical resources
-
 Instance:     Patient-HIVSimple2
 InstanceOf:   Patient
 Title: "Patient-HIVSimple2"
@@ -23,8 +19,13 @@ InstanceOf: Location
 Title: "Location-HIVSimple2"
 Description: "Location-HIVSimple2"
 * managingOrganization = Reference(Organization-HIVSimple2)
-* identifier.system = "https://github.com/synthetichealth/synthea"
-* identifier.value = "Location-HIVSimple2"
+// * identifier.system = "https://github.com/synthetichealth/synthea"
+// * identifier.value = "Location-HIVSimple2"
+* identifier[+].system = $synthea
+* identifier[=].value = "Location-HIVSimple2"
+* identifier[+].system = $HIVVS
+* identifier[=].value = #Location-HIVSimple
+
 
 // conditions
 
@@ -39,7 +40,7 @@ Description: "Condition-HIVSimple2"
 * code = $SCT#86406008 "HIV - Human immunodeficiency virus infection"
 * onsetDateTime = "2010-01-01"
 
-Instance: Condition-Pregnancy
+Instance: Condition-Pregnancy2
 InstanceOf: Condition
 Title: "Condition-Pregnancy"
 Description: "Condition-Pregnancy"
@@ -56,7 +57,6 @@ Instance: Encounter-HIVSimple2
 InstanceOf: Encounter
 Title: "Encounter-HIVSimple2"
 Description: "Encounter-HIVSimple2"
-Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple2)
@@ -87,7 +87,7 @@ Description: "Observation-HIVSimple2"
 
 // hiv viral load
 
-Instance: Encounter-ViralLoad
+Instance: Encounter-ViralLoad2
 InstanceOf: Encounter
 Title: "Encounter-ViralLoad"
 Description: "Encounter-ViralLoad"
@@ -100,7 +100,7 @@ Usage: #example
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
 
-Instance: DiagnosticReport-ViralLoad
+Instance: DiagnosticReport-ViralLoad2
 InstanceOf: DiagnosticReport
 Title: "DiagnosticReport-ViralLoad"
 Description: "DiagnosticReport-ViralLoad"
@@ -111,7 +111,7 @@ Description: "DiagnosticReport-ViralLoad"
 * result = Reference(Observation-ViralLoad)
 * code = $LNC#25836-8 "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
 
-Instance: Observation-ViralLoad
+Instance: Observation-ViralLoad2
 InstanceOf: Observation
 Title: "Observation-ViralLoad"
 Description: "Observation-ViralLoad"
@@ -136,59 +136,59 @@ Description: "Example-HIVSimple2"
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple2"
 * entry[=].request.url = "Patient"
-* entry[=].request.method = #POST
 * entry[=].resource = Patient-HIVSimple2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2"
 * entry[=].request.url = "Organization"
-* entry[=].request.method = #POST
 * entry[=].resource = Organization-HIVSimple2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2"
 * entry[=].request.url = "Location"
-* entry[=].request.method = #POST
 * entry[=].resource = Location-HIVSimple2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2"
 * entry[=].request.url = "Condition"
-* entry[=].request.method = #POST
 * entry[=].resource = Condition-HIVSimple2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy"
 * entry[=].request.url = "Condition"
-* entry[=].request.method = #POST
-* entry[=].resource = Condition-Pregnancy
+* entry[=].resource = Condition-Pregnancy2
+* insert patient-bundle
 
 // encounter for hiv test
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2"
 * entry[=].request.url = "Encounter"
-* entry[=].request.method = #POST
 * entry[=].resource = Encounter-HIVSimple2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2"
 * entry[=].request.url = "DiagnosticReport"
-* entry[=].request.method = #POST
 * entry[=].resource = DiagnosticReport-HIVSimple2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2"
 * entry[=].request.url = "Observation"
-* entry[=].request.method = #POST
 * entry[=].resource = Observation-HIVSimple2
+* insert patient-bundle
 
 // encounter for viral load
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad"
 * entry[=].request.url = "Encounter"
-* entry[=].request.method = #POST
-* entry[=].resource = Encounter-ViralLoad
+* entry[=].resource = Encounter-ViralLoad2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad"
 * entry[=].request.url = "DiagnosticReport"
-* entry[=].request.method = #POST
-* entry[=].resource = DiagnosticReport-ViralLoad
+* entry[=].resource = DiagnosticReport-ViralLoad2
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad"
 * entry[=].request.url = "Observation"
-* entry[=].request.method = #POST
-* entry[=].resource = Observation-ViralLoad
+* entry[=].resource = Observation-ViralLoad2
+* insert patient-bundle

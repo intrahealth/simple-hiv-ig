@@ -679,3 +679,512 @@ Location Code=CodeableConcept
 Location Code Deux=CodeableConcept
 
 elapsed: 1.284 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+
+The following errors were encountered during evaluation:
+java.lang.IllegalArgumentException: Unable to locate ValueSet https://intrahealth.github.io/simple-hiv-ig/CodeSystem
+	at org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider.expand(BundleTerminologyProvider.java:80)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PriorityTerminologyProvider.lambda$expand$0(PriorityTerminologyProvider.java:43)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PriorityTerminologyProvider.expand(PriorityTerminologyProvider.java:43)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.expand(PrivateCachingTerminologyProviderDecorator.java:47)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.in(PrivateCachingTerminologyProviderDecorator.java:25)
+	at org.opencds.cqf.cql.engine.elm.execution.InValueSetEvaluator.inValueSet(InValueSetEvaluator.java:63)
+	at org.opencds.cqf.cql.engine.elm.execution.InValueSetEvaluator.internalEvaluate(InValueSetEvaluator.java:87)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.evaluateWhere(QueryEvaluator.java:75)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:198)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:184)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:162)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:149)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:32)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCql(CqlWorkspaceService.java:156)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+org.opencds.cqf.cql.engine.exception.CqlException: Unexpected exception caught during execution: java.lang.IllegalArgumentException: Unable to locate ValueSet https://intrahealth.github.io/simple-hiv-ig/CodeSystem
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:37)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.evaluateWhere(QueryEvaluator.java:75)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:198)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:184)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:162)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:149)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:32)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCql(CqlWorkspaceService.java:156)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+elapsed: 6.844 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+
+The following errors were encountered during evaluation:
+java.lang.IllegalArgumentException: Unable to locate ValueSet https://intrahealth.github.io/simple-hiv-ig/CodeSystem
+	at org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider.expand(BundleTerminologyProvider.java:80)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PriorityTerminologyProvider.lambda$expand$0(PriorityTerminologyProvider.java:43)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PriorityTerminologyProvider.expand(PriorityTerminologyProvider.java:43)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.expand(PrivateCachingTerminologyProviderDecorator.java:47)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.in(PrivateCachingTerminologyProviderDecorator.java:25)
+	at org.opencds.cqf.cql.engine.elm.execution.InValueSetEvaluator.inValueSet(InValueSetEvaluator.java:63)
+	at org.opencds.cqf.cql.engine.elm.execution.InValueSetEvaluator.internalEvaluate(InValueSetEvaluator.java:87)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.evaluateWhere(QueryEvaluator.java:75)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:198)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:184)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:162)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:149)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:32)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCql(CqlWorkspaceService.java:156)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+org.opencds.cqf.cql.engine.exception.CqlException: Unexpected exception caught during execution: java.lang.IllegalArgumentException: Unable to locate ValueSet https://intrahealth.github.io/simple-hiv-ig/CodeSystem
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:37)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.evaluateWhere(QueryEvaluator.java:75)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:198)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:184)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:162)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:149)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:32)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCql(CqlWorkspaceService.java:156)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+elapsed: 1.086 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+
+The following errors were encountered during evaluation:
+java.lang.IllegalArgumentException: Unable to locate ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS
+	at org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider.expand(BundleTerminologyProvider.java:80)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PriorityTerminologyProvider.lambda$expand$0(PriorityTerminologyProvider.java:43)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PriorityTerminologyProvider.expand(PriorityTerminologyProvider.java:43)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.expand(PrivateCachingTerminologyProviderDecorator.java:47)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.in(PrivateCachingTerminologyProviderDecorator.java:25)
+	at org.opencds.cqf.cql.engine.elm.execution.InValueSetEvaluator.inValueSet(InValueSetEvaluator.java:63)
+	at org.opencds.cqf.cql.engine.elm.execution.InValueSetEvaluator.internalEvaluate(InValueSetEvaluator.java:87)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.evaluateWhere(QueryEvaluator.java:75)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:198)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:184)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:162)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:149)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:32)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCql(CqlWorkspaceService.java:156)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+org.opencds.cqf.cql.engine.exception.CqlException: Unexpected exception caught during execution: java.lang.IllegalArgumentException: Unable to locate ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:37)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.evaluateWhere(QueryEvaluator.java:75)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:198)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:184)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:162)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:149)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:32)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCql(CqlWorkspaceService.java:156)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+elapsed: 1.172 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+Stratifier Has Observation with Code=false
+
+Patient=Patient(id=Patient-HIVSimple2)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=false
+Viral Load Test Result=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple2)
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+Stratifier Has Observation with Code=false
+
+elapsed: 1.221 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+Stratifier Has Observation with Code=false
+Stratifier Has Encounter with Location=Encounter(id=Encounter-ViralLoad)
+
+Patient=Patient(id=Patient-HIVSimple2)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=false
+Viral Load Test Result=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple2)
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+Stratifier Has Observation with Code=false
+Stratifier Has Encounter with Location=Encounter(id=Encounter-HIVSimple2)
+
+elapsed: 1.397 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+Stratifier Has Observation with Code=false
+Stratifier Has Location with Code=false
+
+Patient=Patient(id=Patient-HIVSimple2)
+Sex=female
+Female=true
+Male=false
+Age Group/Sex=P35Y--P40Y:female
+Age Group=Code { code: P35Y--P40Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 35-39 year }
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=false
+Viral Load Test Result=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple2)
+Most Recent Encounter Location Reference=Reference
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+Stratifier Has Observation with Code=false
+Stratifier Has Location with Code=false
+
+elapsed: 1.384 seconds

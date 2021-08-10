@@ -10,7 +10,9 @@ fhirVersion: 4.0.1
 # no tailing slash
 # canonical: https://worldhealthorganization.github.io/ddcc
 canonical: https://intrahealth.github.io/simple-hiv-ig
+
 # FSHOnly: true
+
 copyrightYear: 2021+
 releaseLabel: ci-build
 title: "HIV Simple IG"

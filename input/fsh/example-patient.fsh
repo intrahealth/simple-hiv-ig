@@ -1,7 +1,3 @@
-// Usage: #example is default
-
-// common to all clinical resources
-
 Instance:     Patient-HIVSimple
 InstanceOf:   Patient
 Title: "Patient-HIVSimple"
@@ -23,8 +19,10 @@ InstanceOf: Location
 Title: "Location-HIVSimple"
 Description: "Location-HIVSimple"
 * managingOrganization = Reference(Organization-HIVSimple)
-* identifier.system = "https://github.com/synthetichealth/synthea"
-* identifier.value = "Location-HIVSimple"
+* identifier[+].system = $synthea
+* identifier[=].value = "Location-HIVSimple"
+* identifier[+].system = $HIVVS
+* identifier[=].value = #Location-HIVSimple
 
 // conditions
 
@@ -56,7 +54,6 @@ Instance: Encounter-HIVSimple
 InstanceOf: Encounter
 Title: "Encounter-HIVSimple"
 Description: "Encounter-HIVSimple"
-Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple)
@@ -137,59 +134,59 @@ Description: "Example-HIVSimple"
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple"
 * entry[=].request.url = "Patient"
-* entry[=].request.method = #POST
 * entry[=].resource = Patient-HIVSimple
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"
 * entry[=].request.url = "Organization"
-* entry[=].request.method = #POST
 * entry[=].resource = Organization-HIVSimple
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
 * entry[=].request.url = "Location"
-* entry[=].request.method = #POST
 * entry[=].resource = Location-HIVSimple
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple"
 * entry[=].request.url = "Condition"
-* entry[=].request.method = #POST
 * entry[=].resource = Condition-HIVSimple
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy"
 * entry[=].request.url = "Condition"
-* entry[=].request.method = #POST
 * entry[=].resource = Condition-Pregnancy
+* insert patient-bundle
 
 // encounter for hiv test
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple"
 * entry[=].request.url = "Encounter"
-* entry[=].request.method = #POST
 * entry[=].resource = Encounter-HIVSimple
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple"
 * entry[=].request.url = "DiagnosticReport"
-* entry[=].request.method = #POST
 * entry[=].resource = DiagnosticReport-HIVSimple
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple"
 * entry[=].request.url = "Observation"
-* entry[=].request.method = #POST
 * entry[=].resource = Observation-HIVSimple
+* insert patient-bundle
 
 // encounter for viral load
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad"
 * entry[=].request.url = "Encounter"
-* entry[=].request.method = #POST
 * entry[=].resource = Encounter-ViralLoad
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad"
 * entry[=].request.url = "DiagnosticReport"
-* entry[=].request.method = #POST
 * entry[=].resource = DiagnosticReport-ViralLoad
+* insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad"
 * entry[=].request.url = "Observation"
-* entry[=].request.method = #POST
 * entry[=].resource = Observation-ViralLoad
+* insert patient-bundle

@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Mon, Aug 2, 2021 16:05+0000 for FHIR v4.6.0 
+  Generated on Mon, Aug 9, 2021 13:37+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -13365,7 +13365,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Specifics for when this is an interaction.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="population" minOccurs="0" maxOccurs="unbounded" type="Population">
+          <xs:element name="population" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The population group to which this applies.</xs:documentation>
            </xs:annotation>
@@ -22253,50 +22253,9 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">Lower bound of confidence interval.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="attributeEstimate" type="Evidence.AttributeEstimate1" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="attributeEstimate" type="Evidence.AttributeEstimate" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A nested attribute estimate; which is the attribute estimate of an attribute estimate.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="Evidence.AttributeEstimate1">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Human-readable summary of the estimate.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Footnote or explanatory note about the estimate.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The type of attribute estimate, eg confidence interval or p value.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="level" minOccurs="0" maxOccurs="1" type="decimal">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Use 95 for a 95% confidence interval.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="range" minOccurs="0" maxOccurs="1" type="Range">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Lower bound of confidence interval.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -22323,6 +22282,11 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:element name="variable" type="Evidence.Variable" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A variable adjusted for in the adjusted analysis.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="attributeEstimate" type="Evidence.AttributeEstimate" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">An attribute of the statistic used as a model characteristic.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -35157,6 +35121,11 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">Marketing status of the medicinal product, in contrast to marketing authorization.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="packagedMedicinalProduct" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Package representation for the product. See also the PackagedProductDefinition resource.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="ingredient" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by the AdministrableProductDefinition or via the PackagedProductDefinition references above. In cases where those levels of detail are not used, the ingredients may be specified directly here.</xs:documentation>
@@ -35200,11 +35169,6 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           <xs:element name="operation" type="MedicinalProductDefinition.Operation" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A manufacturing or administrative process or step associated with (or performed on) the medicinal product.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="package" type="MedicinalProductDefinition.Package" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Package representation for the product. See also PackagedProductDefinition resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -35361,27 +35325,6 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           <xs:element name="confidentialityIndicator" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Specifies whether this particular business or manufacturing process is considered proprietary or confidential.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="MedicinalProductDefinition.Package">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use, drug catalogs).</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A descriptive type for this package, such as box, carton or bottle.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="size" minOccurs="0" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The amount of items, or of substance, in the package.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -38858,7 +38801,7 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">Textual description. Note that this is not the name of the package or product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="legalStatusOfSupply" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="legalStatusOfSupply" type="PackagedProductDefinition.LegalStatusOfSupply" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The legal status of supply of the packaged item as classified by the regulator.</xs:documentation>
            </xs:annotation>
@@ -38891,6 +38834,27 @@ For resource issues, this will be a simple XPath limited to element names, repet
           <xs:element name="package" type="PackagedProductDefinition.Package" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PackagedProductDefinition.LegalStatusOfSupply">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A medically related item or items, in a container or package.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The actual status of supply. In what situation this package type may be supplied for use.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="jurisdiction" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The place where the legal status of supply applies. When not specified, this indicates it is unknown in this context.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -38996,13 +38960,11 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1" >
+          <xs:element name="amount" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The number of this type of item within this packaging.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="amountQuantity" type="Quantity"/>
-            <xs:element name="amountInteger" type="integer"/>
-          </xs:choice>
+           </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

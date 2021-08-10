@@ -75,7 +75,7 @@ curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIRHelpers
 
 ```sh
 # library resources
-cd output ; for FILE in FHIRCommon AgeRanges KitchenSink \
+cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
 ```
 
@@ -164,3 +164,45 @@ Some hints on authorship from recent workshops:
 * Double quotes are for identifiers and single quotes represent string literals, for example, "female" should be 'female'.
 * Check for odd copy/paste errors in quotes.
 * Required libraries: `include FHIRHelpers version '4.0.1'` Use of FHIRHelpers is implicit in the translator, based on the modelinfo file with FHIR. This must be included in the boilerplate of any CQL that processes FHIR.
+
+
+## Quick Start with Blaze
+
+Ensure artifacts are in /output
+```sh
+bash _genonce.sh
+```
+
+```sh
+# may want to delete previous volumes if there were mistakes
+# docker volume rm blaze-data
+docker volume create blaze-data
+docker run -p 8080:8080 -v blaze-data:/app/data samply/blaze:0.11.0
+```
+
+```sh
+# codesystem resources
+cd output ; for FILE in LocationCS opencr-codesystem openhie-codesystem \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ..
+```
+
+```sh
+# valueset resources
+cd output ; for FILE in LocationVS \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @ValueSet-${FILE}.json http://localhost:8080/fhir/ValueSet/${FILE} ; done ; cd ..
+```
+
+```sh
+# library resources
+cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
+```
+
+**POST** the patient bundle with fullUrl of the bundle entries as references
+todo: fix all references
+```sh
+cat bundle.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+```
+
+
+

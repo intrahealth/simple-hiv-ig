@@ -1,5 +1,5 @@
-// Usage: #example is default so omitted
-// * name is removed for clarity
+Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
+Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 
 RuleSet: meas-common
 * identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
@@ -10,15 +10,12 @@ RuleSet: meas-common
 * publisher = "OpenHIE"
 // works to elimate errors, but eval-measure can't be found when measures are run
 // * library[+] = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
-
 // this is expected to work
 * library[+] = Canonical(KitchenSink)
-
 // still errors...
 // * library = Canonical(Library/KitchenSink)
 // * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
 // * type.coding.code = #process <- this is not used in calculations
-
 
 Instance: HIVSimpleAgeGroup
 InstanceOf: Measure

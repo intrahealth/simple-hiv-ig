@@ -1,12 +1,6 @@
 {
   "resourceType": "Library",
   "id": "FHIR-ModelInfo",
-  "extension": [ {
-    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
-    "valueReference": {
-      "reference": "cqf-tooling"
-    }
-  } ],
   "version": "4.0.1",
   "name": "FHIR",
   "title": "FHIR Model Definition",

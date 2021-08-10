@@ -25,3 +25,152 @@ Patient=Patient(id=Patient-HIVSimple2)
 LinkedPatients=null
 
 elapsed: 5.939 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+
+elapsed: 5.743 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+
+elapsed: 1.293 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+
+elapsed: 1.029 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=[Reference, Reference]
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+
+elapsed: 1.243 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=Patient-HIVSimple
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+
+elapsed: 1.619 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+
+elapsed: 1.402 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=Patient-HIVSimple
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+
+elapsed: 1.047 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=Patient-HIVSimple
+Hey=[Patient, Patient-HIVSimple]
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+Hey=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+Hey=null
+
+elapsed: 1.351 seconds
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/GoldenRecord
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-GoldenRecord)
+LinkedPatients=[Reference, Reference]
+GetPatientSomething=Patient-HIVSimple
+Hey=[Patient, Patient-HIVSimple]
+
+Patient=Patient(id=Patient-HIVSimple)
+LinkedPatients=null
+GetPatientSomething=null
+Hey=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+LinkedPatients=null
+GetPatientSomething=null
+Hey=null
+
+elapsed: 1.211 seconds
