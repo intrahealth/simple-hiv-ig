@@ -40,8 +40,8 @@ Description: "FHIRHelpers"
 // * identifier.value = "FHIRHelpers"
 * content.id = "ig-loader-FHIRHelpers.cql"
 
-* relatedArtifact.type = #depends-on
-* relatedArtifact.resource = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo"
+// * relatedArtifact.type = #depends-on
+// * relatedArtifact.resource = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo"
 
 Instance: KitchenSink
 InstanceOf: Library

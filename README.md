@@ -175,14 +175,14 @@ bash _genonce.sh
 
 ```sh
 # may want to delete previous volumes if there were mistakes
-# docker volume rm blaze-data
+docker volume rm blaze-data
 docker volume create blaze-data
 docker run -p 8080:8080 -v blaze-data:/app/data samply/blaze:0.11.0
 ```
 
 ```sh
 # codesystem resources
-cd output ; for FILE in LocationCS opencr-codesystem openhie-codesystem \
+cd output ; for FILE in LocationCS OpenCR OpenHIE \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ..
 ```
 
@@ -198,11 +198,25 @@ cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
 ```
 
+PUT the Measure resources
+```sh
+cd output ; for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
+HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv HIVSimpleGenderSubjectList HIVSimpleTestResult \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ..
+```
+
 **POST** the patient bundle with fullUrl of the bundle entries as references
-todo: fix all references
+todo: fix all references in fsh
 ```sh
 cat bundle.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
 ```
 
-
+Run a provided example in the browser
+```
+http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleTestResult/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/HIVSimpleCondition/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+```
 

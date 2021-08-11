@@ -23,10 +23,8 @@ HIVSimpleGenderSubjectList HIVSimpleTestResult HIVSimpleViralLoad \
 open "http://localhost:8080/fhir/Measure/HIVSimpleGenderSuppData/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleGenderSubjectList/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort/\$evaluate-measure?periodStart=1970&periodEnd=2021"
-open "http://localhost:8080/fhir/Measure/HIVSimpleGender2/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleGender/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/\$evaluate-measure?periodStart=1970&periodEnd=2021"
-open "http://localhost:8080/fhir/Measure/HIVSimpleDemog/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleTestResult/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleCondition/\$evaluate-measure?periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleViralLoad/\$evaluate-measure?periodStart=1970&periodEnd=2021"
@@ -34,5 +32,3 @@ open "http://localhost:8080/fhir/Measure/HIVSimpleViralLoad/\$evaluate-measure?p
 # Patient/31672
 open "http://localhost:8080/fhir/Measure/HIVSimpleGenderSuppData/\$evaluate-measure?patient=31672&periodStart=1970&periodEnd=2021"
 open "http://localhost:8080/fhir/Measure/HIVSimpleGenderSuppDataIndiv/\$evaluate-measure?patient=89&periodStart=1970&periodEnd=2021"
-
-open "http://localhost:8080/fhir/Measure/HIVSimpleGender2/\$evaluate-measure?patient=89&periodStart=1970&periodEnd=2021"
