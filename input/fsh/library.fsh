@@ -66,6 +66,19 @@ Description: "GoldenRecord"
 // * identifier.value = "KitchenSink"
 * content.id = "ig-loader-GoldenRecord.cql"
 
+
+Instance: Blaze
+InstanceOf: Library
+Title: "Blaze"
+Description: "Blaze"
+* insert lib-common
+* name = "Blaze"
+* version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/Blaze"
+// * identifier.value = "Blaze"
+* content.id = "ig-loader-Blaze.cql"
+
+
 // RuleSet: lib-bundle
 // * entry[=].request.method = #PUT
 

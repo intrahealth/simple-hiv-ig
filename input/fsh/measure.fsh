@@ -251,6 +251,30 @@ Description: "HIVSimpleTestResult"
 * group.population[=].criteria.expression = "Numerator"
 
 
+Instance: BlazeStratifierTest
+InstanceOf: Measure
+Title: "BlazeStratifierTest"
+Description: "BlazeStratifierTest"
+* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
+* version = "0.0.0"
+* status = #draft
+* experimental = true
+* date = "2021-07-01"
+* publisher = "OpenHIE"
+* library[+] = Canonical(Blaze)
+* name = "BlazeStratifierTest"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest"
+* identifier.value = "BlazeStratifierTest"
+* scoring = $measure-scoring#proportion
+* group[+].code = $OpenHIE#cohort "cohort"
+* group[=].population[+].description = "Initial Population"
+* group[=].population[=].code = $measure-population#initial-population
+* group[=].population[=].criteria.language = #text/cql
+* group[=].population[=].criteria.expression = "Initial Population"
+* group[=].stratifier[+].criteria.language = #text/cql
+* group[=].stratifier[=].criteria.expression = "Gender"
+
+
 // RuleSet: meas-bundle
 // * entry[=].request.method = #PUT
 

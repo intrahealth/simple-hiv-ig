@@ -194,14 +194,13 @@ cd output ; for FILE in LocationVS \
 
 ```sh
 # library resources
-cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink \
+cd output ; for FILE in Blaze \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
 ```
 
 PUT the Measure resources
 ```sh
-cd output ; for FILE in HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
-HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv HIVSimpleGenderSubjectList HIVSimpleTestResult \
+cd output ; for FILE in BlazeStratifierTest \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ..
 ```
 
@@ -213,10 +212,6 @@ cat bundle.json | curl -X POST -H "Content-Type: application/fhir+json" --data-b
 
 Run a provided example in the browser
 ```
-http://localhost:8080/fhir/Measure/HIVSimpleGenderCohort/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleGender/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleTestResult/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
-http://localhost:8080/fhir/Measure/HIVSimpleCondition/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
+http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
 
