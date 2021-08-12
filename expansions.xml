@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="da818422-d954-499a-940c-3258b7949c7b"/>
+  <id value="fe7917d4-ab90-482f-a24d-db6505b36980"/>
   <meta>
-    <lastUpdated value="2021-08-11T00:18:37.379+00:00"/>
+    <lastUpdated value="2021-08-12T18:32:47.018+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -59,7 +59,7 @@
         <name value="LocationVS"/>
         <title value="LocationVS"/>
         <status value="active"/>
-        <date value="2021-08-11T00:18:37+00:00"/>
+        <date value="2021-08-12T18:32:47+00:00"/>
         <publisher value="Digital Health Team"/>
         <contact>
           <name value="Digital Health Team"/>
@@ -82,8 +82,8 @@
         </contact>
         <description value="LocationVS"/>
         <expansion>
-          <identifier value="urn:uuid:b7ed2e2e-f43c-4281-9288-2557e0248056"/>
-          <timestamp value="2021-08-11T00:18:47+00:00"/>
+          <identifier value="urn:uuid:4f07b65a-8eda-4583-aaf7-cdf13716a9ab"/>
+          <timestamp value="2021-08-12T18:32:54+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>

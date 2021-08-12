@@ -10,7 +10,7 @@
   <name value="SimpleHIVIG"/>
   <title value="HIV Simple IG"/>
   <status value="draft"/>
-  <date value="2021-08-11T00:18:37+00:00"/>
+  <date value="2021-08-12T18:32:47+00:00"/>
   <publisher value="Digital Health Team"/>
   <contact>
     <name value="Digital Health Team"/>
@@ -296,6 +296,28 @@
       </reference>
       <name value="AgeRanges"/>
       <description value="AgeRanges"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/Blaze"/>
+      </reference>
+      <name value="Blaze"/>
+      <description value="Blaze"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/BlazeStratifierTest"/>
+      </reference>
+      <name value="BlazeStratifierTest"/>
+      <description value="BlazeStratifierTest"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

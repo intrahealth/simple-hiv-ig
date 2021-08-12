@@ -35,6 +35,13 @@
     "name": "AgeRanges"
   },
   {
+    "id": "Blaze",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Blaze",
+    "version": "0.1.0",
+    "name": "Blaze"
+  },
+  {
     "id": "FHIR-ModelInfo",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo",
@@ -68,6 +75,13 @@
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink",
     "version": "0.1.0",
     "name": "KitchenSink"
+  },
+  {
+    "id": "BlazeStratifierTest",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest",
+    "version": "0.1.0",
+    "name": "BlazeStratifierTest"
   },
   {
     "id": "HIVSimpleAgeGroup",

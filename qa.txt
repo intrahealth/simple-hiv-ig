@@ -1,9 +1,9 @@
 ﻿SimpleHIVIG : Validation Results
 =========================================
 
-err = 9, warn = 0, info = 0
+err = 12, warn = 0, info = 0
 IG Publisher Version: 1.1.77
-Generated Wed Aug 11 00:19:06 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
+Generated Thu Aug 12 18:33:09 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
 
  Build Errors : 0 / 0 / 0
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple : 0 / 0 / 12
@@ -25,12 +25,14 @@ Generated Wed Aug 11 00:19:06 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-ViralLoad2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ImplementationGuide-simple.hiv.ig : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-AgeRanges : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/Library-Blaze : 3 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-FHIRCommon : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-FHIRHelpers : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-GoldenRecord : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-KitchenSink : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Measure-BlazeStratifierTest : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender : 0 / 0 / 1
@@ -73,6 +75,10 @@ Generated Wed Aug 11 00:19:06 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
 == /github/workspace/fsh-generated/resources/Library-AgeRanges.json ==
 ERROR: Library/AgeRanges: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/AgeRanges: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
+== /github/workspace/fsh-generated/resources/Library-Blaze.json ==
+ERROR: Blaze.cql: CQL Processing failed with exception: Unknown FHIRAllTypes code 'AdministrativeGender'
+ERROR: Library/Blaze: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
+ERROR: Library/Blaze: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/fsh-generated/resources/Library-FHIRCommon.json ==
 ERROR: Library/FHIRCommon: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
 ERROR: Library/FHIRCommon: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
@@ -86,6 +92,7 @@ ERROR: Library/KitchenSink: Library.relatedArtifact[0].resource: Canonical URL '
 ERROR: Library/KitchenSink: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
 == /github/workspace/fsh-generated/resources/Location-Location-HIVSimple.json ==
 == /github/workspace/fsh-generated/resources/Location-Location-HIVSimple2.json ==
+== /github/workspace/fsh-generated/resources/Measure-BlazeStratifierTest.json ==
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleAgeGroup.json ==
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleCondition.json ==
 == /github/workspace/fsh-generated/resources/Measure-HIVSimpleGender.json ==

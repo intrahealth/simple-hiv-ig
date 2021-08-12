@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "LocationCS"];
   fhir:CodeSystem.title [ fhir:value "LocationCS"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-08-11T00:18:37+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2021-08-12T18:32:47+00:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Digital Health Team"];
   fhir:CodeSystem.contact [
      fhir:index 0;

@@ -10,7 +10,7 @@
   "name": "SimpleHIVIG",
   "title": "HIV Simple IG",
   "status": "draft",
-  "date": "2021-08-11T00:18:37+00:00",
+  "date": "2021-08-12T18:32:47+00:00",
   "publisher": "Digital Health Team",
   "contact": [
     {
@@ -452,6 +452,34 @@
         },
         "name": "AgeRanges",
         "description": "AgeRanges",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/Blaze"
+        },
+        "name": "Blaze",
+        "description": "Blaze",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/BlazeStratifierTest"
+        },
+        "name": "BlazeStratifierTest",
+        "description": "BlazeStratifierTest",
         "exampleBoolean": true
       },
       {
