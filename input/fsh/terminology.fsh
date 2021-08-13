@@ -26,6 +26,7 @@ Description: "LocationCS"
 * ^url = $HIV
 * #Location-HIVSimple "Location-HIVSimple"
 * #Location-HIVSimple2 "Location-HIVSimple2"
+* #Location-HIVSimple3 "Location-HIVSimple3"
 
 ValueSet: LocationVS
 Id: LocationVS

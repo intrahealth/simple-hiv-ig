@@ -168,6 +168,9 @@ Some hints on authorship from recent workshops:
 
 ## Quick Start with Blaze
 
+
+Use the awesome [jq](https://stedolan.github.io/jq/download/) for pretty printing curl output.
+
 Ensure artifacts are in /output
 ```sh
 bash _genonce.sh
@@ -204,14 +207,31 @@ cd output ; for FILE in BlazeStratifierTest \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ..
 ```
 
-**POST** the patient bundle with fullUrl of the bundle entries as references
-todo: fix all references in fsh
+POST the patient bundles with fullUrl of the bundle entries as references
 ```sh
-cat bundle.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+cat output/Example-Bundle-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+cat output/Example-Bundle-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+cat output/Example-Bundle-HIVSimple3.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
 ```
+
+
 
 Run a provided example in the browser
 ```
 http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
 
+## How Measures Work
+
+The [Blaze](https://github.com/samply/blaze/blob/c479410a9198526453a0df769ab7db2e6d5dd654/docs/cql-queries/api.md) docs explain how to process Measure resources with CQL in Library resources.
+
+### Options for Measure Resources
+
+// options: proportion | ratio | continuous-variable | cohort
+* scoring = $measure-scoring#proportion
+
+// options: opportunity | all-or-nothing | linear | weighted
+// * compositeScoring.coding.code = linear
+
+// separate population groups with separate stratifiers per group
+// options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation

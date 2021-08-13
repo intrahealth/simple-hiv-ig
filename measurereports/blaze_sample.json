@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "type": "summary",
+  "measure": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest|0.1.0",
+  "date": "2021-08-12T18:59:07.342311Z",
+  "period": {
+    "start": "1970-01-01",
+    "end": "2021-01-01"
+  },
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE",
+            "code": "cohort",
+            "display": "cohort"
+          }
+        ]
+      },
+      "population": [
+        {
+          "count": 1,
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population"
+              }
+            ]
+          }
+        }
+      ],
+      "stratifier": [
+        {
+          "stratum": [
+            {
+              "value": {
+                "text": "female"
+              },
+              "population": [
+                {
+                  "count": 1,
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resourceType": "MeasureReport"
+}

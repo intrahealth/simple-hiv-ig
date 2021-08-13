@@ -251,6 +251,9 @@ Description: "HIVSimpleTestResult"
 * group.population[=].criteria.expression = "Numerator"
 
 
+// "The reportType `%s` is invalid. Please use one of `subject`, `subject-list` or `population`." report-type
+// subject-list must be a POST
+
 Instance: BlazeStratifierTest
 InstanceOf: Measure
 Title: "BlazeStratifierTest"
