@@ -19,8 +19,6 @@ code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'H
 code "Pregnant (finding)": '77386006' from "SNOMED-CT" display 'Pregnant (finding)'
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection'
 
-valueset "LocationVS": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS'
-
 context Patient
 
 define "Sex":
@@ -196,10 +194,10 @@ define "Location Code Deux":
   )
 
 // nonsense bc obs don't have locations, but it evaluates
-define "Stratifier Has Observation with Code":
+/* define "Stratifier Has Observation with Code":
   exists ( [Observation] O
     where O.code in "LocationVS"
-  )
+  ) */
 
 
 // errors in syntax
@@ -211,19 +209,6 @@ define "Encounter Location Reference in VS":
     )
   )
  */
-
-define function HIVVS_SYS(identifiers List<Identifier>):
-  singleton from (identifiers I where I.system = 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS' return I)
-
-define HIVVS_SYS_VAL:
-	(singleton from (
-  	Location.identifier identifier
-   	  where identifier.system.value = 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS')).value.value
-
-
-
-
-
 
 /* create clinical decision support logic */
 /*

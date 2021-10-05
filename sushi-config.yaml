@@ -32,10 +32,13 @@ contact:
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  # temp uncomment for testing with refresh script
   path-binary: input/cql
   path-resource:
     # need input/resources because cql stuff is there
     - input/resources
+    - input/resources/library
+    - input/resources/measure
     - fsh-generated/resources
     - input/examples
   path-pages:

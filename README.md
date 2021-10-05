@@ -185,14 +185,12 @@ docker run -p 8080:8080 -v blaze-data:/app/data samply/blaze:0.11.0
 
 ```sh
 # codesystem resources
-cd output ; for FILE in LocationCS OpenCR OpenHIE \
+cd output ; for FILE in OpenCR OpenHIE \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ..
 ```
-
-```sh
-# valueset resources
-cd output ; for FILE in LocationVS \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @ValueSet-${FILE}.json http://localhost:8080/fhir/ValueSet/${FILE} ; done ; cd ..
+```
+cd fsh-generated/resources ; for FILE in OpenCR OpenHIE \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ../..
 ```
 
 ```sh
@@ -201,11 +199,17 @@ cd output ; for FILE in Blaze \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
 ```
 
+
 PUT the Measure resources
 ```sh
 cd output ; for FILE in BlazeStratifierTest \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ..
 ```
+
+cd fsh-generated/resources ; for FILE in BlazeStratifierTest \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ../..
+
+
 
 POST the patient bundles with fullUrl of the bundle entries as references
 ```sh
@@ -215,15 +219,87 @@ cat output/Example-Bundle-HIVSimple3.json | curl -X POST -H "Content-Type: appli
 ```
 
 
-
 Run a provided example in the browser
 ```
 http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
 
-## How Measures Work
+or on command line:
+```
+curl -sXPOST 'http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq
+```
+
 
 The [Blaze](https://github.com/samply/blaze/blob/c479410a9198526453a0df769ab7db2e6d5dd654/docs/cql-queries/api.md) docs explain how to process Measure resources with CQL in Library resources.
+
+
+## Getting started with cqf-ruler
+
+> These instructions are temporary until feature-stratification are merged into main branch and a Publisher bug fix is released which prevents builds.
+
+```
+git clone git@github.com:DBCG/cqf-ruler.git
+cd cqf-ruler/
+git checkout feature-stratification
+mvn jetty:run -am --projects cqf-ruler-r4
+```
+
+```sh
+# codesystem resources
+cd fsh-generated/resources ; for FILE in LocationCS OpenCR OpenHIE \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} ; done ; cd ../..
+```
+
+```sh
+# valueset resources
+cd fsh-generated/resources ; for FILE in LocationVS \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @ValueSet-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/ValueSet/${FILE} ; done ; cd ../..
+```
+
+
+```
+curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-Blaze.json http://localhost:8080/cqf-ruler-r4/fhir/Library/Blaze
+```
+
+
+
+cat fsh-generated/resources/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+cat fsh-generated/resources/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+
+
+
+
+
+PUT the Measure resources
+```sh
+cd fsh-generated/resources ; for FILE in BlazeStratifierTest \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} ; done ; cd ../..
+```
+
+POST the patient bundles with fullUrl of the bundle entries as references
+```sh
+cat fsh-generated/resources/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
+cat fsh-generated/resources/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
+```
+
+```
+http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01&reportType=population
+```
+
+```
+curl -sXPOST -H "Content-Type: application/fhir+json" 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2000&periodEnd=2030' | jq
+```
+
+```
+curl -sXPOST -H "Content-Type: application/fhir+json" 'http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2000&periodEnd=2030&reportType=subject-list' | jq
+```
+
+```
+curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2000&periodEnd=2030' | jq
+```
+
+
+## How Measures Work
 
 ### Options for Measure Resources
 

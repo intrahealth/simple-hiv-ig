@@ -17,6 +17,17 @@ RuleSet: meas-common
 // * library = Canonical(https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink)
 // * type.coding.code = #process <- this is not used in calculations
 
+
+RuleSet: meas-common-blaze
+* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
+* version = "0.0.0"
+* status = #draft
+* experimental = true
+* date = "2021-07-01"
+* publisher = "OpenHIE"
+* library[+] = Canonical(Blaze)
+
+
 Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
 Title: "HIVSimpleAgeGroup"
@@ -35,29 +46,38 @@ Description: "HIVSimpleAgeGroup"
 // separate population groups with separate stratifiers per group
 // options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation
 
-* group[+].code = $OpenHIE#cohort "cohort"
-* group[=].population[+].description = "Initial Population"
-* group[=].population[=].code = $measure-population#initial-population
-* group[=].population[=].criteria.language = #text/cql
-* group[=].population[=].criteria.expression = "Initial Population"
-* group[=].stratifier[+].criteria.language = #text/cql
-* group[=].stratifier[=].criteria.expression = "Age Group"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
-* group[+].code = $OpenHIE#cohort "cohort"
-* group[=].population[+].description = "Denominator"
-* group[=].population[=].code = $measure-population#denominator
-* group[=].population[=].criteria.language = #text/cql
-* group[=].population[=].criteria.expression = "Denominator"
-* group[=].stratifier[+].criteria.language = #text/cql
-* group[=].stratifier[=].criteria.expression = "Age Group"
+  * stratifier[0].criteria.language = #text/cql
+  * stratifier[=].criteria.expression = "Age Group"
 
-* group[+].code = $OpenHIE#cohort "cohort"
-* group[=].population[+].description = "Numerator"
-* group[=].population[=].code = $measure-population#numerator
-* group[=].population[=].criteria.language = #text/cql
-* group[=].population[=].criteria.expression = "Numerator"
-* group[=].stratifier[+].criteria.language = #text/cql
-* group[=].stratifier[=].criteria.expression = "Age Group"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+
+  * stratifier[0].criteria.language = #text/cql
+  * stratifier[=].criteria.expression = "Age Group"
+
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+
+  * stratifier[0].criteria.language = #text/cql
+  * stratifier[=].criteria.expression = "Age Group"
 
 
 Instance: HIVSimpleCondition
@@ -72,24 +92,28 @@ Description: "HIVSimpleCondition"
 * scoring = $measure-scoring#proportion
 
 // same population group with shared stratifiers
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
 
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
 
-* group.stratifier[+].criteria.language = #text/cql
-* group.stratifier[=].criteria.expression = "Age Group"
+  * stratifier[0].criteria.language = #text/cql
+  * stratifier[=].criteria.expression = "Age Group"
 
 
 Instance: HIVSimpleGender
@@ -103,21 +127,25 @@ Description: "HIVSimpleGender"
 
 * scoring = $measure-scoring#proportion
 
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
 
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
 
 
 Instance: HIVSimpleGenderCohort
@@ -131,11 +159,13 @@ Description: "HIVSimpleGenderCohort"
 
 * scoring = $measure-scoring#cohort
 
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
 
 Instance: HIVSimpleGenderSubjectList
@@ -149,11 +179,13 @@ Description: "HIVSimpleGenderSubjectList"
 
 * scoring = $measure-scoring#cohort
 
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
 
 Instance: HIVSimpleGenderSuppData
@@ -167,25 +199,30 @@ Description: "HIVSimpleGenderSuppData"
 
 * scoring = $measure-scoring#proportion
 
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
 
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
 
-* supplementalData.code.text = "supplemental-data-example-define"
-* supplementalData.criteria.language = #text/cql
-* supplementalData.criteria.expression = "SDE Sex"
+* supplementalData[+]
+  * code.text = "supplemental-data-example-define"
+  * criteria.language = #text/cql
+  * criteria.expression = "SDE Sex"
 
 
 Instance: HIVSimpleGenderSuppDataIndiv
@@ -199,28 +236,33 @@ Description: "HIVSimpleGenderSuppDataIndiv"
 
 * scoring = $measure-scoring#proportion
 
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
 
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
-
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
-
-* supplementalData[0].code.text = "supplemental-data-example-define-sex"
-* supplementalData[=].criteria.language = #text/cql
-* supplementalData[=].criteria.expression = "SDE Sex"
-* supplementalData[+].code.text = "supplemental-data-example-define-location"
-* supplementalData[=].criteria.language = #text/cql
-* supplementalData[=].criteria.expression = "SDE Location"
+* supplementalData[+]
+  * code.text = "supplemental-data-example-define-sex"
+  * criteria.language = #text/cql
+  * criteria.expression = "SDE Sex"
+  
+* supplementalData[+]
+  * code.text = "supplemental-data-example-define-location"
+  * criteria.language = #text/cql
+  * criteria.expression = "SDE Location"
 
 
 Instance: HIVSimpleTestResult
@@ -234,22 +276,23 @@ Description: "HIVSimpleTestResult"
 
 * scoring = $measure-scoring#proportion
 
-* group.code = $OpenHIE#cohort "cohort"
-* group.population[+].description = "Initial Population"
-* group.population[=].code = $measure-population#initial-population
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Initial Population"
-
-* group.population[+].description = "Denominator"
-* group.population[=].code = $measure-population#denominator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Denominator"
-
-* group.population[+].description = "Numerator"
-* group.population[=].code = $measure-population#numerator
-* group.population[=].criteria.language = #text/cql
-* group.population[=].criteria.expression = "Numerator"
-
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
 
 // "The reportType `%s` is invalid. Please use one of `subject`, `subject-list` or `population`." report-type
 // subject-list must be a POST
@@ -258,25 +301,22 @@ Instance: BlazeStratifierTest
 InstanceOf: Measure
 Title: "BlazeStratifierTest"
 Description: "BlazeStratifierTest"
-* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
-* version = "0.0.0"
-* status = #draft
-* experimental = true
-* date = "2021-07-01"
-* publisher = "OpenHIE"
-* library[+] = Canonical(Blaze)
+* insert meas-common-blaze
 * name = "BlazeStratifierTest"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest"
 * identifier.value = "BlazeStratifierTest"
 * scoring = $measure-scoring#proportion
-* group[+].code = $OpenHIE#cohort "cohort"
-* group[=].population[+].description = "Initial Population"
-* group[=].population[=].code = $measure-population#initial-population
-* group[=].population[=].criteria.language = #text/cql
-* group[=].population[=].criteria.expression = "Initial Population"
-* group[=].stratifier[+].criteria.language = #text/cql
-* group[=].stratifier[=].criteria.expression = "Gender"
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
 
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Gender"
 
 // RuleSet: meas-bundle
 // * entry[=].request.method = #PUT

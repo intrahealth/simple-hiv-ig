@@ -3,9 +3,11 @@ Alias: $Organization-HIVSimple = https://intrahealth.github.io/simple-hiv-ig/Org
 Alias: $Location-HIVSimple = https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple
 Alias: $Condition-HIVSimple = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple
 Alias: $Condition-Pregnancy = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy
+
 Alias: $Encounter-HIVSimple = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple
 Alias: $DiagnosticReport-HIVSimple = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple
 Alias: $Observation-HIVSimple = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple
+
 Alias: $Encounter-ViralLoad = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad
 Alias: $DiagnosticReport-ViralLoad = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad
 Alias: $Observation-ViralLoad = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad
@@ -36,8 +38,6 @@ Description: "Location-HIVSimple"
 * managingOrganization = Reference($Organization-HIVSimple)
 * identifier[+].system = $synthea
 * identifier[=].value = "Location-HIVSimple"
-* identifier[+].system = $HIVVS
-* identifier[=].value = #Location-HIVSimple
 
 // conditions
 

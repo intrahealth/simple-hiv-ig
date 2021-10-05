@@ -3,9 +3,11 @@ Alias: $Organization-HIVSimple2 = https://intrahealth.github.io/simple-hiv-ig/Or
 Alias: $Location-HIVSimple2 = https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2
 Alias: $Condition-HIVSimple2 = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2
 Alias: $Condition-Pregnancy2 = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy2
+
 Alias: $Encounter-HIVSimple2 = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2
 Alias: $DiagnosticReport-HIVSimple2 = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2
 Alias: $Observation-HIVSimple2 = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2
+
 Alias: $Encounter-ViralLoad2 = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad2
 Alias: $DiagnosticReport-ViralLoad2 = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad2
 Alias: $Observation-ViralLoad2 = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad2
@@ -36,9 +38,6 @@ Description: "Location-HIVSimple2"
 * managingOrganization = Reference($Organization-HIVSimple2)
 * identifier[+].system = $synthea
 * identifier[=].value = "Location-HIVSimple2"
-* identifier[+].system = $HIVVS
-* identifier[=].value = #Location-HIVSimple2
-
 // conditions
 
 Instance: Condition-HIVSimple2
@@ -169,7 +168,7 @@ Description: "Example-HIVSimple2"
 * entry[=].resource = Condition-HIVSimple2
 * insert patient-bundle
 
-* entry[+].fullUrl = $Condition-Pregnancy
+* entry[+].fullUrl = $Condition-Pregnancy2
 * entry[=].request.url = "Condition"
 * entry[=].resource = Condition-Pregnancy2
 * insert patient-bundle
@@ -193,17 +192,17 @@ Description: "Example-HIVSimple2"
 
 // encounter for viral load
 
-* entry[+].fullUrl = $Encounter-ViralLoad
+* entry[+].fullUrl = $Encounter-ViralLoad2
 * entry[=].request.url = "Encounter"
 * entry[=].resource = Encounter-ViralLoad2
 * insert patient-bundle
 
-* entry[+].fullUrl = $DiagnosticReport-ViralLoad
+* entry[+].fullUrl = $DiagnosticReport-ViralLoad2
 * entry[=].request.url = "DiagnosticReport"
 * entry[=].resource = DiagnosticReport-ViralLoad2
 * insert patient-bundle
 
-* entry[+].fullUrl = $Observation-ViralLoad
+* entry[+].fullUrl = $Observation-ViralLoad2
 * entry[=].request.url = "Observation"
 * entry[=].resource = Observation-ViralLoad2
 * insert patient-bundle

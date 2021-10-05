@@ -1,0 +1,20 @@
+{
+  "resourceType": "Library",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Blaze",
+  "id": "Blaze",
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "content": [
+    {
+      "contentType": "text/cql",
+      "data": "bGlicmFyeSBCbGF6ZSB2ZXJzaW9uICcwLjEuMCcKCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCgppbmNsdWRlIEZISVJIZWxwZXJzIHZlcnNpb24gJzQuMC4xJwoKY29udGV4dCBQYXRpZW50CgpkZWZpbmUgIkdlbmRlciI6CiAgUGF0aWVudC5nZW5kZXIKCmRlZmluZSAiU2V4IjoKICBQYXRpZW50LmdlbmRlci52YWx1ZQoKZGVmaW5lICJGZW1hbGUiOgogIFBhdGllbnQuZ2VuZGVyID0gJ2ZlbWFsZScKCmRlZmluZSAiTWFsZSI6CiAgUGF0aWVudC5nZW5kZXIgPSAnbWFsZScKCmRlZmluZSAiSW5pdGlhbCBQb3B1bGF0aW9uIjoKICB0cnVlCgpkZWZpbmUgIkRlbm9taW5hdG9yIjoKICAiU2V4IiBpcyBub3QgbnVsbAoKZGVmaW5lICJOdW1lcmF0b3IiOgogICJTZXgiID0gJ2ZlbWFsZSc="
+    }
+  ]
+}
