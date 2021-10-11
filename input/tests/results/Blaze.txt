@@ -43,3 +43,72 @@ Numerator=true
 
 elapsed: -0.248 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Blaze
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Gender=code
+Sex=female
+Female=true
+Male=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Gender=code
+Sex=female
+Female=true
+Male=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+elapsed: -0.033 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Blaze
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Gender=code
+Sex=female
+Female=true
+Male=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Gender=code
+Sex=female
+Female=true
+Male=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+elapsed: -0.534 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Blaze
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Gender=code
+Sex=female
+Female=true
+Male=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Gender=code
+Sex=female
+Female=true
+Male=false
+Initial Population=true
+Denominator=true
+Numerator=true
+
+elapsed: -0.501 seconds
+

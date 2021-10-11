@@ -245,16 +245,39 @@ mvn jetty:run -am --projects cqf-ruler-r4
 ```
 
 ```sh
-# codesystem resources
-cd fsh-generated/resources ; for FILE in LocationCS OpenCR OpenHIE \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} ; done ; cd ../..
+cd output ; for FILE in OpenCR OpenHIE \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} ; done ; cd ../
 ```
 
 ```sh
-# valueset resources
-cd fsh-generated/resources ; for FILE in LocationVS \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @ValueSet-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/ValueSet/${FILE} ; done ; cd ../..
+cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecord Blaze \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Library/${FILE} ; done ; cd ../
 ```
+
+```sh
+cd output ; for FILE in BlazeStratifierTest HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
+HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv HIVSimpleGenderSubjectList HIVSimpleTestResult \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} ; done ; cd ..
+```
+
+```sh
+cat output/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
+cat output/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
+```
+
+curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq
+
+
+curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq .
+
+
+
+
+
+
+
+
+
 
 
 ```

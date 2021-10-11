@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+    <id value="simple.hiv.ig"/>
+    <url value="https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig"/>
+    <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
+    <version value="0.1.0"/>
+    <name value="SimpleHIVIG"/>
+    <title value="Simple HIV IG"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="IntraHealth International"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/[something]"/>
+        </telecom>
+    </contact>
+    <description value="A simple IG using HIV epidemic control as a an example for learners"/>
+    <!-- <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction> -->
+    <packageId value="simple.hiv.ig"/>
+    <license value="CC0-1.0"/>
+    <fhirVersion value="4.0.1"/>
+    <!-- need this -->
+    <dependsOn>
+        <uri value="http://somewhere.org/fhir/uv/mycontentig/ImplementationGuide/example.fhir.uv.mycontentig"/>
+        <packageId value="example.fhir.uv.myig"/>
+        <version value="dev"/>
+    </dependsOn>
+    <dependsOn id="cpg">
+        <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"/>
+        <packageId value="hl7.fhir.uv.cpg"/>
+        <version value="1.0.0"/>
+    </dependsOn>
+    <!-- need this -->
+    <dependsOn id="cqfm">
+        <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
+        <packageId value="hl7.fhir.us.cqfmeasures"/>
+        <version value="current"/>
+    </dependsOn>
+    <dependsOn id="cqf">
+        <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
+        <packageId value="cqf.fhir.common"/>
+        <version value="dev"/>
+    </dependsOn>
+    <definition>
+        <page>
+            <!-- The root will always be toc.html - the template will force it if you don't do it -->
+            <nameUrl value="toc.html"/>
+            <title value="Table of Contents"/>
+            <generation value="html"/>
+            <page>
+                <nameUrl value="index.html"/>
+                <title value="MyIG Home Page"/>
+                <generation value="html"/>
+            </page>
+            <page>
+                <nameUrl value="background.html"/>
+                <title value="Background"/>
+                <generation value="html"/>
+            </page>
+            <page>
+                <nameUrl value="spec.html"/>
+                <title value="Detailed Specification"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="downloads.html"/>
+                <title value="Useful Downloads"/>
+                <generation value="html"/>
+            </page>
+            <page>
+                <nameUrl value="changes.html"/>
+                <title value="IG Change History"/>
+                <generation value="html"/>
+            </page>
+        </page>
+        <!-- copyright year is a mandatory parameter -->
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+        <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="CI Build"/>
+        </parameter>
+        <parameter>
+            <code value="find-other-resources"/>
+            <value value="true"/>
+        </parameter>
+        <parameter>
+            <code value="path-resource"/>
+            <value value="input\history"/>
+        </parameter>
+        <!-- temp uncomment to use cql tooling -->
+        <!-- <parameter>
+            <code value="path-binary"/>
+            <value value="input\cql"/>
+        </parameter> -->
+        <parameter>
+            <code value="path-resource" />
+            <value value="input/resources/device"/>
+        </parameter>
+        <parameter>
+            <code value="path-liquid"/>
+            <value value="templates\liquid"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>

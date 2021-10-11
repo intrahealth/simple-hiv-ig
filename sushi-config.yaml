@@ -1,21 +1,18 @@
-#minimun config for fsh only
 # id: who.cr.covid19
 # something about id having to have periods. strange.
 id: simple.hiv.ig
-# name: ddcc-vs
 name: SimpleHIVIG
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 # no tailing slash
-# canonical: https://worldhealthorganization.github.io/ddcc
 canonical: https://intrahealth.github.io/simple-hiv-ig
-
-# FSHOnly: true
-
-copyrightYear: 2021+
-releaseLabel: ci-build
 title: "HIV Simple IG"
+
+FSHOnly: true
+
+# copyrightYear: 2021+
+# releaseLabel: ci-build
 
 publisher:
   name: Digital Health Team
@@ -30,44 +27,41 @@ contact:
         use: work
 
 # dependencies:
-#   hl7.fhir.us.core: 3.1.0
-parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-  # temp uncomment for testing with refresh script
-  path-binary: input/cql
-  path-resource:
-    # need input/resources because cql stuff is there
-    - input/resources
-    - input/resources/library
-    - input/resources/measure
-    - fsh-generated/resources
-    - input/examples
-  path-pages:
-    - input/pagecontent
-    - fsh-generated/includes
-  active-tables: 'false'
-  apply-contact: 'true'
-  apply-jurisdiction: 'true'
-  apply-publisher: 'true'
-  apply-version: 'true'
-  show-inherited-invariants: 'false'
-  usage-stats-opt-out: 'true'
-  autoload-resources: 'true'
-  shownav: 'true'
-  # validation: [allow-any-extensions, no-broken-links]
-  validation: [allow-any-extensions]
-  broken-links: "warning"
 
-pages:
-  index.md:
-    title: "Test page"
-  overview.md:
-    title: "Overview"
-  testplan.md:
-    title: "Test Plan"
+# see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# parameters:  
+#   path-binary: input/cql
+#   path-resource:
+#     - input/resources
+#     - fsh-generated/resources
+#     - input/examples
+#   path-pages:
+#     - input/pagecontent
+#     - fsh-generated/includes
+#   active-tables: 'false'
+#   apply-contact: 'true'
+#   apply-jurisdiction: 'true'
+#   apply-publisher: 'true'
+#   apply-version: 'true'
+#   show-inherited-invariants: 'false'
+#   usage-stats-opt-out: 'true'
+#   autoload-resources: 'true'
+#   shownav: 'true'
+#   # validation: [allow-any-extensions, no-broken-links]
+#   validation: [allow-any-extensions]
+#   broken-links: "warning"
 
-menu:
-  MHD Home: index.html
-  Introduction: index.html
-  Overview: overview.html
-  Test Plan: testplan.html
-  Artifact Index: artifacts.html
+# pages:
+#   index.md:
+#     title: "Test page"
+#   overview.md:
+#     title: "Overview"
+#   testplan.md:
+#     title: "Test Plan"
+
+# menu:
+#   MHD Home: index.html
+#   Introduction: index.html
+#   Overview: overview.html
+#   Test Plan: testplan.html
+#   Artifact Index: artifacts.html
