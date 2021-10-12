@@ -244,6 +244,12 @@ git checkout feature-stratification
 mvn jetty:run -am --projects cqf-ruler-r4
 ```
 
+Load FHIR-ModelInfo
+```sh
+curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIR-ModelInfo.json http://localhost:8080/cqf-ruler-r4/fhir/Library/FHIR-ModelInfo | jq .
+```
+
+
 ```sh
 cd output ; for FILE in OpenCR OpenHIE \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} ; done ; cd ../
@@ -273,27 +279,19 @@ curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/HIVSimpleAgeGroup/
 
 
 
-
-
-
-
-
+## Scratch area
 
 
 ```
 curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-Blaze.json http://localhost:8080/cqf-ruler-r4/fhir/Library/Blaze
 ```
 
-
-
+```sh
 cat fsh-generated/resources/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
 cat fsh-generated/resources/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+```
 
 
-
-
-
-PUT the Measure resources
 ```sh
 cd fsh-generated/resources ; for FILE in BlazeStratifierTest \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} ; done ; cd ../..
