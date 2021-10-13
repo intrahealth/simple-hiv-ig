@@ -155,12 +155,6 @@ define "Location":
     return "GetLocation"(First(E.location).location)
   )
 
-// not working for some reason
-/* define "SDE Location":
-    Code { code: "Location".name, system: 'https://github.com/synthetichealth/synthea' } */
-
-/* second attempt at supp data for location*/
-
 /*
 Most recent encounter location
 */
@@ -173,9 +167,19 @@ define "Most Recent Encounter Location Reference":
       //sort by start of period
   )
 
-/*
-Location Code
-*/
+// returns string
+define "Most Recent Encounter Location Reference Reference":
+  Last([Encounter] E
+    return First(E.location L
+      return L.location.reference
+    )
+      //sort by start of period
+  )
+
+define "Age Group/Sex/Location":
+  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference"
+
+
 
 define "Location Code":
   singleton from ( [Location] L
@@ -192,23 +196,6 @@ define "Location Code Deux":
     where L.id = Last(Split("Most Recent Encounter Location Reference".reference, '/'))
     return CodeableConcept { coding: { Coding { code: code { value: identifier.value }, system: identifier.system } } }
   )
-
-// nonsense bc obs don't have locations, but it evaluates
-/* define "Stratifier Has Observation with Code":
-  exists ( [Observation] O
-    where O.code in "LocationVS"
-  ) */
-
-
-// errors in syntax
-/*
-define "Encounter Location Reference in VS":
-  Last([Encounter] E
-    exists ([E.location] L
-      where L in "LocationVS"
-    )
-  )
- */
 
 /* create clinical decision support logic */
 /*

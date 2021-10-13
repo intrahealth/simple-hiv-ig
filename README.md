@@ -171,71 +171,88 @@ Some hints on authorship from recent workshops:
 
 Use the awesome [jq](https://stedolan.github.io/jq/download/) for pretty printing curl output.
 
-Ensure artifacts are in /output
+
+### If editing the files
+* Edit the FSH
+* Add any new (non-conformance) resources to input/simple-hiv-ig.xml
+
+Then choose the standard or temporary pipeline to ensure artifacts are in /output and ready to load.
+
+Standard pipeline.
+> This assumes the FSH-CQL-Measure pipeline is working as expected.
 ```sh
 bash _genonce.sh
 ```
+
+Otherwise follow the temporary pipeline which uses CQF tooling as an intermediate step.
+```
+rm -rf input/resources/Library-*
+sushi
+mv fsh-generated/resources/Library-* input/resources/
+bash _refresh.sh
+bash _genonce.sh -no-sushi
+```
+
+### Start and Load Blaze and $evaluate-measure operations
 
 ```sh
 # may want to delete previous volumes if there were mistakes
 docker volume rm blaze-data
 docker volume create blaze-data
-docker run -p 8080:8080 -v blaze-data:/app/data samply/blaze:0.11.0
+docker run -p 8080:8080 -v blaze-data:/app/data samply/blaze:latest
 ```
 
 ```sh
-# codesystem resources
 cd output ; for FILE in OpenCR OpenHIE \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ..
-```
-```
-cd fsh-generated/resources ; for FILE in OpenCR OpenHIE \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ../..
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} | jq . ; done ; cd ..
 ```
 
 ```sh
-# library resources
+cd output ; for FILE in cqf-tooling \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Device-${FILE}.json http://localhost:8080/fhir/Device/${FILE} | jq . ; done ; cd ..
+```
+
+```sh
 cd output ; for FILE in Blaze \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} | jq . ; done ; cd ..
 ```
 
 
-PUT the Measure resources
 ```sh
-cd output ; for FILE in BlazeStratifierTest \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ..
+cd output ; for FILE in BlazeStratifierTest BlazeStratifierAgeGroup BlazeAgeGroupLocation \
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} | jq . ; done ; cd ..
 ```
-
-cd fsh-generated/resources ; for FILE in BlazeStratifierTest \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/fhir/Measure/${FILE} ; done ; cd ../..
-
 
 
 POST the patient bundles with fullUrl of the bundle entries as references
 ```sh
-cat output/Example-Bundle-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
-cat output/Example-Bundle-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
-cat output/Example-Bundle-HIVSimple3.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+cat output/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir | jq .
+cat output/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir | jq .
 ```
-
 
 Run a provided example in the browser
 ```
 http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01
 ```
-
 or on command line:
 ```
-curl -sXPOST 'http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq
+curl 'http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq .
+curl 'http://localhost:8080/fhir/Measure/BlazeStratifierAgeGroup/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq .
+curl 'http://localhost:8080/fhir/Measure/BlazeAgeGroupLocation/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq .
+
 ```
 
-
-The [Blaze](https://github.com/samply/blaze/blob/c479410a9198526453a0df769ab7db2e6d5dd654/docs/cql-queries/api.md) docs explain how to process Measure resources with CQL in Library resources.
+The Blaze docs explain how to process Measure resources with CQL in Library resources.
 
 
 ## Getting started with cqf-ruler
 
-> These instructions are temporary until feature-stratification are merged into main branch and a Publisher bug fix is released which prevents builds.
+> These instructions are temporary until feature-stratification are merged into main branch and a Publisher bug fix is released which prevents errors. Approach:
+* Use an XML IG and not the Sushi, including includes/menu.xml not Sushi
+* Comment out input/cql binary stuff in XML
+* FSHOnly - true in sushi
+* mv libraries or publisher errors with duplicate resources
+
 
 ```
 git clone git@github.com:DBCG/cqf-ruler.git
@@ -244,91 +261,51 @@ git checkout feature-stratification
 mvn jetty:run -am --projects cqf-ruler-r4
 ```
 
-Load FHIR-ModelInfo
+Prep repo:
+```
+git@github.com:citizenrich/simple-hiv-ig.git
+cd simple-hiv-ig
+bash _updateCQFTooling.sh
+bash _updatePublisher.sh
+```
+
+
+Steps:
+```sh
+rm -rf input/resources/Library-* input/resources/library-*
+sushi
+mv fsh-generated/resources/Library-* input/resources/
+bash _refresh.sh
+bash _genonce.sh -no-sushi
+```
+
+Load FHIR-ModelInfo just in case
 ```sh
 curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIR-ModelInfo.json http://localhost:8080/cqf-ruler-r4/fhir/Library/FHIR-ModelInfo | jq .
 ```
 
-
 ```sh
 cd output ; for FILE in OpenCR OpenHIE \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} ; done ; cd ../
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} | jq . ; done ; cd ../
 ```
 
 ```sh
 cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecord Blaze \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Library/${FILE} ; done ; cd ../
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Library/${FILE} | jq . ; done ; cd ../
 ```
 
 ```sh
 cd output ; for FILE in BlazeStratifierTest HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
 HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv HIVSimpleGenderSubjectList HIVSimpleTestResult \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} ; done ; cd ..
+; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} | jq . ; done ; cd ..
 ```
 
 ```sh
-cat output/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
-cat output/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
-```
-
-curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq
-
-
-curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?&periodStart=2000&periodEnd=2030' | jq .
-
-
-
-
-## Scratch area
-
-
-```
-curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-Blaze.json http://localhost:8080/cqf-ruler-r4/fhir/Library/Blaze
+cat output/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir | jq .
+cat output/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir | jq .
 ```
 
 ```sh
-cat fsh-generated/resources/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
-cat fsh-generated/resources/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/fhir
+curl 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?&periodStart=1970&periodEnd=2021' | jq .
+curl 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=1980&periodEnd=2021' | jq .
 ```
-
-
-```sh
-cd fsh-generated/resources ; for FILE in BlazeStratifierTest \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} ; done ; cd ../..
-```
-
-POST the patient bundles with fullUrl of the bundle entries as references
-```sh
-cat fsh-generated/resources/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
-cat fsh-generated/resources/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir
-```
-
-```
-http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=1970-01-01&periodEnd=2021-01-01&reportType=population
-```
-
-```
-curl -sXPOST -H "Content-Type: application/fhir+json" 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2000&periodEnd=2030' | jq
-```
-
-```
-curl -sXPOST -H "Content-Type: application/fhir+json" 'http://localhost:8080/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2000&periodEnd=2030&reportType=subject-list' | jq
-```
-
-```
-curl -sXPOST 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2000&periodEnd=2030' | jq
-```
-
-
-## How Measures Work
-
-### Options for Measure Resources
-
-// options: proportion | ratio | continuous-variable | cohort
-* scoring = $measure-scoring#proportion
-
-// options: opportunity | all-or-nothing | linear | weighted
-// * compositeScoring.coding.code = linear
-
-// separate population groups with separate stratifiers per group
-// options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation
