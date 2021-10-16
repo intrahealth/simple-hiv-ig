@@ -21,7 +21,7 @@ RuleSet: meas-common-blaze
 * publisher = "OpenHIE"
 * library[+] = Canonical(Blaze)
 
-
+// works
 Instance: HIVSimpleAgeGroup
 InstanceOf: Measure
 Title: "HIVSimpleAgeGroup"
@@ -212,10 +212,11 @@ Description: "HIVSimpleGenderSuppDataIndiv"
   * code.text = "supplemental-data-example-define-sex"
   * criteria.language = #text/cql
   * criteria.expression = "SDE Sex"
+// not working
 * supplementalData[+]
   * code.text = "supplemental-data-example-define-location"
   * criteria.language = #text/cql
-  * criteria.expression = "SDE Location"
+  * criteria.expression = "Location Code Revised"
 
 
 Instance: HIVSimpleTestResult
@@ -264,6 +265,16 @@ Description: "BlazeStratifierTest"
     * code = $measure-population#initial-population
     * criteria.language = #text/cql
     * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
     * criteria.expression = "Gender"
@@ -285,11 +296,21 @@ Description: "BlazeStratifierAgeGroup"
     * code = $measure-population#initial-population
     * criteria.language = #text/cql
     * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
     * criteria.expression = "Age Group/Sex"
 
-
+// current attempt
 Instance: BlazeAgeGroupLocation
 InstanceOf: Measure
 Title: "BlazeAgeGroupLocation"
@@ -306,11 +327,56 @@ Description: "BlazeAgeGroupLocation"
     * code = $measure-population#initial-population
     * criteria.language = #text/cql
     * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
-    * criteria.expression = "Age Group/Sex/Location"
+    * criteria.expression = "Age Group/Sex/Location Again"
 
 
+// not working
+Instance: BlazeGenderLocation
+InstanceOf: Measure
+Title: "BlazeGenderLocation"
+Description: "BlazeGenderLocation"
+* insert meas-common-blaze
+* name = "BlazeGenderLocation"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeGenderLocation"
+* identifier.value = "BlazeAgeGroupLocation"
+* scoring = $measure-scoring#proportion
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Gender/Location"
+
+
+
+
+// Sex and Location
 
 // RuleSet: meas-bundle
 // * entry[=].request.method = #PUT

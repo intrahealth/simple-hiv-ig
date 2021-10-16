@@ -399,6 +399,14 @@
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
+          <resource>
+            <reference>
+              <reference value="Measure/BlazeGenderLocation"/>
+            </reference>
+            <name value="Measure/BlazeGenderLocation"/>
+            <description value="A simple example showing how examples are defined and referenced"/>
+          </resource>
+
         <page>
             <!-- The root will always be toc.html - the template will force it if you don't do it -->
             <nameUrl value="toc.html"/>

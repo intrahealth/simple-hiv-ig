@@ -133,6 +133,14 @@ For example:
 * There must be an `input/vocabulary/valueset` folder even if it is empty.
 
 
+### Measure options and examples
+
+$measure-scoring#cohort
+
+A proportion Measure requires at least Initial Population, Denominator, and Numerator.
+
+
+
 ```
 $ cd input/
 ~/src/github.com/intrahealth/simple-hiv-ig/input
@@ -254,15 +262,20 @@ The Blaze docs explain how to process Measure resources with CQL in Library reso
 * mv libraries or publisher errors with duplicate resources
 
 
-```
+```sh
 git clone git@github.com:DBCG/cqf-ruler.git
 cd cqf-ruler/
 git checkout feature-stratification
 mvn jetty:run -am --projects cqf-ruler-r4
 ```
 
-Prep repo:
+```sh
+# if making changes to the cql/measures, may have to delete database on each iteration
+rm -rf target
 ```
+
+Prep repo:
+```sh
 git@github.com:citizenrich/simple-hiv-ig.git
 cd simple-hiv-ig
 bash _updateCQFTooling.sh
@@ -295,7 +308,8 @@ cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecor
 ```
 
 ```sh
-cd output ; for FILE in BlazeStratifierTest HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
+cd output ; for FILE in BlazeAgeGroupLocation BlazeGenderLocation BlazeStratifierTest BlazeStratifierAgeGroup \
+HIVSimpleAgeGroup HIVSimpleCondition HIVSimpleGender HIVSimpleGenderCohort \
 HIVSimpleGenderSuppData HIVSimpleGenderSuppDataIndiv HIVSimpleGenderSubjectList HIVSimpleTestResult \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} | jq . ; done ; cd ..
 ```
@@ -306,6 +320,18 @@ cat output/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: appli
 ```
 
 ```sh
-curl 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/HIVSimpleAgeGroup/$evaluate-measure?&periodStart=1970&periodEnd=2021' | jq .
-curl 'http://localhost:8080/cqf-ruler-r4/fhir/Measure/BlazeStratifierTest/$evaluate-measure?&periodStart=1980&periodEnd=2021' | jq .
+# set fhir server base as necessary
+export FHIR="http://localhost:8080/cqf-ruler-r4/fhir"
+curl $FHIR'/Measure/HIVSimpleAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleCondition/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleGender/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleGenderCohort/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleGenderSubjectList/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleGenderSuppData/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleGenderSuppDataIndiv/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/HIVSimpleTestResult/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/BlazeStratifierAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/BlazeAgeGroupLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/BlazeGenderLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
 ```

@@ -43,7 +43,7 @@ define "Denominator":
   "Sex" is not null
 
 define "Numerator":
-  "Sex" = 'female'
+  "Sex" is not null
 
 define "Hello, World!":
   'Hello, World!'
@@ -130,7 +130,6 @@ define "Contact date":
     return E.period.start
 
 // make a gender code for supp data
-
 define "SDE Sex":
   case
     when Patient.gender = 'male' then Code { code: 'M', system: 'http://hl7.org/fhir/administrative-gender', display: 'Male' }
@@ -139,8 +138,6 @@ define "SDE Sex":
   end
 
 /* first attempt at supp data for location */
-
-// hack to try pseudo-stratifier for location using supp data
 
 define function "GetId"(uri String):
   Last(Split(uri, '/'))
@@ -155,10 +152,6 @@ define "Location":
     return "GetLocation"(First(E.location).location)
   )
 
-/*
-Most recent encounter location
-*/
-
 define "Most Recent Encounter Location Reference":
   Last([Encounter] E
     return First(E.location L
@@ -166,8 +159,35 @@ define "Most Recent Encounter Location Reference":
     )
       //sort by start of period
   )
+// works with cql not evaluate-measure
+define "Location Code Revised":
+  singleton from (
+    [Location] L
+      let identifier: singleton from (L.identifier I)
+      // let identifier: singleton from (L.identifier I where I.system = 'https://github.com/synthetichealth/synthea')
+      where L.id = Last(Split("Most Recent Encounter Location Reference".reference, '/'))
+      return CodeableConcept {
+        coding: {
+          Coding {
+            code: code { value: identifier.value },
+            system: identifier.system
+          }
+        }
+      }
+  )
 
-// returns string
+
+define "Age Group/Sex/Location 2":
+  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference".value
+
+
+// this comes up as null in both fsh and evaluate-measure
+define "SDE Location":
+  // Code { code: "Location".name }
+  Code { code: "Location".name, system: 'http://location-name-code-system', display: Location.name }
+
+
+// returns string, not usable in stratifier
 define "Most Recent Encounter Location Reference Reference":
   Last([Encounter] E
     return First(E.location L
@@ -176,26 +196,42 @@ define "Most Recent Encounter Location Reference Reference":
       //sort by start of period
   )
 
+// not working for cql or evaluate-measure
 define "Age Group/Sex/Location":
-  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference"
+  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference".reference
 
-
-
+// works with cql not evaluate-measure
 define "Location Code":
   singleton from ( [Location] L
     let identifier: singleton from ( L.identifier I
         where I.system = 'https://github.com/synthetichealth/synthea'
     )
     where L.id = Last(Split("Most Recent Encounter Location Reference".reference, '/'))
-    return CodeableConcept { coding: { Coding { code: code { value: identifier.value }, system: identifier.system } } }
+    return CodeableConcept { 
+      coding: { 
+        Coding { 
+          code: code { value: identifier.value }, 
+            system: identifier.system 
+        } 
+      } 
+    }
   )
 
+// works with cql not evaluate-measure
 define "Location Code Deux":
   singleton from ( [Location] L
     let identifier: singleton from ( L.identifier )
     where L.id = Last(Split("Most Recent Encounter Location Reference".reference, '/'))
-    return CodeableConcept { coding: { Coding { code: code { value: identifier.value }, system: identifier.system } } }
+    return CodeableConcept { 
+      coding: { 
+        Coding { code: code { value: identifier.value }, 
+        system: identifier.system 
+        } 
+      } 
+    }
   )
+
+
 
 /* create clinical decision support logic */
 /*

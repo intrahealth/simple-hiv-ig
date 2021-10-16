@@ -19,9 +19,9 @@ code "P35Y--P40Y": 'P35Y--P40Y' from "ISO-8601-Derived Periods" display '35-39 y
 code "P40Y--P50Y": 'P40Y--P50Y' from "ISO-8601-Derived Periods" display '40-49 year'
 code "P50Y--P9999Y": 'P50Y--P9999Y' from "ISO-8601-Derived Periods" display '50+ years'
 
-/* parameter "Measurement Period" Interval<DateTime> */
 // need DateTime eg @2014-01-25T not Date, eg @2014-01-25
-parameter "Measurement Period" Interval<DateTime> default Interval[@2020-01-01T, @2020-12-31T]
+// parameter "Measurement Period" Interval<DateTime> default Interval[@2020-01-01T, @2020-12-31T]
+parameter "Measurement Period" Interval<DateTime>
 
 // SNOMED-CT, International Edition
 codesystem "SNOMED-CT": 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
@@ -164,6 +164,49 @@ define "Viral Load Test Result":
 //     where Observation.value >= 1000 '{copies}/mL'
 
 
+define function "GetId"(uri String):
+  Last(Split(uri, '/'))
+
+define function "GetLocation"(reference Reference):
+  singleton from ( [Location] Location
+    where Location.id.value = GetId(reference.reference)
+  )
+
+define "Location":
+  First([Encounter] E
+    return "GetLocation"(First(E.location).location)
+  )
+
+// this comes up as null in either approach
+define "SDE Location":
+  // Code { code: "Location".name }
+  Code { code: "Location".name, system: 'http://location-name-code-system', display: Location.name }
+
+
+// works with fsh
+define "Location Code Revised":
+  singleton from (
+    [Location] L
+      let identifier: singleton from (L.identifier I)
+      // let identifier: singleton from (L.identifier I where I.system = 'https://github.com/synthetichealth/synthea')
+      where L.id = Last(Split("Most Recent Encounter Location Reference".reference, '/'))
+      return CodeableConcept {
+        coding: {
+          Coding {
+            code: code { value: identifier.value },
+            system: identifier.system
+          }
+        }
+      }
+  )
+
+// works in cql
+define "Location Code Revised Again":
+  First("Location Code Revised".coding.code.value)
+
+
+
+
 define "Most Recent Encounter Location Reference":
   Last([Encounter] E
     return First(E.location L
@@ -181,14 +224,27 @@ define "Most Recent Encounter Location Reference Reference":
       //sort by start of period
   )
 
+// doesn't work
+define "Age Group/Sex/Location Again":
+  "Age Group".code + ':' + "Sex" + ':' + "Location Code Revised Again"
+
+
+// doesn't work
 define "Age Group/Sex/Location":
   "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference"
+
+
+define "Gender/Location":
+  "Sex" + ':' + "Most Recent Encounter Location Reference Reference"
+
 
 define "Initial Population":
   true
 
+
 define "Denominator":
   "Sex" is not null
+
 
 define "Numerator":
   "Sex" = 'female'
