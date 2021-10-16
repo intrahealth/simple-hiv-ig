@@ -1,6 +1,7 @@
 Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
 
+
 RuleSet: meas-common
 * identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
 * version = "0.0.0"
@@ -9,61 +10,16 @@ RuleSet: meas-common
 * date = "2021-07-01"
 * publisher = "OpenHIE"
 * library[+] = Canonical(KitchenSink)
-// * type.coding.code = #process <- this is not used in calculations
 
 
-RuleSet: meas-common-blaze
-* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
-* version = "0.0.0"
-* status = #draft
-* experimental = true
-* date = "2021-07-01"
-* publisher = "OpenHIE"
-* library[+] = Canonical(Blaze)
-
-// works
-Instance: HIVSimpleAgeGroup
+Instance: JustGender
 InstanceOf: Measure
-Title: "HIVSimpleAgeGroup"
-Description: "HIVSimpleAgeGroup"
+Title: "JustGender"
+Description: "JustGender"
 * insert meas-common
-* name = "HIVSimpleAgeGroup"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
-* identifier.value = "HIVSimpleAgeGroup"
-// options: proportion | ratio | continuous-variable | cohort
-* scoring = $measure-scoring#proportion
-// options: opportunity | all-or-nothing | linear | weighted
-// * compositeScoring.coding.code = linear
-// options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation
-* group[+]
-  * code = $OpenHIE#cohort "cohort"
-  * population[+]
-    * description = "Initial Population"
-    * code = $measure-population#initial-population
-    * criteria.language = #text/cql
-    * criteria.expression = "Initial Population"
-  * population[+]
-    * description = "Denominator"
-    * code = $measure-population#denominator
-    * criteria.language = #text/cql
-    * criteria.expression = "Denominator"
-  * population[+]
-    * description = "Numerator"
-    * code = $measure-population#numerator
-    * criteria.language = #text/cql
-    * criteria.expression = "Numerator"
-  * stratifier[0].criteria.language = #text/cql
-  * stratifier[=].criteria.expression = "Age Group"
-
-
-Instance: HIVSimpleCondition
-InstanceOf: Measure
-Title: "HIVSimpleCondition"
-Description: "HIVSimpleCondition"
-* insert meas-common
-* name = "HIVSimpleCondition"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition"
-* identifier.value = "HIVSimpleCondition"
+* name = "JustGender"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustGender"
+* identifier.value = "JustGender"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -82,18 +38,19 @@ Description: "HIVSimpleCondition"
     * code = $measure-population#numerator
     * criteria.language = #text/cql
     * criteria.expression = "Numerator"
-  * stratifier[0].criteria.language = #text/cql
-  * stratifier[=].criteria.expression = "Age Group"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Gender"
 
 
-Instance: HIVSimpleGender
+Instance: JustAgeGroup
 InstanceOf: Measure
-Title: "HIVSimpleGender"
-Description: "HIVSimpleGender"
+Title: "JustAgeGroup"
+Description: "JustAgeGroup"
 * insert meas-common
-* name = "HIVSimpleGender"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender"
-* identifier.value = "HIVSimpleGender"
+* name = "JustAgeGroup"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup"
+* identifier.value = "JustAgeGroup"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -112,16 +69,112 @@ Description: "HIVSimpleGender"
     * code = $measure-population#numerator
     * criteria.language = #text/cql
     * criteria.expression = "Numerator"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Age Group"
 
 
-Instance: HIVSimpleGenderCohort
+Instance: JustLocation
 InstanceOf: Measure
-Title: "HIVSimpleGenderCohort"
-Description: "HIVSimpleGenderCohort"
+Title: "JustLocation"
+Description: "JustLocation"
 * insert meas-common
-* name = "HIVSimpleGenderCohort"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"
-* identifier.value = "HIVSimpleGenderCohort"
+* name = "JustLocation"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustLocation"
+* identifier.value = "JustLocation"
+* scoring = $measure-scoring#proportion
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Location"
+
+
+Instance: GenderAgeGroup
+InstanceOf: Measure
+Title: "GenderAgeGroup"
+Description: "GenderAgeGroup"
+* insert meas-common
+* name = "GenderAgeGroup"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/GenderAgeGroup"
+* identifier.value = "GenderAgeGroup"
+* scoring = $measure-scoring#proportion
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Age Group/Gender"
+
+
+Instance: GenderAgeGroupLocation
+InstanceOf: Measure
+Title: "GenderAgeGroupLocation"
+Description: "GenderAgeGroupLocation"
+* insert meas-common
+* name = "GenderAgeGroupLocation"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/GenderAgeGroupLocation"
+* identifier.value = "GenderAgeGroupLocation"
+* scoring = $measure-scoring#proportion
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Gender/AgeGrooup/Location"
+
+
+Instance: Cohort
+InstanceOf: Measure
+Title: "Cohort"
+Description: "Cohort"
+* insert meas-common
+* name = "Cohort"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/Cohort"
+* identifier.value = "Cohort"
 * scoring = $measure-scoring#cohort
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -132,64 +185,14 @@ Description: "HIVSimpleGenderCohort"
     * criteria.expression = "Initial Population"
 
 
-Instance: HIVSimpleGenderSubjectList
+Instance: SuppData
 InstanceOf: Measure
-Title: "HIVSimpleGenderSubjectList"
-Description: "HIVSimpleGenderSubjectList"
+Title: "SuppData"
+Description: "SuppData"
 * insert meas-common
-* name = "HIVSimpleGenderSubjectList"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList"
-* identifier.value = "HIVSimpleGenderSubjectList"
-* scoring = $measure-scoring#cohort
-* group[+]
-  * code = $OpenHIE#cohort "cohort"
-  * population[+]
-    * description = "Initial Population"
-    * code = $measure-population#initial-population
-    * criteria.language = #text/cql
-    * criteria.expression = "Initial Population"
-
-
-Instance: HIVSimpleGenderSuppData
-InstanceOf: Measure
-Title: "HIVSimpleGenderSuppData"
-Description: "HIVSimpleGenderSuppData"
-* insert meas-common
-* name = "HIVSimpleGenderSuppData"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData"
-* identifier.value = "HIVSimpleGenderSuppData"
-* scoring = $measure-scoring#proportion
-* group[+]
-  * code = $OpenHIE#cohort "cohort"
-  * population[+]
-    * description = "Initial Population"
-    * code = $measure-population#initial-population
-    * criteria.language = #text/cql
-    * criteria.expression = "Initial Population"
-  * population[+]
-    * description = "Denominator"
-    * code = $measure-population#denominator
-    * criteria.language = #text/cql
-    * criteria.expression = "Denominator"
-  * population[+]
-    * description = "Numerator"
-    * code = $measure-population#numerator
-    * criteria.language = #text/cql
-    * criteria.expression = "Numerator"
-* supplementalData[+]
-  * code.text = "supplemental-data-example-define"
-  * criteria.language = #text/cql
-  * criteria.expression = "SDE Sex"
-
-
-Instance: HIVSimpleGenderSuppDataIndiv
-InstanceOf: Measure
-Title: "HIVSimpleGenderSuppDataIndiv"
-Description: "HIVSimpleGenderSuppDataIndiv"
-* insert meas-common
-* name = "HIVSimpleGenderSuppDataIndiv"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv"
-* identifier.value = "HIVSimpleGenderSuppDataIndiv"
+* name = "SuppData"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData"
+* identifier.value = "SuppData"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -219,35 +222,15 @@ Description: "HIVSimpleGenderSuppDataIndiv"
   * criteria.expression = "Location Code Revised"
 
 
-Instance: HIVSimpleTestResult
-InstanceOf: Measure
-Title: "HIVSimpleTestResult"
-Description: "HIVSimpleTestResult"
-* insert meas-common
-* name = "HIVSimpleTestResult"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult"
-* identifier.value = "HIVSimpleTestResult"
-* scoring = $measure-scoring#proportion
-* group[+]
-  * code = $OpenHIE#cohort "cohort"
-  * population[+]
-    * description = "Initial Population"
-    * code = $measure-population#initial-population
-    * criteria.language = #text/cql
-    * criteria.expression = "Initial Population"
-  * population[+]
-    * description = "Denominator"
-    * code = $measure-population#denominator
-    * criteria.language = #text/cql
-    * criteria.expression = "Denominator"
-  * population[+]
-    * description = "Numerator"
-    * code = $measure-population#numerator
-    * criteria.language = #text/cql
-    * criteria.expression = "Numerator"
+RuleSet: meas-common-blaze
+* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
+* version = "0.0.0"
+* status = #draft
+* experimental = true
+* date = "2021-07-01"
+* publisher = "OpenHIE"
+* library[+] = Canonical(Blaze)
 
-// "The reportType `%s` is invalid. Please use one of `subject`, `subject-list` or `population`." report-type
-// subject-list must be a POST
 
 Instance: BlazeStratifierTest
 InstanceOf: Measure
@@ -310,7 +293,7 @@ Description: "BlazeStratifierAgeGroup"
     * criteria.language = #text/cql
     * criteria.expression = "Age Group/Sex"
 
-// current attempt
+
 Instance: BlazeAgeGroupLocation
 InstanceOf: Measure
 Title: "BlazeAgeGroupLocation"
@@ -342,7 +325,6 @@ Description: "BlazeAgeGroupLocation"
     * criteria.expression = "Age Group/Sex/Location Again"
 
 
-// not working
 Instance: BlazeGenderLocation
 InstanceOf: Measure
 Title: "BlazeGenderLocation"
@@ -375,9 +357,6 @@ Description: "BlazeGenderLocation"
 
 
 
-
-// Sex and Location
-
 // RuleSet: meas-bundle
 // * entry[=].request.method = #PUT
 
@@ -390,39 +369,4 @@ Description: "BlazeGenderLocation"
 // * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
 // * entry[=].resource = HIVSimpleAgeGroup
 // * entry[=].request.url = "Measure/HIVSimpleAgeGroup"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition"
-// * entry[=].resource = HIVSimpleCondition
-// * entry[=].request.url = "Measure/HIVSimpleCondition"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender"
-// * entry[=].resource = HIVSimpleGender
-// * entry[=].request.url = "Measure/HIVSimpleGender"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort"
-// * entry[=].resource = HIVSimpleGenderCohort
-// * entry[=].request.url = "Measure/HIVSimpleGenderCohort"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList"
-// * entry[=].resource = HIVSimpleGenderSubjectList
-// * entry[=].request.url = "Measure/HIVSimpleGenderSubjectList"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData"
-// * entry[=].resource = HIVSimpleGenderSuppData
-// * entry[=].request.url = "Measure/HIVSimpleGenderSuppData"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv"
-// * entry[=].resource = HIVSimpleGenderSuppDataIndiv
-// * entry[=].request.url = "Measure/HIVSimpleGenderSuppDataIndiv"
-// * insert meas-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult"
-// * entry[=].resource = HIVSimpleTestResult
-// * entry[=].request.url = "Measure/HIVSimpleTestResult"
 // * insert meas-bundle

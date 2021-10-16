@@ -151,9 +151,9 @@
 
           <resource>
             <reference>
-              <reference value="Measure/HIVSimpleAgeGroup"/>
+              <reference value="Measure/JustAgeGroup"/>
             </reference>
-            <name value="Measure/HIVSimpleAgeGroup"/>
+            <name value="Measure/JustAgeGroup"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
                 
@@ -162,22 +162,6 @@
               <reference value="Bundle/Example-HIVSimple"/>
             </reference>
             <name value="Bundle/Example-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-
-          <resource>
-            <reference>
-              <reference value="Measure/HIVSimpleGenderSuppDataIndiv"/>
-            </reference>
-            <name value="Measure/HIVSimpleGenderSuppDataIndiv"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-
-          <resource>
-            <reference>
-              <reference value="Measure/HIVSimpleCondition"/>
-            </reference>
-            <name value="Measure/HIVSimpleCondition"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
@@ -345,41 +329,49 @@
           
           <resource>
             <reference>
-              <reference value="Measure/HIVSimpleTestResult"/>
+              <reference value="Measure/Cohort"/>
             </reference>
-            <name value="Measure/HIVSimpleTestResult"/>
+            <name value="Measure/Cohort"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
           <resource>
             <reference>
-              <reference value="Measure/HIVSimpleGenderCohort"/>
+              <reference value="Measure/JustGender"/>
             </reference>
-            <name value="Measure/HIVSimpleGenderCohort"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-
-          <resource>
-            <reference>
-              <reference value="Measure/HIVSimpleGender"/>
-            </reference>
-            <name value="Measure/HIVSimpleGender"/>
+            <name value="Measure/JustGender"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
           
           <resource>
             <reference>
-              <reference value="Measure/HIVSimpleGenderSubjectList"/>
+              <reference value="Measure/JustLocation"/>
             </reference>
-            <name value="Measure/HIVSimpleGenderSubjectList"/>
+            <name value="Measure/JustLocation"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
           <resource>
             <reference>
-              <reference value="Measure/HIVSimpleGenderSuppData"/>
+              <reference value="Measure/GenderAgeGroup"/>
             </reference>
-            <name value="Measure/HIVSimpleGenderSuppData"/>
+            <name value="Measure/GenderAgeGroup"/>
+            <description value="A simple example showing how examples are defined and referenced"/>
+          </resource>          
+
+          <resource>
+            <reference>
+              <reference value="Measure/GenderAgeGroupLocation"/>
+            </reference>
+            <name value="Measure/Gender-AgeGroup-Location"/>
+            <description value="A simple example showing how examples are defined and referenced"/>
+          </resource>
+
+          <resource>
+            <reference>
+              <reference value="Measure/SuppData"/>
+            </reference>
+            <name value="Measure/SuppData"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
@@ -407,6 +399,7 @@
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
+          
         <page>
             <!-- The root will always be toc.html - the template will force it if you don't do it -->
             <nameUrl value="toc.html"/>

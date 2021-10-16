@@ -21,6 +21,9 @@ code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA
 
 context Patient
 
+define "Gender":
+  Patient.gender.value
+
 define "Sex":
   Patient.gender.value
 
@@ -30,11 +33,11 @@ define "Female":
 define "Male":
   Patient.gender = 'male'
 
-define "Age Group/Sex":
-  AR."Age Group".code + ':' + "Sex"
-
 define "Age Group":
   AR."Age Group"
+
+define "Age Group/Gender":
+  AR."Age Group".code + ':' + "Gender"
 
 define "Initial Population":
   true
@@ -147,11 +150,20 @@ define function "GetLocation"(reference Reference):
     where Location.id.value = GetId(reference.reference)
   )
 
+// works in cql
 define "Location":
   First([Encounter] E
     return "GetLocation"(First(E.location).location)
   )
 
+
+// not working for cql or evaluate-measure
+define "Gender/AgeGrooup/Location":
+  "Age Group".code + ':' + "Sex" + ':' + "Location".id
+
+
+
+// works in cql, returns reference
 define "Most Recent Encounter Location Reference":
   Last([Encounter] E
     return First(E.location L
@@ -195,10 +207,6 @@ define "Most Recent Encounter Location Reference Reference":
     )
       //sort by start of period
   )
-
-// not working for cql or evaluate-measure
-define "Age Group/Sex/Location":
-  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference".reference
 
 // works with cql not evaluate-measure
 define "Location Code":

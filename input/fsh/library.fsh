@@ -36,12 +36,9 @@ Description: "FHIRHelpers"
 * name = "FHIRHelpers"
 * version = "4.0.1"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers"
-// * url = "http://hl7.org/fhir/Library/FHIRHelpers"
 // * identifier.value = "FHIRHelpers"
 * content.id = "ig-loader-FHIRHelpers.cql"
 
-// * relatedArtifact.type = #depends-on
-// * relatedArtifact.resource = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo"
 
 Instance: KitchenSink
 InstanceOf: Library
