@@ -4,12 +4,8 @@
 # rm -rf fsh-generated/resources/
 # bash _genonce.sh
 
-cd output ; for FILE in LocationCS OpenCR OpenHIE \
+cd output ; for FILE in OpenCR OpenHIE \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/fhir/CodeSystem/${FILE} ; done ; cd ..
-
-cd output ; for FILE in LocationVS \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @ValueSet-${FILE}.json http://localhost:8080/fhir/ValueSet/${FILE} ; done ; cd ..
-
 
 cd output ; for FILE in Blaze \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/fhir/Library/${FILE} ; done ; cd ..

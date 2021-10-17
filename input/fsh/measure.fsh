@@ -102,16 +102,16 @@ Description: "JustLocation"
     * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
-    * criteria.expression = "Location"
+    * criteria.expression = "Most Recent Encounter Location Reference Reference Value"
 
 
-Instance: GenderAgeGroup
+Instance: AgeGroupGender
 InstanceOf: Measure
-Title: "GenderAgeGroup"
-Description: "GenderAgeGroup"
+Title: "AgeGroupGender"
+Description: "AgeGroupGender"
 * insert meas-common
-* name = "GenderAgeGroup"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/GenderAgeGroup"
+* name = "AgeGroupGender"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGender"
 * identifier.value = "GenderAgeGroup"
 * scoring = $measure-scoring#proportion
 * group[+]
@@ -136,14 +136,14 @@ Description: "GenderAgeGroup"
     * criteria.expression = "Age Group/Gender"
 
 
-Instance: GenderAgeGroupLocation
+Instance: AgeGroupGenderLocation
 InstanceOf: Measure
-Title: "GenderAgeGroupLocation"
-Description: "GenderAgeGroupLocation"
+Title: "AgeGroupGenderLocation"
+Description: "AgeGroupGenderLocation"
 * insert meas-common
 * name = "GenderAgeGroupLocation"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/GenderAgeGroupLocation"
-* identifier.value = "GenderAgeGroupLocation"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGenderLocation"
+* identifier.value = "AgeGroupGenderLocation"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -164,7 +164,7 @@ Description: "GenderAgeGroupLocation"
     * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
-    * criteria.expression = "Gender/AgeGrooup/Location"
+    * criteria.expression = "Age Group/Sex/Location 2"
 
 
 Instance: Cohort

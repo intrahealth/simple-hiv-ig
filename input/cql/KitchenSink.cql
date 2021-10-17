@@ -189,10 +189,6 @@ define "Location Code Revised":
   )
 
 
-define "Age Group/Sex/Location 2":
-  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference".value
-
-
 // this comes up as null in both fsh and evaluate-measure
 define "SDE Location":
   // Code { code: "Location".name }
@@ -207,6 +203,16 @@ define "Most Recent Encounter Location Reference Reference":
     )
       //sort by start of period
   )
+
+
+define "Most Recent Encounter Location Reference Reference Value":
+  "Most Recent Encounter Location Reference Reference".value
+
+
+define "Age Group/Sex/Location 2":
+  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference Value"
+
+
 
 // works with cql not evaluate-measure
 define "Location Code":

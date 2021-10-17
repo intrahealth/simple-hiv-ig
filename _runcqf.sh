@@ -19,7 +19,7 @@ cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecor
 
 
 cd output ; for FILE in BlazeAgeGroupLocation BlazeGenderLocation BlazeStratifierTest BlazeStratifierAgeGroup \
-JustGender JustAgeGroup JustLocation GenderAgeGroup GenderAgeGroupLocation Cohort SuppData \
+JustGender JustAgeGroup JustLocation AgeGroupGender AgeGroupGenderLocation Cohort SuppData \
 ; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} | jq . ; done ; cd ..
 
 
@@ -31,8 +31,8 @@ export FHIR="http://localhost:8080/cqf-ruler-r4/fhir"
 curl $FHIR'/Measure/JustGender/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
 curl $FHIR'/Measure/JustAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
 curl $FHIR'/Measure/JustLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/GenderAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/GenderAgeGroupLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/AgeGroupGender/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
+curl $FHIR'/Measure/AgeGroupGenderLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
 curl $FHIR'/Measure/Cohort/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
 curl $FHIR'/Measure/SuppData/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
 curl $FHIR'/Measure/BlazeStratifierAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .

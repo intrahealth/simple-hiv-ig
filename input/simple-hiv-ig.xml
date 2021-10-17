@@ -353,17 +353,17 @@
 
           <resource>
             <reference>
-              <reference value="Measure/GenderAgeGroup"/>
+              <reference value="Measure/AgeGroupGender"/>
             </reference>
-            <name value="Measure/GenderAgeGroup"/>
+            <name value="Measure/AgeGroupGender"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>          
 
           <resource>
             <reference>
-              <reference value="Measure/GenderAgeGroupLocation"/>
+              <reference value="Measure/AgeGroupGenderLocation"/>
             </reference>
-            <name value="Measure/Gender-AgeGroup-Location"/>
+            <name value="Measure/AgeGroupGenderLocation"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource>
 
