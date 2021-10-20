@@ -224,6 +224,15 @@ define "Most Recent Encounter Location Reference Reference":
       //sort by start of period
   )
 
+define "Most Recent Encounter Location Reference Reference Value":
+  "Most Recent Encounter Location Reference Reference".value
+
+
+define "Age Group/Sex/Location 2":
+  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference Value"
+
+
+
 // doesn't work
 define "Age Group/Sex/Location Again":
   "Age Group".code + ':' + "Sex" + ':' + "Location Code Revised Again"

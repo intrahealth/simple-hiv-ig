@@ -10,6 +10,7 @@
   "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers",
   "version": "4.0.1",
   "name": "FHIRHelpers",
+  "title": "FHIRHelpers",
   "status": "draft",
   "experimental": true,
   "type": {
@@ -18,6 +19,7 @@
       "code": "logic-library"
     } ]
   },
+  "description": "FHIRHelpers",
   "relatedArtifact": [ {
     "type": "depends-on",
     "display": "FHIR model information",

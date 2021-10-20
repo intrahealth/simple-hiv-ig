@@ -18,6 +18,8 @@ Title: "JustGender"
 Description: "JustGender"
 * insert meas-common
 * name = "JustGender"
+* title = "JustGender"
+* description = "JustGender"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustGender"
 * identifier.value = "JustGender"
 * scoring = $measure-scoring#proportion
@@ -49,6 +51,8 @@ Title: "JustAgeGroup"
 Description: "JustAgeGroup"
 * insert meas-common
 * name = "JustAgeGroup"
+* title = "JustAgeGroup"
+* description = "JustAgeGroup"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup"
 * identifier.value = "JustAgeGroup"
 * scoring = $measure-scoring#proportion
@@ -80,6 +84,8 @@ Title: "JustLocation"
 Description: "JustLocation"
 * insert meas-common
 * name = "JustLocation"
+* title = "JustLocation"
+* description = "JustLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustLocation"
 * identifier.value = "JustLocation"
 * scoring = $measure-scoring#proportion
@@ -111,6 +117,8 @@ Title: "AgeGroupGender"
 Description: "AgeGroupGender"
 * insert meas-common
 * name = "AgeGroupGender"
+* title = "AgeGroupGender"
+* description = "AgeGroupGender"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGender"
 * identifier.value = "GenderAgeGroup"
 * scoring = $measure-scoring#proportion
@@ -141,7 +149,9 @@ InstanceOf: Measure
 Title: "AgeGroupGenderLocation"
 Description: "AgeGroupGenderLocation"
 * insert meas-common
-* name = "GenderAgeGroupLocation"
+* name = "AgeGroupGenderLocation"
+* title = "AgeGroupGenderLocation"
+* description = "AgeGroupGenderLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGenderLocation"
 * identifier.value = "AgeGroupGenderLocation"
 * scoring = $measure-scoring#proportion
@@ -173,6 +183,8 @@ Title: "Cohort"
 Description: "Cohort"
 * insert meas-common
 * name = "Cohort"
+* title = "Cohort"
+* description = "Cohort"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/Cohort"
 * identifier.value = "Cohort"
 * scoring = $measure-scoring#cohort
@@ -191,6 +203,8 @@ Title: "SuppData"
 Description: "SuppData"
 * insert meas-common
 * name = "SuppData"
+* title = "SuppData"
+* description = "SuppData"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData"
 * identifier.value = "SuppData"
 * scoring = $measure-scoring#proportion
@@ -222,6 +236,42 @@ Description: "SuppData"
   * criteria.expression = "Location Code Revised"
 
 
+Instance: TXPVLS
+InstanceOf: Measure
+Title: "TXPVLS"
+Description: "TXPVLS"
+* insert meas-common
+* name = "TXPVLS"
+* title = "TXPVLS"
+* description = "TXPVLS"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TXPVLS"
+* identifier.value = "TXPVLS"
+* scoring = $measure-scoring#proportion
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    // any viral load result
+    * criteria.expression = "Viral Load Test Result"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Suppressed"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    // waiting for fix
+    * criteria.expression = "Age Group/Gender"
+    // * criteria.expression = "Age Group/Sex/Location 2"
+
+
 RuleSet: meas-common-blaze
 * identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
 * version = "0.0.0"
@@ -238,6 +288,8 @@ Title: "BlazeStratifierTest"
 Description: "BlazeStratifierTest"
 * insert meas-common-blaze
 * name = "BlazeStratifierTest"
+* title = "BlazeStratifierTest"
+* description = "BlazeStratifierTest"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest"
 * identifier.value = "BlazeStratifierTest"
 * scoring = $measure-scoring#proportion
@@ -269,6 +321,8 @@ Title: "BlazeStratifierAgeGroup"
 Description: "BlazeStratifierAgeGroup"
 * insert meas-common-blaze
 * name = "BlazeStratifierAgeGroup"
+* title = "BlazeStratifierAgeGroup"
+* description = "BlazeStratifierAgeGroup"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierAgeGroup"
 * identifier.value = "BlazeStratifierAgeGroup"
 * scoring = $measure-scoring#proportion
@@ -300,6 +354,8 @@ Title: "BlazeAgeGroupLocation"
 Description: "BlazeAgeGroupLocation"
 * insert meas-common-blaze
 * name = "BlazeAgeGroupLocation"
+* title = "BlazeAgeGroupLocation"
+* description = "BlazeAgeGroupLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeAgeGroupLocation"
 * identifier.value = "BlazeAgeGroupLocation"
 * scoring = $measure-scoring#proportion
@@ -331,6 +387,8 @@ Title: "BlazeGenderLocation"
 Description: "BlazeGenderLocation"
 * insert meas-common-blaze
 * name = "BlazeGenderLocation"
+* title = "BlazeGenderLocation"
+* description = "BlazeGenderLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeGenderLocation"
 * identifier.value = "BlazeAgeGroupLocation"
 * scoring = $measure-scoring#proportion
@@ -353,7 +411,7 @@ Description: "BlazeGenderLocation"
     * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
-    * criteria.expression = "Gender/Location"
+    * criteria.expression = "Age Group/Sex/Location 2"
 
 
 

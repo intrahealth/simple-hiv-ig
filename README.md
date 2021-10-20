@@ -302,6 +302,21 @@ Some hints on authorship from recent workshops:
 
 ### Measure options and examples
 
+The $evaluate-measure operation runs 
+
+```cql
+// parameter "Measurement Period" Interval<DateTime> default Interval[@2020-01-01T, @2020-12-31T]
+parameter "Measurement Period" Interval<DateTime>
+```
+
+
+### measure-scoring
+
+// options: proportion | ratio | continuous-variable | cohort
+* scoring = $measure-scoring#proportion
+
+
+
 $measure-scoring#cohort
 
 A proportion Measure requires at least Initial Population, Denominator, and Numerator.
@@ -309,14 +324,53 @@ A proportion Measure requires at least Initial Population, Denominator, and Nume
 // * type.coding.code = #process <- this is not used in calculations
 
 
-// options: proportion | ratio | continuous-variable | cohort
-* scoring = $measure-scoring#proportion
-
 // options: opportunity | all-or-nothing | linear | weighted
 // * compositeScoring.coding.code = linear
 // options: initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-observation
 
 
-// "The reportType `%s` is invalid. Please use one of `subject`, `subject-list` or `population`." report-type
-// subject-list must be a POST
+// "The reportType `%s` is invalid. Please use one of ." 
+
+
+### report-type
+
+
+### $evaluate-measure 
+
+
+
+
+* `subject`, `subject-list` or `population`
+* population is the default.
+* subject-list must be a POST. subject-list gives a List resource of the Patients that meet the criteria, no further details, e.g.
+```
+"entry": [
+  {
+    "item": {
+      "reference": "Patient/C6Z3TMVKRCH2O6VX"
+    }
+  },
+  {
+    "item": {
+      "reference": "Patient/C6Z44QYHMQ7AGD2M"
+    }
+  },
+  {
+    "item": {
+      "reference": "Patient/C6Z4GYJYLPR6FCST"
+    }
+  },
+  {
+    "item": {
+      "reference": "Patient/C6Z4H2E5VIJ7BPCU"
+    }
+  },
+  {
+    "item": {
+      "reference": "Patient/C6Z4KP3RDJHDYCCR"
+    }
+  }
+]
+```
+
 

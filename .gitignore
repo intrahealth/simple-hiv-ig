@@ -24,3 +24,10 @@ Thumbs.db
 # backup files #
 ################
 # *.bak
+
+# notebooks
+.ipynb_checkpoints
+
+# bulk data
+bulk/output
+input/fsh/bulk

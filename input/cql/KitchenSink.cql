@@ -69,7 +69,7 @@ define "Family Name":
 // works in fsh
 
 define "HIV Condition":
-  exists ["Condition": "HIV Condition Positive"]
+  exists ["Condition": "HIV Condition Positive"]  
 
 define "Is HIV Positive":
   "HIV Condition"

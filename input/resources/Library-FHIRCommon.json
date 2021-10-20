@@ -10,6 +10,7 @@
   "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon",
   "version": "4.0.1",
   "name": "FHIRCommon",
+  "title": "FHIRCommon",
   "status": "draft",
   "experimental": true,
   "type": {
@@ -18,6 +19,7 @@
       "code": "logic-library"
     } ]
   },
+  "description": "FHIRCommon",
   "relatedArtifact": [ {
     "type": "depends-on",
     "display": "FHIR model information",
