@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+# in another terminal:
+# git checkout feature-stratification
+# mvn package
+# docker build -t cqf .
+# docker run -p "8080:8080" cqf
+
 # create bulk test data
 rm -rf bulk/output/*
 rm -rf input/fsh/bulk/*

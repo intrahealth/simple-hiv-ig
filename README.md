@@ -166,7 +166,10 @@ The Blaze docs explain how to process Measure resources with CQL in Library reso
 git clone git@github.com:DBCG/cqf-ruler.git
 cd cqf-ruler/
 git checkout feature-stratification
-mvn jetty:run -am --projects cqf-ruler-r4
+# mvn jetty:run -am --projects cqf-ruler-r4
+mvn package
+docker build -t cqf .
+docker run -p "8080:8080" cqf
 ```
 
 ```sh
