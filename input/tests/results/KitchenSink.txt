@@ -27,6 +27,7 @@ Unsuppressed=[Observation(id=Observation-ViralLoad)]
 Contact date=[dateTime, dateTime]
 SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
 Location=Location(id=Location-HIVSimple)
+Location ID=Location-HIVSimple
 Gender/AgeGrooup/Location=null
 Most Recent Encounter Location Reference=Reference
 Location Code Revised=CodeableConcept
@@ -36,6 +37,8 @@ Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSi
 Age Group/Sex/Location 2=null
 Location Code=CodeableConcept
 Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple
+Naive Location=Location/Location-HIVSimple
 
 Patient=Patient(id=Patient-HIVSimple2)
 Gender=female
@@ -63,6 +66,7 @@ Unsuppressed=[]
 Contact date=[dateTime]
 SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
 Location=Location(id=Location-HIVSimple2)
+Location ID=Location-HIVSimple2
 Gender/AgeGrooup/Location=null
 Most Recent Encounter Location Reference=Reference
 Location Code Revised=CodeableConcept
@@ -72,6 +76,8 @@ Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSi
 Age Group/Sex/Location 2=null
 Location Code=CodeableConcept
 Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple2
+Naive Location=Location/Location-HIVSimple2
 
-elapsed: -0.592 seconds
+elapsed: -0.548 seconds
 

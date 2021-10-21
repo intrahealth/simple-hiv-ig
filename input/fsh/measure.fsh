@@ -108,7 +108,7 @@ Description: "JustLocation"
     * criteria.expression = "Numerator"
   * stratifier[+]
     * criteria.language = #text/cql
-    * criteria.expression = "Most Recent Encounter Location Reference Reference Value"
+    * criteria.expression = "Naive Location"
 
 
 Instance: AgeGroupGender

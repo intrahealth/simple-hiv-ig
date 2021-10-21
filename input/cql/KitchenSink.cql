@@ -150,11 +150,15 @@ define function "GetLocation"(reference Reference):
     where Location.id.value = GetId(reference.reference)
   )
 
-// works in cql
+// works in cql id=
 define "Location":
   First([Encounter] E
     return "GetLocation"(First(E.location).location)
   )
+
+// this may do it
+define "Location ID":
+  "Location".id.value
 
 
 // not working for cql or evaluate-measure
@@ -244,6 +248,19 @@ define "Location Code Deux":
       } 
     }
   )
+
+// works in cql not eval measure
+// Bundle.entry.resource.ofType(Encounter)[0].serviceProvider.reference
+define "serviceProvider":
+  Last([Encounter]).serviceProvider.reference.value
+
+
+// works in cql not eval measure
+// Bundle.entry.resource.ofType(Encounter)[0].location[0].location.reference
+define "Naive Location":
+  Last([Encounter]).location[0].location.reference.value
+  // sort by start of period
+  // where E.period overlaps AR."Measurement Period"
 
 
 

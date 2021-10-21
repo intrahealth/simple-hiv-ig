@@ -21,7 +21,7 @@ code "P50Y--P9999Y": 'P50Y--P9999Y' from "ISO-8601-Derived Periods" display '50+
 
 // need DateTime eg @2014-01-25T not Date, eg @2014-01-25
 parameter "Measurement Period" Interval<DateTime>
-// parameter "Measurement Period" Interval<DateTime> default Interval[@2020-01-01T, @2020-12-31T]
+// parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T, @2020-12-31T]
 
 context Patient
 
