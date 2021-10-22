@@ -254,6 +254,9 @@ define "Location Code Deux":
 define "serviceProvider":
   Last([Encounter]).serviceProvider.reference.value
 
+define "assert serviceProvider is string":
+  "serviceProvider" is String
+  
 
 // works in cql not eval measure
 // Bundle.entry.resource.ofType(Encounter)[0].location[0].location.reference
@@ -262,6 +265,8 @@ define "Naive Location":
   // sort by start of period
   // where E.period overlaps AR."Measurement Period"
 
+define "assert Naive Location is string":
+  "Naive Location" is String
 
 
 /* create clinical decision support logic */
