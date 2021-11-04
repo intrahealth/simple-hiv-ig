@@ -9,10 +9,10 @@
   "status": "complete",
   "type": "summary",
   "measure": "https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup",
-  "date": "2021-10-24T14:44:28+02:00",
+  "date": "2021-11-03T13:00:39-04:00",
   "period": {
-    "start": "2000-01-01T00:00:00+01:00",
-    "end": "2021-01-31T00:00:00+01:00"
+    "start": "2000-01-01T00:00:00-05:00",
+    "end": "2021-01-31T00:00:00-05:00"
   },
   "group": [
     {
@@ -41,7 +41,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 22
         },
         {
           "extension": [
@@ -58,7 +58,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 22
         },
         {
           "extension": [
@@ -75,7 +75,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 22
         }
       ],
       "measureScore": {
@@ -104,7 +104,7 @@
                       }
                     ]
                   },
-                  "count": 3
+                  "count": 1
                 },
                 {
                   "extension": [
@@ -121,7 +121,7 @@
                       }
                     ]
                   },
-                  "count": 3
+                  "count": 1
                 },
                 {
                   "extension": [
@@ -138,7 +138,7 @@
                       }
                     ]
                   },
-                  "count": 3
+                  "count": 1
                 }
               ],
               "measureScore": {
@@ -165,7 +165,7 @@
                       }
                     ]
                   },
-                  "count": 8
+                  "count": 3
                 },
                 {
                   "extension": [
@@ -182,7 +182,7 @@
                       }
                     ]
                   },
-                  "count": 8
+                  "count": 3
                 },
                 {
                   "extension": [
@@ -199,7 +199,7 @@
                       }
                     ]
                   },
-                  "count": 8
+                  "count": 3
                 }
               ],
               "measureScore": {
@@ -226,7 +226,7 @@
                       }
                     ]
                   },
-                  "count": 9
+                  "count": 4
                 },
                 {
                   "extension": [
@@ -243,7 +243,7 @@
                       }
                     ]
                   },
-                  "count": 9
+                  "count": 4
                 },
                 {
                   "extension": [
@@ -260,7 +260,7 @@
                       }
                     ]
                   },
-                  "count": 9
+                  "count": 4
                 }
               ],
               "measureScore": {
@@ -287,7 +287,7 @@
                       }
                     ]
                   },
-                  "count": 8
+                  "count": 2
                 },
                 {
                   "extension": [
@@ -304,7 +304,7 @@
                       }
                     ]
                   },
-                  "count": 8
+                  "count": 2
                 },
                 {
                   "extension": [
@@ -321,7 +321,7 @@
                       }
                     ]
                   },
-                  "count": 8
+                  "count": 2
                 }
               ],
               "measureScore": {
@@ -409,7 +409,7 @@
                       }
                     ]
                   },
-                  "count": 5
+                  "count": 4
                 },
                 {
                   "extension": [
@@ -426,7 +426,7 @@
                       }
                     ]
                   },
-                  "count": 5
+                  "count": 4
                 },
                 {
                   "extension": [
@@ -443,7 +443,7 @@
                       }
                     ]
                   },
-                  "count": 5
+                  "count": 4
                 }
               ],
               "measureScore": {
@@ -470,7 +470,7 @@
                       }
                     ]
                   },
-                  "count": 5
+                  "count": 4
                 },
                 {
                   "extension": [
@@ -487,7 +487,7 @@
                       }
                     ]
                   },
-                  "count": 5
+                  "count": 4
                 },
                 {
                   "extension": [
@@ -504,7 +504,7 @@
                       }
                     ]
                   },
-                  "count": 5
+                  "count": 4
                 }
               ],
               "measureScore": {

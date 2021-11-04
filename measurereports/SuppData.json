@@ -27,7 +27,7 @@
           }
         ]
       },
-      "valueInteger": 20
+      "valueInteger": 10
     },
     {
       "resourceType": "Observation",
@@ -55,7 +55,7 @@
           }
         ]
       },
-      "valueInteger": 22
+      "valueInteger": 12
     }
   ],
   "extension": [
@@ -79,10 +79,10 @@
   "status": "complete",
   "type": "summary",
   "measure": "https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData",
-  "date": "2021-10-24T14:44:37+02:00",
+  "date": "2021-11-03T13:00:45-04:00",
   "period": {
-    "start": "2000-01-01T00:00:00+01:00",
-    "end": "2021-01-31T00:00:00+01:00"
+    "start": "2000-01-01T00:00:00-05:00",
+    "end": "2021-01-31T00:00:00-05:00"
   },
   "group": [
     {
@@ -111,7 +111,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 22
         },
         {
           "extension": [
@@ -128,7 +128,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 22
         },
         {
           "extension": [
@@ -145,7 +145,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 22
         }
       ],
       "measureScore": {
