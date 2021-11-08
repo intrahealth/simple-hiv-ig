@@ -9,7 +9,7 @@
   "status": "complete",
   "type": "summary",
   "measure": "https://intrahealth.github.io/simple-hiv-ig/Measure/JustLocation",
-  "date": "2021-11-03T13:00:39-04:00",
+  "date": "2021-11-04T12:42:04-04:00",
   "period": {
     "start": "2000-01-01T00:00:00-05:00",
     "end": "2021-01-31T00:00:00-05:00"
@@ -41,7 +41,7 @@
               }
             ]
           },
-          "count": 22
+          "count": 84
         },
         {
           "extension": [
@@ -58,7 +58,7 @@
               }
             ]
           },
-          "count": 22
+          "count": 84
         },
         {
           "extension": [
@@ -75,7 +75,7 @@
               }
             ]
           },
-          "count": 22
+          "count": 84
         }
       ],
       "measureScore": {
@@ -86,7 +86,7 @@
           "stratum": [
             {
               "value": {
-                "text": "Location/57"
+                "text": "Location/549"
               },
               "population": [
                 {
@@ -147,7 +147,129 @@
             },
             {
               "value": {
-                "text": "Location/97"
+                "text": "Location/429"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/309"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/509"
               },
               "population": [
                 {
@@ -330,7 +452,7 @@
             },
             {
               "value": {
-                "text": "Location/235"
+                "text": "Location/590"
               },
               "population": [
                 {
@@ -391,7 +513,129 @@
             },
             {
               "value": {
-                "text": "Location/213"
+                "text": "Location/399"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/279"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/235"
               },
               "population": [
                 {
@@ -513,7 +757,434 @@
             },
             {
               "value": {
-                "text": "Location/137"
+                "text": "Location/479"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/876"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/832"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/799"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/711"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/755"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/678"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/359"
               },
               "population": [
                 {
@@ -575,6 +1246,311 @@
             {
               "value": {
                 "text": "Location/117"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/634"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/559"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/439"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/319"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/519"
               },
               "population": [
                 {
@@ -757,68 +1733,7 @@
             },
             {
               "value": {
-                "text": "Location/67"
-              },
-              "population": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-                      "valueString": "Initial Population"
-                    }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-                      "valueString": "Denominator"
-                    }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "denominator"
-                      }
-                    ]
-                  },
-                  "count": 1
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-                      "valueString": "Numerator"
-                    }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "numerator"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ],
-              "measureScore": {
-                "value": 1
-              }
-            },
-            {
-              "value": {
-                "text": "Location/180"
+                "text": "Location/289"
               },
               "population": [
                 {
@@ -880,67 +1795,6 @@
             {
               "value": {
                 "text": "Location/246"
-              },
-              "population": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-                      "valueString": "Initial Population"
-                    }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-                      "valueString": "Denominator"
-                    }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "denominator"
-                      }
-                    ]
-                  },
-                  "count": 1
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-                      "valueString": "Numerator"
-                    }
-                  ],
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "numerator"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ],
-              "measureScore": {
-                "value": 1
-              }
-            },
-            {
-              "value": {
-                "text": "Location/224"
               },
               "population": [
                 {
@@ -1123,7 +1977,68 @@
             },
             {
               "value": {
-                "text": "Location/147"
+                "text": "Location/489"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/369"
               },
               "population": [
                 {
@@ -1185,6 +2100,2751 @@
             {
               "value": {
                 "text": "Location/127"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/601"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/887"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/843"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/766"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/722"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/689"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/645"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/569"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/449"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/329"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/529"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/409"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/57"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/97"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/299"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/499"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/213"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/379"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/137"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/854"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/810"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/898"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/777"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/733"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/656"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/612"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/579"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/459"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/339"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/539"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/419"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/67"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/180"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/389"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/224"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/147"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/788"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/865"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/744"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/667"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/623"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/469"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/821"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/700"
+              },
+              "population": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Initial Population"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Denominator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                      "valueString": "Numerator"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ],
+              "measureScore": {
+                "value": 1
+              }
+            },
+            {
+              "value": {
+                "text": "Location/349"
               },
               "population": [
                 {

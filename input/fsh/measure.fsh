@@ -267,9 +267,7 @@ Description: "TXPVLS"
     * criteria.expression = "Suppressed"
   * stratifier[+]
     * criteria.language = #text/cql
-    // waiting for fix
-    * criteria.expression = "Age Group/Gender"
-    // * criteria.expression = "Age Group/Sex/Location 2"
+    * criteria.expression = "Age Group/Sex/Location 2"
 
 
 RuleSet: meas-common-blaze

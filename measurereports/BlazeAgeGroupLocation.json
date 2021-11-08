@@ -9,10 +9,10 @@
   "status": "complete",
   "type": "summary",
   "measure": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeAgeGroupLocation",
-  "date": "2021-10-24T14:44:41+02:00",
+  "date": "2021-11-04T12:42:18-04:00",
   "period": {
-    "start": "2000-01-01T00:00:00+01:00",
-    "end": "2021-01-31T00:00:00+01:00"
+    "start": "2000-01-01T00:00:00-05:00",
+    "end": "2021-01-31T00:00:00-05:00"
   },
   "group": [
     {
@@ -41,7 +41,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 84
         },
         {
           "extension": [
@@ -58,7 +58,7 @@
               }
             ]
           },
-          "count": 42
+          "count": 84
         },
         {
           "extension": [
@@ -75,7 +75,7 @@
               }
             ]
           },
-          "count": 22
+          "count": 44
         }
       ],
       "measureScore": {
