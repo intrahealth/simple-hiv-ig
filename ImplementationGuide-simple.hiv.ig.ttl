@@ -10,42 +10,66 @@
   fhir:Resource.id [ fhir:value "simple.hiv.ig"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SimpleHIVIG</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig</pre></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SimpleHIVIG</h2><p>The official URL for this implementation guide is: </p><pre>https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig</pre><div><p>A simple IG using HIV epidemic control as a an example for learners</p>\n</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig"];
   fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "SimpleHIVIG"];
-  fhir:ImplementationGuide.title [ fhir:value "HIV Simple IG"];
+  fhir:ImplementationGuide.title [ fhir:value "Simple HIV IG"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-08-12T18:32:47+00:00"^^xsd:dateTime];
-  fhir:ImplementationGuide.publisher [ fhir:value "Digital Health Team"];
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ImplementationGuide.date [ fhir:value "2021-11-17T13:07:12+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "IntraHealth International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.intrahealth.org" ]
-     ], [
-       fhir:index 1;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ];
-       fhir:ContactPoint.use [ fhir:value "work" ]
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
      ]
   ];
+  fhir:ImplementationGuide.description [ fhir:value "A simple IG using HIV epidemic control as a an example for learners"];
   fhir:ImplementationGuide.packageId [ fhir:value "simple.hiv.ig"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
      fhir:value "4.0.1";
      fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://somewhere.org/fhir/uv/mycontentig/ImplementationGuide/example.fhir.uv.mycontentig";
+       fhir:link <http://somewhere.org/fhir/uv/mycontentig/ImplementationGuide/example.fhir.uv.mycontentig>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "example.fhir.uv.myig" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "dev" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "cpg" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg";
+       fhir:link <http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.cpg" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.0.0" ]
+  ], [
+     fhir:index 2;
+     fhir:Element.id [ fhir:value "cqfm" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures";
+       fhir:link <http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.cqfmeasures" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "current" ]
+  ], [
+     fhir:index 3;
+     fhir:Element.id [ fhir:value "cqf" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common";
+       fhir:link <http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "cqf.fhir.common" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "dev" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -57,7 +81,7 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "2021+" ]
+         fhir:Extension.valueString [ fhir:value "2020+" ]
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
@@ -69,7 +93,7 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "ci-build" ]
+         fhir:Extension.valueString [ fhir:value "CI Build" ]
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
@@ -77,99 +101,15 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "path-binary" ]
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "input/cql" ]
+         fhir:Extension.valueString [ fhir:value "templates\\liquid" ]
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
        fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "active-tables" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "false" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "apply-contact" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "true" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 5;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "true" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 6;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "true" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 7;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "apply-version" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "true" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "show-inherited-invariants" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "false" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 9;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "usage-stats-opt-out" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "true" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -181,43 +121,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 11;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "shownav" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "true" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 12;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "validation" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "allow-any-extensions" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 13;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "code" ];
-         fhir:Extension.valueString [ fhir:value "broken-links" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "warning" ]
-       ];
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
-     ], [
-       fhir:index 14;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -229,7 +133,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 15;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -241,7 +145,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 16;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -253,7 +157,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 17;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -265,7 +169,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 18;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -277,7 +181,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 19;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -289,7 +193,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 20;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -301,7 +205,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 21;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -313,7 +217,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 22;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -325,7 +229,19 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 23;
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -337,7 +253,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 24;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -349,11 +265,59 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 25;
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
          fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "value" ];
@@ -366,31 +330,562 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+         fhir:Extension.valueString [ fhir:value "Device" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS>;
-         fhir:Reference.reference [ fhir:value "ValueSet/LocationVS" ]
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Device/cqf-tooling>;
+         fhir:Reference.reference [ fhir:value "Device/cqf-tooling" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "LocationVS" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "LocationVS" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device/cqf-tooling" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
      ], [
        fhir:index 1;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+         fhir:Extension.valueString [ fhir:value "Library" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/LocationCS" ]
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers>;
+         fhir:Reference.reference [ fhir:value "Library/FHIRHelpers" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "LocationCS" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "LocationCS" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Library/FHIRHelpers" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
      ], [
        fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon>;
+         fhir:Reference.reference [ fhir:value "Library/FHIRCommon" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Library/FHIRCommon" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges>;
+         fhir:Reference.reference [ fhir:value "Library/AgeRanges" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Library/AgeRanges" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink>;
+         fhir:Reference.reference [ fhir:value "Library/KitchenSink" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Library/KitchenSink" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/GoldenRecord>;
+         fhir:Reference.reference [ fhir:value "Library/GoldenRecord" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Library/GoldenRecord" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/Blaze>;
+         fhir:Reference.reference [ fhir:value "Library/Blaze" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Library/Blaze" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-GoldenRecord>;
+         fhir:Reference.reference [ fhir:value "Patient/Patient-GoldenRecord" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient/Patient-GoldenRecord" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient/Patient-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient/Patient-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location/Location-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location/Location-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup>;
+         fhir:Reference.reference [ fhir:value "Measure/JustAgeGroup" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/JustAgeGroup" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Bundle/Example-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle/Example-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter/Encounter-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter/Encounter-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest>;
+         fhir:Reference.reference [ fhir:value "Measure/BlazeStratifierTest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/BlazeStratifierTest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport/DiagnosticReport-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport/DiagnosticReport-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Condition/Condition-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition/Condition-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Condition/Condition-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition/Condition-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Organization/Organization-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Organization/Organization-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy>;
+         fhir:Reference.reference [ fhir:value "Condition/Condition-Pregnancy" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition/Condition-Pregnancy" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy2>;
+         fhir:Reference.reference [ fhir:value "Condition/Condition-Pregnancy2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition/Condition-Pregnancy2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
+         fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation/Observation-ViralLoad" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad2>;
+         fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation/Observation-ViralLoad2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-ViralLoad" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ODiagnosticReport/DiagnosticReport-ViralLoad" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad2>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-ViralLoad2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport/DiagnosticReport-ViralLoad2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+         fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter/Encounter-ViralLoad" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad2>;
+         fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter/Encounter-ViralLoad2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation/Observation-HIVSimple" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation/Observation-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-HIVSimple2>;
+         fhir:Reference.reference [ fhir:value "Bundle/Example-HIVSimple2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle/Example-HIVSimple2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/Cohort>;
+         fhir:Reference.reference [ fhir:value "Measure/Cohort" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/Cohort" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/JustGender>;
+         fhir:Reference.reference [ fhir:value "Measure/JustGender" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/JustGender" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/JustLocation>;
+         fhir:Reference.reference [ fhir:value "Measure/JustLocation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/JustLocation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGender>;
+         fhir:Reference.reference [ fhir:value "Measure/AgeGroupGender" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/AgeGroupGender" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGenderLocation>;
+         fhir:Reference.reference [ fhir:value "Measure/AgeGroupGenderLocation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/AgeGroupGenderLocation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData>;
+         fhir:Reference.reference [ fhir:value "Measure/SuppData" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/SuppData" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierAgeGroup>;
+         fhir:Reference.reference [ fhir:value "Measure/BlazeStratifierAgeGroup" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/BlazeStratifierAgeGroup" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeAgeGroupLocation>;
+         fhir:Reference.reference [ fhir:value "Measure/BlazeAgeGroupLocation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/BlazeAgeGroupLocation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeGenderLocation>;
+         fhir:Reference.reference [ fhir:value "Measure/BlazeGenderLocation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Measure/BlazeGenderLocation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A simple example showing how examples are defined and referenced" ]
+     ], [
+       fhir:index 43;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -401,10 +896,22 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/OpenCR" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpenCR CodeSystem" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenCR CodeSystem" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenCR CodeSystem" ]
      ], [
-       fhir:index 3;
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe>;
+         fhir:Reference.reference [ fhir:value "Library/Dedupe" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dedupe" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dedupe" ]
+     ], [
+       fhir:index 45;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -415,582 +922,20 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/OpenHIE" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpenHIE CodeSystem" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenHIE CodeSystem" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenHIE CodeSystem" ]
      ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges>;
-         fhir:Reference.reference [ fhir:value "Library/AgeRanges" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AgeRanges" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "AgeRanges" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 5;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/Blaze>;
-         fhir:Reference.reference [ fhir:value "Library/Blaze" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Blaze" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Blaze" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 6;
+       fhir:index 46;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "Measure" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest>;
-         fhir:Reference.reference [ fhir:value "Measure/BlazeStratifierTest" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BlazeStratifierTest" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "BlazeStratifierTest" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 7;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Condition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Condition/Condition-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Condition-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Condition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Condition/Condition-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Condition-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 9;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Condition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy>;
-         fhir:Reference.reference [ fhir:value "Condition/Condition-Pregnancy" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition-Pregnancy" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Condition-Pregnancy" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 10;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Condition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy2>;
-         fhir:Reference.reference [ fhir:value "Condition/Condition-Pregnancy2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition-Pregnancy" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Condition-Pregnancy" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 11;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "DiagnosticReport-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 12;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "DiagnosticReport-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 13;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad>;
-         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-ViralLoad" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "DiagnosticReport-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 14;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad2>;
-         fhir:Reference.reference [ fhir:value "DiagnosticReport/DiagnosticReport-ViralLoad2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiagnosticReport-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "DiagnosticReport-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 15;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Encounter" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Encounter-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 16;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Encounter" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Encounter-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 17;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Encounter" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
-         fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Encounter-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 18;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Encounter" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad2>;
-         fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Encounter-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 19;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Bundle" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Bundle/Example-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 20;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Bundle" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Bundle/Example-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 21;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon>;
-         fhir:Reference.reference [ fhir:value "Library/FHIRCommon" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIRCommon" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "FHIRCommon" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 22;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers>;
-         fhir:Reference.reference [ fhir:value "Library/FHIRHelpers" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIRHelpers" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "FHIRHelpers" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 23;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/GoldenRecord>;
-         fhir:Reference.reference [ fhir:value "Library/GoldenRecord" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "GoldenRecord" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "GoldenRecord" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 24;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleAgeGroup" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleAgeGroup" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleAgeGroup" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 25;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleCondition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleCondition" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleCondition" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 26;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGender" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleGender" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleGender" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 27;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGenderCohort" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleGenderCohort" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleGenderCohort" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 28;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGenderSubjectList" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleGenderSubjectList" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleGenderSubjectList" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 29;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGenderSuppData" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleGenderSuppData" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleGenderSuppData" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 30;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleGenderSuppDataIndiv" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleGenderSuppDataIndiv" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleGenderSuppDataIndiv" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 31;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult>;
-         fhir:Reference.reference [ fhir:value "Measure/HIVSimpleTestResult" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HIVSimpleTestResult" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HIVSimpleTestResult" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 32;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink>;
-         fhir:Reference.reference [ fhir:value "Library/KitchenSink" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "KitchenSink" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "KitchenSink" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 33;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Location" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Location-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 34;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Location" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Location-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 35;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Observation" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 36;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Observation" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 37;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Observation" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
-         fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 38;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Observation" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad2>;
-         fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation-ViralLoad" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 39;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Organization" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Organization-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Organization-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 40;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Organization" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Organization-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Organization-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 41;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Patient" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-GoldenRecord>;
-         fhir:Reference.reference [ fhir:value "Patient/Patient-GoldenRecord" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient-GoldenRecord" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Patient-GoldenRecord" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 42;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Patient" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
-         fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Patient-HIVSimple" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 43;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Patient" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple2>;
-         fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple2" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Patient-HIVSimple2" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 44;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo>;
-         fhir:Reference.reference [ fhir:value "Library/FHIR-ModelInfo" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIR Model Definition" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Model definition for the FHIR R4 (v4.0.1) Model" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Measure/TXPVLS>;
+         fhir:Reference.reference [ fhir:value "Measure/TXPVLS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TXPVLS" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "TXPVLS" ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
@@ -999,72 +944,82 @@
        fhir:ImplementationGuide.definition.page.page [
          fhir:index 0;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Test page" ];
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "MyIG Home Page" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
          fhir:index 1;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "overview.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Overview" ];
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "background.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Background" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
          fhir:index 2;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "testplan.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Test Plan" ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "spec.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Detailed Specification" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Useful Downloads" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "changes.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "IG Change History" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ]
      ];
      fhir:ImplementationGuide.definition.parameter [
        fhir:index 0;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input\\history" ]
      ], [
        fhir:index 1;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/device" ]
      ], [
        fhir:index 2;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
-     ], [
-       fhir:index 3;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/pagecontent" ]
-     ], [
-       fhir:index 4;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/includes" ]
-     ], [
-       fhir:index 5;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
      ], [
-       fhir:index 6;
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 4;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
      ], [
-       fhir:index 7;
+       fhir:index 5;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
      ], [
-       fhir:index 8;
+       fhir:index 6;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
      ], [
-       fhir:index 9;
+       fhir:index 7;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
      ], [
-       fhir:index 10;
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 9;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
      ], [
-       fhir:index 11;
+       fhir:index 10;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
      ], [
-       fhir:index 12;
+       fhir:index 11;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
      ], [
        fhir:index 13;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];

@@ -1,69 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "fe7917d4-ab90-482f-a24d-db6505b36980",
+  "id" : "d887956a-3638-4668-ab41-1699b6773012",
   "meta" : {
-    "lastUpdated" : "2021-08-12T18:32:47.018+00:00"
+    "lastUpdated" : "2021-11-17T13:07:12.066+00:00"
   },
-  "type" : "collection",
-  "entry" : [{
-    "fullUrl" : "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "LocationVS",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-LocationCS.html\">LocationCS v0.1.0 (CodeSystem)</a></p><p>All codes from system <a href=\"CodeSystem-LocationCS.html\"><code>https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---intrahealth.github.io-simple-hiv-ig-CodeSystem-LocationCS-Location-HIVSimple\"> </a><a href=\"CodeSystem-LocationCS.html#LocationCS-Location-HIVSimple\">Location-HIVSimple</a></td><td>Location-HIVSimple</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---intrahealth.github.io-simple-hiv-ig-CodeSystem-LocationCS-Location-HIVSimple2\"> </a><a href=\"CodeSystem-LocationCS.html#LocationCS-Location-HIVSimple2\">Location-HIVSimple2</a></td><td>Location-HIVSimple2</td><td/></tr></table></div>"
-      },
-      "url" : "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS",
-      "version" : "0.1.0",
-      "name" : "LocationVS",
-      "title" : "LocationVS",
-      "status" : "active",
-      "date" : "2021-08-12T18:32:47+00:00",
-      "publisher" : "Digital Health Team",
-      "contact" : [{
-        "name" : "Digital Health Team",
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.intrahealth.org"
-        },
-        {
-          "system" : "email",
-          "value" : "digitalhealth@intrahealth.org"
-        }]
-      },
-      {
-        "name" : "Digital Health Team",
-        "telecom" : [{
-          "system" : "email",
-          "value" : "digitalhealth@intrahealth.org",
-          "use" : "work"
-        }]
-      }],
-      "description" : "LocationVS",
-      "expansion" : {
-        "identifier" : "urn:uuid:4f07b65a-8eda-4583-aaf7-cdf13716a9ab",
-        "timestamp" : "2021-08-12T18:32:54+00:00",
-        "total" : 2,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "version",
-          "valueUri" : "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS|0.1.0"
-        }],
-        "contains" : [{
-          "system" : "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS",
-          "code" : "Location-HIVSimple",
-          "display" : "Location-HIVSimple"
-        },
-        {
-          "system" : "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS",
-          "code" : "Location-HIVSimple2",
-          "display" : "Location-HIVSimple2"
-        }]
-      }
-    }
-  }]
+  "type" : "collection"
 }

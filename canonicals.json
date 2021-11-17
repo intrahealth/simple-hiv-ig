@@ -1,12 +1,5 @@
 [
   {
-    "id": "LocationCS",
-    "type": "CodeSystem",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/LocationCS",
-    "version": "0.1.0",
-    "name": "LocationCS"
-  },
-  {
     "id": "OpenCR",
     "type": "CodeSystem",
     "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR",
@@ -42,11 +35,11 @@
     "name": "Blaze"
   },
   {
-    "id": "FHIR-ModelInfo",
+    "id": "Dedupe",
     "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIR-ModelInfo",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe",
     "version": "0.1.0",
-    "name": "FHIR"
+    "name": "Dedupe"
   },
   {
     "id": "FHIRCommon",
@@ -77,6 +70,41 @@
     "name": "KitchenSink"
   },
   {
+    "id": "AgeGroupGender",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGender",
+    "version": "0.1.0",
+    "name": "AgeGroupGender"
+  },
+  {
+    "id": "AgeGroupGenderLocation",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGenderLocation",
+    "version": "0.1.0",
+    "name": "AgeGroupGenderLocation"
+  },
+  {
+    "id": "BlazeAgeGroupLocation",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeAgeGroupLocation",
+    "version": "0.1.0",
+    "name": "BlazeAgeGroupLocation"
+  },
+  {
+    "id": "BlazeGenderLocation",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeGenderLocation",
+    "version": "0.1.0",
+    "name": "BlazeGenderLocation"
+  },
+  {
+    "id": "BlazeStratifierAgeGroup",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierAgeGroup",
+    "version": "0.1.0",
+    "name": "BlazeStratifierAgeGroup"
+  },
+  {
     "id": "BlazeStratifierTest",
     "type": "Measure",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest",
@@ -84,66 +112,45 @@
     "name": "BlazeStratifierTest"
   },
   {
-    "id": "HIVSimpleAgeGroup",
+    "id": "Cohort",
     "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/Cohort",
     "version": "0.1.0",
-    "name": "HIVSimpleAgeGroup"
+    "name": "Cohort"
   },
   {
-    "id": "HIVSimpleCondition",
+    "id": "JustAgeGroup",
     "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleCondition",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup",
     "version": "0.1.0",
-    "name": "HIVSimpleCondition"
+    "name": "JustAgeGroup"
   },
   {
-    "id": "HIVSimpleGender",
+    "id": "JustGender",
     "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGender",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/JustGender",
     "version": "0.1.0",
-    "name": "HIVSimpleGender"
+    "name": "JustGender"
   },
   {
-    "id": "HIVSimpleGenderCohort",
+    "id": "JustLocation",
     "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderCohort",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/JustLocation",
     "version": "0.1.0",
-    "name": "HIVSimpleGenderCohort"
+    "name": "JustLocation"
   },
   {
-    "id": "HIVSimpleGenderSubjectList",
+    "id": "SuppData",
     "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSubjectList",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData",
     "version": "0.1.0",
-    "name": "HIVSimpleGenderSubjectList"
+    "name": "SuppData"
   },
   {
-    "id": "HIVSimpleGenderSuppData",
+    "id": "TXPVLS",
     "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppData",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/TXPVLS",
     "version": "0.1.0",
-    "name": "HIVSimpleGenderSuppData"
-  },
-  {
-    "id": "HIVSimpleGenderSuppDataIndiv",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleGenderSuppDataIndiv",
-    "version": "0.1.0",
-    "name": "HIVSimpleGenderSuppDataIndiv"
-  },
-  {
-    "id": "HIVSimpleTestResult",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleTestResult",
-    "version": "0.1.0",
-    "name": "HIVSimpleTestResult"
-  },
-  {
-    "id": "LocationVS",
-    "type": "ValueSet",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS",
-    "version": "0.1.0",
-    "name": "LocationVS"
+    "name": "TXPVLS"
   }
 ]

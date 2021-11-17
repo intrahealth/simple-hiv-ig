@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SIMPLE.HIV.IG\Example-HIVSimple2 - FHIR v4.0.1</title>
+    <title>SIMPLE.HIV.IG\Bundle/Example-HIVSimple2 - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -47,8 +47,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"4.22"}
-    h3,h4,h5,h6{--heading-prefix:"4.22"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.47"}
+    h3,h4,h5,h6{--heading-prefix:"6.47"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -75,7 +75,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">HIV Simple IG</span><br/>0.1.0 - ci-build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Simple HIV IG</span><br/>0.1.0 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -95,25 +95,45 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spec.html">Detailed Specification</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>      
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">MHD Home</a>
-  </li>
-  <li>
-    <a href="index.html">Introduction</a>
-  </li>
-  <li>
-    <a href="overview.html">Overview</a>
-  </li>
-  <li>
-    <a href="testplan.html">Test Plan</a>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifact Index</a>
-  </li>
-</ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -125,18 +145,8 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Example-HIVSimple2</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle/Example-HIVSimple2</b></li>
           
-          <span style="float:right;">
-
-            <a href="Bundle-Example-HIVSimple.ttl.html">&lt;prev</a> | 
-
-            <a href="#bottom">bottom</a>
-
-          | <a href="Bundle-Example-HIVSimple2.xml.html">next&gt;</a>
-
-          </span>
-
         </ul>
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
@@ -148,7 +158,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">HIV Simple IG - Local Development build (v0.1.0). See the <a href="https://intrahealth.github.io/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://intrahealth.github.io/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
   
 
@@ -192,8 +202,10 @@
   <a name="root"> </a>
 
 
-  <h2 id="root">Example Bundle: Example-HIVSimple2</h2>
+  <h2 id="root">Bundle: Bundle/Example-HIVSimple2</h2>
 
+
+  
 
 
   <!-- insert intro if present -->
@@ -202,17 +214,17 @@
 
 
   <div><p>Bundle Example-HIVSimple2 of type transaction</p><a name="https-//intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple2"> </a><a name="Patient_Patient-HIVSimple2"> </a><hr/><p>Entry 1 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple2</p><p>Request:</p><pre>POST Patient
-</pre><p>Resource Patient:</p><blockquote>Mittens Cat Female 1985-01-01</blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2"> </a><a name="Organization_Organization-HIVSimple2"> </a><hr/><p>Entry 2 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2</p><p>Request:</p><pre>POST Organization
-</pre><p>Resource Organization:</p><blockquote><p><b>Generated Narrative</b></p><p><b>name</b>: Government Hospital</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2"> </a><a name="Location_Location-HIVSimple2"> </a><hr/><p>Entry 3 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2</p><p>Request:</p><pre>POST Location
-</pre><p>Resource Location:</p><blockquote><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple2, id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href="Organization-Organization-HIVSimple2.html">Generated Summary: name: Government Hospital</a></p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2"> </a><a name="Condition_Condition-HIVSimple2"> </a><hr/><p>Entry 4 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2</p><p>Request:</p><pre>POST Condition
-</pre><p>Resource Condition:</p><blockquote><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>code</b>: <span title="Codes: {http://snomed.info/sct 86406008}">HIV - Human immunodeficiency virus infection</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>onset</b>: 2010-01-01</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy"> </a><a name="Condition_Condition-Pregnancy2"> </a><hr/><p>Entry 5 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy</p><p>Request:</p><pre>POST Condition
-</pre><p>Resource Condition:</p><blockquote><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical inactive}">Inactive</span></p><p><b>verificationStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>code</b>: <span title="Codes: {http://snomed.info/sct 77386006}">Pregnant (finding)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2"> </a><a name="Encounter_Encounter-HIVSimple2"> </a><hr/><p>Entry 6 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2</p><p>Request:</p><pre>POST Encounter
+</pre><p>Resource Patient:</p><blockquote>Mittens Cat Female 1985-01-01 ( id: 1234)</blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2"> </a><a name="Organization_Organization-HIVSimple2"> </a><hr/><p>Entry 2 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2</p><p>Request:</p><pre>POST Organization
+</pre><p>Resource Organization:</p><blockquote><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource &quot;Organization-HIVSimple2&quot; </p></div><p><b>name</b>: Government Hospital</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2"> </a><a name="Location_Location-HIVSimple2"> </a><hr/><p>Entry 3 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2</p><p>Request:</p><pre>POST Location
+</pre><p>Resource Location:</p><blockquote><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource &quot;Location-HIVSimple2&quot; </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <a href="Organization-Organization-HIVSimple2.html">Organization/Organization-HIVSimple2</a> &quot;Government Hospital&quot;</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2"> </a><a name="Condition_Condition-HIVSimple2"> </a><hr/><p>Entry 4 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple2</p><p>Request:</p><pre>POST Condition
+</pre><p>Resource Condition:</p><blockquote><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource &quot;Condition-HIVSimple2&quot; </p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>code</b>: HIV - Human immunodeficiency virus infection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#86406008)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Patient/Patient-HIVSimple2</a> &quot; CAT&quot;</p><p><b>onset</b>: 2010-01-01</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy2"> </a><a name="Condition_Condition-Pregnancy2"> </a><hr/><p>Entry 5 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy2</p><p>Request:</p><pre>POST Condition
+</pre><p>Resource Condition:</p><blockquote><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource &quot;Condition-Pregnancy2&quot; </p></div><p><b>clinicalStatus</b>: Inactive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>code</b>: Pregnant (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#77386006)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Patient/Patient-HIVSimple2</a> &quot; CAT&quot;</p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2"> </a><a name="Encounter_Encounter-HIVSimple2"> </a><hr/><p>Entry 6 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple2</p><p>Request:</p><pre>POST Encounter
 </pre><p>Resource Encounter:</p><blockquote>Not done yet</blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2"> </a><a name="DiagnosticReport_DiagnosticReport-HIVSimple2"> </a><hr/><p>Entry 7 - Full URL = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple2</p><p>Request:</p><pre>POST DiagnosticReport
-</pre><p>Resource DiagnosticReport:</p><blockquote><h2><span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Mittens Cat</b>  1985-01-01</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href="Observation-Observation-HIVSimple2.html"><span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></a></td><td><span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></td></tr></table></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2"> </a><a name="Observation_Observation-HIVSimple2"> </a><hr/><p>Entry 8 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2</p><p>Request:</p><pre>POST Observation
-</pre><p>Resource Observation:</p><blockquote><p><b>Generated Narrative</b></p><p/><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="Encounter-Encounter-HIVSimple2.html">Generated Summary: status: finished; <span title="{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}">inpatient acute</span>; period: 2011-01-01 --&gt; 2011-01-01</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad"> </a><a name="Encounter_Encounter-ViralLoad2"> </a><hr/><p>Entry 9 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad</p><p>Request:</p><pre>POST Encounter
-</pre><p>Resource Encounter:</p><blockquote>Not done yet</blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad"> </a><a name="DiagnosticReport_DiagnosticReport-ViralLoad2"> </a><hr/><p>Entry 10 - Full URL = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad</p><p>Request:</p><pre>POST DiagnosticReport
-</pre><p>Resource DiagnosticReport:</p><blockquote><h2><span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Mittens Cat</b>  1985-01-01</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href="Observation-Observation-ViralLoad.html"><span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></a></td><td>741660 copies/mL</td></tr></table></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad"> </a><a name="Observation_Observation-ViralLoad2"> </a><hr/><p>Entry 11 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad</p><p>Request:</p><pre>POST Observation
-</pre><p>Resource Observation:</p><blockquote><p><b>Generated Narrative</b></p><p/><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href="Encounter-Encounter-ViralLoad.html">Generated Summary: status: finished; <span title="{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}">inpatient acute</span>; period: 2020-06-01 --&gt; 2020-06-01</a></p><p><b>value</b>: 741660 copies/mL</p></blockquote></div>
+</pre><p>Resource DiagnosticReport:</p><blockquote><h2><span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Mittens Cat</b> ?? 1985-01-01 ( id: 1234)</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href="Observation-Observation-HIVSimple2.html"><span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></a></td><td><span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></td></tr></table></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2"> </a><a name="Observation_Observation-HIVSimple2"> </a><hr/><p>Entry 8 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple2</p><p>Request:</p><pre>POST Observation
+</pre><p>Resource Observation:</p><blockquote><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource &quot;Observation-HIVSimple2&quot; </p></div><p><b>status</b>: FINAL</p><p><b>code</b>: HIV 1 and 2 tests - Meaningful Use set <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75622-1)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Patient/Patient-HIVSimple2</a> &quot; CAT&quot;</p><p><b>encounter</b>: <a href="Encounter-Encounter-HIVSimple2.html">Encounter/Encounter-HIVSimple2</a></p><p><b>value</b>: HIV Positive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#165816005)</span></p></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad2"> </a><a name="Encounter_Encounter-ViralLoad2"> </a><hr/><p>Entry 9 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad2</p><p>Request:</p><pre>POST Encounter
+</pre><p>Resource Encounter:</p><blockquote>Not done yet</blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad2"> </a><a name="DiagnosticReport_DiagnosticReport-ViralLoad2"> </a><hr/><p>Entry 10 - Full URL = https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad2</p><p>Request:</p><pre>POST DiagnosticReport
+</pre><p>Resource DiagnosticReport:</p><blockquote><h2><span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Mittens Cat</b> ?? 1985-01-01 ( id: 1234)</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href="Observation-Observation-ViralLoad2.html"><span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></a></td><td>741660 copies/mL</td></tr></table></blockquote><a name="https-//intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad2"> </a><a name="Observation_Observation-ViralLoad2"> </a><hr/><p>Entry 11 - Full URL = https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad2</p><p>Request:</p><pre>POST Observation
+</pre><p>Resource Observation:</p><blockquote><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource &quot;Observation-ViralLoad2&quot; </p></div><p><b>status</b>: FINAL</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple2.html">Patient/Patient-HIVSimple2</a> &quot; CAT&quot;</p><p><b>encounter</b>: <a href="Encounter-Encounter-ViralLoad2.html">Encounter/Encounter-ViralLoad2</a></p><p><b>value</b>: 741660 copies/mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code {copies}/mL = '{copies}/mL')</span></p></blockquote></div>
 
   <!-- insert notes if present -->
   
@@ -239,32 +251,10 @@
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
-      <div style="background-color:var(--footer-nav-bg-color)">
-        <table style="width:100%">
-          <tbody>
-            <tr>
-              <td style="text-align:left">&#xA0;
-
-                <a href="Bundle-Example-HIVSimple.ttl.html">&lt;prev</a>
-
-              </td>
-              <td style="text-align:center">
-                <a href="#top">top</a>
-              </td>
-              <td style="text-align:right">&#xA0;
-
-                <a href="Bundle-Example-HIVSimple2.xml.html">next&gt;</a>
-
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.intrahealth.org">Digital Health Team</a>.  Package simple.hiv.ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 12, 2021 18:32+0000">2021-08-12</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple.hiv.ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 17, 2021 13:07+0000">2021-11-17</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

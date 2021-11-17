@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "BlazeStratifierTest"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest</code></p><p><b>identifier</b>: id: BlazeStratifierTest</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: BlazeStratifierTest</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: Digital Health Team</p><p><b>contact</b>: Digital Health Team: <a href=\"https://www.intrahealth.org\">https://www.intrahealth.org</a>,<a href=\"mailto:digitalhealth@intrahealth.org\">digitalhealth@intrahealth.org</a>, Digital Health Team: <a href=\"mailto:digitalhealth@intrahealth.org\">digitalhealth@intrahealth.org</a></p><p><b>library</b>: <a href=\"https://intrahealth.github.io/simple-hiv-ig/Library/Blaze\">https://intrahealth.github.io/simple-hiv-ig/Library/Blaze</a></p><p><b>scoring</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-scoring proportion}\">Proportion</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE cohort}\">cohort</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"BlazeStratifierTest\" </p></div><p><b>url</b>: <code>https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest</code></p><p><b>identifier</b>: id: BlazeStratifierTest</p><p><b>version</b>: 0.1.0</p><p><b>name</b>: BlazeStratifierTest</p><p><b>title</b>: BlazeStratifierTest</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2021-07-01</p><p><b>publisher</b>: IntraHealth International</p><p><b>contact</b>: <a href=\"http://hl7.org/Special/committees/[something]\">http://hl7.org/Special/committees/[something]</a></p><p><b>description</b>: BlazeStratifierTest</p><p><b>library</b>: <a href=\"https://intrahealth.github.io/simple-hiv-ig/Library/Blaze\">https://intrahealth.github.io/simple-hiv-ig/Library/Blaze</a></p><p><b>scoring</b>: Proportion <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-measure-scoring.html\">MeasureScoring</a>#proportion)</span></p><blockquote><p><b>group</b></p><p><b>code</b>: cohort <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-OpenHIE.html\">OpenHIE CodeSystem</a>#cohort)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Initial Population <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-measure-population.html\">MeasurePopulationType</a>#initial-population)</span></p><p><b>description</b>: Initial Population</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Denominator <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-measure-population.html\">MeasurePopulationType</a>#denominator)</span></p><p><b>description</b>: Denominator</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Numerator <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-measure-population.html\">MeasurePopulationType</a>#numerator)</span></p><p><b>description</b>: Numerator</p></blockquote><blockquote><p><b>stratifier</b></p></blockquote></blockquote></div>"
   ];
   fhir:Measure.url [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest"];
   fhir:Measure.identifier [
@@ -20,32 +20,20 @@
   ];
   fhir:Measure.version [ fhir:value "0.1.0"];
   fhir:Measure.name [ fhir:value "BlazeStratifierTest"];
+  fhir:Measure.title [ fhir:value "BlazeStratifierTest"];
   fhir:Measure.status [ fhir:value "draft"];
   fhir:Measure.experimental [ fhir:value "true"^^xsd:boolean];
   fhir:Measure.date [ fhir:value "2021-07-01"^^xsd:date];
-  fhir:Measure.publisher [ fhir:value "Digital Health Team"];
+  fhir:Measure.publisher [ fhir:value "IntraHealth International"];
   fhir:Measure.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.intrahealth.org" ]
-     ], [
-       fhir:index 1;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ];
-       fhir:ContactPoint.use [ fhir:value "work" ]
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
      ]
   ];
+  fhir:Measure.description [ fhir:value "BlazeStratifierTest"];
   fhir:Measure.library [
      fhir:value "https://intrahealth.github.io/simple-hiv-ig/Library/Blaze";
      fhir:index 0;
@@ -81,6 +69,34 @@
        fhir:Measure.group.population.criteria [
          fhir:Expression.language [ fhir:value "text/cql" ];
          fhir:Expression.expression [ fhir:value "Initial Population" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Denominator" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Denominator" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Numerator" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.language [ fhir:value "text/cql" ];
+         fhir:Expression.expression [ fhir:value "Numerator" ]
        ]
      ];
      fhir:Measure.group.stratifier [

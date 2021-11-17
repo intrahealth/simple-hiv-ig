@@ -17,28 +17,14 @@
   fhir:CodeSystem.name [ fhir:value "OpenCR"];
   fhir:CodeSystem.title [ fhir:value "OpenCR CodeSystem"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-08-12T18:32:47+00:00"^^xsd:dateTime];
-  fhir:CodeSystem.publisher [ fhir:value "Digital Health Team"];
+  fhir:CodeSystem.date [ fhir:value "2021-11-17T13:07:12+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "IntraHealth International"];
   fhir:CodeSystem.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.intrahealth.org" ]
-     ], [
-       fhir:index 1;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:ContactDetail.name [ fhir:value "Digital Health Team" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "digitalhealth@intrahealth.org" ];
-       fhir:ContactPoint.use [ fhir:value "work" ]
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
      ]
   ];
   fhir:CodeSystem.description [ fhir:value "OpenCR CodeSystem"];

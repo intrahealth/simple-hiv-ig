@@ -3,7 +3,7 @@
   "id": "Observation-ViralLoad",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href=\"Encounter-Encounter-ViralLoad.html\">Generated Summary: status: finished; <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}\">inpatient acute</span>; period: 2020-06-01 --&gt; 2020-06-01</a></p><p><b>value</b>: 741660 copies/mL</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Observation-ViralLoad\" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Patient/Patient-HIVSimple</a> \" CAT\"</p><p><b>encounter</b>: <a href=\"Encounter-Encounter-ViralLoad.html\">Encounter/Encounter-ViralLoad</a></p><p><b>value</b>: 741660 copies/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {copies}/mL = '{copies}/mL')</span></p></div>"
   },
   "status": "final",
   "code": {

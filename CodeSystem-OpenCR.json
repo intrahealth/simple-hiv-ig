@@ -10,29 +10,14 @@
   "name": "OpenCR",
   "title": "OpenCR CodeSystem",
   "status": "active",
-  "date": "2021-08-12T18:32:47+00:00",
-  "publisher": "Digital Health Team",
+  "date": "2021-11-17T13:07:12+00:00",
+  "publisher": "IntraHealth International",
   "contact": [
     {
-      "name": "Digital Health Team",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.intrahealth.org"
-        },
-        {
-          "system": "email",
-          "value": "digitalhealth@intrahealth.org"
-        }
-      ]
-    },
-    {
-      "name": "Digital Health Team",
-      "telecom": [
-        {
-          "system": "email",
-          "value": "digitalhealth@intrahealth.org",
-          "use": "work"
+          "value": "http://hl7.org/Special/committees/[something]"
         }
       ]
     }

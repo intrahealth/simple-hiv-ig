@@ -12,8 +12,17 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"Patient-Patient-HIVSimple.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>type</b>: seealso</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"Patient-Patient-HIVSimple2.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>type</b>: seealso</p></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-GoldenRecord\" </p><p style=\"margin-bottom: 0px\">Tag: <span title=\"{https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR}\">https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR</span></p></div><p><b>name</b>: Mittens Cat</p><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"Patient-Patient-HIVSimple.html\">Patient/Patient-HIVSimple</a> \" CAT\"</p><p><b>type</b>: seealso</p></blockquote><blockquote><p><b>link</b></p><p><b>other</b>: <a href=\"Patient-Patient-HIVSimple2.html\">Patient/Patient-HIVSimple2</a> \" CAT\"</p><p><b>type</b>: seealso</p></blockquote></div>"
   },
+  "name": [
+    {
+      "text": "Mittens Cat",
+      "family": "Cat",
+      "given": [
+        "Mittens"
+      ]
+    }
+  ],
   "link": [
     {
       "other": {

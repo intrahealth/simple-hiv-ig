@@ -9,8 +9,12 @@
       <Patient>
         <id value="Patient-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>name</b>: Mittens Cat</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-01-01</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Patient-HIVSimple" </p></div><p><b>identifier</b>: id: 1234</p><p><b>name</b>: Mittens Cat</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-01-01</p></div>
         </text>
+        <identifier>
+          <system value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR"/>
+          <value value="1234"/>
+        </identifier>
         <name>
           <text value="Mittens Cat"/>
           <family value="Cat"/>
@@ -31,7 +35,7 @@
       <Organization>
         <id value="Organization-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>name</b>: Government Hospital</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Organization-HIVSimple" </p></div><p><b>name</b>: Government Hospital</p></div>
         </text>
         <name value="Government Hospital"/>
       </Organization>
@@ -47,14 +51,10 @@
       <Location>
         <id value="Location-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple, id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Location-HIVSimple" </p></div><p><b>identifier</b>: id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
         </text>
         <identifier>
           <system value="https://github.com/synthetichealth/synthea"/>
-          <value value="Location-HIVSimple"/>
-        </identifier>
-        <identifier>
-          <system value="https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS"/>
           <value value="Location-HIVSimple"/>
         </identifier>
         <managingOrganization>
@@ -73,7 +73,7 @@
       <Condition>
         <id value="Condition-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>code</b>: <span title="Codes: {http://snomed.info/sct 86406008}">HIV - Human immunodeficiency virus infection</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Condition-HIVSimple" </p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>code</b>: HIV - Human immunodeficiency virus infection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#86406008)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>
         </text>
         <clinicalStatus>
           <coding>
@@ -111,7 +111,7 @@
       <Condition>
         <id value="Condition-Pregnancy"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical inactive}">Inactive</span></p><p><b>verificationStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>code</b>: <span title="Codes: {http://snomed.info/sct 77386006}">Pregnant (finding)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Condition-Pregnancy" </p></div><p><b>clinicalStatus</b>: Inactive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/2.1.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>code</b>: Pregnant (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#77386006)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>
         </text>
         <clinicalStatus>
           <coding>
@@ -150,7 +150,7 @@
       <Encounter>
         <id value="Encounter-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title="{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}">inpatient acute</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-HIVSimple" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
         </text>
         <status value="finished"/>
         <class>
@@ -185,7 +185,7 @@
       <DiagnosticReport>
         <id value="DiagnosticReport-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-HIVSimple">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href="#Observation_Observation-HIVSimple">See above (Observation/Observation-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "DiagnosticReport-HIVSimple" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 and 2 tests - Meaningful Use set <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75622-1)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-HIVSimple">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href="#Observation_Observation-HIVSimple">See above (Observation/Observation-HIVSimple)</a></p></div>
         </text>
         <status value="final"/>
         <code>
@@ -217,7 +217,7 @@
       <Observation>
         <id value="Observation-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 75622-1}">HIV 1 and 2 tests - Meaningful Use set</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-HIVSimple">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>value</b>: <span title="Codes: {http://snomed.info/sct 165816005}">HIV Positive</span></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Observation-HIVSimple" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 and 2 tests - Meaningful Use set <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75622-1)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-HIVSimple">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>value</b>: HIV Positive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#165816005)</span></p></div>
         </text>
         <status value="final"/>
         <code>
@@ -253,7 +253,7 @@
       <Encounter>
         <id value="Encounter-ViralLoad"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: finished</p><p><b>class</b>: <span title="{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}">inpatient acute</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-ViralLoad" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
         </text>
         <status value="finished"/>
         <class>
@@ -288,7 +288,7 @@
       <DiagnosticReport>
         <id value="DiagnosticReport-ViralLoad"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href="#Observation_Observation-ViralLoad">See above (Observation/Observation-ViralLoad)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "DiagnosticReport-ViralLoad" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href="#Observation_Observation-ViralLoad">See above (Observation/Observation-ViralLoad)</a></p></div>
         </text>
         <status value="final"/>
         <code>
@@ -320,7 +320,7 @@
       <Observation>
         <id value="Observation-ViralLoad"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title="Codes: {http://loinc.org 25836-8}">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Observation-ViralLoad" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href="#Encounter_Encounter-ViralLoad">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code {copies}/mL = '{copies}/mL')</span></p></div>
         </text>
         <status value="final"/>
         <code>

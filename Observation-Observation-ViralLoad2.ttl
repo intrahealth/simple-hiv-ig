@@ -11,7 +11,7 @@
   fhir:Resource.id [ fhir:value "Observation-ViralLoad2"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 25836-8}\">HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple2.html\">Generated Summary: Mittens Cat; gender: female; birthDate: 1985-01-01</a></p><p><b>encounter</b>: <a href=\"Encounter-Encounter-ViralLoad.html\">Generated Summary: status: finished; <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode ACUTE}\">inpatient acute</span>; period: 2020-06-01 --&gt; 2020-06-01</a></p><p><b>value</b>: 741660 copies/mL</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Observation-ViralLoad2\" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple2.html\">Patient/Patient-HIVSimple2</a> \" CAT\"</p><p><b>encounter</b>: <a href=\"Encounter-Encounter-ViralLoad2.html\">Encounter/Encounter-ViralLoad2</a></p><p><b>value</b>: 741660 copies/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {copies}/mL = '{copies}/mL')</span></p></div>"
   ];
   fhir:Observation.status [ fhir:value "final"];
   fhir:Observation.code [
@@ -28,8 +28,8 @@
      fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple2" ]
   ];
   fhir:Observation.encounter [
-     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
-     fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad2>;
+     fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad2" ]
   ];
   fhir:Observation.valueQuantity [
      fhir:Quantity.value [ fhir:value "741660"^^xsd:decimal ];

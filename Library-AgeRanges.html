@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SIMPLE.HIV.IG\AgeRanges - FHIR v4.0.1</title>
+    <title>SIMPLE.HIV.IG\Library/AgeRanges - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -47,8 +47,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"4.6"}
-    h3,h4,h5,h6{--heading-prefix:"4.6"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.5"}
+    h3,h4,h5,h6{--heading-prefix:"6.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -75,7 +75,7 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">HIV Simple IG</span><br/>0.1.0 - ci-build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Simple HIV IG</span><br/>0.1.0 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -95,25 +95,45 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spec.html">Detailed Specification</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>      
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">MHD Home</a>
-  </li>
-  <li>
-    <a href="index.html">Introduction</a>
-  </li>
-  <li>
-    <a href="overview.html">Overview</a>
-  </li>
-  <li>
-    <a href="testplan.html">Test Plan</a>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifact Index</a>
-  </li>
-</ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -125,18 +145,8 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AgeRanges</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Library/AgeRanges</b></li>
           
-          <span style="float:right;">
-
-            <a href="Library-FHIR-ModelInfo.ttl.html">&lt;prev</a> | 
-
-            <a href="#bottom">bottom</a>
-
-          | <a href="Library-AgeRanges.xml.html">next&gt;</a>
-
-          </span>
-
         </ul>
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
@@ -148,7 +158,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">HIV Simple IG - Local Development build (v0.1.0). See the <a href="https://intrahealth.github.io/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Simple HIV IG - Local Development build (v0.1.0). See the <a href="https://intrahealth.github.io/simple-hiv-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
   
 
@@ -192,8 +202,10 @@
   <a name="root"> </a>
 
 
-  <h2 id="root">Example Library: AgeRanges</h2>
+  <h2 id="root">Library: Library/AgeRanges</h2>
 
+
+  
 
 
   <!-- insert intro if present -->
@@ -201,109 +213,7 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Related Artifacts</h2><table class="grid"><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://hl7.org/fhir/Library/FHIRHelpers|4.0.1</code></td></tr><tr><td>depends-on</td><td><code>http://ohie.org/CodeSystem/iso-8601-derived-periods</code></td></tr></table><h2>Parameters</h2><table class="grid"><tr><td>Measurement Period</td><td>in</td><td>0</td><td>1</td><td>Period</td></tr><tr><td>Patient</td><td>out</td><td>0</td><td>1</td><td>Patient</td></tr><tr><td>Age Group</td><td>out</td><td>0</td><td>1</td><td>Coding</td></tr><tr><td>Patient0To5AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient5To15AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient15To25AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient25To50AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient50To65AndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient65ToHighestAndFemale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient0To5AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient5To15AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient15To25AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient25To50AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient50To65AndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Patient65ToHighestAndMale</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library AgeRanges version '0.1.0'
-
-using FHIR version '4.0.1'
-
-include FHIRHelpers version '4.0.1'
-
-codesystem &quot;ISO-8601-Derived Periods&quot;: 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
-
-// Age Groups
-code &quot;P0Y--P1Y&quot;: 'P0Y--P1Y' from &quot;ISO-8601-Derived Periods&quot; display '&lt; 1 year'
-code &quot;P1Y--P5Y&quot;: 'P1Y--P5Y' from &quot;ISO-8601-Derived Periods&quot; display '1-4 years'
-code &quot;P5Y--P10Y&quot;: 'P5Y--P10Y' from &quot;ISO-8601-Derived Periods&quot; display '5-9 year'
-code &quot;P10Y--P15Y&quot;: 'P10Y--P15Y' from &quot;ISO-8601-Derived Periods&quot; display '10-14 year'
-code &quot;P15Y--P20Y&quot;: 'P15Y--P20Y' from &quot;ISO-8601-Derived Periods&quot; display '15-19 year'
-code &quot;P20Y--P25Y&quot;: 'P20Y--P25Y' from &quot;ISO-8601-Derived Periods&quot; display '20-24 year'
-code &quot;P25Y--P30Y&quot;: 'P25Y--P30Y' from &quot;ISO-8601-Derived Periods&quot; display '25-29 year'
-code &quot;P30Y--P35Y&quot;: 'P30Y--P35Y' from &quot;ISO-8601-Derived Periods&quot; display '30-34 year'
-code &quot;P35Y--P40Y&quot;: 'P35Y--P40Y' from &quot;ISO-8601-Derived Periods&quot; display '35-39 year'
-code &quot;P40Y--P50Y&quot;: 'P40Y--P50Y' from &quot;ISO-8601-Derived Periods&quot; display '40-49 year'
-code &quot;P50Y--P9999Y&quot;: 'P50Y--P9999Y' from &quot;ISO-8601-Derived Periods&quot; display '50+ years'
-
-/* parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt; */
-parameter &quot;Measurement Period&quot; Interval&lt;Date&gt; default Interval[@2020-01-01, @2020-12-31]
-
-
-
-context Patient
-
-// Age Group
-define &quot;Age Group&quot;:
-  case
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[0, 1) then &quot;P0Y--P1Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[1, 5) then &quot;P1Y--P5Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[5, 10) then &quot;P5Y--P10Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[10, 15) then &quot;P10Y--P15Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[15, 20) then &quot;P15Y--P20Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[20, 25) then &quot;P20Y--P25Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[25, 30) then &quot;P25Y--P30Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[30, 35) then &quot;P30Y--P35Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[35, 40) then &quot;P35Y--P40Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[40, 50) then &quot;P40Y--P50Y&quot;
-    when AgeInYearsAt(start of &quot;Measurement Period&quot;) in Interval[50, null] then &quot;P50Y--P9999Y&quot;
-    else null
-  end
-
-define Patient0To5AndFemale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 0
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 5
-    and Patient.gender = 'female'
-
-define Patient5To15AndFemale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 5
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 15
-    and Patient.gender = 'female'
-
-define Patient15To25AndFemale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 15
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 25
-    and Patient.gender = 'female'
-
-define Patient25To50AndFemale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 25
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 50
-    and Patient.gender = 'female'
-
-define Patient50To65AndFemale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 50
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 65
-    and Patient.gender = 'female'
-
-define Patient65ToHighestAndFemale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
-    and Patient.gender = 'female'
-
-define Patient0To5AndMale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 0
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 5
-    and Patient.gender = 'male'
-
-define Patient5To15AndMale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 5
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 15
-    and Patient.gender = 'male'
-
-define Patient15To25AndMale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 15
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 25
-    and Patient.gender = 'male'
-
-define Patient25To50AndMale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 25
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 50
-    and Patient.gender = 'male'
-
-define Patient50To65AndMale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 50
-    and AgeInYearsAt(start of &quot;Measurement Period&quot;) &lt; 65
-    and Patient.gender = 'male'
-
-define Patient65ToHighestAndMale:
-  AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 65
-    and Patient.gender = 'male'
-</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 82Kb)</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 341Kb)</p></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Contents</h2></div>
 
   <!-- insert notes if present -->
   
@@ -330,32 +240,10 @@ define Patient65ToHighestAndMale:
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
-      <div style="background-color:var(--footer-nav-bg-color)">
-        <table style="width:100%">
-          <tbody>
-            <tr>
-              <td style="text-align:left">&#xA0;
-
-                <a href="Library-FHIR-ModelInfo.ttl.html">&lt;prev</a>
-
-              </td>
-              <td style="text-align:center">
-                <a href="#top">top</a>
-              </td>
-              <td style="text-align:right">&#xA0;
-
-                <a href="Library-AgeRanges.xml.html">next&gt;</a>
-
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.intrahealth.org">Digital Health Team</a>.  Package simple.hiv.ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 12, 2021 18:32+0000">2021-08-12</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/[something]">IntraHealth International</a>.  Package simple.hiv.ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 17, 2021 13:07+0000">2021-11-17</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

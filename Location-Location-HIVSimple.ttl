@@ -10,15 +10,11 @@
   fhir:Resource.id [ fhir:value "Location-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: Location-HIVSimple, id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href=\"Organization-Organization-HIVSimple.html\">Generated Summary: name: Government Hospital</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple\" </p></div><p><b>identifier</b>: id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href=\"Organization-Organization-HIVSimple.html\">Organization/Organization-HIVSimple</a> \"Government Hospital\"</p></div>"
   ];
   fhir:Location.identifier [
      fhir:index 0;
      fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
-     fhir:Identifier.value [ fhir:value "Location-HIVSimple" ]
-  ], [
-     fhir:index 1;
-     fhir:Identifier.system [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/ValueSet/LocationVS" ];
      fhir:Identifier.value [ fhir:value "Location-HIVSimple" ]
   ];
   fhir:Location.managingOrganization [

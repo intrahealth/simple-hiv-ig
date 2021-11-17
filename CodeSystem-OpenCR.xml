@@ -10,25 +10,12 @@
   <name value="OpenCR"/>
   <title value="OpenCR CodeSystem"/>
   <status value="active"/>
-  <date value="2021-08-12T18:32:47+00:00"/>
-  <publisher value="Digital Health Team"/>
+  <date value="2021-11-17T13:07:12+00:00"/>
+  <publisher value="IntraHealth International"/>
   <contact>
-    <name value="Digital Health Team"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.intrahealth.org"/>
-    </telecom>
-    <telecom>
-      <system value="email"/>
-      <value value="digitalhealth@intrahealth.org"/>
-    </telecom>
-  </contact>
-  <contact>
-    <name value="Digital Health Team"/>
-    <telecom>
-      <system value="email"/>
-      <value value="digitalhealth@intrahealth.org"/>
-      <use value="work"/>
+      <value value="http://hl7.org/Special/committees/[something]"/>
     </telecom>
   </contact>
   <description value="OpenCR CodeSystem"/>
