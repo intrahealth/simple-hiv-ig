@@ -10,7 +10,7 @@ Description: "Patient-GoldenRecord"
 // only used for internal opencr tracking purposes
 * meta.tag[+] = $OpenCR#1234 "Golden Record"
 // patient resource record linkages
-* link[+].other = Reference($Patient-HIVSimple)
+* link[+].other = Reference(Patient-HIVSimple)
 * link[=].type = #seealso
-* link[+].other = Reference($Patient-HIVSimple2)
+* link[+].other = Reference(Patient-HIVSimple2)
 * link[=].type = #seealso

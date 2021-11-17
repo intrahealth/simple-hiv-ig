@@ -150,13 +150,11 @@ define function "GetLocation"(reference Reference):
     where Location.id.value = GetId(reference.reference)
   )
 
-// works in cql id=
 define "Location":
   First([Encounter] E
     return "GetLocation"(First(E.location).location)
   )
 
-// this may do it
 define "Location ID":
   "Location".id.value
 
@@ -166,8 +164,6 @@ define "Gender/AgeGrooup/Location":
   "Age Group".code + ':' + "Sex" + ':' + "Location".id
 
 
-
-// works in cql, returns reference
 define "Most Recent Encounter Location Reference":
   Last([Encounter] E
     return First(E.location L
@@ -175,7 +171,7 @@ define "Most Recent Encounter Location Reference":
     )
       //sort by start of period
   )
-// works with cql not evaluate-measure
+
 define "Location Code Revised":
   singleton from (
     [Location] L
@@ -199,7 +195,6 @@ define "SDE Location":
   Code { code: "Location".name, system: 'http://location-name-code-system', display: Location.name }
 
 
-// returns string, not usable in stratifier
 define "Most Recent Encounter Location Reference Reference":
   Last([Encounter] E
     return First(E.location L
@@ -218,7 +213,6 @@ define "Age Group/Sex/Location 2":
 
 
 
-// works with cql not evaluate-measure
 define "Location Code":
   singleton from ( [Location] L
     let identifier: singleton from ( L.identifier I
@@ -235,7 +229,6 @@ define "Location Code":
     }
   )
 
-// works with cql not evaluate-measure
 define "Location Code Deux":
   singleton from ( [Location] L
     let identifier: singleton from ( L.identifier )
@@ -249,7 +242,6 @@ define "Location Code Deux":
     }
   )
 
-// works in cql not eval measure
 // Bundle.entry.resource.ofType(Encounter)[0].serviceProvider.reference
 define "serviceProvider":
   Last([Encounter]).serviceProvider.reference.value
@@ -258,7 +250,6 @@ define "assert serviceProvider is string":
   "serviceProvider" is String
   
 
-// works in cql not eval measure
 // Bundle.entry.resource.ofType(Encounter)[0].location[0].location.reference
 define "Naive Location":
   Last([Encounter]).location[0].location.reference.value
@@ -267,15 +258,3 @@ define "Naive Location":
 
 define "assert Naive Location is string":
   "Naive Location" is String
-
-
-/* create clinical decision support logic */
-/*
-define "HIVTestProposed": ServiceRequest {
- type: Code '75622-1' from "LOINC"
- display 'HIV 1 and 2 tests - Meaningful Use set',
- status 'active'
- intent: 'proposal'
- // values for other elements of the request...
-}
- */

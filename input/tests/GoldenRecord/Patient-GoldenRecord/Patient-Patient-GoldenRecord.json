@@ -5,10 +5,20 @@
     "tag": [
       {
         "code": "1234",
+        "system": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR",
         "display": "Golden Record"
       }
     ]
   },
+  "name": [
+    {
+      "given": [
+        "Mittens"
+      ],
+      "family": "Cat",
+      "text": "Mittens Cat"
+    }
+  ],
   "link": [
     {
       "other": {

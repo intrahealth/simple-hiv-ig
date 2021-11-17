@@ -75,6 +75,20 @@ Description: "GoldenRecord"
 * content.id = "ig-loader-GoldenRecord.cql"
 
 
+Instance: Dedupe
+InstanceOf: Library
+Title: "Dedupe"
+Description: "Dedupe"
+* insert lib-common
+* name = "Dedupe"
+* title = "Dedupe"
+* description = "Dedupe"
+* version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe"
+// * identifier.value = "Dedupe"
+* content.id = "ig-loader-Dedupe.cql"
+
+
 Instance: Blaze
 InstanceOf: Library
 Title: "Blaze"
