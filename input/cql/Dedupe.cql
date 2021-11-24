@@ -13,11 +13,13 @@ context Patient
 define "GoldenID":
   singleton from (
     Patient.identifier I where I.system = 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR'
-  ).value.value
+  ) //.value.value
 
 context Unfiltered
 
-define "ThisPatient": Patient
+define "ThisPatient": "GoldenID"
+  
+  // [Patient] P where P.identifier.value.value = "GoldenID".value.value
   // not working
   // [Patient] P where P.identifier.value.value ~ "GoldenID"
 

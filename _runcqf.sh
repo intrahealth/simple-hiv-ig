@@ -40,7 +40,7 @@ cd output ; for FILE in OpenCR OpenHIE \
 ; do curl -X PUT -H "$HEADER" --data @CodeSystem-${FILE}.json $FHIR/CodeSystem/${FILE} | jq . ; done ; cd ../
 
 
-cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecord Blaze \
+cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecord Blaze Dedupe \
 ; do curl -X PUT -H "$HEADER" --data @Library-${FILE}.json $FHIR/Library/${FILE} | jq . ; done ; cd ../
 
 
