@@ -11,22 +11,6 @@ Description: "Patient-HIVSimple2"
 * identifier[+].system = $OpenCR
 * identifier[=].value = "1234"
 
-
-Instance: Organization-HIVSimple2
-InstanceOf: Organization
-Title: "Organization-HIVSimple2"
-Description: "Organization-HIVSimple2"
-* name = "Government Hospital"
-
-
-Instance: Location-HIVSimple2
-InstanceOf: Location
-Title: "Location-HIVSimple2"
-Description: "Location-HIVSimple2"
-* managingOrganization = Reference(Organization-HIVSimple2)
-* identifier[+].system = $synthea
-* identifier[=].value = "Location-HIVSimple2"
-
 // conditions
 
 Instance: Condition-HIVSimple2

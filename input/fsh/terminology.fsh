@@ -1,6 +1,3 @@
-Alias: $OpenCR = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR
-Alias: $OpenHIE = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE
-
 CodeSystem: OpenCR
 Id: OpenCR
 Title: "OpenCR CodeSystem"

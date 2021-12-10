@@ -1,5 +1,3 @@
-Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
-
 RuleSet: lib-common
 * status = #draft
 * experimental = true

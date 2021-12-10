@@ -8,22 +8,6 @@ Description: "Patient-HIVSimple3"
 * gender = #male
 * birthDate = "1985-01-01"
 
-
-Instance: Organization-HIVSimple3
-InstanceOf: Organization
-Title: "Organization-HIVSimple3"
-Description: "Organization-HIVSimple3"
-* name = "Government Hospital"
-
-
-Instance: Location-HIVSimple3
-InstanceOf: Location
-Title: "Location-HIVSimple3"
-Description: "Location-HIVSimple3"
-* managingOrganization = Reference(Organization-HIVSimple3)
-* identifier[+].system = $synthea
-* identifier[=].value = "Location-HIVSimple3"
-
 // conditions
 
 Instance: Condition-HIVSimple2
