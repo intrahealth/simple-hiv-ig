@@ -1,18 +1,22 @@
 ﻿SimpleHIVIG : Validation Results
 =========================================
 
-err = 17, warn = 0, info = 0
-IG Publisher Version: 1.1.86
-Generated Wed Nov 17 13:07:28 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
- Build Errors : 0 / 0 / 0
+err = 24, warn = 7, info = 2
+IG Publisher Version: 1.1.90
+Generated Fri Dec 10 19:46:10 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
+ Build Errors : 7 / 7 / 0
+ /github/workspace/fsh-generated/resources/Account-Account-HIVSimple : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Bundle-Example-Attribution : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple : 0 / 0 / 12
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple2 : 0 / 0 / 12
- /github/workspace/fsh-generated/resources/CodeSystem-OpenCR : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/CodeSystem-OpenHIE : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-OpenCR : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-OpenHIE : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-Pregnancy : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-Pregnancy2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Contract-Contract-HIVSimple : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Coverage-Coverage-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-DiagnosticReport-ViralLoad : 0 / 0 / 1
@@ -21,6 +25,7 @@ Generated Wed Nov 17 13:07:28 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-HIVSimple2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-ViralLoad : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-ViralLoad2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/HealthcareService-HealthcareService-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-AgeRanges : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-Blaze : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-Dedupe : 1 / 0 / 1
@@ -30,6 +35,7 @@ Generated Wed Nov 17 13:07:28 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Library-KitchenSink : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-Location-HIVSimple3 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-AgeGroupGender : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-AgeGroupGenderLocation : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-BlazeAgeGroupLocation : 1 / 0 / 1
@@ -48,6 +54,7 @@ Generated Wed Nov 17 13:07:28 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Observation-Observation-ViralLoad2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple3 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-GoldenRecord : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple2 : 0 / 0 / 1
@@ -55,14 +62,34 @@ Generated Wed Nov 17 13:07:28 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/input/simple-hiv-ig : 0 / 0 / 1
 </table>
 == n/a ==
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Contract/Contract-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Contract/Contract-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-HIVSimple3.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-HIVSimple3.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-HIVSimple3.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-HIVSimple3.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Account/Account-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Account/Account-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Example-Attribution.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Example-Attribution.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Coverage/Coverage-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Coverage/Coverage-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource HealthcareService/HealthcareService-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource HealthcareService/HealthcareService-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+== fsh-generated/resources/Account-Account-HIVSimple.json ==
+== fsh-generated/resources/Bundle-Example-Attribution.json ==
 == fsh-generated/resources/Bundle-Example-HIVSimple.json ==
 == fsh-generated/resources/Bundle-Example-HIVSimple2.json ==
 == fsh-generated/resources/CodeSystem-OpenCR.json ==
+INFORMATION: CodeSystem/OpenCR: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 == fsh-generated/resources/CodeSystem-OpenHIE.json ==
+INFORMATION: CodeSystem/OpenHIE: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 == fsh-generated/resources/Condition-Condition-HIVSimple.json ==
 == fsh-generated/resources/Condition-Condition-HIVSimple2.json ==
 == fsh-generated/resources/Condition-Condition-Pregnancy.json ==
 == fsh-generated/resources/Condition-Condition-Pregnancy2.json ==
+== fsh-generated/resources/Contract-Contract-HIVSimple.json ==
+== fsh-generated/resources/Coverage-Coverage-HIVSimple.json ==
 == fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple.json ==
 == fsh-generated/resources/DiagnosticReport-DiagnosticReport-HIVSimple2.json ==
 == fsh-generated/resources/DiagnosticReport-DiagnosticReport-ViralLoad.json ==
@@ -71,6 +98,7 @@ Generated Wed Nov 17 13:07:28 UTC 2021. FHIR version 4.0.1 for simple.hiv.ig#0.1
 == fsh-generated/resources/Encounter-Encounter-HIVSimple2.json ==
 == fsh-generated/resources/Encounter-Encounter-ViralLoad.json ==
 == fsh-generated/resources/Encounter-Encounter-ViralLoad2.json ==
+== fsh-generated/resources/HealthcareService-HealthcareService-HIVSimple.json ==
 == fsh-generated/resources/Library-AgeRanges.json ==
 ERROR: Library.content{0]: Error Loading AgeRanges.cql: null
 == fsh-generated/resources/Library-Blaze.json ==
@@ -87,6 +115,7 @@ ERROR: Library.content{0]: Error Loading GoldenRecord.cql: null
 ERROR: Library.content{0]: Error Loading KitchenSink.cql: null
 == fsh-generated/resources/Location-Location-HIVSimple.json ==
 == fsh-generated/resources/Location-Location-HIVSimple2.json ==
+== fsh-generated/resources/Location-Location-HIVSimple3.json ==
 == fsh-generated/resources/Measure-AgeGroupGender.json ==
 ERROR: Measure/AgeGroupGender: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink: No compiled version of CQL found
 == fsh-generated/resources/Measure-AgeGroupGenderLocation.json ==
@@ -115,6 +144,7 @@ ERROR: Measure/TXPVLS: Measure.group[0].stratifier[0].criteria: Error in https:/
 == fsh-generated/resources/Observation-Observation-ViralLoad2.json ==
 == fsh-generated/resources/Organization-Organization-HIVSimple.json ==
 == fsh-generated/resources/Organization-Organization-HIVSimple2.json ==
+== fsh-generated/resources/Organization-Organization-HIVSimple3.json ==
 == fsh-generated/resources/Patient-Patient-GoldenRecord.json ==
 == fsh-generated/resources/Patient-Patient-HIVSimple.json ==
 == fsh-generated/resources/Patient-Patient-HIVSimple2.json ==

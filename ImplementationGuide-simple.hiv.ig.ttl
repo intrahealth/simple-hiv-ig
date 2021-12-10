@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.title [ fhir:value "Simple HIV IG"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2021-11-17T13:07:12+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-12-10T19:45:37+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "IntraHealth International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -889,40 +889,34 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+         fhir:Extension.valueString [ fhir:value "Contract" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/OpenCR" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpenCR CodeSystem" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenCR CodeSystem" ]
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Contract/Contract-HIVSimple" ]
+       ]
      ], [
        fhir:index 44;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Library" ]
+         fhir:Extension.valueString [ fhir:value "Organization" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe>;
-         fhir:Reference.reference [ fhir:value "Library/Dedupe" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dedupe" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dedupe" ]
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple3>;
+         fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple3" ]
+       ]
      ], [
        fhir:index 45;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+         fhir:Extension.valueString [ fhir:value "Location" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/OpenHIE" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpenHIE CodeSystem" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenHIE CodeSystem" ]
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple3>;
+         fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple3" ]
+       ]
      ], [
        fhir:index 46;
        fhir:Element.extension [
@@ -936,6 +930,89 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "TXPVLS" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "TXPVLS" ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Account" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Account/Account-HIVSimple" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-Attribution>;
+         fhir:Reference.reference [ fhir:value "Bundle/Example-Attribution" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/OpenCR" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpenCR CodeSystem" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenCR CodeSystem" ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe>;
+         fhir:Reference.reference [ fhir:value "Library/Dedupe" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dedupe" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dedupe" ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/OpenHIE" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpenHIE CodeSystem" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OpenHIE CodeSystem" ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Coverage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "Coverage/Coverage-HIVSimple" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "HealthcareService" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://intrahealth.github.io/simple-hiv-ig/HealthcareService/HealthcareService-HIVSimple>;
+         fhir:Reference.reference [ fhir:value "HealthcareService/HealthcareService-HIVSimple" ]
+       ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];

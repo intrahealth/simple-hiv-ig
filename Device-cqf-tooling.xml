@@ -6,7 +6,7 @@
     <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "cqf-tooling" </p><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/HL7/cqf-measures//StructureDefinition-device-softwaresystem-cqfm.html">CQFMDevice</a></p></div><p><b>manufacturer</b>: CQFramework</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>cqf-tooling</td><td>manufacturer-name</td></tr></table><p><b>type</b>: Tooling <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://build.fhir.org/ig/HL7/cqf-measures//CodeSystem-software-system-type.html">Software System Type</a>#tooling)</span></p><h3>Versions</h3><table class="grid"><tr><td>-</td><td><b>Value</b></td></tr><tr><td>*</td><td>1.3.1-SNAPSHOT</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "cqf-tooling" </p><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/HL7/cqf-measures//StructureDefinition-device-softwaresystem-cqfm.html">CQFM Device</a></p></div><p><b>manufacturer</b>: CQFramework</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>cqf-tooling</td><td>manufacturer-name</td></tr></table><p><b>type</b>: Tooling <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://build.fhir.org/ig/HL7/cqf-measures//CodeSystem-software-system-type.html">Software System Type</a>#tooling)</span></p><h3>Versions</h3><table class="grid"><tr><td>-</td><td><b>Value</b></td></tr><tr><td>*</td><td>1.3.1</td></tr></table></div>
   </text>
   <manufacturer value="CQFramework"/>
   <deviceName>
@@ -20,6 +20,6 @@
     </coding>
   </type>
   <version>
-    <value value="1.3.1-SNAPSHOT"/>
+    <value value="1.3.1"/>
   </version>
 </Device>
