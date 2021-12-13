@@ -2,14 +2,15 @@
 // patient -> encounter.account -> account.coverage -> coverage.contract -> contract -> organization
 // patient -> encounter.account -> account.subject -> healthcareservice.organization -> organization
 
-Instance: HealthcareService-HIVSimple
-InstanceOf: HealthcareService
-Usage: #example
-Title: "HealthcareService-HIVSimple"
-Description: "HealthcareService-HIVSimple"
-* active = true
-* providedBy = Reference(Organization-HIVSimple)
-* name = "HealthcareService-HIVSimple"
+// Instance: HealthcareService-HIVSimple
+// InstanceOf: HealthcareService
+// Usage: #example
+// Title: "HealthcareService-HIVSimple"
+// Description: "HealthcareService-HIVSimple"
+// * active = true
+// * providedBy = Reference(IntraHealth)
+// // * providedBy = Reference(Organization-HIVSimple)
+// * name = "HealthcareService-HIVSimple"
 
 
 Instance: Contract-HIVSimple
@@ -17,7 +18,8 @@ InstanceOf: Contract
 Usage: #example
 Title: "Contract-HIVSimple"
 Description: "Contract-HIVSimple"
-* term[+].offer.party[+].reference = Reference(Organization-HIVSimple)
+// * term[+].offer.party[+].reference = Reference(Organization-HIVSimple)
+* term[+].offer.party[+].reference = Reference(IntraHealth)
 * term[=].offer.party[=].role = $contract-party-role#flunky
 
 
@@ -28,7 +30,8 @@ Title: "Coverage-HIVSimple"
 Description: "Coverage-HIVSimple"
 * status = $fm-status#active
 * contract[+] = Reference(Contract-HIVSimple)
-* payor[+] = Reference(Organization-HIVSimple)
+// * payor[+] = Reference(Organization-HIVSimple)
+* payor[+] = Reference(IntraHealth)
 * beneficiary = Reference(Patient-HIVSimple)
 
 
@@ -38,7 +41,8 @@ Usage: #example
 Title: "Account-HIVSimple"
 Description: "Account-HIVSimple"
 * status = $account-status#active
-* subject[+] = Reference(HealthcareService-HIVSimple)
+* subject[+] = Reference(Patient-HIVSimple)
+// * subject[+] = Reference(HealthcareService-HIVSimple)
 * coverage[+].coverage = Reference(Coverage-HIVSimple)
 
 
@@ -63,6 +67,11 @@ Description: "Example-Attribution"
 * entry[=].resource = Organization-HIVSimple
 * insert patient-bundle
 
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth"
+* entry[=].request.url = "Organization"
+* entry[=].resource = IntraHealth
+* insert patient-bundle
+
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
 * entry[=].request.url = "Location"
 * entry[=].resource = Location-HIVSimple
@@ -73,10 +82,10 @@ Description: "Example-Attribution"
 * entry[=].resource = Encounter-HIVSimple
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/HealthcareService/HealthcareService-HIVSimple"
-* entry[=].request.url = "HealthcareService"
-* entry[=].resource = HealthcareService-HIVSimple
-* insert patient-bundle
+// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/HealthcareService/HealthcareService-HIVSimple"
+// * entry[=].request.url = "HealthcareService"
+// * entry[=].resource = HealthcareService-HIVSimple
+// * insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple"
 * entry[=].request.url = "Account"

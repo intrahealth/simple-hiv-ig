@@ -19,3 +19,10 @@ Description: "Organization-HIVSimple3"
 * name = "Government Hospital"
 
 
+Instance: IntraHealth
+InstanceOf: Organization
+Title: "IntraHealth"
+Description: "IntraHealth"
+* name = "IntraHealth"
+
+

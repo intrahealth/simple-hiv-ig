@@ -232,16 +232,16 @@ Description: "SuppData"
   * criteria.expression = "Location Code Revised"
 
 
-Instance: TXPVLS
+Instance: HIV-TXPVLS
 InstanceOf: Measure
-Title: "TXPVLS"
-Description: "TXPVLS"
+Title: "HIV-TXPVLS"
+Description: "HIV-TXPVLS"
 * insert meas-common
-* name = "TXPVLS"
-* title = "TXPVLS"
-* description = "TXPVLS"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TXPVLS"
-* identifier.value = "TXPVLS"
+* name = "HIV-TXPVLS"
+* title = "HIV-TXPVLS"
+* description = "HIV-TXPVLS"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXPVLS"
+* identifier.value = "HIV-TXPVLS"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -406,19 +406,3 @@ Description: "BlazeGenderLocation"
   * stratifier[+]
     * criteria.language = #text/cql
     * criteria.expression = "Age Group/Sex/Location 2"
-
-
-
-// RuleSet: meas-bundle
-// * entry[=].request.method = #PUT
-
-// Instance: HIVSimpleMeasures
-// InstanceOf: Bundle
-// Title: "HIVSimpleMeasures"
-// Description: "HIVSimpleMeasures"
-// * type = #transaction
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIVSimpleAgeGroup"
-// * entry[=].resource = HIVSimpleAgeGroup
-// * entry[=].request.url = "Measure/HIVSimpleAgeGroup"
-// * insert meas-bundle
