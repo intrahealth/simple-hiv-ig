@@ -3,11 +3,11 @@
 <Account xmlns="http://hl7.org/fhir">
   <id value="Account-HIVSimple"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Account-HIVSimple" </p></div><p><b>status</b>: active</p><p><b>subject</b>: <a href="HealthcareService-HealthcareService-HIVSimple.html">HealthcareService/HealthcareService-HIVSimple</a> "HealthcareService-HIVSimple"</p><h3>Coverages</h3><table class="grid"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href="Coverage-Coverage-HIVSimple.html">Coverage/Coverage-HIVSimple</a></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Account-HIVSimple" </p></div><p><b>status</b>: active</p><p><b>subject</b>: <a href="Patient-Patient-HIVSimple.html">Patient/Patient-HIVSimple</a> " CAT"</p><h3>Coverages</h3><table class="grid"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href="Coverage-Coverage-HIVSimple.html">Coverage/Coverage-HIVSimple</a></td></tr></table></div>
   </text>
   <status value="active"/>
   <subject>
-    <reference value="HealthcareService/HealthcareService-HIVSimple"/>
+    <reference value="Patient/Patient-HIVSimple"/>
   </subject>
   <coverage>
     <coverage>

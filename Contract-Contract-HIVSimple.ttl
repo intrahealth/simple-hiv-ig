@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "Contract-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"Organization-Organization-HIVSimple.html\">Organization/Organization-HIVSimple</a> \"Government Hospital\"</td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"Organization-IntraHealth.html\">Organization/IntraHealth</a> \"IntraHealth\"</td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote></div>"
   ];
   fhir:Contract.term [
      fhir:index 0;
@@ -19,8 +19,8 @@
          fhir:index 0;
          fhir:Contract.term.offer.party.reference [
            fhir:index 0;
-           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
-           fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+           fhir:Reference.reference [ fhir:value "Organization/IntraHealth" ]
          ];
          fhir:Contract.term.offer.party.role [
            fhir:CodeableConcept.coding [

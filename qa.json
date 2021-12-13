@@ -3,9 +3,9 @@
   "name": "SimpleHIVIG",
   "package-id": "simple.hiv.ig",
   "ig-ver": "0.1.0",
-  "date": "Fri, 10 Dec, 2021 19:45:37 +0000",
-  "errs": 24,
-  "warnings": 7,
+  "date": "Mon, 13 Dec, 2021 01:57:29 +0000",
+  "errs": 32,
+  "warnings": 8,
   "hints": 2,
   "version": "4.0.1",
   "tool": "4.6.0 (3)"

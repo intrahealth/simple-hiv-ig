@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "OpenHIE"];
   fhir:CodeSystem.title [ fhir:value "OpenHIE CodeSystem"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-12-10T19:45:37+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2021-12-13T01:57:29+00:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "IntraHealth International"];
   fhir:CodeSystem.contact [
      fhir:index 0;

@@ -21,11 +21,25 @@
     "name": "SimpleHIVIG"
   },
   {
+    "id": "ANC",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/ANC",
+    "version": "0.1.0",
+    "name": "ANC"
+  },
+  {
     "id": "AgeRanges",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges",
     "version": "0.1.0",
     "name": "AgeRanges"
+  },
+  {
+    "id": "Attribution",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Attribution",
+    "version": "0.1.0",
+    "name": "Attribution"
   },
   {
     "id": "Blaze",
@@ -40,6 +54,13 @@
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe",
     "version": "0.1.0",
     "name": "Dedupe"
+  },
+  {
+    "id": "EncounterLocation",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/EncounterLocation",
+    "version": "0.1.0",
+    "name": "EncounterLocation"
   },
   {
     "id": "FHIRCommon",
@@ -63,11 +84,46 @@
     "name": "GoldenRecord"
   },
   {
+    "id": "HIVIndicators",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/HIVIndicators",
+    "version": "0.1.0",
+    "name": "HIVIndicators"
+  },
+  {
     "id": "KitchenSink",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink",
     "version": "0.1.0",
     "name": "KitchenSink"
+  },
+  {
+    "id": "TXCURR",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXCURR",
+    "version": "0.1.0",
+    "name": "TXCURR"
+  },
+  {
+    "id": "TXML",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXML",
+    "version": "0.1.0",
+    "name": "TXML"
+  },
+  {
+    "id": "TXNEW",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXNEW",
+    "version": "0.1.0",
+    "name": "TXNEW"
+  },
+  {
+    "id": "TXPVLS",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXPVLS",
+    "version": "0.1.0",
+    "name": "TXPVLS"
   },
   {
     "id": "AgeGroupGender",
@@ -119,6 +175,13 @@
     "name": "Cohort"
   },
   {
+    "id": "HIV-TXPVLS",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXPVLS",
+    "version": "0.1.0",
+    "name": "HIV-TXPVLS"
+  },
+  {
     "id": "JustAgeGroup",
     "type": "Measure",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup",
@@ -145,12 +208,5 @@
     "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData",
     "version": "0.1.0",
     "name": "SuppData"
-  },
-  {
-    "id": "TXPVLS",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/TXPVLS",
-    "version": "0.1.0",
-    "name": "TXPVLS"
   }
 ]

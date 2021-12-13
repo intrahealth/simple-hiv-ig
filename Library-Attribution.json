@@ -1,0 +1,35 @@
+{
+  "resourceType": "Library",
+  "id": "Attribution",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Contents</h2></div>"
+  },
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Attribution",
+  "version": "0.1.0",
+  "name": "Attribution",
+  "title": "Attribution",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "date": "2021-12-13T01:57:29+00:00",
+  "publisher": "IntraHealth International",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "Attribution"
+}

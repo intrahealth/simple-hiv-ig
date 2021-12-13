@@ -12,7 +12,7 @@
   <title value="Simple HIV IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-12-10T19:45:37+00:00"/>
+  <date value="2021-12-13T01:57:29+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -645,10 +645,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/TXPVLS"/>
+      </reference>
+      <name value="TXPVLS"/>
+      <description value="TXPVLS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Contract"/>
       </extension>
       <reference>
         <reference value="Contract/Contract-HIVSimple"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/IntraHealth"/>
       </reference>
     </resource>
     <resource>
@@ -669,13 +687,23 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Measure"/>
+        <valueString value="Library"/>
       </extension>
       <reference>
-        <reference value="Measure/TXPVLS"/>
+        <reference value="Library/EncounterLocation"/>
       </reference>
-      <name value="TXPVLS"/>
-      <description value="TXPVLS"/>
+      <name value="EncounterLocation"/>
+      <description value="EncounterLocation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/TXCURR"/>
+      </reference>
+      <name value="TXCURR"/>
+      <description value="TXCURR"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -687,11 +715,61 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/HIV-TXPVLS"/>
+      </reference>
+      <name value="HIV-TXPVLS"/>
+      <description value="HIV-TXPVLS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/Attribution"/>
+      </reference>
+      <name value="Attribution"/>
+      <description value="Attribution"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
         <reference value="Bundle/Example-Attribution"/>
       </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/HIVIndicators"/>
+      </reference>
+      <name value="HIVIndicators"/>
+      <description value="HIVIndicators"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/TXNEW"/>
+      </reference>
+      <name value="TXNEW"/>
+      <description value="TXNEW"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/TXML"/>
+      </reference>
+      <name value="TXML"/>
+      <description value="TXML"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -733,11 +811,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="HealthcareService"/>
+        <valueString value="Library"/>
       </extension>
       <reference>
-        <reference value="HealthcareService/HealthcareService-HIVSimple"/>
+        <reference value="Library/ANC"/>
       </reference>
+      <name value="ANC"/>
+      <description value="ANC"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

@@ -52,6 +52,22 @@
       }
     },
     {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "IntraHealth",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"IntraHealth\" </p></div><p><b>name</b>: IntraHealth</p></div>"
+        },
+        "name": "IntraHealth"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple",
       "resource": {
         "resourceType": "Location",
@@ -118,38 +134,18 @@
       }
     },
     {
-      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/HealthcareService/HealthcareService-HIVSimple",
-      "resource": {
-        "resourceType": "HealthcareService",
-        "id": "HealthcareService-HIVSimple",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"HealthcareService-HIVSimple\" </p></div><p><b>active</b>: true</p><p><b>providedBy</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p><p><b>name</b>: HealthcareService-HIVSimple</p></div>"
-        },
-        "active": true,
-        "providedBy": {
-          "reference": "Organization/Organization-HIVSimple"
-        },
-        "name": "HealthcareService-HIVSimple"
-      },
-      "request": {
-        "method": "POST",
-        "url": "HealthcareService"
-      }
-    },
-    {
       "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple",
       "resource": {
         "resourceType": "Account",
         "id": "Account-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Account-HIVSimple\" </p></div><p><b>status</b>: active</p><p><b>subject</b>: <a href=\"#HealthcareService_HealthcareService-HIVSimple\">See above (HealthcareService/HealthcareService-HIVSimple)</a></p><h3>Coverages</h3><table class=\"grid\"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href=\"#Coverage_Coverage-HIVSimple\">See above (Coverage/Coverage-HIVSimple)</a></td></tr></table></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Account-HIVSimple\" </p></div><p><b>status</b>: active</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><h3>Coverages</h3><table class=\"grid\"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href=\"#Coverage_Coverage-HIVSimple\">See above (Coverage/Coverage-HIVSimple)</a></td></tr></table></div>"
         },
         "status": "active",
         "subject": [
           {
-            "reference": "HealthcareService/HealthcareService-HIVSimple"
+            "reference": "Patient/Patient-HIVSimple"
           }
         ],
         "coverage": [
@@ -172,7 +168,7 @@
         "id": "Coverage-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Coverage-HIVSimple\" </p></div><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>payor</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p><p><b>contract</b>: <a href=\"#Contract_Contract-HIVSimple\">See above (Contract/Contract-HIVSimple)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Coverage-HIVSimple\" </p></div><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>payor</b>: <a href=\"#Organization_IntraHealth\">See above (Organization/IntraHealth)</a></p><p><b>contract</b>: <a href=\"#Contract_Contract-HIVSimple\">See above (Contract/Contract-HIVSimple)</a></p></div>"
         },
         "status": "active",
         "beneficiary": {
@@ -180,7 +176,7 @@
         },
         "payor": [
           {
-            "reference": "Organization/Organization-HIVSimple"
+            "reference": "Organization/IntraHealth"
           }
         ],
         "contract": [
@@ -201,7 +197,7 @@
         "id": "Contract-HIVSimple",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"#Organization_IntraHealth\">See above (Organization/IntraHealth)</a></td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote></div>"
         },
         "term": [
           {
@@ -210,7 +206,7 @@
                 {
                   "reference": [
                     {
-                      "reference": "Organization/Organization-HIVSimple"
+                      "reference": "Organization/IntraHealth"
                     }
                   ],
                   "role": {

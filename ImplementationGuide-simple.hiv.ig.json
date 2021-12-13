@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2021-12-10T19:45:37+00:00",
+  "date": "2021-12-13T01:57:29+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -894,11 +894,35 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/TXPVLS"
+        },
+        "name": "TXPVLS",
+        "description": "TXPVLS"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Contract"
           }
         ],
         "reference": {
           "reference": "Contract/Contract-HIVSimple"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/IntraHealth"
         }
       },
       {
@@ -927,14 +951,27 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
+            "valueString": "Library"
           }
         ],
         "reference": {
-          "reference": "Measure/TXPVLS"
+          "reference": "Library/EncounterLocation"
         },
-        "name": "TXPVLS",
-        "description": "TXPVLS"
+        "name": "EncounterLocation",
+        "description": "EncounterLocation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/TXCURR"
+        },
+        "name": "TXCURR",
+        "description": "TXCURR"
       },
       {
         "extension": [
@@ -951,12 +988,77 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIV-TXPVLS"
+        },
+        "name": "HIV-TXPVLS",
+        "description": "HIV-TXPVLS"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/Attribution"
+        },
+        "name": "Attribution",
+        "description": "Attribution"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Bundle"
           }
         ],
         "reference": {
           "reference": "Bundle/Example-Attribution"
         }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/HIVIndicators"
+        },
+        "name": "HIVIndicators",
+        "description": "HIVIndicators"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/TXNEW"
+        },
+        "name": "TXNEW",
+        "description": "TXNEW"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/TXML"
+        },
+        "name": "TXML",
+        "description": "TXML"
       },
       {
         "extension": [
@@ -1012,12 +1114,14 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "HealthcareService"
+            "valueString": "Library"
           }
         ],
         "reference": {
-          "reference": "HealthcareService/HealthcareService-HIVSimple"
-        }
+          "reference": "Library/ANC"
+        },
+        "name": "ANC",
+        "description": "ANC"
       }
     ],
     "page": {
