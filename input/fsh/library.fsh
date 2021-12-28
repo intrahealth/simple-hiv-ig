@@ -160,6 +160,20 @@ Description: "GoldenRecord"
 * content.id = "ig-loader-GoldenRecord.cql"
 
 
+Instance: Parameters
+InstanceOf: Library
+Title: "Parameters"
+Description: "Parameters"
+* insert lib-common
+* name = "Parameters"
+* title = "Parameters"
+* description = "Parameters"
+* version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/Parameters"
+// * identifier.value = "Parameters"
+* content.id = "ig-loader-Parameters.cql"
+
+
 Instance: TXCURR
 InstanceOf: Library
 Title: "TXCURR"

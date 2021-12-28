@@ -11,3 +11,10 @@ Title: "OpenHIE CodeSystem"
 Description: "OpenHIE CodeSystem"
 * ^url = $OpenHIE
 * #cohort "cohort"
+
+CodeSystem: PEPFAR
+Id: PEPFAR
+Title: "PEPFAR CodeSystem"
+Description: "PEPFAR CodeSystem"
+* ^url = $PEPFAR
+* #4321 "Contract ID"

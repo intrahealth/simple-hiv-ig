@@ -1,6 +1,12 @@
 // eClaim domain example
-// patient -> encounter.account -> account.coverage -> coverage.contract -> contract -> organization
-// patient -> encounter.account -> account.subject -> healthcareservice.organization -> organization
+// patient -> encounter.account -> account.coverage -> 
+// coverage.contract -> contract.term.offer.party -> organization
+// Bundle.entry.resource.ofType(Encounter).account[0].reference | 
+// Bundle.entry.resource.ofType(Account).coverage[0].coverage.reference | 
+// Bundle.entry.resource.ofType(Coverage).contract[0].reference | 
+// Bundle.entry.resource.ofType(Contract).term[0].offer.party[0].reference[0].reference
+// Bundle.entry.resource.ofType(Encounter).account[0].reference | Bundle.entry.resource.ofType(Account).coverage[0].coverage.reference | Bundle.entry.resource.ofType(Coverage).contract[0].reference | Bundle.entry.resource.ofType(Contract).term[0].offer.party[0].reference[0].reference
+
 
 // Instance: HealthcareService-HIVSimple
 // InstanceOf: HealthcareService
@@ -18,9 +24,19 @@ InstanceOf: Contract
 Usage: #example
 Title: "Contract-HIVSimple"
 Description: "Contract-HIVSimple"
+* identifier[+].system = $PEPFAR
+* identifier[=].value = "4321"
 // * term[+].offer.party[+].reference = Reference(Organization-HIVSimple)
 * term[+].offer.party[+].reference = Reference(IntraHealth)
 * term[=].offer.party[=].role = $contract-party-role#flunky
+* term[+].offer.party[+].reference = Reference(Patient-HIVSimple)
+* term[=].offer.party[=].role = $contract-party-role#flunky
+* term[=].action[+].subject[+].reference[+] = Reference(Organization-HIVSimple)
+* term[=].action[=].type = $contractaction#action-a
+* term[=].action[=].intent = $v3-ActReason#POPHLTH
+* term[=].action[=].status = $contract-actionstatus#complete
+* term[=].asset[+].period[+].start = "2005-01-01"
+* term[=].asset[=].period[=].end = "2022-01-01"
 
 
 Instance: Coverage-HIVSimple
@@ -44,61 +60,5 @@ Description: "Account-HIVSimple"
 * subject[+] = Reference(Patient-HIVSimple)
 // * subject[+] = Reference(HealthcareService-HIVSimple)
 * coverage[+].coverage = Reference(Coverage-HIVSimple)
-
-
-// bundle up for visualization
-
-// RuleSet: patient-bundle
-// * entry[=].request.method = #POST
-
-Instance: Example-Attribution
-InstanceOf: Bundle
-Title: "Example-Attribution"
-Description: "Example-Attribution"
-* type = #transaction
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple"
-* entry[=].request.url = "Patient"
-* entry[=].resource = Patient-HIVSimple
-* insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"
-* entry[=].request.url = "Organization"
-* entry[=].resource = Organization-HIVSimple
-* insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth"
-* entry[=].request.url = "Organization"
-* entry[=].resource = IntraHealth
-* insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
-* entry[=].request.url = "Location"
-* entry[=].resource = Location-HIVSimple
-* insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple"
-* entry[=].request.url = "Encounter"
-* entry[=].resource = Encounter-HIVSimple
-* insert patient-bundle
-
-// * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/HealthcareService/HealthcareService-HIVSimple"
-// * entry[=].request.url = "HealthcareService"
-// * entry[=].resource = HealthcareService-HIVSimple
-// * insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple"
-* entry[=].request.url = "Account"
-* entry[=].resource = Account-HIVSimple
-* insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple"
-* entry[=].request.url = "Coverage"
-* entry[=].resource = Coverage-HIVSimple
-* insert patient-bundle
-
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple"
-* entry[=].request.url = "Contract"
-* entry[=].resource = Contract-HIVSimple
-* insert patient-bundle
-
+* owner[+] = Reference(IntraHealth)
+* guarantor[+].party = Reference(IntraHealth)

@@ -1,0 +1,8 @@
+Running tests.
+No tests found at /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests. Evaluation may fail if data is required.
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+foo=2
+bar=abcdefg
+
+elapsed: -0.409 seconds
+

@@ -50,7 +50,7 @@ Description: "Encounter-HIVSimple"
 * period.start = "2011-01-01"
 * period.end = "2011-01-01"
 //
-* account = Reference(Account-HIVSimple)
+* account[+] = Reference(Account-HIVSimple)
 
 
 Instance: DiagnosticReport-HIVSimple
@@ -88,6 +88,8 @@ Usage: #example
 * location[+].location = Reference(Location-HIVSimple)
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
+
+* account[+] = Reference(Account-HIVSimple)
 
 
 Instance: DiagnosticReport-ViralLoad

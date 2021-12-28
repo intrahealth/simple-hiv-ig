@@ -1,0 +1,40 @@
+{
+  "resourceType": "Parameters",
+  "id": "Example-Parameters",
+  "parameter": [
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example1",
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example2",
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
