@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "Encounter-ViralLoad"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-ViralLoad\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Patient/Patient-HIVSimple</a> \" CAT\"</p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"Location-Location-HIVSimple.html\">Location/Location-HIVSimple</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-Organization-HIVSimple.html\">Organization/Organization-HIVSimple</a> \"Government Hospital\"</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-ViralLoad\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-Patient-HIVSimple.html\">Patient/Patient-HIVSimple</a> \" CAT\"</p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><p><b>account</b>: <a href=\"Account-Account-HIVSimple.html\">Account/Account-HIVSimple</a></p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"Location-Location-HIVSimple.html\">Location/Location-HIVSimple</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-Organization-HIVSimple.html\">Organization/Organization-HIVSimple</a> \"Government Hospital\"</p></div>"
   ];
   fhir:Encounter.status [ fhir:value "finished"];
   fhir:Encounter.class [
@@ -24,6 +24,11 @@
   fhir:Encounter.period [
      fhir:Period.start [ fhir:value "2020-06-01"^^xsd:date ];
      fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+  ];
+  fhir:Encounter.account [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Account/Account-HIVSimple" ]
   ];
   fhir:Encounter.location [
      fhir:index 0;

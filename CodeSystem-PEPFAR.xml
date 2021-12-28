@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PEPFAR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">4321<a name="PEPFAR-4321"> </a></td><td>Contract ID</td></tr></table></div>
+  </text>
+  <url value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR"/>
+  <version value="0.1.0"/>
+  <name value="PEPFAR"/>
+  <title value="PEPFAR CodeSystem"/>
+  <status value="active"/>
+  <date value="2021-12-28T20:53:19+00:00"/>
+  <publisher value="IntraHealth International"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="PEPFAR CodeSystem"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="4321"/>
+    <display value="Contract ID"/>
+  </concept>
+</CodeSystem>

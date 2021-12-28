@@ -1,0 +1,609 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://intrahealth.github.io/simple-hiv-ig/Bundle/Attribution-Bundle> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Attribution-Bundle"];
+  fhir:Bundle.type [ fhir:value "transaction"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "DiagnosticReport" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "DiagnosticReport" ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Account" ]
+     ]
+  ], [
+     fhir:index 13;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Coverage" ]
+     ]
+  ], [
+     fhir:index 14;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Contract" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "Patient-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Patient-HIVSimple\" </p></div><p><b>identifier</b>: id: 1234</p><p><b>name</b>: Mittens Cat</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1985-01-01</p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR" ];
+     fhir:Identifier.value [ fhir:value "1234" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.text [ fhir:value "Mittens Cat" ];
+     fhir:HumanName.family [ fhir:value "Cat" ];
+     fhir:HumanName.given [
+       fhir:value "Mittens";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "1985-01-01"^^xsd:date] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple\" </p></div><p><b>name</b>: Government Hospital</p></div>"
+  ];
+  fhir:Organization.name [ fhir:value "Government Hospital"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "IntraHealth"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"IntraHealth\" </p></div><p><b>name</b>: IntraHealth</p></div>"
+  ];
+  fhir:Organization.name [ fhir:value "IntraHealth"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple\" </p></div><p><b>identifier</b>: id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-HIVSimple" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple> a fhir:Condition;
+  fhir:Resource.id [ fhir:value "Condition-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Condition-HIVSimple\" </p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>code</b>: HIV - Human immunodeficiency virus infection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#86406008)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2010-01-01</p></div>"
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:86406008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "86406008" ];
+       fhir:Coding.display [ fhir:value "HIV - Human immunodeficiency virus infection" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2010-01-01"^^xsd:date] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy> a fhir:Condition;
+  fhir:Resource.id [ fhir:value "Condition-Pregnancy"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Condition-Pregnancy\" </p></div><p><b>clinicalStatus</b>: Inactive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>code</b>: Pregnant (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#77386006)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>onset</b>: 2020-01-01</p><p><b>abatement</b>: 2020-09-30</p></div>"
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "inactive" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:77386006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "77386006" ];
+       fhir:Coding.display [ fhir:value "Pregnant (finding)" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2020-01-01"^^xsd:date];
+  fhir:Condition.abatementDateTime [ fhir:value "2020-09-30"^^xsd:date] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple> a fhir:Encounter;
+  fhir:Resource.id [ fhir:value "Encounter-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-HIVSimple\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><p><b>account</b>: <a href=\"#Account_Account-HIVSimple\">See above (Account/Account-HIVSimple)</a></p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple\">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "ACUTE" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2011-01-01"^^xsd:date ]
+  ];
+  fhir:Encounter.account [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Account/Account-HIVSimple" ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
+       fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
+     ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple> a fhir:DiagnosticReport;
+  fhir:Resource.id [ fhir:value "DiagnosticReport-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DiagnosticReport-HIVSimple\" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 and 2 tests - Meaningful Use set <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75622-1)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-HIVSimple\">See above (Observation/Observation-HIVSimple)</a></p></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:75622-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "75622-1" ];
+       fhir:Coding.display [ fhir:value "HIV 1 and 2 tests - Meaningful Use set" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.encounter [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Observation/Observation-HIVSimple" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "Observation-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Observation-HIVSimple\" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 and 2 tests - Meaningful Use set <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75622-1)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-HIVSimple\">See above (Encounter/Encounter-HIVSimple)</a></p><p><b>value</b>: HIV Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#165816005)</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:75622-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "75622-1" ];
+       fhir:Coding.display [ fhir:value "HIV 1 and 2 tests - Meaningful Use set" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Encounter/Encounter-HIVSimple" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:165816005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "165816005" ];
+       fhir:Coding.display [ fhir:value "HIV Positive" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad> a fhir:Encounter;
+  fhir:Resource.id [ fhir:value "Encounter-ViralLoad"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-ViralLoad\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><p><b>account</b>: <a href=\"#Account_Account-HIVSimple\">See above (Account/Account-HIVSimple)</a></p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple\">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "ACUTE" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2020-06-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+  ];
+  fhir:Encounter.account [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Account/Account-HIVSimple" ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple>;
+       fhir:Reference.reference [ fhir:value "Location/Location-HIVSimple" ]
+     ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad> a fhir:DiagnosticReport;
+  fhir:Resource.id [ fhir:value "DiagnosticReport-ViralLoad"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"DiagnosticReport-ViralLoad\" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-ViralLoad\">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>result</b>: <a href=\"#Observation_Observation-ViralLoad\">See above (Observation/Observation-ViralLoad)</a></p></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:25836-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "25836-8" ];
+       fhir:Coding.display [ fhir:value "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:DiagnosticReport.encounter [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad>;
+     fhir:Reference.reference [ fhir:value "Observation/Observation-ViralLoad" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "Observation-ViralLoad"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Observation-ViralLoad\" </p></div><p><b>status</b>: final</p><p><b>code</b>: HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#25836-8)</span></p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Encounter-ViralLoad\">See above (Encounter/Encounter-ViralLoad)</a></p><p><b>value</b>: 741660 copies/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {copies}/mL = '{copies}/mL')</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:25836-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "25836-8" ];
+       fhir:Coding.display [ fhir:value "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad>;
+     fhir:Reference.reference [ fhir:value "Encounter/Encounter-ViralLoad" ]
+  ];
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "741660"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "copies/mL" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "{copies}/mL" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple> a fhir:Account;
+  fhir:Resource.id [ fhir:value "Account-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Account-HIVSimple\" </p></div><p><b>status</b>: active</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><h3>Coverages</h3><table class=\"grid\"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href=\"#Coverage_Coverage-HIVSimple\">See above (Coverage/Coverage-HIVSimple)</a></td></tr></table><p><b>owner</b>: <a href=\"#Organization_IntraHealth\">See above (Organization/IntraHealth)</a></p><h3>Guarantors</h3><table class=\"grid\"><tr><td>-</td><td><b>Party</b></td></tr><tr><td>*</td><td><a href=\"#Organization_IntraHealth\">See above (Organization/IntraHealth)</a></td></tr></table></div>"
+  ];
+  fhir:Account.status [ fhir:value "active"];
+  fhir:Account.subject [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Account.coverage [
+     fhir:index 0;
+     fhir:Account.coverage.coverage [
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple>;
+       fhir:Reference.reference [ fhir:value "Coverage/Coverage-HIVSimple" ]
+     ]
+  ];
+  fhir:Account.owner [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+     fhir:Reference.reference [ fhir:value "Organization/IntraHealth" ]
+  ];
+  fhir:Account.guarantor [
+     fhir:index 0;
+     fhir:Account.guarantor.party [
+       fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+       fhir:Reference.reference [ fhir:value "Organization/IntraHealth" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple> a fhir:Coverage;
+  fhir:Resource.id [ fhir:value "Coverage-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Coverage-HIVSimple\" </p></div><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></p><p><b>payor</b>: <a href=\"#Organization_IntraHealth\">See above (Organization/IntraHealth)</a></p><p><b>contract</b>: <a href=\"#Contract_Contract-HIVSimple\">See above (Contract/Contract-HIVSimple)</a></p></div>"
+  ];
+  fhir:Coverage.status [ fhir:value "active"];
+  fhir:Coverage.beneficiary [
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+  ];
+  fhir:Coverage.payor [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+     fhir:Reference.reference [ fhir:value "Organization/IntraHealth" ]
+  ];
+  fhir:Coverage.contract [
+     fhir:index 0;
+     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple>;
+     fhir:Reference.reference [ fhir:value "Contract/Contract-HIVSimple" ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple> a fhir:Contract;
+  fhir:Resource.id [ fhir:value "Contract-HIVSimple"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><p><b>identifier</b>: id: 4321</p><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"#Organization_IntraHealth\">See above (Organization/IntraHealth)</a></td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"#Patient_Patient-HIVSimple\">See above (Patient/Patient-HIVSimple)</a></td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote><h3>Assets</h3><table class=\"grid\"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2005-01-01 --&gt; 2022-01-01</td></tr></table><blockquote><p><b>action</b></p><p><b>type</b>: Action A <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-contractaction.html\">Contract Action Codes</a>#action-a)</span></p><h3>Subjects</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href=\"#Organization_Organization-HIVSimple\">See above (Organization/Organization-HIVSimple)</a></td></tr></table><p><b>intent</b>: population health <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html\">ActReason</a>#POPHLTH)</span></p><p><b>status</b>: Complete <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-actionstatus.html\">Contract Resource Action Status codes</a>#complete)</span></p></blockquote></blockquote></div>"
+  ];
+  fhir:Contract.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR" ];
+     fhir:Identifier.value [ fhir:value "4321" ]
+  ];
+  fhir:Contract.term [
+     fhir:index 0;
+     fhir:Contract.term.offer [
+       fhir:Contract.term.offer.party [
+         fhir:index 0;
+         fhir:Contract.term.offer.party.reference [
+           fhir:index 0;
+           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+           fhir:Reference.reference [ fhir:value "Organization/IntraHealth" ]
+         ];
+         fhir:Contract.term.offer.party.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contract-party-role" ];
+             fhir:Coding.code [ fhir:value "flunky" ]
+           ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Contract.term.offer [
+       fhir:Contract.term.offer.party [
+         fhir:index 0;
+         fhir:Contract.term.offer.party.reference [
+           fhir:index 0;
+           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+           fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+         ];
+         fhir:Contract.term.offer.party.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contract-party-role" ];
+             fhir:Coding.code [ fhir:value "flunky" ]
+           ]
+         ]
+       ]
+     ];
+     fhir:Contract.term.asset [
+       fhir:index 0;
+       fhir:Contract.term.asset.period [
+         fhir:index 0;
+         fhir:Period.start [ fhir:value "2005-01-01"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2022-01-01"^^xsd:date ]
+       ]
+     ];
+     fhir:Contract.term.action [
+       fhir:index 0;
+       fhir:Contract.term.action.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/contractaction" ];
+           fhir:Coding.code [ fhir:value "action-a" ]
+         ]
+       ];
+       fhir:Contract.term.action.subject [
+         fhir:index 0;
+         fhir:Contract.term.action.subject.reference [
+           fhir:index 0;
+           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+           fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+         ]
+       ];
+       fhir:Contract.term.action.intent [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ];
+           fhir:Coding.code [ fhir:value "POPHLTH" ]
+         ]
+       ];
+       fhir:Contract.term.action.status [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contract-action-status" ];
+           fhir:Coding.code [ fhir:value "complete" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://intrahealth.github.io/simple-hiv-ig/Bundle/Attribution-Bundle.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

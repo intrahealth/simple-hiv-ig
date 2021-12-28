@@ -10,7 +10,12 @@
   fhir:Resource.id [ fhir:value "Contract-HIVSimple"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"Organization-IntraHealth.html\">Organization/IntraHealth</a> \"IntraHealth\"</td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Contract-HIVSimple\" </p></div><p><b>identifier</b>: id: 4321</p><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"Organization-IntraHealth.html\">Organization/IntraHealth</a> \"IntraHealth\"</td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href=\"Patient-Patient-HIVSimple.html\">Patient/Patient-HIVSimple</a> \" CAT\"</td><td>FLunky <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-party-role.html\">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote><h3>Assets</h3><table class=\"grid\"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2005-01-01 --&gt; 2022-01-01</td></tr></table><blockquote><p><b>action</b></p><p><b>type</b>: Action A <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-contractaction.html\">Contract Action Codes</a>#action-a)</span></p><h3>Subjects</h3><table class=\"grid\"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href=\"Organization-Organization-HIVSimple.html\">Organization/Organization-HIVSimple</a> \"Government Hospital\"</td></tr></table><p><b>intent</b>: population health <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html\">ActReason</a>#POPHLTH)</span></p><p><b>status</b>: Complete <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-contract-actionstatus.html\">Contract Resource Action Status codes</a>#complete)</span></p></blockquote></blockquote></div>"
+  ];
+  fhir:Contract.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR" ];
+     fhir:Identifier.value [ fhir:value "4321" ]
   ];
   fhir:Contract.term [
      fhir:index 0;
@@ -28,6 +33,65 @@
              fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contract-party-role" ];
              fhir:Coding.code [ fhir:value "flunky" ]
            ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Contract.term.offer [
+       fhir:Contract.term.offer.party [
+         fhir:index 0;
+         fhir:Contract.term.offer.party.reference [
+           fhir:index 0;
+           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple>;
+           fhir:Reference.reference [ fhir:value "Patient/Patient-HIVSimple" ]
+         ];
+         fhir:Contract.term.offer.party.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contract-party-role" ];
+             fhir:Coding.code [ fhir:value "flunky" ]
+           ]
+         ]
+       ]
+     ];
+     fhir:Contract.term.asset [
+       fhir:index 0;
+       fhir:Contract.term.asset.period [
+         fhir:index 0;
+         fhir:Period.start [ fhir:value "2005-01-01"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2022-01-01"^^xsd:date ]
+       ]
+     ];
+     fhir:Contract.term.action [
+       fhir:index 0;
+       fhir:Contract.term.action.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/contractaction" ];
+           fhir:Coding.code [ fhir:value "action-a" ]
+         ]
+       ];
+       fhir:Contract.term.action.subject [
+         fhir:index 0;
+         fhir:Contract.term.action.subject.reference [
+           fhir:index 0;
+           fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple>;
+           fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple" ]
+         ]
+       ];
+       fhir:Contract.term.action.intent [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ];
+           fhir:Coding.code [ fhir:value "POPHLTH" ]
+         ]
+       ];
+       fhir:Contract.term.action.status [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contract-action-status" ];
+           fhir:Coding.code [ fhir:value "complete" ]
          ]
        ]
      ]

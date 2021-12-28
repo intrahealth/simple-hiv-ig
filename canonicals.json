@@ -14,6 +14,13 @@
     "name": "OpenHIE"
   },
   {
+    "id": "PEPFAR",
+    "type": "CodeSystem",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR",
+    "version": "0.1.0",
+    "name": "PEPFAR"
+  },
+  {
     "id": "simple.hiv.ig",
     "type": "ImplementationGuide",
     "url": "https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig",
@@ -96,6 +103,13 @@
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink",
     "version": "0.1.0",
     "name": "KitchenSink"
+  },
+  {
+    "id": "Parameters",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Parameters",
+    "version": "0.1.0",
+    "name": "Parameters"
   },
   {
     "id": "TXCURR",
