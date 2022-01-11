@@ -2,8 +2,8 @@
 =========================================
 
 err = 35, warn = 10, info = 3
-IG Publisher Version: 1.1.93
-Generated Mon Jan 10 17:42:56 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
+IG Publisher Version: 1.1.94
+Generated Tue Jan 11 19:35:39 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
  Build Errors : 9 / 9 / 0
  /github/workspace/fsh-generated/resources/Account-Account-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Bundle-Attribution-Bundle : 0 / 0 / 16
