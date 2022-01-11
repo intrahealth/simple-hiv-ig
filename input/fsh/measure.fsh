@@ -1,5 +1,7 @@
 RuleSet: meas-common
-* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
+* identifier[0].system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
+* identifier[1].system = "https://datim.org/factsinfo/mechanism"
+* identifier[1].value = "12345"
 * version = "0.0.0"
 * status = #draft
 * experimental = true
@@ -17,7 +19,7 @@ Description: "JustGender"
 * title = "JustGender"
 * description = "JustGender"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustGender"
-* identifier.value = "JustGender"
+* identifier[0].value = "JustGender"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -50,7 +52,7 @@ Description: "JustAgeGroup"
 * title = "JustAgeGroup"
 * description = "JustAgeGroup"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustAgeGroup"
-* identifier.value = "JustAgeGroup"
+* identifier[0].value = "JustAgeGroup"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -83,7 +85,7 @@ Description: "JustLocation"
 * title = "JustLocation"
 * description = "JustLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/JustLocation"
-* identifier.value = "JustLocation"
+* identifier[0].value = "JustLocation"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -116,7 +118,7 @@ Description: "AgeGroupGender"
 * title = "AgeGroupGender"
 * description = "AgeGroupGender"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGender"
-* identifier.value = "GenderAgeGroup"
+* identifier[0].value = "GenderAgeGroup"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -149,7 +151,7 @@ Description: "AgeGroupGenderLocation"
 * title = "AgeGroupGenderLocation"
 * description = "AgeGroupGenderLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/AgeGroupGenderLocation"
-* identifier.value = "AgeGroupGenderLocation"
+* identifier[0].value = "AgeGroupGenderLocation"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -182,7 +184,7 @@ Description: "Cohort"
 * title = "Cohort"
 * description = "Cohort"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/Cohort"
-* identifier.value = "Cohort"
+* identifier[0].value = "Cohort"
 * scoring = $measure-scoring#cohort
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -202,7 +204,7 @@ Description: "SuppData"
 * title = "SuppData"
 * description = "SuppData"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/SuppData"
-* identifier.value = "SuppData"
+* identifier[0].value = "SuppData"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -241,7 +243,7 @@ Description: "HIV-TXPVLS"
 * title = "HIV-TXPVLS"
 * description = "HIV-TXPVLS"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXPVLS"
-* identifier.value = "HIV-TXPVLS"
+* identifier[0].value = "HIV-TXPVLS"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -267,7 +269,7 @@ Description: "HIV-TXPVLS"
 
 
 RuleSet: meas-common-blaze
-* identifier.system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
+* identifier[0].system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
 * version = "0.0.0"
 * status = #draft
 * experimental = true
@@ -285,7 +287,7 @@ Description: "BlazeStratifierTest"
 * title = "BlazeStratifierTest"
 * description = "BlazeStratifierTest"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest"
-* identifier.value = "BlazeStratifierTest"
+* identifier[0].value = "BlazeStratifierTest"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -318,7 +320,7 @@ Description: "BlazeStratifierAgeGroup"
 * title = "BlazeStratifierAgeGroup"
 * description = "BlazeStratifierAgeGroup"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierAgeGroup"
-* identifier.value = "BlazeStratifierAgeGroup"
+* identifier[0].value = "BlazeStratifierAgeGroup"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -351,7 +353,7 @@ Description: "BlazeAgeGroupLocation"
 * title = "BlazeAgeGroupLocation"
 * description = "BlazeAgeGroupLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeAgeGroupLocation"
-* identifier.value = "BlazeAgeGroupLocation"
+* identifier[0].value = "BlazeAgeGroupLocation"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"
@@ -384,7 +386,7 @@ Description: "BlazeGenderLocation"
 * title = "BlazeGenderLocation"
 * description = "BlazeGenderLocation"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeGenderLocation"
-* identifier.value = "BlazeAgeGroupLocation"
+* identifier[0].value = "BlazeAgeGroupLocation"
 * scoring = $measure-scoring#proportion
 * group[+]
   * code = $OpenHIE#cohort "cohort"

@@ -1,0 +1,76 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+cql-options not found. Using default options.
+some test=[Coverage(id=Coverage-HIVSimple)]
+Patient=Patient(id=Patient-HIVSimple)
+Meow=[Coverage(id=Coverage-HIVSimple)]
+
+elapsed: -0.102 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+cql-options not found. Using default options.
+some test=[Coverage(id=Coverage-HIVSimple)]
+Patient=Patient(id=Patient-HIVSimple)
+Meow=[Coverage(id=Coverage-HIVSimple)]
+some test2=[]
+
+elapsed: 0.388 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+some test=[Coverage(id=Coverage-HIVSimple)]
+Patient=Patient(id=Patient-HIVSimple)
+some test2=[]
+Meow=[Coverage(id=Coverage-HIVSimple)]
+Woof=[]
+
+elapsed: 0.358 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+some test=[Coverage(id=Coverage-HIVSimple)]
+Patient=Patient(id=Patient-HIVSimple)
+some test2=[]
+Meow=[Coverage(id=Coverage-HIVSimple)]
+Woof=[]
+
+elapsed: 0.294 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+some test=[Coverage(id=Coverage-HIVSimple)]
+some test2=[[Reference]]
+Patient=Patient(id=Patient-HIVSimple)
+Meow=[Coverage(id=Coverage-HIVSimple)]
+Woof=[[Reference]]
+
+elapsed: 0.295 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+some test=[Coverage(id=Coverage-HIVSimple)]
+some test2=[[string]]
+Patient=Patient(id=Patient-HIVSimple)
+Meow=[Coverage(id=Coverage-HIVSimple)]
+Woof=[[string]]
+
+elapsed: 0.369 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Unfiltered
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+some test=[Coverage(id=Coverage-HIVSimple)]
+some test2=[[Contract/Contract-HIVSimple]]
+Patient=Patient(id=Patient-HIVSimple)
+Meow=[Coverage(id=Coverage-HIVSimple)]
+Woof=[[Contract/Contract-HIVSimple]]
+
+elapsed: 0.252 seconds
+

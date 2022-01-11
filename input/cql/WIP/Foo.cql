@@ -8,5 +8,8 @@ define "foo": 1 + 1
 
 define "bar": 'abc' + 'defg'
 
+context Patient
+
 define "wrong": Patient.birthDate
+
 

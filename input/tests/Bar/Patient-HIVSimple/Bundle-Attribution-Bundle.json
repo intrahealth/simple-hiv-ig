@@ -1,0 +1,536 @@
+{
+  "resourceType": "Bundle",
+  "id": "Attribution-Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple",
+      "request": {
+        "url": "Patient",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-HIVSimple",
+        "name": [
+          {
+            "given": [
+              "Mittens"
+            ],
+            "family": "Cat",
+            "text": "Mittens Cat"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-01-01",
+        "identifier": [
+          {
+            "system": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR",
+            "value": "1234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple",
+      "request": {
+        "url": "Organization",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-HIVSimple",
+        "name": "Government Hospital"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth",
+      "request": {
+        "url": "Organization",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "IntraHealth",
+        "name": "IntraHealth"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple",
+      "request": {
+        "url": "Location",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-HIVSimple",
+        "managingOrganization": {
+          "reference": "Organization/Organization-HIVSimple"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-HIVSimple"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple",
+      "request": {
+        "url": "Condition",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition-HIVSimple",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "86406008",
+              "system": "http://snomed.info/sct",
+              "display": "HIV - Human immunodeficiency virus infection"
+            }
+          ]
+        },
+        "onsetDateTime": "2010-01-01"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-Pregnancy",
+      "request": {
+        "url": "Condition",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition-Pregnancy",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "77386006",
+              "system": "http://snomed.info/sct",
+              "display": "Pregnant (finding)"
+            }
+          ]
+        },
+        "onsetDateTime": "2020-01-01",
+        "abatementDateTime": "2020-09-30"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-HIVSimple",
+      "request": {
+        "url": "Encounter",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter-HIVSimple",
+        "status": "finished",
+        "class": {
+          "code": "ACUTE",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "serviceProvider": {
+          "reference": "Organization/Organization-HIVSimple"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/Location-HIVSimple"
+            }
+          }
+        ],
+        "period": {
+          "start": "2011-01-01",
+          "end": "2011-01-01"
+        },
+        "account": [
+          {
+            "reference": "Account/Account-HIVSimple"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-HIVSimple",
+      "request": {
+        "url": "DiagnosticReport",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "DiagnosticReport-HIVSimple",
+        "status": "final",
+        "encounter": {
+          "reference": "Encounter/Encounter-HIVSimple"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "result": [
+          {
+            "reference": "Observation/Observation-HIVSimple"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "75622-1",
+              "system": "http://loinc.org",
+              "display": "HIV 1 and 2 tests - Meaningful Use set"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-HIVSimple",
+      "request": {
+        "url": "Observation",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation-HIVSimple",
+        "status": "final",
+        "encounter": {
+          "reference": "Encounter/Encounter-HIVSimple"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "75622-1",
+              "system": "http://loinc.org",
+              "display": "HIV 1 and 2 tests - Meaningful Use set"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "165816005",
+              "system": "http://snomed.info/sct",
+              "display": "HIV Positive"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter-ViralLoad",
+      "request": {
+        "url": "Encounter",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter-ViralLoad",
+        "status": "finished",
+        "class": {
+          "code": "ACUTE",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "serviceProvider": {
+          "reference": "Organization/Organization-HIVSimple"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/Location-HIVSimple"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-06-01",
+          "end": "2020-06-01"
+        },
+        "account": [
+          {
+            "reference": "Account/Account-HIVSimple"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport-ViralLoad",
+      "request": {
+        "url": "DiagnosticReport",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "DiagnosticReport-ViralLoad",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter-ViralLoad"
+        },
+        "result": [
+          {
+            "reference": "Observation/Observation-ViralLoad"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "25836-8",
+              "system": "http://loinc.org",
+              "display": "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad",
+      "request": {
+        "url": "Observation",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation-ViralLoad",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter-ViralLoad"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "25836-8",
+              "system": "http://loinc.org",
+              "display": "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 741660,
+          "unit": "copies/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "{copies}/mL"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Account/Account-HIVSimple",
+      "request": {
+        "url": "Account",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Account",
+        "id": "Account-HIVSimple",
+        "status": "active",
+        "subject": [
+          {
+            "reference": "Patient/Patient-HIVSimple"
+          }
+        ],
+        "coverage": [
+          {
+            "coverage": {
+              "reference": "Coverage/Coverage-HIVSimple"
+            }
+          }
+        ],
+        "owner": {
+          "reference": "Organization/IntraHealth"
+        },
+        "guarantor": [
+          {
+            "party": {
+              "reference": "Organization/IntraHealth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Coverage/Coverage-HIVSimple",
+      "request": {
+        "url": "Coverage",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Coverage-HIVSimple",
+        "status": "active",
+        "contract": [
+          {
+            "reference": "Contract/Contract-HIVSimple"
+          }
+        ],
+        "payor": [
+          {
+            "reference": "Organization/IntraHealth"
+          }
+        ],
+        "beneficiary": {
+          "reference": "Patient/Patient-HIVSimple"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Contract/Contract-HIVSimple",
+      "request": {
+        "url": "Contract",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Contract",
+        "id": "Contract-HIVSimple",
+        "identifier": [
+          {
+            "system": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR",
+            "value": "4321"
+          }
+        ],
+        "term": [
+          {
+            "offer": {
+              "party": [
+                {
+                  "reference": [
+                    {
+                      "reference": "Organization/IntraHealth"
+                    }
+                  ],
+                  "role": {
+                    "coding": [
+                      {
+                        "code": "flunky",
+                        "system": "http://hl7.org/fhir/contract-party-role"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "offer": {
+              "party": [
+                {
+                  "reference": [
+                    {
+                      "reference": "Patient/Patient-HIVSimple"
+                    }
+                  ],
+                  "role": {
+                    "coding": [
+                      {
+                        "code": "flunky",
+                        "system": "http://hl7.org/fhir/contract-party-role"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "action": [
+              {
+                "subject": [
+                  {
+                    "reference": [
+                      {
+                        "reference": "Organization/Organization-HIVSimple"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "code": "action-a",
+                      "system": "http://terminology.hl7.org/CodeSystem/contractaction"
+                    }
+                  ]
+                },
+                "intent": {
+                  "coding": [
+                    {
+                      "code": "POPHLTH",
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+                    }
+                  ]
+                },
+                "status": {
+                  "coding": [
+                    {
+                      "code": "complete",
+                      "system": "http://hl7.org/fhir/contract-action-status"
+                    }
+                  ]
+                }
+              }
+            ],
+            "asset": [
+              {
+                "period": [
+                  {
+                    "start": "2005-01-01",
+                    "end": "2022-01-01"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

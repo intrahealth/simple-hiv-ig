@@ -4,6 +4,10 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
 
+// PEPFAR programs are required to report on the following standard age groups: 
+// <1, 1-4, 5-9, 10-14, 15-19, 20-24, 25-29, 30-34, 35-39, 40-44, 45-49, and 50+. 
+// Starting in FY22, the age bands for TX_CURR will be expanded to 50-54, 55-59, 60-64, and 65+
+
 codesystem "ISO-8601-Derived Periods": 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
 
 // Age Groups
