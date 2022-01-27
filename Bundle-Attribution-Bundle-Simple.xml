@@ -30,14 +30,18 @@
     </request>
   </entry>
   <entry>
-    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"/>
+    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1"/>
     <resource>
       <Organization>
-        <id value="Organization-HIVSimple"/>
+        <id value="Organization-HIVSimple1"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Organization-HIVSimple" </p></div><p><b>name</b>: Government Hospital</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Organization-HIVSimple1" </p></div><p><b>identifier</b>: id: Organization-HIVSimple1</p><p><b>name</b>: Organization-HIVSimple Government Hospital</p></div>
         </text>
-        <name value="Government Hospital"/>
+        <identifier>
+          <system value="https://github.com/synthetichealth/synthea"/>
+          <value value="Organization-HIVSimple1"/>
+        </identifier>
+        <name value="Organization-HIVSimple Government Hospital"/>
       </Organization>
     </resource>
     <request>
@@ -51,8 +55,12 @@
       <Organization>
         <id value="IntraHealth"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "IntraHealth" </p></div><p><b>name</b>: IntraHealth</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "IntraHealth" </p></div><p><b>identifier</b>: id: IntraHealth</p><p><b>name</b>: IntraHealth</p></div>
         </text>
+        <identifier>
+          <system value="https://github.com/synthetichealth/synthea"/>
+          <value value="IntraHealth"/>
+        </identifier>
         <name value="IntraHealth"/>
       </Organization>
     </resource>
@@ -62,19 +70,22 @@
     </request>
   </entry>
   <entry>
-    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"/>
+    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1"/>
     <resource>
       <Location>
-        <id value="Location-HIVSimple"/>
+        <id value="Location-HIVSimple1"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Location-HIVSimple" </p></div><p><b>identifier</b>: id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Location-HIVSimple1" </p></div><p><b>identifier</b>: id: Location-HIVSimple1</p><p><b>managingOrganization</b>: <span></span></p></div>
         </text>
         <identifier>
           <system value="https://github.com/synthetichealth/synthea"/>
-          <value value="Location-HIVSimple"/>
+          <value value="Location-HIVSimple1"/>
         </identifier>
         <managingOrganization>
-          <reference value="Organization/Organization-HIVSimple"/>
+          <identifier>
+            <system value="https://github.com/synthetichealth/synthea"/>
+            <value value="Organization-HIVSimple1"/>
+          </identifier>
         </managingOrganization>
       </Location>
     </resource>
@@ -89,7 +100,7 @@
       <Encounter>
         <id value="Encounter-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-HIVSimple" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><p><b>account</b>: <a href="#Account_Account-HIVSimple">See above (Account/Account-HIVSimple)</a></p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-HIVSimple" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><p><b>account</b>: <a href="#Account_Account-HIVSimple">See above (Account/Account-HIVSimple)</a></p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><span></span></td></tr></table><p><b>serviceProvider</b>: <span></span></p></div>
         </text>
         <status value="finished"/>
         <class>
@@ -108,11 +119,17 @@
         </account>
         <location>
           <location>
-            <reference value="Location/Location-HIVSimple"/>
+            <identifier>
+              <system value="https://github.com/synthetichealth/synthea"/>
+              <value value="Location-HIVSimple1"/>
+            </identifier>
           </location>
         </location>
         <serviceProvider>
-          <reference value="Organization/Organization-HIVSimple"/>
+          <identifier>
+            <system value="https://github.com/synthetichealth/synthea"/>
+            <value value="Organization-HIVSimple1"/>
+          </identifier>
         </serviceProvider>
       </Encounter>
     </resource>
@@ -184,7 +201,7 @@
       <Contract>
         <id value="Contract-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Contract-HIVSimple" </p></div><p><b>identifier</b>: id: 4321</p><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href="#Organization_IntraHealth">See above (Organization/IntraHealth)</a></td><td>FLunky <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-contract-party-role.html">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></td><td>FLunky <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-contract-party-role.html">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote><h3>Assets</h3><table class="grid"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2005-01-01 --&gt; 2022-01-01</td></tr></table><blockquote><p><b>action</b></p><p><b>type</b>: Action A <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-contractaction.html">Contract Action Codes</a>#action-a)</span></p><h3>Subjects</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></td></tr></table><p><b>intent</b>: population health <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#POPHLTH)</span></p><p><b>status</b>: Complete <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-contract-actionstatus.html">Contract Resource Action Status codes</a>#complete)</span></p></blockquote></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Contract-HIVSimple" </p></div><p><b>identifier</b>: id: 4321</p><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href="#Organization_IntraHealth">See above (Organization/IntraHealth)</a></td><td>FLunky <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-contract-party-role.html">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote></blockquote><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></td><td>FLunky <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-contract-party-role.html">Contract Resource Party Role codes</a>#flunky)</span></td></tr></table></blockquote><h3>Assets</h3><table class="grid"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2005-01-01 --&gt; 2022-01-01</td></tr></table><blockquote><p><b>action</b></p><p><b>type</b>: Action A <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-contractaction.html">Contract Action Codes</a>#action-a)</span></p><h3>Subjects</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="#Organization_Organization-HIVSimple1">See above (Organization/Organization-HIVSimple1)</a></td></tr></table><p><b>intent</b>: population health <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#POPHLTH)</span></p><p><b>status</b>: Complete <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R4/codesystem-contract-actionstatus.html">Contract Resource Action Status codes</a>#complete)</span></p></blockquote></blockquote></div>
         </text>
         <identifier>
           <system value="https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR"/>
@@ -234,7 +251,7 @@
             </type>
             <subject>
               <reference>
-                <reference value="Organization/Organization-HIVSimple"/>
+                <reference value="Organization/Organization-HIVSimple1"/>
               </reference>
             </subject>
             <intent>

@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-101> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Location-101"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-101\" </p></div><p><b>identifier</b>: id: Location-101</p><p><b>managingOrganization</b>: <span></span></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-101" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-101" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-101.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

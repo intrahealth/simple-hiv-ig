@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "Location-HIVSimple2"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple2\" </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <a href=\"Organization-Organization-HIVSimple2.html\">Organization/Organization-HIVSimple2</a> \"Government Hospital\"</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple2\" </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <span></span></p></div>"
   ];
   fhir:Location.identifier [
      fhir:index 0;
@@ -18,8 +18,10 @@
      fhir:Identifier.value [ fhir:value "Location-HIVSimple2" ]
   ];
   fhir:Location.managingOrganization [
-     fhir:link <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2>;
-     fhir:Reference.reference [ fhir:value "Organization/Organization-HIVSimple2" ]
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-HIVSimple2" ]
+     ]
   ] .
 
 # - ontology header ------------------------------------------------------------

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="HIVStratifiers"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Contents</h2></div>
+  </text>
+  <url value="https://intrahealth.github.io/simple-hiv-ig/Library/HIVStratifiers"/>
+  <version value="0.1.0"/>
+  <name value="HIVStratifiers"/>
+  <title value="HIVStratifiers"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2022-01-27T21:17:37+00:00"/>
+  <publisher value="IntraHealth International"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="HIVStratifiers"/>
+</Library>

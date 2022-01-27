@@ -1,0 +1,276 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-Locations-Organizations> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Example-Locations-Organizations"];
+  fhir:Bundle.type [ fhir:value "transaction"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-100" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-100>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-101" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-101>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-102" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-102>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-100" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-100>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-101" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-101>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://intrahealth.github.io/simple-hiv-ig/Location/Location-102" ];
+     fhir:Bundle.entry.resource <https://intrahealth.github.io/simple-hiv-ig/Location/Location-102>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-HIVSimple1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple1\" </p></div><p><b>identifier</b>: id: Organization-HIVSimple1</p><p><b>name</b>: Organization-HIVSimple Government Hospital</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Organization-HIVSimple1" ]
+  ];
+  fhir:Organization.name [ fhir:value "Organization-HIVSimple Government Hospital"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-HIVSimple2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple2\" </p></div><p><b>identifier</b>: id: Organization-HIVSimple2</p><p><b>name</b>: Organization-HIVSimple2 Government Hospital</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Organization-HIVSimple2" ]
+  ];
+  fhir:Organization.name [ fhir:value "Organization-HIVSimple2 Government Hospital"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-100> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-100"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-100\" </p></div><p><b>identifier</b>: id: Organization-100</p><p><b>name</b>: Organization-100 Government Hospital</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Organization-100" ]
+  ];
+  fhir:Organization.name [ fhir:value "Organization-100 Government Hospital"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-101> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-101"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-101\" </p></div><p><b>identifier</b>: id: Organization-101</p><p><b>name</b>: Organization-101 Government Hospital</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Organization-101" ]
+  ];
+  fhir:Organization.name [ fhir:value "Organization-101 Government Hospital"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-102> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "Organization-102"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-102\" </p></div><p><b>identifier</b>: id: Organization-102</p><p><b>name</b>: Organization-102 Government Hospital</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Organization-102" ]
+  ];
+  fhir:Organization.name [ fhir:value "Organization-102 Government Hospital"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "IntraHealth"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"IntraHealth\" </p></div><p><b>identifier</b>: id: IntraHealth</p><p><b>name</b>: IntraHealth</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "IntraHealth" ]
+  ];
+  fhir:Organization.name [ fhir:value "IntraHealth"] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-HIVSimple1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple1\" </p></div><p><b>identifier</b>: id: Location-HIVSimple1</p><p><b>managingOrganization</b>: <span></span></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-HIVSimple1" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-HIVSimple1" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-HIVSimple2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple2\" </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <span></span></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-HIVSimple2" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-HIVSimple2" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-100> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-100"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-100\" </p></div><p><b>identifier</b>: id: Location-100</p><p><b>managingOrganization</b>: <span></span></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-100" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-100" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-101> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-101"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-101\" </p></div><p><b>identifier</b>: id: Location-101</p><p><b>managingOrganization</b>: <span></span></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-101" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-101" ]
+     ]
+  ] .
+
+<https://intrahealth.github.io/simple-hiv-ig/Location/Location-102> a fhir:Location;
+  fhir:Resource.id [ fhir:value "Location-102"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-102\" </p></div><p><b>identifier</b>: id: Location-102</p><p><b>managingOrganization</b>: <span></span></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "Location-102" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+       fhir:Identifier.value [ fhir:value "Organization-102" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://intrahealth.github.io/simple-hiv-ig/Bundle/Example-Locations-Organizations.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,274 @@
+{
+  "resourceType": "Bundle",
+  "id": "Example-Locations-Organizations",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-HIVSimple1",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple1\" </p></div><p><b>identifier</b>: id: Organization-HIVSimple1</p><p><b>name</b>: Organization-HIVSimple Government Hospital</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple1"
+          }
+        ],
+        "name": "Organization-HIVSimple Government Hospital"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple2",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-HIVSimple2",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple2\" </p></div><p><b>identifier</b>: id: Organization-HIVSimple2</p><p><b>name</b>: Organization-HIVSimple2 Government Hospital</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
+        ],
+        "name": "Organization-HIVSimple2 Government Hospital"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-100",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-100",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-100\" </p></div><p><b>identifier</b>: id: Organization-100</p><p><b>name</b>: Organization-100 Government Hospital</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-100"
+          }
+        ],
+        "name": "Organization-100 Government Hospital"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-101",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-101",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-101\" </p></div><p><b>identifier</b>: id: Organization-101</p><p><b>name</b>: Organization-101 Government Hospital</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-101"
+          }
+        ],
+        "name": "Organization-101 Government Hospital"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-102",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization-102",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-102\" </p></div><p><b>identifier</b>: id: Organization-102</p><p><b>name</b>: Organization-102 Government Hospital</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-102"
+          }
+        ],
+        "name": "Organization-102 Government Hospital"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "IntraHealth",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"IntraHealth\" </p></div><p><b>identifier</b>: id: IntraHealth</p><p><b>name</b>: IntraHealth</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "IntraHealth"
+          }
+        ],
+        "name": "IntraHealth"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1",
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-HIVSimple1",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple1\" </p></div><p><b>identifier</b>: id: Location-HIVSimple1</p><p><b>managingOrganization</b>: <span></span></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-HIVSimple1"
+          }
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple1"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Location"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple2",
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-HIVSimple2",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple2\" </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <span></span></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-HIVSimple2"
+          }
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Location"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-100",
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-100",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-100\" </p></div><p><b>identifier</b>: id: Location-100</p><p><b>managingOrganization</b>: <span></span></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-100"
+          }
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-100"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Location"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-101",
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-101",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-101\" </p></div><p><b>identifier</b>: id: Location-101</p><p><b>managingOrganization</b>: <span></span></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-101"
+          }
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-101"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Location"
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Location/Location-102",
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location-102",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-102\" </p></div><p><b>identifier</b>: id: Location-102</p><p><b>managingOrganization</b>: <span></span></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location-102"
+          }
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-102"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Location"
+      }
+    }
+  ]
+}

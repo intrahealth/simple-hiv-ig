@@ -10,7 +10,7 @@
   <name value="OpenCR"/>
   <title value="OpenCR CodeSystem"/>
   <status value="active"/>
-  <date value="2022-01-11T19:35:20+00:00"/>
+  <date value="2022-01-27T21:17:37+00:00"/>
   <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
@@ -19,6 +19,7 @@
     </telecom>
   </contact>
   <description value="OpenCR CodeSystem"/>
+  <caseSensitive value="false"/>
   <content value="complete"/>
   <count value="1"/>
   <concept>

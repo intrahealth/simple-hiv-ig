@@ -11,7 +11,7 @@
   "title": "Simple HIV IG",
   "status": "draft",
   "experimental": false,
-  "date": "2022-01-11T19:35:20+00:00",
+  "date": "2022-01-27T21:17:37+00:00",
   "publisher": "IntraHealth International",
   "contact": [
     {
@@ -378,48 +378,9 @@
           }
         ],
         "reference": {
-          "reference": "Library/AgeRanges"
-        },
-        "name": "Library/AgeRanges",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
           "reference": "Library/KitchenSink"
         },
         "name": "Library/KitchenSink",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/GoldenRecord"
-        },
-        "name": "Library/GoldenRecord",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/Blaze"
-        },
-        "name": "Library/Blaze",
         "description": "A simple example showing how examples are defined and referenced"
       },
       {
@@ -459,32 +420,6 @@
           "reference": "Patient/Patient-HIVSimple2"
         },
         "name": "Patient/Patient-HIVSimple2",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Location"
-          }
-        ],
-        "reference": {
-          "reference": "Location/Location-HIVSimple"
-        },
-        "name": "Location/Location-HIVSimple",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Location"
-          }
-        ],
-        "reference": {
-          "reference": "Location/Location-HIVSimple2"
-        },
-        "name": "Location/Location-HIVSimple2",
         "description": "A simple example showing how examples are defined and referenced"
       },
       {
@@ -543,19 +478,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
-          }
-        ],
-        "reference": {
-          "reference": "Measure/BlazeStratifierTest"
-        },
-        "name": "Measure/BlazeStratifierTest",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "DiagnosticReport"
           }
         ],
@@ -602,32 +524,6 @@
           "reference": "Condition/Condition-HIVSimple"
         },
         "name": "Condition/Condition-HIVSimple",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Organization"
-          }
-        ],
-        "reference": {
-          "reference": "Organization/Organization-HIVSimple"
-        },
-        "name": "Organization/Organization-HIVSimple",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Organization"
-          }
-        ],
-        "reference": {
-          "reference": "Organization/Organization-HIVSimple2"
-        },
-        "name": "Organization/Organization-HIVSimple2",
         "description": "A simple example showing how examples are defined and referenced"
       },
       {
@@ -855,72 +751,24 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
+            "valueString": "Library"
           }
         ],
         "reference": {
-          "reference": "Measure/BlazeStratifierAgeGroup"
+          "reference": "Library/HIVStratifiers"
         },
-        "name": "Measure/BlazeStratifierAgeGroup",
-        "description": "A simple example showing how examples are defined and referenced"
+        "name": "HIVStratifiers",
+        "description": "HIVStratifiers"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
+            "valueString": "Location"
           }
         ],
         "reference": {
-          "reference": "Measure/BlazeAgeGroupLocation"
-        },
-        "name": "Measure/BlazeAgeGroupLocation",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
-          }
-        ],
-        "reference": {
-          "reference": "Measure/BlazeGenderLocation"
-        },
-        "name": "Measure/BlazeGenderLocation",
-        "description": "A simple example showing how examples are defined and referenced"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Account"
-          }
-        ],
-        "reference": {
-          "reference": "Account/Account-HIVSimple"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Coverage"
-          }
-        ],
-        "reference": {
-          "reference": "Coverage/Coverage-HIVSimple"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Parameters"
-          }
-        ],
-        "reference": {
-          "reference": "Parameters/Example-Parameters"
+          "reference": "Location/Location-HIVSimple1"
         }
       },
       {
@@ -931,8 +779,21 @@
           }
         ],
         "reference": {
-          "reference": "Organization/Organization-HIVSimple3"
+          "reference": "Organization/Organization-HIVSimple1"
         }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/TXML"
+        },
+        "name": "TXML",
+        "description": "TXML"
       },
       {
         "extension": [
@@ -951,14 +812,189 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Location-102"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIV-TXCURR"
+        },
+        "name": "HIV-TXCURR",
+        "description": "HIV-TXCURR"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Location-HIVSimple2"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Location-101"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Organization-102"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/IntraHealth"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Library"
           }
         ],
         "reference": {
-          "reference": "Library/TXCURR"
+          "reference": "Library/HIVConcepts"
         },
-        "name": "TXCURR",
-        "description": "TXCURR"
+        "name": "HIVConcepts",
+        "description": "HIVConcepts"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Measure"
+          }
+        ],
+        "reference": {
+          "reference": "Measure/HIV-TXML"
+        },
+        "name": "HIV-TXML",
+        "description": "HIV-TXML"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/Example-Locations-Organizations"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/PEPFAR"
+        },
+        "name": "PEPFAR CodeSystem",
+        "description": "PEPFAR CodeSystem"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Organization-101"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/Attribution-Bundle-Simple"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/OpenCR"
+        },
+        "name": "OpenCR CodeSystem",
+        "description": "OpenCR CodeSystem"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Organization-100"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Organization-HIVSimple2"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Library"
+          }
+        ],
+        "reference": {
+          "reference": "Library/TXNEW"
+        },
+        "name": "TXNEW",
+        "description": "TXNEW"
       },
       {
         "extension": [
@@ -977,11 +1013,33 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
+            "valueString": "Coverage"
           }
         ],
         "reference": {
-          "reference": "Bundle/Attribution-Bundle-Simple"
+          "reference": "Coverage/Coverage-HIVSimple"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Location-100"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Account"
+          }
+        ],
+        "reference": {
+          "reference": "Account/Account-HIVSimple"
         }
       },
       {
@@ -992,10 +1050,21 @@
           }
         ],
         "reference": {
-          "reference": "Library/Parameters"
+          "reference": "Library/HIVDataElements"
         },
-        "name": "Parameters",
-        "description": "Parameters"
+        "name": "HIVDataElements",
+        "description": "HIVDataElements"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/Attribution-Bundle"
+        }
       },
       {
         "extension": [
@@ -1025,151 +1094,27 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/OpenCR"
-        },
-        "name": "OpenCR CodeSystem",
-        "description": "OpenCR CodeSystem"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Organization"
-          }
-        ],
-        "reference": {
-          "reference": "Organization/IntraHealth"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/Attribution-Bundle"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Library"
           }
         ],
         "reference": {
-          "reference": "Library/Attribution"
+          "reference": "Library/TXCURR"
         },
-        "name": "Attribution",
-        "description": "Attribution"
+        "name": "TXCURR",
+        "description": "TXCURR"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
+            "valueString": "Measure"
           }
         ],
         "reference": {
-          "reference": "Library/TXNEW"
+          "reference": "Measure/HIV-TXNEW"
         },
-        "name": "TXNEW",
-        "description": "TXNEW"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/HIVIndicators"
-        },
-        "name": "HIVIndicators",
-        "description": "HIVIndicators"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/TXML"
-        },
-        "name": "TXML",
-        "description": "TXML"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Location"
-          }
-        ],
-        "reference": {
-          "reference": "Location/Location-HIVSimple3"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/EncounterLocation"
-        },
-        "name": "EncounterLocation",
-        "description": "EncounterLocation"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/ANC"
-        },
-        "name": "ANC",
-        "description": "ANC"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/PEPFAR"
-        },
-        "name": "PEPFAR CodeSystem",
-        "description": "PEPFAR CodeSystem"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Library"
-          }
-        ],
-        "reference": {
-          "reference": "Library/Dedupe"
-        },
-        "name": "Dedupe",
-        "description": "Dedupe"
+        "name": "HIV-TXNEW",
+        "description": "HIV-TXNEW"
       }
     ],
     "page": {

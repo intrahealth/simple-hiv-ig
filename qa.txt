@@ -1,18 +1,19 @@
 ﻿SimpleHIVIG : Validation Results
 =========================================
 
-err = 35, warn = 10, info = 3
-IG Publisher Version: 1.1.94
-Generated Tue Jan 11 19:35:39 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
- Build Errors : 9 / 9 / 0
+err = 36, warn = 21, info = 0
+IG Publisher Version: 1.1.97
+Generated Thu Jan 27 21:17:59 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1.0 (canonical = https://intrahealth.github.io/simple-hiv-ig)
+ Build Errors : 17 / 17 / 0
  /github/workspace/fsh-generated/resources/Account-Account-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Bundle-Attribution-Bundle : 0 / 0 / 16
  /github/workspace/fsh-generated/resources/Bundle-Attribution-Bundle-Simple : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple : 0 / 0 / 12
  /github/workspace/fsh-generated/resources/Bundle-Example-HIVSimple2 : 0 / 0 / 12
- /github/workspace/fsh-generated/resources/CodeSystem-OpenCR : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/CodeSystem-OpenHIE : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/CodeSystem-PEPFAR : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Bundle-Example-Locations-Organizations : 0 / 0 / 12
+ /github/workspace/fsh-generated/resources/CodeSystem-OpenCR : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-OpenHIE : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-PEPFAR : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-HIVSimple2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Condition-Pregnancy : 0 / 0 / 1
@@ -27,32 +28,27 @@ Generated Tue Jan 11 19:35:39 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-HIVSimple2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-ViralLoad : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Encounter-ViralLoad2 : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-ANC : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-AgeRanges : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-Attribution : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-Blaze : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-Dedupe : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-EncounterLocation : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-FHIRCommon : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-FHIRHelpers : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-GoldenRecord : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-HIVIndicators : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/Library-HIVConcepts : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/Library-HIVDataElements : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/Library-HIVStratifiers : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-KitchenSink : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Library-Parameters : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-TXCURR : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-TXML : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-TXNEW : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Library-TXPVLS : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Location-Location-HIVSimple : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-Location-100 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-Location-101 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-Location-102 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-Location-HIVSimple1 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Location-HIVSimple2 : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Location-Location-HIVSimple3 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-AgeGroupGender : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-AgeGroupGenderLocation : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Measure-BlazeAgeGroupLocation : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Measure-BlazeGenderLocation : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Measure-BlazeStratifierAgeGroup : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Measure-BlazeStratifierTest : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-Cohort : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIV-TXCURR : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIV-TXML : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/Measure-HIV-TXNEW : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Measure-HIV-TXPVLS : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Measure-JustAgeGroup : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Measure-JustGender : 1 / 0 / 1
@@ -63,10 +59,11 @@ Generated Tue Jan 11 19:35:39 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/fsh-generated/resources/Observation-Observation-ViralLoad : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Observation-ViralLoad2 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-IntraHealth : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Organization-100 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Organization-101 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Organization-102 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple1 : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple2 : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Organization-Organization-HIVSimple3 : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Parameters-Example-Parameters : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Patient-Patient-GoldenRecord : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Patient-HIVSimple2 : 0 / 0 / 1
@@ -74,35 +71,49 @@ Generated Tue Jan 11 19:35:39 UTC 2022. FHIR version 4.0.1 for simple.hiv.ig#0.1
  /github/workspace/input/simple-hiv-ig : 0 / 0 / 1
 </table>
 == n/a ==
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Account/Account-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Account/Account-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Coverage/Coverage-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Coverage/Coverage-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Parameters/Example-Parameters.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Parameters/Example-Parameters.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-HIVSimple3.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-HIVSimple3.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Attribution-Bundle-Simple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Attribution-Bundle-Simple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Contract/Contract-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Contract/Contract-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-HIVSimple1.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-HIVSimple1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-HIVSimple1.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-HIVSimple1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-102.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-102.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-HIVSimple2.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-HIVSimple2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-101.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-101.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-102.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-102.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/IntraHealth.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/IntraHealth.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Example-Locations-Organizations.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Example-Locations-Organizations.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-101.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-101.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Attribution-Bundle-Simple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Attribution-Bundle-Simple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-100.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-100.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Organization-HIVSimple2.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Organization-HIVSimple2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Coverage/Coverage-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Coverage/Coverage-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-100.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-100.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Account/Account-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Account/Account-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Attribution-Bundle.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Attribution-Bundle.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Location-HIVSimple3.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Location-HIVSimple3.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Contract/Contract-HIVSimple.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Contract/Contract-HIVSimple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 == fsh-generated/resources/Account-Account-HIVSimple.json ==
 == fsh-generated/resources/Bundle-Attribution-Bundle.json ==
 == fsh-generated/resources/Bundle-Attribution-Bundle-Simple.json ==
 == fsh-generated/resources/Bundle-Example-HIVSimple.json ==
 == fsh-generated/resources/Bundle-Example-HIVSimple2.json ==
+== fsh-generated/resources/Bundle-Example-Locations-Organizations.json ==
 == fsh-generated/resources/CodeSystem-OpenCR.json ==
-INFORMATION: CodeSystem/OpenCR: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 == fsh-generated/resources/CodeSystem-OpenHIE.json ==
-INFORMATION: CodeSystem/OpenHIE: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 == fsh-generated/resources/CodeSystem-PEPFAR.json ==
-INFORMATION: CodeSystem/PEPFAR: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 == fsh-generated/resources/Condition-Condition-HIVSimple.json ==
 == fsh-generated/resources/Condition-Condition-HIVSimple2.json ==
 == fsh-generated/resources/Condition-Condition-Pregnancy.json ==
@@ -117,30 +128,18 @@ INFORMATION: CodeSystem/PEPFAR: CodeSystem: CodeSystems SHOULD have a stated val
 == fsh-generated/resources/Encounter-Encounter-HIVSimple2.json ==
 == fsh-generated/resources/Encounter-Encounter-ViralLoad.json ==
 == fsh-generated/resources/Encounter-Encounter-ViralLoad2.json ==
-== fsh-generated/resources/Library-ANC.json ==
-ERROR: Library.content{0]: Error Loading ANC.cql: null
-== fsh-generated/resources/Library-AgeRanges.json ==
-ERROR: Library.content{0]: Error Loading AgeRanges.cql: null
-== fsh-generated/resources/Library-Attribution.json ==
-ERROR: Library.content{0]: Error Loading Attribution.cql: null
-== fsh-generated/resources/Library-Blaze.json ==
-ERROR: Library.content{0]: Error Loading Blaze.cql: null
-== fsh-generated/resources/Library-Dedupe.json ==
-ERROR: Library.content{0]: Error Loading Dedupe.cql: null
-== fsh-generated/resources/Library-EncounterLocation.json ==
-ERROR: Library.content{0]: Error Loading EncounterLocation.cql: null
 == fsh-generated/resources/Library-FHIRCommon.json ==
 ERROR: Library.content{0]: Error Loading FHIRCommon.cql: null
 == fsh-generated/resources/Library-FHIRHelpers.json ==
 ERROR: Library.content{0]: Error Loading FHIRHelpers.cql: null
-== fsh-generated/resources/Library-GoldenRecord.json ==
-ERROR: Library.content{0]: Error Loading GoldenRecord.cql: null
-== fsh-generated/resources/Library-HIVIndicators.json ==
-ERROR: Library.content{0]: Error Loading HIVIndicators.cql: null
+== fsh-generated/resources/Library-HIVConcepts.json ==
+ERROR: Library.content{0]: Error Loading HIVConcepts.cql: null
+== fsh-generated/resources/Library-HIVDataElements.json ==
+ERROR: Library.content{0]: Error Loading HIVDataElements.cql: null
+== fsh-generated/resources/Library-HIVStratifiers.json ==
+ERROR: Library.content{0]: Error Loading HIVStratifiers.cql: null
 == fsh-generated/resources/Library-KitchenSink.json ==
 ERROR: Library.content{0]: Error Loading KitchenSink.cql: null
-== fsh-generated/resources/Library-Parameters.json ==
-ERROR: Library.content{0]: Error Loading Parameters.cql: null
 == fsh-generated/resources/Library-TXCURR.json ==
 ERROR: Library.content{0]: Error Loading TXCURR.cql: null
 == fsh-generated/resources/Library-TXML.json ==
@@ -149,25 +148,28 @@ ERROR: Library.content{0]: Error Loading TXML.cql: null
 ERROR: Library.content{0]: Error Loading TXNEW.cql: null
 == fsh-generated/resources/Library-TXPVLS.json ==
 ERROR: Library.content{0]: Error Loading TXPVLS.cql: null
-== fsh-generated/resources/Location-Location-HIVSimple.json ==
+== fsh-generated/resources/Location-Location-100.json ==
+== fsh-generated/resources/Location-Location-101.json ==
+== fsh-generated/resources/Location-Location-102.json ==
+== fsh-generated/resources/Location-Location-HIVSimple1.json ==
 == fsh-generated/resources/Location-Location-HIVSimple2.json ==
-== fsh-generated/resources/Location-Location-HIVSimple3.json ==
 == fsh-generated/resources/Measure-AgeGroupGender.json ==
 ERROR: Measure/AgeGroupGender: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink: No compiled version of CQL found
 == fsh-generated/resources/Measure-AgeGroupGenderLocation.json ==
 ERROR: Measure/AgeGroupGenderLocation: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink: No compiled version of CQL found
-== fsh-generated/resources/Measure-BlazeAgeGroupLocation.json ==
-ERROR: Measure/BlazeAgeGroupLocation: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/Blaze: No compiled version of CQL found
-== fsh-generated/resources/Measure-BlazeGenderLocation.json ==
-ERROR: Measure/BlazeGenderLocation: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/Blaze: No compiled version of CQL found
-== fsh-generated/resources/Measure-BlazeStratifierAgeGroup.json ==
-ERROR: Measure/BlazeStratifierAgeGroup: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/Blaze: No compiled version of CQL found
-== fsh-generated/resources/Measure-BlazeStratifierTest.json ==
-ERROR: Measure/BlazeStratifierTest: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/Blaze: No compiled version of CQL found
 == fsh-generated/resources/Measure-Cohort.json ==
+== fsh-generated/resources/Measure-HIV-TXCURR.json ==
+WARNING: Measure/HIV-TXCURR: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+ERROR: Measure/HIV-TXCURR: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/TXCURR: No compiled version of CQL found
+== fsh-generated/resources/Measure-HIV-TXML.json ==
+WARNING: Measure/HIV-TXML: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+ERROR: Measure/HIV-TXML: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/TXML: No compiled version of CQL found
+== fsh-generated/resources/Measure-HIV-TXNEW.json ==
+WARNING: Measure/HIV-TXNEW: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+ERROR: Measure/HIV-TXNEW: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/TXNEW: No compiled version of CQL found
 == fsh-generated/resources/Measure-HIV-TXPVLS.json ==
 WARNING: Measure/HIV-TXPVLS: Measure: mea-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: Measure/HIV-TXPVLS: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink: No compiled version of CQL found
+ERROR: Measure/HIV-TXPVLS: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/TXPVLS: No compiled version of CQL found
 == fsh-generated/resources/Measure-JustAgeGroup.json ==
 ERROR: Measure/JustAgeGroup: Measure.group[0].stratifier[0].criteria: Error in https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink: No compiled version of CQL found
 == fsh-generated/resources/Measure-JustGender.json ==
@@ -180,10 +182,11 @@ ERROR: Measure/JustLocation: Measure.group[0].stratifier[0].criteria: Error in h
 == fsh-generated/resources/Observation-Observation-ViralLoad.json ==
 == fsh-generated/resources/Observation-Observation-ViralLoad2.json ==
 == fsh-generated/resources/Organization-IntraHealth.json ==
-== fsh-generated/resources/Organization-Organization-HIVSimple.json ==
+== fsh-generated/resources/Organization-Organization-100.json ==
+== fsh-generated/resources/Organization-Organization-101.json ==
+== fsh-generated/resources/Organization-Organization-102.json ==
+== fsh-generated/resources/Organization-Organization-HIVSimple1.json ==
 == fsh-generated/resources/Organization-Organization-HIVSimple2.json ==
-== fsh-generated/resources/Organization-Organization-HIVSimple3.json ==
-== fsh-generated/resources/Parameters-Example-Parameters.json ==
 == fsh-generated/resources/Patient-Patient-GoldenRecord.json ==
 == fsh-generated/resources/Patient-Patient-HIVSimple.json ==
 == fsh-generated/resources/Patient-Patient-HIVSimple2.json ==

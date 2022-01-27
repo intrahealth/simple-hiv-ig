@@ -30,14 +30,18 @@
     </request>
   </entry>
   <entry>
-    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"/>
+    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1"/>
     <resource>
       <Organization>
-        <id value="Organization-HIVSimple"/>
+        <id value="Organization-HIVSimple1"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Organization-HIVSimple" </p></div><p><b>name</b>: Government Hospital</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Organization-HIVSimple1" </p></div><p><b>identifier</b>: id: Organization-HIVSimple1</p><p><b>name</b>: Organization-HIVSimple Government Hospital</p></div>
         </text>
-        <name value="Government Hospital"/>
+        <identifier>
+          <system value="https://github.com/synthetichealth/synthea"/>
+          <value value="Organization-HIVSimple1"/>
+        </identifier>
+        <name value="Organization-HIVSimple Government Hospital"/>
       </Organization>
     </resource>
     <request>
@@ -46,19 +50,22 @@
     </request>
   </entry>
   <entry>
-    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"/>
+    <fullUrl value="https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1"/>
     <resource>
       <Location>
-        <id value="Location-HIVSimple"/>
+        <id value="Location-HIVSimple1"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Location-HIVSimple" </p></div><p><b>identifier</b>: id: Location-HIVSimple</p><p><b>managingOrganization</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Location-HIVSimple1" </p></div><p><b>identifier</b>: id: Location-HIVSimple1</p><p><b>managingOrganization</b>: <span></span></p></div>
         </text>
         <identifier>
           <system value="https://github.com/synthetichealth/synthea"/>
-          <value value="Location-HIVSimple"/>
+          <value value="Location-HIVSimple1"/>
         </identifier>
         <managingOrganization>
-          <reference value="Organization/Organization-HIVSimple"/>
+          <identifier>
+            <system value="https://github.com/synthetichealth/synthea"/>
+            <value value="Organization-HIVSimple1"/>
+          </identifier>
         </managingOrganization>
       </Location>
     </resource>
@@ -150,7 +157,7 @@
       <Encounter>
         <id value="Encounter-HIVSimple"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-HIVSimple" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><p><b>account</b>: <a href="Account-Account-HIVSimple.html">Account/Account-HIVSimple</a></p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-HIVSimple" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><p><b>account</b>: <a href="Account-Account-HIVSimple.html">Account/Account-HIVSimple</a></p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><span></span></td></tr></table><p><b>serviceProvider</b>: <span></span></p></div>
         </text>
         <status value="finished"/>
         <class>
@@ -169,11 +176,17 @@
         </account>
         <location>
           <location>
-            <reference value="Location/Location-HIVSimple"/>
+            <identifier>
+              <system value="https://github.com/synthetichealth/synthea"/>
+              <value value="Location-HIVSimple1"/>
+            </identifier>
           </location>
         </location>
         <serviceProvider>
-          <reference value="Organization/Organization-HIVSimple"/>
+          <identifier>
+            <system value="https://github.com/synthetichealth/synthea"/>
+            <value value="Organization-HIVSimple1"/>
+          </identifier>
         </serviceProvider>
       </Encounter>
     </resource>
@@ -256,7 +269,7 @@
       <Encounter>
         <id value="Encounter-ViralLoad"/>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-ViralLoad" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><p><b>account</b>: <a href="Account-Account-HIVSimple.html">Account/Account-HIVSimple</a></p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href="#Location_Location-HIVSimple">See above (Location/Location-HIVSimple)</a></td></tr></table><p><b>serviceProvider</b>: <a href="#Organization_Organization-HIVSimple">See above (Organization/Organization-HIVSimple)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "Encounter-ViralLoad" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Patient-HIVSimple">See above (Patient/Patient-HIVSimple)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><p><b>account</b>: <a href="Account-Account-HIVSimple.html">Account/Account-HIVSimple</a></p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><span></span></td></tr></table><p><b>serviceProvider</b>: <span></span></p></div>
         </text>
         <status value="finished"/>
         <class>
@@ -275,11 +288,17 @@
         </account>
         <location>
           <location>
-            <reference value="Location/Location-HIVSimple"/>
+            <identifier>
+              <system value="https://github.com/synthetichealth/synthea"/>
+              <value value="Location-HIVSimple1"/>
+            </identifier>
           </location>
         </location>
         <serviceProvider>
-          <reference value="Organization/Organization-HIVSimple"/>
+          <identifier>
+            <system value="https://github.com/synthetichealth/synthea"/>
+            <value value="Organization-HIVSimple1"/>
+          </identifier>
         </serviceProvider>
       </Encounter>
     </resource>

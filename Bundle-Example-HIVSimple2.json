@@ -42,9 +42,15 @@
         "id": "Organization-HIVSimple2",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple2\" </p></div><p><b>name</b>: Government Hospital</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Organization-HIVSimple2\" </p></div><p><b>identifier</b>: id: Organization-HIVSimple2</p><p><b>name</b>: Organization-HIVSimple2 Government Hospital</p></div>"
         },
-        "name": "Government Hospital"
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
+        ],
+        "name": "Organization-HIVSimple2 Government Hospital"
       },
       "request": {
         "method": "POST",
@@ -58,7 +64,7 @@
         "id": "Location-HIVSimple2",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple2\" </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <a href=\"#Organization_Organization-HIVSimple2\">See above (Organization/Organization-HIVSimple2)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Location-HIVSimple2\" </p></div><p><b>identifier</b>: id: Location-HIVSimple2</p><p><b>managingOrganization</b>: <span></span></p></div>"
         },
         "identifier": [
           {
@@ -67,7 +73,10 @@
           }
         ],
         "managingOrganization": {
-          "reference": "Organization/Organization-HIVSimple2"
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
         }
       },
       "request": {
@@ -171,7 +180,7 @@
         "id": "Encounter-HIVSimple2",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-HIVSimple2\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple2\">See above (Patient/Patient-HIVSimple2)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple2\">See above (Location/Location-HIVSimple2)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple2\">See above (Organization/Organization-HIVSimple2)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-HIVSimple2\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple2\">See above (Patient/Patient-HIVSimple2)</a></p><p><b>period</b>: 2011-01-01 --&gt; 2011-01-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><span></span></td></tr></table><p><b>serviceProvider</b>: <span></span></p></div>"
         },
         "status": "finished",
         "class": {
@@ -188,12 +197,18 @@
         "location": [
           {
             "location": {
-              "reference": "Location/Location-HIVSimple2"
+              "identifier": {
+                "system": "https://github.com/synthetichealth/synthea",
+                "value": "Location-HIVSimple2"
+              }
             }
           }
         ],
         "serviceProvider": {
-          "reference": "Organization/Organization-HIVSimple2"
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
         }
       },
       "request": {
@@ -284,7 +299,7 @@
         "id": "Encounter-ViralLoad2",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-ViralLoad2\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple2\">See above (Patient/Patient-HIVSimple2)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><a href=\"#Location_Location-HIVSimple2\">See above (Location/Location-HIVSimple2)</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"#Organization_Organization-HIVSimple2\">See above (Organization/Organization-HIVSimple2)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Encounter-ViralLoad2\" </p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient acute (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code ACUTE = 'inpatient acute', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Patient-HIVSimple2\">See above (Patient/Patient-HIVSimple2)</a></p><p><b>period</b>: 2020-06-01 --&gt; 2020-06-01</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td></tr><tr><td>*</td><td><span></span></td></tr></table><p><b>serviceProvider</b>: <span></span></p></div>"
         },
         "status": "finished",
         "class": {
@@ -301,12 +316,18 @@
         "location": [
           {
             "location": {
-              "reference": "Location/Location-HIVSimple2"
+              "identifier": {
+                "system": "https://github.com/synthetichealth/synthea",
+                "value": "Location-HIVSimple2"
+              }
             }
           }
         ],
         "serviceProvider": {
-          "reference": "Organization/Organization-HIVSimple2"
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
         }
       },
       "request": {

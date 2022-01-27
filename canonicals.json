@@ -28,48 +28,6 @@
     "name": "SimpleHIVIG"
   },
   {
-    "id": "ANC",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/ANC",
-    "version": "0.1.0",
-    "name": "ANC"
-  },
-  {
-    "id": "AgeRanges",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/AgeRanges",
-    "version": "0.1.0",
-    "name": "AgeRanges"
-  },
-  {
-    "id": "Attribution",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Attribution",
-    "version": "0.1.0",
-    "name": "Attribution"
-  },
-  {
-    "id": "Blaze",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Blaze",
-    "version": "0.1.0",
-    "name": "Blaze"
-  },
-  {
-    "id": "Dedupe",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Dedupe",
-    "version": "0.1.0",
-    "name": "Dedupe"
-  },
-  {
-    "id": "EncounterLocation",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/EncounterLocation",
-    "version": "0.1.0",
-    "name": "EncounterLocation"
-  },
-  {
     "id": "FHIRCommon",
     "type": "Library",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon",
@@ -84,18 +42,25 @@
     "name": "FHIRHelpers"
   },
   {
-    "id": "GoldenRecord",
+    "id": "HIVConcepts",
     "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/GoldenRecord",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/HIVConcepts",
     "version": "0.1.0",
-    "name": "GoldenRecord"
+    "name": "HIVConcepts"
   },
   {
-    "id": "HIVIndicators",
+    "id": "HIVDataElements",
     "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/HIVIndicators",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/HIVDataElements",
     "version": "0.1.0",
-    "name": "HIVIndicators"
+    "name": "HIVDataElements"
+  },
+  {
+    "id": "HIVStratifiers",
+    "type": "Library",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/HIVStratifiers",
+    "version": "0.1.0",
+    "name": "HIVStratifiers"
   },
   {
     "id": "KitchenSink",
@@ -103,13 +68,6 @@
     "url": "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink",
     "version": "0.1.0",
     "name": "KitchenSink"
-  },
-  {
-    "id": "Parameters",
-    "type": "Library",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Library/Parameters",
-    "version": "0.1.0",
-    "name": "Parameters"
   },
   {
     "id": "TXCURR",
@@ -154,39 +112,32 @@
     "name": "AgeGroupGenderLocation"
   },
   {
-    "id": "BlazeAgeGroupLocation",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeAgeGroupLocation",
-    "version": "0.1.0",
-    "name": "BlazeAgeGroupLocation"
-  },
-  {
-    "id": "BlazeGenderLocation",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeGenderLocation",
-    "version": "0.1.0",
-    "name": "BlazeGenderLocation"
-  },
-  {
-    "id": "BlazeStratifierAgeGroup",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierAgeGroup",
-    "version": "0.1.0",
-    "name": "BlazeStratifierAgeGroup"
-  },
-  {
-    "id": "BlazeStratifierTest",
-    "type": "Measure",
-    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/BlazeStratifierTest",
-    "version": "0.1.0",
-    "name": "BlazeStratifierTest"
-  },
-  {
     "id": "Cohort",
     "type": "Measure",
     "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/Cohort",
     "version": "0.1.0",
     "name": "Cohort"
+  },
+  {
+    "id": "HIV-TXCURR",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXCURR",
+    "version": "0.1.0",
+    "name": "HIV-TXCURR"
+  },
+  {
+    "id": "HIV-TXML",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXML",
+    "version": "0.1.0",
+    "name": "HIV-TXML"
+  },
+  {
+    "id": "HIV-TXNEW",
+    "type": "Measure",
+    "url": "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXNEW",
+    "version": "0.1.0",
+    "name": "HIV-TXNEW"
   },
   {
     "id": "HIV-TXPVLS",
