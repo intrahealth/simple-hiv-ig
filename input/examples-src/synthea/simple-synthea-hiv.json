@@ -1,0 +1,180 @@
+{
+  "name": "HIV Simple 2",
+  "remarks": [
+    "Module is a proof-of-concept, do not use outside of experimentation."
+  ],
+  "gmf_version": 1,
+  "states": {
+    "Initial": {
+      "type": "Initial",
+      "direct_transition": "Years Before Infection"
+    },
+    "Terminal": {
+      "type": "Terminal"
+    },
+    "Has HIV": {
+      "type": "ConditionOnset",
+      "target_encounter": "",
+      "codes": [
+        {
+          "system": "SNOMED-CT",
+          "code": 86406008,
+          "display": "HIV Positive"
+        }
+      ],
+      "direct_transition": "HIV Test Positive"
+    },
+    "ART Medication": {
+      "type": "MedicationOrder",
+      "codes": [
+        {
+          "system": "RxNorm",
+          "code": "1234",
+          "display": "RxNorm Code"
+        }
+      ],
+      "direct_transition": "Viral Load"
+    },
+    "HIV Test Positive": {
+      "type": "DiagnosticReport",
+      "codes": [
+        {
+          "system": "LOINC",
+          "code": "75622-1",
+          "display": "HIV types 1 and 2 testing"
+        }
+      ],
+      "observations": [
+        {
+          "category": "laboratory",
+          "unit": "",
+          "codes": [
+            {
+              "system": "LOINC",
+              "code": "75622-1",
+              "display": "LOINC Code",
+              "value_set": ""
+            }
+          ],
+          "value_code": {
+            "system": "SNOMED-CT",
+            "code": 165816005,
+            "display": "HIV Positive"
+          }
+        }
+      ],
+      "distributed_transition": [
+        {
+          "transition": "ART Medication",
+          "distribution": 0.5
+        },
+        {
+          "transition": "Delay",
+          "distribution": 0.5
+        }
+      ],
+      "remarks": [
+        "HIV Positive"
+      ]
+    },
+    "HIV Test Negative": {
+      "type": "DiagnosticReport",
+      "codes": [
+        {
+          "system": "LOINC",
+          "code": "75622-1",
+          "display": "HIV types 1 and 2 testing"
+        }
+      ],
+      "observations": [
+        {
+          "category": "laboratory",
+          "unit": "",
+          "codes": [
+            {
+              "system": "LOINC",
+              "code": "75622-1",
+              "display": "LOINC Code",
+              "value_set": "2.16.840.1.113762.1.4.1056.50"
+            }
+          ],
+          "value_code": {
+            "system": "SNOMED-CT",
+            "code": 165815009,
+            "display": "HIV Negative"
+          }
+        }
+      ],
+      "direct_transition": "Terminal",
+      "remarks": [
+        "HIV Negative"
+      ]
+    },
+    "Delay": {
+      "type": "Delay",
+      "direct_transition": "Death",
+      "range": {
+        "low": 7,
+        "high": 10,
+        "unit": "years"
+      }
+    },
+    "Death": {
+      "type": "Death",
+      "exact": {
+        "quantity": 1,
+        "unit": "days"
+      },
+      "direct_transition": "Terminal"
+    },
+    "Years Before Infection": {
+      "type": "Delay",
+      "range": {
+        "low": 15,
+        "high": 65,
+        "unit": "years"
+      },
+      "distributed_transition": [
+        {
+          "transition": "Has HIV",
+          "distribution": 0.5
+        },
+        {
+          "transition": "HIV Test Negative",
+          "distribution": 0.5
+        }
+      ]
+    },
+    "Viral Load": {
+      "type": "DiagnosticReport",
+      "codes": [
+        {
+          "system": "LOINC",
+          "code": "25836-8",
+          "display": "HIV 1 RNA NAA+probe (Specimen)"
+        }
+      ],
+      "observations": [
+        {
+          "category": "laboratory",
+          "unit": "copies/mL",
+          "codes": [
+            {
+              "system": "LOINC",
+              "code": "25836-8",
+              "display": "HIV 1 RNA NAA+probe (Specimen)"
+            }
+          ],
+          "range": {
+            "low": 200,
+            "high": 1000000
+          }
+        }
+      ],
+      "direct_transition": "Death",
+      "remarks": [
+        "HIV 1 RNA NAA+probe (Specimen)"
+      ]
+    }
+  },
+}

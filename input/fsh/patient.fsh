@@ -45,8 +45,12 @@ Description: "Encounter-HIVSimple"
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple)
-* serviceProvider = Reference(Organization-HIVSimple)
-* location[+].location = Reference(Location-HIVSimple)
+// * serviceProvider = Reference(Organization-HIVSimple1)
+* serviceProvider.identifier.system = $synthea
+* serviceProvider.identifier.value = "Organization-HIVSimple1"
+// * location[+].location = Reference(Location-HIVSimple1)
+* location[+].location.identifier.system = $synthea
+* location[=].location.identifier.value = "Location-HIVSimple1"
 * period.start = "2011-01-01"
 * period.end = "2011-01-01"
 //
@@ -84,11 +88,15 @@ Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple)
-* serviceProvider = Reference(Organization-HIVSimple)
-* location[+].location = Reference(Location-HIVSimple)
+// * serviceProvider = Reference(Organization-HIVSimple1)
+* serviceProvider.identifier.system = $synthea
+* serviceProvider.identifier.value = "Organization-HIVSimple1"
+// * location[+].location = Reference(Location-HIVSimple1)
+* location[+].location.identifier.system = $synthea
+* location[=].location.identifier.value = "Location-HIVSimple1"
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
-
+// account
 * account[+] = Reference(Account-HIVSimple)
 
 
@@ -130,14 +138,14 @@ Description: "Example-HIVSimple"
 * entry[=].resource = Patient-HIVSimple
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1"
 * entry[=].request.url = "Organization"
-* entry[=].resource = Organization-HIVSimple
+* entry[=].resource = Organization-HIVSimple1
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1"
 * entry[=].request.url = "Location"
-* entry[=].resource = Location-HIVSimple
+* entry[=].resource = Location-HIVSimple1
 * insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple"

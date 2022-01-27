@@ -1,0 +1,78 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVDataElements
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+HIV Test Results=[]
+Pregnant=true
+HIV Test Exists=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+HIV Positive but no VL test=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+HIV Test Results=[]
+Pregnant=false
+HIV Test Exists=true
+Viral Load Test Result=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+HIV Positive but no VL test=true
+
+elapsed: 0.61 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVDataElements
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+HIV Test Results=[]
+Pregnant=true
+HIV Test Exists=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+HIV Positive but no VL test=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+HIV Positive Observation=[]
+HIV Negative Observation=[]
+HIV Test Results=[]
+Pregnant=false
+HIV Test Exists=true
+Viral Load Test Result=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+HIV Positive but no VL test=true
+
+elapsed: -0.349 seconds
+

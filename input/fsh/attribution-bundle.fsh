@@ -9,9 +9,9 @@ Description: "Attribution-Bundle"
 * entry[=].resource = Patient-HIVSimple
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-HIVSimple1"
 * entry[=].request.url = "Organization"
-* entry[=].resource = Organization-HIVSimple
+* entry[=].resource = Organization-HIVSimple1
 * insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/IntraHealth"
@@ -19,9 +19,9 @@ Description: "Attribution-Bundle"
 * entry[=].resource = IntraHealth
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-HIVSimple1"
 * entry[=].request.url = "Location"
-* entry[=].resource = Location-HIVSimple
+* entry[=].resource = Location-HIVSimple1
 * insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-HIVSimple"

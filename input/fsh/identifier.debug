@@ -1,0 +1,21 @@
+Alias: $synthea = https://github.com/synthetichealth/synthea
+
+Instance: Org-Simple
+InstanceOf: Organization
+Title: "Org-Simple"
+Description: "Org-Simple"
+* name = "Org-Simple"
+* identifier[+].system = $synthea
+* identifier[=].value = "1234"
+
+Instance: Loc-Simple
+InstanceOf: Location
+Title: "Loc-Simple"
+Description: "Loc-Simple"
+// works
+// * managingOrganization = Reference(Org-Simple)
+// also works
+// use identifier system for reference
+*  managingOrganization.identifier.system = $synthea
+*  managingOrganization.identifier.value = "Location-HIVSimple1"
+

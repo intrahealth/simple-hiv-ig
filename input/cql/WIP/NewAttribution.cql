@@ -15,9 +15,10 @@ define function "EncounterAccount"(Enc Encounter ):
 define function "GetId"(uri String ):
   Last(Split(uri, '/'))
 
-define function "AccountCoverage"(Acct Account ):
-  Acct.coverage AC
-    return singleton from ([Coverage] CV where CV.id = "GetId"(AC.reference))
+// Error: Member reference not found for type FHIR.Account.Coverage
+// define function "AccountCoverage"(Acct Account ):
+//   Acct.coverage AC
+//     return singleton from ([Coverage] CV where CV.id = "GetId"(AC.reference))
 
 define function "CoverageContract"(Cov Coverage ):
   Cov.contract CK

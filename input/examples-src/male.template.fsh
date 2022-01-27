@@ -8,22 +8,6 @@ Description: "Patient-{{suffix}}"
 * gender = #male
 * birthDate = "{{birthDate}}"
 
-
-Instance: Organization-{{suffix}}
-InstanceOf: Organization
-Title: "Organization-{{suffix}}"
-Description: "Organization-{{suffix}}"
-* name = "Government Hospital"
-
-
-Instance: Location-{{suffix}}
-InstanceOf: Location
-Title: "Location-{{suffix}}"
-Description: "Location-{{suffix}}"
-* managingOrganization = Reference(Organization-{{suffix}})
-* identifier[+].system = $synthea
-* identifier[=].value = "Location-{{suffix}}"
-
 // conditions
 
 Instance: Condition-{{suffix}}
@@ -44,8 +28,8 @@ Description: "Encounter-{{suffix}}"
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-{{suffix}})
-* serviceProvider = Reference(Organization-{{suffix}})
-* location[+].location = Reference(Location-{{suffix}})
+* serviceProvider = Reference(Organization-{{location}})
+* location[+].location = Reference(Location-{{location}})
 * period.start = "{{hivtestdate}}"
 * period.end = "{{hivtestdate}}"
 
@@ -81,8 +65,8 @@ Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-{{suffix}})
-* serviceProvider = Reference(Organization-{{suffix}})
-* location[+].location = Reference(Location-{{suffix}})
+* serviceProvider = Reference(Organization-{{location}})
+* location[+].location = Reference(Location-{{location}})
 * period.start = "{{vltestdate}}"
 * period.end = "{{vltestdate}}"
 
@@ -125,14 +109,14 @@ Description: "Example-{{suffix}}"
 * entry[=].resource = Patient-{{suffix}}
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-{{suffix}}"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Organization/Organization-{{location}}"
 * entry[=].request.url = "Organization"
-* entry[=].resource = Organization-{{suffix}}
+* entry[=].resource = Organization-{{location}}
 * insert patient-bundle
 
-* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-{{suffix}}"
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Location/Location-{{location}}"
 * entry[=].request.url = "Location"
-* entry[=].resource = Location-{{suffix}}
+* entry[=].resource = Location-{{location}}
 * insert patient-bundle
 
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Condition/Condition-{{suffix}}"

@@ -21,9 +21,10 @@ define "Owner":
 define "Coverage":
     Last([Account]).coverage.coverage.reference.value
 
-define "Beneficiary":
-    [Coverage] C
-        C.beneficiary
+// this has a systax error
+// define "Beneficiary":
+//     [Coverage] C
+//         C.beneficiary
 
 
 // always shows null

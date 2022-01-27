@@ -45,8 +45,12 @@ Description: "Encounter-HIVSimple2"
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple2)
-* serviceProvider = Reference(Organization-HIVSimple2)
-* location[+].location = Reference(Location-HIVSimple2)
+// * serviceProvider = Reference(Organization-HIVSimple2)
+* serviceProvider.identifier.system = $synthea
+* serviceProvider.identifier.value = "Organization-HIVSimple2"
+// * location[+].location = Reference(Location-HIVSimple2)
+* location[+].location.identifier.system = $synthea
+* location[=].location.identifier.value = "Location-HIVSimple2"
 * period.start = "2011-01-01"
 * period.end = "2011-01-01"
 
@@ -82,8 +86,12 @@ Usage: #example
 * status = #finished
 * class = $v3-ActCode#ACUTE
 * subject = Reference(Patient-HIVSimple2)
-* serviceProvider = Reference(Organization-HIVSimple2)
-* location[+].location = Reference(Location-HIVSimple2)
+// * serviceProvider = Reference(Organization-HIVSimple2)
+* serviceProvider.identifier.system = $synthea
+* serviceProvider.identifier.value = "Organization-HIVSimple2"
+// * location[+].location = Reference(Location-HIVSimple2)
+* location[+].location.identifier.system = $synthea
+* location[=].location.identifier.value = "Location-HIVSimple2"
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
 

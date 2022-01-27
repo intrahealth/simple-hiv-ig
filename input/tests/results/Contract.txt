@@ -1,0 +1,11 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Contract
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+some test=[Coverage(id=Coverage-HIVSimple)]
+some test2=[[Contract/Contract-HIVSimple]]
+Patient=Patient(id=Patient-HIVSimple)
+Meow=[Coverage(id=Coverage-HIVSimple)]
+Woof=[[Contract/Contract-HIVSimple]]
+
+elapsed: 0.276 seconds
+

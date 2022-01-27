@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[33]:
+# In[1]:
 
 
 #!/usr/bin/env python
@@ -18,7 +18,7 @@ from dateutil.relativedelta import relativedelta
 import random
 
 
-# In[34]:
+# In[2]:
 
 
 df_names = pd.read_csv('out.csv')
@@ -28,7 +28,7 @@ names = df_names['en'].sample(n=1, random_state=1)
 # print(names.values[0])
 
 
-# In[35]:
+# In[3]:
 
 
 # vars: {{suffix}}, {{given}}, {{family}}, {{name}}, {{hivonsetdate}}, {{birthDate}}, {{hivtestdate}}
@@ -55,8 +55,9 @@ def genfsh(file, lang, obs):
         # vltestdate = pregstart
         vltestdate = '2021-01-01'
         viralload = random.randint(50,2000)
+        location = random.randint(100,104)
         identifier = lang + str(9999) + str(i)
-        print(file, lang, suffix, name, birthDate, hivonsetdate, hivtestdate, identifier)
+        print(file, lang, suffix, name, birthDate, hivonsetdate, hivtestdate, identifier, location)
 
         # put through jinja2
         path = pathlib.Path(file)
@@ -73,7 +74,8 @@ def genfsh(file, lang, obs):
             pregstart=pregstart,
             pregstop=pregstop,
             viralload=viralload,
-            vltestdate=vltestdate
+            vltestdate=vltestdate,
+            location=location
         )
         path_out = pathlib.Path(f"output/{suffix}.fsh")
         path_out.write_text(msg)

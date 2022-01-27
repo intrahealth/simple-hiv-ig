@@ -1,0 +1,21 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVStratifiers
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Sex=female
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group TXCURR=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Sex=P5Y--P10Y:female
+Location=Location/Location-HIVSimple
+Age Group/Sex/Location=P5Y--P10Y:female:Location/Location-HIVSimple
+
+Patient=Patient(id=Patient-HIVSimple2)
+Sex=female
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group TXCURR=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Sex=P5Y--P10Y:female
+Location=Location/Location-HIVSimple2
+Age Group/Sex/Location=P5Y--P10Y:female:Location/Location-HIVSimple2
+
+elapsed: 0.269 seconds
+

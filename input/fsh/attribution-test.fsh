@@ -31,7 +31,7 @@ Description: "Contract-HIVSimple"
 * term[=].offer.party[=].role = $contract-party-role#flunky
 * term[+].offer.party[+].reference = Reference(Patient-HIVSimple)
 * term[=].offer.party[=].role = $contract-party-role#flunky
-* term[=].action[+].subject[+].reference[+] = Reference(Organization-HIVSimple)
+* term[=].action[+].subject[+].reference[+] = Reference(Organization-HIVSimple1)
 * term[=].action[=].type = $contractaction#action-a
 * term[=].action[=].intent = $v3-ActReason#POPHLTH
 * term[=].action[=].status = $contract-actionstatus#complete
@@ -46,7 +46,7 @@ Title: "Coverage-HIVSimple"
 Description: "Coverage-HIVSimple"
 * status = $fm-status#active
 * contract[+] = Reference(Contract-HIVSimple)
-// * payor[+] = Reference(Organization-HIVSimple)
+// * payor[+] = Reference(Organization-HIVSimple1)
 * payor[+] = Reference(IntraHealth)
 * beneficiary = Reference(Patient-HIVSimple)
 

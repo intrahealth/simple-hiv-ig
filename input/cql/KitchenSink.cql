@@ -1,10 +1,10 @@
-library KitchenSink version '0.1.0'
+library KitchenSink
 
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
-include AgeRanges version '0.1.0' called AR
+include HIVStratifiers called AR
 
 // SNOMED-CT, International Edition
 
@@ -86,6 +86,15 @@ define "Viral Load Test Result":
       and Obs.value is not null
 
 
+define "HIV Test Exists":
+  exists ([Observation: "HIV 1 and 2 tests - Meaningful Use set"])
+
+define "HIV Positive Observation":
+  [Observation: "HIV 1 and 2 tests - Meaningful Use set"] Observation
+    where Observation.value = "Is HIV Positive"
+
+
+
 // check these
 /* define "HIV Test Exists":
   exists ([Observation: "HIV 1 and 2 tests - Meaningful Use set"])
@@ -160,7 +169,7 @@ define "Location ID":
 
 
 // not working for cql or evaluate-measure
-define "Gender/AgeGrooup/Location":
+define "Gender/AgeGroup/Location":
   "Age Group".code + ':' + "Sex" + ':' + "Location".id
 
 

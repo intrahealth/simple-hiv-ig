@@ -1,10 +1,18 @@
-library TXNEW version '0.1.0'
+library TXNEW
 
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
-include AgeRanges version '0.1.0' called AR
+
+include HIVConcepts called Cx
+include HIVDataElements called PatientData
+include HIVStratifiers called HIVStrat
+
+
+context Patient
+
+// define "Initial Population": true
 
 // Only numerator from patient data
 
@@ -13,4 +21,10 @@ include AgeRanges version '0.1.0' called AR
 
 // Total Numerator: Number of adults and children newly enrolled on antiretroviral therapy (ART)
 // Stratified: Sum of Age/Sex and Age Aggregated/Sex disaggregates
+// TEMP
+define "Numerator": 
+  PatientData."HIV Condition"
 
+
+define "Stratifier": 
+  HIVStrat."Age Group/Sex/Location"
