@@ -26,6 +26,12 @@ define "Numerator-Exclusion": true
 define "Numerator":
   PatientData."HIV Condition"
 
+// Not included:
+// ARV Dispensing Quantity by Coarse Age/Sex
+// [Required]
+// • <3 months of ARVs (not MMD) dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
+// • 3-5 months of ARVs dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
+// • 6 or more months of ARVs dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
 
 define "Stratifier": 
   HIVStrat."Age Group/Sex/Location TXCURR"

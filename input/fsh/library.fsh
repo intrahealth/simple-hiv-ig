@@ -158,3 +158,17 @@ Description: "TXPVLS"
 * url = "https://intrahealth.github.io/simple-hiv-ig/Library/TXPVLS"
 // * identifier.value = "TXPVLS"
 * content.id = "ig-loader-TXPVLS.cql"
+
+
+Instance: TXRTT
+InstanceOf: Library
+Title: "TXRTT"
+Description: "TXRTT"
+* insert lib-common
+* name = "TXRTT"
+* title = "TXRTT"
+* description = "TXRTT"
+// * version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/TXRTT"
+// * identifier.value = "TXRTT"
+* content.id = "ig-loader-TXRTT.cql"

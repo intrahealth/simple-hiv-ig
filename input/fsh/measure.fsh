@@ -241,16 +241,16 @@ Description: "SuppData"
   * criteria.expression = "Location Code Revised"
 
 
-Instance: HIV-TXCURR
+Instance: TX-CURR
 InstanceOf: Measure
-Title: "HIV-TXCURR"
-Description: "HIV-TXCURR"
+Title: "TX-CURR"
+Description: "TX-CURR"
 * insert meas-common
-* name = "HIV-TXCURR"
-* title = "HIV-TXCURR"
-* description = "HIV-TXCURR"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXCURR"
-* identifier[0].value = "HIV-TXCURR"
+* name = "TX-CURR"
+* title = "TX-CURR"
+* description = "TX-CURR"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX-CURR"
+* identifier[0].value = "TX-CURR"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(TXCURR)
@@ -276,16 +276,16 @@ Description: "HIV-TXCURR"
     * criteria.expression = "Stratifier"
 
 
-Instance: HIV-TXML
+Instance: TX-ML
 InstanceOf: Measure
-Title: "HIV-TXML"
-Description: "HIV-TXML"
+Title: "TX-ML"
+Description: "TX-ML"
 * insert meas-common
-* name = "HIV-TXML"
-* title = "HIV-TXML"
-* description = "HIV-TXML"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXML"
-* identifier[0].value = "HIV-TXML"
+* name = "TX-ML"
+* title = "TX-ML"
+* description = "TX-ML"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX-ML"
+* identifier[0].value = "TX-ML"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(TXML)
@@ -312,16 +312,16 @@ Description: "HIV-TXML"
 
 
 
-Instance: HIV-TXNEW
+Instance: TX-NEW
 InstanceOf: Measure
-Title: "HIV-TXNEW"
-Description: "HIV-TXNEW"
+Title: "TX-NEW"
+Description: "TX-NEW"
 * insert meas-common
-* name = "HIV-TXNEW"
-* title = "HIV-TXNEW"
-* description = "HIV-TXNEW"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXNEW"
-* identifier[0].value = "HIV-TXNEW"
+* name = "TX-NEW"
+* title = "TX-NEW"
+* description = "TX-NEW"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX-NEW"
+* identifier[0].value = "TX-NEW"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(TXNEW)
@@ -347,16 +347,51 @@ Description: "HIV-TXNEW"
     * criteria.expression = "Stratifier"
 
 
-Instance: HIV-TXPVLS
+Instance: TX-RTT
 InstanceOf: Measure
-Title: "HIV-TXPVLS"
-Description: "HIV-TXPVLS"
+Title: "TX-RTT"
+Description: "TX-RTT"
 * insert meas-common
-* name = "HIV-TXPVLS"
-* title = "HIV-TXPVLS"
-* description = "HIV-TXPVLS"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HIV-TXPVLS"
-* identifier[0].value = "HIV-TXPVLS"
+* name = "TX-RTT"
+* title = "TX-RTT"
+* description = "TX-RTT"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX-RTT"
+* identifier[0].value = "TX-RTT"
+// only numerator
+* scoring = $measure-scoring#cohort
+* library[+] = Canonical(TXRTT)
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  // * population[+]
+  //   * description = "Initial Population"
+  //   * code = $measure-population#initial-population
+  //   * criteria.language = #text/cql
+  //   * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Numerator-Exclusion"
+    * code = $measure-population#numerator-exclusion
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator-Exclusion"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+  * stratifier[+]
+    * criteria.language = #text/cql
+    * criteria.expression = "Stratifier"
+
+
+Instance: TX-PVLS
+InstanceOf: Measure
+Title: "TX-PVLS"
+Description: "TX-PVLS"
+* insert meas-common
+* name = "TX-PVLS"
+* title = "TX-PVLS"
+* description = "TX-PVLS"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX-PVLS"
+* identifier[0].value = "TX-PVLS"
 * scoring = $measure-scoring#proportion
 * library[+] = Canonical(TXPVLS)
 * group[+]

@@ -12,6 +12,25 @@ include HIVConcepts called Cx
 // comment out for testing, will be overridden by $evaluate-measure operation in any case
 parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T, @2020-12-31T]
 
+// Not included yet:
+// Key Population Type [Required]
+// • People who inject drugs (PWID)
+// • Men who have sex with men (MSM)
+// • Transgender people (TG)
+// • Female sex workers (FSW)
+// • People in prison and other closed settings
+
+// TODO: course disaggregates?
+
+// How to review for data quality:
+// How to calculate annual total:
+// Disaggregations:
+// • Confirm that TX_CURR ≥ TX_NEW.
+// • Confirm that TX_CURR ≥ TX_RTT.
+// • Confirm that TX_CURR ≥ Disaggregates for ARV Dispensing Quantity
+
+// TODO: Unknown Age M/F
+
 context Patient
 
 define "Sex":
