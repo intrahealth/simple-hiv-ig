@@ -11,11 +11,17 @@ include HIVStratifiers called HIVStrat
 
 context Patient
 
+
 define "Initial Population": true
+
 
 // Denominator: Number of ART patients with a VL result documented 
 // in the medical or laboratory records/LIS within the past 12 months.
 // Stratified: Sum of Age/Sex/Indication and Age Aggregated/Sex/Indication disaggregates.
+
+define "Denominator-Exclusion": true
+
+
 define "Denominator": 
   PatientData."Viral Load Test Result"
 
@@ -23,6 +29,10 @@ define "Denominator":
 // Numerator: Number of ART patients with suppressed VL results 
 // (<1,000 copies/ml) documented in the medical or laboratory records/LIS within the past 12 months
 // Stratified: Sum of Age/Sex/Indication/HIVStatus and Age Aggregated/Sex/Indication/HIVStatus disaggregates.
+
+define "Numerator-Exclusion": true
+
+
 define "Numerator": 
   PatientData."Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)"
 

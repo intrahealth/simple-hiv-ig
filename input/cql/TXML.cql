@@ -24,6 +24,9 @@ context Patient
 // or ARV pick-up for greater than 28 days since their last expected clinical contact or ARV pick-up
 // Stratifier: Sum of Outcome by Age/Sex disaggregates.
 // TEMP
+define "Numerator-Exclusion": true
+
+
 define "Numerator": 
   PatientData."HIV Positive but no VL test"
 

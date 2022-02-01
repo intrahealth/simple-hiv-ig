@@ -262,6 +262,11 @@ Description: "HIV-TXCURR"
   //   * criteria.language = #text/cql
   //   * criteria.expression = "Initial Population"
   * population[+]
+    * description = "Numerator-Exclusion"
+    * code = $measure-population#numerator-exclusion
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator-Exclusion"
+  * population[+]
     * description = "Numerator"
     * code = $measure-population#numerator
     * criteria.language = #text/cql
@@ -291,6 +296,11 @@ Description: "HIV-TXML"
   //   * code = $measure-population#initial-population
   //   * criteria.language = #text/cql
   //   * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Numerator-Exclusion"
+    * code = $measure-population#numerator-exclusion
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator-Exclusion"
   * population[+]
     * description = "Numerator"
     * code = $measure-population#numerator
@@ -323,6 +333,11 @@ Description: "HIV-TXNEW"
   //   * criteria.language = #text/cql
   //   * criteria.expression = "Initial Population"
   * population[+]
+    * description = "Numerator-Exclusion"
+    * code = $measure-population#numerator-exclusion
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator-Exclusion"
+  * population[+]
     * description = "Numerator"
     * code = $measure-population#numerator
     * criteria.language = #text/cql
@@ -352,10 +367,20 @@ Description: "HIV-TXPVLS"
     * criteria.language = #text/cql
     * criteria.expression = "Initial Population"
   * population[+]
+    * description = "Denominator-Exclusion"
+    * code = $measure-population#denominator-exclusion
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator-Exclusion"
+  * population[+]
     * description = "Denominator"
     * code = $measure-population#denominator
     * criteria.language = #text/cql
     * criteria.expression = "Denominator"
+  * population[+]
+    * description = "Numerator-Exclusion"
+    * code = $measure-population#numerator-exclusion
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator-Exclusion"
   * population[+]
     * description = "Numerator"
     * code = $measure-population#numerator

@@ -22,6 +22,9 @@ context Patient
 // Total Numerator: Number of adults and children newly enrolled on antiretroviral therapy (ART)
 // Stratified: Sum of Age/Sex and Age Aggregated/Sex disaggregates
 // TEMP
+define "Numerator-Exclusion": true
+
+
 define "Numerator": 
   PatientData."HIV Condition"
 

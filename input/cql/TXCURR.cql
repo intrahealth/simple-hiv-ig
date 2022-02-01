@@ -14,13 +14,15 @@ context Patient
 // define "Initial Population": true
 
 // Only numerator from patient data
-
 // use denom and num exclusions
 
 // Total Numerator
 // Number of adults and children currently receiving antiretroviral therapy (ART)
 // Sum of age/sex disaggregates
 // TEMP
+define "Numerator-Exclusion": true
+
+
 define "Numerator":
   PatientData."HIV Condition"
 
