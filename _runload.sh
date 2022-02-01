@@ -17,7 +17,7 @@ HIVConcepts HIVDataElements HIVStratifiers TXCURR TXNEW TXPVLS TXML \
 ; do curl -X PUT -H "$HEADER" --data @output/Library-${FILE}.json $FHIR/Library/${FILE} | jq . ; done
 
 for FILE in JustGender JustAgeGroup JustLocation AgeGroupGender AgeGroupGenderLocation Cohort SuppData \
-HIV-TXCURR HIV-TXML HIV-TXNEW HIV-TXPVLS \
+TX-CURR TX-ML TX-NEW TX-PVLS TX-RTT \
 ; do curl -X PUT -H "$HEADER" --data @output/Measure-${FILE}.json $FHIR/Measure/${FILE} | jq . ; done
 
 
@@ -46,10 +46,11 @@ curl $FHIR'/Measure/JustAgeGroup/$evaluate-measure?periodStart=2000&periodEnd=20
 curl $FHIR'/Measure/JustLocation/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
 curl $FHIR'/Measure/AgeGroupGenderLocation/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
 
-curl $FHIR'/Measure/HIV-TXCURR/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
-curl $FHIR'/Measure/HIV-TXML/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
-curl $FHIR'/Measure/HIV-TXNEW/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
-curl $FHIR'/Measure/HIV-TXPVLS/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
+curl $FHIR'/Measure/TX-CURR/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
+curl $FHIR'/Measure/TX-ML/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
+curl $FHIR'/Measure/TX-NEW/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
+curl $FHIR'/Measure/TX-PVLS/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
+curl $FHIR'/Measure/TX-RTT/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . 
 
 curl $FHIR'/Measure/JustGender/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . > measurereports/JustGender.json
 curl $FHIR'/Measure/JustAgeGroup/$evaluate-measure?periodStart=2000&periodEnd=2021' | jq . > measurereports/JustAgeGroup.json
