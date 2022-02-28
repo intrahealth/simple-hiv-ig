@@ -6,6 +6,7 @@
 # git checkout feature-stratification
 # mvn jetty:run -am --projects cqf-ruler-r4
 
+
 # run sep cleanup script
 ./_runcleanup.sh
 
@@ -14,7 +15,18 @@
 
 # use refresh hack
 sushi
-mv fsh-generated/resources/Library-* input/resources/ 
+
+mv fsh-generated/resources/Library-* input/resources/
+# put test cases in place
+# todo to add: QR, Parameters, Contract
+CASE=('DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'HIVStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS')
+ 
+for case in "${CASE[@]}"
+do
+    cp fsh-generated/resources/Bundle-Example-HIVSimple.json input/tests/${case}/Patient-HIVSimple
+    cp fsh-generated/resources/Bundle-Example-HIVSimple2.json input/tests/${case}/Patient-HIVSimple2
+done
+
 bash _refresh.sh 
 bash _genonce.sh -no-sushi 
 

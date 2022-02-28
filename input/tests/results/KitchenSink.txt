@@ -6,182 +6,8 @@ Gender=female
 Sex=female
 Female=true
 Male=false
-Age Group=null
-Age Group/Gender=null
-Initial Population=true
-Denominator=true
-Numerator=true
-Hello, World!=Hello, World!
-birthDate_str=1985-01-01
-Given Name=Mittens
-Family Name=Cat
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-Pregnant=true
-Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
-Suppressed=[]
-Unsuppressed=[Observation(id=Observation-ViralLoad)]
-Contact date=[dateTime, dateTime]
-SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
-Location=Location(id=Location-HIVSimple)
-Location ID=Location-HIVSimple
-Gender/AgeGrooup/Location=null
-Most Recent Encounter Location Reference=Reference
-Location Code Revised=CodeableConcept
-SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
-Most Recent Encounter Location Reference Reference=string
-Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple
-Age Group/Sex/Location 2=null
-Location Code=CodeableConcept
-Location Code Deux=CodeableConcept
-serviceProvider=Organization/Organization-HIVSimple
-assert serviceProvider is string=true
-Naive Location=Location/Location-HIVSimple
-assert Naive Location is string=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Gender=female
-Sex=female
-Female=true
-Male=false
-Age Group=null
-Age Group/Gender=null
-Initial Population=true
-Denominator=true
-Numerator=true
-Hello, World!=Hello, World!
-birthDate_str=1985-01-01
-Given Name=Mittens
-Family Name=Cat
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-Pregnant=false
-Viral Load Test Result=[]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
-Suppressed=[]
-Unsuppressed=[]
-Contact date=[dateTime]
-SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
-Location=Location(id=Location-HIVSimple2)
-Location ID=Location-HIVSimple2
-Gender/AgeGrooup/Location=null
-Most Recent Encounter Location Reference=Reference
-Location Code Revised=CodeableConcept
-SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
-Most Recent Encounter Location Reference Reference=string
-Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple2
-Age Group/Sex/Location 2=null
-Location Code=CodeableConcept
-Location Code Deux=CodeableConcept
-serviceProvider=Organization/Organization-HIVSimple2
-assert serviceProvider is string=true
-Naive Location=Location/Location-HIVSimple2
-assert Naive Location is string=true
-
-elapsed: 0.389 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-Gender=female
-Sex=female
-Female=true
-Male=false
-Age Group=null
-Age Group/Gender=null
-Initial Population=true
-Denominator=true
-Numerator=true
-Hello, World!=Hello, World!
-birthDate_str=1985-01-01
-Given Name=Mittens
-Family Name=Cat
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-Pregnant=true
-Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
-Suppressed=[]
-Unsuppressed=[Observation(id=Observation-ViralLoad)]
-Contact date=[dateTime, dateTime]
-SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
-Location=Location(id=Location-HIVSimple)
-Location ID=Location-HIVSimple
-Gender/AgeGroup/Location=null
-Most Recent Encounter Location Reference=Reference
-Location Code Revised=CodeableConcept
-SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
-Most Recent Encounter Location Reference Reference=string
-Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple
-Age Group/Sex/Location 2=null
-Location Code=CodeableConcept
-Location Code Deux=CodeableConcept
-serviceProvider=Organization/Organization-HIVSimple
-assert serviceProvider is string=true
-Naive Location=Location/Location-HIVSimple
-assert Naive Location is string=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Gender=female
-Sex=female
-Female=true
-Male=false
-Age Group=null
-Age Group/Gender=null
-Initial Population=true
-Denominator=true
-Numerator=true
-Hello, World!=Hello, World!
-birthDate_str=1985-01-01
-Given Name=Mittens
-Family Name=Cat
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-Pregnant=false
-Viral Load Test Result=[]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
-Suppressed=[]
-Unsuppressed=[]
-Contact date=[dateTime]
-SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
-Location=Location(id=Location-HIVSimple2)
-Location ID=Location-HIVSimple2
-Gender/AgeGroup/Location=null
-Most Recent Encounter Location Reference=Reference
-Location Code Revised=CodeableConcept
-SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
-Most Recent Encounter Location Reference Reference=string
-Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple2
-Age Group/Sex/Location 2=null
-Location Code=CodeableConcept
-Location Code Deux=CodeableConcept
-serviceProvider=Organization/Organization-HIVSimple2
-assert serviceProvider is string=true
-Naive Location=Location/Location-HIVSimple2
-assert Naive Location is string=true
-
-elapsed: 0.356 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-Gender=female
-Sex=female
-Female=true
-Male=false
-Age Group=null
-Age Group/Gender=null
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
 Initial Population=true
 Denominator=true
 Numerator=true
@@ -204,13 +30,13 @@ Contact date=[dateTime, dateTime]
 SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
 Location=Location(id=Location-HIVSimple)
 Location ID=Location-HIVSimple
-Gender/AgeGroup/Location=null
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple
 Most Recent Encounter Location Reference=Reference
 Location Code Revised=CodeableConcept
 SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
 Most Recent Encounter Location Reference Reference=string
 Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple
-Age Group/Sex/Location 2=null
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple
 Location Code=CodeableConcept
 Location Code Deux=CodeableConcept
 serviceProvider=Organization/Organization-HIVSimple
@@ -223,8 +49,8 @@ Gender=female
 Sex=female
 Female=true
 Male=false
-Age Group=null
-Age Group/Gender=null
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
 Initial Population=true
 Denominator=true
 Numerator=true
@@ -247,13 +73,13 @@ Contact date=[dateTime]
 SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
 Location=Location(id=Location-HIVSimple2)
 Location ID=Location-HIVSimple2
-Gender/AgeGroup/Location=null
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple2
 Most Recent Encounter Location Reference=Reference
 Location Code Revised=CodeableConcept
 SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
 Most Recent Encounter Location Reference Reference=string
 Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple2
-Age Group/Sex/Location 2=null
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple2
 Location Code=CodeableConcept
 Location Code Deux=CodeableConcept
 serviceProvider=Organization/Organization-HIVSimple2
@@ -261,5 +87,278 @@ assert serviceProvider is string=true
 Naive Location=Location/Location-HIVSimple2
 assert Naive Location is string=true
 
-elapsed: 0.379 seconds
+elapsed: -0.508 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Gender=female
+Sex=female
+Female=true
+Male=false
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+HIV Test Exists=true
+HIV Positive Observation=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+Location ID=Location-HIVSimple
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple
+Most Recent Encounter Location Reference=Reference
+Location Code Revised=CodeableConcept
+SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
+Most Recent Encounter Location Reference Reference=string
+Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple
+assert serviceProvider is string=true
+Naive Location=Location/Location-HIVSimple
+assert Naive Location is string=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Gender=female
+Sex=female
+Female=true
+Male=false
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=false
+Viral Load Test Result=[]
+HIV Test Exists=true
+HIV Positive Observation=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple2)
+Location ID=Location-HIVSimple2
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple2
+Most Recent Encounter Location Reference=Reference
+Location Code Revised=CodeableConcept
+SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
+Most Recent Encounter Location Reference Reference=string
+Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple2
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple2
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple2
+assert serviceProvider is string=true
+Naive Location=Location/Location-HIVSimple2
+assert Naive Location is string=true
+
+elapsed: -0.441 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Gender=female
+Sex=female
+Female=true
+Male=false
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+HIV Test Exists=true
+HIV Positive Observation=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+Location ID=Location-HIVSimple
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple
+Most Recent Encounter Location Reference=Reference
+Location Code Revised=CodeableConcept
+SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
+Most Recent Encounter Location Reference Reference=string
+Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple
+assert serviceProvider is string=true
+Naive Location=Location/Location-HIVSimple
+assert Naive Location is string=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Gender=female
+Sex=female
+Female=true
+Male=false
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=false
+Viral Load Test Result=[]
+HIV Test Exists=true
+HIV Positive Observation=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple2)
+Location ID=Location-HIVSimple2
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple2
+Most Recent Encounter Location Reference=Reference
+Location Code Revised=CodeableConcept
+SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
+Most Recent Encounter Location Reference Reference=string
+Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple2
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple2
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple2
+assert serviceProvider is string=true
+Naive Location=Location/Location-HIVSimple2
+assert Naive Location is string=true
+
+elapsed: 0.314 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/KitchenSink
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Gender=female
+Sex=female
+Female=true
+Male=false
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=true
+Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
+HIV Test Exists=true
+HIV Positive Observation=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
+Suppressed=[]
+Unsuppressed=[Observation(id=Observation-ViralLoad)]
+Contact date=[dateTime, dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple)
+Location ID=Location-HIVSimple
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple
+Most Recent Encounter Location Reference=Reference
+Location Code Revised=CodeableConcept
+SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
+Most Recent Encounter Location Reference Reference=string
+Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple
+assert serviceProvider is string=true
+Naive Location=Location/Location-HIVSimple
+assert Naive Location is string=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Gender=female
+Sex=female
+Female=true
+Male=false
+Age Group=Code { code: P5Y--P10Y, system: http://ohie.org/CodeSystem/iso-8601-derived-periods, version: null, display: 5-9 year }
+Age Group/Gender=P5Y--P10Y:female
+Initial Population=true
+Denominator=true
+Numerator=true
+Hello, World!=Hello, World!
+birthDate_str=1985-01-01
+Given Name=Mittens
+Family Name=Cat
+HIV Condition=true
+Is HIV Positive=true
+Is HIV Negative=false
+Pregnant=false
+Viral Load Test Result=[]
+HIV Test Exists=true
+HIV Positive Observation=[]
+Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
+Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
+Suppressed=[]
+Unsuppressed=[]
+Contact date=[dateTime]
+SDE Sex=Code { code: F, system: http://hl7.org/fhir/administrative-gender, version: null, display: Female }
+Location=Location(id=Location-HIVSimple2)
+Location ID=Location-HIVSimple2
+Gender/AgeGroup/Location=P5Y--P10Y:female:Location-HIVSimple2
+Most Recent Encounter Location Reference=Reference
+Location Code Revised=CodeableConcept
+SDE Location=Code { code: null, system: http://location-name-code-system, version: null, display: null }
+Most Recent Encounter Location Reference Reference=string
+Most Recent Encounter Location Reference Reference Value=Location/Location-HIVSimple2
+Age Group/Sex/Location 2=P5Y--P10Y:female:Location/Location-HIVSimple2
+Location Code=CodeableConcept
+Location Code Deux=CodeableConcept
+serviceProvider=Organization/Organization-HIVSimple2
+assert serviceProvider is string=true
+Naive Location=Location/Location-HIVSimple2
+assert Naive Location is string=true
+
+elapsed: 0.392 seconds
 

@@ -1,78 +1,100 @@
 Running tests.
 Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVDataElements
 Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-HIV Positive Observation=[]
-HIV Negative Observation=[]
-HIV Test Results=[]
-Pregnant=true
-HIV Test Exists=true
-Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
-Suppressed=[]
-Unsuppressed=[Observation(id=Observation-ViralLoad)]
-Contact date=[dateTime, dateTime]
-HIV Positive but no VL test=true
 
-Patient=Patient(id=Patient-HIVSimple2)
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-HIV Positive Observation=[]
-HIV Negative Observation=[]
-HIV Test Results=[]
-Pregnant=false
-HIV Test Exists=true
-Viral Load Test Result=[]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
-Suppressed=[]
-Unsuppressed=[]
-Contact date=[dateTime]
-HIV Positive but no VL test=true
-
-elapsed: 0.61 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/HIVDataElements
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-HIV Positive Observation=[]
-HIV Negative Observation=[]
-HIV Test Results=[]
-Pregnant=true
-HIV Test Exists=true
-Viral Load Test Result=[Observation(id=Observation-ViralLoad)]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[Observation(id=Observation-ViralLoad)]
-Suppressed=[]
-Unsuppressed=[Observation(id=Observation-ViralLoad)]
-Contact date=[dateTime, dateTime]
-HIV Positive but no VL test=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-HIV Condition=true
-Is HIV Positive=true
-Is HIV Negative=false
-HIV Positive Observation=[]
-HIV Negative Observation=[]
-HIV Test Results=[]
-Pregnant=false
-HIV Test Exists=true
-Viral Load Test Result=[]
-Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)=[]
-Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)=[]
-Suppressed=[]
-Unsuppressed=[]
-Contact date=[dateTime]
-HIV Positive but no VL test=true
-
-elapsed: -0.349 seconds
+The following errors were encountered during evaluation:
+java.lang.IllegalArgumentException: Unable to locate ValueSet urn:oid:2.16.840.1.113883.3.464.1003.102.12.1015
+	at org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider.expand(BundleTerminologyProvider.java:80)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.expand(PrivateCachingTerminologyProviderDecorator.java:47)
+	at org.opencds.cqf.cql.evaluator.engine.terminology.PrivateCachingTerminologyProviderDecorator.in(PrivateCachingTerminologyProviderDecorator.java:25)
+	at org.opencds.cqf.cql.evaluator.engine.retrieve.BundleRetrieveProvider.anyCodeInValueSet(BundleRetrieveProvider.java:89)
+	at org.opencds.cqf.cql.evaluator.engine.retrieve.BundleRetrieveProvider.filterByTerminology(BundleRetrieveProvider.java:151)
+	at org.opencds.cqf.cql.evaluator.engine.retrieve.BundleRetrieveProvider.retrieve(BundleRetrieveProvider.java:56)
+	at org.opencds.cqf.cql.evaluator.engine.retrieve.PriorityRetrieveProvider.retrieve(PriorityRetrieveProvider.java:28)
+	at org.opencds.cqf.cql.engine.data.CompositeDataProvider.retrieve(CompositeDataProvider.java:96)
+	at org.opencds.cqf.cql.engine.elm.execution.RetrieveEvaluator.internalEvaluate(RetrieveEvaluator.java:57)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:165)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:186)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:164)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:163)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:34)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.DebugCqlCommandContribution.executeCql(DebugCqlCommandContribution.java:37)
+	at org.opencds.cqf.cql.ls.DebugCqlCommandContribution.executeCommand(DebugCqlCommandContribution.java:65)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommandFromContributions(CqlWorkspaceService.java:173)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+org.opencds.cqf.cql.engine.exception.CqlException: Unexpected exception caught during execution: java.lang.IllegalArgumentException: Unable to locate ValueSet urn:oid:2.16.840.1.113883.3.464.1003.102.12.1015
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:37)
+	at org.opencds.cqf.cql.engine.elm.execution.QueryEvaluator.internalEvaluate(QueryEvaluator.java:165)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExistsEvaluator.internalEvaluate(ExistsEvaluator.java:28)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.elm.execution.ExpressionDefEvaluator.internalEvaluate(ExpressionDefEvaluator.java:19)
+	at org.opencds.cqf.cql.engine.elm.execution.Executable.evaluate(Executable.java:18)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluateExpressions(CqlEngine.java:186)
+	at org.opencds.cqf.cql.engine.execution.CqlEngine.evaluate(CqlEngine.java:164)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:89)
+	at org.opencds.cqf.cql.evaluator.CqlEvaluator.evaluate(CqlEvaluator.java:76)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:163)
+	at org.opencds.cqf.cql.evaluator.cli.command.CqlCommand.call(CqlCommand.java:34)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at org.opencds.cqf.cql.evaluator.cli.Main.run(Main.java:19)
+	at org.opencds.cqf.cql.ls.DebugCqlCommandContribution.executeCql(DebugCqlCommandContribution.java:37)
+	at org.opencds.cqf.cql.ls.DebugCqlCommandContribution.executeCommand(DebugCqlCommandContribution.java:65)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommandFromContributions(CqlWorkspaceService.java:173)
+	at org.opencds.cqf.cql.ls.service.CqlWorkspaceService.executeCommand(CqlWorkspaceService.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+elapsed: -0.731 seconds
 

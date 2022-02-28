@@ -23,7 +23,7 @@ codesystem "LOINC": 'http://loinc.org'
 codesystem "PMTCT HIV Status Codes": 'TBD' // { 'known-positive', 'newly-identified-positive', 'newly-identified-negative' }
 codesystem "PMTCT ART Status Codes": 'TBD' // { 'already-on-art', 'new-on-art' }
 
-valueset "HIV Testing Services": 'TBD' // Should use HIV tests
+// valueset "HIV Testing Services": 'TBD' // Should use HIV tests
 valueset "Viral Load Test": 'TBD'
 valueset "HL7 Administrative Gender": 'http://hl7.org/fhir/ValueSet/administrative-gender'
 valueset "ART Medications": 'TBD' // ART medications

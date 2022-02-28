@@ -123,6 +123,52 @@ Description: "Observation-ViralLoad"
 * valueQuantity.unit = "copies/mL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #{copies}/mL
+// add to bulk
+* issued = "2020-06-01T13:28:17.239+02:00"
+
+
+// hiv viral load2
+
+Instance: Encounter2-ViralLoad
+InstanceOf: Encounter
+Title: "Encounter2-ViralLoad"
+Description: "Encounter2-ViralLoad"
+Usage: #example
+* status = #finished
+* class = $v3-ActCode#ACUTE
+* subject = Reference(Patient-HIVSimple)
+* serviceProvider.identifier.system = $synthea
+* serviceProvider.identifier.value = "Organization-HIVSimple1"
+* location[+].location.identifier.system = $synthea
+* location[=].location.identifier.value = "Location-HIVSimple1"
+* period.start = "2020-06-01"
+* period.end = "2020-06-01"
+* account[+] = Reference(Account-HIVSimple)
+
+Instance: DiagnosticReport2-ViralLoad
+InstanceOf: DiagnosticReport
+Title: "DiagnosticReport2-ViralLoad"
+Description: "DiagnosticReport2-ViralLoad"
+* status = #final
+* subject = Reference(Patient-HIVSimple)
+* encounter = Reference(Encounter2-ViralLoad)
+* result = Reference(Observation2-ViralLoad)
+* code = $LNC#25836-8 "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+
+
+Instance: Observation2-ViralLoad
+InstanceOf: Observation
+Title: "Observation2-ViralLoad"
+Description: "Observation2-ViralLoad"
+* status = #final
+* subject = Reference(Patient-HIVSimple)
+* encounter = Reference(Encounter2-ViralLoad) 
+* code = $LNC#25836-8 "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+* valueQuantity.value = 800
+* valueQuantity.unit = "copies/mL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #{copies}/mL
+* issued = "2020-09-01T13:28:17.239+02:00"
 
 
 // bundle it all up
@@ -190,4 +236,21 @@ Description: "Example-HIVSimple"
 * entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation-ViralLoad"
 * entry[=].request.url = "Observation"
 * entry[=].resource = Observation-ViralLoad
+* insert patient-bundle
+
+// encounter for viral load2
+
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Encounter/Encounter2-ViralLoad"
+* entry[=].request.url = "Encounter"
+* entry[=].resource = Encounter2-ViralLoad
+* insert patient-bundle
+
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/DiagnosticReport/DiagnosticReport2-ViralLoad"
+* entry[=].request.url = "DiagnosticReport"
+* entry[=].resource = DiagnosticReport2-ViralLoad
+* insert patient-bundle
+
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Observation/Observation2-ViralLoad"
+* entry[=].request.url = "Observation"
+* entry[=].resource = Observation2-ViralLoad
 * insert patient-bundle

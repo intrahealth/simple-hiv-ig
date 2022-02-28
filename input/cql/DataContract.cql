@@ -1,0 +1,45 @@
+library DataContract
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include FHIRCommon version '4.0.1' called FC
+// include fhir.cqf.common.FHIRCommon
+include HIVConcepts called Cx
+
+// Example of a privacy-first (zero trust) limited data contract between a Supplier of patient data and a Consumer of it.
+// This is not a Shared Health Record but performs some of the same functions.
+
+// todo: remove entries that have no vl data, report type of virus, receive art distributions?
+
+context Patient
+
+// Supplier must provide a unique identifier that is random and unrelated to the patient and a namespace for it.
+define "Identifier": 
+  Patient.identifier I 
+    where I.system = 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR'
+      // return I.value.value
+      return Tuple {
+        id: singleton from {I.value.value},
+        namespace: I.system
+      }
+
+// Supplier must provide the birth year of the patient.
+define "Birthyear": 
+  year from Patient.birthDate
+
+// Supplier must provide the sex of the patient.
+define "Sex": 
+  Patient.gender.value
+
+// Supplier must provide all observations for viral load and date of issuance for each test.
+define "Viral Load Test Result Array with DateTime":
+  ["Observation": Cx."HIV 1 RNA NAA+probe (Specimen)"] Obs
+    where Obs.status = 'final'
+      and Obs.value is not null
+      and Obs.issued is not null
+        return Tuple { 
+          value: Obs.value.value,
+          issued: ToDate(Obs.issued.value)
+        }
+

@@ -40,7 +40,13 @@
       "resource": {
         "resourceType": "Organization",
         "id": "Organization-HIVSimple2",
-        "name": "Government Hospital"
+        "name": "Organization-HIVSimple2 Government Hospital",
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
+        ]
       }
     },
     {
@@ -52,15 +58,18 @@
       "resource": {
         "resourceType": "Location",
         "id": "Location-HIVSimple2",
-        "managingOrganization": {
-          "reference": "Organization/Organization-HIVSimple2"
-        },
         "identifier": [
           {
             "system": "https://github.com/synthetichealth/synthea",
             "value": "Location-HIVSimple2"
           }
-        ]
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
+        }
       }
     },
     {
@@ -162,12 +171,18 @@
           "reference": "Patient/Patient-HIVSimple2"
         },
         "serviceProvider": {
-          "reference": "Organization/Organization-HIVSimple2"
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
         },
         "location": [
           {
             "location": {
-              "reference": "Location/Location-HIVSimple2"
+              "identifier": {
+                "system": "https://github.com/synthetichealth/synthea",
+                "value": "Location-HIVSimple2"
+              }
             }
           }
         ],
@@ -263,12 +278,18 @@
           "reference": "Patient/Patient-HIVSimple2"
         },
         "serviceProvider": {
-          "reference": "Organization/Organization-HIVSimple2"
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization-HIVSimple2"
+          }
         },
         "location": [
           {
             "location": {
-              "reference": "Location/Location-HIVSimple2"
+              "identifier": {
+                "system": "https://github.com/synthetichealth/synthea",
+                "value": "Location-HIVSimple2"
+              }
             }
           }
         ],

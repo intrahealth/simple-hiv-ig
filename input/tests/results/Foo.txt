@@ -27,3 +27,26 @@ wrong=null
 
 elapsed: -0.179 seconds
 
+Running tests.
+No tests found at /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests. Evaluation may fail if data is required.
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Adder=3
+
+elapsed: 0.066 seconds
+
+Running tests.
+No tests found at /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests. Evaluation may fail if data is required.
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Adder=3
+Patient=null
+
+elapsed: 0.165 seconds
+
+Running tests.
+No tests found at /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests. Evaluation may fail if data is required.
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Adder=3
+Patient=null
+
+elapsed: 0.086 seconds
+

@@ -14,13 +14,22 @@ context Patient
 // define "Initial Population": true
 
 // Only numerator from patient data
-// use denom and num exclusions
 
 // Total Numerator
 // Number of adults and children currently receiving antiretroviral therapy (ART)
 // Sum of age/sex disaggregates
 // TEMP
+
+
+// Patients excluded from the current on ART count are patients who died, stopped treatment, 
+// transferred out, or experienced interruption in treatment (IIT). Patients who have not received 
+// ARVs within four weeks (i.e., 28 days) of their last missed drug pick-up should not be counted.
+
+// Patients who receive ARVs for post-exposure prophylaxis (PEP) or 
+// short-term ART only for prevention (PrEP) should not be reported in this indicator.
+
 define "Numerator-Exclusion": true
+
 
 
 define "Numerator":

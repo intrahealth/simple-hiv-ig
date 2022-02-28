@@ -1,0 +1,29 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/DataContract
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Identifier=[Tuple {
+	"id": 1234
+	"namespace": UriType[https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR]
+}]
+Birthyear=1985
+Sex=female
+Viral Load Test Result Array with DateTime=[Tuple {
+	"value": DecimalType[741660]
+	"issued": 2020-06-01
+}, Tuple {
+	"value": DecimalType[800]
+	"issued": 2020-09-01
+}]
+
+Patient=Patient(id=Patient-HIVSimple2)
+Identifier=[Tuple {
+	"id": 1234
+	"namespace": UriType[https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR]
+}]
+Birthyear=1985
+Sex=female
+Viral Load Test Result Array with DateTime=[]
+
+elapsed: 0.325 seconds
+

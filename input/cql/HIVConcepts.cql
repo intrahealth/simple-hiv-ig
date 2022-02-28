@@ -1,5 +1,9 @@
 library HIVConcepts
 
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+include FHIRCommon version '4.0.1' called FC
 
 // Code Systems
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
@@ -23,6 +27,7 @@ code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV infectio
 code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
 code "Pregnant (finding)": '77386006' from "SNOMED-CT" display 'Pregnant (finding)'
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection'
+
 // PEPFAR programs are required to report on the following standard age groups: 
 // <1, 1-4, 5-9, 10-14, 15-19, 20-24, 25-29, 30-34, 35-39, 40-44, 45-49, and 50+. 
 code "P0Y--P1Y": 'P0Y--P1Y' from "ISO-8601-Derived Periods" display '< 1 year'

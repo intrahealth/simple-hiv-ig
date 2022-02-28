@@ -34,6 +34,20 @@ Description: "FHIRHelpers"
 * content.id = "ig-loader-FHIRHelpers.cql"
 
 
+Instance: DataContract
+InstanceOf: Library
+Title: "DataContract"
+Description: "DataContract"
+* insert lib-common
+* name = "DataContract"
+* title = "DataContract"
+* description = "DataContract"
+// * version = "4.0.1"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/DataContract"
+// * identifier.value = "DataContract"
+* content.id = "ig-loader-DataContract.cql"
+
+
 Instance: HIVConcepts
 InstanceOf: Library
 Title: "HIVConcepts"
