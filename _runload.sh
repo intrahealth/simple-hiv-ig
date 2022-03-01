@@ -13,7 +13,7 @@ for FILE in OpenCR OpenHIE PEPFAR ; do curl -X PUT -H "$HEADER" \
 --data @output/CodeSystem-${FILE}.json $FHIR/CodeSystem/${FILE} | jq . ; done
 
 for FILE in FHIRHelpers FHIRCommon KitchenSink \
-HIVConcepts HIVDataElements HIVStratifiers TXCURR TXNEW TXPVLS TXML \
+DASHConcepts DASHDataElements DASHStratifiers TXCURR TXNEW TXPVLS TXML \
 ; do curl -X PUT -H "$HEADER" --data @output/Library-${FILE}.json $FHIR/Library/${FILE} | jq . ; done
 
 for FILE in JustGender JustAgeGroup JustLocation AgeGroupGender AgeGroupGenderLocation Cohort SuppData \

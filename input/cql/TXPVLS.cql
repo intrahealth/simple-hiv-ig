@@ -1,3 +1,8 @@
+// TX_PVLS, WHO HIV.IND.AV.3
+// Percentage of ART patients with a suppressed viral load (VL) result (<1000 copies/ml) 
+// documented in the medical or laboratory records/laboratory information systems (LIS) within the past 12 months
+// numerator and denominator
+
 library TXPVLS
 
 using FHIR version '4.0.1'
@@ -5,9 +10,9 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
 
-include HIVConcepts called Cx
-include HIVDataElements called PatientData
-include HIVStratifiers called HIVStrat
+include DASHConcepts called Cx
+include DASHDataElements called PatientData
+include DASHStratifiers called HIVStrat
 
 context Patient
 

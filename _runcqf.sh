@@ -19,7 +19,7 @@ sushi
 mv fsh-generated/resources/Library-* input/resources/
 # put test cases in place
 # todo to add: QR, Parameters, Contract
-CASE=('DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'HIVStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS')
+CASE=('DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'TXRTT' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
  
 for case in "${CASE[@]}"
 do

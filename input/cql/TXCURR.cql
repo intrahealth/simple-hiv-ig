@@ -1,3 +1,7 @@
+// TX_CURR, WHO HIV.IND.AV.1
+// Number of adults and children currently receiving antiretroviral therapy (ART)
+// numerator only
+
 library TXCURR
 
 using FHIR version '4.0.1'
@@ -5,9 +9,9 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
 
-include HIVConcepts called Cx
-include HIVDataElements called PatientData
-include HIVStratifiers called HIVStrat
+include DASHConcepts called Cx
+include DASHDataElements called PatientData
+include DASHStratifiers called HIVStrat
 
 context Patient
 
