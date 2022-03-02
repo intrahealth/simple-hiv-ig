@@ -396,6 +396,10 @@
             <value value="true"/>
         </parameter>
         <parameter>
+          <code value="path-resource"/>
+          <value value="input/examples-src/output"/>
+      </parameter>
+        <parameter>
             <code value="path-resource"/>
             <value value="input\history"/>
         </parameter>

@@ -30,11 +30,12 @@ contact:
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # parameters:  
+  # include examples-src in fsh processing for bulk data, not used in fshonly true
+  # see xml for where this matters for fsh only true
+  # path-resource:
+  #   - input/fsh
+  #   - input/examples-src/output
 #   path-binary: input/cql
-#   path-resource:
-#     - input/resources
-#     - fsh-generated/resources
-#     - input/examples
 #   path-pages:
 #     - input/pagecontent
 #     - fsh-generated/includes
