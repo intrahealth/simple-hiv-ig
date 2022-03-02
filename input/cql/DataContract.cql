@@ -5,9 +5,10 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
 // include fhir.cqf.common.FHIRCommon
-include HIVConcepts called Cx
+include DASHConcepts called Cx
 
-// Example of a privacy-first (zero trust) limited data contract between a Supplier of patient data and a Consumer of it.
+// Minimal Shared Health Record (mSHR) based on only the data needed for cqm, cds, etc.
+// Example of a privacy-first, minimal data contract between a Supplier of patient data and a Consumer of it.
 // This is not a Shared Health Record but performs some of the same functions.
 
 // todo: remove entries that have no vl data, report type of virus, receive art distributions?
