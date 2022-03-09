@@ -13,12 +13,7 @@ include DASHConcepts called Cx
 include DASHDataElements called PatientData
 include DASHStratifiers called HIVStrat
 
-
 context Patient
-
-// define "Initial Population": true
-
-// Only numerator from patient data
 
 // Linkage Proxy: Estimate of the percentage of people who test HIV positive and are linked to treatment. 
 // This metric is not calculated at the individual level.

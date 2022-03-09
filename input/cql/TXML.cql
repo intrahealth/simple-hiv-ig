@@ -14,16 +14,11 @@ include DASHConcepts called Cx
 include DASHDataElements called PatientData
 include DASHStratifiers called HIVStrat
 
-
 context Patient
 
 // QA check on the data
 // ML is exclusion criteria for CURR
 // look for this - e.g. deceased
-
-// define "Initial Population": true
-
-// Only numerator from patient data
 
 // Total Numerator: Number of ART patients (currently on ART or newly initiating ART) with no clinical contact 
 // or ARV pick-up for greater than 28 days since their last expected clinical contact or ARV pick-up

@@ -15,15 +15,9 @@ include DASHStratifiers called HIVStrat
 
 context Patient
 
-// define "Initial Population": true
-
-// Only numerator from patient data
-
-// Total Numerator
 // Number of adults and children currently receiving antiretroviral therapy (ART)
 // Sum of age/sex disaggregates
 // TEMP
-
 
 // Patients excluded from the current on ART count are patients who died, stopped treatment, 
 // transferred out, or experienced interruption in treatment (IIT). Patients who have not received 
@@ -33,7 +27,6 @@ context Patient
 // short-term ART only for prevention (PrEP) should not be reported in this indicator.
 
 define "Numerator-Exclusion": true
-
 
 
 define "Numerator":

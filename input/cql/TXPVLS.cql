@@ -16,10 +16,6 @@ include DASHStratifiers called HIVStrat
 
 context Patient
 
-
-define "Initial Population": true
-
-
 // Denominator: Number of ART patients with a VL result documented 
 // in the medical or laboratory records/LIS within the past 12 months.
 // Stratified: Sum of Age/Sex/Indication and Age Aggregated/Sex/Indication disaggregates.

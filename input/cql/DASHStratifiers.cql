@@ -10,7 +10,7 @@ include DASHConcepts called Cx
 // need DateTime eg @2014-01-25T not Date, eg not this: @2014-01-25
 // parameter "Measurement Period" Interval<DateTime>
 // comment out for testing, will be overridden by $evaluate-measure operation in any case
-parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T, @2020-12-31T]
+parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T, @2022-08-30T]
 
 // Not included yet:
 // Key Population Type [Required]

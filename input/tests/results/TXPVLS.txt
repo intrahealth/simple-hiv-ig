@@ -1,0 +1,19 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXPVLS
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Denominator-Exclusion=true
+Denominator=[Observation(id=Observation-ViralLoad), Observation(id=Observation2-ViralLoad)]
+Numerator-Exclusion=true
+Numerator=[Observation(id=Observation2-ViralLoad)]
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+Denominator-Exclusion=true
+Denominator=[Observation(id=Observation-ViralLoad2)]
+Numerator-Exclusion=true
+Numerator=[]
+Stratifier=null
+
+elapsed: -0.454 seconds
+

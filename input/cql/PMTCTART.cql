@@ -14,3 +14,22 @@ include DASHDataElements called PatientData
 include DASHStratifiers called HIVStrat
 
 context Patient
+
+
+define "Denominator-Exclusion": true
+
+
+define "Denominator": true
+
+
+define "Numerator-Exclusion": true
+
+
+define "Numerator":
+  PatientData."Receiving antiretroviral therapy (ART) during measurement period"
+
+
+define "Stratifier": 
+  HIVStrat."Age Group/Sex/Location"
+
+

@@ -13,3 +13,13 @@ include DASHDataElements called PatientData
 include DASHStratifiers called HIVStrat
 
 context Patient
+
+
+define "Numerator-Exclusion": true
+
+
+define "Numerator": true
+
+
+define "Stratifier": 
+  HIVStrat."Age Group/Sex/Location"
