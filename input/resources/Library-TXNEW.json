@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "TXNEW",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "TXNEW",
+  "title": "TXNEW",
+  "description": "TXNEW",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXNEW",
+  "content": [
+    {
+      "id": "ig-loader-TXNEW.cql"
+    }
+  ]
+}

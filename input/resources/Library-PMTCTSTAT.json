@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "PMTCTSTAT",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "PMTCTSTAT",
+  "title": "PMTCTSTAT",
+  "description": "PMTCTSTAT",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/PMTCTSTAT",
+  "content": [
+    {
+      "id": "ig-loader-PMTCTSTAT.cql"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "OpenHIE",
+  "id": "OpenHIE",
+  "title": "OpenHIE CodeSystem",
+  "description": "OpenHIE CodeSystem",
+  "version": "0.1.0",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE",
+  "concept": [
+    {
+      "code": "cohort",
+      "display": "cohort"
+    }
+  ],
+  "caseSensitive": false,
+  "count": 1
+}

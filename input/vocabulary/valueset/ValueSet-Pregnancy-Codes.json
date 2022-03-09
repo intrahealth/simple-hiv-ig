@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Pregnancy-Codes",
+  "id": "Pregnancy-Codes",
+  "title": "Pregnancy Codes",
+  "description": "Pregnancy Codes",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1",
+            "display": "Pregnancy Code 1"
+          },
+          {
+            "code": "2",
+            "display": "Pregnancy Code 2"
+          }
+        ]
+      }
+    ]
+  }
+}

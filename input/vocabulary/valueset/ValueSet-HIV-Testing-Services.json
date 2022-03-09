@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HIV-Testing-Services",
+  "id": "HIV-Testing-Services",
+  "title": "HIV Testing Services",
+  "description": "HIV Testing Services",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "30",
+            "display": "HIV Testing Services Code 1"
+          },
+          {
+            "code": "40",
+            "display": "HIV Testing Services Code 2"
+          }
+        ]
+      }
+    ]
+  }
+}

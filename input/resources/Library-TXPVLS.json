@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "TXPVLS",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "TXPVLS",
+  "title": "TXPVLS",
+  "description": "TXPVLS",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXPVLS",
+  "content": [
+    {
+      "id": "ig-loader-TXPVLS.cql"
+    }
+  ]
+}

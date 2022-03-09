@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "TXCURR",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "TXCURR",
+  "title": "TXCURR",
+  "description": "TXCURR",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXCURR",
+  "content": [
+    {
+      "id": "ig-loader-TXCURR.cql"
+    }
+  ]
+}

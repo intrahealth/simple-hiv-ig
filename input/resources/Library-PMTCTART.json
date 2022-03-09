@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "PMTCTART",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "PMTCTART",
+  "title": "PMTCTART",
+  "description": "PMTCTART",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/PMTCTART",
+  "content": [
+    {
+      "id": "ig-loader-PMTCTART.cql"
+    }
+  ]
+}

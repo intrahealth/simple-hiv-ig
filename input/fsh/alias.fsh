@@ -18,3 +18,9 @@ Alias: $synthea = https://github.com/synthetichealth/synthea
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-ActReason =  http://terminology.hl7.org/CodeSystem/v3-ActReason
 
+Alias: $PMTCT-HIV-Status-Codes = http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-hiv-status-codes
+Alias: $PMTCT-ART-Status-Codes = http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-art-status-codes
+Alias: $Pregnancy-Codes = http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes
+Alias: $Breastfeeding = http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes
+Alias: $Viral-Load-Test = http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test
+Alias: $HIV-Testing-Services = http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services

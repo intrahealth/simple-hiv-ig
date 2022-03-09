@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Breastfeeding-Codes",
+  "id": "Breastfeeding-Codes",
+  "title": "Breastfeeding-Codes",
+  "description": "Breastfeeding-Codes",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1",
+            "display": "Breastfeeding-Codes Code 1"
+          },
+          {
+            "code": "2",
+            "display": "Breastfeeding-Codes Code 2"
+          }
+        ]
+      }
+    ]
+  }
+}

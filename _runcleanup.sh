@@ -6,4 +6,6 @@ rm -rf input/examples-src/output/*
 rm -rf input/fsh/bulk/*
 rm -rf output/
 rm -rf input/resources/Library-* input/resources/library-*
+rm -rf input/vocabulary/codesystem/CodeSystem-*
+rm -rf input/vocabulary/valueset/ValueSet-*
 echo "Exit code: ${?}"

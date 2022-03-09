@@ -1,4 +1,4 @@
-library HIVDataElements
+library DASHDataElements
 
 using FHIR version '4.0.1'
 
@@ -6,6 +6,7 @@ include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
 include DASHConcepts called Cx
 
+parameter "Measurement Period" Interval<DateTime>
 
 context Patient
 
@@ -54,7 +55,7 @@ define "Viral Load Test Result":
       and Obs.value is not null
 
 
-// synthea uses copies/mL but fsh uses {copies}/mL which is official
+// todo: synthea uses copies/mL but fsh uses {copies}/mL which is official
 define "Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)":
   ["Observation": Cx."HIV 1 RNA NAA+probe (Specimen)"] Observation
     where Observation.value < 1000 '{copies}/mL'
@@ -82,4 +83,212 @@ define "Contact date":
 
 define "HIV Positive but no VL test":
   "Is HIV Positive" = true
-  // "Viral Load Test Result"
+
+
+
+// Rest of HIVIndicators
+
+define "ART Therapy Observation":
+  ["Observation": Cx."History of antiretroviral therapy (situation)"] O
+    where O.status = 'final'
+
+
+define "ART Therapy Condition":
+  ["Condition": Cx."History of antiretroviral therapy (situation)"] C
+    where C.verificationStatus ~ FC."confirmed"
+      and C.clinicalStatus ~ FC."active"
+
+
+define "ART Therapy Medication":
+  ["MedicationDispense": Cx."ART Medications"] M
+    where M.status = 'completed'
+
+
+define "ART Dates":
+  ("ART Therapy Observation" O return O.effective as dateTime)
+    union ("ART Therapy Condition" C return C.onset as dateTime)
+    union ("ART Therapy Medication" M return M.whenHandedOver)
+
+
+define "Date of First Evidence of ART":
+  Min("ART Dates")
+
+
+define "PMTCT ART Status":
+  case
+    when "Date of First Evidence of ART" before start of "Measurement Period" then Cx."Already on ART"
+    when "Date of First Evidence of ART" during "Measurement Period" then Cx."New on ART"
+    else null
+  end
+
+
+define "On ART":
+  exists ("ART Dates" D where D during "Measurement Period")
+    or exists (
+      "ART Therapy Condition" C
+        where Interval[C.onset, C.abatement] overlaps "Measurement Period"
+    )
+
+define "HIV Test Observation":
+  [Observation: Cx."HIV 1 and 2 tests - Meaningful Use set"] O
+    // where O.status = 'final'
+    //   and O.value is not null
+
+
+// define "HIV Positive Observation":
+//   "HIV Test Observation" O where O.value ~ "HIV Positive"
+
+
+// define "HIV Negative Observation":
+//   "HIV Test Observation" O where O.value ~ "HIV Negative"
+
+
+// define "Is HIV Positive":
+//   exists ("HIV Positive Observation")
+
+
+// define "Is HIV Negative":
+//   exists ("HIV Negative Observation")
+
+
+define "Date of First Evidence of HIV Status":
+  Min("HIV Test Observation" O return O.effective)
+
+
+define "Date of First Evidence of HIV Positive":
+  Min("HIV Positive Observation" O return O.effective)
+
+
+define "Date of First Evidence of HIV Negative":
+  Min("HIV Negative Observation" O return O.effective)
+
+
+define "PMTCT HIV Status":
+  case
+    when "Date of First Evidence of HIV Positive" before start of "Measurement Period" then 'Known Positive'
+    when "Date of First Evidence of HIV Positive" during "Measurement Period" then 'Newly Identified Positive'
+    when "Date of First Evidence of HIV Negative" during "Measurement Period" then 'Newly Identified Negative'
+    else null
+  end
+
+
+define "Newly enrolled on antiretroviral therapy (ART) during measurement period":
+  "Date of First Evidence of ART" during "Measurement Period"
+
+
+define "Is Pregnant":
+  exists ([Condition: Cx."Pregnancy Codes"] C
+    where C.verificationStatus ~ FC."confirmed"
+      and C.clinicalStatus ~ FC."active"
+      and C.onset during "Measurement Period"
+  )
+
+
+define "Is Breastfeeding":
+  exists ([Observation: Cx."Breastfeeding Codes"] O
+    where O.status = 'final'
+      and O.effective during "Measurement Period"
+  )
+
+
+define "Newly enrolled on antiretroviral therapy (ART) during measurement period (pregnant and breastfeeding)":
+  "Is Pregnant" and "Is Breastfeeding" and "Date of First Evidence of ART" during "Measurement Period"
+
+
+define "Receiving antiretroviral therapy (ART) during measurement period":
+  exists ("ART Dates" D where D during "Measurement Period")
+    or exists (
+      "ART Therapy Condition" C
+        where Interval[C.onset, C.abatement] overlaps "Measurement Period"
+    )
+
+
+define "Year Preceding the Measurement Period":
+  Interval[start of "Measurement Period" - 1 year, start of "Measurement Period")
+
+
+define "Month Before the Year Preceding the Measurement Period":
+  Interval[start of "Year Preceding the Measurement Period" - 1 month, start of "Year Preceding the Measurement Period")
+
+
+define "Receiving antiretroviral therapy (ART) at 12 months after initiating":
+  "Date of First Evidence of ART" during "Month Before the Year Preceding the Measurement Period"
+    and "Receiving antiretroviral therapy (ART) during measurement period"
+
+
+define "Receiving antiretroviral therapy (ART) at 12 months after initiating (pregnant and breastfeeding)":
+  "Receiving antiretroviral therapy (ART) at 12 months after initiating"
+    and "Is Pregnant"
+    and "Is Breastfeeding"
+
+
+define "Initiated antiretroviral therapy (ART) in the 12 months prior to measurement period":
+  "Date of First Evidence of ART" during "Year Preceding the Measurement Period"
+
+
+define "Antenatal Care Visit":
+  [Encounter: Cx."Antenatal Care"] E
+    where E.status = 'finished'
+      and E.period during Interval[start of "Year Preceding the Measurement Period", end of "Measurement Period"]
+
+
+define "Live Birth Procedure":
+  [Procedure: Cx."Live Birth"] P
+    where P.status = 'completed'
+
+
+define "Antenatal Care Visit or Live Birth during the Measurement Period":
+  ("Is Pregnant" and exists ("Antenatal Care Visit" V where V.period during "Measurement Period"))
+    or exists ("Live Birth Procedure" P where P.performed during "Measurement Period")
+
+
+define "Antenatal Care Visit or Live Birth during Measurement Period (HIV Positive)":
+  "Is HIV Positive"
+    and "Antenatal Care Visit or Live Birth during the Measurement Period"
+
+
+define "HIV-positive, pregnant, and receiving antiretroviral therapy (ART) to reduce the risk of mother-to-child-transmission during pregnancy":
+  "Is HIV Positive"
+    and "Is Pregnant"
+    and "Receiving antiretroviral therapy (ART) during measurement period"
+
+// define "Viral Load Test Result":
+//   ["Observation": Cx."Viral Load Test"] O
+//     where O.status = 'final'
+//       and O.value is not null
+
+
+// define "Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)":
+//   "Is HIV Positive"
+//     and Cx."Receiving antiretroviral therapy (ART) during measurement period"
+//     and exists (
+//       Cx."Viral Load Test Result" R
+//         where R.effective during "Measurement Period"
+//           and R.value < 1000 '{copies}/mL'
+//       )
+
+
+define "Received HIV Testing Services (HTS) and Recevied Test Results":
+  ["Observation": Cx."HIV Testing Services"] O
+    where O.status = 'final'
+      and O.value is not null
+
+
+define "First antenatal care visit":
+  First("Antenatal Care Visit" V sort by start of period)
+
+
+// define "Date of First Evidence of HIV Status":
+//   Min("HIV Test Observation" O return O.effective)
+
+
+define "HIV Status Known at First Antenatal Care Visit":
+  "Date of First Evidence of HIV Status" on or before start of "First antenatal care visit".period
+
+
+define "Receiving antiretroviral therapty (ART) and Viral Load Measurement in the past 12 months":
+  "Receiving antiretroviral therapy (ART) during measurement period"
+    and exists (
+      "Viral Load Test Result" R
+        where R.effective during "Year Preceding the Measurement Period"
+    )

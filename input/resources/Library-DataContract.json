@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "DataContract",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "DataContract",
+  "title": "DataContract",
+  "description": "DataContract",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/DataContract",
+  "content": [
+    {
+      "id": "ig-loader-DataContract.cql"
+    }
+  ]
+}

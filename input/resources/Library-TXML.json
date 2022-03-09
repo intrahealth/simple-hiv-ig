@@ -1,0 +1,23 @@
+{
+  "resourceType": "Library",
+  "id": "TXML",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library",
+        "system": "http://terminology.hl7.org/CodeSystem/library-type"
+      }
+    ]
+  },
+  "name": "TXML",
+  "title": "TXML",
+  "description": "TXML",
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/TXML",
+  "content": [
+    {
+      "id": "ig-loader-TXML.cql"
+    }
+  ]
+}

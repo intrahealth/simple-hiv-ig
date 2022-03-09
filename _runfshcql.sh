@@ -31,10 +31,10 @@ done
 mv fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/
 mv fsh-generated/resources/ValueSet-* input/vocabulary/valueset/
 
-bash _refresh.sh 
-bash _genonce.sh -no-sushi 
+# bash _refresh.sh 
+# bash _genonce.sh -no-sushi 
 
 # load data
 # ./_runload.sh
 
-echo "Exit code: ${?}"
+# echo "Exit code: ${?}"
