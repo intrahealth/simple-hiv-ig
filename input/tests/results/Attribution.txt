@@ -1,0 +1,24 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Attribution
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+cql-options not found. Using default options.
+Patient=Patient(id=Patient-HIVSimple)
+Account=[Account/Account-HIVSimple]
+Coverage=[Coverage/Coverage-HIVSimple]
+Contract=null
+Owner=Organization/IntraHealth
+
+elapsed: 0.363 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Attribution
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+cql-options not found. Using default options.
+Patient=Patient(id=Patient-HIVSimple)
+Account=[Account/Account-HIVSimple]
+Coverage=[Coverage/Coverage-HIVSimple]
+Contract=null
+Owner=Organization/IntraHealth
+
+elapsed: -0.709 seconds
+

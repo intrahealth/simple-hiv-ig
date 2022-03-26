@@ -15,13 +15,22 @@ define function "GetId"(uri String):
 define "Account": 
     Last([Encounter]).account.reference.value
 
-define "Owner": 
-    Last([Account]).owner.reference.value
-
 define "Coverage":
     Last([Account]).coverage.coverage.reference.value
 
-// this has a systax error
+// account -> coverage -> contract
+// always shows null
+define "Contract":
+    Last([Coverage]).contract.reference.value
+
+
+
+// or this method
+
+define "Owner": 
+    Last([Account]).owner.reference.value
+
+// this has a syntax error
 // define "Beneficiary":
 //     [Coverage] C
 //         C.beneficiary
