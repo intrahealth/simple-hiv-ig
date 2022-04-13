@@ -144,3 +144,6 @@ The following errors were encountered during evaluation:
 [pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
 elapsed: 0.336 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/DASHDataElements
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
