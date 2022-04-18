@@ -11,7 +11,7 @@ include FHIRCommon version '4.0.1' called FC
 
 include DASHConcepts called Cx
 include DASHDataElements called PatientData
-include DASHStratifiers called HIVStrat
+include DASHStratifiers called DASHStrat
 
 context Patient
 
@@ -40,7 +40,7 @@ define "Numerator":
 // • 6 or more months of ARVs dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
 
 define "Stratifier": 
-  HIVStrat."Age Group/Sex/Location TXCURR"
+  DASHStrat."Age Group/Sex/Location TXCURR"
 
 
 // tbd

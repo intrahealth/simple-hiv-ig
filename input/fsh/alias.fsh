@@ -7,6 +7,7 @@ Alias: $contractaction = http://terminology.hl7.org/CodeSystem/contractaction
 Alias: $contract-actionstatus = http://hl7.org/fhir/contract-action-status
 Alias: $fm-status = http://hl7.org/fhir/fm-status
 Alias: $LNC = http://loinc.org
+// http://hl7.org/fhir/ValueSet/library-type
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population

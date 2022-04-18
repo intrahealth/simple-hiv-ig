@@ -90,18 +90,18 @@ Description: "DASHStratifiers"
 * content.id = "ig-loader-DASHStratifiers.cql"
 
 
-// Instance: HIVIndicators
-// InstanceOf: Library
-// Title: "HIVIndicators"
-// Description: "HIVIndicators"
-// * insert lib-common
-// * name = "HIVIndicators"
-// * title = "HIVIndicators"
-// * description = "HIVIndicators"
-// // * version = "0.1.0"
-// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/HIVIndicators"
-// // * identifier.value = "HIVIndicators"
-// * content.id = "ig-loader-HIVIndicators.cql"
+Instance: HIVIndicators
+InstanceOf: Library
+Title: "HIVIndicators"
+Description: "HIVIndicators"
+* insert lib-common
+* name = "HIVIndicators"
+* title = "HIVIndicators"
+* description = "HIVIndicators"
+// * version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/HIVIndicators"
+// * identifier.value = "HIVIndicators"
+* content.id = "ig-loader-HIVIndicators.cql"
 
 
 Instance: HTSTST

@@ -12,7 +12,7 @@ include FHIRCommon version '4.0.1' called FC
 
 include DASHConcepts called Cx
 include DASHDataElements called PatientData
-include DASHStratifiers called HIVStrat
+include DASHStratifiers called DASHStrat
 
 context Patient
 
@@ -32,7 +32,7 @@ define "Numerator":
 
 
 define "Stratifier": 
-  HIVStrat."Age Group/Sex/Location"
+  DASHStrat."Age Group/Sex/Location"
 
 
 

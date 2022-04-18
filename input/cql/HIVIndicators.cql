@@ -11,10 +11,10 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
-include DASHStratifiers called AR
+include DASHStratifiers called DASHStrat
 
 // SNOMED-CT, International Edition
-codesystem "SNOMED-CT": 'http://snomed.info/sct' // version 'http://snomed.info/sct/900000000000207008'
+codesystem "SNOMED-CT": 'http://snomed.info/sct'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "PMTCT HIV Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-hiv-status-codes' 
 // { 'known-positive', 'newly-identified-positive', 'newly-identified-negative' }
@@ -291,7 +291,7 @@ define "Receiving antiretroviral therapty (ART) and Viral Load Measurement in th
 define "Sex": Patient.gender
 
 // Age Group/Sex
-define "Age Group/Sex": AR."Age Group".code + ':' + "Sex"
+define "Age Group/Sex": DASHStrat."Age Group".code + ':' + "Sex"
 
 // Pregnant/Breastfeeding
 define "Pregnant/Breastfeeding":
@@ -310,4 +310,4 @@ define "HIV Test Results":
   end
 
 define "Age Group/Sex/HIV Test Results":
-  AR."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code
+  DASHStrat."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code

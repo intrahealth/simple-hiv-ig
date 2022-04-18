@@ -88,6 +88,15 @@
           </resource>
 
 
+          <resource>
+            <reference>
+              <reference value="Library/HIVIndicators"/>
+            </reference>
+            <name value="Library/HIVIndicators"/>
+            <description value="A simple example showing how examples are defined and referenced"/>
+          </resource>
+
+
           <!-- <resource>
             <reference>
               <reference value="Library/GoldenRecord"/>

@@ -4,7 +4,7 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
 include FHIRCommon version '4.0.1' called FC
-include HIVStratifiers called AR
+include DASHStratifiers called DASHStrat
 
 // SNOMED-CT, International Edition
 
@@ -34,10 +34,10 @@ define "Male":
   Patient.gender = 'male'
 
 define "Age Group":
-  AR."Age Group"
+  DASHStrat."Age Group"
 
 define "Age Group/Gender":
-  AR."Age Group".code + ':' + "Gender"
+  DASHStrat."Age Group".code + ':' + "Gender"
 
 define "Initial Population":
   true
@@ -116,7 +116,7 @@ define "HIV Test Results":
 
 // always null
 /* define "Age Group/Sex/HIV Test Results":
-  AR."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code */
+  DASHStrat."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code */
 
 
 // synthea uses copies/mL but fsh uses {copies}/mL which is official
@@ -170,7 +170,7 @@ define "Location ID":
 
 // not working for cql or evaluate-measure
 define "Gender/AgeGroup/Location":
-  "Age Group".code + ':' + "Sex" + ':' + "Location".id
+  DASHStrat."Age Group".code + ':' + "Sex" + ':' + "Location".id
 
 
 define "Most Recent Encounter Location Reference":
@@ -218,7 +218,7 @@ define "Most Recent Encounter Location Reference Reference Value":
 
 
 define "Age Group/Sex/Location 2":
-  "Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference Value"
+  DASHStrat."Age Group".code + ':' + "Sex" + ':' + "Most Recent Encounter Location Reference Reference Value"
 
 
 
