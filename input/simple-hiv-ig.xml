@@ -1,136 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-    <id value="simple.hiv.ig"/>
-    <url value="https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig"/>
-    <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-    <version value="0.1.0"/>
-    <name value="SimpleHIVIG"/>
-    <title value="Simple HIV IG"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="IntraHealth International"/>
-    <contact>
-        <telecom>
-            <system value="url"/>
-            <value value="http://hl7.org/Special/committees/[something]"/>
-        </telecom>
-    </contact>
-    <description value="A simple IG using HIV epidemic control as a an example for learners"/>
-    <!-- <jurisdiction>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+  <id value="simple.hiv.ig"/>
+  <url value="https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig"/>
+  <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
+  <version value="0.1.0"/>
+  <name value="SimpleHIVIG"/>
+  <title value="Simple HIV IG"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="IntraHealth International"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="A simple IG using HIV epidemic control as a an example for learners"/>
+  <!-- <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
     </coding>
   </jurisdiction> -->
-    <packageId value="simple.hiv.ig"/>
-    <license value="CC0-1.0"/>
-    <fhirVersion value="4.0.1"/>
-    <!-- need this -->
-    <!-- <dependsOn>
+  <packageId value="simple.hiv.ig"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <!-- need this -->
+  <!-- <dependsOn>
         <uri value="http://somewhere.org/fhir/uv/mycontentig/ImplementationGuide/example.fhir.uv.mycontentig"/>
         <packageId value="example.fhir.uv.myig"/>
         <version value="dev"/>
     </dependsOn> -->
-    <dependsOn id="sdc">
-      <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
-      <packageId value="hl7.fhir.uv.sdc"/>
-      <version value="3.0.0"/>
-    </dependsOn>  
-    <dependsOn id="cpg">
-        <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"/>
-        <packageId value="hl7.fhir.uv.cpg"/>
-        <version value="1.0.0"/>
-    </dependsOn>
-    <!-- need this -->
-    <dependsOn id="cqfm">
-        <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
-        <packageId value="hl7.fhir.us.cqfmeasures"/>
-        <version value="current"/>
-    </dependsOn>
-    <dependsOn id="cqf">
-        <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
-        <packageId value="cqf.fhir.common"/>
-        <version value="dev"/>
-    </dependsOn>
-    <definition>
+  <dependsOn id="sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
+    <packageId value="hl7.fhir.uv.sdc"/>
+    <version value="3.0.0"/>
+  </dependsOn>
+  <dependsOn id="cpg">
+    <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"/>
+    <packageId value="hl7.fhir.uv.cpg"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <!-- need this -->
+  <dependsOn id="cqfm">
+    <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
+    <packageId value="hl7.fhir.us.cqfmeasures"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="cqf">
+    <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
+    <packageId value="cqf.fhir.common"/>
+    <version value="dev"/>
+  </dependsOn>
+  <definition>
 
-        <resource>
-            <reference>
-              <reference value="Device/cqf-tooling"/>
-            </reference>
-            <name value="Device/cqf-tooling"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Device/cqf-tooling"/>
+      </reference>
+      <name value="Device/cqf-tooling"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Library/FHIRHelpers"/>
-            </reference>
-            <name value="Library/FHIRHelpers"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Library/FHIRHelpers"/>
+      </reference>
+      <name value="Library/FHIRHelpers"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Library/FHIRCommon"/>
-            </reference>
-            <name value="Library/FHIRCommon"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Library/FHIRCommon"/>
+      </reference>
+      <name value="Library/FHIRCommon"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Library/KitchenSink"/>
-            </reference>
-            <name value="Library/KitchenSink"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-
-
-          <resource>
-            <reference>
-              <reference value="Library/HIVIndicators"/>
-            </reference>
-            <name value="Library/HIVIndicators"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Library/KitchenSink"/>
+      </reference>
+      <name value="Library/KitchenSink"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
 
-          <!-- <resource>
+    <resource>
+      <reference>
+        <reference value="Library/HIVIndicators"/>
+      </reference>
+      <name value="Library/HIVIndicators"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <!-- <resource>
             <reference>
               <reference value="Library/GoldenRecord"/>
             </reference>
             <name value="Library/GoldenRecord"/>
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource> -->
-          
-          <resource>
-            <reference>
-              <reference value="Patient/Patient-GoldenRecord"/>
-            </reference>
-            <name value="Patient/Patient-GoldenRecord"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
 
-          <resource>
-            <reference>
-              <reference value="Patient/Patient-HIVSimple"/>
-            </reference>
-            <name value="Patient/Patient-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/Patient-GoldenRecord"/>
+      </reference>
+      <name value="Patient/Patient-GoldenRecord"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Patient/Patient-HIVSimple2"/>
-            </reference>
-            <name value="Patient/Patient-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/Patient-HIVSimple"/>
+      </reference>
+      <name value="Patient/Patient-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/Patient-HIVSimple2"/>
+      </reference>
+      <name value="Patient/Patient-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
 
-          <!-- <resource>
+    <!-- <resource>
             <reference>
               <reference value="Location/Location-HIVSimple"/>
             </reference>
@@ -146,72 +146,72 @@
             <description value="A simple example showing how examples are defined and referenced"/>
           </resource> -->
 
-          <resource>
-            <reference>
-              <reference value="Measure/JustAgeGroup"/>
-            </reference>
-            <name value="Measure/JustAgeGroup"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-                
-          <resource>
-            <reference>
-              <reference value="Bundle/Example-HIVSimple"/>
-            </reference>
-            <name value="Bundle/Example-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Measure/JustAgeGroup"/>
+      </reference>
+      <name value="Measure/JustAgeGroup"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Encounter/Encounter-HIVSimple"/>
-            </reference>
-            <name value="Encounter/Encounter-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/Example-HIVSimple"/>
+      </reference>
+      <name value="Bundle/Example-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Encounter/Encounter-HIVSimple2"/>
-            </reference>
-            <name value="Encounter/Encounter-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Encounter/Encounter-HIVSimple"/>
+      </reference>
+      <name value="Encounter/Encounter-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="DiagnosticReport/DiagnosticReport-HIVSimple"/>
-            </reference>
-            <name value="DiagnosticReport/DiagnosticReport-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Encounter/Encounter-HIVSimple2"/>
+      </reference>
+      <name value="Encounter/Encounter-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="DiagnosticReport/DiagnosticReport-HIVSimple2"/>
-            </reference>
-            <name value="DiagnosticReport/DiagnosticReport-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-HIVSimple"/>
+      </reference>
+      <name value="DiagnosticReport/DiagnosticReport-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Condition/Condition-HIVSimple2"/>
-            </reference>
-            <name value="Condition/Condition-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-HIVSimple2"/>
+      </reference>
+      <name value="DiagnosticReport/DiagnosticReport-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Condition/Condition-HIVSimple"/>
-            </reference>
-            <name value="Condition/Condition-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/Condition-HIVSimple2"/>
+      </reference>
+      <name value="Condition/Condition-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Condition/Condition-HIVSimple"/>
+      </reference>
+      <name value="Condition/Condition-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
 
-          <!-- <resource>
+    <!-- <resource>
             <reference>
               <reference value="Organization/Organization-HIVSimple"/>
             </reference>
@@ -228,207 +228,207 @@
           </resource>
  -->
 
-          <resource>
-            <reference>
-              <reference value="Condition/Condition-Pregnancy"/>
-            </reference>
-            <name value="Condition/Condition-Pregnancy"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/Condition-Pregnancy"/>
+      </reference>
+      <name value="Condition/Condition-Pregnancy"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Condition/Condition-Pregnancy2"/>
-            </reference>
-            <name value="Condition/Condition-Pregnancy2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/Condition-Pregnancy2"/>
+      </reference>
+      <name value="Condition/Condition-Pregnancy2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Observation/Observation-ViralLoad"/>
-            </reference>
-            <name value="Observation/Observation-ViralLoad"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/Observation-ViralLoad"/>
+      </reference>
+      <name value="Observation/Observation-ViralLoad"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Observation/Observation-ViralLoad2"/>
-            </reference>
-            <name value="Observation/Observation-ViralLoad2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/Observation-ViralLoad2"/>
+      </reference>
+      <name value="Observation/Observation-ViralLoad2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="DiagnosticReport/DiagnosticReport-ViralLoad"/>
-            </reference>
-            <name value="ODiagnosticReport/DiagnosticReport-ViralLoad"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-ViralLoad"/>
+      </reference>
+      <name value="ODiagnosticReport/DiagnosticReport-ViralLoad"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="DiagnosticReport/DiagnosticReport-ViralLoad2"/>
-            </reference>
-            <name value="DiagnosticReport/DiagnosticReport-ViralLoad2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport-ViralLoad2"/>
+      </reference>
+      <name value="DiagnosticReport/DiagnosticReport-ViralLoad2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Encounter/Encounter-ViralLoad"/>
-            </reference>
-            <name value="Encounter/Encounter-ViralLoad"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Encounter/Encounter-ViralLoad"/>
+      </reference>
+      <name value="Encounter/Encounter-ViralLoad"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Encounter/Encounter-ViralLoad2"/>
-            </reference>
-            <name value="Encounter/Encounter-ViralLoad2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Encounter/Encounter-ViralLoad2"/>
+      </reference>
+      <name value="Encounter/Encounter-ViralLoad2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Observation/Observation-HIVSimple"/>
-            </reference>
-            <name value="Observation/Observation-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/Observation-HIVSimple"/>
+      </reference>
+      <name value="Observation/Observation-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Observation/Observation-HIVSimple2"/>
-            </reference>
-            <name value="Observation/Observation-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/Observation-HIVSimple2"/>
+      </reference>
+      <name value="Observation/Observation-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Bundle/Example-HIVSimple2"/>
-            </reference>
-            <name value="Bundle/Example-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-          
-          <resource>
-            <reference>
-              <reference value="Measure/Cohort"/>
-            </reference>
-            <name value="Measure/Cohort"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/Example-HIVSimple2"/>
+      </reference>
+      <name value="Bundle/Example-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Measure/JustGender"/>
-            </reference>
-            <name value="Measure/JustGender"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-          
-          <resource>
-            <reference>
-              <reference value="Measure/JustLocation"/>
-            </reference>
-            <name value="Measure/JustLocation"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Measure/Cohort"/>
+      </reference>
+      <name value="Measure/Cohort"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Measure/AgeGroupGender"/>
-            </reference>
-            <name value="Measure/AgeGroupGender"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>          
+    <resource>
+      <reference>
+        <reference value="Measure/JustGender"/>
+      </reference>
+      <name value="Measure/JustGender"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Measure/AgeGroupGenderLocation"/>
-            </reference>
-            <name value="Measure/AgeGroupGenderLocation"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Measure/JustLocation"/>
+      </reference>
+      <name value="Measure/JustLocation"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Measure/SuppData"/>
-            </reference>
-            <name value="Measure/SuppData"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
-          
-        <page>
-            <!-- The root will always be toc.html - the template will force it if you don't do it -->
-            <nameUrl value="toc.html"/>
-            <title value="Table of Contents"/>
-            <generation value="html"/>
-            <page>
-                <nameUrl value="index.html"/>
-                <title value="MyIG Home Page"/>
-                <generation value="html"/>
-            </page>
-            <page>
-                <nameUrl value="background.html"/>
-                <title value="Background"/>
-                <generation value="html"/>
-            </page>
-            <page>
-                <nameUrl value="spec.html"/>
-                <title value="Detailed Specification"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="downloads.html"/>
-                <title value="Useful Downloads"/>
-                <generation value="html"/>
-            </page>
-            <page>
-                <nameUrl value="changes.html"/>
-                <title value="IG Change History"/>
-                <generation value="html"/>
-            </page>
-        </page>
-        <!-- copyright year is a mandatory parameter -->
-        <parameter>
-            <code value="copyrightyear"/>
-            <value value="2020+"/>
-        </parameter>
-        <!-- releaselabel should be the ballot status for HL7-published IGs. -->
-        <parameter>
-            <code value="releaselabel"/>
-            <value value="CI Build"/>
-        </parameter>
-        <parameter>
-            <code value="find-other-resources"/>
-            <value value="true"/>
-        </parameter>
-        <parameter>
-          <code value="path-resource"/>
-          <value value="input/examples-src/output"/>
-      </parameter>
-        <parameter>
-            <code value="path-resource"/>
-            <value value="input\history"/>
-        </parameter>
-        <!-- temp uncomment to use cql tooling -->
-        <!-- <parameter>
+    <resource>
+      <reference>
+        <reference value="Measure/AgeGroupGender"/>
+      </reference>
+      <name value="Measure/AgeGroupGender"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Measure/AgeGroupGenderLocation"/>
+      </reference>
+      <name value="Measure/AgeGroupGenderLocation"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Measure/SuppData"/>
+      </reference>
+      <name value="Measure/SuppData"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <page>
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="MyIG Home Page"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="background.html"/>
+        <title value="Background"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="spec.html"/>
+        <title value="Detailed Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Useful Downloads"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="changes.html"/>
+        <title value="IG Change History"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2020+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+    <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples-src/output"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
+    </parameter>
+    <!-- temp uncomment to use cql tooling -->
+    <!-- <parameter>
             <code value="path-binary"/>
             <value value="input\cql"/>
         </parameter> -->
-        <parameter>
-            <code value="path-resource" />
-            <value value="input/resources/device"/>
-        </parameter>
-        <parameter>
-            <code value="path-liquid"/>
-            <value value="templates\liquid"/>
-        </parameter>
-    </definition>
+    <parameter>
+      <code value="path-resource" />
+      <value value="input/resources/device"/>
+    </parameter>
+    <parameter>
+      <code value="path-liquid"/>
+      <value value="templates\liquid"/>
+    </parameter>
+  </definition>
 </ImplementationGuide>
