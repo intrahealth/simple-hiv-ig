@@ -288,7 +288,7 @@ define "Receiving antiretroviral therapty (ART) and Viral Load Measurement in th
 // Stratifiers
 
 // Sex
-define "Sex": Patient.gender
+define "Sex": Patient.gender.value
 
 // Age Group/Sex
 define "Age Group/Sex": DASHStrat."Age Group".code + ':' + "Sex"
