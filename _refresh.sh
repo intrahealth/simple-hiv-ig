@@ -6,7 +6,7 @@ ig_ini_path=$PWD/ig.ini
 
 set -e
 echo Checking internet connection...
-wget -q --spider tx.fhir.org
+wget -q --spider https://tx.fhir.org
 
 if [ $? -eq 0 ]; then
 	echo "Online"

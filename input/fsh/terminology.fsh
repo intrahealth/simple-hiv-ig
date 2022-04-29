@@ -13,6 +13,8 @@ Description: "OpenHIE CodeSystem"
 * ^caseSensitive = false
 * ^url = $OpenHIE
 * #cohort "cohort"
+// add this because it doesn't show up on snomed term servers
+* #432101000124108 "History of antiretroviral therapy (situation)"
 
 CodeSystem: PEPFAR
 Id: PEPFAR

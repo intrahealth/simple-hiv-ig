@@ -16,6 +16,8 @@ include DASHStratifiers called DASHStrat
 // SNOMED-CT, International Edition
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
 codesystem "LOINC": 'http://loinc.org'
+codesystem "OpenHIE": 'https://openhie.org'
+
 codesystem "PMTCT HIV Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-hiv-status-codes' 
 // { 'known-positive', 'newly-identified-positive', 'newly-identified-negative' }
 codesystem "PMTCT ART Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-art-status-codes' 
@@ -40,7 +42,8 @@ code "HIV Positive": '165816005' from "SNOMED-CT" display 'HIV Positive'
 code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set' // Used by CMS349
 
 // History of ART Therapy
-code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
+// code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
+code "History of antiretroviral therapy (situation)": '432101000124108' from "OpenHIE" display 'History of antiretroviral therapy (situation)'
 
 // PMTCT ART status
 code "Already on ART": 'already-on-art' from "PMTCT ART Status Codes" display 'Already on ART'

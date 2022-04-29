@@ -16,6 +16,7 @@ codesystem "LOINC": 'http://loinc.org'
 // codesystem "ICHI": 'https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi'
 // for hiv
 codesystem "ISO-8601-Derived Periods": 'http://ohie.org/CodeSystem/iso-8601-derived-periods' // { 'P0Y--P1Y', 'P1Y--P5Y', ... }
+codesystem "OpenHIE": 'https://openhie.org'
 
 //ValueSets
 //Codes
@@ -81,7 +82,8 @@ code "HIV Positive": '165816005' from "SNOMED-CT" display 'HIV Positive'
 // code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set' // Used by CMS349
 
 // History of ART Therapy
-code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
+// code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
+code "History of antiretroviral therapy (situation)": '432101000124108' from "OpenHIE" display 'History of antiretroviral therapy (situation)'
 
 // Pregnancy/Breastfeeding (PREG_BF)
 code "Pregnant": '146789000' from "SNOMED-CT" display 'Pregnant'
