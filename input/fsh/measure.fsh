@@ -4,11 +4,8 @@
 // todo: parameterized ruleset
 // e.g. accept vars
 
-// name can have _ but the id can have -. don't mix or you'll experience fhir standard stupidity.
-// 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
-
-// "TX_PVLS" represents a valid FHIR name but not a valid FHIR id. FHIR ids cannot contain "_"
-// name can have underscore but ID can have dash
+// name can have underscore not dash; ID can have dash but not underscore
+// don't mix or you'll experience fhir stupidity
 
 RuleSet: meas-common
 * identifier[0].system = "https://intrahealth.github.io/simple-hiv-ig/Measure/"
@@ -79,119 +76,119 @@ RuleSet: dash-common-numdenom
 
 // DASH measures
 
-Instance: HTS_TST
+Instance: DASHHTSTST
 InstanceOf: Measure
-Title: "HTS_TST"
-Description: "HTS_TST"
-* id = "HTS-TST"
+Title: "DASHHTSTST"
+Description: "DASHHTSTST"
+* id = "DASHHTSTST"
 * insert meas-common
-* name = "HTS_TST"
-* title = "HTS_TST"
-* description = "HTS_TST"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/HTS_TST"
-* identifier[0].value = "HTS_TST"
+* name = "DASHHTSTST"
+* title = "DASHHTSTST"
+* description = "HTSDASHTST"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHHTSTST"
+* identifier[0].value = "DASHHTSTST"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(HTSTST)
 * insert dash-common-numonly
 
 
-Instance: PMTCT_ART
+Instance: DASHPMTCTART
 InstanceOf: Measure
-Title: "PMTCT_ART"
-Description: "PMTCT_ART"
-* id = "PMTCT-ART"
+Title: "DASHPMTCTART"
+Description: "DASHPMTCTART"
+* id = "DASHPMTCTART"
 * insert meas-common
-* name = "PMTCT_ART"
-* title = "PMTCT_ART"
-* description = "PMTCT_ART"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/PMTCT_ART"
-* identifier[0].value = "PMTCT_ART"
+* name = "DASHPMTCTART"
+* title = "DASHPMTCTART"
+* description = "DASHPMTCTART"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHPMTCTART"
+* identifier[0].value = "DASHPMTCTART"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(PMTCTART)
 * insert dash-common-numdenom
 
 
-Instance: PMTCT_STAT
+Instance: DASHPMTCTSTAT
 InstanceOf: Measure
-Title: "PMTCT_STAT"
-Description: "PMTCT_STAT"
-* id = "PMTCT-STAT"
+Title: "DASHPMTCTSTAT"
+Description: "DASHPMTCTSTAT"
+* id = "DASHPMTCTSTAT"
 * insert meas-common
-* name = "PMTCT_STAT"
-* title = "PMTCT_STAT"
-* description = "PMTCT_STAT"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/PMTCT_STAT"
-* identifier[0].value = "PMTCT_STAT"
+* name = "DASHPMTCTSTAT"
+* title = "DASHPMTCTSTAT"
+* description = "DASHPMTCTSTAT"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHPMTCTSTAT"
+* identifier[0].value = "DASHPMTCTSTAT"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(PMTCTSTAT)
 * insert dash-common-numonly
 
 
-Instance: TX_CURR
+Instance: DASHTXCURR
 InstanceOf: Measure
-Title: "TX_CURR"
-Description: "TX_CURR"
-* id = "TX-CURR"
+Title: "DASHTXCURR"
+Description: "DASHTXCURR"
+* id = "DASHTXCURR"
 * insert meas-common
-* name = "TX_CURR"
-* title = "TX_CURR"
-* description = "TX_CURR"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX_CURR"
-* identifier[0].value = "TX_CURR"
+* name = "DASHTXCURR"
+* title = "DASHTXCURR"
+* description = "DASHTXCURR"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHTXCURR"
+* identifier[0].value = "DASHTXCURR"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(TXCURR)
 * insert dash-common-numonly
 
 
-Instance: TX_ML
+Instance: DASHTXML
 InstanceOf: Measure
-Title: "TX_ML"
-Description: "TX_ML"
-* id = "TX-ML"
+Title: "DASHTXML"
+Description: "DASHTXML"
+* id = "DASHTXML"
 * insert meas-common
-* name = "TX_ML"
-* title = "TX_ML"
-* description = "TX_ML"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX_ML"
-* identifier[0].value = "TX_ML"
+* name = "DASHTXML"
+* title = "DASHTXML"
+* description = "DASHTXML"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHTXML"
+* identifier[0].value = "DASHTXML"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(TXML)
 * insert dash-common-numonly
 
 
-Instance: TX_NEW
+Instance: DASHTXNEW
 InstanceOf: Measure
-Title: "TX_NEW"
-Description: "TX_NEW"
-* id = "TX-NEW"
+Title: "DASHTXNEW"
+Description: "DASHTXNEW"
+* id = "DASHTXNEW"
 * insert meas-common
-* name = "TX_NEW"
-* title = "TX_NEW"
-* description = "TX_NEW"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX_NEW"
-* identifier[0].value = "TX_NEW"
+* name = "DASHTXNEW"
+* title = "DASHTXNEW"
+* description = "DASHTXNEW"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHTXNEW"
+* identifier[0].value = "DASHTXNEW"
 // only numerator
 * scoring = $measure-scoring#cohort
 * library[+] = Canonical(TXNEW)
 * insert dash-common-numonly
 
 
-Instance: TX_PVLS
+Instance: DASHTXPVLS
 InstanceOf: Measure
-Title: "TX_PVLS"
-Description: "TX_PVLS"
-* id = "TX-PVLS"
+Title: "DASHTXPVLS"
+Description: "DASHTXPVLS"
+* id = "DASHTXPVLS"
 * insert meas-common
-* name = "TX_PVLS"
-* title = "TX_PVLS"
-* description = "TX_PVLS"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/TX_PVLS"
-* identifier[0].value = "TX_PVLS"
+* name = "DASHTXPVLS"
+* title = "DASHTXPVLS"
+* description = "DASHTXPVLS"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/DASHTXPVLS"
+* identifier[0].value = "DASHTXPVLS"
 * scoring = $measure-scoring#proportion
 * library[+] = Canonical(TXPVLS)
 * insert dash-common-numdenom
