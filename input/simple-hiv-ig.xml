@@ -48,11 +48,13 @@
     <packageId value="hl7.fhir.us.cqfmeasures"/>
     <version value="current"/>
   </dependsOn>
+  <!-- this is corrected and wrong in readme of cqf.common -->
   <dependsOn id="cqf">
-    <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
-    <packageId value="cqf.fhir.common"/>
-    <version value="dev"/>
+    <uri value="http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common"/>
+    <packageId value="fhir.cqf.common"/>
+    <version value="4.0.1"/>
   </dependsOn>
+
   <definition>
 
     <resource>
