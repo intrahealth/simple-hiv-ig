@@ -28,10 +28,10 @@
   <fhirVersion value="4.0.1"/>
   <!-- need this -->
   <!-- <dependsOn>
-        <uri value="http://somewhere.org/fhir/uv/mycontentig/ImplementationGuide/example.fhir.uv.mycontentig"/>
-        <packageId value="example.fhir.uv.myig"/>
-        <version value="dev"/>
-    </dependsOn> -->
+    <uri value="https://intrahealth.github.io/simple-hiv-ig/ImplementationGuide/simple.hiv.ig"/>
+    <packageId value="simple.hiv.ig"/>
+    <version value="dev"/>
+  </dependsOn> -->
   <dependsOn id="sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
     <packageId value="hl7.fhir.uv.sdc"/>
@@ -109,6 +109,15 @@
 
     <resource>
       <reference>
+        <reference value="Account/Account-HIVSimple"/>
+      </reference>
+      <name value="Account/Account-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
         <reference value="Patient/Patient-GoldenRecord"/>
       </reference>
       <name value="Patient/Patient-GoldenRecord"/>
@@ -131,22 +140,45 @@
       <description value="A simple example showing how examples are defined and referenced"/>
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="Location/Location-100"/>
+      </reference>
+      <name value="Location/Location-100"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-    <!-- <resource>
-            <reference>
-              <reference value="Location/Location-HIVSimple"/>
-            </reference>
-            <name value="Location/Location-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
+    <resource>
+      <reference>
+        <reference value="Location/Location-101"/>
+      </reference>
+      <name value="Location/Location-101"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-          <resource>
-            <reference>
-              <reference value="Location/Location-HIVSimple2"/>
-            </reference>
-            <name value="Location/Location-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource> -->
+    <resource>
+      <reference>
+        <reference value="Location/Location-102"/>
+      </reference>
+      <name value="Location/Location-102"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Location/Location-HIVSimple1"/>
+      </reference>
+      <name value="Location/Location-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Location/Location-HIVSimple2"/>
+      </reference>
+      <name value="Location/Location-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
     <resource>
       <reference>
@@ -212,23 +244,66 @@
       <description value="A simple example showing how examples are defined and referenced"/>
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="Organization/IntraHealth"/>
+      </reference>
+      <name value="Organization/IntraHealth"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
 
-    <!-- <resource>
-            <reference>
-              <reference value="Organization/Organization-HIVSimple"/>
-            </reference>
-            <name value="Organization/Organization-HIVSimple"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
 
-          <resource>
-            <reference>
-              <reference value="Organization/Organization-HIVSimple2"/>
-            </reference>
-            <name value="Organization/Organization-HIVSimple2"/>
-            <description value="A simple example showing how examples are defined and referenced"/>
-          </resource>
- -->
+
+    <resource>
+      <reference>
+        <reference value="Bundle/Example-Locations-Organizations"/>
+      </reference>
+      <name value="Bundle/Example-Locations-Organizations"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="Organization/Organization-100"/>
+      </reference>
+      <name value="Organization/Organization-100"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Organization-101"/>
+      </reference>
+      <name value="Organization/Organization-101"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Organization-102"/>
+      </reference>
+      <name value="Organization/Organization-102"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="Organization/Organization-HIVSimple1"/>
+      </reference>
+      <name value="Organization/Organization-HIVSimple1"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Organization-HIVSimple2"/>
+      </reference>
+      <name value="Organization/Organization-HIVSimple2"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
 
     <resource>
       <reference>
@@ -256,11 +331,32 @@
 
     <resource>
       <reference>
+        <reference value="Observation/Observation2-ViralLoad"/>
+      </reference>
+      <name value="Observation/Observation2-ViralLoad"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Observation/Observation-ViralLoad2"/>
       </reference>
       <name value="Observation/Observation-ViralLoad2"/>
       <description value="A simple example showing how examples are defined and referenced"/>
     </resource>
+
+
+
+
+
+    <resource>
+      <reference>
+        <reference value="Bundle/Attribution-Bundle"/>
+      </reference>
+      <name value="Bundle/Attribution-Bundle"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
 
     <resource>
       <reference>
@@ -277,6 +373,62 @@
       <name value="DiagnosticReport/DiagnosticReport-ViralLoad2"/>
       <description value="A simple example showing how examples are defined and referenced"/>
     </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReport2-ViralLoad"/>
+      </reference>
+      <name value="DiagnosticReport/DiagnosticReport2-ViralLoad"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+
+    <resource>
+      <reference>
+        <reference value="Encounter/Encounter2-ViralLoad"/>
+      </reference>
+      <name value="Encounter/Encounter2-ViralLoad"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/f201"/>
+      </reference>
+      <name value="QuestionnaireResponse/f201"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="Bundle/Attribution-Bundle-Simple"/>
+      </reference>
+      <name value="Bundle/Attribution-Bundle-Simple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="Coverage/Coverage-HIVSimple"/>
+      </reference>
+      <name value="Coverage/Coverage-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+
+    <resource>
+      <reference>
+        <reference value="Contract/Contract-HIVSimple"/>
+      </reference>
+      <name value="Contract/Contract-HIVSimple"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
 
     <resource>
       <reference>

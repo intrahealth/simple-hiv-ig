@@ -23,7 +23,7 @@ codesystem "OpenHIE": 'https://openhie.org'
 // for hiv
 code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV infection'
 code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
-code "Pregnant (finding)": '77386006' from "SNOMED-CT" display 'Pregnant (finding)'
+code "Pregnancy (finding)": '77386006' from "SNOMED-CT" display 'Pregnancy (finding)'
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection'
 
 // PEPFAR programs are required to report on the following standard age groups: 

@@ -32,7 +32,7 @@ Description: "Condition-Pregnancy"
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-HIVSimple2)
-* code = $SCT#77386006 "Pregnant (finding)"
+* code = $SCT#77386006 "Pregnancy (finding)"
 * onsetDateTime = "2020-01-01"
 * abatementDateTime = "2020-09-30"
 

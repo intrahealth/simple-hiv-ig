@@ -1,20 +1,13 @@
 {
- "package-id" : "openhie.simple-hiv-ig",
- "title" : "OpenHIE Simple HIV IG", 
- "canonical" : "http://hl7.org/fhir/uv/myig", 
- "introduction" : "OpenHIE Simple HIV IG",
+ "package-id" : "intrahealth.simple-hiv-ig",
+ "title" : "IntraHealth Simple HIV IG", 
+ "canonical" : "https://intrahealth.github.io/simple-hiv-ig", 
+ "introduction" : "IntraHealth Simple HIV IG",
  "list" : [{
   "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",
-  "path" : "http://hl7.org/fhir/ig/HL7/myig",
+  "path" : "https://intrahealth.github.io/simple-hiv-ig",
   "status" : "ci-build",
   "current" : true
- },{
-  "version" : "0.1.0",  
-  "date" : "2099-01-01", 
-  "desc" : "Initial STU ballot (Mmm yyyy Ballot)",   
-  "path" : "http://hl7.org/fhir/yyyyMmm/myig.html",   
-  "status" : "ballot",   
-  "sequence" : "DSTU 1"
  }]
 }

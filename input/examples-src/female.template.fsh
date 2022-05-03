@@ -29,7 +29,7 @@ Description: "Condition-Pregnancy-{{suffix}}"
 * clinicalStatus = $condition-clinical#inactive
 * verificationStatus = $condition-ver-status#confirmed
 * subject = Reference(Patient-{{suffix}})
-* code = $SCT#77386006 "Pregnant (finding)"
+* code = $SCT#77386006 "Pregnancy (finding)"
 * onsetDateTime = "{{pregstart}}"
 * abatementDateTime = "{{pregstop}}"
 

@@ -32,7 +32,7 @@ define "HIV Test Results":
 
 
 define "Pregnant":
-  exists ["Condition": Cx."Pregnant (finding)"]
+  exists ["Condition": Cx."Pregnancy (finding)"]
 
 
 define "HIV Test Exists":
