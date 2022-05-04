@@ -24,53 +24,53 @@ Description: "PEPFAR CodeSystem"
 * ^url = $PEPFAR
 * #4321 "Contract ID"
 
-CodeSystem: PMTCT-HIV-Status-Codes
-Id: PMTCT-HIV-Status-Codes
-Title: "PMTCT-HIV-Status-Codes CodeSystem"
-Description: "PMTCT-HIV-Status-Codes CodeSystem"
+CodeSystem: PMTCTHIVStatusCodes
+Id: PMTCTHIVStatusCodes
+Title: "PMTCTHIVStatusCodes CodeSystem"
+Description: "PMTCTHIVStatusCodes CodeSystem"
 * ^caseSensitive = false
-* ^url = $PMTCT-HIV-Status-Codes
+* ^url = $PMTCTHIVStatusCodes
 * #known-positive "known-positive"
 * #newly-identified-positive "newly-identified-positive"
 * #newly-identified-negative "newly-identified-negative"
 
-CodeSystem: PMTCT-ART-Status-Codes
-Id: PMTCT-ART-Status-Codes
-Title: "PMTCT-ART-Status-Codes CodeSystem"
-Description: "PMTCT-ART-Status-Codes CodeSystem"
+CodeSystem: PMTCTARTStatusCodes
+Id: PMTCTARTStatusCodes
+Title: "PMTCTARTStatusCodes CodeSystem"
+Description: "PMTCTARTStatusCodes CodeSystem"
 * ^caseSensitive = false
-* ^url = $PMTCT-ART-Status-Codes
+* ^url = $PMTCTARTStatusCodes
 * #already-on-art "already-on-art"
 * #new-on-art "new-on-art"
 
-ValueSet: Pregnancy-Codes
-Id: Pregnancy-Codes
+ValueSet: PregnancyCodes
+Id: PregnancyCodes
 Title: "Pregnancy Codes"
 Description: "Pregnancy Codes"
-* ^url = $Pregnancy-Codes
-* $SCT#1 "Pregnancy Code 1"
-* $SCT#2 "Pregnancy Code 2"
+* ^url = $PregnancyCodes
+* $SCT#1 "PregnancyCodes Code 1"
+* $SCT#2 "PregnancyCodes Code 2"
 
-ValueSet: Breastfeeding-Codes
-Id: Breastfeeding-Codes
-Title: "Breastfeeding-Codes"
-Description: "Breastfeeding-Codes"
+ValueSet: BreastfeedingCodes
+Id: BreastfeedingCodes
+Title: "BreastfeedingCodes"
+Description: "BreastfeedingCodes"
 * ^url = $Breastfeeding
-* $SCT#1 "Breastfeeding-Codes Code 1"
-* $SCT#2 "Breastfeeding-Codes Code 2"
+* $SCT#1 "BreastfeedingCodes Code 1"
+* $SCT#2 "BreastfeedingCodes Code 2"
 
-ValueSet: Viral-Load-Test
-Id: Viral-Load-Test
-Title: "Viral Load Test"
-Description: "Viral Load Test"
-* ^url = $Viral-Load-Test
-* $SCT#10 "Viral Load Test Code 1"
-* $SCT#20 "Viral Load Test Code 2"
+ValueSet: ViralLoadTest
+Id: ViralLoadTest
+Title: "ViralLoadTest"
+Description: "ViralLoadTest"
+* ^url = $ViralLoadTest
+* $SCT#10 "ViralLoadTest Code 1"
+* $SCT#20 "ViralLoadTest Code 2"
 
-ValueSet: HIV-Testing-Services
-Id: HIV-Testing-Services
-Title: "HIV Testing Services"
-Description: "HIV Testing Services"
-* ^url = $HIV-Testing-Services
-* $SCT#30 "HIV Testing Services Code 1"
-* $SCT#40 "HIV Testing Services Code 2"
+ValueSet: HIVTestingServices
+Id: HIVTestingServices
+Title: "HIVTestingServices"
+Description: "HIVTestingServices"
+* ^url = $HIVTestingServices
+* $SCT#30 "HIVTestingServices Code 1"
+* $SCT#40 "HIVTestingServices Code 2"
