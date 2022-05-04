@@ -1,10 +1,10 @@
 #!/bin/bash
 #DO NOT EDIT WITH WINDOWS
-tooling_jar=tooling-1.3.1-SNAPSHOT-jar-with-dependencies.jar
+tooling_jar=tooling-1.4.1-SNAPSHOT-jar-with-dependencies.jar
 input_cache_path=./input-cache
-datadictionary_filename="WHO-ANC.xlsx"
-datadictionary_sheetname="ANC.A. Registration,ANC.B5 Quick check,ANC.B6 Profile,ANC.B7 Symptoms & Follow-up,ANC.B8 Physical exam,ANC.B9 Lab tests & imaging,ANC.B10 Counselling & treatment,ANC.C. Referral,ANC.End End"
-scope="ANC"
+datadictionary_filename="HIV Adaptation Kit Data Dictionary-Draft.xlsx"
+datadictionary_sheetname="HIV.A. Registration,HIV.B. HTS Visit,HIV.C. PrEP Visit,HIV.D. Care-Treatment Core,HIV.D.Care-Treatment Additional,HIV.D. TB-HIV,HIV.E-F. PMTCT,HIV.G. Diagnostics,HIV.H. Follow Up,HIV.I. Referral,HIV. Surveillance,HIV. Configuration"
+scope="HIV"
 
 set -e
 

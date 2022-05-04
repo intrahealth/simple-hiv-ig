@@ -31,3 +31,6 @@ Thumbs.db
 # bulk data
 bulk/output
 input/fsh/bulk
+
+# draft DAK
+input/l2/HIV Adaptation Kit Data Dictionary-Draft.xlsx
