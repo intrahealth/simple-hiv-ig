@@ -1,6 +1,8 @@
 Running tests.
 Data path: /home/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/DataContract
 No terminology found at /home/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+
+
 Patient=Patient(id=Patient-HIVSimple)
 Identifier=[Tuple {
 	"id": 1234
@@ -26,4 +28,62 @@ Sex=female
 Viral Load Test Result Array with DateTime=[]
 
 elapsed: 0.298 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/DataContract
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Identifier=[Tuple {
+	"id": 1234
+	"namespace": UriType[https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR]
+}]
+Birthyear=1985
+Sex=female
+Viral Load Test Result Array with DateTime=[Tuple {
+	"value": DecimalType[741660]
+	"issued": 2020-06-01
+}, Tuple {
+	"value": DecimalType[800]
+	"issued": 2020-09-01
+}]
+
+Patient=Patient(id=Patient-HIVSimple2)
+Identifier=[Tuple {
+	"id": 1234
+	"namespace": UriType[https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR]
+}]
+Birthyear=1985
+Sex=female
+Viral Load Test Result Array with DateTime=[]
+
+elapsed: 0.246 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/DataContract
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Identifier=[Tuple {
+	"id": 1234
+	"namespace": UriType[https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR]
+}]
+Birthyear=1985
+Sex=female
+Viral Load Test Result Array with DateTime=[Tuple {
+	"value": DecimalType[741660]
+	"issued": 2020-06-01
+}, Tuple {
+	"value": DecimalType[800]
+	"issued": 2020-09-01
+}]
+
+Patient=Patient(id=Patient-HIVSimple2)
+Identifier=[Tuple {
+	"id": 1234
+	"namespace": UriType[https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR]
+}]
+Birthyear=1985
+Sex=female
+Viral Load Test Result Array with DateTime=[]
+
+elapsed: -0.001 seconds
 
