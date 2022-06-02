@@ -26,6 +26,17 @@ context Patient
 // Patients who receive ARVs for post-exposure prophylaxis (PEP) or 
 // short-term ART only for prevention (PrEP) should not be reported in this indicator.
 
+
+// define "Initial population":
+//     exists "Anti Retroviral Therapy Adults And Children"
+  
+// define "Anti Retroviral Therapy Adults And Children":
+//     ( [Observation: "Anti Retroviral Therapy"] ) o
+//         where o.value.coding[1]= "Coded Answer"
+//         or o.value.coding[2]= "Coded Answer"
+//         and o.status in {'final', 'amended', 'corrected'}
+//         and o.effective in day of "Measurement Period"
+
 define "Numerator-Exclusion": true
 
 

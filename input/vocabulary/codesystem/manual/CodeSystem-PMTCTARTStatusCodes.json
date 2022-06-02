@@ -1,0 +1,23 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PMTCTARTStatusCodes",
+  "id": "PMTCTARTStatusCodes",
+  "title": "PMTCTARTStatusCodes CodeSystem",
+  "description": "PMTCTARTStatusCodes CodeSystem",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-art-status-codes",
+  "concept": [
+    {
+      "code": "already-on-art",
+      "display": "already-on-art"
+    },
+    {
+      "code": "new-on-art",
+      "display": "new-on-art"
+    }
+  ],
+  "caseSensitive": false,
+  "count": 2
+}

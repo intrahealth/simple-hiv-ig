@@ -1,0 +1,33 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator=true
+
+elapsed: -0.113 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator=true
+
+elapsed: 0.22 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator=true
+
+elapsed: 0.659 seconds
+

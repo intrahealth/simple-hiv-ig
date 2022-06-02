@@ -1,0 +1,226 @@
+{
+  "resourceType": "Library",
+  "id": "PMTCTART",
+  "extension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
+    "valueReference": {
+      "reference": "Device/cqf-tooling"
+    }
+  } ],
+  "url": "https://intrahealth.github.io/simple-hiv-ig/Library/PMTCTART",
+  "name": "PMTCTART",
+  "title": "PMTCTART",
+  "status": "draft",
+  "experimental": true,
+  "type": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/library-type",
+      "code": "logic-library"
+    } ]
+  },
+  "description": "PMTCTART",
+  "relatedArtifact": [ {
+    "type": "depends-on",
+    "display": "FHIR model information",
+    "resource": "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"
+  }, {
+    "type": "depends-on",
+    "display": "Library FHIRHelpers",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers|4.0.1"
+  }, {
+    "type": "depends-on",
+    "display": "Library FC",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon|4.0.1"
+  }, {
+    "type": "depends-on",
+    "display": "Library Cx",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHConcepts"
+  }, {
+    "type": "depends-on",
+    "display": "Library PatientData",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHDataElements"
+  }, {
+    "type": "depends-on",
+    "display": "Library DASHStrat",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHStratifiers"
+  }, {
+    "type": "depends-on",
+    "display": "Library Cx",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHConcepts"
+  }, {
+    "type": "depends-on",
+    "display": "Library FHIRHelpers",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers|4.0.1"
+  }, {
+    "type": "depends-on",
+    "display": "Library FC",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon|4.0.1"
+  }, {
+    "type": "depends-on",
+    "display": "Library Cx",
+    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHConcepts"
+  }, {
+    "type": "depends-on",
+    "display": "Code system OpenHIE",
+    "resource": "https://openhie.org"
+  }, {
+    "type": "depends-on",
+    "display": "Code system ConditionVerificationStatusCodes",
+    "resource": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+  }, {
+    "type": "depends-on",
+    "display": "Code system ConditionClinicalStatusCodes",
+    "resource": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+  }, {
+    "type": "depends-on",
+    "display": "Code system ISO-8601-Derived Periods",
+    "resource": "http://ohie.org/CodeSystem/iso-8601-derived-periods"
+  }, {
+    "type": "depends-on",
+    "display": "Value set ART Medications",
+    "resource": "http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-art-medications"
+  } ],
+  "parameter": [ {
+    "name": "Measurement Period",
+    "use": "in",
+    "min": 0,
+    "max": "1",
+    "type": "Period"
+  }, {
+    "name": "Patient",
+    "use": "out",
+    "min": 0,
+    "max": "1",
+    "type": "Patient"
+  }, {
+    "name": "Denominator-Exclusion",
+    "use": "out",
+    "min": 0,
+    "max": "1",
+    "type": "boolean"
+  }, {
+    "name": "Denominator",
+    "use": "out",
+    "min": 0,
+    "max": "1",
+    "type": "boolean"
+  }, {
+    "name": "Numerator-Exclusion",
+    "use": "out",
+    "min": 0,
+    "max": "1",
+    "type": "boolean"
+  }, {
+    "name": "Numerator",
+    "use": "out",
+    "min": 0,
+    "max": "1",
+    "type": "boolean"
+  }, {
+    "name": "Stratifier",
+    "use": "out",
+    "min": 0,
+    "max": "1",
+    "type": "string"
+  } ],
+  "dataRequirement": [ {
+    "type": "Patient",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
+  }, {
+    "type": "Observation",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
+    "mustSupport": [ "code", "status", "effective" ],
+    "codeFilter": [ {
+      "path": "code",
+      "code": [ {
+        "system": "https://openhie.org",
+        "code": "432101000124108",
+        "display": "History of antiretroviral therapy (situation)"
+      } ]
+    } ]
+  }, {
+    "type": "Condition",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Condition" ],
+    "mustSupport": [ "code", "verificationStatus", "clinicalStatus", "onset", "abatement" ],
+    "codeFilter": [ {
+      "path": "code",
+      "code": [ {
+        "system": "https://openhie.org",
+        "code": "432101000124108",
+        "display": "History of antiretroviral therapy (situation)"
+      } ]
+    } ]
+  }, {
+    "type": "MedicationDispense",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/MedicationDispense" ],
+    "mustSupport": [ "medication", "status", "whenHandedOver" ],
+    "codeFilter": [ {
+      "path": "medication",
+      "valueSet": "http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-art-medications"
+    } ]
+  }, {
+    "type": "Observation",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
+    "mustSupport": [ "code", "status", "effective" ],
+    "codeFilter": [ {
+      "path": "code",
+      "code": [ {
+        "system": "https://openhie.org",
+        "code": "432101000124108",
+        "display": "History of antiretroviral therapy (situation)"
+      } ]
+    } ]
+  }, {
+    "type": "Condition",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Condition" ],
+    "mustSupport": [ "code", "verificationStatus", "clinicalStatus", "onset", "abatement" ],
+    "codeFilter": [ {
+      "path": "code",
+      "code": [ {
+        "system": "https://openhie.org",
+        "code": "432101000124108",
+        "display": "History of antiretroviral therapy (situation)"
+      } ]
+    } ]
+  }, {
+    "type": "MedicationDispense",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/MedicationDispense" ],
+    "mustSupport": [ "medication", "status", "whenHandedOver" ],
+    "codeFilter": [ {
+      "path": "medication",
+      "valueSet": "http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-art-medications"
+    } ]
+  }, {
+    "type": "Condition",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Condition" ],
+    "mustSupport": [ "code", "verificationStatus", "clinicalStatus", "onset", "abatement" ],
+    "codeFilter": [ {
+      "path": "code",
+      "code": [ {
+        "system": "https://openhie.org",
+        "code": "432101000124108",
+        "display": "History of antiretroviral therapy (situation)"
+      } ]
+    } ]
+  }, {
+    "type": "Patient",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
+  }, {
+    "type": "Encounter",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Encounter" ],
+    "mustSupport": [ "location" ]
+  }, {
+    "type": "Patient",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
+  } ],
+  "content": [ {
+    "contentType": "text/cql",
+    "data": "Ly8gUE1UQ1RfQVJULCBXSE8gSElWLklORC5WVC40IChzaW1pbGFyIHRvKQovLyBQZXJjZW50YWdlIG9mIEhJVi1wb3NpdGl2ZSBwcmVnbmFudCB3b21lbiB3aG8gcmVjZWl2ZWQgQVJUIHRvIHJlZHVjZSB0aGUgcmlzayBvZiAKLy8gbW90aGVyLXRvLWNoaWxkLXRyYW5zbWlzc2lvbiAoTVRDVCkgZHVyaW5nIHByZWduYW5jeQovLyBudW1lcmF0b3IgYW5kIGRlbm9taW5hdG9yCgpsaWJyYXJ5IFBNVENUQVJUCgp1c2luZyBGSElSIHZlcnNpb24gJzQuMC4xJwoKaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScKaW5jbHVkZSBGSElSQ29tbW9uIHZlcnNpb24gJzQuMC4xJyBjYWxsZWQgRkMKaW5jbHVkZSBEQVNIQ29uY2VwdHMgY2FsbGVkIEN4CmluY2x1ZGUgREFTSERhdGFFbGVtZW50cyBjYWxsZWQgUGF0aWVudERhdGEKaW5jbHVkZSBEQVNIU3RyYXRpZmllcnMgY2FsbGVkIERBU0hTdHJhdAoKY29udGV4dCBQYXRpZW50CgoKZGVmaW5lICJEZW5vbWluYXRvci1FeGNsdXNpb24iOiB0cnVlCgoKZGVmaW5lICJEZW5vbWluYXRvciI6IHRydWUKCgpkZWZpbmUgIk51bWVyYXRvci1FeGNsdXNpb24iOiB0cnVlCgoKZGVmaW5lICJOdW1lcmF0b3IiOgogIFBhdGllbnREYXRhLiJSZWNlaXZpbmcgYW50aXJldHJvdmlyYWwgdGhlcmFweSAoQVJUKSBkdXJpbmcgbWVhc3VyZW1lbnQgcGVyaW9kIgoKCmRlZmluZSAiU3RyYXRpZmllciI6IAogIERBU0hTdHJhdC4iQWdlIEdyb3VwL1NleC9Mb2NhdGlvbiIKCgo="
+  }, {
+    "contentType": "application/elm+xml",
+    "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGxpYnJhcnkgeG1sbnM9InVybjpobDctb3JnOmVsbTpyMSIgeG1sbnM6dD0idXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxuczp4c2Q9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczpmaGlyPSJodHRwOi8vaGw3Lm9yZy9maGlyIiB4bWxuczpxZG00Mz0idXJuOmhlYWx0aGl0LWdvdjpxZG06djRfMyIgeG1sbnM6cWRtNTM9InVybjpoZWFsdGhpdC1nb3Y6cWRtOnY1XzMiIHhtbG5zOmE9InVybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMSI+CiAgIDxhbm5vdGF0aW9uIHRyYW5zbGF0b3JWZXJzaW9uPSIxLjQiIHRyYW5zbGF0b3JPcHRpb25zPSJFbmFibGVMb2NhdG9ycyxEaXNhYmxlTGlzdERlbW90aW9uLERpc2FibGVMaXN0UHJvbW90aW9uIiB4c2k6dHlwZT0iYTpDcWxUb0VsbUluZm8iLz4KICAgPGlkZW50aWZpZXIgaWQ9IlBNVENUQVJUIiBzeXN0ZW09Imh0dHBzOi8vaW50cmFoZWFsdGguZ2l0aHViLmlvL3NpbXBsZS1oaXYtaWciLz4KICAgPHNjaGVtYUlkZW50aWZpZXIgaWQ9InVybjpobDctb3JnOmVsbSIgdmVyc2lvbj0icjEiLz4KICAgPHVzaW5ncz4KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IlN5c3RlbSIgdXJpPSJ1cm46aGw3LW9yZzplbG0tdHlwZXM6cjEiLz4KICAgICAgPGRlZiBsb2NhdG9yPSI4OjEtODoyNiIgbG9jYWxJZGVudGlmaWVyPSJGSElSIiB1cmk9Imh0dHA6Ly9obDcub3JnL2ZoaXIiIHZlcnNpb249IjQuMC4xIi8+CiAgIDwvdXNpbmdzPgogICA8aW5jbHVkZXM+CiAgICAgIDxkZWYgbG9jYXRvcj0iMTA6MS0xMDozNSIgbG9jYWxJZGVudGlmaWVyPSJGSElSSGVscGVycyIgcGF0aD0iaHR0cHM6Ly9pbnRyYWhlYWx0aC5naXRodWIuaW8vc2ltcGxlLWhpdi1pZy9GSElSSGVscGVycyIgdmVyc2lvbj0iNC4wLjEiLz4KICAgICAgPGRlZiBsb2NhdG9yPSIxMToxLTExOjQ0IiBsb2NhbElkZW50aWZpZXI9IkZDIiBwYXRoPSJodHRwczovL2ludHJhaGVhbHRoLmdpdGh1Yi5pby9zaW1wbGUtaGl2LWlnL0ZISVJDb21tb24iIHZlcnNpb249IjQuMC4xIi8+CiAgICAgIDxkZWYgbG9jYXRvcj0iMTI6MS0xMjozMCIgbG9jYWxJZGVudGlmaWVyPSJDeCIgcGF0aD0iaHR0cHM6Ly9pbnRyYWhlYWx0aC5naXRodWIuaW8vc2ltcGxlLWhpdi1pZy9EQVNIQ29uY2VwdHMiLz4KICAgICAgPGRlZiBsb2NhdG9yPSIxMzoxLTEzOjQzIiBsb2NhbElkZW50aWZpZXI9IlBhdGllbnREYXRhIiBwYXRoPSJodHRwczovL2ludHJhaGVhbHRoLmdpdGh1Yi5pby9zaW1wbGUtaGl2LWlnL0RBU0hEYXRhRWxlbWVudHMiLz4KICAgICAgPGRlZiBsb2NhdG9yPSIxNDoxLTE0OjQwIiBsb2NhbElkZW50aWZpZXI9IkRBU0hTdHJhdCIgcGF0aD0iaHR0cHM6Ly9pbnRyYWhlYWx0aC5naXRodWIuaW8vc2ltcGxlLWhpdi1pZy9EQVNIU3RyYXRpZmllcnMiLz4KICAgPC9pbmNsdWRlcz4KICAgPGNvbnRleHRzPgogICAgICA8ZGVmIGxvY2F0b3I9IjE2OjEtMTY6MTUiIG5hbWU9IlBhdGllbnQiLz4KICAgPC9jb250ZXh0cz4KICAgPHN0YXRlbWVudHM+CiAgICAgIDxkZWYgbG9jYXRvcj0iMTY6MS0xNjoxNSIgbmFtZT0iUGF0aWVudCIgY29udGV4dD0iUGF0aWVudCI+CiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJTaW5nbGV0b25Gcm9tIj4KICAgICAgICAgICAgPG9wZXJhbmQgbG9jYXRvcj0iMTY6MS0xNjoxNSIgZGF0YVR5cGU9ImZoaXI6UGF0aWVudCIgdGVtcGxhdGVJZD0iaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1BhdGllbnQiIHhzaTp0eXBlPSJSZXRyaWV2ZSIvPgogICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIGxvY2F0b3I9IjE5OjEtMTk6MzYiIG5hbWU9IkRlbm9taW5hdG9yLUV4Y2x1c2lvbiIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIGxvY2F0b3I9IjE5OjMzLTE5OjM2IiB2YWx1ZVR5cGU9InQ6Qm9vbGVhbiIgdmFsdWU9InRydWUiIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIGxvY2F0b3I9IjIyOjEtMjI6MjYiIG5hbWU9IkRlbm9taW5hdG9yIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24gbG9jYXRvcj0iMjI6MjMtMjI6MjYiIHZhbHVlVHlwZT0idDpCb29sZWFuIiB2YWx1ZT0idHJ1ZSIgeHNpOnR5cGU9IkxpdGVyYWwiLz4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbG9jYXRvcj0iMjU6MS0yNTozNCIgbmFtZT0iTnVtZXJhdG9yLUV4Y2x1c2lvbiIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIGxvY2F0b3I9IjI1OjMxLTI1OjM0IiB2YWx1ZVR5cGU9InQ6Qm9vbGVhbiIgdmFsdWU9InRydWUiIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIGxvY2F0b3I9IjI4OjEtMjk6ODAiIG5hbWU9Ik51bWVyYXRvciIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIGxvY2F0b3I9IjI5OjMtMjk6ODAiIG5hbWU9IlJlY2VpdmluZyBhbnRpcmV0cm92aXJhbCB0aGVyYXB5IChBUlQpIGR1cmluZyBtZWFzdXJlbWVudCBwZXJpb2QiIGxpYnJhcnlOYW1lPSJQYXRpZW50RGF0YSIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbG9jYXRvcj0iMzI6MS0zMzozNiIgbmFtZT0iU3RyYXRpZmllciIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIGxvY2F0b3I9IjMzOjMtMzM6MzYiIG5hbWU9IkFnZSBHcm91cC9TZXgvTG9jYXRpb24iIGxpYnJhcnlOYW1lPSJEQVNIU3RyYXQiIHhzaTp0eXBlPSJFeHByZXNzaW9uUmVmIi8+CiAgICAgIDwvZGVmPgogICA8L3N0YXRlbWVudHM+CjwvbGlicmFyeT4K"
+  }, {
+    "contentType": "application/elm+json",
+    "data": "ewogICAibGlicmFyeSIgOiB7CiAgICAgICJhbm5vdGF0aW9uIiA6IFsgewogICAgICAgICAidHJhbnNsYXRvclZlcnNpb24iIDogIjEuNCIsCiAgICAgICAgICJ0cmFuc2xhdG9yT3B0aW9ucyIgOiAiRW5hYmxlTG9jYXRvcnMsRGlzYWJsZUxpc3REZW1vdGlvbixEaXNhYmxlTGlzdFByb21vdGlvbiIsCiAgICAgICAgICJ0eXBlIiA6ICJDcWxUb0VsbUluZm8iCiAgICAgIH0gXSwKICAgICAgImlkZW50aWZpZXIiIDogewogICAgICAgICAiaWQiIDogIlBNVENUQVJUIiwKICAgICAgICAgInN5c3RlbSIgOiAiaHR0cHM6Ly9pbnRyYWhlYWx0aC5naXRodWIuaW8vc2ltcGxlLWhpdi1pZyIKICAgICAgfSwKICAgICAgInNjaGVtYUlkZW50aWZpZXIiIDogewogICAgICAgICAiaWQiIDogInVybjpobDctb3JnOmVsbSIsCiAgICAgICAgICJ2ZXJzaW9uIiA6ICJyMSIKICAgICAgfSwKICAgICAgInVzaW5ncyIgOiB7CiAgICAgICAgICJkZWYiIDogWyB7CiAgICAgICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIlN5c3RlbSIsCiAgICAgICAgICAgICJ1cmkiIDogInVybjpobDctb3JnOmVsbS10eXBlczpyMSIKICAgICAgICAgfSwgewogICAgICAgICAgICAibG9jYXRvciIgOiAiODoxLTg6MjYiLAogICAgICAgICAgICAibG9jYWxJZGVudGlmaWVyIiA6ICJGSElSIiwKICAgICAgICAgICAgInVyaSIgOiAiaHR0cDovL2hsNy5vcmcvZmhpciIsCiAgICAgICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSIKICAgICAgICAgfSBdCiAgICAgIH0sCiAgICAgICJpbmNsdWRlcyIgOiB7CiAgICAgICAgICJkZWYiIDogWyB7CiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxMDoxLTEwOjM1IiwKICAgICAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiRkhJUkhlbHBlcnMiLAogICAgICAgICAgICAicGF0aCIgOiAiaHR0cHM6Ly9pbnRyYWhlYWx0aC5naXRodWIuaW8vc2ltcGxlLWhpdi1pZy9GSElSSGVscGVycyIsCiAgICAgICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSIKICAgICAgICAgfSwgewogICAgICAgICAgICAibG9jYXRvciIgOiAiMTE6MS0xMTo0NCIsCiAgICAgICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIkZDIiwKICAgICAgICAgICAgInBhdGgiIDogImh0dHBzOi8vaW50cmFoZWFsdGguZ2l0aHViLmlvL3NpbXBsZS1oaXYtaWcvRkhJUkNvbW1vbiIsCiAgICAgICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSIKICAgICAgICAgfSwgewogICAgICAgICAgICAibG9jYXRvciIgOiAiMTI6MS0xMjozMCIsCiAgICAgICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIkN4IiwKICAgICAgICAgICAgInBhdGgiIDogImh0dHBzOi8vaW50cmFoZWFsdGguZ2l0aHViLmlvL3NpbXBsZS1oaXYtaWcvREFTSENvbmNlcHRzIgogICAgICAgICB9LCB7CiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxMzoxLTEzOjQzIiwKICAgICAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiUGF0aWVudERhdGEiLAogICAgICAgICAgICAicGF0aCIgOiAiaHR0cHM6Ly9pbnRyYWhlYWx0aC5naXRodWIuaW8vc2ltcGxlLWhpdi1pZy9EQVNIRGF0YUVsZW1lbnRzIgogICAgICAgICB9LCB7CiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxNDoxLTE0OjQwIiwKICAgICAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiREFTSFN0cmF0IiwKICAgICAgICAgICAgInBhdGgiIDogImh0dHBzOi8vaW50cmFoZWFsdGguZ2l0aHViLmlvL3NpbXBsZS1oaXYtaWcvREFTSFN0cmF0aWZpZXJzIgogICAgICAgICB9IF0KICAgICAgfSwKICAgICAgImNvbnRleHRzIiA6IHsKICAgICAgICAgImRlZiIgOiBbIHsKICAgICAgICAgICAgImxvY2F0b3IiIDogIjE2OjEtMTY6MTUiLAogICAgICAgICAgICAibmFtZSIgOiAiUGF0aWVudCIKICAgICAgICAgfSBdCiAgICAgIH0sCiAgICAgICJzdGF0ZW1lbnRzIiA6IHsKICAgICAgICAgImRlZiIgOiBbIHsKICAgICAgICAgICAgImxvY2F0b3IiIDogIjE2OjEtMTY6MTUiLAogICAgICAgICAgICAibmFtZSIgOiAiUGF0aWVudCIsCiAgICAgICAgICAgICJjb250ZXh0IiA6ICJQYXRpZW50IiwKICAgICAgICAgICAgImV4cHJlc3Npb24iIDogewogICAgICAgICAgICAgICAidHlwZSIgOiAiU2luZ2xldG9uRnJvbSIsCiAgICAgICAgICAgICAgICJvcGVyYW5kIiA6IHsKICAgICAgICAgICAgICAgICAgImxvY2F0b3IiIDogIjE2OjEtMTY6MTUiLAogICAgICAgICAgICAgICAgICAiZGF0YVR5cGUiIDogIntodHRwOi8vaGw3Lm9yZy9maGlyfVBhdGllbnQiLAogICAgICAgICAgICAgICAgICAidGVtcGxhdGVJZCIgOiAiaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1BhdGllbnQiLAogICAgICAgICAgICAgICAgICAidHlwZSIgOiAiUmV0cmlldmUiCiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICB9LCB7CiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxOToxLTE5OjM2IiwKICAgICAgICAgICAgIm5hbWUiIDogIkRlbm9taW5hdG9yLUV4Y2x1c2lvbiIsCiAgICAgICAgICAgICJjb250ZXh0IiA6ICJQYXRpZW50IiwKICAgICAgICAgICAgImFjY2Vzc0xldmVsIiA6ICJQdWJsaWMiLAogICAgICAgICAgICAiZXhwcmVzc2lvbiIgOiB7CiAgICAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxOTozMy0xOTozNiIsCiAgICAgICAgICAgICAgICJ2YWx1ZVR5cGUiIDogInt1cm46aGw3LW9yZzplbG0tdHlwZXM6cjF9Qm9vbGVhbiIsCiAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAidHJ1ZSIsCiAgICAgICAgICAgICAgICJ0eXBlIiA6ICJMaXRlcmFsIgogICAgICAgICAgICB9CiAgICAgICAgIH0sIHsKICAgICAgICAgICAgImxvY2F0b3IiIDogIjIyOjEtMjI6MjYiLAogICAgICAgICAgICAibmFtZSIgOiAiRGVub21pbmF0b3IiLAogICAgICAgICAgICAiY29udGV4dCIgOiAiUGF0aWVudCIsCiAgICAgICAgICAgICJhY2Nlc3NMZXZlbCIgOiAiUHVibGljIiwKICAgICAgICAgICAgImV4cHJlc3Npb24iIDogewogICAgICAgICAgICAgICAibG9jYXRvciIgOiAiMjI6MjMtMjI6MjYiLAogICAgICAgICAgICAgICAidmFsdWVUeXBlIiA6ICJ7dXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxfUJvb2xlYW4iLAogICAgICAgICAgICAgICAidmFsdWUiIDogInRydWUiLAogICAgICAgICAgICAgICAidHlwZSIgOiAiTGl0ZXJhbCIKICAgICAgICAgICAgfQogICAgICAgICB9LCB7CiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIyNToxLTI1OjM0IiwKICAgICAgICAgICAgIm5hbWUiIDogIk51bWVyYXRvci1FeGNsdXNpb24iLAogICAgICAgICAgICAiY29udGV4dCIgOiAiUGF0aWVudCIsCiAgICAgICAgICAgICJhY2Nlc3NMZXZlbCIgOiAiUHVibGljIiwKICAgICAgICAgICAgImV4cHJlc3Npb24iIDogewogICAgICAgICAgICAgICAibG9jYXRvciIgOiAiMjU6MzEtMjU6MzQiLAogICAgICAgICAgICAgICAidmFsdWVUeXBlIiA6ICJ7dXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxfUJvb2xlYW4iLAogICAgICAgICAgICAgICAidmFsdWUiIDogInRydWUiLAogICAgICAgICAgICAgICAidHlwZSIgOiAiTGl0ZXJhbCIKICAgICAgICAgICAgfQogICAgICAgICB9LCB7CiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIyODoxLTI5OjgwIiwKICAgICAgICAgICAgIm5hbWUiIDogIk51bWVyYXRvciIsCiAgICAgICAgICAgICJjb250ZXh0IiA6ICJQYXRpZW50IiwKICAgICAgICAgICAgImFjY2Vzc0xldmVsIiA6ICJQdWJsaWMiLAogICAgICAgICAgICAiZXhwcmVzc2lvbiIgOiB7CiAgICAgICAgICAgICAgICJsb2NhdG9yIiA6ICIyOTozLTI5OjgwIiwKICAgICAgICAgICAgICAgIm5hbWUiIDogIlJlY2VpdmluZyBhbnRpcmV0cm92aXJhbCB0aGVyYXB5IChBUlQpIGR1cmluZyBtZWFzdXJlbWVudCBwZXJpb2QiLAogICAgICAgICAgICAgICAibGlicmFyeU5hbWUiIDogIlBhdGllbnREYXRhIiwKICAgICAgICAgICAgICAgInR5cGUiIDogIkV4cHJlc3Npb25SZWYiCiAgICAgICAgICAgIH0KICAgICAgICAgfSwgewogICAgICAgICAgICAibG9jYXRvciIgOiAiMzI6MS0zMzozNiIsCiAgICAgICAgICAgICJuYW1lIiA6ICJTdHJhdGlmaWVyIiwKICAgICAgICAgICAgImNvbnRleHQiIDogIlBhdGllbnQiLAogICAgICAgICAgICAiYWNjZXNzTGV2ZWwiIDogIlB1YmxpYyIsCiAgICAgICAgICAgICJleHByZXNzaW9uIiA6IHsKICAgICAgICAgICAgICAgImxvY2F0b3IiIDogIjMzOjMtMzM6MzYiLAogICAgICAgICAgICAgICAibmFtZSIgOiAiQWdlIEdyb3VwL1NleC9Mb2NhdGlvbiIsCiAgICAgICAgICAgICAgICJsaWJyYXJ5TmFtZSIgOiAiREFTSFN0cmF0IiwKICAgICAgICAgICAgICAgInR5cGUiIDogIkV4cHJlc3Npb25SZWYiCiAgICAgICAgICAgIH0KICAgICAgICAgfSBdCiAgICAgIH0KICAgfQp9"
+  } ]
+}

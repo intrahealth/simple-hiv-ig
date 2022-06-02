@@ -13,8 +13,8 @@
 # create bulk test data
 # ./_runcreate.sh
 
-# use refresh hack
-sushi
+# use refresh hack, mind the .
+sushi .
 
 # move vocabulary to the right place
 mv fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/manual/

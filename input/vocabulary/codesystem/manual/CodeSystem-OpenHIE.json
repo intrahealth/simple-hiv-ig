@@ -1,0 +1,23 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "OpenHIE",
+  "id": "OpenHIE",
+  "title": "OpenHIE CodeSystem",
+  "description": "OpenHIE CodeSystem",
+  "version": "0.1.0",
+  "url": "https://openhie.org",
+  "concept": [
+    {
+      "code": "cohort",
+      "display": "cohort"
+    },
+    {
+      "code": "432101000124108",
+      "display": "History of antiretroviral therapy (situation)"
+    }
+  ],
+  "caseSensitive": false,
+  "count": 2
+}

@@ -90,6 +90,20 @@ Description: "DASHStratifiers"
 * content.id = "ig-loader-DASHStratifiers.cql"
 
 
+Instance: EasyLib
+InstanceOf: Library
+Title: "EasyLib"
+Description: "EasyLib"
+* insert lib-common
+* name = "EasyLib"
+* title = "EasyLib"
+* description = "EasyLib"
+// * version = "4.0.1"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/EasyLib"
+// * identifier.value = "EasyLib"
+* content.id = "ig-loader-EasyLib.cql"
+
+
 Instance: HIVIndicators
 InstanceOf: Library
 Title: "HIVIndicators"

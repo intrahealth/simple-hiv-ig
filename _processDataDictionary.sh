@@ -1,6 +1,6 @@
 #!/bin/bash
 #DO NOT EDIT WITH WINDOWS
-tooling_jar=tooling-1.4.1-SNAPSHOT-jar-with-dependencies.jar
+tooling_jar=tooling-1.3.2-SNAPSHOT-jar-with-dependencies.jar
 input_cache_path=./input-cache
 datadictionary_filename="HIV Adaptation Kit Data Dictionary-Draft.xlsx"
 datadictionary_sheetname="HIV.A. Registration,HIV.B. HTS Visit,HIV.C. PrEP Visit,HIV.D. Care-Treatment Core,HIV.D.Care-Treatment Additional,HIV.D. TB-HIV,HIV.E-F. PMTCT,HIV.G. Diagnostics,HIV.H. Follow Up,HIV.I. Referral,HIV. Surveillance,HIV. Configuration"

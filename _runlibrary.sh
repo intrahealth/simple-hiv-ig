@@ -11,7 +11,7 @@ export FHIR="https://cloud.alphora.com/sandbox/r4/cqm/fhir"
 export HEADER="Content-Type: application/fhir+json"
 
 # use refresh hack
-sushi
+sushi .
 mv fsh-generated/resources/Library-* input/resources/
 bash _refresh.sh
 bash _genonce.sh -no-sushi

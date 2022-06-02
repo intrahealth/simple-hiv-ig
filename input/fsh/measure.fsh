@@ -427,3 +427,25 @@ Description: "SuppData"
   * criteria.expression = "Location Code Revised"
 
 
+Instance: Easy
+InstanceOf: Measure
+Title: "Easy"
+Description: "Easy"
+* insert meas-common
+* name = "Easy"
+* title = "Easy"
+* description = "Easy"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Measure/Easy"
+* identifier[0].value = "Easy"
+* scoring = $measure-scoring#proportion
+* library[+] = Canonical(EasyLib)
+* group[+]
+  * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Numerator"
+    * code = $measure-population#numerator
+    * criteria.language = #text/cql
+    * criteria.expression = "Numerator"
+    // doesn't work
+    // * criteria.language = #text/fhirpath
+    // * criteria.expression = "Patient.gender = 'female'"

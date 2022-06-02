@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ViralLoadTest",
+  "id": "ViralLoadTest",
+  "title": "ViralLoadTest",
+  "description": "ViralLoadTest",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "10",
+            "display": "ViralLoadTest Code 1"
+          },
+          {
+            "code": "20",
+            "display": "ViralLoadTest Code 2"
+          }
+        ]
+      }
+    ]
+  }
+}
