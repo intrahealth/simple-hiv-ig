@@ -449,3 +449,8 @@ Description: "Easy"
     // doesn't work
     // * criteria.language = #text/fhirpath
     // * criteria.expression = "Patient.gender = 'female'"
+  * population[+]
+    * description = "Denominator"
+    * code = $measure-population#denominator
+    * criteria.language = #text/cql
+    * criteria.expression = "Denominator"

@@ -31,3 +31,27 @@ Numerator=true
 
 elapsed: 0.659 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator=true
+
+elapsed: 0.574 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator=true
+Denominator=true
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator=true
+Denominator=true
+
+elapsed: 0.031 seconds
+

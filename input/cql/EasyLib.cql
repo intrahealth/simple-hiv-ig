@@ -10,3 +10,5 @@ context Patient
 
 define "Numerator": 
   Patient.gender.value = 'female'
+
+define "Denominator": true
