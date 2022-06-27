@@ -26,3 +26,10 @@ Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/
 
 elapsed: 0.534 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/DASHConcepts
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+
+
+elapsed: -0.389 seconds
+

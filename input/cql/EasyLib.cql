@@ -1,4 +1,4 @@
-library EasyLib
+library EasyLib version '0.1.0'
 
 using FHIR version '4.0.1'
 
@@ -8,7 +8,6 @@ include FHIRHelpers version '4.0.1'
 
 context Patient
 
-define "Numerator": 
-  Patient.gender.value = 'female'
+define "Numerator": true
 
 define "Denominator": true

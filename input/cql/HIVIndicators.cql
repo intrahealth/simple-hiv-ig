@@ -1,5 +1,5 @@
 // https://raw.githubusercontent.com/cqframework/hiv-indicators/master/input/cql/HIVIndicators.cql
-library HIVIndicators
+library HIVIndicators version '0.1.0'
 
 /*
 The content in this library is draft content developed as part of a working OpenHIE

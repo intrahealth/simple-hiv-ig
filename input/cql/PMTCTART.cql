@@ -3,7 +3,7 @@
 // mother-to-child-transmission (MTCT) during pregnancy
 // numerator and denominator
 
-library PMTCTART
+library PMTCTART version '0.1.0'
 
 using FHIR version '4.0.1'
 

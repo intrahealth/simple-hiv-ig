@@ -2,7 +2,7 @@
 // Percentage of pregnant women with known HIV status at antenatal care (includes those who already knew their HIV status prior to ANC)
 // numeratory only
 
-library PMTCTSTAT
+library PMTCTSTAT version '0.1.0'
 
 using FHIR version '4.0.1'
 

@@ -2,7 +2,7 @@
 // Number of adults and children currently receiving antiretroviral therapy (ART)
 // numerator only
 
-library TXCURR
+library TXCURR version '0.1.0'
 
 using FHIR version '4.0.1'
 
@@ -13,7 +13,24 @@ include DASHConcepts called Cx
 include DASHDataElements called PatientData
 include DASHStratifiers called DASHStrat
 
+// codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'  
+// code "Anti Retroviral Therapy": '160119' from "CIEL" display 'Currently taking ARV'
+// code "Coded Answer": '1065' from "CIEL" display 'Yes'
+
+
 context Patient
+
+
+// define "Initial population":
+//     exists "Anti Retroviral Therapy Adults And Children"
+  
+// define "Anti Retroviral Therapy Adults And Children":
+//     ( [Observation: "Anti Retroviral Therapy"] ) o
+//         where o.value.coding[1]= "Coded Answer"
+//         or o.value.coding[2]= "Coded Answer"
+//         and o.status in {'final', 'amended', 'corrected'}
+//         and o.effective in day of "Measurement Period"
+
 
 // Number of adults and children currently receiving antiretroviral therapy (ART)
 // Sum of age/sex disaggregates

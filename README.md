@@ -10,80 +10,33 @@
 * mv libraries or publisher errors with duplicate resources
 
 
+Run the docker container or build directly.
 ```sh
-git clone git@github.com:DBCG/cqf-ruler.git
-cd cqf-ruler/
-git checkout feature-stratification
-# mvn jetty:run -am --projects cqf-ruler-r4
-mvn package
-docker build -t cqf .
-docker run -p "8080:8080" cqf
+docker pull alphora/cqf-ruler
+docker run -p 8080:8080 alphora/cqf-ruler
 ```
+The server base is at http://localhost:8080/fhir
 
-```sh
-# if making changes to the cql/measures, may have to delete database on each iteration
-rm -rf target
-```
 
 Prep repo:
 ```sh
-git@github.com:citizenrich/simple-hiv-ig.git
+git@github.com:intrahealth/simple-hiv-ig.git
 cd simple-hiv-ig
 bash _updateCQFTooling.sh
 bash _updatePublisher.sh
 ```
 
-
-Steps:
-```sh
-rm -rf input/resources/Library-* input/resources/library-*
-sushi
-mv fsh-generated/resources/Library-* input/resources/
-bash _refresh.sh
-bash _genonce.sh -no-sushi
+Run the scripts. To run a very basic test to ensure your setup is working, use:
+```
+bash _runsimple.sh
 ```
 
-Load FHIR-ModelInfo just in case
-```sh
-curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-FHIR-ModelInfo.json http://localhost:8080/cqf-ruler-r4/fhir/Library/FHIR-ModelInfo | jq .
+To run a full suite:
+```
+bash _runcqf.sh
+bash _runload.sh
 ```
 
-```sh
-cd output ; for FILE in OpenCR OpenHIE \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @CodeSystem-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/CodeSystem/${FILE} | jq . ; done ; cd ../
-```
-
-```sh
-cd output ; for FILE in FHIRHelpers FHIRCommon AgeRanges KitchenSink GoldenRecord Blaze \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Library-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Library/${FILE} | jq . ; done ; cd ../
-```
-
-```sh
-cd output ; for FILE in BlazeAgeGroupLocation BlazeGenderLocation BlazeStratifierTest BlazeStratifierAgeGroup \
-JustGender JustAgeGroup JustLocation AgeGroupGender AgeGroupGenderLocation Cohort SuppData \
-; do curl -X PUT -H "Content-Type: application/fhir+json" --data @Measure-${FILE}.json http://localhost:8080/cqf-ruler-r4/fhir/Measure/${FILE} | jq . ; done ; cd ..
-```
-
-```sh
-cat output/Bundle-Example-HIVSimple.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir | jq .
-cat output/Bundle-Example-HIVSimple2.json | curl -X POST -H "Content-Type: application/fhir+json" --data-binary @- http://localhost:8080/cqf-ruler-r4/fhir | jq .
-```
-
-```sh
-# set fhir server base as necessary
-export FHIR="http://localhost:8080/cqf-ruler-r4/fhir"
-curl $FHIR'/Measure/JustGender/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/JustAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/JustLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/AgeGroupGender/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/AgeGroupGenderLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/Cohort/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/SuppData/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/BlazeStratifierAgeGroup/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/BlazeAgeGroupLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/BlazeGenderLocation/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-curl $FHIR'/Measure/BlazeStratifierTest/$evaluate-measure?periodStart=2021&periodEnd=2021' | jq .
-```
 
 ## Authoring
 
@@ -187,8 +140,6 @@ A proportion Measure requires at least Initial Population, Denominator, and Nume
 
 
 ### $evaluate-measure 
-
-
 
 
 * `subject`, `subject-list` or `population`

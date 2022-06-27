@@ -584,5 +584,17 @@
       <code value="path-liquid"/>
       <value value="templates\liquid"/>
     </parameter>
+    <parameter>
+      <code value="no-narrative" />
+      <value value="Library/*"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative" />
+      <value value="Measure/*"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative" />
+      <value value="Patient/*"/>
+    </parameter>
   </definition>
 </ImplementationGuide>

@@ -3,7 +3,7 @@
 // or initiated treatment during the reporting period) and then had no clinical contact since their last expected contact
 // numerator only
 
-library TXML
+library TXML version '0.1.0'
 
 using FHIR version '4.0.1'
 

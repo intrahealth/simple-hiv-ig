@@ -2,7 +2,7 @@
 // Number of individuals who received HIV Testing Services (HTS) and received their test results
 // numerator only
 
-library HTSTST
+library HTSTST version '0.1.0'
 
 using FHIR version '4.0.1'
 
