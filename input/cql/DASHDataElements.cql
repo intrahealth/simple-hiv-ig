@@ -11,6 +11,16 @@ parameter "Measurement Period" Interval<DateTime>
 context Patient
 
 
+define "Deceased":
+  Patient.deceased is not null 
+  and (Patient.deceased is true or Patient.deceased before end of "Measurement Period")
+  // and Patient.deceased.value.not()
+  // and Patient.deceased.not()
+  // alternatively
+  // where P.deceased is false
+  //   or P.deceased before Today()
+
+
 define "HIV Condition":
   exists ["Condition": Cx."HIV Condition Positive"]  
 

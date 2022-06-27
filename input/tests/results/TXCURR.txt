@@ -28,3 +28,80 @@ Stratifier=null
 
 elapsed: -0.649 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXCURR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator-Exclusion=true
+Numerator=true
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator-Exclusion=true
+Numerator=true
+Stratifier=null
+
+elapsed: -0.048 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXCURR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator-Exclusion=null
+Numerator=true
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator-Exclusion=null
+Numerator=true
+Stratifier=null
+
+elapsed: -0.523 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXCURR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator-Exclusion=true
+Numerator=true
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator-Exclusion=true
+Numerator=true
+Stratifier=null
+
+elapsed: -0.342 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXCURR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Numerator-Exclusion=false
+Numerator=true
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+Numerator-Exclusion=false
+Numerator=true
+Stratifier=null
+
+elapsed: -0.367 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXCURR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Deceased=false
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple2)
+Deceased=false
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+elapsed: 0.405 seconds
+

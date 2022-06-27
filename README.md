@@ -106,6 +106,12 @@ Some hints on authorship from recent workshops:
 
 ### Measure options and examples
 
+Hints
+* "Initial Population" is always required. http://www.hl7.org/fhir/clinicalreasoning-quality-reporting.html#specifying-population-criteria
+
+
+
+
 The $evaluate-measure operation runs 
 
 ```cql

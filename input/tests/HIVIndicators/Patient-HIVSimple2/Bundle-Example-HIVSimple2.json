@@ -179,10 +179,7 @@
         "location": [
           {
             "location": {
-              "identifier": {
-                "system": "https://github.com/synthetichealth/synthea",
-                "value": "Location-HIVSimple2"
-              }
+              "reference": "Location/Location-HIVSimple2"
             }
           }
         ],
@@ -286,10 +283,7 @@
         "location": [
           {
             "location": {
-              "identifier": {
-                "system": "https://github.com/synthetichealth/synthea",
-                "value": "Location-HIVSimple2"
-              }
+              "reference": "Location/Location-HIVSimple2"
             }
           }
         ],

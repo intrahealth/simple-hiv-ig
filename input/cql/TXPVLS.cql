@@ -14,14 +14,18 @@ include DASHConcepts called Cx
 include DASHDataElements called PatientData
 include DASHStratifiers called DASHStrat
 
-// codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
-// code "Viral Load Quantitative": '856' from "CIEL" display 'HIV viral load'
-// code "Viral Load Qualitative": '1305' from "CIEL" display 'HIV VIRAL LOAD, QUALITATIVE'
-// code "Viral Load Qualitative Value": '1306' from "CIEL" display 'BEYOND DETECTABLE LIMIT'
 
 context Patient
 
 
+define "Initial Population": true
+
+
+// Denominator: Number of ART patients with a VL result documented 
+// in the medical or laboratory records/LIS within the past 12 months.
+// Stratified: Sum of Age/Sex/Indication and Age Aggregated/Sex/Indication disaggregates.
+
+// CIEL-based
 // define "Denominator":
 //     "Initial Population"
  
@@ -42,11 +46,6 @@ context Patient
 // define "Initial Population":
 //     exists "Viral Load Check"
 
-
-
-// Denominator: Number of ART patients with a VL result documented 
-// in the medical or laboratory records/LIS within the past 12 months.
-// Stratified: Sum of Age/Sex/Indication and Age Aggregated/Sex/Indication disaggregates.
 
 define "Denominator-Exclusion": true
 

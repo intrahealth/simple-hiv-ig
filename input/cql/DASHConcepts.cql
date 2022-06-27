@@ -22,6 +22,20 @@ codesystem "PMTCT ART Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSys
 // { 'already-on-art', 'new-on-art' }
 
 
+// CIEL
+
+// codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
+// code "Viral Load Quantitative": '856' from "CIEL" display 'HIV viral load'
+// code "Viral Load Qualitative": '1305' from "CIEL" display 'HIV VIRAL LOAD, QUALITATIVE'
+// code "Viral Load Qualitative Value": '1306' from "CIEL" display 'BEYOND DETECTABLE LIMIT'
+
+// codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'  
+// code "Anti Retroviral Therapy": '160119' from "CIEL" display 'Currently taking ARV'
+// code "Coded Answer": '1065' from "CIEL" display 'Yes'
+
+
+
+
 //ValueSets
 valueset "HIV Testing Services": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services' // Should use HIV tests
 valueset "Viral Load Test": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test'

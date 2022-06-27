@@ -15,10 +15,13 @@ include DASHStratifiers called DASHStrat
 context Patient
 
 
+define "Initial Population": true
+
+
 define "Numerator-Exclusion": true
 
 
-define "Numerator": true
+define "Numerator": PatientData."Antenatal Care Visit or Live Birth during Measurement Period (HIV Positive)"
 
 
 define "Stratifier": 

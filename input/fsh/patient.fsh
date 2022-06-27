@@ -48,12 +48,11 @@ Description: "Encounter-HIVSimple"
 // * serviceProvider = Reference(Organization-HIVSimple1)
 * serviceProvider.identifier.system = $synthea
 * serviceProvider.identifier.value = "Organization-HIVSimple1"
-// * location[+].location = Reference(Location-HIVSimple1)
-* location[+].location.identifier.system = $synthea
-* location[=].location.identifier.value = "Location-HIVSimple1"
+* location[+].location = Reference(Location-HIVSimple1)
+// * location[+].location.identifier.system = $synthea
+// * location[=].location.identifier.value = "Location-HIVSimple1"
 * period.start = "2011-01-01"
 * period.end = "2011-01-01"
-//
 * account[+] = Reference(Account-HIVSimple)
 
 
@@ -91,12 +90,11 @@ Usage: #example
 // * serviceProvider = Reference(Organization-HIVSimple1)
 * serviceProvider.identifier.system = $synthea
 * serviceProvider.identifier.value = "Organization-HIVSimple1"
-// * location[+].location = Reference(Location-HIVSimple1)
-* location[+].location.identifier.system = $synthea
-* location[=].location.identifier.value = "Location-HIVSimple1"
+* location[+].location = Reference(Location-HIVSimple1)
+// * location[+].location.identifier.system = $synthea
+// * location[=].location.identifier.value = "Location-HIVSimple1"
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
-// account
 * account[+] = Reference(Account-HIVSimple)
 
 
@@ -139,8 +137,9 @@ Usage: #example
 * subject = Reference(Patient-HIVSimple)
 * serviceProvider.identifier.system = $synthea
 * serviceProvider.identifier.value = "Organization-HIVSimple1"
-* location[+].location.identifier.system = $synthea
-* location[=].location.identifier.value = "Location-HIVSimple1"
+* location[+].location = Reference(Location-HIVSimple1)
+// * location[+].location.identifier.system = $synthea
+// * location[=].location.identifier.value = "Location-HIVSimple1"
 * period.start = "2020-06-01"
 * period.end = "2020-06-01"
 * account[+] = Reference(Account-HIVSimple)

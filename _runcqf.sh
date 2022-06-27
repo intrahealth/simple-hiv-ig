@@ -16,7 +16,7 @@ mv fsh-generated/resources/Library-* input/resources/
 
 # put test cases in place
 # todo to add: QR, Parameters
-CASE=('EasyLib' 'DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
+CASE=('EasyLib' 'DASHConcepts' 'DASHDataElements' 'DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
  
 for case in "${CASE[@]}"
 do

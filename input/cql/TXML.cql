@@ -16,6 +16,10 @@ include DASHStratifiers called DASHStrat
 
 context Patient
 
+
+define "Initial Population": true
+
+
 // QA check on the data
 // ML is exclusion criteria for CURR
 // look for this - e.g. deceased

@@ -12,27 +12,29 @@ include DASHConcepts called Cx
 // comment out for testing, will be overridden by $evaluate-measure operation in any case
 parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T, @2022-08-30T]
 
-// Not included yet:
-// Key Population Type [Required]
-// • People who inject drugs (PWID)
-// • Men who have sex with men (MSM)
-// • Transgender people (TG)
-// • Female sex workers (FSW)
-// • People in prison and other closed settings
+// Not included yet: Key Population Type [Required]
+// People who inject drugs (PWID)
+// Men who have sex with men (MSM)
+// Transgender people (TG)
+// Female sex workers (FSW)
+// People in prison and other closed settings
 
-// TODO: course disaggregates?
+// this is done in vn case reporting as a separate codesystem:
+// https://github.com/openhie/case-reporting-hiv-vn/blob/6019ae4d2a4bb824c6b00a7c5492332f24718149/input/fsh/vn-hiv-vocabulary.fsh#L207
 
-// How to review for data quality:
+// How to review for data quality: Requires larger, realistic dataset
 // How to calculate annual total:
 // Disaggregations:
-// • Confirm that TX_CURR ≥ TX_NEW.
-// • Confirm that TX_CURR ≥ TX_RTT.
-// • Confirm that TX_CURR ≥ Disaggregates for ARV Dispensing Quantity
+// Confirm that TX_CURR ≥ TX_NEW.
+// Confirm that TX_CURR ≥ TX_RTT.
+// Confirm that TX_CURR ≥ Disaggregates for ARV Dispensing Quantity
 
-// TODO: Unknown Age M/F
 
 context Patient
 
+
+// unknown and other is included in fhir core patient
+// mer guidance requires m, f, unknown
 define "Sex":
   Patient.gender.value
 

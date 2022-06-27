@@ -15,6 +15,8 @@ include DASHStratifiers called DASHStrat
 
 context Patient
 
+define "Initial Population": true
+
 // Linkage Proxy: Estimate of the percentage of people who test HIV positive and are linked to treatment. 
 // This metric is not calculated at the individual level.
 
@@ -25,7 +27,7 @@ define "Numerator-Exclusion": true
 
 
 define "Numerator": 
-  PatientData."HIV Condition"
+  PatientData."Newly enrolled on antiretroviral therapy (ART) during measurement period"
 
 
 define "Stratifier": 

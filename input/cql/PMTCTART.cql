@@ -16,6 +16,9 @@ include DASHStratifiers called DASHStrat
 context Patient
 
 
+define "Initial Population": true
+
+
 define "Denominator-Exclusion": true
 
 
@@ -26,7 +29,7 @@ define "Numerator-Exclusion": true
 
 
 define "Numerator":
-  PatientData."Receiving antiretroviral therapy (ART) during measurement period"
+  PatientData."Newly enrolled on antiretroviral therapy (ART) during measurement period (pregnant and breastfeeding)"
 
 
 define "Stratifier": 

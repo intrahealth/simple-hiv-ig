@@ -74,3 +74,27 @@ Description: "HIVTestingServices"
 * ^url = $HIVTestingServices
 * $SCT#30 "HIVTestingServices Code 1"
 * $SCT#40 "HIVTestingServices Code 2"
+
+// CodeSystem:  CSHIVRiskPopulation
+// Id: cs-hiv-population
+// Title: "Population groups"
+// Description: "CodeSystem - Population groups - Subjects to be tested for HIV"
+
+// * #pwid "Injecting drug users"
+// * #msm "Men who have sex with men"
+// * #sw "Sex workers"
+// * #client_sw "Clients of sex worker "
+// * #partner_plhiv "Sexual partner of PLHIV"
+// * #tg_women "Transgender women"
+// * #tg_men "Transgender men"
+// * #child_woman_hiv "Child of mother who is infected with HIV"
+// * #blood-donor "Blood seller / blood donor"
+// * #suspect_hiv "People suspected for AIDs"
+// * #tb_patient "Tuberculosis patient"
+// * #std_person "Persons with STD"
+// * #prisoner "Prisoner"
+// * #pregnant "Pregnant women"
+// * #military_recruits "Young recruits for military service"
+// * #partner_high_risk "Sexual partner of high risk group"
+// * #other "Other"
+
