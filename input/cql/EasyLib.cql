@@ -6,6 +6,8 @@ include FHIRHelpers version '4.0.1'
 // include FHIRCommon version '4.0.1' called FC
 // include fhir.cqf.common.FHIRCommon
 
+parameter "Measurement Period" Interval<DateTime>
+
 context Patient
 
 define "Numerator": true
