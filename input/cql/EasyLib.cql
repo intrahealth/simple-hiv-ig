@@ -10,6 +10,8 @@ parameter "Measurement Period" Interval<DateTime>
 
 context Patient
 
+define "Initial Population": true
+
 define "Numerator": true
 
 define "Denominator": true

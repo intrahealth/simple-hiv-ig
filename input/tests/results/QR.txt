@@ -53,3 +53,10 @@ Test=false
 
 elapsed: 0.104 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/QR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Test=false
+
+elapsed: -0.171 seconds
+

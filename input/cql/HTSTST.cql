@@ -15,6 +15,9 @@ include DASHStratifiers called HIVStrat
 context Patient
 
 
+define "Initial Population": true
+
+
 define "Numerator-Exclusion": true
 
 

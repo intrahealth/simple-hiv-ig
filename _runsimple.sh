@@ -18,9 +18,9 @@ bash _genonce.sh -no-sushi
 
 
 # export FHIR="https://blaze.life.uni-leipzig.de/fhir"
-export FHIR="http://localhost:8080/fhir"
+# export FHIR="http://localhost:8080/fhir"
 # export FHIR="http://localhost:8080/cqf-ruler-r4/fhir"
-# export FHIR="https://cloud.alphora.com/sandbox/r4/cqm/fhir"
+export FHIR="https://cloud.alphora.com/sandbox/r4/cqm/fhir"
 export HEADER="Content-Type: application/fhir+json"
 
 # PUT

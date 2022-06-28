@@ -44,11 +44,11 @@ RuleSet: dash-common-numonly
 RuleSet: dash-common-numdenom
 * group[+]
   * code = $OpenHIE#cohort "cohort"
-  // * population[+]
-  //   * description = "Initial Population"
-  //   * code = $measure-population#initial-population
-  //   * criteria.language = #text/cql
-  //   * criteria.expression = "Initial Population"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
   * population[+]
     * description = "Denominator-Exclusion"
     * code = $measure-population#denominator-exclusion
@@ -441,6 +441,11 @@ Description: "Easy"
 * library[+] = Canonical(EasyLib)
 * group[+]
   * code = $OpenHIE#cohort "cohort"
+  * population[+]
+    * description = "Initial Population"
+    * code = $measure-population#initial-population
+    * criteria.language = #text/cql
+    * criteria.expression = "Initial Population"
   * population[+]
     * description = "Numerator"
     * code = $measure-population#numerator
