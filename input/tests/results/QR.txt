@@ -60,3 +60,47 @@ Test=false
 
 elapsed: -0.171 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/QR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=null
+QuestionnaireResponses=[]
+QuestionnaireResponse=null
+Responses=null
+
+elapsed: -0.074 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/QR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=null
+QuestionnaireResponses=[]
+QuestionnaireResponse=null
+Responses=null
+
+elapsed: -0.188 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/QR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=null
+QuestionnaireResponses=[]
+
+elapsed: -0.466 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/QR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=null
+QuestionnaireResponses=[]
+
+elapsed: -0.113 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/QR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=null
+QuestionnaireResponses=[]
+
+elapsed: -0.588 seconds
+

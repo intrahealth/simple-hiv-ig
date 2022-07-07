@@ -1,0 +1,92 @@
+{
+  "resourceType": "Bundle",
+  "id": "Example-QR",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple",
+      "request": {
+        "url": "Patient",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-HIVSimple",
+        "name": [
+          {
+            "given": [
+              "Mittens"
+            ],
+            "family": "Cat",
+            "text": "Mittens Cat"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-01-01",
+        "identifier": [
+          {
+            "system": "https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR",
+            "value": "1234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/simple-hiv-ig/QuestionnaireResponse/f201",
+      "request": {
+        "url": "QuestionnaireResponse",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "f201",
+        "status": "completed",
+        "authored": "2013-06-18T00:00:00+01:00",
+        "subject": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "source": {
+          "reference": "Patient/Patient-HIVSimple"
+        },
+        "item": [
+          {
+            "linkId": "1.1",
+            "text": "What is your gender?",
+            "answer": [
+              {
+                "valueString": "Male"
+              }
+            ]
+          },
+          {
+            "linkId": "1.2",
+            "text": "What is your date of birth?",
+            "answer": [
+              {
+                "valueDate": "1960-03-13"
+              }
+            ]
+          },
+          {
+            "linkId": "1.3",
+            "text": "What is your country of birth?",
+            "answer": [
+              {
+                "valueString": "The Netherlands"
+              }
+            ]
+          },
+          {
+            "linkId": "1.4",
+            "text": "What is your marital status?",
+            "answer": [
+              {
+                "valueString": "married"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

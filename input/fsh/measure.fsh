@@ -451,11 +451,14 @@ Description: "Easy"
     * code = $measure-population#numerator
     * criteria.language = #text/cql
     * criteria.expression = "Numerator"
-    // doesn't work
-    // * criteria.language = #text/fhirpath
-    // * criteria.expression = "Patient.gender = 'female'"
   * population[+]
     * description = "Denominator"
     * code = $measure-population#denominator
     * criteria.language = #text/cql
     * criteria.expression = "Denominator"
+
+
+    // doesn't work
+    // * criteria.language = #text/fhirpath
+    // * criteria.expression = "Patient.gender = 'female'"
+ 

@@ -58,10 +58,6 @@
     "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon|4.0.1"
   }, {
     "type": "depends-on",
-    "display": "Library Cx",
-    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHConcepts"
-  }, {
-    "type": "depends-on",
     "display": "Code system ConditionVerificationStatusCodes",
     "resource": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
   }, {

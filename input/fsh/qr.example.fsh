@@ -4,9 +4,9 @@ InstanceOf: QuestionnaireResponse
 Usage: #example
 * status = #completed
 * authored = "2013-06-18T00:00:00+01:00"
-// * subject = Reference(Patient/f201) "Roel"
+* subject = Reference(Patient/Patient-HIVSimple)
 // * author = Reference(Practitioner/f201)
-// * source = Reference(Practitioner/f201)
+* source = Reference(Patient/Patient-HIVSimple)
 * item[+]
   * linkId = "1.1"
   * text = "What is your gender?"
@@ -23,3 +23,19 @@ Usage: #example
   * linkId = "1.4"
   * text = "What is your marital status?"
   * answer.valueString = "married"
+
+Instance: Example-QR
+InstanceOf: Bundle
+Title: "Example-QR"
+Description: "Example-QR"
+* type = #transaction
+
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/Patient/Patient-HIVSimple"
+* entry[=].request.url = "Patient"
+* entry[=].resource = Patient-HIVSimple
+* insert patient-bundle
+
+* entry[+].fullUrl = "https://intrahealth.github.io/simple-hiv-ig/QuestionnaireResponse/f201"
+* entry[=].request.url = "QuestionnaireResponse"
+* entry[=].resource = f201
+* insert patient-bundle

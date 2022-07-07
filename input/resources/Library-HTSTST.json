@@ -54,10 +54,6 @@
     "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers|4.0.1"
   }, {
     "type": "depends-on",
-    "display": "Library Cx",
-    "resource": "https://intrahealth.github.io/simple-hiv-ig/Library/DASHConcepts"
-  }, {
-    "type": "depends-on",
     "display": "Code system SNOMED-CT",
     "resource": "http://snomed.info/sct"
   }, {
