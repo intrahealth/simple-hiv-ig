@@ -16,7 +16,7 @@
 # use refresh hack
 sushi .
 
-mv fsh-generated/resources/Library-* input/resources/
+mv fsh-generated/resources/Library-* input/resources/library/
 # put test cases in place
 # todo to add: QR, Parameters, Contract
 CASE=('DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')

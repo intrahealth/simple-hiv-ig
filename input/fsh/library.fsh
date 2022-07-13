@@ -174,6 +174,34 @@ Description: "PMTCTSTAT"
 * content.id = "ig-loader-PMTCTSTAT.cql"
 
 
+Instance: QR
+InstanceOf: Library
+Title: "QR"
+Description: "QR"
+* insert lib-common
+* name = "QR"
+* title = "QR"
+* description = "QR"
+* version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/QR"
+// * identifier.value = "QR"
+* content.id = "ig-loader-QR.cql"
+
+
+Instance: Synthea
+InstanceOf: Library
+Title: "Synthea"
+Description: "Synthea"
+* insert lib-common
+* name = "Synthea"
+* title = "Synthea"
+* description = "Synthea"
+* version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/Synthea"
+// * identifier.value = "Synthea"
+* content.id = "ig-loader-Synthea.cql"
+
+
 Instance: TXCURR
 InstanceOf: Library
 Title: "TXCURR"

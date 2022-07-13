@@ -1,0 +1,70 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "https://cloud.alphora.com/sandbox/r4/cqm/fhirPatient",
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "Patient",
+      "parameter": [ {
+        "name": "value",
+        "valueString": "null"
+      }, {
+        "name": "resultType",
+        "valueString": "Null"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://cloud.alphora.com/sandbox/r4/cqm/fhirIdentifier",
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "Identifier",
+      "parameter": [ {
+        "name": "value",
+        "valueString": "null"
+      }, {
+        "name": "resultType",
+        "valueString": "Null"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://cloud.alphora.com/sandbox/r4/cqm/fhirBirthyear",
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "Birthyear",
+      "parameter": [ {
+        "name": "value",
+        "valueString": "null"
+      }, {
+        "name": "resultType",
+        "valueString": "Null"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://cloud.alphora.com/sandbox/r4/cqm/fhirSex",
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "Sex",
+      "parameter": [ {
+        "name": "value",
+        "valueString": "null"
+      }, {
+        "name": "resultType",
+        "valueString": "Null"
+      } ]
+    }
+  }, {
+    "fullUrl": "https://cloud.alphora.com/sandbox/r4/cqm/fhirViral Load Test Result Array with DateTime",
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "Viral Load Test Result Array with DateTime",
+      "parameter": [ {
+        "name": "value",
+        "valueString": "[]"
+      }, {
+        "name": "resultType",
+        "valueString": "List"
+      } ]
+    }
+  } ]
+}

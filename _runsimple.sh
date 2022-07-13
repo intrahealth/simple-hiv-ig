@@ -8,7 +8,7 @@ sushi .
 # move vocabulary, libraries to the right place
 mv fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/manual/
 mv fsh-generated/resources/ValueSet-* input/vocabulary/valueset/manual/
-mv fsh-generated/resources/Library-* input/resources/
+mv fsh-generated/resources/Library-* input/resources/library/
 
 bash _refresh.sh
 bash _genonce.sh -no-sushi 

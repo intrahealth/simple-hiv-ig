@@ -20,7 +20,7 @@ for FILE in BreastfeedingCodes HIVTestingServices PregnancyCodes ViralLoadTest; 
 
 # libaries
 for FILE in FHIRHelpers FHIRCommon KitchenSink \
-DASHConcepts DASHDataElements DASHStratifiers TXCURR TXNEW TXPVLS TXML HTSTST \
+DASHConcepts DASHDataElements DASHStratifiers DataContract QR TXCURR TXNEW TXPVLS TXML HTSTST \
 ; do curl -X PUT -H "$HEADER" --data @output/Library-${FILE}.json $FHIR/Library/${FILE} | jq . ; done
 
 for FILE in JustGender JustAgeGroup JustLocation AgeGroupGender AgeGroupGenderLocation Cohort SuppData \

@@ -1,0 +1,152 @@
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Synthea
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=urn:uuid:26b0b3e6-4fb7-62db-9fee-22929180b866)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+
+Patient=Patient(id=urn:uuid:644d23b7-3846-fc5f-1e83-343f48e89c40)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+
+Patient=Patient(id=urn:uuid:a721d409-d2f3-c566-f7f9-a07e53983490)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+
+Patient=Patient(id=urn:uuid:bc6a9849-f456-00a5-f8e5-d939e01ca65c)
+Initial Population=true
+Numerator-Exclusion=null
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+
+elapsed: -0.141 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Synthea
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=urn:uuid:26b0b3e6-4fb7-62db-9fee-22929180b866)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|6250264e-f1a2-310f-86a4-f99a361fdb27
+
+Patient=Patient(id=urn:uuid:644d23b7-3846-fc5f-1e83-343f48e89c40)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|24cb4eab-6166-3530-bddc-a5a8a14a4fc1
+
+Patient=Patient(id=urn:uuid:a721d409-d2f3-c566-f7f9-a07e53983490)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|53b25c4b-e95f-3dd1-8e69-d427cdd83631
+
+Patient=Patient(id=urn:uuid:bc6a9849-f456-00a5-f8e5-d939e01ca65c)
+Initial Population=true
+Numerator-Exclusion=null
+Numerator=false
+Stratifier=null
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|f2a15c32-6f8c-3760-9c6d-07f9304df038
+
+elapsed: 0.652 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Synthea
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=urn:uuid:26b0b3e6-4fb7-62db-9fee-22929180b866)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|6250264e-f1a2-310f-86a4-f99a361fdb27
+
+Patient=Patient(id=urn:uuid:644d23b7-3846-fc5f-1e83-343f48e89c40)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|24cb4eab-6166-3530-bddc-a5a8a14a4fc1
+
+Patient=Patient(id=urn:uuid:a721d409-d2f3-c566-f7f9-a07e53983490)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|53b25c4b-e95f-3dd1-8e69-d427cdd83631
+
+Patient=Patient(id=urn:uuid:bc6a9849-f456-00a5-f8e5-d939e01ca65c)
+Initial Population=true
+Numerator-Exclusion=null
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|f2a15c32-6f8c-3760-9c6d-07f9304df038
+
+elapsed: -0.009 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Synthea
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=urn:uuid:26b0b3e6-4fb7-62db-9fee-22929180b866)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|6250264e-f1a2-310f-86a4-f99a361fdb27
+
+Patient=Patient(id=urn:uuid:644d23b7-3846-fc5f-1e83-343f48e89c40)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|24cb4eab-6166-3530-bddc-a5a8a14a4fc1
+
+Patient=Patient(id=urn:uuid:a721d409-d2f3-c566-f7f9-a07e53983490)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|53b25c4b-e95f-3dd1-8e69-d427cdd83631
+
+Patient=Patient(id=urn:uuid:bc6a9849-f456-00a5-f8e5-d939e01ca65c)
+Initial Population=true
+Numerator-Exclusion=null
+Numerator=false
+Stratifier=null
+HIV Positive Synthea=true
+Synthea=CodeableConcept
+serviceProvider=Organization?identifier=https://github.com/synthetichealth/synthea|f2a15c32-6f8c-3760-9c6d-07f9304df038
+
+elapsed: -0.516 seconds
+
