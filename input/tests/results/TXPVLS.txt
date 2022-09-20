@@ -17,3 +17,24 @@ Stratifier=null
 
 elapsed: -0.454 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXPVLS
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Initial Population=true
+Denominator-Exclusion=true
+Denominator=true
+Numerator-Exclusion=true
+Numerator=[Observation(id=Observation2-ViralLoad)]
+Stratifier=P5Y--P10Y:female:Location/Location-HIVSimple1
+
+Patient=Patient(id=Patient-HIVSimple2)
+Initial Population=true
+Denominator-Exclusion=true
+Denominator=true
+Numerator-Exclusion=true
+Numerator=[]
+Stratifier=P5Y--P10Y:female:Location/Location-HIVSimple2
+
+elapsed: -0.12 seconds
+

@@ -15,16 +15,18 @@ codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
 // codesystem "ICD-11": 'http://hl7.org/fhir/sid/icd-11'
 // codesystem "ICF": 'http://hl7.org/fhir/sid/icf-nl'
 // codesystem "ICHI": 'https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi'
+// todo: replace this codesystem at some point
 codesystem "OpenHIE": 'https://openhie.org'
 codesystem "PMTCT HIV Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-hiv-status-codes' 
 codesystem "PMTCT ART Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-art-status-codes'
-
 
 // gender
 valueset "HL7 Administrative Gender": 'http://hl7.org/fhir/ValueSet/administrative-gender'
 
 
 // pregnancy, breastfeeding, anc
+// Library.dataRequirement[5].codeFilter[0].code[0]	warning	The display "Pregnancy (finding)" is not a valid display for the code {http://snomed.info/sct}77386006 - should be one of ['Pregnancy not delivered', 'Gestation', 'Pregnant', 'Pregnancy confirmed', 'Pregnant (finding)', 'Patient currently pregnant'] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#77386006'
+
 code "Pregnancy (finding)": '77386006' from "SNOMED-CT" display 'Pregnancy (finding)'
 code "Pregnant": '146789000' from "SNOMED-CT" display 'Pregnant'
 code "Breastfeeding": '169750002' from "SNOMED-CT" display 'Breastfeeding'

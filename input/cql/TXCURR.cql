@@ -46,7 +46,7 @@ define "Initial Population": true
 define "Numerator-Exclusion": 
   PatientData."Deceased"
 
-
+// todo: this is not showing up as true
 define "Numerator":
   PatientData."On ART"
 

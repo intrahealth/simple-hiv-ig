@@ -198,6 +198,14 @@
 
     <resource>
       <reference>
+        <reference value="Bundle/Example-QR"/>
+      </reference>
+      <name value="Bundle/Example-QR"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Encounter/Encounter-HIVSimple"/>
       </reference>
       <name value="Encounter/Encounter-HIVSimple"/>

@@ -50,8 +50,9 @@ define "Initial Population": true
 define "Denominator-Exclusion": true
 
 
+// add 'exists' to get bool: the numerator/denominator population expressions are not resulting in boolean results
 define "Denominator": 
-  PatientData."Viral Load Test Result"
+  exists (PatientData."Viral Load Test Result")
 
 
 // Numerator: Number of ART patients with suppressed VL results 

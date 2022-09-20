@@ -13,3 +13,16 @@ INFORMATION: Patient/example: Patient.name[1]: This element does not match any k
 # If this was a real IG, there should be examples for these profiles too.  But it's not, and I'm lazy...
 WARNING: http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation: The Implementation Guide contains no examples for this profile
 WARNING: http://somewhere.org/fhir/uv/myig/StructureDefinition/mypractitioner: The Implementation Guide contains no examples for this profile
+
+# this is to ignore
+INFORMATION: Bundle/Example-QR: Bundle.entry[1].resource.ofType(QuestionnaireResponse): No questionnaire is identified, so no validation can be performed against the base questionnaire
+INFORMATION: Measure/AgeGroupGenderLocation: Measure.group[0].code.coding[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+INFORMATION: Patient/Patient-GoldenRecord: Patient.meta.tag[0]: Code System URI 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR' is unknown so the code cannot be validated
+INFORMATION: QuestionnaireResponse/f201: QuestionnaireResponse: No questionnaire is identified, so no validation can be performed against the base questionnaire
+INFORMATION: Library/DASHDataElements: Library.dataRequirement[12].codeFilter[0].code[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+INFORMATION: Library/HIVIndicators: Library.dataRequirement[1].codeFilter[0].code[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+INFORMATION: Library/PMTCTART: Library.dataRequirement[3].codeFilter[0].code[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+INFORMATION: Library/Synthea: Library.dataRequirement[2].codeFilter[0].code[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+INFORMATION: Library/TXCURR: Library.dataRequirement[2].codeFilter[0].code[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+INFORMATION: Library/TXNEW: Library.dataRequirement[5].codeFilter[0].code[0]: Code System URI 'https://openhie.org' is unknown so the code cannot be validated
+Code System URI 'https://openhie.org' is unknown so the code cannot be validated

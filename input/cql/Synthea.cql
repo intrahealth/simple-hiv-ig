@@ -65,4 +65,8 @@ define "Synthea":
 
 
 define "serviceProvider":
-  Last([Encounter]).serviceProvider.reference.value
+  // Last([Encounter]).serviceProvider.reference.value
+  ["Encounter"] E
+  where not exists (E.location)
+  return Last([Encounter]).serviceProvider.reference.value
+  // Last([Encounter]).serviceProvider.reference.value
