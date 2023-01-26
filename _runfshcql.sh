@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# in another terminal:
-# git clone git@github.com:DBCG/cqf-ruler.git
-# cd cqf-ruler
-# git checkout feature-stratification
-# mvn jetty:run -am --projects cqf-ruler-r4
-
-
 # run sep cleanup script
 ./_runcleanup.sh
 
@@ -18,7 +11,6 @@ sushi .
 
 mv fsh-generated/resources/Library-* input/resources/library/
 # put test cases in place
-# todo to add: QR, Parameters, Contract
 CASE=('DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
  
 for case in "${CASE[@]}"
