@@ -9,10 +9,10 @@ fhirVersion: 4.0.1
 canonical: https://intrahealth.github.io/simple-hiv-ig
 title: "HIV Simple IG"
 
-# FSHOnly: true
+FSHOnly: true
 
-copyrightYear: 2021+
-releaseLabel: ci-build
+# copyrightYear: 2021+
+# releaseLabel: ci-build
 
 publisher:
   name: Digital Health Team
@@ -26,47 +26,31 @@ contact:
         value: digitalhealth@intrahealth.org
         use: work
 
-dependencies:
-
-  # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.cpg: current
-  # hl7.fhir.uv.sdc: current
-  hl7.fhir.us.cqfmeasures: current
-  # no current
-  fhir.cqf.common: 4.0.1
-  # no current
-  # ihe.iti.pdqm: 2.4.0
-  # no current
-  # ihe.iti.mcsd: 3.8.0
-
+# dependencies:
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-parameters:  
+# parameters:  
   # include examples-src in fsh processing for bulk data, not used in fshonly true
   # see xml for where this matters for fsh only true
-  path-resource:
-    # this is commented out to prevent errors
-    # - input/fsh
-    # - fsh-generated/resources
-    # - input/examples-src/output
-    # for cqf tooling
-    - input/resources/device
-  path-binary: input/cql
-  path-pages:
-    - input/pagecontent
-    - fsh-generated/includes
-  active-tables: 'false'
-  apply-contact: 'true'
-  apply-jurisdiction: 'true'
-  apply-publisher: 'true'
-  apply-version: 'true'
-  show-inherited-invariants: 'false'
-  usage-stats-opt-out: 'true'
-  autoload-resources: 'true'
-  shownav: 'true'
-  # validation: [allow-any-extensions, no-broken-links]
-  validation: [allow-any-extensions]
-  broken-links: "warning"
+  # path-resource:
+  #   - input/fsh
+  #   - input/examples-src/output
+#   path-binary: input/cql
+#   path-pages:
+#     - input/pagecontent
+#     - fsh-generated/includes
+#   active-tables: 'false'
+#   apply-contact: 'true'
+#   apply-jurisdiction: 'true'
+#   apply-publisher: 'true'
+#   apply-version: 'true'
+#   show-inherited-invariants: 'false'
+#   usage-stats-opt-out: 'true'
+#   autoload-resources: 'true'
+#   shownav: 'true'
+#   # validation: [allow-any-extensions, no-broken-links]
+#   validation: [allow-any-extensions]
+#   broken-links: "warning"
 
 # pages:
 #   index.md:

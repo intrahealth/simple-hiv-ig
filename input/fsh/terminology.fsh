@@ -2,6 +2,7 @@ CodeSystem: OpenCR
 Id: OpenCR
 Title: "OpenCR CodeSystem"
 Description: "OpenCR CodeSystem"
+* ^experimental = true
 * ^caseSensitive = false
 * ^url = $OpenCR
 * #1234 "Golden Record"
@@ -10,6 +11,7 @@ CodeSystem: OpenHIE
 Id: OpenHIE
 Title: "OpenHIE CodeSystem"
 Description: "OpenHIE CodeSystem"
+* ^experimental = true
 * ^caseSensitive = false
 * ^url = $OpenHIE
 * #cohort "cohort"
@@ -20,6 +22,7 @@ CodeSystem: PEPFAR
 Id: PEPFAR
 Title: "PEPFAR CodeSystem"
 Description: "PEPFAR CodeSystem"
+* ^experimental = true
 * ^caseSensitive = false
 * ^url = $PEPFAR
 * #4321 "Contract ID"
@@ -28,6 +31,7 @@ CodeSystem: PMTCTHIVStatusCodes
 Id: PMTCTHIVStatusCodes
 Title: "PMTCTHIVStatusCodes CodeSystem"
 Description: "PMTCTHIVStatusCodes CodeSystem"
+* ^experimental = true
 * ^caseSensitive = false
 * ^url = $PMTCTHIVStatusCodes
 * #known-positive "known-positive"
@@ -38,6 +42,7 @@ CodeSystem: PMTCTARTStatusCodes
 Id: PMTCTARTStatusCodes
 Title: "PMTCTARTStatusCodes CodeSystem"
 Description: "PMTCTARTStatusCodes CodeSystem"
+* ^experimental = true
 * ^caseSensitive = false
 * ^url = $PMTCTARTStatusCodes
 * #already-on-art "already-on-art"
@@ -47,6 +52,7 @@ ValueSet: PregnancyCodes
 Id: PregnancyCodes
 Title: "Pregnancy Codes"
 Description: "Pregnancy Codes"
+* ^experimental = true
 * ^url = $PregnancyCodes
 * $SCT#1 "PregnancyCodes Code 1"
 * $SCT#2 "PregnancyCodes Code 2"
@@ -55,7 +61,8 @@ ValueSet: BreastfeedingCodes
 Id: BreastfeedingCodes
 Title: "BreastfeedingCodes"
 Description: "BreastfeedingCodes"
-* ^url = $Breastfeeding
+* ^experimental = true
+* ^url = $BreastfeedingCodes
 * $SCT#1 "BreastfeedingCodes Code 1"
 * $SCT#2 "BreastfeedingCodes Code 2"
 
@@ -63,6 +70,7 @@ ValueSet: ViralLoadTest
 Id: ViralLoadTest
 Title: "ViralLoadTest"
 Description: "ViralLoadTest"
+* ^experimental = true
 * ^url = $ViralLoadTest
 * $SCT#10 "ViralLoadTest Code 1"
 * $SCT#20 "ViralLoadTest Code 2"
@@ -71,6 +79,7 @@ ValueSet: HIVTestingServices
 Id: HIVTestingServices
 Title: "HIVTestingServices"
 Description: "HIVTestingServices"
+* ^experimental = true
 * ^url = $HIVTestingServices
 * $SCT#30 "HIVTestingServices Code 1"
 * $SCT#40 "HIVTestingServices Code 2"
@@ -79,6 +88,7 @@ Description: "HIVTestingServices"
 // Id: cs-hiv-population
 // Title: "Population groups"
 // Description: "CodeSystem - Population groups - Subjects to be tested for HIV"
+// * ^experimental = true
 
 // * #pwid "Injecting drug users"
 // * #msm "Men who have sex with men"

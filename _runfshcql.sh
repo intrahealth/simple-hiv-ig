@@ -9,7 +9,7 @@
 # use refresh hack
 sushi .
 
-mv fsh-generated/resources/Library-* input/resources/library/
+cp fsh-generated/resources/Library-* input/resources/library/
 # put test cases in place
 CASE=('DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
  

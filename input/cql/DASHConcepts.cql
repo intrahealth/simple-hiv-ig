@@ -17,23 +17,23 @@ codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
 // codesystem "ICHI": 'https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi'
 // todo: replace this codesystem at some point
 codesystem "OpenHIE": 'https://openhie.org'
-codesystem "PMTCT HIV Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-hiv-status-codes' 
-codesystem "PMTCT ART Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-art-status-codes'
+codesystem "PMTCT HIV Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/hiv-pmtct-hiv-status-codes' 
+codesystem "PMTCT ART Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/hiv-pmtct-art-status-codes'
 
 // gender
 valueset "HL7 Administrative Gender": 'http://hl7.org/fhir/ValueSet/administrative-gender'
 
 
 // pregnancy, breastfeeding, anc
-// Library.dataRequirement[5].codeFilter[0].code[0]	warning	The display "Pregnancy (finding)" is not a valid display for the code {http://snomed.info/sct}77386006 - should be one of ['Pregnancy not delivered', 'Gestation', 'Pregnant', 'Pregnancy confirmed', 'Pregnant (finding)', 'Patient currently pregnant'] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#77386006'
+// Library.dataRequirement[5].codeFilter[0].code[0]	warning	The display "Pregnancy (finding)" is not a valid display for the code {http://snomed.info/sct}77386006 - should be one of ['Pregnancy not delivered', 'Gestation', 'Pregnant', 'Pregnancy confirmed', 'Pregnancy (finding)', 'Patient currently pregnant'] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#77386006'
 
 code "Pregnancy (finding)": '77386006' from "SNOMED-CT" display 'Pregnancy (finding)'
 code "Pregnant": '146789000' from "SNOMED-CT" display 'Pregnant'
 code "Breastfeeding": '169750002' from "SNOMED-CT" display 'Breastfeeding'
-valueset "Antenatal Care": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-antenatal-care' // Antenatal Care
-valueset "Pregnancy Codes": 'http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes' // Pregnancy
-valueset "Live Birth": 'http://fhir.org/guides/who/hiv-cds/ValueSet/live-birth' // Live Birth
-valueset "Breastfeeding Codes": 'http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes' // Breastfeeding
+valueset "Antenatal Care": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-antenatal-care' // Antenatal Care
+valueset "Pregnancy Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes' // Pregnancy
+valueset "Live Birth": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/live-birth' // Live Birth
+valueset "Breastfeeding Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes' // Breastfeeding
 valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
 
 
@@ -41,7 +41,7 @@ valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used 
 code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV infection'
 code "HIV Negative": '165815009' from "SNOMED-CT" display 'HIV Negative'
 code "HIV Positive": '165816005' from "SNOMED-CT" display 'HIV Positive'
-valueset "HIV Testing Services": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services' // Should use HIV tests
+valueset "HIV Testing Services": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services' // Should use HIV tests
 
 
 // viral load tests, results
@@ -53,10 +53,10 @@ code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA
 // code "Viral Load Qualitative Value": '1306' from "CIEL" display 'BEYOND DETECTABLE LIMIT'
 // code "Anti Retroviral Therapy": '160119' from "CIEL" display 'Currently taking ARV'
 // code "Coded Answer": '1065' from "CIEL" display 'Yes'
-valueset "ART Medications": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-art-medications' // ART medications
+valueset "ART Medications": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-art-medications' // ART medications
 // commenting out for now and the union
 // valueset "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)": 'urn:oid:2.16.840.1.113762.1.4.1056.50' // Used by CMS349
-valueset "Viral Load Test": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test'
+valueset "Viral Load Test": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test'
 
 
 // art

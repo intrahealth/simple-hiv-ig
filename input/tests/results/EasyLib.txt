@@ -1,70 +1,19 @@
-Running tests.
+Executing CQL...
+CQL path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/cql
 Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
 Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
 Patient=Patient(id=Patient-HIVSimple)
-Numerator=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Numerator=true
-
-elapsed: -0.113 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-Numerator=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Numerator=true
-
-elapsed: 0.22 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-Numerator=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Numerator=true
-
-elapsed: 0.659 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-Numerator=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Numerator=true
-
-elapsed: 0.574 seconds
-
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
+Initial Population=true
 Numerator=true
 Denominator=true
 
 Patient=Patient(id=Patient-HIVSimple2)
+Initial Population=true
 Numerator=true
 Denominator=true
 
-elapsed: 0.031 seconds
 
-Running tests.
-Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/EasyLib
-Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
-Patient=Patient(id=Patient-HIVSimple)
-Numerator=true
-Denominator=true
-
-Patient=Patient(id=Patient-HIVSimple2)
-Numerator=true
-Denominator=true
-
-elapsed: -0.17 seconds
+Evaluation logs:
+17:18:19.008 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+elapsed: 0.287 seconds
 

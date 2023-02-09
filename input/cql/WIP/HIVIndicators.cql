@@ -18,19 +18,19 @@ codesystem "SNOMED-CT": 'http://snomed.info/sct'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "OpenHIE": 'https://openhie.org'
 
-codesystem "PMTCT HIV Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-hiv-status-codes' 
+codesystem "PMTCT HIV Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/hiv-pmtct-hiv-status-codes' 
 // { 'known-positive', 'newly-identified-positive', 'newly-identified-negative' }
-codesystem "PMTCT ART Status Codes": 'http://fhir.org/guides/who/hiv-cds/CodeSystem/hiv-pmtct-art-status-codes' 
+codesystem "PMTCT ART Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/hiv-pmtct-art-status-codes' 
 // { 'already-on-art', 'new-on-art' }
 
-valueset "HIV Testing Services": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services' // Should use HIV tests
-valueset "Viral Load Test": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test'
+valueset "HIV Testing Services": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services' // Should use HIV tests
+valueset "Viral Load Test": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test'
 valueset "HL7 Administrative Gender": 'http://hl7.org/fhir/ValueSet/administrative-gender'
-valueset "ART Medications": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-art-medications' // ART medications
-valueset "Antenatal Care": 'http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-antenatal-care' // Antenatal Care
-valueset "Pregnancy Codes": 'http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes' // Pregnancy
-valueset "Live Birth": 'http://fhir.org/guides/who/hiv-cds/ValueSet/live-birth' // Live Birth
-valueset "Breastfeeding Codes": 'http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes' // Breastfeeding
+valueset "ART Medications": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-art-medications' // ART medications
+valueset "Antenatal Care": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-antenatal-care' // Antenatal Care
+valueset "Pregnancy Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes' // Pregnancy
+valueset "Live Birth": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/live-birth' // Live Birth
+valueset "Breastfeeding Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes' // Breastfeeding
 valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
 
 // commenting out for now and the union

@@ -91,10 +91,10 @@ Age Group/Sex/HIV Test Results=null
 
 
 The following errors were encountered during evaluation:
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
 elapsed: 0.107 seconds
 
 Running tests.
@@ -190,10 +190,10 @@ Age Group/Sex/HIV Test Results=null
 
 
 The following errors were encountered during evaluation:
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
 elapsed: 0.715 seconds
 
 Running tests.
@@ -289,10 +289,10 @@ Age Group/Sex/HIV Test Results=null
 
 
 The following errors were encountered during evaluation:
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
 elapsed: -0.013 seconds
 
 Running tests.
@@ -388,9 +388,9 @@ Age Group/Sex/HIV Test Results=null
 
 
 The following errors were encountered during evaluation:
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
-[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet http://fhir.org/guides/who/hiv-cds/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+[pool-1-thread-1] WARN org.opencds.cqf.cql.evaluator.engine.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
 elapsed: 0.281 seconds
 

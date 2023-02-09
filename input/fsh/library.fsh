@@ -16,7 +16,8 @@ Description: "FHIRCommon"
 * title = "FHIRCommon"
 * description = "FHIRCommon"
 * version = "4.0.1"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRCommon"
+// change to proper url
+* url = "http://fhir.org/guides/cqf/common/Library/FHIRCommon"
 // * identifier.value = "FHIRCommon"
 * content.id = "ig-loader-FHIRCommon.cql"
 
@@ -29,23 +30,24 @@ Description: "FHIRHelpers"
 * title = "FHIRHelpers"
 * description = "FHIRHelpers"
 * version = "4.0.1"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/FHIRHelpers"
+// change to proper url
+* url = "http://fhir.org/guides/cqf/common/Library/FHIRHelpers"
 // * identifier.value = "FHIRHelpers"
 * content.id = "ig-loader-FHIRHelpers.cql"
 
 
-Instance: DataContract
-InstanceOf: Library
-Title: "DataContract"
-Description: "DataContract"
-* insert lib-common
-* name = "DataContract"
-* title = "DataContract"
-* description = "DataContract"
-* version = "0.1.0"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/DataContract"
-// * identifier.value = "DataContract"
-* content.id = "ig-loader-DataContract.cql"
+// Instance: DataContract
+// InstanceOf: Library
+// Title: "DataContract"
+// Description: "DataContract"
+// * insert lib-common
+// * name = "DataContract"
+// * title = "DataContract"
+// * description = "DataContract"
+// * version = "0.1.0"
+// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/DataContract"
+// // * identifier.value = "DataContract"
+// * content.id = "ig-loader-DataContract.cql"
 
 
 Instance: DASHConcepts
@@ -90,32 +92,32 @@ Description: "DASHStratifiers"
 * content.id = "ig-loader-DASHStratifiers.cql"
 
 
-Instance: EasyLib
-InstanceOf: Library
-Title: "EasyLib"
-Description: "EasyLib"
-* insert lib-common
-* name = "EasyLib"
-* title = "EasyLib"
-* description = "EasyLib"
-* version = "0.1.0"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/EasyLib"
-// * identifier.value = "EasyLib"
-* content.id = "ig-loader-EasyLib.cql"
+// Instance: EasyLib
+// InstanceOf: Library
+// Title: "EasyLib"
+// Description: "EasyLib"
+// * insert lib-common
+// * name = "EasyLib"
+// * title = "EasyLib"
+// * description = "EasyLib"
+// * version = "0.1.0"
+// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/EasyLib"
+// // * identifier.value = "EasyLib"
+// * content.id = "ig-loader-EasyLib.cql"
 
 
-Instance: HIVIndicators
-InstanceOf: Library
-Title: "HIVIndicators"
-Description: "HIVIndicators"
-* insert lib-common
-* name = "HIVIndicators"
-* title = "HIVIndicators"
-* description = "HIVIndicators"
-* version = "0.1.0"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/HIVIndicators"
-// * identifier.value = "HIVIndicators"
-* content.id = "ig-loader-HIVIndicators.cql"
+// Instance: HIVIndicators
+// InstanceOf: Library
+// Title: "HIVIndicators"
+// Description: "HIVIndicators"
+// * insert lib-common
+// * name = "HIVIndicators"
+// * title = "HIVIndicators"
+// * description = "HIVIndicators"
+// * version = "0.1.0"
+// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/HIVIndicators"
+// // * identifier.value = "HIVIndicators"
+// * content.id = "ig-loader-HIVIndicators.cql"
 
 
 Instance: HTSTST
@@ -132,18 +134,18 @@ Description: "HTSTST"
 * content.id = "ig-loader-HTSTST.cql"
 
 
-Instance: KitchenSink
-InstanceOf: Library
-Title: "KitchenSink"
-Description: "KitchenSink"
-* insert lib-common
-* name = "KitchenSink"
-* title = "KitchenSink"
-* description = "KitchenSink"
-* version = "0.1.0"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
-// * identifier.value = "KitchenSink"
-* content.id = "ig-loader-KitchenSink.cql"
+// Instance: KitchenSink
+// InstanceOf: Library
+// Title: "KitchenSink"
+// Description: "KitchenSink"
+// * insert lib-common
+// * name = "KitchenSink"
+// * title = "KitchenSink"
+// * description = "KitchenSink"
+// * version = "0.1.0"
+// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/KitchenSink"
+// // * identifier.value = "KitchenSink"
+// * content.id = "ig-loader-KitchenSink.cql"
 
 
 Instance: PMTCTART
@@ -174,32 +176,32 @@ Description: "PMTCTSTAT"
 * content.id = "ig-loader-PMTCTSTAT.cql"
 
 
-Instance: QR
-InstanceOf: Library
-Title: "QR"
-Description: "QR"
-* insert lib-common
-* name = "QR"
-* title = "QR"
-* description = "QR"
-* version = "0.1.0"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/QR"
-// * identifier.value = "QR"
-* content.id = "ig-loader-QR.cql"
+// Instance: QR
+// InstanceOf: Library
+// Title: "QR"
+// Description: "QR"
+// * insert lib-common
+// * name = "QR"
+// * title = "QR"
+// * description = "QR"
+// * version = "0.1.0"
+// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/QR"
+// // * identifier.value = "QR"
+// * content.id = "ig-loader-QR.cql"
 
 
-Instance: Synthea
-InstanceOf: Library
-Title: "Synthea"
-Description: "Synthea"
-* insert lib-common
-* name = "Synthea"
-* title = "Synthea"
-* description = "Synthea"
-* version = "0.1.0"
-* url = "https://intrahealth.github.io/simple-hiv-ig/Library/Synthea"
-// * identifier.value = "Synthea"
-* content.id = "ig-loader-Synthea.cql"
+// Instance: Synthea
+// InstanceOf: Library
+// Title: "Synthea"
+// Description: "Synthea"
+// * insert lib-common
+// * name = "Synthea"
+// * title = "Synthea"
+// * description = "Synthea"
+// * version = "0.1.0"
+// * url = "https://intrahealth.github.io/simple-hiv-ig/Library/Synthea"
+// // * identifier.value = "Synthea"
+// * content.id = "ig-loader-Synthea.cql"
 
 
 Instance: TXCURR
