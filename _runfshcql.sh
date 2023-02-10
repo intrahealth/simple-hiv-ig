@@ -20,8 +20,8 @@ do
 done
 
 # vocabulary
-mv fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/
-mv fsh-generated/resources/ValueSet-* input/vocabulary/valueset/
+cp fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/
+cp fsh-generated/resources/ValueSet-* input/vocabulary/valueset/
 
 # bash _refresh.sh 
 # bash _genonce.sh -no-sushi 

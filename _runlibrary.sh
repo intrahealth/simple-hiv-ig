@@ -9,14 +9,14 @@ export HEADER="Content-Type: application/fhir+json"
 
 # use refresh hack
 sushi .
-mv fsh-generated/resources/Library-* input/resources/
+cp fsh-generated/resources/Library-* input/resources/
 bash _refresh.sh
 bash _genonce.sh -no-sushi
 
 cd output
 curl -X PUT -H "$HEADER" --data @Library-FHIRCommon.json $FHIR/Library/FHIRCommon | jq .
 curl -X PUT -H "$HEADER" --data @Library-DASHConcepts.json $FHIR/Library/DASHConcepts | jq .
-curl -X PUT -H "$HEADER" --data @Library-DataContract.json $FHIR/Library/DataContract | jq .
+# curl -X PUT -H "$HEADER" --data @Library-DataContract.json $FHIR/Library/DataContract | jq .
 
 # must POST a transaction bundle of POST methods on each resource
 for FILE in Bundle-Example-*.json ; do echo ${FILE} ; done
