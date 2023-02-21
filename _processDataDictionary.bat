@@ -1,12 +1,12 @@
-@REM edits not done for hiv dak yet, fix sheetnames, filename, and scope
 @ECHO off
 SET tooling_jar=tooling-cli-2.3.0-SNAPSHOT.jar
 SET input_cache_path=%~dp0input-cache
 SET datadictionary_directory=input/l2/
 REM the next 3 lines need to be edited for ANC
-SET datadictionary_filename=%datadictionary_directory%\WHO-ANC.xlsx
-SET datadictionary_sheetname="ANC.A. Registration,ANC.B5 Quick check,ANC.B6 Profile,ANC.B7 Symptoms & Follow-up,ANC.B8 Physical exam,ANC.B9 Lab tests & imaging,ANC.B10 Counselling & treatment,ANC.C. Referral,ANC.End End"
-SET scope=ANC
+SET datadictionary_filename=%datadictionary_directory%\WHO-UCN-HHS-SIA-2022.1-eng.xlsx
+SET datadictionary_sheetname="HIV.A. Registration,HIV.B. HTS Visit,HIV.C. PrEP Visit,HIV.D. Care-Treatment Core,HIV.D.Care-Treatment Additional,HIV.D. TB-HIV,HIV.E-F. PMTCT,HIV.G. Diagnostics,HIV.H. Follow Up,HIV.I. Referral,HIV. Surveillance"
+
+SET scope=HIV
 SET tooling=%input_cache_path%\%tooling_jar%
 SET upper_path=%%~dpx
 
