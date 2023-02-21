@@ -31,7 +31,7 @@ valueset "Antenatal Care": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet
 valueset "Pregnancy Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes' // Pregnancy
 valueset "Live Birth": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/live-birth' // Live Birth
 valueset "Breastfeeding Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes' // Breastfeeding
-valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
+// valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
 
 // commenting out for now and the union
 // valueset "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)": 'urn:oid:2.16.840.1.113762.1.4.1056.50' // Used by CMS349

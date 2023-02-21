@@ -1,16 +1,13 @@
-library DataContract version '0.1.0'
+library Analytics version '0.1.0'
 
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.0.1'
-// include FHIRCommon version '4.0.1' called FC
+include FHIRCommon version '4.0.1' called FC
 
-include fhir.cqf.common.FHIRCommon version '4.0.1' called FHIRCommon
-
-// include fhir.cqf.common.FHIRCommon
 include DASHConcepts called Cx
 
-// Minimal Shared Health Record (mSHR) based on only the data needed for cqm, cds, etc.
+// Input for a downstream minimal Shared Health Record (mSHR) based on only the data needed for cqm, cds, etc.
 // Example of a privacy-first, minimal data contract between a Provider of patient data and a Consumer of it.
 
 context Patient
@@ -19,11 +16,7 @@ context Patient
 define "Identifier": 
   Patient.identifier I 
     where I.system = 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR'
-      // return I.value.value
-      return Tuple {
-        id: singleton from {I.value.value},
-        namespace: I.system
-      }
+      return I.value.value
 
 // Producer must provide the birth year of the patient.
 define "Birthyear": 
@@ -40,7 +33,7 @@ define "Viral Load Test Result Array with DateTime":
       and Obs.value is not null
       and Obs.issued is not null
         return Tuple { 
-          value: Obs.value.value,
-          issued: ToDate(Obs.issued.value)
+          value: FHIRHelpers.ToDecimal(Obs.value.value),
+          issued: Obs.issued.value
         }
 

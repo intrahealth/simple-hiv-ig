@@ -6,7 +6,7 @@ r=snapshots
 g=org.opencds.cqf
 
 a=tooling-cli
-v=2.1.0-SNAPSHOT
+v=2.3.0-SNAPSHOT
 
 dlurl='https://oss.sonatype.org/service/local/artifact/maven/redirect?r='${r}'&g='${g}'&a='${a}'&v='${v}''
 

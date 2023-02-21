@@ -7,7 +7,7 @@
 # ./_runcreate.sh
 
 # use refresh hack
-sushi .
+sushi
 
 cp fsh-generated/resources/Library-* input/resources/library/
 # put test cases in place

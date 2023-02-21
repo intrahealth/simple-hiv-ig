@@ -49,6 +49,19 @@ Description: "FHIRHelpers"
 // // * identifier.value = "DataContract"
 // * content.id = "ig-loader-DataContract.cql"
 
+Instance: Analytics
+InstanceOf: Library
+Title: "Analytics"
+Description: "Analytics"
+* insert lib-common
+* name = "Analytics"
+* title = "Analytics"
+* description = "Analytics"
+* version = "0.1.0"
+* url = "https://intrahealth.github.io/simple-hiv-ig/Library/Analytics"
+// * identifier.value = "Analytics"
+* content.id = "ig-loader-Analytics.cql"
+
 
 Instance: DASHConcepts
 InstanceOf: Library

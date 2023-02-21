@@ -188,7 +188,7 @@ define "Newly enrolled on antiretroviral therapy (ART) during measurement period
 
 
 define "Is Pregnant":
-  exists ([Condition: Cx."Pregnancy Codes"] C
+  exists ([Condition: Cx."Pregnancy status - Reported"] C
     where C.verificationStatus ~ FC."confirmed"
       and C.clinicalStatus ~ FC."active"
       and C.onset during "Measurement Period"
@@ -196,7 +196,7 @@ define "Is Pregnant":
 
 
 define "Is Breastfeeding":
-  exists ([Observation: Cx."Breastfeeding Codes"] O
+  exists ([Observation: Cx."Postpartum state (finding)"] O
     where O.status = 'final'
       and O.effective during "Measurement Period"
   )
@@ -238,13 +238,13 @@ define "Initiated antiretroviral therapy (ART) in the 12 months prior to measure
 
 
 define "Antenatal Care Visit":
-  [Encounter: Cx."Antenatal Care"] E
+  [Encounter: Cx."Prenatal initial visit (regime/therapy)"] E
     where E.status = 'finished'
       and E.period during Interval[start of "Year Preceding the Measurement Period", end of "Measurement Period"]
 
 
 define "Live Birth Procedure":
-  [Procedure: Cx."Live Birth"] P
+  [Procedure: Cx."Livebirth (finding)"] P
     where P.status = 'completed'
 
 

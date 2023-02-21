@@ -3,11 +3,8 @@
 # run sep cleanup script
 ./_runcleanup.sh
 
-# create bulk test data
-# ./_runcreate.sh
-
 # use refresh hack, mind the .
-sushi .
+sushi
 
 # move vocabulary, libraries to the right place
 cp fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/manual/
@@ -16,7 +13,7 @@ cp fsh-generated/resources/Library-* input/resources/library/
 
 # put test cases in place
 # todo to add: QR, Parameters
-CASE=('QR' 'EasyLib' 'DASHConcepts' 'DASHDataElements' 'DataContract' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
+CASE=('QR' 'EasyLib' 'DASHConcepts' 'DASHDataElements' 'Analytics' 'AgeRanges' 'Dedupe' 'KitchenSink' 'HIVIndicators' 'DASHStratifiers' 'TXCURR' 'TXML' 'TXNEW' 'TXPVLS' 'HTSTST' 'PMTCTSTAT' 'PMTCTART')
  
 for case in "${CASE[@]}"
 do

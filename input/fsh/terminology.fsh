@@ -48,23 +48,23 @@ Description: "PMTCTARTStatusCodes CodeSystem"
 * #already-on-art "already-on-art"
 * #new-on-art "new-on-art"
 
-ValueSet: PregnancyCodes
-Id: PregnancyCodes
-Title: "Pregnancy Codes"
-Description: "Pregnancy Codes"
-* ^experimental = true
-* ^url = $PregnancyCodes
-* $SCT#1 "PregnancyCodes Code 1"
-* $SCT#2 "PregnancyCodes Code 2"
+// ValueSet: PregnancyCodes
+// Id: PregnancyCodes
+// Title: "Pregnancy Codes"
+// Description: "Pregnancy Codes"
+// * ^experimental = true
+// * ^url = $PregnancyCodes
+// * $SCT#1 "PregnancyCodes Code 1"
+// * $SCT#2 "PregnancyCodes Code 2"
 
-ValueSet: BreastfeedingCodes
-Id: BreastfeedingCodes
-Title: "BreastfeedingCodes"
-Description: "BreastfeedingCodes"
-* ^experimental = true
-* ^url = $BreastfeedingCodes
-* $SCT#1 "BreastfeedingCodes Code 1"
-* $SCT#2 "BreastfeedingCodes Code 2"
+// ValueSet: BreastfeedingCodes
+// Id: BreastfeedingCodes
+// Title: "BreastfeedingCodes"
+// Description: "BreastfeedingCodes"
+// * ^experimental = true
+// * ^url = $BreastfeedingCodes
+// * $SCT#1 "BreastfeedingCodes Code 1"
+// * $SCT#2 "BreastfeedingCodes Code 2"
 
 ValueSet: ViralLoadTest
 Id: ViralLoadTest

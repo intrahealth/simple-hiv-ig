@@ -30,11 +30,12 @@ valueset "HL7 Administrative Gender": 'http://hl7.org/fhir/ValueSet/administrati
 code "Pregnancy (finding)": '77386006' from "SNOMED-CT" display 'Pregnancy (finding)'
 code "Pregnant": '146789000' from "SNOMED-CT" display 'Pregnant'
 code "Breastfeeding": '169750002' from "SNOMED-CT" display 'Breastfeeding'
-valueset "Antenatal Care": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-antenatal-care' // Antenatal Care
-valueset "Pregnancy Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/pregnancy-codes' // Pregnancy
-valueset "Live Birth": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/live-birth' // Live Birth
-valueset "Breastfeeding Codes": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/breastfeeding-codes' // Breastfeeding
-valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
+code "Prenatal initial visit (regime/therapy)": '424441002' from "SNOMED-CT" display 'Prenatal initial visit (regime/therapy)'
+code "Pregnancy status - Reported": '11449-6' from "LOINC" display 'Pregnancy status - Reported'
+code "Livebirth (finding)": '281050002' from "SNOMED-CT" display 'Livebirth (finding)'
+// code "Single live birth": '68499-3' from "LOINC" display 'Single live birth'
+code "Postpartum state (finding)": '86569001' from "SNOMED-CT" display 'Postpartum state (finding)'
+// valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
 
 
 // hiv testing, results, conditions
