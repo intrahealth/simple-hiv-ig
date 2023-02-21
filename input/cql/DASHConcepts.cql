@@ -35,6 +35,11 @@ code "Pregnancy status - Reported": '11449-6' from "LOINC" display 'Pregnancy st
 code "Livebirth (finding)": '281050002' from "SNOMED-CT" display 'Livebirth (finding)'
 // code "Single live birth": '68499-3' from "LOINC" display 'Single live birth'
 code "Postpartum state (finding)": '86569001' from "SNOMED-CT" display 'Postpartum state (finding)'
+code "Normal breast feeding (finding)": '69840006' from "SNOMED-CT" display 'Normal breast feeding (finding)'
+
+// code "": '' from "" display ''
+// code "": '' from "" display ''
+
 // valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
 
 
