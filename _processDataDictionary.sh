@@ -17,7 +17,6 @@ HIV.G. Diagnostics,\
 HIV.H. Follow Up,\
 HIV.I. Referral,\
 HIV. Surveillance"
-# HIV. Configuration,\
 
 printf "$datadictionary_sheetname"
 
