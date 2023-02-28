@@ -15,7 +15,7 @@ curl -X PUT -H "$HEADER" --data @output/Device-cqf-tooling.json $FHIR/Device/cqf
 for FILE in OpenCR OpenHIE PEPFAR ; do curl -X PUT -H "$HEADER" \
 --data @input/vocabulary/codesystem/manual/CodeSystem-${FILE}.json $FHIR/CodeSystem/${FILE} | jq . ; done
 # modified to use input/vocab
-for FILE in BreastfeedingCodes HIVTestingServices PregnancyCodes ViralLoadTest; do curl -X PUT -H "$HEADER" \
+for FILE in HIVTestingServices ViralLoadTest SyntheaHIVMedications; do curl -X PUT -H "$HEADER" \
 --data @input/vocabulary/valueset/manual/ValueSet-${FILE}.json $FHIR/ValueSet/${FILE} | jq . ; done
 
 # libaries
@@ -51,7 +51,6 @@ curl $FHIR'/Measure/DASHTXNEW/$evaluate-measure?periodStart=2000-01-01&periodEnd
 curl $FHIR'/Measure/DASHTXPVLS/$evaluate-measure?periodStart=2000-01-01&periodEnd=2021-12-31' | jq . 
 curl $FHIR'/Measure/DASHHTSTST/$evaluate-measure?periodStart=2000-01-01&periodEnd=2021-12-31' | jq . 
 
-# these don't format correctly
-# cat measurereports/JustLocation.json | jq --raw-output '.group[] | [.stratifier[].stratum[].value.text,.measureScore.value] | @csv '
-# cat measurereports/AgeGroupGenderLocation.json | jq --raw-output '.group[] | [.stratifier[].stratum[].value.text,.measureScore.value] | @csv '
-# cat measurereports/JustLocation.json | jq --raw-output '.group[] | [.stratifier[].stratum[].value.text,.measureScore.value,.stratifier[].stratum[].population[].count ] | @csv '
+cat measurereports/DASHTXCURR.json | jq '.group[] | .stratifier[] | .stratum'
+
+cat measurereports/DASHTXCURR.json | jq -r '.group[] | .stratifier[] | .stratum | (. | map(leaf_paths) | unique) as $cols | map (. as $row | ($cols | map(. as $col | $row | getpath($col)))) as $rows | ([($cols | map(. | tostring))] + $rows) | map(@csv) | .[]' > measurereports/DASHTXCURR.csv

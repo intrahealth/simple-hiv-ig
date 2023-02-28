@@ -48,24 +48,6 @@ Description: "PMTCTARTStatusCodes CodeSystem"
 * #already-on-art "already-on-art"
 * #new-on-art "new-on-art"
 
-// ValueSet: PregnancyCodes
-// Id: PregnancyCodes
-// Title: "Pregnancy Codes"
-// Description: "Pregnancy Codes"
-// * ^experimental = true
-// * ^url = $PregnancyCodes
-// * $SCT#1 "PregnancyCodes Code 1"
-// * $SCT#2 "PregnancyCodes Code 2"
-
-// ValueSet: BreastfeedingCodes
-// Id: BreastfeedingCodes
-// Title: "BreastfeedingCodes"
-// Description: "BreastfeedingCodes"
-// * ^experimental = true
-// * ^url = $BreastfeedingCodes
-// * $SCT#1 "BreastfeedingCodes Code 1"
-// * $SCT#2 "BreastfeedingCodes Code 2"
-
 ValueSet: ViralLoadTest
 Id: ViralLoadTest
 Title: "ViralLoadTest"
@@ -84,6 +66,48 @@ Description: "HIVTestingServices"
 * $SCT#30 "HIVTestingServices Code 1"
 * $SCT#40 "HIVTestingServices Code 2"
 
+ValueSet: SyntheaHIVMedications
+Id: SyntheaHIVMedications
+Title: "Synthea HIV Medications"
+Description: "Synthea HIV Medications"
+* ^experimental = true
+* ^url = $SyntheaHIVMedications
+// ART_MonoEra: art_sequence_1987_1994.json
+* $RxNorm#199663 "zidovudine 300 MG Oral Tablet"
+* $RxNorm#284988 "didanosine 400 MG Delayed Release Oral Capsule"
+* $RxNorm#313760 "zalcitabine 0.75 MG Oral Tablet"
+* $RxNorm#313110 "stavudine 40 MG Oral Capsule"
+// ART_DualERA: art_sequence_1995_1996
+* $RxNorm#349491 "lamivudine 300 MG Oral Tablet"
+// ART_EarlyPI: art_sequence_1997_2002
+* $RxNorm#200082 "lamivudine 150 MG / zidovudine 300 MG Oral Tablet"
+* $RxNorm#310988 "indinavir 400 MG Oral Capsule"
+* $RxNorm#859863 "saquinavir mesylate 500 MG Oral Tablet"
+* $RxNorm#317150 "ritonavir 100 MG Oral Capsule"
+* $RxNorm#403978 "nelfinavir 625 MG Oral Tablet"
+* $RxNorm#349477 "efavirenz 600 MG Oral Tablet"
+* $RxNorm#597730 "lopinavir 200 MG / ritonavir 50 MG Oral Tablet"
+// ART_3TCZDV_Era: art_sequence_2003_2005
+* $RxNorm#349251 "tenofovir disoproxil fumarate 300 MG Oral Tablet"
+* $RxNorm#403875 "emtricitabine 200 MG Oral Capsule"
+* $RxNorm#476556 "emtricitabine 200 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet"
+// ART_EarlyINSTI: art_sequence_2006_2014
+* $RxNorm#1147334 "emtricitabine 200 MG / rilpivirine 25 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet"
+* $RxNorm#643066 "efavirenz 600 MG / emtricitabine 200 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet"
+* $RxNorm#1306292 "cobicistat 150 MG / elvitegravir 150 MG / emtricitabine 200 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet"
+* $RxNorm#744842 "raltegravir 400 MG Oral Tablet"
+* $RxNorm#1433873 "dolutegravir 50 MG Oral Tablet"
+* $RxNorm#402109 "fosamprenavir 700 MG Oral Tablet"
+* $RxNorm#664741 "atazanavir 300 MG Oral Capsule"
+* $RxNorm#1359269 "darunavir 800 MG Oral Tablet"
+// ART_LateINSTI: art_sequence_2015.json
+* $RxNorm#2003249 "lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet"
+* $RxNorm#1747691 "emtricitabine 200 MG / tenofovir alafenamide 25 MG Oral Table"
+* $RxNorm#1999667 "bictegravir 50 MG / emtricitabine 200 MG / tenofovir alafenamide 25 MG Oral Tablet"
+* $RxNorm#1721613 "cobicistat 150 MG / elvitegravir 150 MG / emtricitabine 200 MG / tenofovir alafenamide 10 MG Oral Tablet"
+* $RxNorm#2122519 "dolutegravir 50 MG / lamivudine 300 MG Oral Tablet"
+
+// from https://github.com/openhie/case-reporting-hiv-vn
 // CodeSystem:  CSHIVRiskPopulation
 // Id: cs-hiv-population
 // Title: "Population groups"

@@ -17,8 +17,8 @@ codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
 // codesystem "ICHI": 'https://mitel.dimi.uniud.it/ichi/#http://id.who.int/ichi'
 // todo: replace this codesystem at some point
 codesystem "OpenHIE": 'https://openhie.org'
-codesystem "PMTCT HIV Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/hiv-pmtct-hiv-status-codes' 
-codesystem "PMTCT ART Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/hiv-pmtct-art-status-codes'
+codesystem "PMTCT HIV Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PMTCTHIVStatusCodes' 
+codesystem "PMTCT ART Status Codes": 'https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PMTCTARTStatusCodes'
 
 // gender
 valueset "HL7 Administrative Gender": 'http://hl7.org/fhir/ValueSet/administrative-gender'
@@ -36,38 +36,36 @@ code "Livebirth (finding)": '281050002' from "SNOMED-CT" display 'Livebirth (fin
 // code "Single live birth": '68499-3' from "LOINC" display 'Single live birth'
 code "Postpartum state (finding)": '86569001' from "SNOMED-CT" display 'Postpartum state (finding)'
 code "Normal breast feeding (finding)": '69840006' from "SNOMED-CT" display 'Normal breast feeding (finding)'
-
-// code "": '' from "" display ''
-// code "": '' from "" display ''
-
 // valueset "Delivery Procedures": 'urn:oid:2.16.840.1.113762.1.4.1045.59' // Used by CMS113
 
 
 // hiv testing, results, conditions
+code "Acquired immune deficiency syndrome (disorder)": '62479008' from "SNOMED-CT" display 'Acquired immune deficiency syndrome (disorder)'
 code "HIV Condition Positive": '86406008' from "SNOMED-CT" display 'HIV infection'
 code "HIV Negative": '165815009' from "SNOMED-CT" display 'HIV Negative'
 code "HIV Positive": '165816005' from "SNOMED-CT" display 'HIV Positive'
-valueset "HIV Testing Services": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-testing-services' // Should use HIV tests
+valueset "HIV Testing Services": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/HIVTestingServices' // Should use HIV tests
 
 
 // viral load tests, results
 code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection'
+code "HIV 1 RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection": '20447-9' from "LOINC" display 'HIV 1 RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection'
 // code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set' // Used by CMS349
 // code "Viral Load Quantitative": '856' from "CIEL" display 'HIV viral load'
 // code "Viral Load Qualitative": '1305' from "CIEL" display 'HIV VIRAL LOAD, QUALITATIVE'
 // code "Viral Load Qualitative Value": '1306' from "CIEL" display 'BEYOND DETECTABLE LIMIT'
 // code "Anti Retroviral Therapy": '160119' from "CIEL" display 'Currently taking ARV'
 // code "Coded Answer": '1065' from "CIEL" display 'Yes'
-valueset "ART Medications": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-art-medications' // ART medications
 // commenting out for now and the union
 // valueset "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)": 'urn:oid:2.16.840.1.113762.1.4.1056.50' // Used by CMS349
-valueset "Viral Load Test": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/hiv-viral-load-test'
+valueset "Viral Load Test": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/ViralLoadTest'
 
 
 // art
-// code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
 code "History of antiretroviral therapy (situation)": '432101000124108' from "OpenHIE" display 'History of antiretroviral therapy (situation)'
+// valueset "Synthea HIV Medications": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/SyntheaHIVMedications'
+valueset "ART Medications": 'https://intrahealth.github.io/simple-hiv-ig/ValueSet/SyntheaHIVMedications'
 
 
 // pmtct hiv and art

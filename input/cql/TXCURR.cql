@@ -1,6 +1,14 @@
 // TX_CURR, WHO HIV.IND.AV.1
-// Number of adults and children currently receiving antiretroviral therapy (ART)
 // numerator only
+// Number of adults and children currently receiving antiretroviral therapy (ART)
+// Sum of age/sex disaggregates
+
+// Patients excluded from the current on ART count are patients who died, stopped treatment, 
+// transferred out, or experienced interruption in treatment (IIT). Patients who have not received 
+// ARVs within four weeks (i.e., 28 days) of their last missed drug pick-up should not be counted.
+
+// Patients who receive ARVs for post-exposure prophylaxis (PEP) or 
+// short-term ART only for prevention (PrEP) should not be reported in this indicator.
 
 library TXCURR version '0.1.0'
 
@@ -20,16 +28,18 @@ context Patient
 define "Initial Population": true
 
 
-// Number of adults and children currently receiving antiretroviral therapy (ART)
-// Sum of age/sex disaggregates
-// TEMP
+define "Numerator-Exclusion": 
+  PatientData."Deceased"
 
-// Patients excluded from the current on ART count are patients who died, stopped treatment, 
-// transferred out, or experienced interruption in treatment (IIT). Patients who have not received 
-// ARVs within four weeks (i.e., 28 days) of their last missed drug pick-up should not be counted.
 
-// Patients who receive ARVs for post-exposure prophylaxis (PEP) or 
-// short-term ART only for prevention (PrEP) should not be reported in this indicator.
+// todo: this is not showing up as true
+define "Numerator":
+  PatientData."On ART"
+
+
+define "Stratifier": 
+  DASHStrat."Age Group/Sex/Location TXCURR"
+
 
 
 // define "Initial population":
@@ -42,26 +52,12 @@ define "Initial Population": true
 //         and o.status in {'final', 'amended', 'corrected'}
 //         and o.effective in day of "Measurement Period"
 
-
-define "Numerator-Exclusion": 
-  PatientData."Deceased"
-
-// todo: this is not showing up as true
-define "Numerator":
-  PatientData."On ART"
-
 // Not included:
 // ARV Dispensing Quantity by Coarse Age/Sex
 // [Required]
 // <3 months of ARVs (not MMD) dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
 // 3-5 months of ARVs dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
 // 6 or more months of ARVs dispensed to patient by: <15 F/M, 15+ F/M, Unknown Age F/M
-
-define "Stratifier": 
-  DASHStrat."Age Group/Sex/Location TXCURR"
-
-
-// tbd
 
 // Patients receiving MMD
 // Patients that pick up 3 or more months of anti-retroviral drugs at one visit 

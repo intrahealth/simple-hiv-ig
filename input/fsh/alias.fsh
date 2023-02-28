@@ -15,10 +15,12 @@ Alias: $OpenCR = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenCR
 Alias: $OpenHIE = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/OpenHIE
 Alias: $PEPFAR = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PEPFAR
 Alias: $SCT = http://snomed.info/sct
+Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $synthea = https://github.com/synthetichealth/synthea
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-ActReason =  http://terminology.hl7.org/CodeSystem/v3-ActReason
 
+Alias: $SyntheaHIVMedications = https://intrahealth.github.io/simple-hiv-ig/ValueSet/SyntheaHIVMedications
 Alias: $PMTCTHIVStatusCodes = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PMTCTHIVStatusCodes
 Alias: $PMTCTARTStatusCodes = https://intrahealth.github.io/simple-hiv-ig/CodeSystem/PMTCTARTStatusCodes
 Alias: $PregnancyCodes = https://intrahealth.github.io/simple-hiv-ig/ValueSet/PregnancyCodes

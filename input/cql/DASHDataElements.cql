@@ -7,7 +7,9 @@ include FHIRCommon version '4.0.1' called FC
 include DASHConcepts called Cx
 // include DASHStratifiers called Strat
 
-parameter "Measurement Period" Interval<DateTime>
+// parameter "Measurement Period" Interval<DateTime>
+// 
+parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T, @2022-12-31T]
 
 context Patient
 
@@ -17,13 +19,18 @@ define "Deceased":
   and (Patient.deceased is true or Patient.deceased before end of "Measurement Period")
   // and Patient.deceased.value.not()
   // and Patient.deceased.not()
-  // alternatively
+  // // alternatively
   // where P.deceased is false
   //   or P.deceased before Today()
 
 
 define "HIV Condition":
-  exists ["Condition": Cx."HIV Condition Positive"]  
+  exists ["Condition": Cx."HIV Condition Positive"]
+  // synthea
+  or exists [Observation: Cx."Acquired immune deficiency syndrome (disorder)"]
+  or exists [Encounter] E
+    // where E.reasonCode in Cx."Acquired immune deficiency syndrome (disorder)"
+    where (Last(E.reasonCode) ~ Cx."Acquired immune deficiency syndrome (disorder)")
 
 
 define "Is HIV Positive":
@@ -59,31 +66,33 @@ define "HIV Negative Observation":
   [Observation: Cx."HIV 1 and 2 tests - Meaningful Use set"] Observation
     where Observation.value = "Is HIV Negative"
 
-
+// this union is a placeholder for implementer or dak valuesets
 define "Viral Load Test Result":
   ["Observation": Cx."HIV 1 RNA NAA+probe (Specimen)"] Obs
-    where Obs.status = 'final'
-      and Obs.value is not null
+  union ["Observation": Cx."HIV 1 RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"] Obs
+    // where Obs.status = 'final'
+    // and Obs.value is not null
+  // synthea
+    // when Obs.effective during "Measurement Period"
 
 
-// todo: synthea uses copies/mL but fsh uses {copies}/mL which is official
 define "Living with HIV and on ART with suppressed viral load results (<1000 copies/mL)":
-  ["Observation": Cx."HIV 1 RNA NAA+probe (Specimen)"] Observation
+  "Viral Load Test Result" Observation
     where Observation.value < 1000 '{copies}/mL'
 
 
 define "Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)":
-  ["Observation": Cx."HIV 1 RNA NAA+probe (Specimen)"] Observation
+  "Viral Load Test Result" Observation
     where Observation.value >= 1000 '{copies}/mL'
 
 
 define "Suppressed":
-  [Observation: Cx."HIV 1 RNA NAA+probe (Specimen)"] Observation
+  "Viral Load Test Result" Observation
     where Observation.value < 1000 '{copies}/mL'
 
 
 define "Unsuppressed":
-  [Observation: Cx."HIV 1 RNA NAA+probe (Specimen)"] Observation
+  "Viral Load Test Result" Observation
     where Observation.value >= 1000 '{copies}/mL'
 
 
@@ -103,6 +112,9 @@ define "ART Therapy Observation":
   ["Observation": Cx."History of antiretroviral therapy (situation)"] O
     where O.status = 'final'
 
+// to review
+// ART Therapy Observation=[]
+// ART Therapy Condition=[]
 
 define "ART Therapy Condition":
   ["Condition": Cx."History of antiretroviral therapy (situation)"] C
@@ -110,15 +122,24 @@ define "ART Therapy Condition":
       and C.clinicalStatus ~ FC."active"
 
 
+// define "ART Therapy Medication":
+//   ["MedicationDispense": Cx."ART Medications"] M
+//     where M.status = 'completed'
+
+// synthea
 define "ART Therapy Medication":
-  ["MedicationDispense": Cx."ART Medications"] M
-    where M.status = 'completed'
+  ["MedicationRequest": Cx."ART Medications"] M
+    // where M.status = 'active'
+    where M.authoredOn during "Measurement Period"
+
 
 
 define "ART Dates":
   ("ART Therapy Observation" O return O.effective as dateTime)
     union ("ART Therapy Condition" C return C.onset as dateTime)
-    union ("ART Therapy Medication" M return M.whenHandedOver)
+    union ("ART Therapy Medication" M return M)
+    // union ("ART Therapy Medication" M return M.whenHandedOver)
+
 
 
 define "Date of First Evidence of ART":
@@ -139,6 +160,7 @@ define "On ART":
       "ART Therapy Condition" C
         where Interval[C.onset, C.abatement] overlaps "Measurement Period"
     )
+
 
 define "HIV Test Observation":
   [Observation: Cx."HIV 1 and 2 tests - Meaningful Use set"] O
@@ -238,6 +260,7 @@ define "Initiated antiretroviral therapy (ART) in the 12 months prior to measure
 
 
 define "Antenatal Care Visit":
+  // [Encounter: Cx."Prenatal initial visit (regime/therapy)"] E
   [Encounter: Cx."Prenatal initial visit (regime/therapy)"] E
     where E.status = 'finished'
       and E.period during Interval[start of "Year Preceding the Measurement Period", end of "Measurement Period"]
