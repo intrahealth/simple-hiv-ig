@@ -24,6 +24,7 @@ define "Deceased":
   //   or P.deceased before Today()
 
 
+// synthea
 define "HIV Condition":
   exists ["Condition": Cx."HIV Condition Positive"]
   // synthea

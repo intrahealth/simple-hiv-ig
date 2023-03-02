@@ -68,17 +68,3 @@ define "Numerator":
 
 define "Stratifier": 
   DASHStrat."Age Group/Sex/Location"
-
-// Viral Load Suppression
-// Percentage of ART patients with a suppressed viral load (VL) result 
-// (<1000 copies/ml) documented in the medical or laboratory records/laboratory information systems (LIS) within the past 12 months
-// TX_PVLS numerator / TX_PVLS denominator
-
-// downstream systems to calculate
-
-// Not included: requires previous time periods
-// Viral Load Test Coverage
-// Percentage of patients eligible for viral load testing who have received a viral load test. 
-// Length of time on treatment may vary by ART regiment and/or national guidelines.
-// TX_PVLS denominator / (TX_CURR from 2 quarters prior)
-

@@ -3,8 +3,9 @@
 # load data script
 # fyi: hapi fhir hosted demo doesn't support measure eval
 # export FHIR="https://blaze.life.uni-leipzig.de/fhir"
-export FHIR="https://cloud.alphora.com/sandbox/r4/cqm/fhir"
+# export FHIR="https://cloud.alphora.com/sandbox/r4/cqm/fhir"
 # export FHIR="http://localhost:8080/cqf-ruler-r4/fhir"
+export FHIR="http://ryzen.local:8080/fhir"
 
 export HEADER="Content-Type: application/fhir+json"
 

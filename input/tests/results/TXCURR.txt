@@ -19,3 +19,69 @@ Evaluation logs:
 16:05:36.297 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
 elapsed: 0.748 seconds
 
+Executing CQL...
+CQL path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/cql
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/TXCURR
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=urn:uuid:04d03399-11ac-7a07-7b26-0fa0080f3868)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=urn:uuid:0f3da250-8878-8b15-07ad-3db3c0273bfb)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=urn:uuid:3d2aea47-74b1-45ea-a99e-3d64d38a516b)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=urn:uuid:4ec8ba28-5b0b-ab11-a73d-b93411fbbafa)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=urn:uuid:4f4f93f9-5f61-7656-c9f2-21c98f6015e0)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=urn:uuid:5c92d82d-87a1-f570-d927-de9de503b464)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=urn:uuid:9be25b0e-7c3a-d46f-d1b1-d4389a63f447)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=null
+
+Patient=Patient(id=Patient-HIVSimple)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=P5Y--P10Y:female:Location/Location-HIVSimple1
+
+Patient=Patient(id=Patient-HIVSimple2)
+Initial Population=true
+Numerator-Exclusion=false
+Numerator=false
+Stratifier=P5Y--P10Y:female:Location/Location-HIVSimple2
+
+
+Evaluation logs:
+10:45:15.531 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+10:45:16.113 [pool-2-thread-1] WARN  o.o.c.c.e.e.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/HIVTestingServices is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+10:45:16.113 [pool-2-thread-1] WARN  o.o.c.c.e.e.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/ViralLoadTest is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+10:45:16.113 [pool-2-thread-1] WARN  o.o.c.c.e.e.terminology.BundleTerminologyProvider - ValueSet https://intrahealth.github.io/simple-hiv-ig/ValueSet/SyntheaHIVMedications is not expanded. Falling back to compose definition. This will potentially produce incorrect results. 
+elapsed: 2.098 seconds
+

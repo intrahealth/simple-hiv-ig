@@ -112,3 +112,28 @@ Stratifier=null
 
 elapsed: 0.499 seconds
 
+Executing CQL...
+CQL path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/cql
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/PMTCTART
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+Patient=Patient(id=Patient-HIVSimple)
+Initial Population=true
+Denominator-Exclusion=true
+Denominator=true
+Numerator-Exclusion=true
+Numerator=false
+Stratifier=P5Y--P10Y:female:Location/Location-HIVSimple1
+
+Patient=Patient(id=Patient-HIVSimple2)
+Initial Population=true
+Denominator-Exclusion=true
+Denominator=true
+Numerator-Exclusion=true
+Numerator=false
+Stratifier=P5Y--P10Y:female:Location/Location-HIVSimple2
+
+
+Evaluation logs:
+10:44:06.793 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+elapsed: 0.677 seconds
+

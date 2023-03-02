@@ -51,7 +51,6 @@ parameter "Measurement Period" Interval<DateTime> default Interval[@1990-01-01T0
 // Disaggregations:
 // Confirm that TX_CURR ≥ TX_NEW.
 // Confirm that TX_CURR ≥ TX_RTT.
-// Confirm that TX_CURR ≥ Disaggregates for ARV Dispensing Quantity
 
 
 context Patient
@@ -107,12 +106,27 @@ define "Age Group/Sex":
   "Age Group".code + ':' + "Sex"
 
 
-define "Location":
+define "Last Location":
   Last([Encounter] E
     return First(E.location L
       return L.location.reference
     ).value
   )
+
+
+define "Last serviceProvider":
+  // Some of the Synthea encounters do not have a serviceProvider, so this can return nothing
+  // Last([Encounter]).serviceProvider.reference.value
+  // Filter out those that are null, then take the last
+  [Encounter] E
+    where E.serviceProvider is not null
+  return Last([Encounter]).serviceProvider.reference.value
+
+
+// if..then..else
+define "Location":
+  if "Last Location" is not null then "Last Location"
+  else "Last serviceProvider"
 
 
 define "Age Group/Sex/Location":

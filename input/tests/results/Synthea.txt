@@ -385,3 +385,13 @@ The following errors were encountered during evaluation:
 19:49:59.838 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
 elapsed: -0.138 seconds
 
+Executing CQL...
+CQL path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/cql/WIP
+Data path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests/Synthea
+Terminology path: /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset
+
+Evaluation logs:
+09:14:42.668 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Translation of library Synthea failed with the following message: Could not load source for library DASHConcepts, version null.
+elapsed: 3.037 seconds
+
