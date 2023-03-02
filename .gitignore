@@ -35,3 +35,6 @@ input/fsh/bulk
 # draft DAK
 input/l2/HIV Adaptation Kit Data Dictionary-Draft.xlsx
 input/l2/NACHC-DD.xlsx
+
+# test results from cql runs
+input/tests/results

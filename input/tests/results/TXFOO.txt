@@ -1,8 +1,0 @@
-Running tests.
-No tests found at /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/tests. Evaluation may fail if data is required.
-No terminology found at /Users/richard/src/github.com/intrahealth/simple-hiv-ig/input/vocabulary/valueset. Evaluation may fail if terminology is required.
-Patient=null
-PatientStuff=null
-
-elapsed: 0.084 seconds
-
