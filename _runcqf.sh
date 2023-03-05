@@ -7,6 +7,11 @@
 sushi
 
 # move vocabulary, libraries to the right place
+mkdir -p input/vocabulary/codesystem/manual
+mkdir -p input/vocabulary/valueset/manual
+mkdir -p input/resources/library
+
+
 cp fsh-generated/resources/CodeSystem-* input/vocabulary/codesystem/manual/
 cp fsh-generated/resources/ValueSet-* input/vocabulary/valueset/manual/
 cp fsh-generated/resources/Library-* input/resources/library/

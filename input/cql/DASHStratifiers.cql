@@ -108,7 +108,8 @@ define "Age Group/Sex":
 
 define "Last Location":
   Last([Encounter] E
-    return First(E.location L
+    return singleton from (E.location L
+    // return First(E.location L
       return L.location.reference
     ).value
   )
@@ -125,8 +126,9 @@ define "Last serviceProvider":
 
 // if..then..else
 define "Location":
-  if "Last Location" is not null then "Last Location"
-  else "Last serviceProvider"
+  if "Last Location" is not null then ("Last Location")
+  // the singleton has to be here but errors above?
+  else singleton from ("Last serviceProvider")
 
 
 define "Age Group/Sex/Location":
